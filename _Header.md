@@ -1,1 +1,1 @@
-[[dn42.png|alt=dn42 - decentralized network]]
+[[dn42.png]]
