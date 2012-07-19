@@ -41,5 +41,3 @@ If NeoRaider accidentially filters your range, just drop him a message via IRC.
  * [Revelation Space](http://www.revspace.nl)
  * [SNE group](https://www.os3.nl)
  * [Wolfplex](http://www.wolfplex.org)
-
-[[Services]]
