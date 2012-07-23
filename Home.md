@@ -8,7 +8,7 @@ push doesn't seem to be working remotely (nobody found out).  I think
 it is fixed.  Can someone please confirm?
 
 A (for now) read-only mirror that is updated hourly exists at
-[[http://wiki.neoraider.dn42/]]. That one should be accessible
+http://wiki.neoraider.dn42/. That one should be accessible
 from all IP ranges announced over BGP, including Freifunk's 10/8 ranges.
 If NeoRaider accidentially filters your range, just drop him a message via IRC.
 
@@ -17,7 +17,7 @@ If NeoRaider accidentially filters your range, just drop him a message via IRC.
  * is at: dn42 /at/ lists.spaceboyz.net,
  * send a mail to dn42-subscribe /at/ lists.spaceboyz.net to subscribe
  * archive on http://lists.spaceboyz.net/pipermail/dn42/
- * can be accessed via [[News|NNTP]] as well. The group is alt.net.dn42.users
+ * can be accessed via [[News|Services NNTP]] as well. The group is alt.net.dn42.users
 
 ### IRC
  * #dn42 in [hackint](http://www.hackint.eu/).
