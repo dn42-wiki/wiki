@@ -20,11 +20,12 @@ If NeoRaider accidentially filters your range, just drop him a message via IRC.
  * can be accessed via [[NNTP|Services News]] as well. The group is alt.net.dn42.users
 
 ### IRC
- * #dn42 in [hackint](http://www.hackint.eu/).
+ * #dn42 in [hackint](http://www.hackint.eu/)
 
 ## Participant Groups
  * [SpaceBoyz](http://spaceboyz.net)
  * [planet cyborg](http://planetcyborg.de)
+  * [milliways](http://mw.vc)
  * [CCC Dresden](http://c3d2.de)
  * [CCC Bremen](http://ccchb.de)
  * [CCC Düsseldorf](https://www.chaosdorf.de)
