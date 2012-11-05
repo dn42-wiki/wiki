@@ -1,7 +1,8 @@
  * [[Home]]
   * [[About]]
- * [[Services]]
+ * Services
   * [[IRC|Services IRC]]
   * [[Shells|Services Shells]]
   * [[VirtualMachines|Services VirtualMachines]]
   * [[Whois|Services Whois]]
+  * [[Internal services|Internal]]
