@@ -3,7 +3,7 @@
 
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
- * planetcyborg: eudora.dn42.planetcyborg.de (172.22.192.6)
+ * planetcyborg: eudora.dn42.planetcyborg.de (172.22.192.14)
  * planetcyborg: thaleia.dn42.planetcyborg.de (172.22.192.94)
  * nixnodes: whois.nixnodes.dn42 (172.22.177.77)
 
