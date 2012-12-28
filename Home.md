@@ -11,7 +11,7 @@
 ## Participant Groups
  * [SpaceBoyz](http://spaceboyz.net)
  * [planet cyborg](http://planetcyborg.de)
-  * [milliways](http://mw.vc)
+  * [mw](http://mw.vc)
  * [CCC Dresden](http://c3d2.de)
  * [CCC Bremen](http://ccchb.de)
  * [CCC Düsseldorf](https://www.chaosdorf.de)
