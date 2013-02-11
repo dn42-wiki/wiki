@@ -21,6 +21,8 @@
 * Racoon has useless error messages.
 
 ## Requirements for sane operation
+* Identify your peers by X.509 certificates
+* At least one peer should operate his own (Sub-)CA.
 
 ## How to configure a GRE tunnel on FreeBSD
 
