@@ -20,4 +20,46 @@ Reboot into your new kernel.
 
 Install the racoon daemon. It's included in the [security/ipsec-tools](http://www.freshports.org/security/ipsec-tools/) port.
 Racoon is pain in the ass to configure the first time because it's error messages aren't helping and the complexity of IPsec. Don't let this stop you.
- x
+```
+path    pre_shared_key  "/usr/local/etc/racoon/psk";
+path    certificate     "/usr/local/etc/racoon/certs";
+log     info;
+
+listen {
+        isakmp          a.b.c.d [500];
+        isakmp_natt     a.b.c.d [4500];
+}
+
+padding {
+        strict_check    on;
+}
+
+timer {
+        natt_keepalive   5 sec;
+        interval         3 sec;
+        phase1          45 sec; # give embedded CPUs time to finish RSA operations
+        phase2          45 sec;
+}
+
+remote b.c.d.e [500] {
+        exchange_mode           main;
+        proposal_check          strict;
+        my_identifier           asn1dn;
+        peers_identifier        asn1dn;
+        lifetime                time 1 hour;
+        certificate_type        x509 "self.crt" "self.key";
+        peers_certfile          x509 "peer.crt";
+        ca_type                 x509 "ca.crt";
+        verify_cert             on;
+        send_cert               off; # neither send
+        send_cr                 off; # nor request a crt to be send
+
+        proposal {
+                encryption_algorithm    aes 256;
+                hash_algorithm          sha256;
+                authentication_method   rsasig;
+                dh_group                modp4096;
+        }
+}
+
+```
