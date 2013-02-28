@@ -62,4 +62,11 @@ remote b.c.d.e [500] {
         }
 }
 
+sainfo (address a.b.c.d gre address b.c.d.e gre) {
+        pfs_group                       modp4096;
+        lifetime                        time 1 hour;
+        encryption_algorithm            aes 256;
+        authentication_algorithm        hmac_sha1;
+}
+
 ```
