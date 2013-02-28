@@ -4,7 +4,7 @@ These instructions are for IPsec in transport mode not IPsec in tunnel mode. IPs
 
 ## Requirements
 * Root access to both endpoints.
-* Static IPv4 addresses for both endpoints unless you want to write a small shell script as hook for raccon.
+* Static IPv4 addresses for both endpoints unless you want to write a small shell script as hook for racoon.
 * At least one static IPv4 on at least one endpoint unless you hate yourself.
 
 ## Kernel configuration
