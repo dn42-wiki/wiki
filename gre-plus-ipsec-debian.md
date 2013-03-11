@@ -17,3 +17,13 @@ Example policy on 1.2.3.4:
 spdadd 1.2.3.4 5.6.7.8 gre -P out ipsec esp/transport//require;
 spdadd 5.6.7.8 1.2.3.4 gre -P in  ipsec esp/transport//require;
 ```
+
+## Load the IPsec security policy into the IPsec security policy database
+Load the policy with the setkey command.
+```
+setkey -f /etc/ipsec-tools.conf
+```
+Afterward check the policy database with:
+```
+setkey -DP
+```
