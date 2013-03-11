@@ -30,6 +30,7 @@ setkey -DP
 ```
 
 ## Configure the racoon daemon
+An example /etc/racoon/racoon.conf.
 ```
 path pre_shared_key "/etc/racoon/psk.txt";
 path certificate    "/etc/racoon/certs";
@@ -71,3 +72,17 @@ sainfo (address 1.2.3.4 address 5.6.7.8 47) {
   authentication_algorithm hmac_sha1;
   compression_algorithm    deflate;
 }
+```
+
+## Configure a GRE tunnel
+Add this to /etc/network/interfaces:
+```
+auto tun0
+iface tun0 inet static
+  address 10.0.0.1
+  netmask 255.255.255.255
+  up ifconfig tun0 multicast
+  pre-up iptunnel add tun0 mode gre local 1.2.3.4 remote 5.6.7.8 ttl 255
+  pointtopoint 10.0.0.2
+  post-down iptunnel del tun0
+```
