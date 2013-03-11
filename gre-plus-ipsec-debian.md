@@ -64,7 +64,7 @@ remote 5.6.7.8 [500] {
   }
 }
 
-# local tunnel endpoint, remote tunnel endpoint, GRE ip protocol number
+# local tunnel endpoint, GRE ip protocol number, remote tunnel endpoint, GRE ip protocol number
 sainfo address 1.2.3.4 47 address 5.6.7.8 47 {
   pfs_group                modp4096;
   lifetime                 time 1 hour;
