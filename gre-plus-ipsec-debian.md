@@ -77,12 +77,12 @@ sainfo address 1.2.3.4 47 address 5.6.7.8 47 {
 ## Configure a GRE tunnel
 Add this to /etc/network/interfaces:
 ```
-auto tun0
-iface tun0 inet static
+auto gre1
+iface gre1 inet static
   address 10.0.0.1
   netmask 255.255.255.255
-  up ifconfig tun0 multicast
-  pre-up iptunnel add tun0 mode gre local 1.2.3.4 remote 5.6.7.8 ttl 255
+  up ifconfig gre1 multicast
+  pre-up ip tunnel add gre1 mode gre local 1.2.3.4 remote 5.6.7.8 ttl 255
   pointtopoint 10.0.0.2
-  post-down iptunnel del tun0
+  post-down ip tunnel del gre1
 ```
