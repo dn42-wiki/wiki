@@ -43,13 +43,10 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 ```sh
 mtn genkey you@domain.tld
 mtn pubkey you@domain.tld # send the output to some $monotone_server operator(do NOT send the keypair!)
-mtn --db /home/some/path/to/db.mtn db init
-mtn --db /home/some/path/to/db.mtn pull -k "" $monotone_server "*"
-mtn --db /home/some/path/to/db.mtn --branch net.dn42.registry co /home/some/path/to/store/branch
-cd /home/some/path/to/store/branch
+mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry
+cd net.dn42.registry
 $add_your_objects
 mtn add --unknown
 mtn ci -k you@domain.tld
-mtn sync -k you@domain.tld $monotone_server "*"  # once the monotone server operator has deployed your key
-# Note: that "*" is not there by accident. it specifies, which branches to sync, the default is to sync none!
+mtn sync
 ```
