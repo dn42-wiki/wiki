@@ -9,7 +9,15 @@
 </ul><h3>IRC<a class="anchor" id="IRC" href="#IRC"></a></h3>
 
 <ul><li>#dn42 in <a href="http://www.hackint.eu/">hackint</a></li>
-</ul><h2>Participant Groups<a class="anchor" id="Participant-Groups" href="#Participant-Groups"></a></h2>
+</ul>
+<h2>Network info<a class="anchor" id="Participant-Groups" href="#Participant-Groups"></a></h2>
+<h3>Looking glass<a class="anchor" id="IRC" href="#IRC"></a></h3>
+<ul>
+<li>AS76103: <a href="http://lg.nixnodes.net/">lg.nixnodes.net</a></li>
+<li>AS64692: <a href="http://zeus.nihilus.dn42/dn42/routes.cgi">zeus.nihilus.dn42/dn42/routes.cgi</a></li>
+</ul>
+
+<h2>Participant Groups<a class="anchor" id="Participant-Groups" href="#Participant-Groups"></a></h2>
 
 <ul><li><a href="http://spaceboyz.net">SpaceBoyz</a></li>
 <li><a href="http://planetcyborg.de">planet cyborg</a>
