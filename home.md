@@ -10,7 +10,7 @@
 
 <ul><li>#dn42 in <a href="http://www.hackint.eu/">hackint</a></li>
 </ul>
-<h2>Network info<a class="anchor" id="Network-info" href="#Network-info"></a></h2>
+<h2>Network<a class="anchor" id="Network-info" href="#Network-info"></a></h2>
 <h3>Looking glass<a class="anchor" id="Looking-glass" href="#Looking-glass"></a></h3>
 <ul>
 <li>AS76103: <a href="http://lg.nixnodes.net/">lg.nixnodes.net</a></li>
