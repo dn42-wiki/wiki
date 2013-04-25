@@ -22,7 +22,7 @@ sudo ruby whoisd.rb nobody
 ```
 
 ## Web access
-* NixNodes: https://io.nixnodes.net/?registry - registry browser/editor (beta, newer firefox/chrome only)
+* NixNodes: https://io.nixnodes.net/?registry - registry **browser/editor (beta, newer firefox/chrome only)
 
 * UFO: http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3) (read only)
 
