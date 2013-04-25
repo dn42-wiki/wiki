@@ -32,7 +32,7 @@ sudo ruby whoisd.rb nobody
 
 
 ## Monotone
-Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvsup.
+Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvs.
  * [Website](http://monotone.ca/)
  * [Tutorial](http://monotone.ca/docs/Tutorial.html)
 
@@ -40,6 +40,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
  * crest: mtn.crest.dn42
  * welterde: headend.srv.welterde.de(46.4.248.203)
  * somerandomnick: mtn1.srn.dn42(172.22.131.102)
+ * dracoling: vpn.smrsh.net
 
 ### Monotone branches
  * net.dn42.registry: Contains the registry and some related code
