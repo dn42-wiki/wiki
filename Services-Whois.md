@@ -22,10 +22,15 @@ sudo ruby whoisd.rb nobody
 ```
 
 ## Web access
-* UFO: http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3) (read only)
 * NixNodes: https://io.nixnodes.net/?registry - registry browser/editor (beta, newer firefox/chrome only)
 
+* UFO: http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3) (read only)
+
 The used PHP scripts are available from UFO a.k.a. Ivo at request.
+
+
+
+
 
 ## Monotone
 Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvsup.
