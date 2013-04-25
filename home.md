@@ -21,8 +21,9 @@
 <ul>
 <li><a href="http://dn42.smrsh.net/routes/d3js.html">dn42.smrsh.net/routes/d3js.html</a></li>
 <li><a href="http://map.nixnodes.net">map.nixnodes.net</a></li>
-</ul>
 <iframe frameborder=0 scrolling=no width="70%" height="40%" src="http://nixnodes.net/dn42/graph?s=0.6"></iframe>
+</ul>
+
 <h2>Participant Groups<a class="anchor" id="Participant-Groups" href="#Participant-Groups"></a></h2>
 
 <ul><li><a href="http://spaceboyz.net">SpaceBoyz</a></li>
