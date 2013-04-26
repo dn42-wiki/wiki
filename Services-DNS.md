@@ -29,7 +29,7 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 | somerandomnick | 64731    | -                             | 172.22.131.38         | down pending rDNS debate                                  |
 | crest          | 64828    | ns3.crest.dn42                | 172.22.228.84         | authorative only                                          |
 | crest          | 64828    | ns2.crest.dn42                | 172.22.228.85         | public caching resolver                                   |
-| siska          | 76103    | ns1.nixnodes.dn42             | 172.22.177.2          | authoritative (updates hourly), ChaosVPN (.hack) resolver |
+| siska          | 76103    | ns1.nixnodes.dn42             | 172.22.177.2          | caching   |
 | siska          | 76105    | ns2.nixnodes.dn42             | 172.22.177.1        | caching                                                   |
 
 For configuring concrete DNS caches see: [[DNS Configuration|Services DNS Configuration]]
