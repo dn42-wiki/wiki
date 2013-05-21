@@ -56,3 +56,33 @@ root_servers["dn42."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
 root_servers["23.172.in-addr.arpa."] = "dn42_root"
 ```
+
+## Unbound
+unbound.conf for 172.22.0.53
+
+```
+server:
+        interface: 172.22.0.53@53
+        access-control: 0.0.0.0/0 allow
+        access-control: ::0/0 allow
+        local-zone: "22.172.in-addr.arpa." nodefault
+        local-zone: "23.172.in-addr.arpa." nodefault
+
+stub-zone:
+        name: "dn42"
+  stub-prime: yes
+        stub-addr: 172.22.119.139
+        stub-addr: 172.22.119.129
+
+stub-zone:
+        name: "22.172.in-addr.arpa"
+	stub-prime: yes
+        stub-addr: 172.22.119.139
+        stub-addr: 172.22.119.129
+
+stub-zone:
+        name: "23.172.in-addr.arpa"
+	stub-prime: yes
+        stub-addr: 172.22.119.139
+        stub-addr: 172.22.119.129
+```
