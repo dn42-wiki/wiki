@@ -12,7 +12,6 @@ The nameservers in that cloud will happily accept any request and will try to re
 Configuration requirements for all members of the anycast group are:
  * maintain your own zones based on whois database (scripts included in repository)
  * allow recursion (including ".")
- * be authoritative for .dn42
  * listen on a unicast IP too for testing/debugging reasons
  * with bind, please use ```minimal-responses yes;``` (goes into ```options```/```view```)
 
