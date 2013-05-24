@@ -85,4 +85,10 @@ stub-zone:
 	stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
+
+stub-zone:
+        name: "d.f.ip6.arpa"
+  stub-prime: yes
+        stub-addr: 172.22.119.139
+        stub-addr: 172.22.119.129
 ```
