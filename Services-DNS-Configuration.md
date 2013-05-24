@@ -67,28 +67,29 @@ server:
         access-control: ::0/0 allow
         local-zone: "22.172.in-addr.arpa." nodefault
         local-zone: "23.172.in-addr.arpa." nodefault
+        local-zone: "d.f.ip6.arpa." nodefault
 
 stub-zone:
         name: "dn42"
-  stub-prime: yes
+        stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
 
 stub-zone:
         name: "22.172.in-addr.arpa"
-	stub-prime: yes
+        stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
 
 stub-zone:
         name: "23.172.in-addr.arpa"
-	stub-prime: yes
+        stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
 
 stub-zone:
         name: "d.f.ip6.arpa"
-  stub-prime: yes
+        stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
 ```
