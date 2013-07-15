@@ -31,8 +31,8 @@
 
 <ul><li><a href="http://mw.vc">mw</a></li>
 </ul></li>
-<li><a href="http://c3d2.de">CCC Dresden</a></li>
 <li><a href="http://ccchb.de">CCC Bremen</a></li>
+<li><a href="http://c3d2.de">CCC Dresden</a></li>
 <li><a href="https://www.chaosdorf.de">CCC Düsseldorf</a></li>
 <li><a href="https://www.muc.ccc.de/">CCC Munich</a></li>
 <li><a href="https://eof.name">!eof</a></li>
