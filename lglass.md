@@ -7,3 +7,19 @@ lglass is a Python software package designed for Internet Registries like the DN
 lglass provides an event-based whois daemon with internal caching, which was written in Python. It is very simple to run an instance:
 
     $ python -m lglass.whoisd -D $PATH_TO_DATA_DIR -H $HOST -P $PORT
+
+## Generate zone files
+
+lglass also provides a script to generate zone files from the registry. It's named zonegen.py and requires a registry dump from Monotone.
+
+To generate DNS zones:
+
+    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com dns -z dn42
+
+To generate IPv4 rDNS zones:
+
+    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns4 -N 172.22.0.0/16
+
+To generate IPv6 rDNS zones:
+
+    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
