@@ -3,7 +3,7 @@
 
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
- * fritz: bromine.grimpen.net (109.75.184.173) / bromine.bb.fritz.dn42 (172.22.119.129)
+ * fritz: whois.fritz.dn42 (172.22.119.139)
  * planetcyborg: eudora.dn42.planetcyborg.de (172.22.192.14)
  * planetcyborg: thaleia.dn42.planetcyborg.de (172.22.192.94)
  * nixnodes: whois.nixnodes.dn42 (172.22.177.77)
