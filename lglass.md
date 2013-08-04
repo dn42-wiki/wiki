@@ -23,3 +23,11 @@ To generate IPv4 rDNS zones:
 To generate IPv6 rDNS zones:
 
     $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
+
+## Reformat RPSL files
+
+You can also reformat RPSL files using lglass by using the lglass.rpsl module:
+
+    $ python -m lglass.rpsl < $DATA/inetnum/172.22.0.53_32
+
+At the moment, lglass doesn't support in-place operation.
