@@ -6,7 +6,7 @@ lglass is a Python software package designed for Internet Registries like the DN
 
 lglass provides an event-based whois daemon with internal caching, which was written in Python. It is very simple to run an instance:
 
-    $ python -m lglass.whoisd -D $PATH_TO_DATA_DIR -H $HOST -P $PORT
+    $ ./bin/lglass-whoisd -D $PATH_TO_DATA_DIR -H $HOST -P $PORT
 
 ## Generate zone files
 
@@ -14,15 +14,15 @@ lglass also provides a script to generate zone files from the registry. It's nam
 
 To generate DNS zones:
 
-    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com dns -z dn42
+    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com dns -z dn42
 
 To generate IPv4 rDNS zones:
 
-    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns4 -N 172.22.0.0/16
+    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns4 -N 172.22.0.0/16
 
 To generate IPv6 rDNS zones:
 
-    $ python zonegen.py -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
+    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
 
 ## Reformat RPSL files
 
@@ -30,4 +30,8 @@ You can also reformat RPSL files using lglass by using the lglass.rpsl module:
 
     $ python -m lglass.rpsl < $DATA/inetnum/172.22.0.53_32
 
-At the moment, lglass doesn't support in-place operation.
+lglass.rpsl also supports in-place operation:
+
+    $ python -m lglass.rpsl -i $DATA/inetnum/172.22.0.53_32
+
+This opens the file, reads the content into memory, seeks to position 0, writes the formatted object and truncates the file.
