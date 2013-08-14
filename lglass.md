@@ -28,10 +28,18 @@ To generate IPv6 rDNS zones:
 
 You can also reformat RPSL files using lglass by using the lglass.rpsl module:
 
-    $ python -m lglass.rpsl < $DATA/inetnum/172.22.0.53_32
+    $ ./bin/lglass-rpsl < $DATA/inetnum/172.22.0.53_32
 
 lglass.rpsl also supports in-place operation:
 
-    $ python -m lglass.rpsl -i $DATA/inetnum/172.22.0.53_32
+    $ ./bin/lglass-rpsl -i $DATA/inetnum/172.22.0.53_32
 
 This opens the file, reads the content into memory, seeks to position 0, writes the formatted object and truncates the file.
+
+## Simple web interface
+
+lglass also comes with a simple web interface written in Python3 using Bottle and Jinja2. It also provides a binary to run it using wsgiref:
+
+    $ ./bin/lglass-web
+
+Furthermore you can use any WSGI server like Gunicorn by using lglass.web.application:app as WSGI callback. You can provide a path to the configuration file in the environment variable `LGLASS_WEB_CFG`.
