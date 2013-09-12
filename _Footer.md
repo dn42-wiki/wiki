@@ -1,1 +1,1 @@
-[Imprint/Impressum](https://helios.planetcyborg.de/imprint/)
+[Imprint/Impressum](https://mortzu.de/imprint/)
