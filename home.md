@@ -48,4 +48,5 @@
 <li><a href="https://www.os3.nl">SNE group</a></li>
 <li><a href="http://www.wolfplex.org">Wolfplex</a></li>
 <li><a href="http://www.smrsh.net/">smrsh</a></li>
+<li><a href="https://www.hackspace-jena.de/">Hackspace Jena e.V.</a></li>
 </ul>
