@@ -78,7 +78,7 @@ sainfo address 1.2.3.4 47 address 5.6.7.8 47 {
 Add this to /etc/network/interfaces:
 ```
 auto gre1
-iface fritz inet tunnel
+iface gre1 inet tunnel
   mode gre
   netmask 255.255.255.255
   address 10.0.0.1
