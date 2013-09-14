@@ -4,6 +4,12 @@ dn42 is a big dynamic VPN network, which employs Internet technologies ([BGP](ht
 
 A number of services are provided on the network: see [internal](internal) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some Freifunk networks.
 
+## About this wiki
+
+This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), and for editing from within dn42, at [http://internal.dn42](http://internal.dn42).
+
+A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available for reference, but **beware**, most of the information there is outdated.
+
 <h2>Contact<a class="anchor" id="Contact" href="#Contact"></a></h2>
 
 <h3>Mailing list<a class="anchor" id="Mailing-list" href="#Mailing-list"></a></h3>
