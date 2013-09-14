@@ -78,11 +78,12 @@ sainfo address 1.2.3.4 47 address 5.6.7.8 47 {
 Add this to /etc/network/interfaces:
 ```
 auto gre1
-iface gre1 inet static
-  address 10.0.0.1
+iface fritz inet tunnel
+  mode gre
   netmask 255.255.255.255
-  up ifconfig gre1 multicast
-  pre-up ip tunnel add gre1 mode gre local 1.2.3.4 remote 5.6.7.8 ttl 255
-  pointtopoint 10.0.0.2
-  post-down ip tunnel del gre1
+  address 10.0.0.1
+  dstaddr 10.0.0.2
+  endpoint 5.6.7.8
+  local 1.2.3.4
+  ttl 255
 ```
