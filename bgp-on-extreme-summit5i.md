@@ -54,4 +54,4 @@ After that ping and traceroute are your mates. It is worth to point switch to th
 
 And use names.
 ## TO-DO
-Check 'Switch acts like router in multinetting case' setup.
+Make switch act as router.
