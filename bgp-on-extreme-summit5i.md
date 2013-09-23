@@ -35,7 +35,7 @@ Now, if you're trying EBGP with your peer:
 
 Or IBGP (local router does the EBGP in following example):
 
-# Don't wait for an EBGP
+    # Don't wait for an EBGP
     disable bgp synchronization
 
     create bgp neighbor 192.168.1.1 remote-AS-number 64528
