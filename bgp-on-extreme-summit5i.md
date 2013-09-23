@@ -7,11 +7,18 @@ Looks like ExtremeWare doesn't support any tunneling mechanism in contrast to Ex
 ## Snipplet
 This configuration was tested on latest EW of 7.8.4.1 patch1-r4 version. But it should work on most of older releases as well.
 
-    enable ipforwarding
-
+    ## DN42 should go both in internal (for clients) and external VLANs
+    create vlan svlan
+    configure vlan svlan ipaddress 192.168.1.100/24
     # Adding an alias
     enable multinetting standard
-    configure vlan ext add secondary-ip 172.23.150.2/24
+    configure vlan svlan add secondary-ip 172.23.150.2/24
+    ...
+    enable ipforwarding
+
+    configure vlan svlan add subvlan ext
+    ...
+    ##
 
     # Adding route to a neighbor
     configure iproute add 172.23.11.1/32 172.23.150.1
@@ -28,8 +35,8 @@ Now, if you're trying EBGP with your peer:
     configure bgp add network 77.37.212.15/32
 
     create bgp neighbor 172.23.11.1 remote-AS-number 64526
-    # Point to a proper outgoing interface
-    configure bgp neighbor 172.23.11.1 source-interface vlan ext
+    # Point to a proper outgoing interface, useless in case when Super VLAN is used
+    #configure bgp neighbor 172.23.11.1 source-interface vlan ext
 
     enable bgp neighbor 172.23.11.1
 
@@ -53,19 +60,3 @@ After that ping and traceroute are your mates. It is worth to point switch to th
 `configure dns-client add name-server 192.168.1.1`
 
 And use names.
-
-## Routing
-After you've made DN42 work at switch, you may provide access to switch's clients:
-
-     # Assign 802.11Q tag
-     configure vlan ext tag 100
-     configure vlan ext add ports 2-16 tagged
-
-And on your client UNIX machine:
-
-     # Assign matching tag
-     ifconfig vlan0 vlan 100 vlandev en0
-     ifconfig vlan0 inet 172.23.150.4/25
-     route add 172.22.0.0/15 172.23.150.2
-
-**TO-DO**: Doing the same without 802.11Q.
