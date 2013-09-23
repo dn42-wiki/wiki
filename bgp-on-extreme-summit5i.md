@@ -53,5 +53,19 @@ After that ping and traceroute are your mates. It is worth to point switch to th
 `configure dns-client add name-server 192.168.1.1`
 
 And use names.
-## TO-DO
-Make switch act as router.
+
+## Routing
+After you've made DN42 work at switch, you may provide access to switch's clients:
+
+     # Assign 802.11Q tag
+     configure vlan ext tag 100
+     configure vlan ext add ports 2-16 tagged
+
+And on your client UNIX machine:
+
+     # Assign matching tag
+     ifconfig vlan0 vlan 100 vlandev en0
+     ifconfig vlan0 inet 172.23.150.4/25
+     route add 172.22.0.0/15 172.23.150.2
+
+**TO-DO**: Doing the same without 802.11Q.
