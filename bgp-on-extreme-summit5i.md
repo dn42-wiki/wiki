@@ -21,7 +21,7 @@ This configuration was tested on latest EW of 7.8.4.1 patch1-r4 version. But it 
     ...
 
     # Isolate VLANs
-    disable subvlan-proxy-arp svlan
+    disable subvlan-proxy-arp vlan svlan
     ##
 
     # Adding route to a neighbor
