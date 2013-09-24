@@ -19,6 +19,10 @@ This configuration was tested on latest EW of 7.8.4.1 patch1-r4 version. But it 
 
     configure vlan svlan add subvlan ext
     ...
+
+    # It is worth to filter alien nets
+    create access-list deny_int ip destination any source 192.168.1.0/24 deny ports 2-16
+    ...
     ##
 
     # Adding route to a neighbor
