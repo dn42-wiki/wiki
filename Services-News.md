@@ -9,4 +9,4 @@
 |----|----|----|----|----|----|
 | cronix       | _down_       | news.crystalnet.dn42 | _yes_       | as requested       | _no_         |
 | UFO          | _up_       | [UCIS.ano news](http://cgiproxy.ucis.dn42/nph-proxy.cgi/00/http/www.ucis.ano/news/) | _no_       | anonet, dn42       | _limited_         |
-| SeekingFor   | _up_       | [AnoNet News](http://cgiproxy.ucis.dn42/nph-proxy.cgi/00/http/news.sfor.ano/) | _no_       | anonet, dn42       | _no_         |
+| SeekingFor   | _up_       | [AnoNet News](http://cgiproxy.ucis.dn42/nph-proxy.cgi/00/http/news.sfor.ano/) | _yes_       | anonet, dn42       | _no_         |
