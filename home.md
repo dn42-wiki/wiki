@@ -46,7 +46,7 @@ A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available fo
 * [NoName e.V. Heidelberg](https://www.noname-ev.de)
 * [raumzeitlabor/hackerspace rhein-neckar](http://www.raumzeitlabor.de)
 * [Freifunk Aurich](http://www.freifunk-aurich.de)
-* [Cyberpipe](http://kiberpipa.net)
+* [Cyberpipe](https://www.kiberpipa.org)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
 * [Whitespace (0x20)](http://www.0x20.be)
 * [AnoNet](http://www.anonet2.org)
