@@ -110,4 +110,9 @@ stub-zone:
         name: "ffc"
         stub-prime: yes
         stub-addr: 10.8.6.6
+
+stub-zone:
+        name: "rzl"
+        stub-prime: yes
+        stub-addr: 172.22.36.1
 ```
