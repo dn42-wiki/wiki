@@ -92,4 +92,22 @@ stub-zone:
         stub-prime: yes
         stub-addr: 172.22.119.139
         stub-addr: 172.22.119.129
+
+stub-zone:
+        name: "ffhh"
+        stub-prime: yes
+        stub-addr: 10.112.1.1
+        stub-addr: 10.112.14.1
+
+stub-zone:
+        name: "ffhl"
+        stub-prime: yes
+        stub-addr: 10.130.10.1
+        stub-addr: 10.130.12.1
+        stub-addr: 10.130.14.1
+
+stub-zone:
+        name: "ffc"
+        stub-prime: yes
+        stub-addr: 10.8.6.6
 ```
