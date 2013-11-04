@@ -2,7 +2,8 @@
   * [[About]]
  * Services
   * [[IRC|Services IRC]]
+  * [[Whois registry|Services Whois]]
+  * [[DNS|Services DNS Configuration]]
   * [[Shells|Services Shells]]
   * [[VirtualMachines|Services VirtualMachines]]
-  * [[Whois|Services Whois]]
   * [[Internal services|Internal]]
