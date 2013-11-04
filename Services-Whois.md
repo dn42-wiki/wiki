@@ -1,6 +1,19 @@
 # Whois registry
 **aka** _The registry_.
 
+The registry contains:
+
+  * AS numbers assignations
+  * Subnet assignations
+  * DNS root zone for `dn42.`
+
+## Web interface
+
+Nixnodes provides a nice web interface, that allows you to **add/edit records** easily.  It is available at https://io.nixnodes.net/?registry. To add records, you must first create a maintainer object.
+
+A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
+
+
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
  * fritz: whois.fritz.dn42 (172.22.119.139)
@@ -19,15 +32,6 @@ sudo gem install netaddr
 cd whoisd/ruby
 sudo ruby whoisd.rb nobody
 ```
-
-## Web access
-* NixNodes: https://io.nixnodes.net/dn42/registry - registry browser/editor (beta)
-
-* UFO: http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3) (read only)<br>
- The used PHP scripts are available from UFO a.k.a. Ivo at request.
-
-
-
 
 
 ## Monotone
