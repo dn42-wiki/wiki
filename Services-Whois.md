@@ -1,4 +1,4 @@
-# Whois
+# Whois registry
 **aka** _The registry_.
 
 ## Whois daemons
