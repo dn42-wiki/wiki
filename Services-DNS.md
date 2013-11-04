@@ -17,10 +17,10 @@ To do this, just use `172.22.0.53` as your resolver, for instance in `/etc/resol
 
 If you run your own resolver (`unbound`, `dnsmasq`, `bind`), you can configure it to forward dn42 queries to the anycast DNS resolver. See [[DNS forwarder configuration|Services DNS Configuration]].
 
-## Register a dn42 domain name
+## Register a `.dn42` domain name
 
 The root zone for `dn42.` is built from the [[whois registry|Services Whois]]. If you want to register a domain name, you need to add it to the registry (of course, you also need one or two authoritative nameservers).
 
-## Provide DNS service
+## Providing DNS service
 
-See [[Provide Anycast DNS]].
+See [[Providing Anycast DNS]].
