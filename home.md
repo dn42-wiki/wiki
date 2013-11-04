@@ -29,7 +29,7 @@ A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available fo
 * AS64692: [zeus.nihilus.dn42/dn42/routes.cgi](http://zeus.nihilus.dn42/dn42/routes.cgi)
 
 ### Network maps
-* [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html)
+* [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
 * [map.nixnodes.net](http://map.nixnodes.net)
 
 ## Participant Groups
