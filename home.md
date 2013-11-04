@@ -32,6 +32,8 @@ A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available fo
 * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
 * [map.nixnodes.net](http://map.nixnodes.net)
 
+The data for these maps is collected using AS paths from various AS. A [[path collector|http://nixnodes.net/dn42/pathcollect/]] is available, you may want to submit network data as seen from your AS.
+
 ## Participant Groups
 
 * [SpaceBoyz](http://spaceboyz.net)
