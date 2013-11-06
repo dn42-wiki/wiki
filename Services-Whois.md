@@ -13,6 +13,11 @@ Nixnodes provides a nice web interface, that allows you to **add/edit records** 
 
 A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
 
+## Address space
+
+There is nice 3djs visualisation showing current address space usage : http://tuxmachine.polynome.dn42/dn42-netblock-visu/ (172.23.184.123).
+
+The input data is currently taken from the BGP routes, but it would be interesting to include data from the registry.
 
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
