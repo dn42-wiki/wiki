@@ -25,7 +25,12 @@ If you are running dnsmasq under openwrt, you just have to add
 
 ```
 config dnsmasq
-    option local            '/dn42/22.172.in-addr.arpa/172.22.0.53'
+        option boguspriv '0'
+        option rebind_protection '1'
+        list rebind_domain 'dn42'
+        list server '/dn42/172.22.0.53'
+        list server '/22.172.in-addr.arpa/172.22.0.53'
+        list server '/23.172.in-addr.arpa/172.22.0.53'
 ```
 
 to /etc/config/dhcp and run /etc/init.d/dnsmasq restart. After that you are able to resolve .dn42 
