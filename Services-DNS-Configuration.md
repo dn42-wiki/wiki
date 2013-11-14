@@ -67,61 +67,24 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 ```
 
 ## Unbound
-unbound.conf for 172.22.0.53
+
+`unbound.conf` for forwarding requests to `172.22.0.53`.
+
 
 ```
 server:
-        interface: 172.22.0.53@53
-        access-control: 0.0.0.0/0 allow
-        access-control: ::0/0 allow
-        local-zone: "22.172.in-addr.arpa." nodefault
-        local-zone: "23.172.in-addr.arpa." nodefault
-        local-zone: "d.f.ip6.arpa." nodefault
+      local-zone: "22.172.in-addr.arpa." nodefault
+      local-zone: "23.172.in-addr.arpa." nodefault
 
-stub-zone:
-        name: "dn42"
-        stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
+forward-zone: 
+      name: "dn42"
+      forward-addr: 172.22.0.53
 
-stub-zone:
-        name: "22.172.in-addr.arpa"
-        stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
+forward-zone: 
+      name: "22.172.in-addr.arpa"
+      forward-addr: 172.22.0.53
 
-stub-zone:
-        name: "23.172.in-addr.arpa"
-        stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
-
-stub-zone:
-        name: "d.f.ip6.arpa"
-        stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
-
-stub-zone:
-        name: "ffhh"
-        stub-prime: yes
-        stub-addr: 10.112.1.1
-        stub-addr: 10.112.14.1
-
-stub-zone:
-        name: "ffhl"
-        stub-prime: yes
-        stub-addr: 10.130.10.1
-        stub-addr: 10.130.12.1
-        stub-addr: 10.130.14.1
-
-stub-zone:
-        name: "ffc"
-        stub-prime: yes
-        stub-addr: 10.8.6.6
-
-stub-zone:
-        name: "rzl"
-        stub-prime: yes
-        stub-addr: 172.22.36.1
+forward-zone: 
+      name: "23.172.in-addr.arpa"
+      forward-addr: 172.22.0.53
 ```
