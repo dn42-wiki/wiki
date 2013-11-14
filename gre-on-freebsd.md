@@ -10,7 +10,7 @@ This page describes how to configure GRE tunnels on FreeBSD.
 
 ## Create a temporary gre tunnel
 
-```
+```bash
 ifconfig gre$INDEX create
 ifconfig gre$INDEX tunnel $TUNNEL_SRC $TUNNEL_DST
 ifconfig gre$INDEX inet $LOCAL $REMOTE netmask 0xffffffff
