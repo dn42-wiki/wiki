@@ -12,7 +12,7 @@
 
 ## Define an IPsec security policy
 Example policy on 1.2.3.4:
-```
+```bash
 #!/usr/sbin/setkey -f
 spdadd 1.2.3.4 5.6.7.8 gre -P out ipsec esp/transport//require;
 spdadd 5.6.7.8 1.2.3.4 gre -P in  ipsec esp/transport//require;
