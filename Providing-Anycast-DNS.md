@@ -1,5 +1,7 @@
 You may want to participate in the anycast DNS cloud.
 
+## Configuration
+
 Configuration requirements for all members of the anycast group are:
  * maintain your own zones based on whois database (scripts included in monotone repository)
  * allow recursion (including `.`)
@@ -10,6 +12,8 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 
  * **IP:** 172.22.0.53
  * **Announciation Subnet:** 172.22.0.53/32
+
+## Persons providing anycast DNS
 
 | **person**   | **AS** | **unicast-name**            | **unicast address** | **comments**                                            |
 |----|:-------:|:-------:|:-------:|----------------------------------------------------|
