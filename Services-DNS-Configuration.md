@@ -1,4 +1,7 @@
-# forwarder setup
+# Forwarder setup
+
+Configuration of common resolver softwares, to forward DNS queries for `.dn42` (and reverse DNS) to `172.22.0.53`.
+
 ## BIND
 
 If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
