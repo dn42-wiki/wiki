@@ -29,3 +29,6 @@ See [GRE on FreeBSD](gre-on-freebsd).
 
 ## How to configure IPsec on FreeBSD
 See [IPsec on FreeBSD](ipsec-on-freebsd).
+
+## How to configure GRE + IPsec on Debian
+See [GRE + IPsec on Debian](gre-plus-ipsec-debian).
