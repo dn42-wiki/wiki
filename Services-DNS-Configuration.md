@@ -33,16 +33,17 @@ config dnsmasq
         list server '/23.172.in-addr.arpa/172.22.0.53'
 ```
 
-to /etc/config/dhcp and run /etc/init.d/dnsmasq restart. After that you are able to resolve .dn42 
+to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq` restart. After that you are able to resolve `.dn42` 
 with the anycast DNS-Server, while your normal requests go to your standard DNS-resolver.
 
-for normal dnsmasq use
+For normal dnsmasq use
 
 ```
 server=/dn42/172.22.0.53
 server=/22.172.in-addr.arpa/172.22.0.53
+server=/23.172.in-addr.arpa/172.22.0.53
 ```
-in dnsmasq.conf
+in `dnsmasq.conf`.
 
 ## PowerDNS recursor
 Add this to /etc/powerdns/recursor.conf (at least in Debian)
