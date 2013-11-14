@@ -2,7 +2,7 @@ You may want to participate in the anycast DNS cloud.
 
 Configuration requirements for all members of the anycast group are:
  * maintain your own zones based on whois database (scripts included in monotone repository)
- * allow recursion (including ".")
+ * allow recursion (including `.`)
  * listen on a unicast IP too for testing/debugging reasons
  * with bind, please use ```minimal-responses yes;``` (goes into ```options```/```view```)
 
