@@ -29,6 +29,10 @@ Finally, you may want to host your own authoritative DNS server for the `dn42` z
 
 The root zone for `dn42.` is built from the [[whois registry|Services Whois]]. If you want to register a domain name, you need to add it to the registry (of course, you also need one or two authoritative nameservers).
 
+## DNS services for other networks
+
+Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [[External DNS]].
+
 ## Providing DNS service
 
 See [[Providing Anycast DNS]].
