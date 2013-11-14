@@ -1,4 +1,5 @@
  * [[Home]]
+  * [[Getting started|Getting-started-with-dn42]]
   * [[About]]
  * Services
   * [[IRC|Services IRC]]
