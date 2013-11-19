@@ -72,7 +72,7 @@ If unsure, ask on the mailing list or IRC.
 
 To register an IPv4 network prefix, simply create an `inetnum` object.
 
-You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html).
+You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://109.24.208.244:8888/dn42-netblock-visu/registry.html).
 
 The current guideline is to allocate a /25 by default, keeping space for a /23. You may allocate more than a /25 if you need to, but no more than a /23. In particular, if you want reverse DNS for your prefix, you will need at least a /24. (check? maybe the scripts in the repo are clever enough)
 
