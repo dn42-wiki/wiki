@@ -15,9 +15,9 @@ A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](h
 
 ## Address space
 
-There is nice 3djs visualisation showing current address space usage: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html [172.23.184.124].
+There is nice 3djs visualisation showing current address space usage: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html [172.23.184.124, [public](http://109.24.208.244:8888/dn42-netblock-visu/registry.html). The input data is taken from the registry.
 
-The input data is taken from the registry. Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn42/dn42-netblock-visu/index.html [172.23.184.124].
+Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn42/dn42-netblock-visu/index.html [172.23.184.124, [public](http://109.24.208.244:8888/dn42-netblock-visu/index.html).
 
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
