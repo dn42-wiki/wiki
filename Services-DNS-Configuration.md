@@ -75,6 +75,7 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 server:
       local-zone: "22.172.in-addr.arpa." nodefault
       local-zone: "23.172.in-addr.arpa." nodefault
+      local-zone: "d.f.ip6.arpa." nodefault
 
 forward-zone: 
       name: "dn42"
@@ -86,5 +87,9 @@ forward-zone:
 
 forward-zone: 
       name: "23.172.in-addr.arpa"
+      forward-addr: 172.22.0.53
+
+forward-zone:
+      name: "d.f.ip6.arpa"
       forward-addr: 172.22.0.53
 ```
