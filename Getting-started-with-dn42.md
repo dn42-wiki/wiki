@@ -26,7 +26,7 @@ This example assumes that your name is `Luke`, part of an organisation called th
 
 Create a `mntner` object named `LUKE-MNT`. It will be used to edit all the objects that are under your responsibility.
 
-- choose a password, and don't forget it.
+- choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
 - use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later.
 - use `LUKE-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
 
