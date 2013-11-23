@@ -9,7 +9,15 @@ The registry contains:
 
 ## Web interface
 
-Nixnodes provides a nice web interface, that allows you to **add/edit records** easily.  It is available at https://io.nixnodes.net/?registry. To add records, you must first create a maintainer object.
+Nixnodes provides a nice web interface, that allows you to **add/edit records** easily.  It is available at https://io.nixnodes.net/?registry. A full guide is available at [Getting started](Getting-started-with-dn42#Fill-in-the-registry).
+
+### Authentication
+
+To add or edit records with the web interface, authentication is done thanks to **maintainer objects**. Each maintainer object has a password associated to it.
+
+The password are not stored in cleartext in the registry: a hash is computed from the password and the name of the maintainer object. To generate such a hash (e.g. in case you forgot your password), use https://io.nixnodes.net/nctlio.php?m=dnr&gen=mypassword&mnt=MYMAINTAINER-MNT
+
+### Misc
 
 A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
 
