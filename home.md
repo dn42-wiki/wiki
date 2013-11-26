@@ -58,3 +58,4 @@ The data for these maps is collected using AS paths from various AS. A [[path co
 * [Wolfplex](http://www.wolfplex.org)
 * [smrsh](http://www.smrsh.net)
 * [Hackspace Jena e.V.](https://www.hackspace-jena.de)
+* [breizh-entropy](http://breizh-entropy.org)
