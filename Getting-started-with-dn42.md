@@ -95,6 +95,11 @@ You need a routing daemon to speak BGP with your peers. People usually run Quagg
 
 Some [[documentation of the old wiki|http://dn42.volcanis.me/initenv/wiki/HowToPeer.html]] might still be handy, but remember that everything there is terribly outdated.
 
+## Configuration Examples
+
+* [[EdgeOS Configuration|EdgeOS-Config-Example]]
+* [[BGP on Extreme Networks Summit 5i|bgp-on-extreme-summit5i]]
+* 
 # Configure DNS
 
 See [[Services DNS]].
