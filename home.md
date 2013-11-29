@@ -50,7 +50,7 @@ The data for these maps is collected using AS paths from various AS. A [[path co
 * [Freifunk Aurich](http://www.freifunk-aurich.de)
 * [Cyberpipe](https://www.kiberpipa.org)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
-* [[hsmr] / Hackerspace Marburg](https://hsmr.cc)
+* [[hsmr] / Hackspace Marburg](https://hsmr.cc)
 * [Whitespace (0x20)](http://www.0x20.be)
 * [AnoNet](http://www.anonet2.org)
 * [Revelation Space](http://www.revspace.nl)
