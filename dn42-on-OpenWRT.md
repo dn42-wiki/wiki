@@ -6,19 +6,21 @@ The intended target is a home router, acting as the default gateway for its LAN 
 
 This documentation assumes that the LAN is addressed in the dn42 space (`172.22.0.0/15`), but it's not a big deal to add NAT if it's not.
 
-## Configuration
+## Initial configuration
 
-### Peerings
+
+
+## Peerings
 
 Nothing fancy: use GRE tunnels, openvpn, anything. Don't forget to install the relevant packages with `opkg` (`kmod-gre` for instance).
 
 You can't manage GRE tunnels with OpenWRT, so just create them in `/etc/rc.local` (and assign addresses if needed).
 
-### BGP
+## BGP
 
 `quagga` and `bird` are both packaged in OpenWRT. Note that quagga is split in many packages, you probably need `quagga-bgpd`, `quagga-vtysh` and `quagga-zebra`.
 
-### Interface definition
+## Interface definition
 
 This is needed so that OpenWRT is aware of the new interfaces (for firewall and stuff).
 
@@ -28,7 +30,7 @@ In `/etc/config/network`, add entries for each dn42 interface:
         option ifname tun-peer1
         option proto none
 
-### Firewall
+## Firewall
 
 There are two goals:
 
@@ -37,7 +39,7 @@ There are two goals:
 
 Everything is done in `/etc/config/firewall`.
 
-#### Zone declaration
+### Zone declaration
 
     config zone
         option name             dn42
@@ -50,7 +52,7 @@ If you need to NAT your home network into dn42, you probably just need to add:
 
         option masq             1
 
-#### dn42 ↔ LAN forwarding
+### dn42 ↔ LAN forwarding
 
     config forwarding                   
         option src              lan
@@ -63,9 +65,9 @@ If you're confident enough, you can also forward dn42 into your LAN:
         option dest             lan
 
 
-#### dn42 ↔ dn42 forwarding
+### dn42 ↔ dn42 forwarding
 
 This is more tricky.
 
-### DNS
+## DNS
 
