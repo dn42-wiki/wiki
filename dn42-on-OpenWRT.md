@@ -35,5 +35,37 @@ There are two goals:
   - Allowing traffic from LAN to dn42 (and maybe from dn42 to LAN too)
   - If you have more than one peer, allowing traffic from dn42 to dn42 (forwarding)
 
+Everything is done in `/etc/config/firewall`.
+
+#### Zone declaration
+
+    config zone
+        option name             dn42
+        option network          'dn42peer1 dn42peer2 dn42peer3'
+        option input            REJECT
+        option output           ACCEPT
+        option forward          REJECT
+
+If you need to NAT your home network into dn42, you probably just need to add: 
+
+        option masq             1
+
+#### dn42 ↔ LAN forwarding
+
+    config forwarding                   
+        option src              lan
+        option dest             dn42
+
+If you're confident enough, you can also forward dn42 into your LAN:
+
+    config forwarding                   
+        option src              dn42
+        option dest             lan
+
+
+#### dn42 ↔ dn42 forwarding
+
+This is more tricky.
+
 ### DNS
 
