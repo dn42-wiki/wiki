@@ -99,6 +99,7 @@ Some [[documentation of the old wiki|http://dn42.volcanis.me/initenv/wiki/HowToP
 
 * [[EdgeOS Configuration|EdgeOS-Config-Example]]
 * [[BGP on Extreme Networks Summit 5i|bgp-on-extreme-summit5i]]
+* [[dn42 on OpenWRT]]
 
 # Configure DNS
 
