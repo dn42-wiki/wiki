@@ -20,6 +20,8 @@ You can't manage GRE tunnels with OpenWRT, so just create them in `/etc/rc.local
 
 `quagga` and `bird` are both packaged in OpenWRT. Note that quagga is split in many packages, you probably need `quagga-bgpd`, `quagga-vtysh` and `quagga-zebra`.
 
+Of course, you should announce the prefix of your home network.
+
 ## Interface definition
 
 This is needed so that OpenWRT is aware of the new interfaces (for firewall and stuff).
