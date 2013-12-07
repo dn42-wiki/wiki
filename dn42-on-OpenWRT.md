@@ -64,10 +64,17 @@ If you're confident enough, you can also forward dn42 into your LAN:
         option src              dn42
         option dest             lan
 
+Or you can forward only certain ports, to certain hosts, etc (standard `config rule` stuff)
 
 ### dn42 ↔ dn42 forwarding
 
-This is more tricky.
+This is more tricky. In theory, all you have to do is to set
+
+        option forward          ACCEPT
+
+in the definition of the zone. However, due to a bug in Attitude Adjustment (see https://dev.openwrt.org/ticket/12945), this will allow forwarding **everything everywhere**.
+
+You have to use this patch: https://dev.openwrt.org/changeset/35484 (monkeypatching the relevant files in `/lib` should work).
 
 ## DNS
 
