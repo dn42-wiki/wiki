@@ -38,6 +38,17 @@ The data for these maps is collected using AS paths from various AS. A [[path co
 
 [Munin](/Munin)
 
+## External resources about dn42
+
+ * [Wikipedia about dn42](http://en.wikipedia.org/wiki/Decentralized_network_42)
+ * [Lecture on 26c3](http://events.ccc.de/congress/2009/Fahrplan/events/3504.en.html)
+ * [Lecture on GPN8](http://entropia.de/wiki/GPN8:dn42)
+ * [soup.io group](http://dn42.soup.io/)
+ * [nobody about dn42](http://nowhere.ws/guides/dn42/)
+ * [Lecture on mrmcd0x8](http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
+ * [dn42-category in hackerspaces.org wiki](https://hackerspaces.org/wiki/Category:DN42)
+
+
 ## Participant Groups
 
 * [SpaceBoyz](http://spaceboyz.net)
