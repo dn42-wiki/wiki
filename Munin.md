@@ -26,5 +26,15 @@ imported.critical 1:
 ```
 This will send execute the command (set in munin-node.conf) to alert you, if the imported route count falls under 1.
 
+You might also want to change line 125 from 
+```
+graph_title $proto->{title} routes
+```
+to
+```
+graph_title $name routes
+```
+ 
+
 Example installation: 
 http://stats.tbspace.de/munin-cgi/munin-cgi-graph/tbspace.de/server.tbspace.de/dn42_crest_routes-day.png
