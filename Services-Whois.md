@@ -36,6 +36,15 @@ Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn
 ```sh
 whois -h $host $query
 ```
+### Using a whois config
+```sh
+$ cat /etc/whois.conf 
+\.dn42$           172.22.177.77
+\-DN42$           172.22.177.77
+as[64512-65534]   172.22.177.77
+as[76100-76199]   172.22.177.77
+```
+You can then use whois without specifying the server.
 
 ### Running your own whoisd
 ```sh
