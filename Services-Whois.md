@@ -44,7 +44,7 @@ $ cat /etc/whois.conf
 as[64512-65534]   172.22.177.77
 as[76100-76199]   172.22.177.77
 ```
-You can then use whois without specifying the server.
+You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
 ### Running your own whoisd
 ```sh
