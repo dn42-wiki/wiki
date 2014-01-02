@@ -41,8 +41,6 @@ whois -h $host $query
 $ cat /etc/whois.conf 
 \.dn42$           172.22.177.77
 \-DN42$           172.22.177.77
-as[64512-65534]   172.22.177.77
-as[76100-76199]   172.22.177.77
 ```
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
