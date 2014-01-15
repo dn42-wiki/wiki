@@ -64,7 +64,9 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 To register an AS number, simply create an `autnum` object.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855, and there is also a new range 76100-76200. In the future, a new range might be allocated in the range 4000000000-4294967295 (new 32-bit private ASN range).
+Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855, and there is also a new range 76100-76200. In the future, a new range might be allocated in the range 4000000000-4294967295 (new 32-bit private ASN range). 
+
+Before you register an ASN, please check also your desired number at the wikipage of [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) and at [this] (http://nixnodes.net/dn42/graph/) graph, because several ASNs are not registered at the dn42-registry.
 
 If unsure, ask on the mailing list or IRC.
 
@@ -87,26 +89,26 @@ If you don't know anybody who can peer with you, ask on IRC or the mailing list.
 
 Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
 
-There is some documentation in this wiki, like [[gre-plus-ipsec]].
+There is some documentation in this wiki, like [gre-plus-ipsec](gre-plus-ipsec).
 
 ## Running a routing daemon
 
-You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [[hardware router|bgp-on-extreme-summit5i]]).
+You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](bgp-on-extreme-summit5i) ).
 
-Some [[documentation of the old wiki|http://dn42.volcanis.me/initenv/wiki/HowToPeer.html]] might still be handy, but remember that everything there is terribly outdated.
+Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowToPeer.html) might still be handy, but remember that everything there is terribly outdated.
 
 ## Configuration Examples
 
-* [[EdgeOS Configuration|EdgeOS-Config-Example]]
-* [[BGP on Extreme Networks Summit 5i|bgp-on-extreme-summit5i]]
-* [[dn42 on OpenWRT]]
+* [EdgeOS Configuration](EdgeOS-Config-Example)
+* [BGP on Extreme Networks Summit 5i](bgp-on-extreme-summit5i)
+* [dn42 on OpenWRT](dn42-on-OpenWRT)
 
 # Configure DNS
 
-See [[Services DNS]].
+See [Services DNS](Services-DNS).
 
 # Use and provide services
 
-See [[internal]] for internal services.
+See [internal](internal) for internal services.
 
 Don't hesitate to provide interesting services, but *please*, document them on the wiki! Otherwise, nobody will use them because nobody can guess they even exist.
