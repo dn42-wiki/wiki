@@ -21,6 +21,15 @@ The password are not stored in cleartext in the registry: a hash is computed fro
 
 A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
 
+## DNS interface
+
+There is also a DNS-based interface to query AS information from the registry. The DNS zone is `asn.dn42`. Example:
+
+    $ dig +short AS76103.asn.dn42 TXT
+    "76103 | DN42 | dn42 |  | NIXNODES-IX - NixNodes CORE Network"
+
+The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`)
+
 ## Address space
 
 There is nice 3djs visualisation showing current address space usage: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html ([public](http://109.24.208.244:8888/dn42-netblock-visu/registry.html) or 172.23.184.98). The input data is taken from the registry.
