@@ -28,6 +28,8 @@ There is also a DNS-based interface to query AS information from the registry. T
     $ dig +short AS76103.asn.dn42 TXT
     "76103 | DN42 | dn42 |  | NIXNODES-IX - NixNodes CORE Network"
 
+The Python code for generating the zone from the registry is available on the monotone repository.
+
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`)
 
 ## Address space
