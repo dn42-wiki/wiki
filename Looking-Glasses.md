@@ -11,6 +11,7 @@ Please sort by AS number.
 * AS 65529: http://vpn1.freifunk-bielefeld.de/ulg/ulg.py (IPv4) → interactive (BGP-map)
 * AS 65529: http://vpn1.freifunk-bielefeld.de/ulgv6/ulg.py (IPv6) → interactive (BGP-map)
 * AS 76103: http://lg.nixnodes.net (IPv4) → interactive (traceroute)
+  * http://nixnodes.net/dn42/graph/ → interactive BGP-graph
 
 
 ## Reachable only from within dn42
