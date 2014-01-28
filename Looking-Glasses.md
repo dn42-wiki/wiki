@@ -1,0 +1,21 @@
+# Looking Glasses
+
+This is the list of **looking glasses** available for the dn42 network.  Some only display BGP information, while some others allow interactive queries (traceroute, details of a route, BGP-map visualisation, etc).
+
+## Reachable from the Internet
+
+Please sort by AS number.
+
+* AS 65529: http://vpn1.freifunk-bielefeld.de/ulg/ulg.py (IPv4) → interactive (BGP-map)
+* AS 65529: http://vpn1.freifunk-bielefeld.de/ulgv6/ulg.py (IPv6) → interactive (BGP-map)
+* AS 76103: http://lg.nixnodes.net (IPv4) → interactive (traceroute)
+
+
+## Reachable only from within dn42
+
+Please sort by AS number.
+
+* AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes)
+* AS 64825: http://nagual.tim.dn42 (IPv4) → interactive
+* AS 76142: http://lg.synhacx.dn42 (IPv4) → interactive (traceroute, BGP-map)
+* AS 76142: http://dataviz.polynome.dn42/dn42/lastseen.html (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes)
