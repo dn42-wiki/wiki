@@ -56,6 +56,8 @@ $ cat /etc/whois.conf
 as6[4-5][0-9][0-9][0-9] 172.22.177.77
 #dn42 range 76100-76199
 as761[0-9][0-9]   172.22.177.77
+# dn42 ipv4 address space
+172.2[2-3].* 172.22.177.77
 ```
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
