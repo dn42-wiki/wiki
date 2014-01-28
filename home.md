@@ -27,6 +27,7 @@ A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available fo
 ### Looking glass
 * AS76103: [lg.nixnodes.net](http://lg.nixnodes.net/)
 * AS64692: [zeus.nihilus.dn42/dn42/routes.cgi](http://zeus.nihilus.dn42/dn42/routes.cgi)
+* AS76142: [lg.synhacx.dn42](http://lg.synhacx.dn42/prefix_bgpmap/tower/ipv4?q=172.22.0.53)
 
 ### Network maps
 * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
