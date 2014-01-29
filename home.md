@@ -4,6 +4,29 @@ dn42 is a big dynamic VPN network, which employs Internet technologies ([BGP](ht
 
 A number of services are provided on the network: see [internal](internal) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some Freifunk networks.
 
+## Why dn42?
+
+dn42 can be used to learn networking and to connect private networks, such as hackerspaces or community networks. But above all, experimenting with routing in dn42 is fun!
+
+### Experiment with routing technology
+
+Participating in dn42 is primarily useful for learning routing technologies such as BGP, using a reasonably large network (~100 AS, ~300 prefixes).
+
+Since dn42 is very similar to the Internet, it can be used as a hands-on testing ground for new ideas, or simply to learn real networking stuff.  The biggest advantage when compared to the Internet: if you break something in the network, you won't have any big network operator yelling angrily at you.
+
+### Connect hackerspaces
+
+dn42 is also a great way to connect hackerspaces in a secure way, so that they can provide services to each other.
+
+Have you ever wanted to SSH on your raspberrypi hosted at your local hackerspace, and had trouble doing so because of NAT? If your hackerspace was using dn42, it could have been much easier.
+
+Nowadays, most end-user networks use NAT to squeeze all those nifty computing devices behind a single public IPv4 address.  This makes it difficult to provide services directly from a machine behind the NAT.  Besides, you might want to provide some services to other hackerspaces, but not to anybody on the Internet.
+
+dn42 solves this problem.  By addressing your network in dn42, your devices can communicate with all other participants in a transparent way, without resorting to this ugly thing called NAT.  Of course, this doesn't mean that you have to fully open your network to dn42: similarly to IPv6, you can still use a firewall (but you could, for instance, allow incoming TCP 22 and TCP 80 from dn42 by default).
+
+If your hackerspace is actually using dn42 to provide some services, please let us know! (on this wiki or on the mailing list). It's very rewarding when the network is actually used for something :)
+
+
 ## About this wiki
 
 This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), and for editing from within dn42, at [http://internal.dn42](http://internal.dn42).
