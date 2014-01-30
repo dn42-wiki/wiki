@@ -4,18 +4,19 @@ Please add your public statistics.
 ## Scripts
 
 ### Number of prefixes for collectd
-**collectd.conf**
+
+#### collectd.conf
 
 ```
 LoadPlugin exec
 <Plugin exec>
-   Exec nobody "/etc/collectd/bgp_prefixes.sh"
+   Exec nobody "/etc/collectd/bgp_prefixes-quagga.sh"
 </Plugin>
 ```
 
 collectd refuses to exec scripts as root. On Debian vtysh is compiled with PAM support: adding nobody to the quaggavty group suffices.
 
-**bgp_prefixes.sh**
+#### bgp_prefixes-quagga.sh
 
 ```
 #!/bin/bash
@@ -31,6 +32,34 @@ echo "PUTVAL $HOSTNAME/quagga-bgpd/routes-IPv4 interval=$INTERVAL N:$n4"
 echo "PUTVAL $HOSTNAME/quagga-bgpd/routes-IPv6 interval=$INTERVAL N:$n6"
 
 sleep $INTERVAL
+done
+```
+
+#### Number of prefixes per neighbour for bird
+
+```
+#!/bin/sh
+#
+# Collectd script for collecting the number of routes going through each
+# BGP neighour.  Works for bird.
+#
+# See https://dn42.net/Services-Statistics
+
+INTERVAL=60
+HOSTNAME=mydn42router
+[ -n "$COLLECTD_HOSTNAME" ] && HOSTNAME="$COLLECTD_HOSTNAME"
+
+while true
+do
+    birdc 'show protocols "*"' | grep ' BGP' | cut -d ' ' -f 1 | while read neighbour
+    do
+        nbroutes=$(birdc "show route protocol $neighbour primary count" | grep -v 'BIRD' | cut -d ' ' -f 1)
+        echo "PUTVAL $HOSTNAME/bird-bgpd/routes-$neighbour interval=$INTERVAL N:$nbroutes"
+    done
+    # FIXME: we probably count non-BGP routes here
+    totalroutes=$(birdc "show route primary count" | grep -v 'BIRD' | cut -d ' ' -f 1)
+    echo "PUTVAL $HOSTNAME/bird-bgpd/routes-all interval=$INTERVAL N:$totalroutes"
+    sleep $INTERVAL
 done
 ```
 
