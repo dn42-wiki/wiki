@@ -16,18 +16,18 @@ server:
 stub-zone:
         name: "dn42"
         stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
+        stub-addr: 172.22.119.160
+        stub-addr: 172.22.119.163
 
 stub-zone:
         name: "22.172.in-addr.arpa"
         stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
+        stub-addr: 172.22.119.160
+        stub-addr: 172.22.119.163
 
 stub-zone:
         name: "23.172.in-addr.arpa"
         stub-prime: yes
-        stub-addr: 172.22.119.139
-        stub-addr: 172.22.119.129
+        stub-addr: 172.22.119.160
+        stub-addr: 172.22.119.163
 ```
