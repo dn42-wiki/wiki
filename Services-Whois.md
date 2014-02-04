@@ -38,6 +38,10 @@ There is nice 3djs visualisation showing current address space usage: http://dat
 
 Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn42/dn42-netblock-visu/index.html ([public](http://109.24.208.244:8888/dn42-netblock-visu/index.html) or 172.23.184.98).
 
+## Software
+
+ * [[lglass]] is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
+
 ## Whois daemons
  * welterde: thinkbase.srv.welterde.de (46.4.248.201)
  * fritz: whois.fritz.dn42 (172.22.119.139)
@@ -66,6 +70,7 @@ fd**:****:****:****:****:****:****:**** 172.22.177.77
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
 ### Running your own whoisd
+
 ```sh
 cd /home/some/path/to/store/branch
 sudo aptitude install ruby rubygems
