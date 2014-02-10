@@ -43,7 +43,7 @@ Create a `person` object for yourself.
 
 You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `LUKE-DN42`).
 
-Then create a `person` object for your organisation:
+If you intend to register resources for an organisation (e.g. your hackerspace), you must also create a `person` object for your organisation:
 
 - `nic-hdl` is `REBEL-ALLIANCE-DN42`.
 - email should be a contact address for your organisation, or maybe a mailing list (but people should be able to send email without subscribing).
