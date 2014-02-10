@@ -64,9 +64,11 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 To register an AS number, simply create an `autnum` object.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855, and there is also a new range 76100-76200. In the future, a new range might be allocated in the range 4000000000-4294967295 (new 32-bit private ASN range). 
+Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855, and there is also a new range 76100-76200. In the future, a new range might be allocated in the range 4000000000-4294967295 (new 32-bit private ASN range).
 
-Before you register an ASN, please check also your desired number at the wikipage of [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) and at [this] (http://nixnodes.net/dn42/graph/) graph, because several ASNs are not registered at the dn42-registry.
+For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. This list is automatically built from the registry.
+
+If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/) or [this list](http://109.24.208.244:8888/dn42/lastseen/).
 
 If unsure, ask on the mailing list or IRC.
 
