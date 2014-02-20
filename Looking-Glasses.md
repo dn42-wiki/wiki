@@ -17,7 +17,7 @@ Please sort by AS number.
 
 Please sort by AS number.
 
-* AS 64825: http://nagual.tim.dn42 or http://172.22.225.1 (IPv4) → interactive
+* **[broken]** AS 64825: http://nagual.tim.dn42 or http://172.22.225.1 (IPv4) → interactive
 * AS 64835: http://lg.nordkapp-5.dn42 or http://172.22.235.4 (IPv4) → interactive
 * **[broken]** AS 76102: http://www.mtak.dn42/lg/ or http://172.22.139.137/lg/
 * AS 76142: http://lg.ffdn.dn42 (IPv4) → interactive (traceroute, BGP-map)
