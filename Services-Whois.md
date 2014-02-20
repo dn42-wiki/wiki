@@ -30,7 +30,7 @@ There is also a DNS-based interface to query AS information from the registry. T
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 
-The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`)
+The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see https://www.team-cymru.org/Services/ip-to-asn.html#dns
 
 ## Address space
 
