@@ -1,5 +1,6 @@
  * [[Home]]
   * [[Getting started|Getting-started-with-dn42]]
+  * [[FAQ|Frequently Asked Questions]]
  * Services
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
