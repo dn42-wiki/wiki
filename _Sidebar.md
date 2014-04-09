@@ -6,6 +6,5 @@
   * [[Whois registry|Services Whois]]
   * [[DNS|Services DNS]]
   * [[Looking Glasses]]
-  * [[Shells|Services Shells]]
   * [[VirtualMachines|Services VirtualMachines]]
   * [[Internal services|Internal]]
