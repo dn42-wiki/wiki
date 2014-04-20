@@ -210,10 +210,6 @@ If your peer sends you a key in PEM format (starts with `-----BEGIN PUBLIC KEY--
                 ge 23
                 prefix 172.31.0.0/16
             }
-            rule 65535 {
-                action deny
-                prefix 0.0.0.0/0
-            }
         }
         route-map DN42 {
             rule 1 {
@@ -225,9 +221,6 @@ If your peer sends you a key in PEM format (starts with `-----BEGIN PUBLIC KEY--
                         }
                     }
                 }
-            }
-            rule 65535 {
-                action deny
             }
         }
     }
