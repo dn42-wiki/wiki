@@ -102,6 +102,7 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 ## Configuration Examples
 
 * [EdgeOS Configuration](EdgeOS-Config-Example)
+* [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
 * [BGP on Extreme Networks Summit 5i](bgp-on-extreme-summit5i)
 * [dn42 on OpenWRT](dn42-on-OpenWRT)
 
