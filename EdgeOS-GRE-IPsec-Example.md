@@ -1,5 +1,5 @@
 # EdgeOS GRE/IPsec config example
-This is an example configuration derived from the config used on a peering router in AS64746. It was created using EdgeOS version 1.5.0alpha1 for an EdgeRouter Lite.
+This is an example configuration derived from the config used on a peering router in AS64746. It was created using EdgeOS version 1.5.0alpha1 on an EdgeRouter Lite.
 
 ## Features
 * Zone-based firewall
