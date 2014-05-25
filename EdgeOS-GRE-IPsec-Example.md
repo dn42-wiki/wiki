@@ -184,6 +184,13 @@ If your peer sends you a key in PEM format (starts with `-----BEGIN PUBLIC KEY--
         }
     }
     policy {
+        prefix-list AS64746-IPv4 {
+            rule 1 {
+                action permit
+                le 32
+                prefix 172.23.248.0/24
+            }
+        }
         prefix-list DN42-IPv4 {
             rule 1 {
                 action permit
@@ -209,6 +216,18 @@ If your peer sends you a key in PEM format (starts with `-----BEGIN PUBLIC KEY--
                 description ChaosVPN
                 ge 23
                 prefix 172.31.0.0/16
+            }
+        }
+        route-map AS64746 {
+            rule 1 {
+                action permit
+                match {
+                    ip {
+                        address {
+                            prefix-list AS64746-IPv4
+                        }
+                    }
+                }
             }
         }
         route-map DN42 {
@@ -247,6 +266,11 @@ If your peer sends you a key in PEM format (starts with `-----BEGIN PUBLIC KEY--
                 }
                 soft-reconfiguration {
                     inbound
+                }
+            }
+            redistribute {
+                connected {
+                    route-map AS64746
                 }
             }
         }
