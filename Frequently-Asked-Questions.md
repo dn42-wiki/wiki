@@ -27,9 +27,4 @@ Another issue with the private ASN range 64512-65534: other projects are also us
 
 Fortunately, [RFC6996](http://tools.ietf.org/html/rfc6996) defines a new private ASN range: 4200000000-4294967294.  Given the size of this range, there is little chance of running into a conflict.
 
-dn42 is now using the **4242420000-4242429999** range for new allocations. This range is further subdivided:
-* **4242420000-4242423999** for end-users allocations
-* **4242424000-4242426999** reserved for future use
-* **4242427000-4242429999** for sub-allocations
-
-If you are running a project similar to dn42, please use another range of ASN. The "sub-allocations" range is meant for dn42 users willing to have administrative control over a small, consecutive range of ASN (e.g. to use them directly or to distribute them).
+We now encourage dn42 users to use the newly-allocated ranges in **4242420000-4242429999**. See the [registry page](Services-Whois#AS-numbers) for details.
