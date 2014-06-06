@@ -7,6 +7,27 @@ The registry contains:
   * Subnet assignations
   * DNS root zone for `dn42.`
 
+## Names and numbers
+
+### Address space
+
+dn42 uses **172.22.0.0/15** for IPv4.
+
+For IPv6, we use both ULA (that is, **fd00::/8**) and globally unique PI/PA address space of participants. ULA is prefered for various reasons, see the [FAQ](Frequently-Asked-Questions#What-about-IPv6-in-DN42?).
+
+### AS numbers
+
+Since June 2014, dn42 is using the **4242420000-4242429999** ASN range for allocations. This range is further subdivided:
+* **4242420000-4242423999** for end-users allocations
+* **4242424000-4242426999** reserved for future use
+* **4242427000-4242429999** for sub-allocations
+
+If you are running a project similar to dn42, please use another range of ASN. The "sub-allocations" range is meant for dn42 users willing to have administrative control over a small, consecutive range of ASN (e.g. to use them directly or to distribute them).
+
+Note that currently, most AS are using one of the legacy ASN range (and will probably continue to do so, as renumbering is painful). See the [FAQ](Frequently-Asked-Questions#Why-are-you-using-ASN-in-the-76100-76199-range?) for a discussion on AS ranges.
+
+### DNS zones
+
 ## Web interface
 
 Nixnodes provides a nice web interface, that allows you to **add/edit records** easily.  It is available at https://io.nixnodes.net/?registry. A full guide is available at [Getting started](Getting-started-with-dn42#Fill-in-the-registry).
