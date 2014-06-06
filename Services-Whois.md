@@ -9,6 +9,8 @@ The registry contains:
 
 ## Names and numbers
 
+dn42 uses some names and numbers, which are declared in the registry.  Whenever possible, we try to stick to names and numbers that do not conflict with the ICANN-net or other networks similar to dn42, for instance by using private numbers space.
+
 ### Address space
 
 dn42 uses **172.22.0.0/15** for IPv4.
@@ -27,6 +29,10 @@ If you are running a project similar to dn42, please use another range of ASN. T
 Note that currently, most AS are using one of the legacy ASN range (and will probably continue to do so, as renumbering is painful). See the [FAQ](Frequently-Asked-Questions#Why-are-you-using-ASN-in-the-76100-76199-range?) for a discussion on AS ranges.
 
 ### DNS zones
+
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](Services-DNS).
+
+Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](External-DNS).
 
 ## Web interface
 
