@@ -15,3 +15,16 @@ There are some ASes in DN42 that route IPv6 traffic. It is not yet agreed upon w
 (*TODO*)
 
 At the moment, it is safe to assume that everyone doing IPv6 routing accepts at least prefixes from fd00::/8 with prefix lengths between 48 and 64 bits (inclusive) if they are part of the registry.
+
+
+## Why are you using ASN in the 76100-76199 range?
+
+Yes, we know that this is not private ASN space (rather, it is part of the reserved block 65552-131071, see [IANA](http://www.iana.org/assignments/as-numbers/as-numbers.xhtml)).
+
+We used to assign ASN in the 64600-64855 range, where you would get ASN 64600+X if you had 172.22.X.0/24.  Since we are now assigning /25 by default, and we have extended the address range to include 172.23.0.0/16, this is legacy.
+
+Another issue with the private ASN range 64512-65534: other projects are also using it (for instance, Freifunk, Anonet, etc), which can lead to conflicts.
+
+Fortunately, [RFC6996](http://tools.ietf.org/html/rfc6996) defines a new private ASN range: 4200000000-4294967294.  Given the size of this range, there is little chance of running into a conflict.
+
+dn42 is now using the **4242420000-4242429999** range for new allocations.
