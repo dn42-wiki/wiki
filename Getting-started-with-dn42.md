@@ -64,7 +64,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 To register an AS number, simply create an `autnum` object.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. At the moment, **you should allocate your AS number in the 64856-64999 range**.
+Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you should allocate your AS number in the new 4242420000-4242423999 range**.
 
 For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. This list is automatically built from the registry.
 
