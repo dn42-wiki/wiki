@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 ## Why are you using monotone for the registry? Why not GIT?
 
 There is an important difference between the data model of monotone and GIT: In GIT branches *are* HEADs, while in monotone, branches are a list of HEADs. Or, to state it simpler and probably less correct: It is possible to sync merge conflicts in monotone. In GIT, conflicts are part of the index and/or working tree, and thus can't be pushed/pulled.
