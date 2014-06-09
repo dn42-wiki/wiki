@@ -28,3 +28,11 @@ Another issue with the private ASN range 64512-65534: other projects are also us
 Fortunately, [RFC6996](http://tools.ietf.org/html/rfc6996) defines a new private ASN range: 4200000000-4294967294.  Given the size of this range, there is little chance of running into a conflict.
 
 We now encourage dn42 users to use the newly-allocated ranges in **4242420000-4242429999**. See the [registry page](Services-Whois#AS-numbers) for details.
+
+
+## What BGP daemon should I use?
+
+This is really up to you: that's the magic of open protocols.
+
+As of 2014, most people seem to use either Quagga or Bird (with a growing preference for Bird). You may also encounter users of OpenBGPd. Even more occasionally, people use hardware BGP routers in dn42, for instance [Extreme Networks](howto/bgp-on-extreme-summit5i) hardware.
+
