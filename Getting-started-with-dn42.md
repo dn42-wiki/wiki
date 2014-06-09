@@ -91,11 +91,11 @@ If you don't know anybody who can peer with you, ask on IRC or the mailing list.
 
 Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
 
-There is some documentation in this wiki, like [gre-plus-ipsec](gre-plus-ipsec).
+There is some documentation in this wiki, like [gre-plus-ipsec](howto/gre-plus-ipsec).
 
 ## Running a routing daemon
 
-You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](bgp-on-extreme-summit5i) ).
+You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](howto/bgp-on-extreme-summit5i) ).  See the relevant [FAQ entry](Frequently-Asked-Questions#What-BGP-daemon-should-I-use?).
 
 Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowToPeer.html) might still be handy, but remember that everything there is terribly outdated.
 
@@ -103,8 +103,8 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 
 * [EdgeOS Configuration](EdgeOS-Config-Example)
 * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
-* [BGP on Extreme Networks Summit 5i](bgp-on-extreme-summit5i)
-* [dn42 on OpenWRT](dn42-on-OpenWRT)
+* [BGP on Extreme Networks Summit 5i](howto/bgp-on-extreme-summit5i)
+* [dn42 on OpenWRT](howto/dn42-on-OpenWRT)
 
 # Configure DNS
 
