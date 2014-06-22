@@ -97,6 +97,8 @@ There is some documentation in this wiki, like [gre-plus-ipsec](howto/gre-plus-i
 
 You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](howto/bgp-on-extreme-summit5i) ).  See the relevant [FAQ entry](Frequently-Asked-Questions#What-BGP-daemon-should-I-use?).
 
+You can find [configuration examples for Bird here](howto/bird).
+
 Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowToPeer.html) might still be handy, but remember that everything there is terribly outdated.
 
 ## Configuration Examples
