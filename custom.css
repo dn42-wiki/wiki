@@ -1,3 +1,11 @@
 #sidebar-content {
   padding: 0 !important;
 }
+
+#sidebar-content ul {
+  margin: 0 !important;
+}
+
+#wiki-body .markdown-body {
+  padding: 0 !important;
+}
