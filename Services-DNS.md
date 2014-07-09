@@ -1,6 +1,7 @@
 # DNS
 
 *(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.22.0.53`.
+
 **DNS is build from [[whois database|Services Whois]]. So please edit your DNS-records there.**
 
 ## Using the DNS service
