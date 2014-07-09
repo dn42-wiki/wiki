@@ -70,9 +70,12 @@ Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn
  * [[lglass]] is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
 
 ## Whois daemons
- * welterde: thinkbase.srv.welterde.de (46.4.248.201)
- * fritz: whois.fritz.dn42 (172.22.119.139)
- * nixnodes: whois.nixnodes.dn42 (172.22.177.77)
+
+| **person** | **dns**                   | **ip**          |
+|------------|---------------------------|-----------------|
+| welterde   | thinkbase.srv.welterde.de | 46.4.248.201    |
+| fritz      | whois.fritz.dn42          | 172.22.119.139  |
+| nixnodes   | whois.nixnodes.dn42       | 172.22.177.77   |
 
 ### Usage
 ```sh
@@ -97,7 +100,6 @@ fd**:****:****:****:****:****:****:**** 172.22.177.77
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
 ### Running your own whoisd
-
 ```sh
 cd /home/some/path/to/store/branch
 sudo aptitude install ruby rubygems
@@ -105,7 +107,6 @@ sudo gem install netaddr
 cd whoisd/ruby
 sudo ruby whoisd.rb nobody
 ```
-
 
 ## Monotone
 Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvs.
@@ -125,7 +126,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 ### Setup
 ```sh
 mtn genkey you@domain.tld
-mtn pubkey you@domain.tld # send the output to some $monotone_server operator(do NOT send the keypair!)
+mtn pubkey you@domain.tld # send the output to some $monotone_server operator (do NOT send the keypair!)
 mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry
 cd net.dn42.registry
 $add_your_objects
