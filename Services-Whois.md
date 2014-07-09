@@ -1,7 +1,5 @@
 # Whois registry
-**aka** _The registry_.
-
-The registry contains:
+**aka** _The registry_ contains:
 
   * AS numbers assignations
   * Subnet assignations
