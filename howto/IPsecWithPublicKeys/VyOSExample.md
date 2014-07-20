@@ -73,7 +73,7 @@ In this example, we'll use the following settings:
 ## Full GRE/IPsec example
     interfaces {
         ethernet eth0 {
-            address 192.0.2.2/30
+            address 192.0.2.1/30
             description WAN
             duplex auto
             speed auto
