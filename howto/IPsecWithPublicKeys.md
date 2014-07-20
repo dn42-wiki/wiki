@@ -37,13 +37,14 @@ https://github.com/ryanriske/pubkey-converter
 | :----------------------- | --------------: |
 | [Cisco IOS][a]           | Hexadecimal DER |
 | IPsec-Tools         | Base64 RFC 3110 |
-| Mikrotik RouterOS   | PEM             |
+| [Mikrotik RouterOS][c]   | PEM             |
 | OpenBSD             | PEM             |
 | strongSwan < 5.0.0  | PEM             |
 | strongSwan >= 5.0.0 | PEM             |
 | [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
 
 [a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
+[c]: /howto/IPsecWithPublicKeys/RouterOSExample
 [g]: /howto/IPsecWithPublicKeys/VyOSExample
 
 ### Notes
