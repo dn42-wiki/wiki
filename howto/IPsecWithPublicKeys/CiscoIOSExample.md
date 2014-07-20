@@ -60,7 +60,6 @@ In this example, we'll use the following settings:
         Enter configuration commands, one per line.  End with CNTL/Z.
         foo(config)#crypto key pubkey-chain rsa
         foo(config-pubkey-chain)#addressed-key 192.0.2.2
-        foo(config-pubkey-key)#key
         foo(config-pubkey-key)#key-string
         Enter a public key as a hexidecimal number ....
         
