@@ -35,13 +35,15 @@ Different implementations use different formats to represent public keys, and it
 ### How-To examples
 | Implementation      | Key format      |
 | :------------------ | --------------: |
-| Cisco IOS           | Hexadecimal DER |
+| [Cisco IOS][a]           | Hexadecimal DER |
 | IPsec-Tools         | Base64 RFC 3110 |
 | Mikrotik RouterOS   | PEM             |
 | OpenBSD             | PEM             |
 | strongSwan < 5.0.0  | PEM             |
 | strongSwan >= 5.0.0 | PEM             |
 | Vyatta/VyOS/EdgeOS  | Base64 RFC 3110 |
+
+[a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
 
 ### Notes
 1.  Best practice is to generate the private key on the router itself, and not transfer it to another machine. This part should be kept secret!
