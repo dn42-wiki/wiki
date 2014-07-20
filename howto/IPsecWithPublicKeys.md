@@ -33,8 +33,8 @@ Different implementations use different formats to represent public keys, and it
 [pubkey-converter]: https://github.com/ryanriske/pubkey-converter "Public key conversion script"
 
 ### How-To examples
-| Implementation      | Key format      |
-| :------------------ | --------------: |
+| Implementation           | Key format      |
+| :----------------------- | --------------: |
 | [Cisco IOS][a]           | Hexadecimal DER |
 | IPsec-Tools         | Base64 RFC 3110 |
 | Mikrotik RouterOS   | PEM             |
