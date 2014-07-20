@@ -28,9 +28,9 @@ Keep in mind that certificates are just public keys wrapped with some extra meta
 
 ## Ok fine, how do I public key?
 ### Conversion tool
-Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them. Here is [a script][pubkey-converter] for that purpose.
+Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them. Here is a script for that purpose:
 
-[pubkey-converter]: https://github.com/ryanriske/pubkey-converter "Public key conversion script"
+https://github.com/ryanriske/pubkey-converter
 
 ### How-To examples
 | Implementation           | Key format      |
