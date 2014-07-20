@@ -24,7 +24,7 @@
 ### Public keys means certificates, right? Certificates are hard :(
 Many IKE implementations support manually configuring trusted public keys, without having to create a CA, generate CSRs, sign certificates, or remember/look up the commands to do those things.
 
-Keep in mind that certificates are just public keys wrapped with some extra metadata so that your router can automatically verify that it belongs to someone you trust. Certificates are useful for instances where there are so many peers that it's infeasible to manually configure each one's public key, such as a "road warrior" configuration or DMVPN. In those scenarios it makes sense to trust that a Certificate Authority has verified the validity of a particular public key.
+Keep in mind that certificates are just public keys wrapped with some extra metadata so that your router can automatically verify that it belongs to someone you trust. Certificates are useful for instances where there are so many peers that it's infeasible to manually configure each one's public key, such as a "road warrior" configuration or DMVPN. In those scenarios it makes sense to set up a Certificate Authority to handle it.
 
 ## Ok fine, how do I public key?
 ### Conversion tool
