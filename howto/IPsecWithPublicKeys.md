@@ -41,9 +41,10 @@ https://github.com/ryanriske/pubkey-converter
 | OpenBSD             | PEM             |
 | strongSwan < 5.0.0  | PEM             |
 | strongSwan >= 5.0.0 | PEM             |
-| Vyatta/VyOS/EdgeOS  | Base64 RFC 3110 |
+| [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
 
 [a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
+[g]: /howto/IPsecWithPublicKeys/VyOSExample
 
 ### Notes
 1.  Best practice is to generate the private key on the router itself, and not transfer it to another machine. This part should be kept secret!
