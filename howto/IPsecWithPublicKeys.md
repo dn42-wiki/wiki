@@ -17,7 +17,7 @@
 *  Dynamic peers can all have distinct public keys and still use IKE main mode
 
 ### So why isn't everyone using public keys already?
-*  The various IKE implementations don't all use the same format to represent public keys _(but we can [**easily** convert](#Conversion-tool) between them)_
+*  The various IKE implementations don't all use the same format to represent public keys _(but we can **easily** [convert](#Conversion-tool) between them)_
 *  Documentation on [how to](#How-To-examples), and why you should, configure public keys instead of PSKs is lacking _(which is why this page exists)_
 *  Some implementations don't expose the ability to use public keys directly, only allowing a choice between PSKs and X.509 certificates
 
