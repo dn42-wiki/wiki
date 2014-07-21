@@ -39,12 +39,13 @@ https://github.com/ryanriske/pubkey-converter
 | IPsec-Tools         | Base64 RFC 3110 |
 | [Mikrotik RouterOS][c]   | PEM             |
 | OpenBSD             | PEM             |
-| strongSwan < 5.0.0  | Base64 RFC 3110 |
+| [strongSwan < 5.0.0][e]  | Base64 RFC 3110 |
 | [strongSwan >= 5.0.0][f] | PEM             |
 | [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
 
 [a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
 [c]: /howto/IPsecWithPublicKeys/RouterOSExample
+[e]: /howto/IPsecWithPublicKeys/strongSwan4Example
 [f]: /howto/IPsecWithPublicKeys/strongSwan5Example
 [g]: /howto/IPsecWithPublicKeys/VyOSExample
 
