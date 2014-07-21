@@ -12,7 +12,7 @@
 
 ### Public keys are _better_
 *  They can be transmitted over insecure channels without compromising security
-*  No need to generate a new key for each connection (but you could if you wanted to); just send the same public key to each new peer
+*  No need to generate a new key for each connection; just send the same public key to each new peer
 *  Most implementations generate keys using high quality random numbers by default; one must _try_ to generate an insecure key
 *  Dynamic peers can all have distinct public keys and still use IKE main mode
 
@@ -53,4 +53,5 @@ https://github.com/ryanriske/pubkey-converter
 
 ### Notes
 1.  Best practice is to generate the private key on the router itself, and not transfer it to another machine. This part should be kept secret!
-2.  Some implementations support more than one key format. The examples here only show how to use one of them (usually PEM) for brevity.
+2.  Generate a key of at least 2048 bits, preferably 4096 if both ends support it.
+3.  Some implementations support more than one key format. The examples here only show how to use one of them (usually PEM) for brevity.
