@@ -55,3 +55,4 @@ https://github.com/ryanriske/pubkey-converter
 1.  Best practice is to generate the private key on the router itself, and not transfer it to another machine. This part should be kept secret!
 2.  Generate a key of at least 2048 bits, preferably 4096 if both ends support it.
 3.  Some implementations support more than one key format. The examples here only show how to use one of them (usually PEM) for brevity.
+4.  RFC 3110 format is the same as that described in RFC 2537. The former obsoletes the latter.
