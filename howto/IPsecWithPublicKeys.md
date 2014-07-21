@@ -36,9 +36,9 @@ https://github.com/ryanriske/pubkey-converter
 | Implementation           | Key format      |
 | :----------------------- | --------------: |
 | [Cisco IOS][a]           | Hexadecimal DER |
-| IPsec-Tools         | Base64 RFC 3110 |
-| [Mikrotik RouterOS][c]   | PEM             |
+| [Mikrotik RouterOS][b]   | PEM             |
 | OpenBSD             | PEM             |
+| Racoon              | Base64 RFC 3110 |
 | [strongSwan < 5.0.0][e]  | Base64 RFC 3110 |
 | [strongSwan >= 5.0.0][f] | PEM             |
 | [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
