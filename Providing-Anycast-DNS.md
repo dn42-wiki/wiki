@@ -20,3 +20,4 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 | siska          | 76103  | nixnodes.root.dn42 | 172.22.177.8        | authoritative only |
 | siska          | 76103  | ns1.nixnodes.dn42  | 172.22.177.2        | caching            |
 | siska          | 76105  | ns2.nixnodes.dn42  | 172.22.177.1        | caching            |
+| xuu         | 64737     | xuu.root.dn42      | 172.22.141.132      |
