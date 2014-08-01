@@ -10,9 +10,9 @@ Remember, if you announce an anycast /64, then you need to provide **all** servi
 
 ## Anycast services
 
-| **Name** | **/64 prefix announced** | **Service address** | **Protocol/port** | 
-|----------|-------------------------|---------------------|-------------------|
-| DNS resolver | `fd42:d42:d42:53::/64` | `fd42:d42:d42:53::1` | UDP/53 |
+| **Name** | **/64 prefix announced** | **Service address** | **Protocol/port** | **Comment** | 
+|----------|-------------------------|---------------------|-------------------|---|
+| Recursive DNS resolver | `fd42:d42:d42:53::/64` | `fd42:d42:d42:53::1` | UDP/53 | `.` and `dn42.` [Providers](Providing-Anycast-DNS#Persons-providing-anycast-DNS-for-IPv6) |
 
 ### Future services
 
