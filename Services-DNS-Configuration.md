@@ -99,26 +99,26 @@ forward-zone:
 ## JunOS (SRX 12.1X46)
 ```
 system {
-	services {
-		dns {
-			dns-proxy {
-				default-domain dn42 {
-					forwarders {
-						172.22.0.53;
-					}
-				}
-				default-domain 22.172.in-addr.arpa {
-                                        forwarders {
-                                                 172.22.0.53;
-                                        }
-                                }                       
-                                default-domain 23.172.in-addr.arpa {
-                                       forwarders {
-                                                172.22.0.53;
-                                       }
-                                }
-			}
-		}
-	}
+   services {
+      dns {
+         dns-proxy {
+	    default-domain dn42 {
+	       forwarders {
+	          172.22.0.53;
+	       }
+	    }
+	    default-domain 22.172.in-addr.arpa {
+               forwarders {
+                  172.22.0.53;
+               }
+            }                       
+            default-domain 23.172.in-addr.arpa {
+               forwarders {
+                  172.22.0.53;
+               }
+            }
+	 }
+      }
+   }
 }
 ```
