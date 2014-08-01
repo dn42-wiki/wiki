@@ -101,6 +101,7 @@ Should also work in 12.1X44 and 12.1X45. After making the changes below you may 
 ```
 restart named-service
 ```
+Config (vlan.0 is presumed to be your LAN/Trust interface)
 ```
 system {
    services {
