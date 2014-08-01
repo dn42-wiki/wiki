@@ -97,11 +97,18 @@ forward-zone:
 ```
 
 ## JunOS (SRX 12.1X46)
+Should also work in 12.1X44 and 12.1X45. After making the changes below you may need to run:
+```
+restart named-service
+```
 ```
 system {
    services {
       dns {
          dns-proxy {
+            interface {
+               vlan.0;
+            }
 	    default-domain dn42 {
 	       forwarders {
 	          172.22.0.53;
