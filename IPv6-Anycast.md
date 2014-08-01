@@ -12,4 +12,4 @@ Remember, if you announce an anycast /64, then you need to provide **all** servi
 
 | **Name** | **/64 prefix announced** | **Service address** | **Protocol/port** | 
 |----------|-------------------------|---------------------|-------------------|
-| DNS resolver | fd42:d42:d42:53::/64 | fd42:d42:d42:53::1 | UDP/53 |
+| DNS resolver | `fd42:d42:d42:53::/64` | `fd42:d42:d42:53::1` | UDP/53 |
