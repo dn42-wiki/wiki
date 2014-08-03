@@ -112,11 +112,15 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
  * [Tutorial](http://monotone.ca/docs/Tutorial.html)
 
 ### Monotone servers
- * crest: mtn.crest.dn42
- * welterde: headend.srv.welterde.de (46.4.248.203)
- * (DEAD) somerandomnick: mtn1.srn.dn42 (172.22.131.102)
- * dracoling: dn42.smrsh.net (net.smrsh.dn42)
- * siska: mtn.nixnodes.net / mtn.nixnodes.dn42 (172.22.177.77)
+
+| Person   | Address                                | Status |
+|----------|----------------------------------------|--------|
+| crest    | mtn.crest.dn42                         | UP     |
+| welterde | headend.srv.welterde.de (46.4.248.203) | DOWN?  |
+| somerandomnick | mtn1.srn.dn42 (172.22.131.102)   | DOWN   | 
+| dracoling | dn42.smrsh.net (net.smrsh.dn42)       | UP     |
+| siska    | mtn.nixnodes.net / mtn.nixnodes.dn42 (172.22.177.77) | UP |
+| xuu      | mtn.xuu.dn42 (172.22.141.248)          | UP     |  
 
 ### Monotone branches
  * net.dn42.registry: Contains the registry and some related code
