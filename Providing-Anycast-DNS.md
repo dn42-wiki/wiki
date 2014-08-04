@@ -27,9 +27,10 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 
 **IP:** fd42:d42:d42:53::1/64
 
+[IPv6 Anycast Info](https://dn42.net/IPv6-Anycast)
+
 ## Persons providing anycast DNS for IPv6
 
-[IPv6 Anycast Info](https://dn42.net/IPv6-Anycast)
 
 | **person**     | **AS** | **unicast name**   | **unicast address**     | **comments**    |
 |----------------|:------:|:------------------:|:-----------------------:|-----------------|
