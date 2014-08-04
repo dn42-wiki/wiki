@@ -29,6 +29,8 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 
 ## Persons providing anycast DNS for IPv6
 
+[IPv6 Anycast Info](https://dn42.net/IPv6-Anycast)
+
 | **person**     | **AS** | **unicast name**   | **unicast address**     | **comments**    |
 |----------------|:------:|:------------------:|:-----------------------:|-----------------|
 | xuu            | 64737  | xuu.root.dn42      | fdea:a15a:77b9:d42::53  |             
