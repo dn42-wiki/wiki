@@ -22,6 +22,7 @@ It is _really_ good to hang around in [[IRC|Services IRC]] to get things sorted 
 | siska       |EU | 76105  | ns2.nixnodes.dn42  (172.22.177.1)  | caching            |
 | xuu         |US | 64737  | xuu.root.dn42   (172.22.141.132)   ||
 | Nurtic-Vibe |EU | 4242420123 | ns1.grmml.dn42 (172.23.149.20) || 
+| MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
 
 # IPv6 DNS
 
