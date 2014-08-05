@@ -26,5 +26,5 @@ Please sort by AS number.
 
 Please sort by AS number.
 
-* AS 65529: http://vpn1.freifunk-bielefeld.de/ulg/ulg.py (IPv4) → interactive (BGP-map)
-* AS 65529: http://vpn1.freifunk-bielefeld.de/ulgv6/ulg.py (IPv6) → interactive (BGP-map)
+* AS 65529: http://bgp.freifunk-bielefeld.de/ulg/ulg.py (IPv4) → interactive (BGP-map)
+* AS 65529: http://bgp.freifunk-bielefeld.de/ulgv6/ulg.py (IPv6) → interactive (BGP-map)
