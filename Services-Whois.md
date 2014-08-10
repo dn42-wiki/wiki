@@ -126,7 +126,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 ### Monotone branches
  * net.dn42.registry: Contains the registry and some related code
 
-### Setup
+### Client setup
 ```sh
 mtn genkey you@domain.tld
 mtn pubkey you@domain.tld # send the output to some $monotone_server operator (do NOT send the keypair!)
@@ -137,3 +137,9 @@ mtn add --unknown
 mtn ci -k you@domain.tld
 mtn sync
 ```
+
+### Server setup
+
+Debian has a package "monotone-server", with config located in "/etc/monotone".
+
+Pro-tip: monotone seems to use SO_V6ONLY, which is annoying. To bind to both IPv4 and IPv6, use ADDRESS=":: --bind 0.0.0.0" in /etc/default/monotone.
