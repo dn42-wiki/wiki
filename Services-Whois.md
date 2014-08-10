@@ -142,4 +142,4 @@ mtn sync
 
 Debian has a package "monotone-server", with config located in "/etc/monotone".
 
-Pro-tip: monotone seems to use SO_V6ONLY, which is annoying. To bind to both IPv4 and IPv6, use ADDRESS=":: --bind 0.0.0.0" in /etc/default/monotone.
+Pro-tip: monotone seems to use `SO_V6ONLY`, which is annoying. To bind to both IPv4 and IPv6, use `ADDRESS=":: --bind 0.0.0.0"` in `/etc/default/monotone`.
