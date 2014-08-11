@@ -101,3 +101,4 @@ The data for these maps is collected using AS paths from various AS. A [[path co
 * [Hackspace Jena e.V.](https://www.hackspace-jena.de)
 * [breizh-entropy](http://breizh-entropy.dn42)
 * [Fédération FDN](https://www.ffdn.org)
+* [Le LOOP](https://leloop.org/)
