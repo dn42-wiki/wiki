@@ -9,6 +9,7 @@ When a looking glass is described as `IPv4` or `IPv6`, it refers to the informat
 Please sort by AS number.
 
 * AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes)
+* AS 64737: http://xuu.me or http://xuu.dn42 
 * AS 64766: http://ix.ucis.dn42/routes.php or http://ix.ucis.nl/routes.php → interactive (traceroute)
 * AS 76103: http://lg.nixnodes.dn42 or http://lg.nixnodes.net (IPv4) → interactive (traceroute)
   * http://map.nixnodes.net or http://map.nixnodes.dn42 →  interactive BGP-graph
