@@ -93,7 +93,6 @@ The data for these maps is collected using AS paths from various AS.
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
 * [[hsmr] / Hackspace Marburg](https://hsmr.cc)
 * [Whitespace (0x20)](http://www.0x20.be)
-* [AnoNet](http://www.anonet2.org)
 * [Revelation Space](http://www.revspace.nl)
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
