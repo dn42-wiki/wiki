@@ -96,7 +96,6 @@ The data for these maps is collected using AS paths from various AS.
 * [AnoNet](http://www.anonet2.org)
 * [Revelation Space](http://www.revspace.nl)
 * [SNE group](https://www.os3.nl)
-* [Wolfplex](http://www.wolfplex.org)
 * [smrsh](http://www.smrsh.net)
 * [Hackspace Jena e.V.](https://www.hackspace-jena.de)
 * [breizh-entropy](http://breizh-entropy.dn42)
