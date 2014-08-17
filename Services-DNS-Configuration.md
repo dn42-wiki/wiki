@@ -75,6 +75,7 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 
 ```
 server:
+      domain-insecure: "dn42"
       local-zone: "22.172.in-addr.arpa." nodefault
       local-zone: "23.172.in-addr.arpa." nodefault
       local-zone: "d.f.ip6.arpa." nodefault
