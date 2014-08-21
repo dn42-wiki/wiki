@@ -40,6 +40,7 @@ There are a few different scripts for generating zone files. They have been writ
 | xuu         |US | 64737  | xuu.root.dn42   (172.22.141.132)   ||
 | Nurtic-Vibe |EU | 4242420123 | ns1.grmml.dn42 (172.23.149.20) || 
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
+| Martin89 | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More describtion on http://martin89.dn42 |
 
 # IPv6 DNS
 
