@@ -17,4 +17,3 @@ Ideas for stuff that are technically difficult on the Internet:
 ---
 
   - We could make the services zeroconf-browseable with the .dn42 TLD
-  - We could setup a (or serveral) [Mediagoblin](http://mediagoblin.org/) Instances
