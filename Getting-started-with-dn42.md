@@ -20,43 +20,46 @@ See [Home#Contact](Home#Contact) to subscribe.
 
 You must create several objects in the registry. The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](Services-Whois#Monotone).
 
-This example assumes that your name is `Luke`, part of an organisation called the `Rebel Alliance`, and that you want to register an AS and a network block for your home network `Naboo`. You may easily extrapolate to the case of a hackerspace you're a member of.
+This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
+
+We will create several types of objects: **maintainer** objects, which have an associated password and allow you to authenticate so that you can edit your own objects; **person** objects, which describe people or organisations and provide contact information; and finally, all other objects, which are resources (AS number, IP subnet, DNS zone, etc).
 
 ### Create a maintainer object
 
-Create a `mntner` object named `LUKE-MNT`. It will be used to edit all the objects that are under your responsibility.
+Create a `mntner` object named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
 
 - choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
 - use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later.
-- use `LUKE-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
+- use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
 
 ### Create person objects
 
-Create a `person` object for yourself.
+Create a `person` object for **yourself** (not your organisation/hackerspace/whatever).
 
-- use `LUKE-DN42` as `nic-hdl`, it should end with `-DN42`.
-- the `person` field is more freeform, you may use `Luke` here.
+- use something like `<FOO>-DN42` as `nic-hdl`, it should end with `-DN42`.
+- the `person` field is more freeform, you may use your nickname or even real name here.
 - provide an email.
 - you may provide additional ways of contacting you, using one or more `contact` field. For instance `xmpp:luke@theforce.net`, `irc:luke42@hackint`, `twitter: TheGreatLuke`.
-- you may which to add other fields, such as `pgp-id`, `pgp-fingerprint`, `remarks`, and so on.
-- don't forget to set `mnt-by` to `LUKE-MNT`.
+- you may whish to add other fields, such as `pgp-id`, `pgp-fingerprint`, `remarks`, and so on.
+- don't forget to set `mnt-by` to `<FOO>-MNT`.
 
-You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `LUKE-DN42`).
+You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`).
 
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create a `person` object for your organisation:
 
-- `nic-hdl` is `REBEL-ALLIANCE-DN42`.
+- `nic-hdl` is of the form `<FOO-ORG>-DN42`.
 - email should be a contact address for your organisation, or maybe a mailing list (but people should be able to send email without subscribing).
 - `contact` could be an irc channel (e.g. `#rebelalliance@irc.theforce.net`).
 - you may provide a website (`www` field).
-- don't forget to set `mnt-by` to `LUKE-MNT`, since you're managing this object on behalf of your organisation.
+- don't forget to set `mnt-by` to `<FOO>-MNT`, since you're managing this object on behalf of your organisation.
 
 ### Guidelines for future objects
 
 From now on, you should use:
 
-- `admin-c: LUKE-DN42` and `tech-c: LUKE-DN42` for your own resources.
-- `admin-c: REBEL-ALLIANCE-DN42` and `tech-c: LUKE-DN42` for the resources of your organisation.
+- `admin-c: <FOO>-DN42` and `tech-c: <FOO>-DN42` for your own resources.
+- `admin-c: <FOO-ORG>-DN42` and `tech-c: <FOO>-DN42` for the resources of your organisation.
+- `mnt-by: <FOO>-MNT` for all objects, so that you can edit them later.
 
 This applies to AS numbers, network prefixes, routes, DNS records...
 
@@ -64,7 +67,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 To register an AS number, simply create an `autnum` object.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you should allocate your AS number in the new 4242420000-4242423999 range**.
+Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you must allocate your AS number in the new 4242420000-4242423999 range**.
 
 For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. This list is automatically built from the registry.
 
@@ -83,7 +86,7 @@ The current guideline is to allocate a /25 by default, keeping space for a /23. 
 
 # Get some peers
 
-In dn42, there is no distinction between peering and transit: by default, everybody serves as an upstream provider to all its peers.
+In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN.
 
 If you don't know anybody who can peer with you, ask on IRC or the mailing list.
 
