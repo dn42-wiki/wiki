@@ -55,5 +55,5 @@ There are a few different scripts for generating zone files. They have been writ
 | **Person**  | **Region**    | **AS** | **Unicast Address**           | **Comments** |
 |-------------|---|:---------:|:--------------------------------------:|--------------|
 | xuu         |UT,US| 64737      | xuu.root.dn42 (fdea:a15a:77b9:d42::53) ||   
-| xuu         |ON,CA| 64737 | souris.root.dn42 () | |
+| xuu         |ON,CA| 64737 | souris.root.dn42 (fdea:a15a:77b9:53::1) | |
 | Nurtic-Vibe |EU |4242420123 | ns1.grmml.dn42 (fd42:23:149:cccc::53)  ||
