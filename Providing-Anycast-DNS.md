@@ -37,8 +37,8 @@ There are a few different scripts for generating zone files. They have been writ
 | siska       |EU | 76103  | nixnodes.root.dn42 (172.22.177.8)  | authoritative only |
 | siska       |EU | 76103  | ns1.nixnodes.dn42  (172.22.177.2)  | caching            |
 | siska       |EU | 76105  | ns2.nixnodes.dn42  (172.22.177.1)  | caching            |
-| xuu         |US | 64737  | xuu.root.dn42   (172.22.141.132)   ||
-| xuu         |CA | 64737  | souris.root.dn42 (172.22.141.180)  ||          
+| xuu         |UT,US | 64737  | xuu.root.dn42   (172.22.141.132)   ||
+| xuu         |ON,CA | 64737  | souris.root.dn42 (172.22.141.180)  ||          
 | Nurtic-Vibe |EU | 4242420123 | ns1.grmml.dn42 (172.23.149.20) || 
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
 | Martin89 | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More describtion on http://martin89.dn42 |
