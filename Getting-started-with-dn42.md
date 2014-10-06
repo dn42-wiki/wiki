@@ -45,11 +45,10 @@ Create a `person` object for **yourself** (not your organisation/hackerspace/wha
 
 You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`).
 
-If you intend to register resources for an organisation (e.g. your hackerspace), you must also create a `person` object for your organisation:
+If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
-- `nic-hdl` is of the form `<FOO-ORG>-DN42`.
+- `organisation` is of the form `<ORG-FOO>`.
 - email should be a contact address for your organisation, or maybe a mailing list (but people should be able to send email without subscribing).
-- `contact` could be an irc channel (e.g. `#rebelalliance@irc.theforce.net`).
 - you may provide a website (`www` field).
 - don't forget to set `mnt-by` to `<FOO>-MNT`, since you're managing this object on behalf of your organisation.
 
@@ -58,7 +57,7 @@ If you intend to register resources for an organisation (e.g. your hackerspace),
 From now on, you should use:
 
 - `admin-c: <FOO>-DN42` and `tech-c: <FOO>-DN42` for your own resources.
-- `admin-c: <FOO-ORG>-DN42` and `tech-c: <FOO>-DN42` for the resources of your organisation.
+- `admin-c: <ORG-FOO>` and `tech-c: <FOO>-DN42` for the resources of your organisation.
 - `mnt-by: <FOO>-MNT` for all objects, so that you can edit them later.
 
 This applies to AS numbers, network prefixes, routes, DNS records...
