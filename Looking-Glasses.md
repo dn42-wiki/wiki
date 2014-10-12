@@ -13,6 +13,7 @@ Please sort by AS number.
 * AS 64766: http://ix.ucis.dn42/routes.php or http://ix.ucis.nl/routes.php → interactive (traceroute)
 * AS 76103: http://lg.nixnodes.dn42 or http://lg.nixnodes.net (IPv4) → interactive (traceroute)
   * http://map.nixnodes.net or http://map.nixnodes.dn42 →  interactive BGP-graph
+* AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
 
 ## Reachable only from within dn42
 
@@ -20,8 +21,8 @@ Please sort by AS number.
 
 * AS 64835: http://lg.nordkapp-5.dn42 or http://172.22.235.4 (IPv4) → interactive
 * AS 76142: http://lg.ffdn.dn42 (IPv4) → interactive (traceroute, BGP-map)
-* AS 76142: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes)
 * AS 4242420123: http://lg.grmml.dn42/ (IPv4 & IPv6) → interactive (ping currently not working)
+* AS 4242420184: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) **currently down**
 * AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
 
 ## Reachable only from the Internet
