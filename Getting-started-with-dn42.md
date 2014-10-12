@@ -87,7 +87,9 @@ The current guideline is to allocate a /25 by default, keeping space for a /23. 
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN.
 
-If you don't know anybody who can peer with you, ask on IRC or the mailing list.
+If you don't know anybody who can peer with you, you can use this tool: http://peerfinder.polyno.me
+
+It will let you find people to peer with.  You can then contact them on IRC or by email.  In case you're really at loss, you can also ask for peers on the mailing list.
 
 ## Establishing tunnels
 
