@@ -43,7 +43,7 @@ There are a few different scripts for generating zone files. They have been writ
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
 | Martin89    | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More describtion on http://martin89.dn42 |
 | Fritz       | ?? | 64712 | ?? (??) | Advertised over bgp |
-| PyroPeter   | ?? | 76115 | ?? (??) | Advertised over bgp |
+| PyroPeter   | EU | 76115 | nscache.pyropeter.dn42 (172.23.196.3) ||
 
 # IPv6 DNS
 
