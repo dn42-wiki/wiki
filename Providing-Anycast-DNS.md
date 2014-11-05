@@ -20,7 +20,7 @@ There are a few different scripts for generating zone files. They have been writ
 | **Script** | **Language** | **Notes** |
 |---------------------|--------------|-----------|
 |rfc2317.rb | Ruby |
-|subnettr.py | Python 3 |
+|subnettr.py | Python 3 | Author: xuu, forward & reverse dns + RFC 2317
 |zonegen.bind.php | PHP |
 |zonegen.bind.sh | Bash |
 |zonegen.rb | Ruby |
