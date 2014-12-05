@@ -126,6 +126,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | http://debian.mirror.martin89.dn42                        | Debian Wheezy mirror
 | nntp://news.blacksheep.dn42                               | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)
 | mumble://shard.smrsh.dn42:64738                           | [Mumble](http://mumble.sourceforge.net/) Voice Chat
+| http://wiki.dn42, http://internal.dn42 | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted by welterde |
 
 # Other networks
 
