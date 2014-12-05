@@ -122,6 +122,8 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | https://paste.synhacx.dn42          | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin))
 | http://ip.synhacx.dn42 | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))
 | http://tor.mirror.martin89.dn42                           | Tor Project Homepage mirror
+| http://tor.e-utp.dn42                           | Tor Project Homepage mirror
+| http://freebsd.e-utp.dn42                           | FreeBSD Homepage mirror
 | http://debian.mirror.martin89.dn42                        | Debian Wheezy mirror
 | nntp://news.blacksheep.dn42                               | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)
 | mumble://shard.smrsh.dn42:64738                           | [Mumble](http://mumble.sourceforge.net/) Voice Chat
