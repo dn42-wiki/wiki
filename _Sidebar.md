@@ -3,6 +3,8 @@
   * [[FAQ|Frequently Asked Questions]]
  * How-to
   * [[IPsecWithPublicKeys]]
+  * [[email]]
+  * [[gre-on-freebsd]]
  * Services
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
