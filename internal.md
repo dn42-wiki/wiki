@@ -67,7 +67,6 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://seafile.dn42                           |       |       | Opensource Dropbox, yay!   
 | ftp://descent.derf.dn42 (172.23.225.35)       |  3TB  | 60kbit/s | download only
 | http://files.feuerrot.dn42                    |  6TB  | 1Gbit | http, ftp, nfs, rsync
-| http://172.22.165.44                          |       | 1Gbit | small dump site 
 | ftp://vsynology.dev.ffc (10.8.6.13)           | 150G  | 20Mbit/s | just drop your nzb/torrent file and be patient; clean up your stuff!
 | http://filer1.grmml.dn42 (172.23.149.21)     |  4TB  | 200Mbit/s | download only
 | http://10.196.0.100:18455                     | 9 TB  |       | only download
