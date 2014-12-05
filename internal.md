@@ -104,7 +104,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 
 | Hostname / IP                                  | Remarks                       |
 |:---------------------------------------------- |:----------------------------- |
-| 172.22.165.50                          | Stratum 1, GPS+NMEA
+| ntp.e-utp.dn42 (172.22.165.50)         | Stratum 1, GPS+NMEA
 | ntp1.nixnodes.dn42 (172.22.177.123)    |
 | ntp2.nixnodes.dn42 (172.22.177.124)    | 
 
@@ -112,7 +112,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 
 | Hostname / IP                                  | Remarks                       |
 |:---------------------------------------------- |:----------------------------- |
-| 172.22.165.50, 172.22.165.34          | 8333 for Bitcoin, 9333 for Litecoin
+| bitcoin.e-utp.dn42 (RR: 172.22.165.50, 172.22.165.34) | 8333 for Bitcoin, 9333 for Litecoin
 
 ## Misc 
 
