@@ -1,7 +1,8 @@
  * [[Home]]
   * [[Getting started|Getting-started-with-dn42]]
   * [[FAQ|Frequently Asked Questions]]
- * [[How-to|howto]]
+ * How-to
+  * [[IPsecWithPublicKeys]]
  * Services
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
