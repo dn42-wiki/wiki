@@ -13,7 +13,9 @@ Please sort by AS number.
 * AS 76103: http://lg.nixnodes.dn42 or http://lg.nixnodes.net (IPv4) → interactive (traceroute)
   * http://map.nixnodes.net or http://map.nixnodes.dn42 →  interactive BGP-graph
 * AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
-* AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes) **BROKEN**
+
+**BROKEN**
+* AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes) 
 
 ## Reachable only from within dn42
 
