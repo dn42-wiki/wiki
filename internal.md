@@ -155,3 +155,7 @@ A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
 
 We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at http://10.11.0.8/cgi-bin/luci/freifunk/services to see what we have to offer.
 (Upload is not fast, most probably DSL speed only)
+
+## Gaming
+
+   * cs.nixnodes.dn42 (Counter-Strike 1.6 [Deathmatch] v48 Non-Steam)
