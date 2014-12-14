@@ -120,7 +120,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 
 | Hostname         | IP              | Game                   | Comments                    |
 |:---------------- |:--------------- |:---------------------- |:--------------------------- |
-| cs.nixnodes.dn42 | 1172.22.177.179 | Counter-Strike 1.6     |  v48 Non-Steam [Deathmatch] |
+| cs.nixnodes.dn42 | 172.22.177.179  | Counter-Strike 1.6     |  v48 Non-Steam [Deathmatch] |
 
 ## Misc 
 
