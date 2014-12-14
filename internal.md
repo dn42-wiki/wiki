@@ -116,6 +116,10 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 |:---------------------------------------------- |:----------------------------- |
 | bitcoin.e-utp.dn42 (RR: 172.22.165.50, 172.22.165.34) | 8333 for Bitcoin, 9333 for Litecoin
 
+## Gaming
+
+   * cs.nixnodes.dn42 (Counter-Strike 1.6 [Deathmatch] v48 Non-Steam)
+
 ## Misc 
 
 | Hostname / IP                                             | Remarks                        |
@@ -155,7 +159,3 @@ A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
 
 We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at http://10.11.0.8/cgi-bin/luci/freifunk/services to see what we have to offer.
 (Upload is not fast, most probably DSL speed only)
-
-## Gaming
-
-   * cs.nixnodes.dn42 (Counter-Strike 1.6 [Deathmatch] v48 Non-Steam)
