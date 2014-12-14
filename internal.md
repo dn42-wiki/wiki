@@ -118,7 +118,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 
 ## Gaming
 
-   * cs.nixnodes.dn42 (Counter-Strike 1.6 [Deathmatch] v48 Non-Steam)
+   * cs.nixnodes.dn42    (Counter-Strike 1.6 [Deathmatch] v48 Non-Steam)
 
 ## Misc 
 
