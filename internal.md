@@ -34,8 +34,6 @@ X0KmpxYGil6Ly5xImaVqwxnm7wlDiNT6vd0cPgtKd/YynPFNw9Eh+MSamw==
 -----END CERTIFICATE-----
 ```
 
-"But hey random editor on the wiki," you say, "How is this even remotely secure?" Well, The CA is named "DN42 Internal CA (UNVERIFIED)" for a reason. SSL gives you two means of protection. Identifying a host is one.. but ensuring that communication to the remote host is encrypted is the other. The latter is the purpose of the certificate. The only thing it saves you from is having to add exceptions to each host in dn42 individually. If its not your cup of tea you can ignore this was even here. 
-
 If you would like to have a certificate signed by this CA send a CSR to dn42@xuu.cc
 
 
