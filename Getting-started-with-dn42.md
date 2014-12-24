@@ -109,7 +109,7 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 
 * [EdgeOS Configuration](EdgeOS-Config-Example)
 * [EdgeOS GRE/IPsec Example](howto/EdgeOS-GRE-IPsec-Example)
-* [BGP on Extreme Networks Summit 5i](howto/bgp-on-extreme-summit5i)
+* [BGP on Extreme Networks Summit 5i](howto/bgp-on-extreme-summit1i)
 * [dn42 on OpenWRT](howto/dn42-on-OpenWRT)
 * [Bird](howto/bird)
 * [IPsec with public key authentication](/howto/IPsecWithPublicKeys)
