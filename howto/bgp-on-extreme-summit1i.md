@@ -35,9 +35,8 @@ This configuration was tested on latest EW of 7.8.4.1 patch1-r4 version. But it 
 
 Now, if you're trying EBGP with your peer:
 
-    # Announce some networks
+    # Announce our network
     configure bgp add network 172.22.151.0/23
-    configure bgp add network aa.bb.cc.dd/32
 
     create bgp neighbor 172.22.151.1 remote-AS-number 65535
     # Point to a proper outgoing interface, useless in case when Super VLAN is used
@@ -50,7 +49,7 @@ Or IBGP (local router does the EBGP in following example):
     # Don't wait for an EBGP
     disable bgp synchronization
 
-    create bgp neighbor 192.168.1.1 remote-AS-number 65535
+    create bgp neighbor 192.168.1.1 remote-AS-number 65534
     enable bgp neighbor 192.168.1.1
 
 Next, you may diagnose the things doing:
