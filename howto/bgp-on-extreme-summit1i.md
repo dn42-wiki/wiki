@@ -26,7 +26,7 @@ This configuration was tested on latest EW of 7.8.4.1 patch1-r4 version. But it 
     ##
 
     # Adding route to a neighbor
-    configure iproute add 172.22.151.1/23 172.22.251.2
+    configure iproute add 172.22.151.1/32 172.22.251.1
 
     configure bgp soft-reconfiguration
     configure bgp AS-number 65534
