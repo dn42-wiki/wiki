@@ -2,9 +2,9 @@
   * [[Getting started|Getting-started-with-dn42]]
   * [[FAQ|Frequently Asked Questions]]
  * How-to
-  * [[IPsecWithPublicKeys|IPsec With Public Keys]]
-  * [[email|Email]]
-  * [[gre-on-freebsd|GRE on FreeBSD]]
+  * [[IPsec With Public Keys|IPsecWithPublicKeys]]
+  * [[Email|email]]
+  * [[|gre-on-freebsd]]
  * Services
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
