@@ -103,7 +103,8 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | ftp://vsynology.dev.ffc (10.8.6.13)           | 150G  | 20Mbit/s | just drop your nzb/torrent file and be patient; clean up your stuff!
 | http://filer1.grmml.dn42 (172.23.149.21)     |  4TB  | 200Mbit/s | download only
 | sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/ | 12TB | 1Gb/s | incoming writable |
-| http://172.23.136.33                          |       | 100Mbit/s| some mediafiles/software
+| http://172.23.136.33                          |       | 100Mbit/s| some mediafiles/software |
+| http://files.martin89.dn42/                   |       | max 2Mbit/s | download only | 
 
 #### Down?
 
@@ -140,6 +141,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | ntp.e-utp.dn42 (172.22.165.50)         | Stratum 1, GPS+NMEA
 | ntp1.nixnodes.dn42 (172.22.177.123)    |
 | ntp2.nixnodes.dn42 (172.22.177.124)    | 
+| ntp.martin89.dn42                      | more than one A records/server
 
 ## Crypto coins
 
