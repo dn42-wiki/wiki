@@ -76,6 +76,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 ## Search engine
 
  * [Web search engine](http://search.dn42) (172.23.184.1) - a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs.
+ * [YaCy search engine](http://yacy.dn42) - Indexing local nets
 
 ## Radio and Video Streaming
 
