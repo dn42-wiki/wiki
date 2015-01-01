@@ -1,11 +1,11 @@
  * [[Home]]
-  * [[Getting started|Getting-started-with-dn42]]
+  * [[Getting started|Getting started]]
   * [[FAQ|Frequently Asked Questions]]
 
 * [[How-to|/pages/howto/]]
-  * [[IPsec With Public Keys|IPsec with PublicKeys]]
-  * [[Email|email]]
-  * [[GRE on FreeBSD|gre-on-freebsd]]
+  * [[IPsec With Public Keys]]
+  * [[Email]]
+  * [[GRE on FreeBSD]]
 
 * [[Services|/pages/services]]
   * [[IRC|Services IRC]]
