@@ -1,7 +1,8 @@
 ## Graph your route count
 
 Number of routes by AS (IPv4)
-```#!/bin/bash
+```
+#!/bin/bash
 if [ "$1" = "config" ];then
 	echo graph_title Number of routes
 	echo graph_vlabel num. routes
