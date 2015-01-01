@@ -12,7 +12,7 @@
   * [[Whois registry|Whois]]
   * [[DNS]]
   * [[Looking Glasses]]
-  * [[VirtualMachines]]
+  * [[Virtual Machines]]
 
 * [[Internal|/pages/internal]]
   * [[Internal services|Internal-services]]
