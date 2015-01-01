@@ -8,11 +8,11 @@
   * [[GRE on FreeBSD|gre-on-freebsd]]
 
 * [[Services|/pages/services]]
-  * [[IRC|Services IRC]]
-  * [[Whois registry|Services Whois]]
-  * [[DNS|Services DNS]]
+  * [[IRC]]
+  * [[DNS]]
+  * [[Whois registry|Whois]]
   * [[Looking Glasses]]
-  * [[VirtualMachines|Services VirtualMachines]]
+  * [[VirtualMachines]]
 
 * [[Internal|/pages/internal]]
-  * [[Internal services|Internal-services]]
+  * [[Internal services]]
