@@ -3,7 +3,7 @@
   * [[FAQ|Frequently Asked Questions]]
 
 * [[How-to]]
-  * [[IPsec With Public Keys|IPsecWithPublicKeys]]
+  * [[IPsec With Public Keys|IPsec with PublicKeys]]
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
 
