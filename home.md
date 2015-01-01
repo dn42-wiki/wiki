@@ -46,7 +46,7 @@ Take a look at the [[contact]] page, on how you could contact the members of the
 
 * [SpaceBoyz](http://spaceboyz.net)
 * [planet cyborg](http://planetcyborg.de)
-  * [mw](http://mw.vc)
+* [mw](http://mw.vc)
 * [CCC Bremen](http://ccchb.de)
 * [CCC Dresden](http://c3d2.de)
 * [CCC Düsseldorf](https://www.chaosdorf.de)
