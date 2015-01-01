@@ -11,4 +11,4 @@
   * [[DNS|Services DNS]]
   * [[Looking Glasses]]
   * [[VirtualMachines|Services VirtualMachines]]
-  * [[Internal services|Internal]]
+  * [[Internal services|Internal-services]]
