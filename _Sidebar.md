@@ -1,15 +1,19 @@
  * [[Home]]
   * [[Getting started|Getting-started-with-dn42]]
   * [[FAQ|Frequently Asked Questions]]
- * [[howto|How-to]]
+
+* [[How-to]]
   * [[IPsec With Public Keys|IPsecWithPublicKeys]]
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
- * [[Services]]
+
+* [[Services]]
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
   * [[DNS|Services DNS]]
   * [[Looking Glasses]]
   * [[VirtualMachines|Services VirtualMachines]]
+
+
 * [[Internal]]
   * [[Internal services|Internal-services]]
