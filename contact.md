@@ -1,5 +1,9 @@
 # Contact
 
+Members of the dn42 network mostly communicate via IRC or the mailing list.
+
+If you would like to contact an individual network operator, you will find contact information in the [whois registry](Whois).
+
 ## Mailing list
 
 * is at: dn42 /at/ lists.spaceboyz.net,
