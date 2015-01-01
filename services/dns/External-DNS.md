@@ -1,4 +1,3 @@
-
 This page lists external DNS zones, provided by networks that are interconnected with dn42.
 
 ## Authoritative nameservers
@@ -15,4 +14,4 @@ Some references for Freifunk are http://wiki.freifunk.net/DNS and http://luebeck
 
 ## Configuration
 
-See [[Recursive DNS resolver]] or [[DNS forwarding configuration|Services-DNS-Configuration]].
+See [[Recursive DNS resolver]] or [[DNS forwarding configuration|/services/dns/Configuration]].
