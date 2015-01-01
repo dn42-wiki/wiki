@@ -1,6 +1,6 @@
  * [[Home]]
   * [[Getting started]]
-  * [[FAQ|Frequently Asked Questions]]
+  * [[FAQ]]
 
 * [[How-to|/pages/howto/]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
