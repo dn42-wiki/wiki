@@ -14,6 +14,5 @@
   * [[Looking Glasses]]
   * [[VirtualMachines|Services VirtualMachines]]
 
-
-* [[Internal]]
+* [[Internal|/pages/internal]]
   * [[Internal services|Internal-services]]
