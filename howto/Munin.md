@@ -1,6 +1,6 @@
-## Graph your route count
+## Number of routes by AS
 
-Number of routes by AS (IPv4)
+IPv4:
 ```bash
 #!/bin/bash
 if [ "$1" = "config" ];then
