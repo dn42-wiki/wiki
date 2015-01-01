@@ -1,6 +1,6 @@
  * [[Home]]
   * [[Getting started]]
-  * [[FAQ]]
+  * [[FAQ|Frequently Asked Questions]]
 
 * [[How-to|/pages/howto/]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
@@ -16,3 +16,8 @@
 
 * [[Internal|/pages/internal]]
   * [[Internal services|Internal-services]]
+
+
+--------------
+
+[[_TOC_]]

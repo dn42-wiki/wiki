@@ -42,6 +42,13 @@ http://mwd.dn42/dns.php
 
 MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
 
+## IRC
+
+| Hostname / IP                                     | Remarks   |
+|:------------------------------------------------- |:--------- |
+| irc://irc.hackint.dn42/dn42 (172.22.24.1)         | DN42      |
+| irc://irc.hackint.hack/dn42 (172.31.0.30)         | ChaosVPN  |
+
 ## Search engines
 
  * [Web search engine](http://search.dn42) (172.23.184.1) - a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs.
