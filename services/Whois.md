@@ -28,9 +28,9 @@ Note that currently, most AS are using one of the legacy ASN range (and will pro
 
 ### DNS zones
 
-dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](Services-DNS).
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](DNS).
 
-Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](External-DNS).
+Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](dns/External-DNS).
 
 ## Web interface
 
