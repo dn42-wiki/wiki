@@ -28,40 +28,9 @@ dn42 solves this problem.  By addressing your network in dn42, your devices can 
 
 If your hackerspace is actually using dn42 to provide some services, please let us know! (on this wiki or on the mailing list). It's very rewarding when the network is actually used for something :)
 
+## Join or Contact us
 
-## About this wiki
-
-This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), and for editing from within dn42, at [http://internal.dn42](http://internal.dn42).
-
-A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available for reference, but **beware**, most of the information there is outdated.
-
-## Contact
-
-### Mailing list
-
-* is at: dn42 /at/ lists.spaceboyz.net,
-* send a mail to dn42-subscribe /at/ lists.spaceboyz.net to subscribe
-* has [archive](http://lists.spaceboyz.net/pipermail/dn42/)
-* can be accessed via [NNTP](/Services-News) as well. The group is alt.net.dn42.users
-
-### IRC
-
-* #dn42 in [hackint](http://www.hackint.eu/)
-
-## Network
-### Looking glass
-
-See [[Looking Glasses]].
-
-### Network maps
-* [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
-* [map.nixnodes.net](http://map.nixnodes.net)
-
-The data for these maps is collected using AS paths from various AS.
-
-### Tools
-
-[Munin](/Munin)
+Take a look at the [[contact]] page, on how you could contact the members of the network.
 
 ## External resources about dn42
 
@@ -72,7 +41,6 @@ The data for these maps is collected using AS paths from various AS.
  * [nobody about dn42](http://nowhere.ws/guides/dn42/)
  * [Lecture on mrmcd0x8](http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
  * [dn42-category in hackerspaces.org wiki](https://hackerspaces.org/wiki/Category:DN42)
-
 
 ## Participant Groups
 
@@ -99,3 +67,9 @@ The data for these maps is collected using AS paths from various AS.
 * [breizh-entropy](http://breizh-entropy.dn42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
+
+## About this wiki
+
+This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), and for editing from within dn42, at [http://internal.dn42](http://internal.dn42).
+
+A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available for reference, but **beware**, most of the information there is outdated.
