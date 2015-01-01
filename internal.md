@@ -104,24 +104,25 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ### FTP / HTTP
 
-| Hostname / IP                                     | Space | Speed      | Remarks                                         |
-|:------------------------------------------------- |:----- |:---------- |:----------------------------------------------- |
-| http://filer.nihilus.dn42, http://172.22.92.2     |       | ~60kbps    | mostly up                                       |    
-| ftp://cochimetl.tim.dn42, nfs://cochimetl.tim.dn42/data/ftp | ~3TB | ~700kbps                                            |
-| http://seafile.dn42                               |       |            | Opensource Dropbox, yay!                        |
-| ftp://descent.derf.dn42 (172.23.225.35)           |  3TB  | 60kbit/s   | download only                                   |
-| http://files.feuerrot.dn42                        |  6TB  | 1Gbit      | http, ftp, nfs, rsync                           |
-| ftp://vsynology.dev.ffc (10.8.6.13)               | 150G  | 20Mbit/s   | just drop your nzb/torrent file and be patient  |
-| http://filer1.grmml.dn42 (172.23.149.21)          |  4TB  | 200Mbit/s  | download only                                   |
-| sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/ | 12TB     | 1Gb/s | incoming writable                           |
-| http://172.23.136.33                              |       | 100Mbit/s  | some mediafiles/software                        |
-| http://files.martin89.dn42/                       |       | max 2Mbit/s | download only                                  | 
+| Hostname / IP                                     | Space | Speed       | Remarks                                         |
+|:------------------------------------------------- |:----- |:----------- |:----------------------------------------------- |
+| ftp://dev.0l.dn42                                 | 10 TB | max 5MBit/s | writable incoming                               |
+| http://filer.nihilus.dn42, http://172.22.92.2     |       | ~60kbps     | mostly up                                       |    
+| ftp://cochimetl.tim.dn42, nfs://cochimetl.tim.dn42/data/ftp | ~3TB  | ~700kbps |                                          |
+| http://seafile.dn42                               |       |             | Opensource Dropbox, yay!                        |
+| http://files.feuerrot.dn42                        |  6TB  | 1Gbit       | http, ftp, nfs, rsync                           |
+| ftp://vsynology.dev.ffc (10.8.6.13)               | 150G  | 20Mbit/s    | just drop your nzb/torrent file and be patient  |
+| http://filer1.grmml.dn42 (172.23.149.21)          |  4TB  | 200Mbit/s   | download only                                   |
+| sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/   | 12TB        | 1Gb/s | incoming writable                       |
+| http://172.23.136.33                              |       | 100Mbit/s   | some mediafiles/software                        |
+| http://files.martin89.dn42/                       |       | max 2Mbit/s | download only                                   |
 
 #### Down?
 
-| Hostname / IP                                     | Space  | Speed    | Remarks                         |
-|:------------------------------------------------- |:------ |:-------- |:------------------------------- |
-| http://turing.il.maxx.dn42, http://172.22.42.2    | ~6.5TB | ~400kbit | WebDAV enabled, up 24/7z        |
+| Hostname / IP                                     | Space  | Speed    | Remarks                         | Down Since |
+|:------------------------------------------------- |:------ |:-------- |:------------------------------- |:---------- |
+| http://turing.il.maxx.dn42, http://172.22.42.2    | ~6.5TB | ~400kbit | WebDAV enabled, up 24/7z        | 01.01.2015 |
+| ftp://descent.derf.dn42 (172.23.225.35)           |  3TB   | 60kbit/s | download only                   | 01.01.2015 |
 
 ## Proxies
 
