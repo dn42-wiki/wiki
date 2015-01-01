@@ -2,7 +2,7 @@
 
 Members of the dn42 network mostly communicate via IRC or the mailing list.
 
-If you would like to contact an individual network operator, you will find contact information in the [whois registry](Whois).
+If you would like to contact an individual network operator, you will find contact information in the [[Whois]] registry.
 
 ## Mailing list
 
