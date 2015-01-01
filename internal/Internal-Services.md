@@ -4,8 +4,6 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 More ideas inspiration is collected on another [page](/ideas).
 
-[[_TOC_]]
-
 ## CA
 
 xuu is maintaining an [[certificate authority]] for internal services.
