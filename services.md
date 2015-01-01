@@ -1,11 +1,1 @@
-[[dns]]
-[[IPv6-Anycast]]
-[[Looking-Glasses]]
-[[Services-DNS-Configuration]]
-[[Services-DNS]]
-[[Services-FreePhone]]
-[[Services-IRC]]
-[[Services-News]]
-[[Services-Statistics]]
-[[Services-VirtualMachines]]
-[[Services-Whois]]
+
