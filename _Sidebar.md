@@ -4,7 +4,7 @@
  * How-to
   * [[IPsec With Public Keys|IPsecWithPublicKeys]]
   * [[Email|email]]
-  * [[|gre-on-freebsd]]
+  * [[GRE on FreeBSD|gre-on-freebsd]]
  * Services
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
