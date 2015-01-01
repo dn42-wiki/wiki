@@ -7,7 +7,7 @@
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
 
-* [[Services]]
+* [[Services|/pages/services]]
   * [[IRC|Services IRC]]
   * [[Whois registry|Services Whois]]
   * [[DNS|Services DNS]]
