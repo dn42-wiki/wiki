@@ -4,7 +4,7 @@ dn42 is a big dynamic VPN network, which employs Internet technologies ([BGP](ht
 
 A number of services are provided on the network: see [internal](http://internal.dn42) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some Freifunk networks.
 
-Still have questions? We have a [FAQ].
+Still have questions? We have a [[FAQ]].
 
 ## Why dn42?
 
