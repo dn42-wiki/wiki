@@ -1,2 +1,2 @@
 [Imprint/Impressum](https://mortzu.de/impressum/)
-[Contact]
+[Contact](contact)
