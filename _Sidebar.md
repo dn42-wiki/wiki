@@ -2,7 +2,7 @@
   * [[Getting started|Getting-started-with-dn42]]
   * [[FAQ|Frequently Asked Questions]]
 
-* [[How-to|/pages/howto/]]
+* [[How-to]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
