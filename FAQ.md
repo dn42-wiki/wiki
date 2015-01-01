@@ -1,6 +1,8 @@
+# Frequently Asked Questions
+
 [[_TOC_]]
 
-## Why are you using monotone for the registry? Why not GIT?
+### Why are you using monotone for the registry? Why not GIT?
 
 There is an important difference between the data model of monotone and GIT: In GIT branches *are* HEADs, while in monotone, branches are a list of HEADs. Or, to state it simpler and probably less correct: It is possible to sync merge conflicts in monotone. In GIT, conflicts are part of the index and/or working tree, and thus can't be pushed/pulled.
 
@@ -20,7 +22,7 @@ There are some ASes in DN42 that route IPv6 traffic. It is not yet agreed upon w
 At the moment, it is safe to assume that everyone doing IPv6 routing accepts at least prefixes from fd00::/8 with prefix lengths between 48 and 64 bits (inclusive) if they are part of the registry.
 
 
-## Why are you using ASN in the 76100-76199 range?
+### Why are you using ASN in the 76100-76199 range?
 
 Yes, we know that this is not private ASN space (rather, it is part of the reserved block 65552-131071, see [IANA](http://www.iana.org/assignments/as-numbers/as-numbers.xhtml)).
 
@@ -33,7 +35,7 @@ Fortunately, [RFC6996](http://tools.ietf.org/html/rfc6996) defines a new private
 We now encourage dn42 users to use the newly-allocated ranges in **4242420000-4242429999**. See the [registry page](Services-Whois#AS-numbers) for details.
 
 
-## What BGP daemon should I use?
+### What BGP daemon should I use?
 
 This is really up to you: that's the magic of open protocols.
 
