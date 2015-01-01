@@ -11,4 +11,4 @@
 
 Channel #dn42 in [hackint](http://www.hackint.eu/)
 
-See (IRC).
+See [[IRC]] too.
