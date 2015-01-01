@@ -1,5 +1,5 @@
  * [[Home]]
-  * [[Getting started|Getting-started-with-dn42]]
+  * [[Getting started]]
   * [[FAQ|Frequently Asked Questions]]
 
 * [[How-to|pages/howto]]
