@@ -9,7 +9,7 @@ There is an important difference between the data model of monotone and GIT: In 
 The DN42 registry is stored on multiple monotone servers which sync with each other. This is not possible in GIT, because the GIT servers don't know how to handle merge conflicts. In monotone, the servers just sync the conflict.
 
 
-## What about IPv6 in DN42?
+### What about IPv6 in DN42?
 
 There are some ASes in DN42 that route IPv6 traffic. It is not yet agreed upon what prefixes should be used. The following proposals are the more sane ones:
 
