@@ -1,4 +1,4 @@
-### Overview
+<div class='toc-title'>Site Links</div>
 
  * [[Home]]
   * [[Getting started]]
