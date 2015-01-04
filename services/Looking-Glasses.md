@@ -25,6 +25,7 @@ Please sort by AS number.
 * AS 76142: http://lg.ffdn.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242420123: http://lg.grmml.dn42/ (IPv4 & IPv6) → interactive (ping currently not working)
 * AS 4242420184: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) **currently down**
+* AS 4242420200: http://lg.punkt.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
 
 ## Reachable only from the Internet
