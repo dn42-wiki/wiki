@@ -28,7 +28,8 @@ There are a few different scripts for generating zone files. They have been writ
 |zonegen.rdns.tinydns.sh | Bash |
 |zonegen.rev.bind.sh | Bash |
 |zonegen.smallblockrdns.tinydns.sh | Bash |
-|zonegen.tinydns.sh | Bash
+|zonegen.tinydns.sh | Bash |
+|zongen.v2.sh | Sh | Author: Martin89, forward & reverse dns + RFC 2317
 
 ## Persons providing anycast DNS
 
