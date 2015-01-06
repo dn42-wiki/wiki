@@ -120,7 +120,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 | crest    | mtn.crest.dn42                         | UP     |
 | dracoling | dn42.smrsh.net (net.smrsh.dn42)       | UP     |
 | siska    | mtn.nixnodes.net / mtn.nixnodes.dn42 (172.22.177.77) | UP |
-| xuu      | mtn.xuu.dn42 (172.22.141.248)          | UP     |  
+| xuu      | mtn.xuu.dn42 (172.22.141.131)          | UP     |  
 | zorun    | mtn.polyno.me / mtn.polynome.dn42 (172.23.184.71| UP |
 
 ### Monotone branches
