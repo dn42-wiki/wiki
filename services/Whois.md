@@ -69,11 +69,12 @@ Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn
 
 ## Whois daemons
 
-| **person** | **dns**                   | **ip**          |
+| **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
 | welterde   | thinkbase.srv.welterde.de | 46.4.248.201    |
 | fritz      | whois.fritz.dn42          | 172.22.119.139  |
 | nixnodes   | whois.nixnodes.dn42       | 172.22.177.77   |
+| prauscher  | sheldon.prauscher.dn42    | 172.22.120.1    |
 
 ### Usage
 ```sh
