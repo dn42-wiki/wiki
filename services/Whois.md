@@ -69,6 +69,8 @@ Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn
 
 ## Whois daemons
 
+We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1. Please consider joining these anycast-adresses when you setup your server. Updates every 1 hour would be nice for a start.
+
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
 | welterde   | thinkbase.srv.welterde.de | 46.4.248.201    |
