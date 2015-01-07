@@ -82,24 +82,27 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 ```sh
 whois -h $host $query
 ```
+
 ### Using a whois config
+
 ```sh
 $ cat /etc/whois.conf 
-\.dn42$           172.22.177.77
-\-DN42$           172.22.177.77
+\.dn42$           whois.dn42
+\-DN42$           whois.dn42
 # dn42 range 64512-65534
-^as6(4(5(1[2-9]|[2-9][0-9])|[6-9][0-9]{2})|5([0-4][0-9]{2}|5([0-2][0-9]|3[0-4])))$ 172.22.177.77
+^as6(4(5(1[2-9]|[2-9][0-9])|[6-9][0-9]{2})|5([0-4][0-9]{2}|5([0-2][0-9]|3[0-4])))$ whois.dn42
 # dn42 range 76100-76199
-^as761[0-9][0-9]$   172.22.177.77
+^as761[0-9][0-9]$   whois.dn42
 # dn42 range 4242420000-4242429999
-^as424242[0-9]{4}$ 172.22.177.77
+^as424242[0-9]{4}$ whois.dn42
 # dn42 ipv4 address space
-^172\.2[2-3]\.[0-9]{1,3}\.[0-9]{1,3}(/(1[56789]|2[0-9]|3[012]))?$ 172.22.177.77
+^172\.2[2-3]\.[0-9]{1,3}\.[0-9]{1,3}(/(1[56789]|2[0-9]|3[012]))?$ whois.dn42
 
 # dn42 ula ipv6 address space
-fd**:****:****:****:****:****:****:**** 172.22.177.77
+fd**:****:****:****:****:****:****:**** whois.dn42
 
 ```
+
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
 ### Running your own whoisd
