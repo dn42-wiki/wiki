@@ -1,6 +1,7 @@
 # IPsec with public key authentication
 ## Stop using pre-shared keys!
 ### Pre-shared keys suck, because _reasons_
+
 *  __The key must be kept secret__, which means it must be shared only over a secure channel e.g. PGP, face-to-face
 *  Most implementations will accept insecure (too short, too simple) keys
 *  The [insecure][1] [IKE][2] [aggressive mode][3] must be used to support distinct PSKs for multiple dynamic peers, or
