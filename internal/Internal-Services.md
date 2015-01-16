@@ -140,6 +140,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
+| http://git.dn42                                   | Git Repository Hosting (Signup only available via dn42)                        |
 | http://tor.mirror.martin89.dn42                   | Tor Project Homepage mirror                                                    |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
 | http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
