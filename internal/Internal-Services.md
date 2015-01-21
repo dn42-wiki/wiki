@@ -107,7 +107,8 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 | Hostname / IP                                     | Bandwidth   | Nickname     |
 | ------------------------------------------------- | ----------- | ------------ |
-| socks5://lian.0l.dn42:9050                        | 600 kb/s    | [nulll](https://atlas.torproject.org/#details/84F41A116AD7F1E038781413E0B4ADE4494BA38A)
+| socks5://lian.0l.dn42:9050  (Offline?)            | 600 kb/s    | [nulll](https://atlas.torproject.org/#details/84F41A116AD7F1E038781413E0B4ADE4494BA38A)
+| socks5://172.23.162.132:9050                      | 100 Mb/s    | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C)
 
 ### Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen
 Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can access the "[Digibib](http://www.digibib.net/jumpto?LOCATION=Bi10&D_SERVICE=TEMPLATE&D_SUBSERVICE=DIGILINK_BROWSE&DP_FUNC=CategoryView&DP_FILTER=All&DP_CID=14211)" through DN42 with a valid IP. For some parts (like VDE norms) you will need Citrix Receiver.
