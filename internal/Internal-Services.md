@@ -88,6 +88,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://files.feuerrot.dn42                        |  6TB  | 1Gbit       | http, ftp, nfs, rsync                           |
 | ftp://vsynology.dev.ffc (10.8.6.13)               | 150G  | 20Mbit/s    | just drop your nzb/torrent file and be patient  |
 | http://filer1.grmml.dn42 (172.23.149.21)          |  4TB  | 200Mbit/s   | download only                                   |
+| http://filer2.grmml.dn42 (172.23.149.114)         |  4TB  | 200Mbit/s   | download only |
 | sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/   | 12TB        | 1Gb/s | incoming writable                       |
 | http://172.23.136.33                              |       | 100Mbit/s   | some mediafiles/software                        |
 | http://files.martin89.dn42/                       |       | max 2Mbit/s | download only                                   |
