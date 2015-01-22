@@ -52,7 +52,7 @@ There are a few different scripts for generating zone files. They have been writ
 
 **IP:** fd42:d42:d42:53::1/64
 
-[IPv6 Anycast Info](https://dn42.net/IPv6-Anycast)
+[IPv6 Anycast Info](IPv6-Anycast)
 
 ## Persons providing anycast DNS for IPv6
 
