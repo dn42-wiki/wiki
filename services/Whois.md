@@ -148,4 +148,16 @@ mtn sync
 
 Debian has a package "monotone-server", with config located in "/etc/monotone".
 
+### Allowing somebody to write to a monotone server
+
+If you want to allow somebody else to write to your monotone server (for instance for somebody to sync with you), you first need to import their key, here on Debian:
+
+    mtn --db /var/lib/monotone/default.mtn read < pubkey
+
+Then edit the file `write-permissions` (`/etc/monotone/write-permissions` on Debian) to add the email address associated with the public key.
+
+References: http://www.monotone.ca/docs/Basic-Network-Service.html#Basic-Network-Service and https://geti2p.net/en/get-involved/guides/monotone#obtaining-and-deploying-developers-keys
+
+### Tips and tricks
+
 Pro-tip: monotone seems to use `SO_V6ONLY`, which is annoying. To bind to both IPv4 and IPv6, use `ADDRESS=":: --bind 0.0.0.0"` in `/etc/default/monotone`.
