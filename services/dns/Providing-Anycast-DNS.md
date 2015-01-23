@@ -42,7 +42,7 @@ There are a few different scripts for generating zone files. They have been writ
 | xuu         |ON,CA | 64737  | souris.root.dn42 (172.22.141.180)  ||          
 | Nurtic-Vibe |EU | 4242420123 | ns1.grmml.dn42 (172.23.149.20) || 
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
-| Martin89    | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More describtion on http://martin89.dn42 |
+| Martin89    | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More description on http://martin89.dn42 |
 | Fritz       | ?? | 64712 | ?? (??) | Advertised over bgp |
 | PyroPeter   | EU | 76115 | nscache.pyropeter.dn42 (172.23.196.3) |
 | toBee       | DE | 4242420022 | ns1.mhm.dn42 (172.23.67.1) | advertised in BGP ||
