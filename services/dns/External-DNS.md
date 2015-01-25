@@ -15,7 +15,7 @@ Freifunk generates its zone configuration from the [icvpn-meta](https://github.c
     git clone https://github.com/freifunk/icvpn-scripts.git
     git clone https://github.com/freifunk/icvpn-meta.git
     cd icvpn-scripts
-    ./mkdns -f bind -s ../icvpn-meta/ -x dn42
+    ./mkdns -f bind -s ../icvpn-meta/ -x dn42 -x rzl
 
 The mkdns script currently supports the following setups:
 * bind (static-stub)
