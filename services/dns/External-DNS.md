@@ -2,7 +2,6 @@ This page lists external DNS zones, provided by networks that are interconnected
 
 ## Authoritative nameservers
 
-test
 
 | **Network name** | **Contact** | **DNS zone** | **Reverse zone** | **Authoritative nameservers** | **Last update** | **Comments** |
 |:----------------:|:----------:|:------------:|:----------------:|-------------------------------|--------------|---------|
