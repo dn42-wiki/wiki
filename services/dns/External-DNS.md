@@ -2,7 +2,6 @@ This page lists external DNS zones, provided by networks that are interconnected
 
 ## Authoritative nameservers
 
-test
 
 Some references for Freifunk are http://wiki.freifunk.net/DNS and http://luebeck.freifunk.net/wiki/DNS
 
