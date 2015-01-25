@@ -21,6 +21,7 @@ The mkdns script currently supports the following setups:
 * bind (static-stub)
 * bind-forward (forward zone)
 * dnsmasq
+
 ## Configuration
 
 See [[Recursive DNS resolver]] or [[DNS forwarding configuration|/services/dns/Configuration]].
