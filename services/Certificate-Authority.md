@@ -39,4 +39,4 @@ X0KmpxYGil6Ly5xImaVqwxnm7wlDiNT6vd0cPgtKd/YynPFNw9Eh+MSamw==
 -----END CERTIFICATE-----
 ```
 
-If you would like to have a certificate signed by this CA send a CSR to dn42@xuu.cc
+If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
