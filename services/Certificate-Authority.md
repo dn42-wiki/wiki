@@ -1,6 +1,19 @@
 # SSL Certificate Authority
 
-internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains or 172.22.0.0/15 ip addresses. If you would like to trust the certificate import the following:
+internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains or 172.22.0.0/15 ip addresses. 
+
+The name constraints can be verified for example by using openssl:
+```
+    openssl x509 -in dn42.crt -text -noout
+```
+which will show among other things:
+```
+    X509v3 Name Constraints: 
+      Permitted:
+        DNS:.dn42
+```
+
+If you would like to trust the certificate import the following:
 
 ```
 -----BEGIN CERTIFICATE-----
