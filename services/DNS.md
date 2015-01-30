@@ -30,6 +30,8 @@ Finally, you may want to host your own authoritative DNS server for the `dn42` z
 
 The root zone for `dn42.` is built from the [[whois registry|services/Whois]]. If you want to register a domain name, you need to add it to the registry (of course, you also need one or two authoritative nameservers).
 
+There is a monitoring process that checks to verify that registered domain names are configured and reachable within the network. If a network has been detected as inactive consistently for a month, it will be moved to an offline folder in the registry. This will disable it from being generated into the anycast dns and future health checks. To reactivate the domain it will have to be moved back from the dns-offline folder. 
+
 ## DNS services for other networks
 
 Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [[External DNS]].
