@@ -32,6 +32,8 @@ The root zone for `dn42.` is built from the [[whois registry|services/Whois]]. I
 
 There is a monitoring process that checks to verify that registered domain names are configured and reachable within the network. If a network has been detected as inactive consistently for a month, it will be moved to an offline folder in the registry. This will disable it from being generated into the anycast dns and future health checks. To reactivate the domain it will have to be moved back from the dns-offline folder. 
 
+The health check results are emailed out each week to the mailing list.
+
 ## DNS services for other networks
 
 Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [[External DNS]].
