@@ -10,8 +10,11 @@ lglass is a Python software package designed for Internet Registries like the DN
 
 lglass provides an event-based whois daemon with internal caching, which was written in Python. It is very simple to run an instance:
 
-    $ ./bin/lglass-whoisd -H $HOST -P $PORT
+    $ ./bin/lglass-whoisd
 
+without the configfile:
+
+    $ ./bin/lglass-regtool whoisd -H $HOST -p $PORT
 .
 
     usage: lglass-whoisd [-h] [-4] [-6] [--host HOST] [--port PORT]
