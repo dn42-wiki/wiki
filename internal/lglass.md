@@ -78,3 +78,9 @@ The configuration file format is JSON and allows configuration of the database c
 |process.user|User to change after initialization|
 |process.group|Group to change after initialization|
 |process.pidfile|Path to PID file|
+
+## RPSL
+- Routing Policy Specification Language [RFC2622](https://tools.ietf.org/html/rfc2622)
+- Routing Policy Specification Language next generation (RPSLng) [RFC4012](https://tools.ietf.org/html/rfc4012)
+- <http://www.ripe.net/data-tools/db/rpsl>
+- <http://www.ripe.net/data-tools/db/rpsl/transition-to-rpsl-version-of-the-ripe-database>
