@@ -61,3 +61,20 @@ lglass also comes with a simple web interface written in Python3 using Bottle an
     $ ./bin/lglass-web
 
 Furthermore you can use any WSGI server like Gunicorn by using lglass.web.application:app as WSGI callback. You can provide a path to the configuration file in the environment variable `LGLASS_WEB_CFG`.
+
+## Configuration
+
+The configuration file format is JSON and allows configuration of the database chain, the listen parameters, the custom messages and the process management.
+
+| Option   |      Meaning      |
+|----------|:-------------|
+| listen.host |IP address for listening socket (Default: ::)|
+|listen.port|TCP port for listening socket (Default: 4343)|
+|listen.protocol|Protocol for listening socket (4 or 6, by default 6)|
+|database|Array of database URLs to initialize database chain|
+|database.types|Array of object types in database (Default: undefined)<br/>Default chain:<br/>[<br/>  "whois+lglass.database.file+file:.",<br/>  "whois+lglass.database.cidr+cidr:",<br/>  "whois+lglass.database.schema+schema:",<br/>  "whois+lglass.database.cache+cached:"<br/>]|
+|messages.preamble|String preamble for whois responses|
+|messages.help|String help message for help requests|
+|process.user|User to change after initialization|
+|process.group|Group to change after initialization|
+|process.pidfile|Path to PID file|
