@@ -2,7 +2,7 @@
 
 You are asked to show some creativity in terms of network usage and content. ;)
 
-More ideas inspiration is collected on another [page](/ideas).
+More ideas inspiration is collected on another [page](/internal/ideas).
 
 ## CA
 
