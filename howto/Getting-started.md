@@ -99,7 +99,7 @@ There is some documentation in this wiki, like [gre-plus-ipsec](GRE-plus-IPsec).
 
 ## Running a routing daemon
 
-You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](howto/bgp-on-extreme-summit1i) ).  See the relevant [FAQ entry](Frequently-Asked-Questions#What-BGP-daemon-should-I-use?).
+You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](bgp-on-extreme-summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
 
 You can find [configuration examples for Bird here](howto/bird).
 
