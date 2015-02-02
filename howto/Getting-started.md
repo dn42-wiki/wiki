@@ -116,7 +116,7 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 
 # Configure DNS
 
-See [Services DNS](Services-DNS).
+See [Services DNS](/Services/DNS).
 
 # Use and provide services
 
