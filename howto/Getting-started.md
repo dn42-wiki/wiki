@@ -18,7 +18,7 @@ See [Contact#contact_mailing-list](contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
 
-You must create several objects in the registry. The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](Services-Whois#Monotone).
+You must create several objects in the registry. The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](/services/Whois#monotone).
 
 This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
 
