@@ -14,7 +14,7 @@ Don't worry, it's not as tedious as registering with a RIR ;)
 
 This is important, as it allows to stay up-to-date on best practices, new services, security issues...
 
-See [Home#Contact](Home#Contact) to subscribe.
+See [Contact#contact_mailing-list](contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
 
