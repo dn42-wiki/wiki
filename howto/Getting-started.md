@@ -120,6 +120,6 @@ See [Services DNS](Services-DNS).
 
 # Use and provide services
 
-See [internal](internal) for internal services.
+See [internal](/internal) for internal services.
 
 Don't hesitate to provide interesting services, but *please*, document them on the wiki! Otherwise, nobody will use them because nobody can guess they even exist.
