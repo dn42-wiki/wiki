@@ -2,6 +2,8 @@ lglass is a Python software package designed for Internet Registries like the DN
 
     $ git clone git://github.com/fritz0705/lglass.git
 
+[lglass Manual](http://lglass.flonet.dn42/)
+
 ## Running your own Whois daemon
 
 lglass provides an event-based whois daemon with internal caching, which was written in Python. It is very simple to run an instance:
