@@ -112,7 +112,7 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 * [BGP on Extreme Networks Summit 1i](howto/bgp-on-extreme-summit1i)
 * [dn42 on OpenWRT](howto/dn42-on-OpenWRT)
 * [Bird](howto/bird)
-* [IPsec with public key authentication](/howto/IPsecWithPublicKeys)
+* [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 
 # Configure DNS
 
