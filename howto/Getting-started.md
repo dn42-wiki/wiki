@@ -95,7 +95,7 @@ It will let you find people to peer with.  You can then contact them on IRC or b
 
 Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
 
-There is some documentation in this wiki, like [gre-plus-ipsec](howto/gre-plus-ipsec).
+There is some documentation in this wiki, like [gre-plus-ipsec](howto/GRE-plus-IPsec).
 
 ## Running a routing daemon
 
