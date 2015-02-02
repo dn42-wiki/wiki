@@ -108,10 +108,10 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 ## Configuration Examples
 
 * [EdgeOS Configuration](EdgeOS-Config-Example)
-* [EdgeOS GRE/IPsec Example](howto/EdgeOS-GRE-IPsec-Example)
-* [BGP on Extreme Networks Summit 1i](howto/bgp-on-extreme-summit1i)
-* [dn42 on OpenWRT](howto/dn42-on-OpenWRT)
-* [Bird](howto/bird)
+* [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
+* [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
+* [dn42 on OpenWRT](OpenWRT)
+* [Bird](bird)
 * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 
 # Configure DNS
