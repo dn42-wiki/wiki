@@ -42,15 +42,18 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ## IRC
 
-| Hostname / IP                                     | Remarks   |
-|:------------------------------------------------- |:--------- |
-| irc://irc.hackint.dn42/dn42 (172.22.24.1)         | DN42      |
-| irc://irc.hackint.hack/dn42 (172.31.0.30)         | ChaosVPN  |
+| Hostname / IP                                     | Remarks                                                  |
+|:------------------------------------------------- |:-------------------------------------------------------- |
+| irc://irc.hackint.dn42/dn42 (172.22.24.1)         | DN42                                                     |
+| irc://irc.hackint.hack/dn42 (172.31.0.30)         | ChaosVPN                                                 |
 
 ## Search engines
 
- * [Web search engine](http://search.dn42) (172.23.184.1) - a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs.
- * [YaCy search engine](http://yacy.dn42) - Indexing local nets
+| Hostname / IP                                     | Remarks                                                  |
+|:------------------------------------------------- |:-------------------------------------------------------- |
+| http://mhm.dn42/search                            | Hosted by toBee                                          |
+| http://yacy.dn42                                  | YaCy search engine. Indexing local nets                  |
+| http://search.dn42 (172.23.184.1)                 | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
 
 ## Images and Media
 
@@ -68,7 +71,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://10.11.10.30:8000                           | Freimusik                                                |
 | http://stream.laxu.dn42:8000                      | [xenim Streams]
-| http://freemusicradio.dn42:8000/freemusic.ogg                      | A free music radio with song voting on http://freemusicradio.dn42 (still beta)                |
+| http://freemusicradio.dn42:8000/freemusic.ogg     | A free music radio with song voting on http://freemusicradio.dn42 (still beta) |
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://10.112.0.6:8000/mpd.ogg, http://radio.ffhh:8000/mpd.ogg | Freifunk Hamburg radio, yeay 8bit music!    |
 | http://172.23.136.65:8000/                        | haxMPD                                                   |
@@ -79,31 +82,32 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ### FTP / HTTP
 
-| Hostname / IP                                     | Space | Speed       | Remarks                                         |
-|:------------------------------------------------- |:----- |:----------- |:----------------------------------------------- |
-| ftp://dev.0l.dn42                                 | 10 TB | max 5MBit/s | writable incoming                               |
-| http://filer.nihilus.dn42, http://172.22.92.2     |       | ~60kbps     | mostly up                                       |    
-| ftp://cochimetl.tim.dn42, nfs://cochimetl.tim.dn42/data/ftp | ~3TB  | ~700kbps |                                          |
-| http://seafile.dn42                               |       |             | Opensource Dropbox, yay!                        |
-| http://files.feuerrot.dn42                        |  6TB  | 1Gbit       | http, ftp, nfs, rsync                           |
-| ftp://vsynology.dev.ffc (10.8.6.13)               | 150G  | 20Mbit/s    | just drop your nzb/torrent file and be patient  |
-| http://filer1.grmml.dn42 (172.23.149.21)          |  4TB  | 200Mbit/s   | download only                                   |
-| http://filer2.grmml.dn42 (172.23.149.114)         |  4TB  | 200Mbit/s   | download only |
-| sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/   | 12TB        | 1Gb/s | incoming writable                       |
-| http://172.23.136.33                              |       | 100Mbit/s   | some mediafiles/software                        |
-| http://files.martin89.dn42/                       |       | max 2Mbit/s | download only                                   |
+| Hostname / IP                                               | Space | Speed       | Remarks                                        |
+|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |
+| ftp://dev.0l.dn42                                           | 10 TB | max 5MBit/s | writable incoming                              |
+| http://filer.nihilus.dn42, http://172.22.92.2               |       | ~60kbps     | mostly up                                      |    
+| ftp://cochimetl.tim.dn42, nfs://cochimetl.tim.dn42/data/ftp | ~3TB  | ~700kbps    |                                                |
+| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
+| http://files.feuerrot.dn42                                  |  6TB  | 1Gbit       | http, ftp, nfs, rsync                          |
+| ftp://vsynology.dev.ffc (10.8.6.13)                         | 150G  | 20Mbit/s    | just drop your nzb/torrent file and be patient |
+| http://filer1.grmml.dn42 (172.23.149.21)                    |  4TB  | 200Mbit/s   | download only                                  |
+| http://filer2.grmml.dn42 (172.23.149.114)                   |  4TB  | 200Mbit/s   | download only                                  |
+| sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/     | 12TB  | 1Gb/s       | incoming writable                              |
+| http://172.23.136.33                                        |       | 100Mbit/s   | some mediafiles/software                       |
+| http://files.martin89.dn42/                                 |       | max 2Mbit/s | download only                                  |
 
 ### Down?
 
-| Hostname / IP                                     | Space  | Speed    | Remarks                         | Down Since |
-|:------------------------------------------------- |:------ |:-------- |:------------------------------- |:---------- |
-| http://turing.il.maxx.dn42, http://172.22.42.2    | ~6.5TB | ~400kbit | WebDAV enabled, up 24/7z        | 01.01.2015 |
-| ftp://descent.derf.dn42 (172.23.225.35)           |  3TB   | 60kbit/s | download only                   | 01.01.2015 |
+| Hostname / IP                                               | Space | Speed       | Remarks                           | Since      |
+|:----------------------------------------------------------- |:----- |:----------- |:--------------------------------- |:---------- |
+| http://turing.il.maxx.dn42, http://172.22.42.2              | ~6.5TB | ~400kbit   | WebDAV enabled, up 24/7z          | 01.01.2015 |
+| ftp://descent.derf.dn42 (172.23.225.35)                     |  3TB   | 60kbit/s   | download only                     | 01.01.2015 |
 
 ### Torrent Tracker
-| Hostname /IP | Port | Protocol | Remarks |
+
+| Hostname / IP        | Port | Protocol    | Remarks        |
 |:---------------------|:-----|:------------|:---------------|
-| tracker.grmml.dn42 | 6969 | TCP & UDP | Opentracker |
+| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |
 
 ## Proxies
 
@@ -114,7 +118,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | Hostname / IP                                     | Bandwidth   | Nickname     |
 | ------------------------------------------------- | ----------- | ------------ |
 | socks5://lian.0l.dn42:9050  (Offline?)            | 600 kb/s    | [nulll](https://atlas.torproject.org/#details/84F41A116AD7F1E038781413E0B4ADE4494BA38A)
-| socks5://172.23.162.132:9050                      | 100 Mbit/s    | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C)
+| socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C)
 
 ### Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen
 Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can access the "[Digibib](http://www.digibib.net/jumpto?LOCATION=Bi10&D_SERVICE=TEMPLATE&D_SUBSERVICE=DIGILINK_BROWSE&DP_FUNC=CategoryView&DP_FILTER=All&DP_CID=14211)" through DN42 with a valid IP. For some parts (like VDE norms) you will need Citrix Receiver.
