@@ -40,4 +40,4 @@ This should to the trick for sending mails via your DN42-IP
 
 ### Receiving emails
 
-The Domain mails should be received for has to be added to 'mydestination =' in main.cf
+The Domain mails should be received for has to be added to `mydestination =` in main.cf
