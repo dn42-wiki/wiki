@@ -108,6 +108,8 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | Hostname / IP        | Port | Protocol    | Remarks        |
 |:---------------------|:-----|:------------|:---------------|
 | tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |
+| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |
+| tracker.mhm.dn42     |   80 | TCP & UDP   | Opentracker    |
 
 ## Proxies
 
