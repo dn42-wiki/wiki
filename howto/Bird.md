@@ -174,3 +174,7 @@ bird> show route for 172.22.141.181 # show possible routes to internal.dn42
 172.22.141.0/24    via 172.23.67.1 on tobee [tobee 07:20:30] * (100) [AS64737i]
                    via 172.23.64.1 on chelnok [chelnok 07:20:29] (100) [AS64737i]
                    via 172.23.136.65 on hax404 [hax404 07:20:26] (100) [AS64737i]
+```
+
+# External Links
+* more bgp commands: http://danrimal.net/doku.php?id=wiki:bgp:bird:postupy
