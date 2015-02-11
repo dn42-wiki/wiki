@@ -150,3 +150,27 @@ protocol bgp <PEER_NAME> from dnpeers {
   neighbor <PEERING_IP> as <PEER_AS>;
 };
 ```
+
+# Useful bird commmands
+
+bird can be remote controlled via the `birdc` command. Here is a list of useful bird commands:
+
+```
+$ birdc
+BIRD 1.4.5 ready.
+bird> reload all # reload configuration
+kernel1: reloading
+chelnok: reloading
+hax404: reloading
+static1: reload failed
+bird> show protocols # this command shows your peering status
+name     proto    table    state  since       info
+device1  Device   master   up     07:20:25    
+kernel1  Kernel   master   up     07:20:25    
+chelnok  BGP      master   up     07:20:29    Established   
+hax404   BGP      master   up     07:20:26    Established     
+static1  Static   master   up     07:20:25
+bird> show route for 172.22.141.181 # show possible routes to internal.dn42
+172.22.141.0/24    via 172.23.67.1 on tobee [tobee 07:20:30] * (100) [AS64737i]
+                   via 172.23.64.1 on chelnok [chelnok 07:20:29] (100) [AS64737i]
+                   via 172.23.136.65 on hax404 [hax404 07:20:26] (100) [AS64737i]
