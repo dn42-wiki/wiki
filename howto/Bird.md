@@ -46,7 +46,6 @@ function is_dn42()     {
     172.22.0.94/32,       # TOR Anycast
     172.22.0.0/15{15,30}, # official subnet for dn42
     172.23.0.0/16{15,30}, # official subnet for dn42
-    178.33.32.123/32,     # Martin89
     178.63.170.40/32,     # jomat
     188.40.34.241/32,     # jomat
     192.175.48.0/24+,     # AS112-prefix for reverse-dns
