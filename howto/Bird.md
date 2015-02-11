@@ -41,7 +41,7 @@ function is_dn42()     {
     87.106.29.254/32,     # wintix
     91.204.4.0/22+,       # free.de via ctdo
     94.45.224.0/19+,      # ccc event network
-    172.22.0.43/32        # Whois Anycast
+    172.22.0.43/32,       # Whois Anycast
     172.22.0.53/32,       # Dns Anycast
     172.22.0.94/32,       # TOR Anycast
     172.22.0.0/15{15,30}, # official subnet for dn42
