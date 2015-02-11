@@ -17,6 +17,7 @@
   * [[DNS]]
   * [[Looking Glasses]]
   * [[Virtual Machines]]
+  * [[Repository Mirrors]]
 
 * [[Internal|/pages/internal]]
   * [[Internal services|Internal-services]]
