@@ -107,6 +107,7 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 
 ## Configuration Examples
 
+* [Openvpn](openvpn)
 * [EdgeOS Configuration](EdgeOS-Config-Example)
 * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
 * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
