@@ -135,7 +135,8 @@ include "/etc/bird/peers4/*";
 
 ```
 #/etc/bird/local4.conf
-router id 172.23.75.1;
+# should be a unique identifier, <GATEWAY_IP> is what most people use.
+router id <GATEWAY_IP>;
 
 define OWNAS =  <AS>;
 define OWNIP = <GATEWAY_IP>;
