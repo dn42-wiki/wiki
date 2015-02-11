@@ -24,7 +24,7 @@ To specify the source address, you use the `krt_prefsrc` attribute, for instance
 * Replace `<AS>` with your Autonomous System Number
 * Replace `<GATEWAY_IP>` with your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
 * Replace `<SUBNET>` with your registered dn42 subnet, which you allocated on [nixnodes](https://io.nixnodes.net/)
-* Replace `<PEER_IP>` with the ip of your peer who is connected with your using your favorite vpn protocol (openvpn, ipsec, tinc, ...)
+* Replace `<PEER_IP>` with the ip of your peer who is connected with you using your favorite vpn protocol (openvpn, ipsec, tinc, ...)
 * Replace `<PEER_AS>` the Autonomous System Number of your peer
 * Replace `<PEER_NAME>` a self chosen name for your peer
 
