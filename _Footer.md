@@ -1,1 +1,1 @@
-Hosted by: [mortzu](me@mortzu.de), [xuu](xuu@sour.is) | Accessible via: [dn42](http://internal.dn42), [tor](http://jsptropkiix3ki5u.onion), [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/)
+[Contact Host](https://xuu.me) | Accessible via: [dn42](http://internal.dn42), [tor](http://jsptropkiix3ki5u.onion), [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/)

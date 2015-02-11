@@ -31,3 +31,45 @@ then create a new key and share it with your peer
 ```
 $ openvpn --genkey --secret /etc/openvpn/<PEER_NAME>.key
 ```
+
+# Example Configuration if one peer has floating ip
+
+## peer with fixed ip
+
+```
+daemon
+proto       <PROTO>
+mode        p2p
+dev-type    tun
+comp-lzo
+dev         <INTERFACE_NAME>
+persist-key
+persist-tun
+float
+port        <LOCAL_PORT>
+ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+secret /etc/openvpn/<PEER_NAME>.key
+```
+
+## peer with floating ip
+
+* Notice the local gateway ip of your peer is your remote gateway ip and 
+  his remote gateway is your local gateway
+* `<REMOTE_HOST>` is the ip address of your peer
+* `<REMOTE_PORT>` is openvpn port, where your peer listen for traffic
+
+```
+daemon
+proto       <PROTO>
+mode        p2p
+remote      <REMOTE_HOST>
+rport       <REMOTE_PORT>
+lport       float
+dev-type    tun
+dev         <INTERFACE_NAME>
+comp-lzo
+persist-key
+persist-tun
+ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+secret /etc/openvpn/<PEER_NAME>.key
+```
