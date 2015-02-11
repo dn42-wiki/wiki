@@ -1,6 +1,6 @@
 Bird is a commonly used BGP daemon.  This page provides configuration and help to run Bird for dn42.
 
-# Example configurations
+# Example configuration
 
 * Replace `<AS>` with your Autonomous System Number
 * Replace `<GATEWAY_IP>` with your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
