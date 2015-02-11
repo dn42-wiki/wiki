@@ -1,5 +1,4 @@
-# Example Configuration, if you have direct connection to your peer
-
+# Example Configuration for direct peer to peer
 * Replace `<PEER_NAME>` with a self chosen name to identify this peer
 * Replace `<PROTO>` with either `udp` or `udp6`, depending if you reach your remote peer with ipv4 o ipv6
 * Replace `<REMOTE_HOST>` with the public ip address of your peer
