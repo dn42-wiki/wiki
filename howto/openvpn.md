@@ -32,7 +32,7 @@ then create a new key and share it with your peer
 $ openvpn --genkey --secret /etc/openvpn/<PEER_NAME>.key
 ```
 
-# Example Configuration if one peer has floating ip
+# Example Configuration if one peer has a floating ip
 
 ## peer with fixed ip
 
