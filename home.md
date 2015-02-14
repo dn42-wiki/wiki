@@ -1,7 +1,5 @@
 ## About dn42
 
-test
-
 dn42 is a big dynamic VPN network, which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, DNS, etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), IPsec), and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the 172.22.0.0/15 range, and private AS numbers are used: see [registry](/services/Whois).
 
 A number of services are provided on the network: see [internal](http://internal.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some Freifunk networks.
