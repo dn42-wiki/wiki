@@ -31,7 +31,7 @@ function is_freifunk() {
 
 function is_dn42()     {
   # based on data/filter.txt in the monoton repo:
-  # - https://sour.is/git/dn42/registry.git/tree/data/filter.txt
+  # - https://sour.is/git/dn42/registry.git/plain/data/filter.txt
   return net ~ [
     37.1.89.160/29+,      # siska
     46.4.248.192/27+,     # welterde
