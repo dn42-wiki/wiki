@@ -13,6 +13,15 @@ which will show among other things:
         DNS:.dn42
 ```
 
+**Test Sites with a bad key**
+
+The following sites have been setup to demonstrate the key failing when signed for invalid subject alternates.
+
+[badkey.sour.is]()
+[badkey.xuu.me]()
+[badkey.xuu.dn42]()
+
+
 If you would like to trust the certificate import the following:
 
 ```
