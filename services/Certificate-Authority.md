@@ -13,6 +13,12 @@ which will show among other things:
         DNS:.dn42
 ```
 
+Certificate fingerprint
+```
+$ openssl x509 -sha256 -fingerprint -noout -in dn42.crt
+SHA256 Fingerprint=8C:8E:C1:12:DB:85:3E:59:CB:1A:DF:90:74:A4:0C:83:B5:ED:57:1E:BC:06:E0:0D:80:B3:47:68:11:77:E1:C9
+```
+
 **Test Sites with a bad key**
 
 The following sites have been setup to demonstrate the key failing when signed for invalid subject alternates.
@@ -49,5 +55,7 @@ gfcWBU6anZMFJV9Y2lkNhxw5G7JMDSYsfONskzPet9HeHrmu67EnXMapELCjZL3O
 X0KmpxYGil6Ly5xImaVqwxnm7wlDiNT6vd0cPgtKd/YynPFNw9Eh+MSamw==
 -----END CERTIFICATE-----
 ```
+
+
 
 If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
