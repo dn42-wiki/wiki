@@ -56,6 +56,9 @@ X0KmpxYGil6Ly5xImaVqwxnm7wlDiNT6vd0cPgtKd/YynPFNw9Eh+MSamw==
 -----END CERTIFICATE-----
 ```
 
-
-
 If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
+
+**Import the certificate**
+
+- In archlinux you can install the package [ca-certificates-dn42](https://aur.archlinux.org/packages/ca-certificates-dn42) from AUR
+- cacert have a comprehensive FAQ on how to import your own root certificates in [browsers](http://wiki.cacert.org/FAQ/BrowserClients) and [other software](http://wiki.cacert.org/FAQ/ImportRootCert)
