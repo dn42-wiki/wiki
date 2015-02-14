@@ -17,11 +17,11 @@ which will show among other things:
 
 The following sites have been setup to demonstrate the key failing when signed for invalid subject alternates.
 
-[badkey.sour.is]()
+[badkey.sour.is](https://badkey.sour.is)
 
-[badkey.xuu.me]()
+[badkey.xuu.me](https://badkey.xuu.me)
 
-[badkey.xuu.dn42]()
+[badkey.xuu.dn42](https://badkey.xuu.dn42)
 
 
 If you would like to trust the certificate import the following:
