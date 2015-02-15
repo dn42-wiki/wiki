@@ -56,12 +56,12 @@ The following sites have been set up to demonstrate the CA failing to sign arbit
 
 They all use the same certificate, that should be regarded invalid by whatever software you use because of
 ```
-        Subject: CN=badkey.sour.is
-[...]
             X509v3 Subject Alternative Name: 
-                DNS:badkey.sour.is, DNS:badkey.xuu.me, DNS:badkey.xuu.dn42, DNS:*
+                DNS:badkey.internal.dn42, DNS:badkey.sour.is, DNS:badkey.xuu.me, DNS:google.com, DNS:*.com, DNS:*.*
+
 
 ```
+even though the subject says `CN=badkey.internal.dn42`, which would be allowed.
 
 ## Importing the certificate
 
