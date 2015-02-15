@@ -50,18 +50,18 @@ which will show among other things:
 
 The following sites have been set up to demonstrate the CA failing to sign arbitrary domains:
 
-* [badkey.sour.is](https://badkey.sour.is)
-* [badkey.xuu.me](https://badkey.xuu.me)
-* [badkey.xuu.dn42](https://badkey.xuu.dn42)
+* [badkey.sour.is](https://badkey.sour.is) - Host is in HSTS preload with key pinning. The browser should fail because the keypin does not match. 
+* [badkey.xuu.me](https://badkey.xuu.me) - Hostname is outside of domain allowed list.
+* [badkey.internal.dn42](https://badkey.internal.dn42) - Valid hostname and keypinned. But certificate contains bad subject alternate names.
 
 They all use the same certificate, that should be regarded invalid by whatever software you use because of
 ```
+        Subject: CN=badkey.sour.is
+[...]
             X509v3 Subject Alternative Name: 
-                DNS:badkey.internal.dn42, DNS:badkey.sour.is, DNS:badkey.xuu.me, DNS:google.com, DNS:*.com, DNS:*.*
-
+                DNS:badkey.sour.is, DNS:badkey.xuu.me, DNS:badkey.xuu.dn42, DNS:*
 
 ```
-even though the subject says `CN=badkey.internal.dn42`, which would be allowed.
 
 ## Importing the certificate
 
