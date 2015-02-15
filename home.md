@@ -58,7 +58,6 @@ The [[Getting started]] page helps you to get your first node inside the network
 * [freifunk](http://freifunk.net)
 * [NoName e.V. Heidelberg](https://www.noname-ev.de)
 * [raumzeitlabor/hackerspace rhein-neckar](http://www.raumzeitlabor.de)
-* [Freifunk Aurich](http://www.freifunk-aurich.de)
 * [Cyberpipe](https://www.kiberpipa.org)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
 * [[hsmr] / Hackspace Marburg](https://hsmr.cc)
