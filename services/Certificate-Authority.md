@@ -1,36 +1,9 @@
 # SSL Certificate Authority
 
-internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains or 172.22.0.0/15 ip addresses. 
+internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains.
+If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
 
-The name constraints can be verified for example by using openssl:
-```
-    openssl x509 -in dn42.crt -text -noout
-```
-which will show among other things:
-```
-    X509v3 Name Constraints: 
-      Permitted:
-        DNS:.dn42
-```
-
-Certificate fingerprint
-```
-$ openssl x509 -sha256 -fingerprint -noout -in dn42.crt
-SHA256 Fingerprint=8C:8E:C1:12:DB:85:3E:59:CB:1A:DF:90:74:A4:0C:83:B5:ED:57:1E:BC:06:E0:0D:80:B3:47:68:11:77:E1:C9
-```
-
-**Test Sites with a bad key**
-
-The following sites have been setup to demonstrate the key failing when signed for invalid subject alternates.
-
-[badkey.sour.is](https://badkey.sour.is)
-
-[badkey.xuu.me](https://badkey.xuu.me)
-
-[badkey.xuu.dn42](https://badkey.xuu.dn42)
-
-
-If you would like to trust the certificate import the following:
+The CA certificate:
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -56,9 +29,41 @@ X0KmpxYGil6Ly5xImaVqwxnm7wlDiNT6vd0cPgtKd/YynPFNw9Eh+MSamw==
 -----END CERTIFICATE-----
 ```
 
-If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
+Certificate fingerprint
+```
+$ openssl x509 -sha256 -fingerprint -noout -in dn42.crt
+SHA256 Fingerprint=8C:8E:C1:12:DB:85:3E:59:CB:1A:DF:90:74:A4:0C:83:B5:ED:57:1E:BC:06:E0:0D:80:B3:47:68:11:77:E1:C9
+```
 
-**Import the certificate**
+## Testing constraints
+
+The name constraints can be verified for example by using openssl:
+```
+    openssl x509 -in dn42.crt -text -noout
+```
+which will show among other things:
+```
+    X509v3 Name Constraints: 
+      Permitted:
+        DNS:.dn42
+```
+
+The following sites have been set up to demonstrate the CA failing to sign arbitrary domains:
+
+* [badkey.sour.is](https://badkey.sour.is)
+* [badkey.xuu.me](https://badkey.xuu.me)
+* [badkey.xuu.dn42](https://badkey.xuu.dn42)
+
+They all use the same certificate, that should be regarded invalid by whatever software you use because of
+```
+        Subject: CN=badkey.sour.is
+[...]
+            X509v3 Subject Alternative Name: 
+                DNS:badkey.sour.is, DNS:badkey.xuu.me, DNS:badkey.xuu.dn42, DNS:*
+
+```
+
+## Importing the certificate
 
 - In archlinux you can install the package [ca-certificates-dn42](https://aur.archlinux.org/packages/ca-certificates-dn42) from AUR
 - cacert have a comprehensive FAQ on how to import your own root certificates in [browsers](http://wiki.cacert.org/FAQ/BrowserClients) and [other software](http://wiki.cacert.org/FAQ/ImportRootCert)
