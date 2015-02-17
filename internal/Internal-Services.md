@@ -75,6 +75,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://10.112.0.6:8000/mpd.ogg, http://radio.ffhh:8000/mpd.ogg | Freifunk Hamburg radio, yeay 8bit music!    |
 | http://172.23.136.65:8000/                        | haxMPD                                                   |
+| http://stream.media.dn42/                        | icecast-relay, contact toBee for more streams             |
 
 ## File sharing
 
