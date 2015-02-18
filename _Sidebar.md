@@ -16,6 +16,7 @@
   * [[Whois registry|Whois]]
   * [[DNS]]
   * [[Looking Glasses]]
+  * [[Shell]]
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
 
