@@ -123,7 +123,7 @@ template bgp dnpeers {
     reject;
   };
   export filter {
-    # here we export the hole net
+    # here we export the whole net
     if is_dn42() || is_freifunk() || is_chaosvpn() then {
       accept;
     }
