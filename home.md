@@ -1,4 +1,4 @@
-## About dn42
+## About dn422
 
 dn42 is a big dynamic VPN network, which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, DNS, etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), IPsec), and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the 172.22.0.0/15 range, and private AS numbers are used: see [registry](/services/Whois).
 
