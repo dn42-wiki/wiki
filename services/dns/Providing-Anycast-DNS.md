@@ -15,7 +15,7 @@ It is _really_ good to hang around in [[IRC]] to get things sorted out, if somet
 
 ### Generating Zone Files
 
-There are a few different scripts for generating zone files. They have been written in a few different languages. 
+There are a few different scripts for generating zone files. They have been written in a few different languages. Please keep in mind that RFC 2317 is what keeps people from registering a /24 _just to have RDNS_, so scripts that support it have a positive effect on address space usage.
 
 | **Script** | **Language** | **Notes** |
 |---------------------|--------------|-----------|
