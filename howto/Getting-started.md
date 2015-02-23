@@ -82,7 +82,7 @@ You may choose your network prefix in one of the currently open netblocks. There
 
 The current guideline is to allocate a /25 by default, keeping space for a /23. You may allocate more than a /25 if you need to, but no more than a /23.
 
-**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt).
+**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
 
 # Get some peers
