@@ -73,3 +73,17 @@ persist-tun
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
+
+
+# External Links
+* multicast: 
+ * **OpenVPN**
+ * [Optimizations for multicast over TAP w/ OpenVPN](https://community.openvpn.net/openvpn/ticket/79)
+ * [Sending multicast over a openvpn tunnel](http://forums.openvpn.net/topic8036.html)
+
+ * **RFC**
+ * [IPv6 - RFC3306](https://tools.ietf.org/html/rfc3306)
+ * [IPv4 - multicast](https://en.wikipedia.org/wiki/Multicast_address#GLOP_addressing)
+ * [IPv4 - GLOB calculator](http://labs.spritelink.net/glop)
+ * [RFC3108 GLOP Addressing in 233/8](http://tools.ietf.org/html/rfc3180)
+ * [RFC3138 Extended Assignments in 233/8](https://tools.ietf.org/html/rfc3138)
