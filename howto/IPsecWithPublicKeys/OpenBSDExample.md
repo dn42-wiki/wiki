@@ -17,7 +17,7 @@ Send your public key to your peer, preferrably digitally signed. A signature can
 
 Once your peer sent you their public key, it under `/etc/isakmpd/pubkeys/ipv4` or `/etc/isakmpd/ipv6`, depending on the address family the peer is using. The key file should be named after the peers address. For example, if your peer is `1.3.3.7`, you place their public key under `/etc/isakmpd/pubkeys/ipv4/1.3.3.7`.
 
-If your peers public key is not in PEM format, you can use [pubkey-converter](https://github.com/ryanriske/pubkey-converter) to convert between key formats.
+If your peers public key is not in PEM format, you can use [pubkey-converter](https://git.sour.is/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl) to convert between key formats.
 
 # IPSec Setup
 Change the value of the `isakmpd_flags` variable in `/etc/rc.conf.local` to `"-K"`, or add the `"-K"` flag if you already have flags in there. This disables keystone(4) authentication, which is okay because we are using `ipsecctl`.
