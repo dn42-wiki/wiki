@@ -80,7 +80,7 @@ To register an IPv4 network prefix, simply create an `inetnum` object.
 
 You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://109.24.208.244:8888/dn42-netblock-visu/registry.html).
 
-The current guideline is to allocate a /25 by default, keeping space for a /23. You may allocate more than a /25 if you need to, but no more than a /23.
+The current guideline is to allocate a /25 by default, keeping space for a /23. You may allocate more than a /25 if you need to, but no more than a /23. Please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /26 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but IPv4-space is valuable too!
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
