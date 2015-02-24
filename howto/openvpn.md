@@ -81,7 +81,7 @@ Clients connect using certificates, and simply get attributed dn42 IPs in the or
 
 ## Server configuration
 
-Replace `<PORT>` with the UDP port you want OpenVPN to listen to
+Replace `<PORT>` with the UDP port you want OpenVPN to listen to, and change the IP ranges (`ifconfig` and `route-gateway` options).
 
 ```
 mode server
@@ -119,13 +119,13 @@ push "topology subnet"
 
 keepalive 10 60
 
-# That's 172.23.185.144/28 (172.23.185.144 to 172.23.185.159)
-ifconfig 172.23.185.145 255.255.255.240
-ifconfig-pool 172.23.185.146 172.23.185.158 255.255.255.240
+# That's 172.22.X.144/28 (172.22.X.144 to 172.22.X.159)
+ifconfig 172.22.X.145 255.255.255.240
+ifconfig-pool 172.22.X.146 172.22.X.158 255.255.255.240
 
 ifconfig-pool-persist pool-persist.txt
 
-push "route-gateway 172.23.185.145"
+push "route-gateway 172.22.X.145"
 push "route 172.22.0.0 255.254.0.0" 
 ###push "route 172.31.0.0 255.255.0.0" 
 ###push "route 10.0.0.0 255.0.0.0" 
