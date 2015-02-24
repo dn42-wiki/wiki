@@ -1,4 +1,5 @@
 # Example Configuration for direct peer to peer
+
 * Replace `<PEER_NAME>` with a self chosen name to identify this peer
 * Replace `<PROTO>` with either `udp` or `udp6`, depending if you reach your remote peer with ipv4 o ipv6
 * Replace `<REMOTE_HOST>` with the public ip address of your peer
@@ -74,6 +75,97 @@ ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
 
+# Example configuration for connecting roaming clients to dn42
+
+Clients connect using certificates, and simply get attributed dn42 IPs in the order they connect.  This is useful for roaming clients, where you don't really care which IP you have.  Note that once a client has connected for the first time, it will keep the same IP on subsequent connections (option `ifconfig-pool-persist`).
+
+## Server configuration
+
+Replace `<PORT>` with the UDP port you want OpenVPN to listen to
+
+```
+mode server
+tls-server
+
+dh dh2048.pem
+
+ca keys/ca.crt
+cert keys/roaming-dn42.crt
+key keys/roaming-dn42.key
+
+client-config-dir /etc/openvpn/roaming
+
+dev tun-roaming
+persist-tun
+#link-mtu 
+tun-mtu 1500
+fragment 1300
+mssfix
+log /var/log/openvpn-dn42-roaming.log
+status /var/log/openvpn-dn42-roaming-status.log 60
+
+# Should work for both IPv4 and IPv6
+proto udp6
+port <PORT>
+
+# IPv6
+###tun-ipv6
+###push tun-ipv6
+###ifconfig-ipv6 2001:db8:42:42::1 2001:db8:42:42::2
+###ifconfig-ipv6-pool 2001:db8:42:42::3/64
+
+topology subnet
+push "topology subnet"
+
+keepalive 10 60
+
+# That's 172.23.185.144/28 (172.23.185.144 to 172.23.185.159)
+ifconfig 172.23.185.145 255.255.255.240
+ifconfig-pool 172.23.185.146 172.23.185.158 255.255.255.240
+
+ifconfig-pool-persist pool-persist.txt
+
+push "route-gateway 172.23.185.145"
+push "route 172.22.0.0 255.254.0.0" 
+###push "route 172.31.0.0 255.255.0.0" 
+###push "route 10.0.0.0 255.0.0.0" 
+```
+
+## Client configuration
+
+Change `<SERVER>` and `<PORT>`.
+
+```
+client
+
+ca   ca.crt
+cert myclient.crt
+key  myclient.key
+
+dev tun
+proto udp6
+
+remote <SERVER> <PORT>
+
+tun-mtu 1500
+fragment 1300
+mssfix
+
+route-delay 2
+nobind
+persist-key
+persist-tun
+
+verb 3
+```
+
+## Certificate management
+
+Use easy-rsa, it's easy to use.  Below is a very short description, find a real tutorial if you don't know how it works.
+
+Build the CA: `. vars`, `./build-ca`, then generate the server key: `./build-key-server roaming-dn42`.
+
+Then, for each client, generate a private key and a certificate: ```./build-key myclient```.  The Common Name is the only important information (it will be used to identify the client, for instance in the logs).
 
 # External Links
 * multicast: 
