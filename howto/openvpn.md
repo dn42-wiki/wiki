@@ -25,6 +25,12 @@ persist-key
 persist-tun
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
+
+# The secret can also be included inline with the config by wrapping it in <secret></secret> tags.
+# <secret>
+# ... Key File contents go here ...
+# </secret>
+
 ```
 
 then create a new key and share it with your peer
