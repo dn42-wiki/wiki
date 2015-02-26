@@ -70,7 +70,7 @@ Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-
 
 For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. This list is automatically built from the registry.
 
-If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/) or [this list](http://109.24.208.244:8888/dn42/lastseen/).
+If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/) or [this list](http://dataviz.polyno.me/lastseen/).
 
 If unsure, ask on the mailing list or IRC.
 
@@ -78,7 +78,7 @@ If unsure, ask on the mailing list or IRC.
 
 To register an IPv4 network prefix, simply create an `inetnum` object.
 
-You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://109.24.208.244:8888/dn42-netblock-visu/registry.html).
+You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://dataviz.polyno.me/dn42-netblock-visu/registry.html).
 
 | Size | Comment                  |
 |-----:|:-------------------------|
