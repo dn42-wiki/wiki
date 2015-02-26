@@ -33,7 +33,8 @@ function is_dn42()     {
   # based on data/filter.txt in the monoton repo:
   # - https://sour.is/git/dn42/registry.git/plain/data/filter.txt
   return net ~ [
-    37.1.89.160/29+,      # siska
+    37.1.89.128/27+,      # siska
+    37.1.89.192/26+,      # siska
     46.4.248.192/27+,     # welterde
     46.19.90.48/28+,      # planet cyborg
     46.19.90.96/28+,      # planet cyborg
@@ -51,7 +52,6 @@ function is_dn42()     {
     188.40.34.241/32,     # jomat
     192.175.48.0/24+,     # AS112-prefix for reverse-dns
     193.43.220.0/23+,     # durchdieluft via ctdo
-    195.16.84.40/29+,     # siska
     195.160.168.0/23+,    # ctdo
     195.191.196.0/23+     # ichdasich pi-space
   ];
