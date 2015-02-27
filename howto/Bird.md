@@ -105,8 +105,8 @@ function is_self_net() {
 Generate the filter list from the monotone repository
 
 ```
-cd net.dn42.registry
-ruby utils/bgp-filter.rb < data/filter.txt > /etc/bird/filter4.conf
+$ cd net.dn42.registry
+$ ruby utils/bgp-filter.rb < data/filter.txt > /etc/bird/filter4.conf
 ```
 
 example filter list:
@@ -224,13 +224,14 @@ function is_self_net() {
 Generate the filter list from the monotone repository
 
 ```
-cd net.dn42.registry
-ruby utils/bgp-filter.rb < data/filter6.txt > /etc/bird/filter6.conf
+$ cd net.dn42.registry
+$ ruby utils/bgp-filter.rb < data/filter6.txt > /etc/bird/filter6.conf
 ```
 
 example filter list:
 
 ```
+/etc/bird/filter6.conf
 function is_valid_network() {
   return net ~ [
     fc00::/8{48,64}, # ULA (undefined)
