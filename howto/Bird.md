@@ -25,56 +25,7 @@ protocol static {
 # filter helpers
 #################
 
-function is_freifunk() {
-  return net ~ [ 10.0.0.0/8+ ];
-}
-
-function is_dn42()     {
-  # based on data/filter.txt in the monoton repo:
-  # - https://sour.is/git/dn42/registry.git/plain/data/filter.txt
-  return net ~ [
-    37.1.89.128/27+,      # siska
-    37.1.89.192/26+,      # siska
-    46.4.248.192/27+,     # welterde
-    46.19.90.48/28+,      # planet cyborg
-    46.19.90.96/28+,      # planet cyborg
-    80.244.241.224/27+,   # jchome service network
-    85.25.246.16/28+,     # Leon Weber
-    87.106.29.254/32,     # wintix
-    91.204.4.0/22+,       # free.de via ctdo
-    94.45.224.0/19+,      # ccc event network
-    172.22.0.43/32,       # Whois Anycast
-    172.22.0.53/32,       # Dns Anycast
-    172.22.0.94/32,       # TOR Anycast
-    172.22.0.0/15{15,30}, # official subnet for dn42
-    172.23.0.0/16{15,30}, # official subnet for dn42
-    178.63.170.40/32,     # jomat
-    188.40.34.241/32,     # jomat
-    192.175.48.0/24+,     # AS112-prefix for reverse-dns
-    193.43.220.0/23+,     # durchdieluft via ctdo
-    195.160.168.0/23+,    # ctdo
-    195.191.196.0/23+     # ichdasich pi-space
-  ];
-}
-
-function is_chaosvpn() {
-  return net ~ [
-    10.4.0.0/16+,        # Allocated for ChaosVPN. Ready for distribution, currently not used
-    10.32.0.0/16+,       # Allocated for ChaosVPN. Ready for distribution, currently not used
-    10.42.16.0/20+,      # legacy
-    10.100.0.0/14+,      # us hackerspaces range
-    10.104.0.0/14+,      # Warzone, currently not used
-    172.31.0.0/16+,      # In use by European hackerspaces
-    83.133.178.0/23+,    # kapsel - CCC Munich
-    172.26.0.0/15+,      # KBU Freifunk
-    176.9.52.58/32+,     # haegar_vlad
-    178.33.2.240/28+,    # o_g
-    193.103.159.0/24+,   # haegar_vlad
-    193.103.160.0/23+,   # haegar_vlad
-    212.12.50.208/29+,   # ccchh
-    213.238.61.128/26+   # mc.fly
-  ];
-}
+include "/etc/bird/filter4.conf";
 
 # local configuration
 ######################
@@ -117,14 +68,14 @@ template bgp dnpeers {
   import filter {
     # accept every subnet, except our own advertised subnet
     # filtering is important, because some guys try to advertise routes like 0.0.0.0
-    if (is_dn42() || is_freifunk() || is_chaosvpn()) && !is_self_net() then {
+    if is_valid_network() && !is_self_net() then {
       accept;
     }
     reject;
   };
   export filter {
     # here we export the whole net
-    if is_dn42() || is_freifunk() || is_chaosvpn() then {
+    if is_valid_network() then {
       accept;
     }
     reject;
@@ -146,6 +97,45 @@ define OWNIP = <GATEWAY_IP>;
 
 function is_self_net() {
   return net ~ [<SUBNET>+];
+}
+```
+
+Generate the filter list from the monotone repository
+
+```
+cd net.dn42.registry
+ruby utils/bgp-filter.rb < data/filter.txt > /etc/bird/filter4.conf
+```
+
+example filter list:
+
+```
+# /etc/bird/filter4.conf
+function is_valid_network() {
+  return net ~ [
+    172.22.0.0/15{22,28}, # dn42 main net0
+    172.22.0.43/32{32,32}, # Whois Anycast
+    172.22.0.53/32{32,32}, # DNS Anycast
+    172.22.0.94/32{32,32}, # TOR Anycast
+    192.175.48.0/24{24,32}, # AS112-prefix for reverse-dns
+    10.0.0.0/8{12,28}, # freifunk/chaosvpn
+    172.31.0.0/16{22,28}, # chaosvpn
+    100.64.0.0/10{12,28}, # iana private range
+    195.160.168.0/23{23,28}, # ctdo
+    91.204.4.0/22{22,28}, # free.de via ctdo
+    193.43.220.0/23{23,28}, # durchdieluft via ctdo
+    83.133.178.0/23{23,28}, # muccc kapsel
+    87.106.29.254/32{32,32}, # wintix (please don' announce /32)
+    85.25.246.16/28{28,32}, # leon
+    46.4.248.192/27{27,32}, # welterde
+    94.45.224.0/19{19,28}, # ccc event network
+    151.217.0.0/16{16,28}, # ccc event network 2
+    195.191.196.0/23{23,29}, # ichdasich pi space
+    80.244.241.224/27{27,32}, # jchome service network
+    188.40.34.241/32{32,32},
+    37.1.89.192/26{26,28}, # siska
+    87.98.246.19/32{32,32}
+  ];
 }
 ```
 
