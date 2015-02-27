@@ -6,7 +6,7 @@ Available:
 |:------------- |:------  |:----- |:---------- |:----------  |:-------------------------- |
 | mortzu        | 64 MB   | 5 GB  | dn42 only  | -           | Xen in France / OpenVZ in Germany (AS64794) |
 | 0xdragon      | 1024 MB | 20 GB | dn42 + 1Gbit Public (FS) | 4 x 2.33GHz | Docker/LXC in SEA, WA (AS4242420356) |
-| RyanH         | 8192 MB | 200 GB | dn42 + 1Gbit Public (FS) | 4 x 3.40GHz | OpenVZ in RBX, FR (AS4242421011) |
+| RyanH         | 128 MB | 10 GB | dn42 + 1Gbit Public (FS) | 4 x 3.40GHz | OpenVZ in RBX, FR (AS4242421011) |
 
 Full:
 
