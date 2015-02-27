@@ -2,11 +2,11 @@
 
 Available:
 
-| Person        | RAM     | HDD   | Net        | CPU         | Description                |
-|:------------- |:------  |:----- |:---------- |:----------  |:-------------------------- |
-| mortzu        | 64 MB   | 5 GB  | dn42 only  | -           | Xen in France / OpenVZ in Germany (AS64794) |
-| 0xdragon      | 1024 MB | 20 GB | dn42 + 1Gbit Public (FS) | 4 x 2.33GHz | Docker/LXC in SEA, WA (AS4242420356) |
-| RyanH         | 256 MB | 10 GB | dn42 + 1Gbit Public (FS) | 4 x 3.40GHz | OpenVZ in RBX, FR (AS4242421011) |
+| Person        | RAM     | HDD   | Net        | CPU         | Description                | No. Available
+|:------------- |:------  |:----- |:---------- |:----------  |:-------------------------- |:--------------------------|
+| mortzu        | 64 MB   | 5 GB  | dn42 only  | -           | Xen in France / OpenVZ in Germany (AS64794) |?|
+| 0xdragon      | 1024 MB | 20 GB | dn42 + 1Gbit Public (FS) | 4 x 2.33GHz | Docker/LXC in SEA, WA (AS4242420356) |?|
+| RyanH         | 256 MB | 10 GB | dn42 + 1Gbit Public (FS) | 4 x 3.40GHz | OpenVZ in RBX, FR (AS4242421011) |12|
 
 Full:
 
