@@ -1,6 +1,6 @@
 # Virtual Machines
 
-Available Resources:
+Available:
 
 | Person        | RAM     | HDD   | Net        | CPU         | Description                |
 |:------------- |:------  |:----- |:---------- |:----------  |:-------------------------- |
