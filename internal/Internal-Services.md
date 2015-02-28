@@ -70,6 +70,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
+| http://plex.dn42:32400/web/index.html             | Plex                                                     |
 | http://10.11.10.30:8000                           | Freimusik                                                |
 | http://stream.laxu.dn42:8000                      | [xenim Streams]
 | http://freemusicradio.dn42:8000/freemusic.ogg     | A free music radio with song voting on http://freemusicradio.dn42 (still beta) |
