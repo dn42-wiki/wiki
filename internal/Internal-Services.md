@@ -137,6 +137,13 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | ntp2.nixnodes.dn42 (172.22.177.124)               |                                     |
 | ntp.martin89.dn42                                 | more than one A records/server      |
 
+## OS Mirror/Repository's
+
+| Hostname / IP                                     | What's Available:                   | Updates
+|:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
+| repo.dn42 (172.23.44.40)                          | Debian, Proxmox, Percona, Dotdeb, Virtualmin |Daily at 2AM GMT+1
+
+
 ## Crypto coins
 
 | Hostname / IP                                     | Remarks                             |
