@@ -78,7 +78,7 @@ If unsure, ask on the mailing list or IRC.
 
 To register an IPv4 network prefix, simply create an `inetnum` object.
 
-You may choose your network prefix in one of the currently open netblocks. There is also a [graphical visualisation of the assigned ranges](http://dataviz.polyno.me/dn42-netblock-visu/registry.html).
+You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets here: [Open Netblocks](http://dn42.netrik.de/frips/), please mind the allocation guideline. There is also a [graphical visualisation of the assigned ranges](http://dataviz.polyno.me/dn42-netblock-visu/registry.html).
 
 | Size | Comment                  |
 |-----:|:-------------------------|
