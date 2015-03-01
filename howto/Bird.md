@@ -119,6 +119,7 @@ function is_valid_network() {
     172.22.0.43/32{32,32}, # Whois Anycast
     172.22.0.53/32{32,32}, # DNS Anycast
     172.22.0.94/32{32,32}, # TOR Anycast
+    172.23.0.0/24{24,32}, # dn42 Anycast range
     192.175.48.0/24{24,32}, # AS112-prefix for reverse-dns
     10.0.0.0/8{12,28}, # freifunk/chaosvpn
     172.31.0.0/16{22,28}, # chaosvpn
