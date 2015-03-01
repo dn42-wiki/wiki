@@ -13,7 +13,7 @@ Because of the encryption an owner of a node don't know anything about the store
 To provide storage to the cloud you have to run a node.
 
 ## Notwendige Software und Einstellungen
-Zum Betrieb eines Tahoe-LAFS-Knotens muss [der Quellcode](https://tahoe-lafs.org/source/tahoe-lafs/releases/allmydata-tahoe-1.10.0.zip) herunter geladen werden, wenn die aktuelle Version 1.10 nicht im jeweiligen Repository der Distribution enthalten ist. Dieser muss dann entpackt und mit `python2 setup.py build && sudo python2 setup.py install` gebaut und installiert werden.
+To run a node you have to install tahoe-lafs at least in version 1.10. You can get source code from https://tahoe-lafs.org/source/tahoe-lafs/releases/allmydata-tahoe-1.10.0.zip, if the version of the package in the distribution not at least 1.10. Then you have to extract it and install with `python2 setup.py build && sudo python2 setup.py install`.
 
 Vor dem ersten Start wird ein Tahoe-LAFS-Knoten mit `bin/tahoe create-node` oder `mit bin/tahoe create-client` ein reiner Client (ohne eigenen Storage) erzeugt. Dabei wird ein `.tahoe`-Ordner im home-Verzeichnis angelegt. In dessen `tahoe.cfg`-Datei muss dann noch unter `introducer.furl` ein Link zu unserer Wolke eingefügt werden:
 
