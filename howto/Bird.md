@@ -116,6 +116,7 @@ example filter list:
 function is_valid_network() {
   return net ~ [
     172.22.0.0/15{22,28}, # dn42 main net0
+    172.22.0.0/23{23,32}, # dn42 Anycast
     172.22.0.43/32{32,32}, # Whois Anycast
     172.22.0.53/32{32,32}, # DNS Anycast
     172.22.0.94/32{32,32}, # TOR Anycast
