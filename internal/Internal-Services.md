@@ -44,7 +44,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| irc://irc.hackint.dn42/dn42 (172.22.24.1)         | DN42                                                     |
+| irc://irc.hackint.dn42/dn42 (172.22.2.235)        | DN42                                                     |
 | irc://irc.hackint.hack/dn42 (172.31.0.30)         | ChaosVPN                                                 |
 
 ## Search engines
