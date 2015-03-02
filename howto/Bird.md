@@ -110,7 +110,7 @@ $ ruby utils/bgp-filter.rb < data/filter.txt > /etc/bird/filter4.conf
 
 or
 
-curl -sk https://git.dn42/git/dn42/registry/plain/data/filter.txt | \
+$ curl -sk https://git.dn42/git/dn42/registry/plain/data/filter.txt | \
   awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n" } \
        /^[0-9]/ && $2 ~ /permit/ {printf " %s{%s,%s},\n", $3, $4, $5};' | \
   sed "$ s/,$/\n ];\n}/" > /etc/bird/filter4.conf
@@ -239,7 +239,7 @@ $ ruby utils/bgp-filter.rb < data/filter6.txt > /etc/bird/filter6.conf
 
 or
 
-curl -sk https://git.dn42/git/dn42/registry/plain/data/filter6.txt | \
+$ curl -sk https://git.dn42/git/dn42/registry/plain/data/filter6.txt | \
   awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n" } \
        /^[0-9]/ && $2 ~ /permit/ {printf " %s{%s,%s},\n", $3, $4, $5};' | \
   sed "$ s/,$/\n ];\n}/" > /etc/bird/filter6.conf
