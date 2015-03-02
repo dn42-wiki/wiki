@@ -6,7 +6,7 @@ A number of services are provided on the network: see [internal](http://internal
 
 Still have questions? We have a [[FAQ]].
 
-Join us on Twitter for news and chances to win awesome prices... [@dn42_net](https://twitter.com/dn42_net)
+Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](https://twitter.com/dn42_net)
 
 ## Why dn42?
 
