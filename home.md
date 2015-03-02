@@ -6,6 +6,8 @@ A number of services are provided on the network: see [internal](http://internal
 
 Still have questions? We have a [[FAQ]].
 
+Join us on Twitter for news and chances to win awesome prices... [@dn42_net](https://twitter.com/dn42_net)
+
 ## Why dn42?
 
 dn42 can be used to learn networking and to connect private networks, such as hackerspaces or community networks. But above all, experimenting with routing in dn42 is fun!
