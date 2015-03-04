@@ -1,4 +1,4 @@
-{{{
+`
 client
 dev vpn-anon
 dev-type tun
@@ -52,4 +52,4 @@ cDZ051jFNh2JwsGUox0SaY1/vkoyr7sxADTPIt5PTPgnbwNk+j6al2gYRG619hgh
 gH+kMvJH
 -----END CERTIFICATE-----
 </ca>
-}}}
+`
