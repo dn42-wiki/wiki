@@ -46,6 +46,7 @@ There are a few different scripts for generating zone files. They have been writ
 | toBee       | DE | 4242420022 | ns1.mhm.dn42 (172.23.67.1) | advertised in BGP ||
 | prauscher   | DE | 64720 | prauscher.root.dn42 (172.22.120.1) | advertised in BGP |
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
+| psclrnnrt   | DE | 4242420205 | nsc.root6.dn42 (172.23.65.5) |
 
 # IPv6 DNS
 
