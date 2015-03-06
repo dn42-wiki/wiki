@@ -19,4 +19,14 @@ See [[IRC]] too.
 
 ## Twitter
 
-Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](https://twitter.com/dn42_net)
+Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](https://twitter.com/dn42_net).
+
+## Web
+
+There are currently multiple decentralized mirrors and domains for the DN42 wiki available:
+
+ * dn42.net maintained by mortzu
+ * dn42.org maintained by stv0g
+ * dn42.us maintained by xuu
+ *
+
