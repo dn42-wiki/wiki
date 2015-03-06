@@ -42,7 +42,6 @@ There are a few different scripts for generating zone files. They have been writ
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
 | Martin89    | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More description on http://martin89.dn42 |
 | Fritz       | ?? | 64712 | ?? (??) | Advertised over bgp |
-| PyroPeter   | EU | 76115 | nscache.pyropeter.dn42 (172.23.196.3) |
 | toBee       | DE | 4242420022 | ns1.mhm.dn42 (172.23.67.1) | advertised in BGP ||
 | prauscher   | DE | 64720 | prauscher.root.dn42 (172.22.120.1) | advertised in BGP |
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
