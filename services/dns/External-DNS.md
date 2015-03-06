@@ -23,6 +23,7 @@ The mkdns script currently supports the following setups:
 * bind (static-stub)
 * bind-forward (forward zone)
 * dnsmasq
+* unbound (forward-zone)
 
 ## Configuration
 
