@@ -16,3 +16,7 @@ If you would like to contact an individual network operator, you will find conta
 Channel #dn42 in [hackint](http://www.hackint.eu/)
 
 See [[IRC]] too.
+
+## Twitter
+
+Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](https://twitter.com/dn42_net)
