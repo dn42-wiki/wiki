@@ -115,7 +115,7 @@ Some people runs [Tahoe LAFS](services/Tahoe-LAFS) nodes to provide a secure dec
 |:---------------------|:-----|:------------|:---------------|
 | tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |
 | tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |
-| tracker.mhm.dn42     |   80 | TCP & UDP   | Opentracker    |
+| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    |
 
 ## Proxies
 
@@ -160,6 +160,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | cs.nixnodes.dn42 (172.22.177.179)                 | Counter-Strike 1.6     | v48 Non-Steam [Deathmatch] |
 | archie.mhm.dn42 (172.22.67.6)                     | Counter-Strike 1.5     | noWON :)                   |
 | [Minecraft](services/Minecraft)                   | Minecraft              |                            |
+| [Battlenet Server](services/bnet)                 | Battlenet Server       |                            |
 
 ## Misc 
 
