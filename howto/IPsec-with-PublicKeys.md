@@ -31,7 +31,7 @@ Keep in mind that certificates are just public keys wrapped with some extra meta
 ### Conversion tool
 Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them. Here is a script for that purpose:
 
-https://git.sour.is/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl
+https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl
 
 ### How-To examples
 | Implementation           | Key format      |
