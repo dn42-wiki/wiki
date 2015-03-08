@@ -125,7 +125,6 @@ Some people runs [Tahoe LAFS](services/Tahoe-LAFS) nodes to provide a secure dec
 
 | Hostname / IP                                     | Bandwidth   | Nickname     |
 | ------------------------------------------------- | ----------- | ------------ |
-| socks5://lian.0l.dn42:9050  (Offline?)            | 600 kb/s    | [nulll](https://atlas.torproject.org/#details/84F41A116AD7F1E038781413E0B4ADE4494BA38A)
 | socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C)
 
 ### Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen
