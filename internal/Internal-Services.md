@@ -155,7 +155,8 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | cs.nixnodes.dn42 (172.22.177.179)                 | Counter-Strike 1.6     | v48 Non-Steam [Deathmatch] |
-| archie.mhm.dn42 (172.22.67.6)                 | Counter-Strike 1.5     | noWON :) |
+| archie.mhm.dn42 (172.22.67.6)                     | Counter-Strike 1.5     | noWON :)                   |
+| [Minecraft](services/Minecraft)                   | Minecraft              |                            |
 
 ## Misc 
 
