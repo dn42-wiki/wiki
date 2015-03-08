@@ -42,10 +42,10 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ## IRC
 
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| irc://irc.hackint.dn42/dn42 (172.22.2.235)        | DN42                                                     |
-| irc://irc.hackint.hack/dn42 (172.31.0.30)         | ChaosVPN                                                 |
+| Hostname / IP                               | Remarks                 |
+|:------------------------------------------- |:----------------------- |
+| irc://irc.hackint.dn42/dn42 (172.22.2.235)  | DN42                    |
+| irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                |
 
 ## Search engines
 
@@ -80,6 +80,9 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://stream.media.dn42/                        | icecast-relay, contact toBee for more streams             |
 
 ## File sharing
+
+### Tahoe LAFS
+Some people runs [Tahoe LAFS](services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage cloud in dn42.
 
 **FIXME**: Please add info about (approximate) bandwidth of the servers.
 
