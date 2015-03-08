@@ -84,9 +84,9 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage cloud in dn42.
 
-**FIXME**: Please add info about (approximate) bandwidth of the servers.
-
 ### FTP / HTTP
+
+**FIXME**: Please add info about (approximate) bandwidth of the servers.
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |
