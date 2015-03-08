@@ -39,7 +39,7 @@ _Note: You may already have completed this step, since it's required to enable S
 
 2. Convert your peer's public key to the hexadecimal DER format using the [pubkey-converter][pubkey-converter] script, if necessary.
 
-[pubkey-converter]: https://git.sour.is/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl "Public key conversion script"
+[pubkey-converter]: https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl "Public key conversion script"
 
 ## Configuration
 ### Configure the phase 1 IKE parameters
