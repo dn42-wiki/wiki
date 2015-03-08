@@ -98,12 +98,12 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/     | 12TB  | 1Gb/s       | incoming writable                              |
 | http://172.23.136.33                                        |       | 100Mbit/s   | some mediafiles/software                       |
 | http://files.martin89.dn42/                                 |       | max 2Mbit/s | download only                                  |
+| http://172.22.42.2              | ~6.5TB | ~400kbit   | WebDAV enabled, up 24/7z          |  |
 
 ### Down?
 
 | Hostname / IP                                               | Space | Speed       | Remarks                           | Since      |
 |:----------------------------------------------------------- |:----- |:----------- |:--------------------------------- |:---------- |
-| http://turing.il.maxx.dn42, http://172.22.42.2              | ~6.5TB | ~400kbit   | WebDAV enabled, up 24/7z          | 01.01.2015 |
 | ftp://descent.derf.dn42 (172.23.225.35)                     |  3TB   | 60kbit/s   | download only                     | 01.01.2015 |
 
 ### Torrent Tracker
