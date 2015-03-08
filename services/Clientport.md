@@ -1,6 +1,5 @@
 ```client
-dev vpn-anon
-dev-type tun
+dev tun
 remote client-dn42.open.tf 61003
 nobind
 persist-key
