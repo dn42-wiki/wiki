@@ -67,3 +67,7 @@ They all use the same certificate, that should be regarded invalid by whatever s
 
 - In archlinux you can install the package [ca-certificates-dn42](https://aur.archlinux.org/packages/ca-certificates-dn42) from AUR
 - cacert have a comprehensive FAQ on how to import your own root certificates in [browsers](http://wiki.cacert.org/FAQ/BrowserClients) and [other software](http://wiki.cacert.org/FAQ/ImportRootCert)
+
+## PKI Store
+
+All issued keys are posted in a git repository at: https://dn42.us/git/dn42/pki/tree/
