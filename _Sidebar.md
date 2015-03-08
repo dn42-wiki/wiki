@@ -12,6 +12,7 @@
   * [[GRE on FreeBSD|gre-on-freebsd]]
 
 * [[Services|/pages/services/]]
+  * [[Clientport]]
   * [[IRC]]
   * [[Whois registry|Whois]]
   * [[DNS]]
