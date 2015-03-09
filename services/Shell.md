@@ -1,3 +1,7 @@
 # Shell
 
-* mortzu offers free GNU/Linux shell accounts on machines connected to dn42 network for dn42 members
+Providers:
+
+| Person        | Hostname          | Net        | Description |
+|:------------- |:----------------- |:---------- |:----------- |
+| mortzu        | shell.mortzu.dn42 | dn42 only  | -           |
