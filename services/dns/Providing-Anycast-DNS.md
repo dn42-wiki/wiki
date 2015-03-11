@@ -42,7 +42,6 @@ There are a few different scripts for generating zone files. They have been writ
 | MWD         |AU | 4242420002 | nsr1.mwd.dn42 (172.23.227.20) ||
 | Martin89    | FR, DE | 64713 | dns-anycast-r.martin89.dn42 (172.22.113.10) | More description on http://martin89.dn42 |
 | Fritz       | ?? | 64712 | ?? (??) | Advertised over bgp |
-| toBee       | DE | 4242420022 | ns1.mhm.dn42 (172.23.67.1) | advertised in BGP ||
 | prauscher   | DE | 64720 | prauscher.root.dn42 (172.22.120.1) | advertised in BGP |
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
 | psclrnnrt   | DE | 4242420205 | nsc.root6.dn42 (172.23.65.5) |
@@ -61,5 +60,4 @@ There are a few different scripts for generating zone files. They have been writ
 | xuu         |UT,US| 64737      | xuu.root.dn42 (fdea:a15a:77b9:d42::53) ||   
 | xuu         |ON,CA| 64737 | souris.root.dn42 (fdea:a15a:77b9:53::1) | |
 | Nurtic-Vibe |EU |4242420123 | ns1.grmml.dn42 (fd42:23:149:cccc::53)  ||
-| toBee |DE |4242420022 | ns1.mhm.dn42 (fd70:96c9:ef25::1)  ||
 | psclrnnrt | DE | 4242420205 | nsc.root6.dn42 (fd97:205:205:1000::53) ||
