@@ -68,6 +68,7 @@ The [[Getting started]] page helps you to get your first node inside the network
 * [breizh-entropy](http://breizh-entropy.dn42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
+* [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
 
 ## About this wiki
 
