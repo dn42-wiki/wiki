@@ -12,7 +12,7 @@ dn42 can be used to learn networking and to connect private networks, such as ha
 
 ### Experiment with routing technology
 
-Participating in dn42 is primarily useful for learning routing technologies such as BGP, using a reasonably large network (~100 AS, ~300 prefixes).
+Participating in dn42 is primarily useful for learning routing technologies such as BGP, using a reasonably large network (~200 AS, ~300 prefixes).
 
 Since dn42 is very similar to the Internet, it can be used as a hands-on testing ground for new ideas, or simply to learn real networking stuff that you probably can't do on the Internet (BGP multihoming, transit).  The biggest advantage when compared to the Internet: if you break something in the network, you won't have any big network operator yelling angrily at you.
 
