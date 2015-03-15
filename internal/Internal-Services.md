@@ -165,6 +165,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
+| http://pads.dn42                                  | Etherpad |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://zerobin.e-utp.dn42                        | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
