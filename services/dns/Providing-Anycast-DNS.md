@@ -46,6 +46,7 @@ There are a few different scripts for generating zone files. They have been writ
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
 | psclrnnrt   | DE | 4242420205 | nsc421.root6.dn42 (172.23.65.5) |
 | psclrnnrt   | CA | 4242420205 | nsc423.root6.dn42 (172.23.65.100) |
+| tobee | DE,US,JP | 4242420022 | ns1.mhm.dn42 (172.23.67.1) ||
 
 # IPv6 DNS
 
@@ -62,3 +63,4 @@ There are a few different scripts for generating zone files. They have been writ
 | xuu         |ON,CA| 64737 | souris.root.dn42 (fdea:a15a:77b9:53::1) | |
 | Nurtic-Vibe |EU |4242420123 | ns1.grmml.dn42 (fd42:23:149:cccc::53)  ||
 | hax404 | DE | 76114 | chero.hax404.dn42 (fd58:eb75:347d:101::1) ||
+| tobee | DE,US,JP | 4242420022 | ns1.mhm.dn42 (fd70:96c9:ef25::1) ||
