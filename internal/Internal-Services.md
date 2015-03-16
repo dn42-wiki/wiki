@@ -171,6 +171,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://zerobin.e-utp.dn42                        | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
+| http://nixnodes.net/ip                            | Simple 'myip' service |
 | https://git.dn42, https://dn42.us/git             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)                        |
 | http://tor.mirror.martin89.dn42                   | Tor Project Homepage mirror                                                    |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
