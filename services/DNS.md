@@ -38,6 +38,6 @@ The health check results are emailed out each week to the mailing list.
 
 Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [[External DNS]].
 
-## Providing DNS service
+## Providing DNS services
 
 See [[Providing Anycast DNS]].
