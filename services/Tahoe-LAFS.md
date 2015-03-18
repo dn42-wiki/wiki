@@ -20,7 +20,7 @@ To run a node you have to install tahoe-lafs at least in version 1.10. You can g
 Before the first start you have to create a node with `bin/tahoe create-node` or a client (doesn't provide storage) with `bin/tahoe create-client`. This will create the folder .tahoe in your home dir. In the file .tahoe/tahoe.cfg you have to enter on `introducer.furl` the link to our introducer node:
 
 ```
-introducer.furl = pb://hck5ne642qn3oqd3jbeugwdu2l3pdqy6@172.22.192.65:44411/introducer
+introducer.furl = pb://roxhgb5iyncd6ek3l2dxjclv7suybnh5@introducer.tahoe-lafs.dn42:44411/introducer
 ```
 
 With `bin/tahoe start` you start your local node.
