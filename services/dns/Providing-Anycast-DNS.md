@@ -47,6 +47,7 @@ There are a few different scripts for generating zone files. They have been writ
 | psclrnnrt   | DE | 4242420205 | nsc421.root6.dn42 (172.23.65.5) |
 | psclrnnrt   | CA | 4242420205 | nsc423.root6.dn42 (172.23.65.100) |
 | tobee | DE,US,JP | 4242420022 | ns1.mhm.dn42 (172.23.67.1) ||
+| tombii | SG | 4242420321 | sg-sin1.tombii.dn42 (172.23.102.65) ||
 
 # IPv6 DNS
 
