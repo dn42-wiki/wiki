@@ -27,6 +27,7 @@ Use the anycast DNS servers (172.22.0.53) inside your tunnel.
 | Hostname / IP                                     | Password |
 |:------------------------------------------------- |:-------- |
 | t.polyno.me (172.23.185.193)                      | dn42     |
+| t.hax404.de (172.23.136.98)                       | dn42     |
 
 ### DNS Tools
 
