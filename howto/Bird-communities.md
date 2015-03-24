@@ -29,6 +29,10 @@ bw = min(up,down) for asymmetric connections
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
 (64511, 34) :: encrypted with safe vpn solution with PFS 
+
+Propagation:
+- - for latency pick max(received_route.latency, link_latency)
+- - for encryption and bandwidth pick min between received BGP community and peer link
 ```
 For example, if your peer is 12ms away and your link speed is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
