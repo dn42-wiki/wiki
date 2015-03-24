@@ -34,7 +34,6 @@ For example, if your peer is 12ms away and your link speed is 250Mbit/s and you 
 
 ## Example configurations 
 ```
-### /etc/bird/peers4/tombii.conf
 # /etc/bird/peers4/tombii.conf
 protocol bgp tombii from dnpeers {
   neighbor 172.23.102.x as 4242420321;
@@ -55,7 +54,6 @@ protocol bgp tombii from dnpeers {
 };
 ```
 ```
-### community_filters.conf
 #/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
         bgp_community.add((64511, link_latency));
