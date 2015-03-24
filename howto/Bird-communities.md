@@ -34,7 +34,7 @@ Propagation:
 - - for latency pick max(received_route.latency, link_latency)
 - - for encryption and bandwidth pick min between received BGP community and peer link
 ```
-For example, if your peer is 12ms away and your link speed is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
+For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
 ## Example configurations 
 ```
