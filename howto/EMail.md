@@ -41,3 +41,12 @@ This should to the trick for sending mails via your DN42-IP
 ### Receiving emails
 
 The Domain mails should be received for has to be added to `mydestination =` in main.cf
+
+## New SMTP RFC SMTPUTF8
+### EAI
+Email Address Internationalization (EAI) as defined in [RFC 6531](http://tools.ietf.org/html/rfc6531) (SMTPUTF8 extension), [RFC 6532](http://tools.ietf.org/html/rfc6532) (Internationalized email headers) and [RFC 6533](http://tools.ietf.org/html/rfc6533) (Internationalized delivery status notifications).
+### Postfix
+Introduced with Postfix version 3.0, this fully supports UTF-8 email addresses and UTF-8 message header values.
+more at the [SMTPUTF8_README](http://www.postfix.org/SMTPUTF8_README.html).
+### Exim
+Watch Exims EAI Tracker [Bug 1177](http://bugs.exim.org/show_bug.cgi?id=1177)
