@@ -102,7 +102,14 @@ bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
 return true;
 } 
 ```
+Please remember to include /etc/bird/community_filters.conf in your bird.conf/birdc6.conf
+```
+# filter helpers
+#################
 
+include "/etc/bird/filter4.conf";
+**include "/etc/bird/community_filters.conf";**
+```
 Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a618e29093d
 
 All props to him for the bird code based on the suggestion from welterde. 
