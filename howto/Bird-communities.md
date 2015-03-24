@@ -103,5 +103,6 @@ return true;
 } 
 ```
 
-Original implementation by welterde: https://gist.github.com/welterde/524cc9b37a618e29093d
-All props to him for the implementation and bird code. My modification is only for the bgp_local_pref.
+Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a618e29093d
+
+All props to him for the bird code based on the suggestion from welterde. My modification is only for the calculation of bgp_local_pref to adjust for prefering lower latency. Feel free to play around with the formula to find something that suits your needs.
