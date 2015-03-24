@@ -30,10 +30,30 @@ bw = min(up,down) for asymmetric connections
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
 (64511, 34) :: encrypted with safe vpn solution with PFS 
 ```
-For example, if your peer is 12ms away and your link speed is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 4, 33).
-
-### community_filters.conf
+For example, if your peer is 12ms away and your link speed is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 ```
+### /etc/bird/peers4/tombii.conf
+# /etc/bird/peers4/tombii.conf
+protocol bgp tombii from dnpeers {
+  neighbor 172.23.102.x as 4242420321;
+  import filter {
+    if is_valid_network() && !is_self_net() then {
+      update_flags(3,24,33);
+      accept;
+    }
+    reject;
+  };
+  export filter {
+    if is_valid_network() then {
+      update_flags(3,24,33);
+      accept;
+    }
+    reject;
+  };
+};
+```
+```
+### community_filters.conf
 #/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
         bgp_community.add((64511, link_latency));
@@ -68,4 +88,17 @@ function update_crypto(int link_crypto) {
         else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
         else return 34;
 }
+	
+function update_flags(int link_latency; int link_bandwidth; int link_crypto)
+int latency;
+int bandwidth;
+int crypto;
+{
+latency = update_latency(link_latency);
+bandwidth = update_bandwidth(link_bandwidth) - 20;
+crypto = update_crypto(link_crypto) - 30;
+if bandwidth > 4 then bandwidth = 4;
+bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
+return true;
+} 
 ```
