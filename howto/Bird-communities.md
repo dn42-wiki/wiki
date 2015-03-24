@@ -114,7 +114,7 @@ Please remember to include /etc/bird/community_filters.conf in your bird.conf/bi
 #################
 
 include "/etc/bird/filter4.conf";
-**include "/etc/bird/community_filters.conf";** # This file depends on the local4/6.conf file so please move the local configuration block above the filter helpers block in the bird.conf/bird6.conf file
+include "/etc/bird/community_filters.conf"; # This file depends on the local4/6.conf file so please move the local configuration block above the filter helpers block in the bird.conf/bird6.conf file
 ```
 
 
