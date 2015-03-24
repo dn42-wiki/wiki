@@ -24,17 +24,17 @@ protocol static {
   route <SUBNET> reject;
 };
 
-# filter helpers
-#################
-
-include "/etc/bird/filter4.conf";
-
 # local configuration
 ######################
 
 # keeping router specific in a seperate file, 
 # so this configuration can be reused on multiple routers in your network
 include "/etc/bird/local4.conf";
+
+# filter helpers
+#################
+
+include "/etc/bird/filter4.conf";
 
 # Kernel routing tables
 ########################
@@ -166,15 +166,15 @@ protocol device {
   scan time 10;
 }
 
-# filter helpers
-#################
-
-include "/etc/bird/filter6.conf";
-
 # local configuration
 ######################
 
 include "bird/local6.conf";
+
+# filter helpers
+#################
+
+include "/etc/bird/filter6.conf";
 
 # Kernel routing tables
 ########################
