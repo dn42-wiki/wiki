@@ -10,7 +10,7 @@ Below, you will see an example config for peers4 as well as the and the suggeste
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
-# BGP community criteria
+## BGP community criteria
 ```
 (64511, 1) :: latency \in [0, 2.7ms]
 (64511, 2) :: latency \in [2.7ms, 7.3ms]
@@ -31,6 +31,8 @@ bw = min(up,down) for asymmetric connections
 (64511, 34) :: encrypted with safe vpn solution with PFS 
 ```
 For example, if your peer is 12ms away and your link speed is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
+
+## Example configurations 
 ```
 ### /etc/bird/peers4/tombii.conf
 # /etc/bird/peers4/tombii.conf
