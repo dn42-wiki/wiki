@@ -317,6 +317,8 @@ function is_valid_network() {
 }
 ```
 
+# Bird communities
+Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. More information can be found [here](/howto/Bird-communities). 
 
 # Useful bird commmands
 
