@@ -6,7 +6,7 @@ The community is applied to the route when it is imported and exported, therefor
 
 The calculations for finding the best route can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
-Below, you will see an example config for peers4 as well as the and the suggested improvement by tombii (prefers low latency) to original filter implementation by welterde (prefers high BW over low latency).
+Below, you will see an example config for peers4 as well as the and the suggested improvement by tombii (prefers low latency) to original filter implementation by Jplitza (prefers high BW over low latency).
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
