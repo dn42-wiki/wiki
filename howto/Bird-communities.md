@@ -102,3 +102,6 @@ bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
 return true;
 } 
 ```
+
+Original implementation by welterde: https://gist.github.com/welterde/524cc9b37a618e29093d
+All props to him for the implementation and bird code. My modification is only for the bgp_local_pref.
