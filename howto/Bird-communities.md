@@ -118,4 +118,6 @@ Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a6
 
 All props to him for the bird code based on the suggestion from welterde. 
 
+Original email from welterde: http://lists.spaceboyz.net/pipermail/dn42/2015-February/000982.html
+
 My modification is only for the calculation of bgp_local_pref to adjust for prefering lower latency. Feel free to play around with the formula to find something that suits your needs.
