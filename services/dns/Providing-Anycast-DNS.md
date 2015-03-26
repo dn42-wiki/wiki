@@ -46,7 +46,7 @@ There are a few different scripts for generating zone files. They have been writ
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
 | psclrnnrt   | DE | 4242420205 | nsc421.root6.dn42 (172.23.65.5) |
 | psclrnnrt   | CA | 4242420205 | nsc423.root6.dn42 (172.23.65.100) |
-| tombii | FR-PAR | 4242420321 | anycast.dns.tombii.dn42 (172.23.0.33) | pulls root zone every hour from nixnodes mtn|
+| tombii | FR-PAR, SG-SIN | 4242420321 | anycast.dns.tombii.dn42 (172.23.0.33) | pulls root zone every hour from nixnodes mtn|
 
 # IPv6 DNS
 
