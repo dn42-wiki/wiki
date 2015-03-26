@@ -3,7 +3,7 @@
 internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains.
 If you would like to have a certificate signed by this CA send a CSR to xuu@sour.is
 
-The CA certificate:
+The CA certificate ([link](https://git.dn42/git/dn42/pki/plain/dn42-ca.crt)):
 
 ```
 -----BEGIN CERTIFICATE-----
