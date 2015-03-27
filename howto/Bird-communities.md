@@ -104,7 +104,7 @@ latency = update_latency(link_latency);
 bandwidth = update_bandwidth(link_bandwidth) - 20;
 crypto = update_crypto(link_crypto) - 30;
 if bandwidth > 4 then bandwidth = 4;
-bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
+bgp_local_pref = 10000+100*bandwidth + 50*(10-latency)-200*bgp_path.len+100*crypto;
 return true;
 } 
 ```
