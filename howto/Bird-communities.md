@@ -6,7 +6,7 @@ The community is applied to the route when it is imported and exported, therefor
 
 The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
-Below, you will see an example config for peers4 based on the original filter implementation by Jplitza without any bgp_local_pref calculation. An example with bgp_local_pref calculation can also be found below.
+Below, you will see an example config for peers4 based on the original filter implementation by Jplitza.
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
