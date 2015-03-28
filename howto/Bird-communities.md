@@ -125,7 +125,7 @@ If you are running a bigger network and also want to prioritize your traffic bas
 bgp_local_pref = 10000+100*bandwidth + 50*(10-latency)-200*bgp_path.len+100*crypto; (as suggested by tombii)
 bgp_local_pref = 1000*bandwidth - 10*latency; if crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
 ```
-These go into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to stick with the above, simpler implementation with assigning community flags to your peerings to have a smarter routing in dn42 in total.
+This calculation goes into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to stick with the above, simpler implementation with assigning community flags to your peerings to have a smarter routing in dn42 in total. Remember, probably none of these alternatives are a good fit for your network, you will need to apply one and see how it affects your traffic and then going back and tweaking the formula and checking again.
 
 Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a618e29093d
 
