@@ -123,7 +123,6 @@ include "/etc/bird/community_filters.conf";
 If you are running a bigger network and also want to prioritize your traffic based on the communities, then you can look at the following below:
 ```
 bgp_local_pref = 10000+100*bandwidth + 50*(10-latency)-200*bgp_path.len+100*crypto; (as suggested by tombii)
-
 bgp_local_pref = 1000*bandwidth - 10*latency; if crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
 ```
 These go into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to stick with the above, simpler implementation with assigning community flags to your peerings to have a smarter routing in dn42 in total.
