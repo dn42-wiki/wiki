@@ -102,7 +102,7 @@ group gollum-watchdog {
   ## ...
 
   process watch-gollum {
-     run /etc/exabgp/gollum-watchdog.sh;
+     run <path>/gollum-watchdog.sh;
   }
 }
 
@@ -113,11 +113,19 @@ group gollum-watchdog {
 ```
 #!/bin/bash
 
+CURL=curl
+
+## url's to check (all listed must be alive to send announce)
 URL=( "http://172.23.0.80" "https://172.23.0.80" )
 
-VALIDATE_KEYWORD='gollum'
+## the anycast route (/28 due to prefix size limits)
 ROUTE='172.23.0.80/28'
-NEXTHOP='172.22.177.72'
+
+## the next-hop we'll be advertising to neighbor(s)
+NEXTHOP='<source-address>' 
+
+## regex match this keyword against HTTP response from curl
+VALIDATE_KEYWORD='gollum'
 
 INTERVAL=60
 
@@ -127,9 +135,16 @@ RUN_STATE=0
 
 check_urls() {
 	for url in "${URL[@]}"; do
-		curl --insecure -L -o - ${url} | egrep -q "${VALIDATE_KEYWORD}" || {
+
+                ## workaround curl errno 23 when piping
+                http_response=`${CURL} --insecure -L -o - "${url}"`
+
+		echo "${http_response}" | egrep -q "${VALIDATE_KEYWORD}" || {
 			return 1
 		}
+
+                ## add more checks
+
 	done
 	return 0
 }
@@ -156,3 +171,57 @@ exit 0
 
 ```
 
+  Normally SIGUSR1 to the exabgp process triggers a configuration update, but at occasion the process might need to be restarted - since the gracefull shutdown might not always kick in , this might present quite a challenge. Sending SIGKILL to the child(ren) and immediately after, the parent, does the job (quick-and-dirty). 
+
+#####/etc/exabgp/run.sh
+
+```
+
+#!/bin/bash
+
+PID_FILE=/var/run/exaBGP/exabgp_PID
+
+######################################
+
+EXABGP=<path>/sbin/exabgp
+EXA_LOG=/var/log/exabgp.log
+CONF=/etc/exabgp/exabgp.conf
+
+
+start() {
+	[ -f ${PID_FILE} ] && {
+		echo "WARNING: `cat ${PID_FILE}`: exabgp already running"; return 1
+	}
+	${EXABGP} ${CONF} &> ${EXA_LOG} &
+	cpid=$!
+	[ ${cpid} -eq 0 ] && {
+		echo "ERROR: could not start process"; return 1
+		
+	}
+        echo $! > ${PID_FILE}
+}
+
+stop(){
+	[ -f ${PID_FILE} ] || return 1 
+	pkill -9 -P $(cat ${PID_FILE})
+        kill -9  $(cat ${PID_FILE})
+	rm -f ${PID_FILE}
+}
+
+case ${1} in
+    start )
+	start
+    ;;
+    stop )
+	stop
+   ;;
+    restart )
+	stop
+	sleep 1
+	start
+   ;;
+esac
+
+exit 0
+
+```
