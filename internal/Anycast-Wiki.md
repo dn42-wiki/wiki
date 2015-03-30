@@ -8,7 +8,7 @@ The local webserver is monitored with a simple shell script (below) working in c
 
     `git clone ssh://git@xuu.me/dn42/wiki`
 
- * Request a [certificate](/services/Certificate-Authority)
+ * Send a [CSR](/services/Certificate-Authority) to `xuu@sour.is` and wait for a reply including internal.dn42/wiki.dn42 certificates
 
 
 #####gollum-watchdog.sh:
