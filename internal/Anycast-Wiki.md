@@ -27,7 +27,7 @@ gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.
 gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.1  --port 4567 --no-edit
     ```
 
-###Setup nginx proxy:
+### Setup nginx proxy:
 
 ##### /etc/nginx/sites-enabled/wiki.dn42:
 
@@ -79,9 +79,9 @@ server {
 
 ```
 
-###Setup [ExaBGP](https://github.com/Exa-Networks/exabgp):
+### Setup [ExaBGP](https://github.com/Exa-Networks/exabgp):
 
-#####exabgp.conf:
+##### exabgp.conf:
 
 ```
 
@@ -110,7 +110,7 @@ group gollum-watchdog {
 
 ```
 
-#####gollum-watchdog.sh:
+##### gollum-watchdog.sh:
 
 ```
 #!/bin/bash
