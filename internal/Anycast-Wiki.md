@@ -8,7 +8,7 @@ The local webserver is monitored with a simple shell script (below) working in c
  * Install wiki anycast address `172.23.0.80/32` on the system
  * Setup tunnel(s) to the dn42 network (routing daemon not required)
 
-### Set up gollum:
+### Setup gollum:
 
  * Install [gollum](https://github.com/gollum/gollum)
  * Clone the dn42 wiki repo:
@@ -27,7 +27,7 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
 
-### Setup nginx proxy:
+### Nginx proxy:
 
 ##### /etc/nginx/sites-enabled/wiki.dn42:
 
@@ -79,7 +79,7 @@ server {
 
 ```
 
-### Setup [ExaBGP](https://github.com/Exa-Networks/exabgp):
+### [ExaBGP](https://github.com/Exa-Networks/exabgp):
 
 ##### exabgp.conf:
 
@@ -233,3 +233,8 @@ exit 0
 
 ```
 
+### Announcing:
+
+The prefix AS-PATH should appear the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
+
+    
