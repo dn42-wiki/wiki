@@ -25,5 +25,4 @@ Hosted by:
 * Nurtic-Vibe
 
 
-
 If you consider adding your mirror to the list, contact Nurtic-Vibe via IRC.

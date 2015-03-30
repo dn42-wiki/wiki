@@ -24,17 +24,17 @@ protocol static {
   route <SUBNET> reject;
 };
 
-# filter helpers
-#################
-
-include "/etc/bird/filter4.conf";
-
 # local configuration
 ######################
 
 # keeping router specific in a seperate file, 
 # so this configuration can be reused on multiple routers in your network
 include "/etc/bird/local4.conf";
+
+# filter helpers
+#################
+
+include "/etc/bird/filter4.conf";
 
 # Kernel routing tables
 ########################
@@ -166,15 +166,15 @@ protocol device {
   scan time 10;
 }
 
-# filter helpers
-#################
-
-include "/etc/bird/filter6.conf";
-
 # local configuration
 ######################
 
 include "bird/local6.conf";
+
+# filter helpers
+#################
+
+include "/etc/bird/filter6.conf";
 
 # Kernel routing tables
 ########################
@@ -318,7 +318,12 @@ function is_valid_network() {
 ```
 
 # Bird communities
+<<<<<<< HEAD
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. More information can be found [here](/howto/Bird-communities). 
+=======
+Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
+More information can be found [here](/howto/Bird-communities). 
+>>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 
 # Useful bird commmands
 

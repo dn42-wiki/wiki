@@ -4,9 +4,15 @@ Communities can be used to prioritize traffic based on different flags, in DN42 
 
 The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration, in /etc/bird/peers4 if you followed the [Bird](/howto/Bird) guide. 
 
+<<<<<<< HEAD
 The calculations for finding the best route can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
 Below, you will see an example config for peers4 as well as the and the suggested improvement by tombii (prefers low latency) to original filter implementation by welterde (prefers high BW over low latency).
+=======
+The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
+
+Below, you will see an example config for peers4 based on the original filter implementation by Jplitza.
+>>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
@@ -104,7 +110,10 @@ latency = update_latency(link_latency);
 bandwidth = update_bandwidth(link_bandwidth) - 20;
 crypto = update_crypto(link_crypto) - 30;
 if bandwidth > 4 then bandwidth = 4;
+<<<<<<< HEAD
 bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
+=======
+>>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 return true;
 } 
 ```
@@ -114,12 +123,27 @@ Please remember to include /etc/bird/community_filters.conf in your bird.conf/bi
 #################
 
 include "/etc/bird/filter4.conf";
+<<<<<<< HEAD
 **include "/etc/bird/community_filters.conf";**
+=======
+include "/etc/bird/community_filters.conf"; 
+>>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 ```
 
 
 ***
 
+<<<<<<< HEAD
+=======
+### Bird bgp_local_pref calculation
+If you are running a bigger network and also want to prioritize your traffic based on the communities, then you can look at the following below:
+```
+bgp_local_pref = 10000+100*bandwidth + 50*(10-latency)-200*bgp_path.len+100*crypto; (as suggested by tombii)
+bgp_local_pref = 1000*bandwidth - 10*latency; if crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
+```
+This calculation goes into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to skip the bgp_local_pref calculation part until you fully unterstand BGP routing and how this will affect not only you but the whole network. Assigning community flags to your peerings will hoever have an impact on dn42 in total. Remember, probably none of these alternatives are a good fit for your network, you will need to apply one and see how it affects your traffic and then going back and tweaking the formula and checking again.
+
+>>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a618e29093d
 
 All props to him for the bird code based on the suggestion from welterde. 
