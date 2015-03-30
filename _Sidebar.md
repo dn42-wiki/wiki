@@ -4,14 +4,14 @@
   * [[Getting started]]
   * [[FAQ]]
 
-* [[How-to|/pages/howto]]
+* [[How-to|/pages/howto/]]
   * [[Openvpn|openvpn]]
   * [[Bird|Bird]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
 
-* [[Services|/pages/services]]
+* [[Services|/pages/services/]]
   * [[Clientport]]
   * [[IRC]]
   * [[Whois registry|Whois]]
@@ -21,7 +21,7 @@
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
 
-* [[Internal|/pages/internal]]
+* [[Internal|/pages/internal/]]
   * [[Distributed Wiki|Anycast-Wiki]]
   * [[Internal services|Internal-services]]
 
