@@ -15,13 +15,14 @@
   * [[Clientport]]
   * [[IRC]]
   * [[Whois registry|Whois]]
-  * [[DNS]]
+  * [[DNS]]  
   * [[Looking Glasses]]
   * [[Shell]]
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
 
 * [[Internal|/pages/internal]]
+  * [[Anycast-Wiki]]
   * [[Internal services|Internal-services]]
 
 
