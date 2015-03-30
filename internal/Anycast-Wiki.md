@@ -2,7 +2,7 @@
 
 ### Intro:
 
-The idea is to setup mirrors of this wiki across dn42, using [anycast](https://en.wikipedia.org/wiki/Anycast) to provide redundancy and load-balancing.
+The idea is to setup the mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast), providing redundancy, load-balancing and improved site access times.
 The local webserver is monitored with a simple shell script (below) working in conjuction with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
 ### Network:
