@@ -6,12 +6,12 @@ The local webserver is monitored with a simple shell script (below) working in c
  * Install [gollum](https://github.com/gollum/gollum).
  * Clone the dn42 wiki repo:
 
-    ``git clone ssh://git@xuu.me/dn42/wiki /home/wiki.dn42/``
+    `git clone ssh://git@xuu.me/dn42/wiki /home/wiki.dn42/`
 
  * Generate a [CSR](/services/Certificate-Authority) and send to `xuu@sour.is`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
  * Start two gollum instances, read-only and editing on `127.0.0.1`:
  
-    `gollum --css /home/wiki.dn42/custom.css --gollum-path /home/wiki.dn42/public_html/ --host 127.0.0.1  --port 4568 --no-edit`
+    ``gollum --css /home/wiki.dn42/custom.css --gollum-path /home/wiki.dn42/public_html/ --host 127.0.0.1  --port 4568 --no-edit``
 
 
 #####gollum-watchdog.sh:
