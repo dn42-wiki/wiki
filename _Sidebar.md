@@ -22,7 +22,7 @@
   * [[Repository Mirrors]]
 
 * [[Internal|/pages/internal]]
-  * [[Anycast-Wiki]]
+  * [[Distributed Wiki|Anycast-Wiki]]
   * [[Internal services|Internal-services]]
 
 
