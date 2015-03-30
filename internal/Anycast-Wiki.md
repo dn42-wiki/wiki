@@ -12,7 +12,8 @@ The local webserver is monitored with a simple shell script (below) working in c
  * Start two gollum instances, read-only and editing on `127.0.0.1`:
  
     ```
-gollum --css /home/wiki.dn42/custom.css --gollum-path /home/wiki.dn42/public_html/ --host 127.0.0.1  --port 4568 --no-edit```
+gollum --css /home/wiki.dn42/custom.css --gollum-path /home/wiki.dn42/public_html/ --host 127.0.0.1  --port 4568 --no-edit
+```
 
 
 #####gollum-watchdog.sh:
