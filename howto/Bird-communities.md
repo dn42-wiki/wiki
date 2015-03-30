@@ -4,15 +4,9 @@ Communities can be used to prioritize traffic based on different flags, in DN42 
 
 The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration, in /etc/bird/peers4 if you followed the [Bird](/howto/Bird) guide. 
 
-<<<<<<< HEAD
 The calculations for finding the best route can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
 Below, you will see an example config for peers4 as well as the and the suggested improvement by tombii (prefers low latency) to original filter implementation by welterde (prefers high BW over low latency).
-=======
-The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
-
-Below, you will see an example config for peers4 based on the original filter implementation by Jplitza.
->>>>>>> 8228e6e222fe084fe7b8fff23fddf55e68668d3d
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
