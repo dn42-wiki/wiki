@@ -1,12 +1,12 @@
-Bird is a commonly used BGP daemon.  This page provides configuration and help for using BGP communities with Bird for dn42.
+Bird is a commonly used BGP daemon. This page provides configuration and help for using BGP communities with Bird for dn42.
 
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. Please note that everyone should be using community 64511.
 
-The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration, in /etc/bird/peers4 if you followed the [Bird](/howto/Bird) guide. 
+The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration, in /etc/bird/peers4 if you followed the Bird guide.
 
-The calculations for finding the best route can be stored in a separate file, for example /etc/bird/community_filters.conf.
+The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
-Below, you will see an example config for peers4 as well as the and the suggested improvement by tombii (prefers low latency) to original filter implementation by welterde (prefers high BW over low latency).
+Below, you will see an example config for peers4 based on the original filter implementation by Jplitza.
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
@@ -104,7 +104,6 @@ latency = update_latency(link_latency);
 bandwidth = update_bandwidth(link_bandwidth) - 20;
 crypto = update_crypto(link_crypto) - 30;
 if bandwidth > 4 then bandwidth = 4;
-bgp_local_pref = 100*bandwidth + 100*(10-latency)-100*bgp_path.len+50*crypto;
 return true;
 } 
 ```
