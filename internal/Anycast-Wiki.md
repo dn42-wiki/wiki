@@ -3,7 +3,11 @@ The local webserver is monitored with a simple shell script (below) working in c
 
 ### Checklist:
 
- * Install `[gollum](https://github.com/gollum/gollum)`
+ * Install [gollum](https://github.com/gollum/gollum)
+
+ * Clone the dn42 wiki repo
+
+    `git clone ssh://git@xuu.me/dn42/wiki`
 
 
 #####gollum-watchdog.sh:
