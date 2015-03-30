@@ -1,4 +1,4 @@
-## Anycast wiki mirrors
+## Anycasted wiki mirrors
 
 ### Intro:
 
