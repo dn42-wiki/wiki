@@ -3,7 +3,7 @@ The local webserver is monitored with a simple shell script (below) working in c
 
 ### Checklist:
 
- * Install [gollum](https://github.com/gollum/gollum)
+ * Install `[gollum](https://github.com/gollum/gollum)`
 
 
 #####gollum-watchdog.sh:
