@@ -4,16 +4,16 @@ The local webserver is monitored with a simple shell script (below) working in c
 ### Checklist:
 
  * Install [gollum](https://github.com/gollum/gollum)
-
- * Clone the dn42 wiki repo
+ * Clone the dn42 wiki repo:
 
     `git clone ssh://git@xuu.me/dn42/wiki`
+
+ * Request a [certificate](/services/Certificate-Authority)
 
 
 #####gollum-watchdog.sh:
 
 ```
-
 #!/bin/bash
 
 URL=( "http://172.23.0.80" "https://172.23.0.80" )
