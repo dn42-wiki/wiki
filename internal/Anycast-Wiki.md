@@ -15,6 +15,7 @@ The local webserver is monitored with a simple shell script (below) working in c
 
     `git clone ssh://git@xuu.me/dn42/wiki <path>`
 
+ * Setup cron for periodic pull/push jobs for the repo
  * Generate a [CSR](/services/Certificate-Authority) and send to `xuu@sour.is`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
  * Start two gollum instances, read-only and editing on `127.0.0.1`:
  
