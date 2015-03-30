@@ -25,7 +25,7 @@ gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.
 gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.1  --port 4567 --no-edit
     ```
 
-###Install/configure nginx:
+###Setup nginx:
 
 ##### /etc/nginx/sites-enabled/wiki.dn42:
 
@@ -75,7 +75,36 @@ server {
         }
 }
 
-###Setup [ExaBGP](https://github.com/Exa-Networks/exabgp)
+```
+
+###Setup [ExaBGP](https://github.com/Exa-Networks/exabgp):
+
+#####exabgp.conf:
+
+```
+
+group gollum-watchdog {
+  neighbor <peer1> {
+    router-id x.x.x.x;
+    local-address <source-address>;
+    local-as <ownas>;
+    peer-as <peeras>;
+  }
+
+  ## (example) peer with one of our iBGP speakers:
+  neighbor <172.22.0.1> {
+    router-id 172.23.0.80;
+    local-address <172.22.0.2>;
+    local-as 123456;
+    peer-as 123456;
+  }
+
+  ## ...
+
+  process watch-gollum {
+     run /etc/exabgp/gollum-watchdog.sh;
+  }
+}
 
 ```
 
