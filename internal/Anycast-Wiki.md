@@ -110,6 +110,10 @@ group gollum-watchdog {
 
 ```
 
+Watchdog runs in an infinite loop, sending the appropriate commands to stdout. [ExaBGP](https://github.com/Exa-Networks/exabgp) attaches to the process' stdout and listens for instructions. Watchdog sends either a route announce or widthdraw.
+
+Run the script in a shell first to validate it's working.
+
 ##### gollum-watchdog.sh:
 
 ```
@@ -228,3 +232,4 @@ esac
 exit 0
 
 ```
+
