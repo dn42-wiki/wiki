@@ -1,8 +1,8 @@
+###exabgp watchdog script 
+
 ```
 
 #!/bin/bash
-
-
 
 URL=( "http://172.23.0.80" "https://172.23.0.80" )
 VALIDATE_KEYWORD='gollum'
