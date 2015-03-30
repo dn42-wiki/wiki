@@ -1,3 +1,5 @@
+### Intro:
+
 The idea is to setup mirrors of this wiki across dn42, using [anycast](https://en.wikipedia.org/wiki/Anycast) to provide redundancy and load-balancing.
 The local webserver is monitored with a simple shell script (below) working in conjuction with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
@@ -25,7 +27,7 @@ gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.
 gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.1  --port 4567 --no-edit
     ```
 
-###Setup nginx:
+###Setup nginx proxy:
 
 ##### /etc/nginx/sites-enabled/wiki.dn42:
 
