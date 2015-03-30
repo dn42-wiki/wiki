@@ -1,7 +1,12 @@
 The idea is to setup mirrors of this wiki across dn42, using [anycast](https://en.wikipedia.org/wiki/Anycast) to provide redundancy and load-balancing.
 The local webserver is monitored with a simple shell script (below) working in conjuction with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
+### Checklist:
+
+ * Install [gollum]{https://github.com/gollum/gollum}
 #####gollum-watchdog.sh:
+
+
 
 ```
 
@@ -50,8 +55,3 @@ exit 0
 
 ```
 
-
-exabgp runs directly on the web server and peers with border-routers, configuration: http://paste42.de/7976/
-
-
-bird is set up like this: http://paste42.de/7977/
