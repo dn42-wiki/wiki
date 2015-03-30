@@ -235,6 +235,6 @@ exit 0
 
 ### Announcing:
 
-The prefix AS-PATH should appear the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
+The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
 
     
