@@ -97,7 +97,7 @@ group gollum-watchdog {
   ## (example) peer with one of our iBGP speakers:
   neighbor <172.22.0.1> {
     router-id 172.23.0.80;
-    local-address <172.22.0.2>;
+    local-address 172.22.0.2;
     local-as 123456;
     peer-as 123456;
   }
