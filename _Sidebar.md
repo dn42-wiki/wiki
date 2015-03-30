@@ -21,7 +21,7 @@
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
 
-* [[Internal|/pages/internal/default]]
+* [[Internal|/pages/internal/]]
   * [[Distributed Wiki|Anycast-Wiki]]
   * [[Internal services|Internal-services]]
 
