@@ -173,9 +173,10 @@ exit 0
 
 ```
 
-  Normally SIGUSR1 to the exabgp process triggers a configuration update, but at occasion the process might need to be restarted - since the gracefull shutdown might not always kick in , this might present quite a challenge. Sending SIGKILL to the child(ren) and immediately after, the parent, does the job (quick-and-dirty). 
+  Normally SIGUSR1 to the exabgp process triggers a configuration update, but at occasion the process might need to be restarted - since its gracefull shutdown can be glitchy , this might be a bit difficult. Sending SIGKILL to the child(ren) and immediately after, the parent, does the job (quick-and-dirty). 
 
-#####/etc/exabgp/run.sh
+##### /etc/exabgp/run.sh
+`USAGE: /etc/exabgp/run.sh [start|stop|restart]`
 
 ```
 
