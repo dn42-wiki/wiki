@@ -18,11 +18,11 @@ The local webserver is monitored with a simple shell script (below) working in c
  * Generate a [CSR](/services/Certificate-Authority) and send to `xuu@sour.is`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
  * Start two gollum instances, read-only and editing on `127.0.0.1`:
  
-   SSL (read/write):
+   Read/write (SSL access only):
     ```
 gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4568
     ```
-   Plain (read-only):
+   Read-only:
     ```
 gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
