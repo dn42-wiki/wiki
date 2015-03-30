@@ -20,11 +20,11 @@ The local webserver is monitored with a simple shell script (below) working in c
  
    SSL (read/write):
     ```
-gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.1  --port 4568
+gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4568
     ```
    Plain (read-only):
     ```
-gollum --css <path>/custom.css --gollum-path <path>/public_html/ --host 127.0.0.1  --port 4567 --no-edit
+gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
 
 ### Setup nginx proxy:
