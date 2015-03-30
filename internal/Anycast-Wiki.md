@@ -1,10 +1,14 @@
-#####exabgp watchdog script
+The idea is to setup mirrors of this wiki across dn42, using [anycast](https://en.wikipedia.org/wiki/Anycast) to provide redundancy and load-balancing.
+The local webserver is monitored with a simple shell script (below) working in conjuction with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
+
+#####gollum-watchdog.sh:
 
 ```
 
 #!/bin/bash
 
 URL=( "http://172.23.0.80" "https://172.23.0.80" )
+
 VALIDATE_KEYWORD='gollum'
 ROUTE='172.23.0.80/28'
 NEXTHOP='172.22.177.72'
