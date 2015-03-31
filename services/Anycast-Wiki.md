@@ -93,9 +93,10 @@ server {
 
 The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
 
-##### exabgp.conf:
+##### Configuration
 
 ```
+# exabgp.conf
 
 group gollum-watchdog {
   neighbor <peer1> {
@@ -122,11 +123,11 @@ group gollum-watchdog {
 
 ```
 
-##### gollum-watchdog.sh:
+##### Watchdog script
 
 Watchdog runs in an infinite loop, sending the appropriate commands to stdout. [ExaBGP](https://github.com/Exa-Networks/exabgp) attaches to the process' stdout and listens for instructions. Watchdog sends either a route announce or widthdraw.
 
-Run the script in a shell first to validate it's working.
+Run `gollum-watchdog.sh` in a shell first to validate it's working:
 
 ```
 #!/bin/bash
@@ -189,9 +190,10 @@ exit 0
 
 ```
 
+##### Run
+
   Normally SIGUSR1 to the exabgp process triggers a configuration update, but at occasion the process might need to be restarted - since its gracefull shutdown can be glitchy , this might be a bit difficult. Sending SIGKILL to the child(ren) and immediately after, the parent, does the job (quick-and-dirty). 
 
-##### /etc/exabgp/run.sh:
 `USAGE: /etc/exabgp/run.sh [start|stop|restart]`
 
 ```
