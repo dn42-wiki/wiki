@@ -28,6 +28,8 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 
 ### Nginx proxy
 
+##### Header
+
 A custom header `X-SiteID` identifies the site you're connecting to:
 
   + X-SiteID: `AS number`-`ISO country code`
