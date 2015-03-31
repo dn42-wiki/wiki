@@ -1,23 +1,23 @@
 ## Distributed wiki sites
 
 The idea is to deploy the mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times for the site.
-The local webserver is monitored with a simple shell script (below) working in conjuction with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
+The local webserver is monitored with a simple shell script (below) [working in conjuction](https://wiki.dn42/services/Anycast-Wiki#distributed-wiki-sites_exabgp) with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
 ### Network
 
- * Install wiki anycast address `172.23.0.80/32` on the system
- * Setup tunnel(s) to the dn42 network (routing daemon not required)
+ - Install wiki anycast address `172.23.0.80/32` on the system
+ - Setup tunnel(s) to the dn42 network (routing daemon not required)
 
 ### Setup gollum
 
- * Install [gollum](https://github.com/gollum/gollum)
- * Clone the dn42 wiki repo:
+ - Install [gollum](https://github.com/gollum/gollum)
+ - Clone the dn42 wiki repo:
 
     `git clone ssh://git@xuu.me/dn42/wiki <path>`
 
- * Setup cron for periodic pull/push jobs for the repo
- * Generate a [CSR](/services/Certificate-Authority) and send to `xuu@sour.is`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
- * Start two gollum instances, read-only and editing on `127.0.0.1`:
+ - Setup cron for periodic pull/push jobs for the repo
+ - Generate a [CSR](/services/Certificate-Authority) and send to `xuu@sour.is`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
+ - Start two gollum instances, read-only and editing on `127.0.0.1`:
  
    Read/write (SSL access only):
     ```
@@ -30,7 +30,12 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 
 ### Nginx proxy
 
-##### /etc/nginx/sites-enabled/wiki.dn42:
+A custom header `X-SiteID` identifies the site you're connecting to:
+
+  + X-SiteID: `AS number`-`ISO country code`
+
+
+##### Config example
 
 ```
 ssl_protocols  TLSv1.2 TLSv1.1 TLSv1;
@@ -48,6 +53,7 @@ server {
         listen 172.23.0.80:80 default;
 
         add_header strict-transport-security  "max-age=0; includeSubDomains";
+        add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
                 location =/robots.txt { root <path>/wiki.dn42/; }
@@ -70,6 +76,7 @@ server {
 
         add_header strict-transport-security  "max-age=0; includeSubDomains";
         add_header Public-Key-Pins            'pin-sha256="mJ1xUCzfru8Ckq2+M6VkNKGOGgSETImRAHBF24mjalw="; pin-sha256="/gOyi7syRMR+d2jZoB/MzcSD++8ciZkSl/hZAQgzWws="; max-age=0; includeSubDomains';
+        add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
                 location =/robots.txt { root <path>/wiki.dn42/; }
