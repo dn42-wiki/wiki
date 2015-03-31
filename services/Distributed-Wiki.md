@@ -57,8 +57,6 @@ server {
         add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
-                location =/robots.txt { root <path>/wiki.dn42/; }
-                location =/custom.css { root <path>/wiki.dn42/; }
                 proxy_pass http://wiki;
         }
 }
@@ -80,8 +78,6 @@ server {
         add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
-                location =/robots.txt { root <path>/wiki.dn42/; }
-                location =/custom.css { root <path>/wiki.dn42/; }
                 proxy_pass http://wikirw;
         }
 }
