@@ -20,9 +20,9 @@
   * [[Shell]]
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
+  * [[Distributed Wiki|Anycast-Wiki]]
 
 * [[Internal|/internal/home]]
-  * [[Distributed Wiki|Anycast-Wiki]]
   * [[Internal services|Internal-services]]
 
 
