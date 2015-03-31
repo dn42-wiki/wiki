@@ -50,7 +50,7 @@ ssl_prefer_server_ciphers   on;
 upstream wiki { server 127.0.0.1:4567; }
 
 server { 
-        server_name internal.dn42 wiki.dn42;
+        server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:80 default;
 
