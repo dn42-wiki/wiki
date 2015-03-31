@@ -21,6 +21,7 @@
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
   * [[Distributed Wiki|Distributed-Wiki]]
+  * [[Certificate Authority|Certificate-Authority]]
 
 * [[Internal|/internal/home]]
   * [[Internal services|Internal-services]]
