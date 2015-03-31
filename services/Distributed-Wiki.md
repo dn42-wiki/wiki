@@ -215,7 +215,7 @@ start() {
 		echo "ERROR: could not start process"; return 1
 		
 	}
-        echo $! > ${PID_FILE}
+        echo ${cpid} > ${PID_FILE}
 }
 
 stop(){
