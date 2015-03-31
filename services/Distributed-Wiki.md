@@ -16,6 +16,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo
  - Generate a [CSR](/services/Certificate-Authority) and send to `xuu@dn42.us`. Wait for a reply containing internal.dn42/wiki.dn42 certificates.
+ - Send `xuu@dn42.us` your site id and ip address to have a unicast for testing. (ex. as64737-ca.wiki.dn42)
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
  
    Read/write (SSL only):
@@ -65,7 +66,7 @@ upstream wikirw { server 127.0.0.1:4568; }
 
 
 server { 
-        server_name internal.dn42 wiki.dn42;
+        server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:443 ssl default;
 
