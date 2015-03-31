@@ -11,7 +11,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
  - Install [gollum](https://github.com/gollum/gollum)
  - Clone the dn42 wiki repo:
 
-    `git clone ssh://git@xuu.me/dn42/wiki <path>`
+    `git clone ssh://git@dn42.us/dn42/wiki <path>`
 
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo
