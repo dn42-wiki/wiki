@@ -1,12 +1,12 @@
 The idea is to deploy the mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times for the site.
 The local webserver is monitored with a simple [[shell script|Distributed-Wiki#exabgp_watchdog-script]] working [[in conjunction|Distributed-Wiki#exabgp]] with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
-### Network
+## Network
 
  - Install wiki anycast address `172.23.0.80/32` on the system
  - Setup tunnel(s) to the dn42 network (routing daemon not required)
 
-### Setup gollum
+## Setup gollum
 
  - Install [gollum](https://github.com/gollum/gollum)
  - Clone the dn42 wiki repo:
@@ -27,16 +27,16 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
 
-### Nginx proxy
+## Nginx proxy
 
-##### Header
+#### Header
 
 A custom header `X-SiteID` identifies the site you're connecting to:
 
   + X-SiteID: `AS number`-`ISO country code`
 
 
-##### Config example
+#### Config example
 
 ```
 ssl_protocols  TLSv1.2 TLSv1.1 TLSv1;
@@ -84,13 +84,13 @@ server {
 
 ```
 
-### [ExaBGP](https://github.com/Exa-Networks/exabgp)
+## [ExaBGP](https://github.com/Exa-Networks/exabgp)
 
-##### Announcing
+#### Announcing
 
 The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
 
-##### Configuration
+#### Configuration
 
 ```
 # exabgp.conf
@@ -120,7 +120,7 @@ group gollum-watchdog {
 
 ```
 
-##### Watchdog script
+#### Watchdog script
 
 Watchdog runs in an infinite loop, sending the appropriate commands to stdout. [ExaBGP](https://github.com/Exa-Networks/exabgp) attaches to the process' stdout and listens for instructions. Watchdog sends either a route announce or widthdraw.
 
@@ -187,7 +187,7 @@ exit 0
 
 ```
 
-##### Run
+#### Run
 
   Normally SIGUSR1 to the exabgp process triggers a configuration update, but at occasion the process might need to be restarted - since its gracefull shutdown can be glitchy , this might be a bit difficult. Sending SIGKILL to the child(ren) and immediately after, the parent, does the job (quick-and-dirty). 
 
