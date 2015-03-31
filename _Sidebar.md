@@ -22,6 +22,7 @@
   * [[Repository Mirrors]]
   * [[Distributed Wiki|Distributed-Wiki]]
   * [[Certificate Authority|Certificate-Authority]]
+  * [[Tahoe-LAFS|Tahoe-LAFS]]
 
 * [[Internal|/internal/home]]
   * [[Internal services|Internal-services]]
