@@ -1,4 +1,4 @@
-The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times for the site.
+The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the site.
 The local webserver is monitored with a simple [[shell script|Distributed-Wiki#exabgp_watchdog-script]] working [[in conjunction|Distributed-Wiki#exabgp]] with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
 
 ## Network
@@ -126,7 +126,7 @@ Watchdog runs in an infinite loop, sending the appropriate commands to stdout. [
 
 Run `gollum-watchdog.sh` in a shell first to validate it's working:
 
-```
+```sh
 #!/bin/bash
 
 CURL=curl
@@ -193,7 +193,7 @@ exit 0
 
 `USAGE: /etc/exabgp/run.sh [start|stop|restart]`
 
-```
+```sh
 
 #!/bin/bash
 
