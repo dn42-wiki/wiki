@@ -194,7 +194,6 @@ exit 0
 `USAGE: /etc/exabgp/run.sh [start|stop|restart]`
 
 ```sh
-
 #!/bin/bash
 
 PID_FILE=/var/run/exaBGP/exabgp_PID
