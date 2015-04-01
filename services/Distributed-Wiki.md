@@ -39,15 +39,19 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 
 ##### Enabling [HPKP](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning)
 
-  - Extract base64 encoded SPKI fingerprint from private key:
+  - Extract base64 encoded SPKI fingerprint from private key `wiki.key`:
 
-  `openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64`
+    ```
+openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+    ```
 
   - Configure Nginx to send the fingerprint in header:
 
-  `add_header Public-Key-Pins            'pin-sha256="<primary>";pin-sha256="<backup>";  max-age=0; includeSubDomains';`
+    ```
+add_header Public-Key-Pins  pin-sha256="<primary>";pin-sha256="<backup>"; max-age=0; includeSubDomains';
+    ```
 
-   + `<primary>` - the fingerprint extracted from your wiki.key
+   + `<primary>` - the fingerprint extracted from `wiki.key`
    + `<backup>`  - the CA fingerprint: `mJ1xUCzfru8Ckq2+M6VkNKGOGgSETImRAHBF24mjalw=`
 
    Read more about this [here](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning).
