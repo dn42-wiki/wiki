@@ -24,11 +24,10 @@ This DNS tunnel service uses [Iodine](http://code.kryo.se/iodine/), and provides
 
 Use the anycast DNS servers (172.22.0.53) inside your tunnel.
 
-| Hostname / IP                                     | Password | Network  |
-|:------------------------------------------------- |:-------- |:-------- |
-| t.polyno.me (172.23.185.193)                      | dn42     | /        |
-| t.hax404.de (172.23.136.98)                       | dn42     | /        |
-| irc.nixnodes.dn42                                 | dn42     | NixNodes |
+| Hostname / IP                                     | Password |
+|:------------------------------------------------- |:-------- |
+| t.polyno.me (172.23.185.193)                      | dn42     |
+| t.hax404.de (172.23.136.98)                       | dn42     |
 
 ### DNS Tools
 
@@ -48,6 +47,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 |:------------------------------------------- |:----------------------- |
 | irc://irc.hackint.dn42/dn42 (172.22.2.235)  | DN42                    |
 | irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                |
+| irc://irc.nixnodes.dn42                     | NixNodes IRC Network    |
 
 ## Search engines
 
