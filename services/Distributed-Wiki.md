@@ -48,7 +48,7 @@ openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | o
   - Configure Nginx to send the fingerprint in header:
 
     ```
-add_header Public-Key-Pins  pin-sha256="<primary>";pin-sha256="<backup>"; max-age=0; includeSubDomains';
+add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=0; includeSubDomains';
     ```
 
    + `<primary>` - the fingerprint extracted from `wiki.key`
