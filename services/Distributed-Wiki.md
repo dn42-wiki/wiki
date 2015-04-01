@@ -143,7 +143,6 @@ server {
         listen 172.23.0.80:80 default;
         listen <unicast-address>:80 default;
 
-        add_header strict-transport-security  "max-age=0; includeSubDomains";
         add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
