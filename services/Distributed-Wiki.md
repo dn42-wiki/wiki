@@ -3,9 +3,9 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Prerequisites
 
-  - Must be connected into dn42 24/7 and operate a fairly stable AS.
-  - Must operate a stable host, present in dn42.
-  - Must have solid networking/sysadmin skills (to keep the system as a whole stable).
+  - Stable 24/7 connection into dn42.
+  - Stable host machine, present in dn42.
+  - Solid networking/sysadmin skills (to keep the system as a whole stable).
 
     In contrast with the general spirit in dn42, this service should NOT be deployed by unskilled members for the purpose of learning and exploring - since it is the primary source of information related to the project, it should not be used as a playground. 
 
