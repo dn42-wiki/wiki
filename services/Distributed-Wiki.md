@@ -47,10 +47,10 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
     ```
 
-  - Configure Nginx to send the fingerprint in header:
+  - Configure Nginx to send the fingerprint in header (SSL block):
 
     ```
-add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=0; includeSubDomains';
+add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=5184000; includeSubDomains';
     ```
 
    + `<primary>` - the fingerprint extracted from `wiki.key`
@@ -108,8 +108,8 @@ server {
         ssl_certificate      <path>/ssl.crt;  
         ssl_certificate_key  <path>/ssl.key;
 
-        add_header strict-transport-security  "max-age=0; includeSubDomains";
-        add_header Public-Key-Pins            'pin-sha256="<primary-pin>";pin-sha256="<backup-pin>";  max-age=0; includeSubDomains';
+        add_header strict-transport-security  "max-age=5184000; includeSubDomains";
+        add_header Public-Key-Pins            'pin-sha256="<primary-pin>";pin-sha256="<backup-pin>";  max-age=5184000; includeSubDomains';
         add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
