@@ -1,6 +1,21 @@
 The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the site. Sites are powered by [gollum](https://github.com/gollum/gollum) which has no native SSL support, so Nginx acts as a reverse proxy and handles the encryption.
 The local webserver is monitored with a simple [[shell script|Distributed-Wiki#exabgp_watchdog-script]] working [[in conjunction|Distributed-Wiki#exabgp]] with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.
 
+## Prerequisites
+
+  - Must be connected into dn42 24/7 and operate a fairly stable AS and host server
+  - Must have solid networking/sysadmin skills (to keep the system as a whole stable)
+
+    In contrast with the general spirit in dn42, this service should NOT be deployed by unskilled members for the purpose of learning and exploring - since it is the primary source of information related to the project, it should not be used as a playground. 
+
+  - Software:
+    + [Git](https://en.wikipedia.org/wiki/Git_(software))
+    + [gollum](https://github.com/gollum/gollum)
+    + [Nginx](https://en.wikipedia.org/wiki/Nginx)
+    + [ExaBGP](https://github.com/Exa-Networks/exabgp)
+
+    It's recommended to use a debian distro on the host machine, where most of the above software can be installed using package manager(s) with ease. On some distros (RHEL based for example) it might not be an easy task.
+
 ## Network
 
  - Install wiki anycast address `172.23.0.80/32` on the system
@@ -9,7 +24,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Data replication
 
-Site files are stored in a local [DVCS](https://en.wikipedia.org/wiki/Distributed_revision_control) repository ([Git](https://en.wikipedia.org/wiki/Git_(software))) on each node and replicated through a central server hosted by [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42). 
+Site files are stored in a local [DVCS](https://en.wikipedia.org/wiki/Distributed_revision_control) repository (Git) on each node and replicated through a central server hosted by [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42). 
 Since gollum is built on top of Git, it is not overly complicated to keep the local site in sync with others, each site only triggers periodic pulls/pushes from/to the Git server. 
 
 ### Setup the repo
@@ -159,7 +174,7 @@ server {
 
 ```
 
-## [ExaBGP](https://github.com/Exa-Networks/exabgp)
+## ExaBGP
 
 #### Announcing
 
