@@ -41,7 +41,7 @@ exit 0
 
      `*/10 * * * * <path>/wiki-sync.sh &> /dev/null`
 
-       Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5-15 minutes.
+       Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes.
 
 ## Setup gollum
 
