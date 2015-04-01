@@ -41,3 +41,6 @@ This is really up to you: that's the magic of open protocols.
 
 As of 2014, most people seem to use either Quagga or Bird (with a growing preference for Bird). You may also encounter users of OpenBGPd. Even more occasionally, people use hardware BGP routers in dn42, for instance [Extreme Networks](howto/bgp-on-extreme-summit1i) hardware.
 
+### Can I update the wiki?
+
+Yes.
