@@ -73,7 +73,7 @@ user root
 
 * place the script as quagga_bgp in /etc/munin/plugins
 
-```
+```sh
 #!/bin/sh
 #
 #
