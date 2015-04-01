@@ -19,8 +19,8 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Network
 
- - Install wiki anycast address `172.23.0.80/32` on the system
- - Assign a unicast address to be used by Nginx
+ - Install wiki anycast IP address `172.23.0.80/32` on the system
+ - Assign a unicast IP address to be used by Nginx
  - Setup tunnel(s) to the dn42 network (routing daemon not required)
 
 ## Data replication
