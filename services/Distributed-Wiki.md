@@ -4,6 +4,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 ## Network
 
  - Install wiki anycast address `172.23.0.80/32` on the system
+ - Assign a unicast address to be used by Nginx
  - Setup tunnel(s) to the dn42 network (routing daemon not required)
 
 ## Setup gollum
@@ -34,7 +35,22 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 
 A custom header `X-SiteID` identifies the site you're connecting to:
 
-  + X-SiteID: `AS number`-`ISO country code`
+  - `add_header X-SiteID   '<AS number>-<ISO country code>'`
+
+##### Enabling [HPKP](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning)
+
+  - Extract base64 encoded SPKI fingerprint from private key:
+
+  `openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64`
+
+  - Configure Nginx to send the fingerprint in header:
+
+  `add_header Public-Key-Pins            'pin-sha256="<primary>";pin-sha256="<backup>";  max-age=0; includeSubDomains';`
+
+   + `<primary>` - the fingerprint extracted from your wiki.key
+   + `<backup>`  - the CA fingerprint: `mJ1xUCzfru8Ckq2+M6VkNKGOGgSETImRAHBF24mjalw=`
+
+   Read more about this [here](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning).
 
 #### Domains
 
@@ -42,7 +58,10 @@ The proxy should accept the following domain names:
 
   - internal.dn42 (not anycasted yet)
   - wiki.dn42
-  - as`aut-num`-`CC`.wiki.dn42
+
+Nginx should listen on a unicast address as well, so your site can be reached exclusively. Assign an IP address for the occasion and send it to [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) including your AS `<aut-num>` and the country code `<CC>` where your site is located. A forward DNS record will be created, pointing to the unicast IP address:
+
+  - as`<aut-num>`-`<CC>`.wiki.dn42 
 
 #### Config example
 
@@ -60,6 +79,7 @@ server {
         server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:80 default;
+        listen <unicast-address>:80 default;
 
         add_header strict-transport-security  "max-age=0; includeSubDomains";
         add_header X-SiteID                   '<aut-num>-<cc>';
@@ -76,13 +96,14 @@ server {
         server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:443 ssl default;
+        listen <unicast-address>:443 ssl default;
 
 	ssl on;
         ssl_certificate      <path>/ssl.crt;  
         ssl_certificate_key  <path>/ssl.key;
 
         add_header strict-transport-security  "max-age=0; includeSubDomains";
-        add_header Public-Key-Pins            'pin-sha256="mJ1xUCzfru8Ckq2+M6VkNKGOGgSETImRAHBF24mjalw="; pin-sha256="/gOyi7syRMR+d2jZoB/MzcSD++8ciZkSl/hZAQgzWws="; max-age=0; includeSubDomains';
+        add_header Public-Key-Pins            'pin-sha256="<primary-pin>";pin-sha256="<backup-pin>";  max-age=0; includeSubDomains';
         add_header X-SiteID                   '<aut-num>-<cc>';
 
         location / {
