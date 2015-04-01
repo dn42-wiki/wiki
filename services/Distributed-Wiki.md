@@ -36,6 +36,13 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 
   + X-SiteID: `AS number`-`ISO country code`
 
+#### Domains
+
+The proxy should accept the following domain names:
+
+  - internal.dn42 (not anycasted yet)
+  - wiki.dn42
+  - as`aut-num`-`CC`.wiki.dn42
 
 #### Config example
 
