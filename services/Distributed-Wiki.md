@@ -59,7 +59,7 @@ exit 0
 
        Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes.
 
-## Setup gollum
+## gollum
 
  - Install [gollum](https://github.com/gollum/gollum)
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
