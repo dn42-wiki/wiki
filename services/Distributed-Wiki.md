@@ -3,7 +3,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Prerequisites
 
-  - Stable 24/7 connection into dn42.
+  - Stable 24/7 connection to dn42.
   - Stable host machine, present in dn42.
   - Solid networking/sysadmin skills (to keep the system as a whole stable).
 
