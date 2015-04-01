@@ -1,5 +1,5 @@
-The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the site.
-The local webserver is monitored with a simple [[shell script|Distributed-Wiki#exabgp_watchdog-script]] working [[in conjunction|Distributed-Wiki#exabgp]] with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.  
+The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the site. Sites are powered by [gollum](https://github.com/gollum/gollum) which has no native SSL support, so Nginx acts as a reverse proxy and handles the encryption.
+The local webserver is monitored with a simple [[shell script|Distributed-Wiki#exabgp_watchdog-script]] working [[in conjunction|Distributed-Wiki#exabgp]] with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.
 
 ## Network
 
@@ -7,16 +7,45 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
  - Assign a unicast address to be used by Nginx
  - Setup tunnel(s) to the dn42 network (routing daemon not required)
 
-## Setup gollum
+## Data replication
 
- - Install [gollum](https://github.com/gollum/gollum)
+Site files are stored in a local [DVCS](https://en.wikipedia.org/wiki/Distributed_revision_control) repository ([Git](https://en.wikipedia.org/wiki/Git_(software))) on each node and replicated through a central server hosted by [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42). 
+Since gollum is built on top of Git, it is not overly complicated to keep the local site in sync with others, each site only triggers periodic pulls/pushes from/to the Git server. 
+
+### Setup the repo
+
  - Clone the dn42 wiki repo:
 
     `git clone ssh://git@dn42.us/dn42/wiki <path>`
 
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
- - Setup cron for periodic pull/push jobs for the repo
- - Generate a [CSR](/services/Certificate-Authority) and send to [xuu](mailto:xuu@sour.is). Wait for a reply containing internal.dn42/wiki.dn42 certificates.
+ - Setup cron for periodic pull/push jobs for the repo (simple example):
+     
+     + **wiki-sync.sh**:
+
+     ```sh
+#!/bin/bash
+
+WIKI_PATH=<repo path>
+GIT=/usr/bin/git
+
+cd "${WIKI_PATH}"
+${GIT} push
+sleep 1
+${GIT} pull
+
+exit 0
+     ```
+
+     + **Cron entry**:
+
+     `*/10 * * * * <path>/wiki-sync.sh &> /dev/null`
+
+       Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5-15 minutes.
+
+## Setup gollum
+
+ - Install [gollum](https://github.com/gollum/gollum)
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
  
    Read/write (SSL only):
@@ -29,6 +58,18 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
     ```
 
 ## Nginx proxy
+
+#### SSL
+
+ - Generate a private key:
+
+   `openssl genrsa -out wiki.key 4096`
+
+ - Generate a [CSR](/services/Certificate-Authority) and send `wiki.csr` to [xuu@sour.is](mailto:xuu@sour.is): 
+
+   `openssl req -new -sha256 -key wiki.key -out wiki.csr`
+
+   Wait for a reply containing internal.dn42/wiki.dn42 certificate.
 
 #### Header
 
