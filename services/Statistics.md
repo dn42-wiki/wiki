@@ -18,7 +18,7 @@ collectd refuses to exec scripts as root. On Debian vtysh is compiled with PAM s
 
 #### bgp_prefixes-quagga.sh
 
-```
+```sh
 #!/bin/bash
 
 INTERVAL=10
@@ -37,7 +37,7 @@ done
 
 #### Number of prefixes per neighbour for bird
 
-```
+```sh
 #!/bin/sh
 #
 # Collectd script for collecting the number of routes going through each
