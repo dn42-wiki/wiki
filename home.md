@@ -1,8 +1,8 @@
 ## About dn42
 
-dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, DNS, etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), IPsec), and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.22.0.0/15` range, and private AS numbers are used: see [registry](/services/Whois).
+dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, DNS, etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), [IPsec](http://en.wikipedia.org/wiki/IPsec)), and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.22.0.0/15` range, and private AS numbers are used: see [registry](/services/Whois).
 
-A number of services are provided on the network: see [internal](http://wiki.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some Freifunk networks.
+A number of services are provided on the network: see [internal](http://wiki.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
 
 Still have questions? We have a [[FAQ]].
 
@@ -22,7 +22,7 @@ dn42 is also a great way to connect hacker spaces in a secure way, so that they 
 
 Have you ever wanted to SSH on your Raspberry Pi hosted at your local hacker space, and had trouble doing so because of NAT? If your hacker space was using dn42, it could have been much easier.
 
-Nowadays, most end-user networks use NAT to squeeze all those nifty computing devices behind a single public IPv4 address.  This makes it difficult to provide services directly from a machine behind the NAT.  Besides, you might want to provide some services to other hackerspaces, but not to anybody on the Internet.
+Nowadays, most end-user networks use [NAT](http://en.wikipedia.org/wiki/Network_address_translation) to squeeze all those nifty computing devices behind a single public IPv4 address.  This makes it difficult to provide services directly from a machine behind the NAT.  Besides, you might want to provide some services to other hackerspaces, but not to anybody on the Internet.
 
 dn42 solves this problem.  By addressing your network in dn42, your devices can communicate with all other participants in a transparent way, without resorting to this ugly thing called NAT.  Of course, this doesn't mean that you have to fully open your network to dn42: similarly to IPv6, you can still use a firewall (but you could, for instance, allow incoming TCP 22 and TCP 80 from dn42 by default).
 
