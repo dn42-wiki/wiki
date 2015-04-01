@@ -24,10 +24,11 @@ This DNS tunnel service uses [Iodine](http://code.kryo.se/iodine/), and provides
 
 Use the anycast DNS servers (172.22.0.53) inside your tunnel.
 
-| Hostname / IP                                     | Password |
-|:------------------------------------------------- |:-------- |
-| t.polyno.me (172.23.185.193)                      | dn42     |
-| t.hax404.de (172.23.136.98)                       | dn42     |
+| Hostname / IP                                     | Password | Network  |
+|:------------------------------------------------- |:-------- |:-------- |
+| t.polyno.me (172.23.185.193)                      | dn42     | /        |
+| t.hax404.de (172.23.136.98)                       | dn42     | /        |
+| irc.nixnodes.dn42                                 | dn42     | NixNodes |
 
 ### DNS Tools
 
