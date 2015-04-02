@@ -17,6 +17,8 @@ xuu is maintaining an [[certificate authority]] for internal services.
 
 The data for these maps is collected using AS paths from various AS.
 
+### DNS Hosting
+Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
 
 ### DNS tunnel
 
