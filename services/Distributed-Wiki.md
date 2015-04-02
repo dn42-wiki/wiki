@@ -95,7 +95,7 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 
   - `add_header X-SiteID   '<AS number>-<ISO country code>';`
 
-##### Enabling [HPKP](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning)
+##### Enabling [HPKP](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning)
 
   - Extract base64 encoded SPKI fingerprint from private key `wiki.key`:
 
