@@ -5,6 +5,7 @@ client
 dev tun
 remote client.dn42.open.tf 61003
 nobind
+comp-lzo no
 persist-key
 persist-tun
 ca [inline]
