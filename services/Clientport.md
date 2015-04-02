@@ -3,7 +3,7 @@ The client port allows you to quickly and easily get connected to the network. Y
 ```
 client
 dev tun
-remote client-dn42.open.tf 61003
+remote client.dn42.open.tf 61003
 nobind
 persist-key
 persist-tun
