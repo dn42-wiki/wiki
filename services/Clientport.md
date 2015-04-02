@@ -1,6 +1,7 @@
 The client port allows you to quickly and easily get connected to the network. You can connect using OpenVPN.
 
-```client
+```
+client
 dev tun
 remote client-dn42.open.tf 61003
 nobind
@@ -52,3 +53,4 @@ cDZ051jFNh2JwsGUox0SaY1/vkoyr7sxADTPIt5PTPgnbwNk+j6al2gYRG619hgh
 gH+kMvJH
 -----END CERTIFICATE-----
 </ca>
+```
