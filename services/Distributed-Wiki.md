@@ -73,6 +73,8 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
 
+    Set `<path>` to the location where wiki Git repo was cloned. 
+
 ## Nginx proxy
 
 #### SSL
