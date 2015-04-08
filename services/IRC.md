@@ -15,3 +15,7 @@ We have several [hackint](http://www.hackint.eu/)-IRC-Servers, reachable via int
 **Usage with SSL (6697/tcp) is preferred.**
 
 **Please join #dn42.**
+
+## Bouncers
+
+Ask stv0g for free bouncers (ZNC).
