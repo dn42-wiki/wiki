@@ -43,4 +43,4 @@ As of 2014, most people seem to use either Quagga or Bird (with a growing prefer
 
 ### Can I update the wiki?
 
-Yes.
+Yes, but only when connecting to this site via dn42 over SSL.
