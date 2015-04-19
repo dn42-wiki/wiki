@@ -31,3 +31,5 @@
 --------------
 
 [[_TOC_]]
+
+<img src="https://dev.0l.de/piwik/piwik.php?idsite=12&rec=1" />
