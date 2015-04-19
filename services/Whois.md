@@ -11,7 +11,7 @@ dn42 uses some names and numbers, which are declared in the registry.  Whenever 
 
 ## Address space
 
-dn42 uses **172.22.0.0/15** for IPv4.
+dn42 uses **172.22.0.0/15** and **172.20.0.0/16** for IPv4.
 
 For IPv6, we use both ULA (that is, **fd00::/8**) and globally unique PI/PA address space of participants. ULA is prefered for various reasons, see the [FAQ](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42).
 
