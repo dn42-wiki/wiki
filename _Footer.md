@@ -1,1 +1,3 @@
 Hosted by: [mortzu](mailto:me@mortzu.de), [xuu](mailto:xuu@sour.is), [nurtic-vibe](mailto:nurtic-vibe@grmml.eu), [siska](mailto:siska@nixnodes.net) | Accessible via: [dn42](http://wiki.dn42), [tor](http://jsptropkiix3ki5u.onion), [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/)
+
+<img src="https://dev.0l.de/piwik/piwik.php?idsite=12&rec=1" />
