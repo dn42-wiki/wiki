@@ -1,6 +1,16 @@
 Bird is a commonly used BGP daemon.  This page provides configuration and help to run Bird for dn42.
 Compared to quagga, bird supports multiple routing, which is useful, if you also plan to peer with other federated networks such as freifunk.
 
+# Debian
+The version in the Debian repositories might be quite old, therefore it makes sense to install a newer one directly from bird:
+```
+wget -O - http://bird.network.cz/debian/apt.key | apt-key add -
+apt-get install lsb-release
+echo "deb http://bird.network.cz/debian/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/bird.list
+apt-get update
+apt-get install bird
+```
+
 # Example configuration
 
 * Replace `<AS>` with your Autonomous System Number
