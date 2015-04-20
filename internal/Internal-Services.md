@@ -115,11 +115,11 @@ Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure de
 
 ### Torrent Tracker
 
-| Hostname / IP        | Port | Protocol    | Remarks        |
-|:---------------------|:-----|:------------|:---------------|
-| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |
-| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |
-| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    |
+| Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
+|:---------------------|:-----|:------------|:---------------|:----------------------------------------|
+| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    | http://tracker.grmml.dn42:6969/announce |
+| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |                                         |
+| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    |                                         |
 
 ## Proxies
 
