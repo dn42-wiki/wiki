@@ -148,6 +148,7 @@ Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can acce
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
 | repo.dn42 (172.23.44.40)                          | Debian, Proxmox, Percona, Dotdeb, Virtualmin |Daily at 2AM GMT+1
+| mirror.dn42                                       | Debian, Ubuntu                      |                                     |
 
 
 ## Crypto coins
