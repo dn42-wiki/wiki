@@ -13,11 +13,11 @@ apt-get install bird
 
 # Example configuration
 
-* Replace `<AS>` with your Autonomous System Number (only the numbers)
+* Replace `<AS>` with your Autonomous System Number (only the digits)
 * Replace `<GATEWAY_IP>` with your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
 * Replace `<SUBNET>` with your registered dn42 subnet, which you allocated on [nixnodes](https://io.nixnodes.net/)
 * Replace `<PEER_IP>` with the ip of your peer who is connected with you using your favorite vpn protocol (openvpn, ipsec, tinc, ...)
-* Replace `<PEER_AS>` the Autonomous System Number of your peer
+* Replace `<PEER_AS>` the Autonomous System Number of your peer (only the digits)
 * Replace `<PEER_NAME>` a self chosen name for your peer
 
 ### IPV4
