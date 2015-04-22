@@ -117,9 +117,9 @@ Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure de
 
 | Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
 |:---------------------|:-----|:------------|:---------------|:----------------------------------------|
-| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    | http://tracker.grmml.dn42:6969/announce |
+| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |http://tracker.grmml.dn42:6969/announce |
 | tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |http://tracker.mhm.dn42:6969/announce                                        |
-| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42announce                                        |
+| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce                                        |
 
 ## Proxies
 
