@@ -45,8 +45,8 @@ There are a few different scripts for generating zone files. They have been writ
 | prauscher   | DE | 64720 | prauscher.root.dn42 (172.22.120.1) | advertised in BGP |
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
 | psclrnnrt   | DE | 4242420205 | nsc421.root6.dn42 (172.23.65.5) |
-| tombii      | SG | 4242420321 | sg-sin1.tombii.dn42 (172.23.102.65) |
-| tombii      | US | 4242420321 | us-sfo1.tombii.dn42 (172.23.102.39) |
+| tombii      | SG | 4242420321 | sg-sin1.tombii.dn42 (172.22.102.65) |
+| tombii      | US | 4242420321 | us-sfo1.tombii.dn42 (172.22.102.39) |
 
 # IPv6 DNS
 
