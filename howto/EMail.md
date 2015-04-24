@@ -10,9 +10,9 @@ There are forwarding rules for _PERSON_ @ dn42.org to the mail addresses which h
 
 ####Example####
 
-| Handle       | Alias           | Redirection           |
-|:------------ |:--------------- |:--------------------- |
-| `STV0G-DN42` |`stv0g@dn42.org` | post@steffenvogel.de` |
+| Handle       | Alias          | Redirection           |
+|:------------ |:-------------- |:--------------------- |
+| `STV0G-DN42` | stv0g@dn42.org | post@steffenvogel.de` |
 
 ## Exim tips
 
