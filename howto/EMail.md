@@ -4,6 +4,16 @@ Running email in dn42 is not very complicated.  Your SMTP daemon probably alread
 * setup DNS (MX records, or simply relevant A records)
 * configure your mail server if needed
 
+## Redirect
+
+There are forwarding rules for _PERSON_ @ dn42.org to the mail addresses which hav been given in the registry. Please note that the trailing `-DN42` is stripped from the local part.
+
+####Example####
+
+| Handle       | Alias           | Redirection           |
+|:------------ |:--------------- |:--------------------- |
+| `STV0G-DN42` |`stv0g@dn42.org` | post@steffenvogel.de` |
+
 ## Exim tips
 
 ### Sending emails
