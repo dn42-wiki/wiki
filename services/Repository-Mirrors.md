@@ -17,6 +17,15 @@ Hosted by:
 * Nurtic-Vibe
 * Martin89
 
+Proxy to load from regular mirrors:
+http://172.23.246.129:3142/regularmirror/debian
+
+**How to use it:**
+deb http://172.23.246.129:3142/_regularmirror_/debian main
+
+Hosted by:
+* florianb
+
 ## Ubuntu
 
 **ubuntu.mirror.dn42**
