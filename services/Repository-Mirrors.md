@@ -16,8 +16,9 @@ Hosted by:
 Hosted by:
 * Nurtic-Vibe
 * Martin89
+<br>
 
-Proxy to load from regular mirrors:
+Proxy to load from regular mirrors:<br>
 http://172.23.246.129:3142/regularmirror/debian
 
 **How to use it:**
