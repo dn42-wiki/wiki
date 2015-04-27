@@ -120,7 +120,7 @@ add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-a
 
 The proxy should accept the following domain names:
 
-  - internal.dn42 (not anycasted yet)
+  - internal.dn42
   - wiki.dn42
 
 Nginx should listen on a unicast address as well, so your site can be reached exclusively. Assign an IP address for the occasion and send it to [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) including your AS `<aut-num>` and the country code `<CC>` where your site is located. A forward DNS record will be created, pointing to the unicast IP address:
