@@ -96,14 +96,14 @@ function update_crypto(int link_crypto) {
 }
 	
 function update_flags(int link_latency; int link_bandwidth; int link_crypto)
-int latency;
-int bandwidth;
-int crypto;
+int dn42_latency;
+int dn42_bandwidth;
+int dn42_crypto;
 {
-latency = update_latency(link_latency);
-bandwidth = update_bandwidth(link_bandwidth) - 20;
-crypto = update_crypto(link_crypto) - 30;
-if bandwidth > 4 then bandwidth = 4;
+dn42_latency = update_latency(link_latency);
+dn42_bandwidth = update_bandwidth(link_bandwidth) - 20;
+dn42_crypto = update_crypto(link_crypto) - 30;
+if dn42_bandwidth > 4 then dn42_bandwidth = 4;
 return true;
 } 
 ```
@@ -122,8 +122,8 @@ include "/etc/bird/community_filters.conf";
 ### Bird bgp_local_pref calculation
 If you are running a bigger network and also want to prioritize your traffic based on the communities, then you can look at the following below:
 ```
-bgp_local_pref = 10000+100*bandwidth + 50*(10-latency)-200*bgp_path.len+100*crypto; (as suggested by tombii)
-bgp_local_pref = 1000*bandwidth - 10*latency; if crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
+bgp_local_pref = 10000+100*dn42_bandwidth + 50*(10-dn42_latency)-200*bgp_path.len+100*dn42_crypto; (as suggested by tombii)
+bgp_local_pref = 1000*dn42_bandwidth - 10*dn42_latency; if dn42_crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
 ```
 This calculation goes into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to skip the bgp_local_pref calculation part until you fully unterstand BGP routing and how this will affect not only you but the whole network. Assigning community flags to your peerings will hoever have an impact on dn42 in total. Remember, probably none of these alternatives are a good fit for your network, you will need to apply one and see how it affects your traffic and then going back and tweaking the formula and checking again.
 
