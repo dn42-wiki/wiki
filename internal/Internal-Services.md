@@ -121,6 +121,11 @@ Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure de
 | tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |http://tracker.mhm.dn42:6969/announce                                        |
 | tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce                                        |
 
+### Torrent Index
+
+* http://torrents.dn42
+* https://torrents.dn42
+
 ## Proxies
 
  See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
