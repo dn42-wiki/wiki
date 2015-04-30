@@ -13,6 +13,7 @@ Ideas for stuff that are technically difficult on the Internet:
 
   - multicast routing (well, it doesn't work in dn42 either)
   - something that depends on the network infrastructure or topology (e.g. a game where you have to announce things with BGP)
+  - CloudStack Implementation to test fail-over to different locations
 
 ---
 
