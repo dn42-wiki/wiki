@@ -1,21 +1,32 @@
 # IRC
+> TLDR: irc.hackint.dn42, #dn42
 
-We have several [hackint](http://www.hackint.eu/)-IRC-Servers, reachable via internet, but also via dn42 and ChaosVPN.
+We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is reachable from within DN42, ChaosVPN and the public internet. While a plain text connection is possible it is recommended to connect via TLS on port 9999.
+
 
 ## Servers
 
-| Hostname / IP                                     | Ports                      | Reachability |
+### via dn42
+| Hostname                                     | IPv4                      | IPv6 |
 |:------------------------------------------------- |:-------------------------- |:------------ |
-| irc://lechuck.darmstadt.ccc.de (172.31.98.1)      |                            | dn42 & public |
-| irc://irc.chaostreff-dortmund.de (195.160.168.7)  | 6666-6669 & SSL 6697, 9999 | public       |
-| irc://irc.spaceboyz.net (87.106.131.203, 2001:8d8:81:5c0::1) | 6666-6669 & SSL 6697,9999 | public |
-| irc://irc.hackint.dn42/dn42 (172.22.24.1)         | 6666-6669 & SSL 6697, 9999 | dn42         |
-| irc://irc.hackint.hack/dn42 (172.31.0.30)         |                            | ChaosVPN     |
+| irc.hackint.dn42 | 172.23.96.42 | fdfd42:23:cda::6667 |
+| | 172.22.2.235 | - |
+| | 172.22.24.1 | - |
 
-**Usage with SSL (6697/tcp) is preferred.**
 
-**Please join #dn42.**
+### via chaosvpn
+| Hostname | IPv4 | IPv6 |
+|:------------------------------------------------- |:-------------------------- |:------------ |
+| irc.hackint.hack | 172.31.0.30 | - |
 
-## Bouncers
+### via public internet
+| Hostname | Comment |
+|:------------------------------------------------- |:-------------------------- |:------------ |
+| irc.hackint.org |  |
+| irc.eu.hackint.org | european server pool |
+| irc.us.hackint.org | american server pool |
 
-Ask stv0g for free bouncers (ZNC).
+
+## Bouncer Offers
+
+* stv0g: offering ZNC accounts
