@@ -7,26 +7,26 @@ We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is 
 ## Servers
 
 ### via dn42
-| Hostname                                     | IPv4                      | IPv6 |
+| Hostname                                          | IPv4                       | IPv6         |
 |:------------------------------------------------- |:-------------------------- |:------------ |
-| irc.hackint.dn42 | 172.23.96.42 | fdfd42:23:cda::6667 |
-| | 172.22.2.235 | - |
-| | 172.22.24.1 | - |
+| irc.hackint.dn42                                  | 172.23.96.42               | fdfd42:23:cda::6667 |
+|                                                   | 172.22.2.235               | -            |
+|                                                   | 172.22.24.1                | -            |
 
 
 ### via chaosvpn
-| Hostname | IPv4 | IPv6 |
+| Hostname                                          | IPv4                       | IPv6         |
 |:------------------------------------------------- |:-------------------------- |:------------ |
 | irc.hackint.hack | 172.31.0.30 | - |
 
 ### via public internet
-| Hostname | Comment |
-|:------------------------------------------------- |:-------------------------- |:------------ |
-| irc.hackint.org |  |
-| irc.eu.hackint.org | european server pool |
-| irc.us.hackint.org | american server pool |
+| Hostname                                          | Comment                    |
+|:------------------------------------------------- |:-------------------------- |
+| irc.hackint.org                                   |                            |
+| irc.eu.hackint.org                                | european server pool       |
+| irc.us.hackint.org                                | american server pool       |
 
 
 ## Bouncer Offers
 
-* stv0g: offering ZNC accounts (ask in IRC, [Webinterface](https://dev.0l.dn42/znc/)
+* stv0g: offering ZNC accounts (ask in IRC, [Webinterface](https://dev.0l.dn42/znc/))
