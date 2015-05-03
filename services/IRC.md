@@ -29,4 +29,4 @@ We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is 
 
 ## Bouncer Offers
 
-* stv0g: offering ZNC accounts
+* stv0g: offering ZNC accounts (ask in IRC, [Webinterface](https://dev.0l.dn42/znc/)
