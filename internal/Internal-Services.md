@@ -45,11 +45,12 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ## IRC
 
-| Hostname / IP                               | Remarks                 |
-|:------------------------------------------- |:----------------------- |
-| irc://irc.hackint.dn42/dn42 (172.22.2.235)  | DN42                    |
-| irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                |
-| irc://irc.nixnodes.dn42                     | NixNodes IRC Network    |
+| Hostname / IP                               | Remarks                                   |
+|:------------------------------------------- |:----------------------------------------- |
+| irc://irc.hackint.dn42/dn42 (172.22.2.235)  | DN42                                      |
+| irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                                  |
+| irc://irc.nixnodes.dn42                     | NixNodes IRC Network                      |
+| ircs://fpletz.darkfasel.dn42 (172.23.214.5) | darkfasel, TLSv1+ only, Ports 6697 & 9999 |
 
 ## Search engines
 
