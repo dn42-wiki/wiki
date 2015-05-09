@@ -41,3 +41,7 @@ Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of t
 ## Providing DNS services
 
 See [[Providing Anycast DNS]].
+
+## [[Hierarchical DNS]]
+
+This is a new effort to build a DNS system that mirrors how DNS was designed to work in clearnet. 
