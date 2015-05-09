@@ -8,10 +8,10 @@ The purpose of this project is to create a system of high quality dns roots. Wit
    - arpa
      - in-addr
        - 172
-         - 20 (Reserved for future use)
-         - 21 (Reserved for future use)
-         - 22
-         - 23
+           - 20 (Reserved for future use)
+           - 21 (Reserved for future use)
+           - 22
+           - 23
    - dn42
      - {{dn42 domain names}}
    - {{Future Top Level Domains?}}
