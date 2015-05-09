@@ -29,7 +29,7 @@ For all of these servers they have a specific IP assigned, are not anycasted, on
 
 **{{name}}.arpa-servers.arpa** - This server is authoritative for "arpa", "in-addr", and each of the 172 zones for dn42 ip space. For non dn42 ip space NS records to the respective darknet would need to be registered. 
 
-{{name}}.zone-servers.arpa - This server is authoritative for any RFC 2317 delegations. When generating for the rdns zones if nameservers are registered for a /25-28 inetnum the NS should point here to allow for proper delegation.
+**{{name}}.zone-servers.arpa** - This server is authoritative for any RFC 2317 delegations. When generating for the rdns zones if nameservers are registered for a /25-28 inetnum the NS should point here to allow for proper delegation.
 
 **{{name}}.zone-servers.dn42** - This server holds the zone files for the various *-servers.* 
 
