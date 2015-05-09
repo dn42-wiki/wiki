@@ -60,6 +60,7 @@ xuu.zone-servers.dn42.  300     IN      A       172.22.141.180
 
 ## Example Configs
 
+```
 ::::::::::::::
 db.dot
 ::::::::::::::
@@ -157,3 +158,4 @@ zone-servers.dn42.     IN AAAA fdea:a15a:77b9:4444::3
 souris IN A 172.22.141.3
 souris IN AAAA fdea:a15a:77b9:4444::3
 xuu    IN A 172.22.141.180
+```
