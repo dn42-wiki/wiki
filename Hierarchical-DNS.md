@@ -56,3 +56,104 @@ xuu.zone-servers.dn42.  300     IN      A       172.22.141.180
 ;; Received 66 bytes from fdea:a15a:77b9:4444::3#53(souris.zone-servers.dn42) in 0 ms
 
 ```
+
+
+## Example Configs
+
+::::::::::::::
+db.dot
+::::::::::::::
+$TTL 5m
+.     IN SOA  souris.root-servers.dn42. xuu.dn42.us.  ( 2015050100 5m 15m 1w 5m )
+.     IN NS   souris.root-servers.dn42.
+
+dn42. IN NS   souris.dn42-servers.dn42.
+arpa. IN NS   souris.arpa-servers.arpa.
+
+souris.root-servers.dn42. IN A 172.22.141.1
+souris.root-servers.dn42. IN AAAA fdea:a15a:77b9:4444::1
+
+souris.dn42-servers.dn42. IN A 172.22.141.2
+souris.dn42-servers.dn42. IN AAAA fdea:a15a:77b9:4444::2
+
+
+
+::::::::::::::
+db.arpa
+::::::::::::::
+$TTL 300
+arpa.     IN SOA  souris.arpa-servers.arpa. xuu.dn42.us.  ( 2015050100 5m 15m 1w 5m )
+          IN NS   souris.arpa-servers.arpa. 
+
+arpa-servers.arpa.   IN NS   souris.zone-servers.dn42.
+20.172.in-addr.arpa. IN NS   souris.root.dn42.
+22.172.in-addr.arpa. IN NS   souris.root.dn42.
+23.172.in-addr.arpa. IN NS   souris.root.dn42.
+
+souris.arpa-servers.arpa. IN A    172.22.141.4
+souris.arpa-servers.arpa. IN AAAA fdea:a15a:77b9:4444::4
+
+::::::::::::::
+db.dn42
+::::::::::::::
+$TTL 300
+dn42.     IN SOA  souris.dn42-servers.dn42. xuu.dn42.us.  ( 2015050700 5m 15m 1w 5m )
+dn42.     IN NS   souris.dn42-servers.dn42. 
+
+xuu.dn42.          IN NS   souris.root.dn42.
+root.dn42.         IN NS   souris.root.dn42.
+
+root-servers.dn42. IN NS   souris.zone-servers.dn42.
+dn42-servers.dn42. IN NS   souris.zone-servers.dn42.
+zone-servers.dn42. IN NS   souris.zone-servers.dn42.
+
+souris.root.dn42. IN A 172.22.141.180
+souris.root.dn42. IN AAAA fdea:a151:77b9:53::1
+
+souris.dn42-servers.dn42. IN A    172.22.141.2
+souris.dn42-servers.dn42. IN AAAA fdea:a15a:77b9:4444::2
+
+souris.zone-servers.dn42. IN A    172.22.141.3
+souris.zone-servers.dn42. IN AAAA fdea:a15a:77b9:4444::3
+
+::::::::::::::
+db.dn42-servers.dn42
+::::::::::::::
+$TTL 300
+dn42-servers.dn42.     IN SOA  souris.zone-servers.dn42. xuu.dn42.us.  ( 2015050100 5m 15m 1w 5m )
+dn42-servers.dn42.     IN NS   souris.zone-servers.dn42. 
+
+dn42-servers.dn42.     IN A    172.22.141.2
+dn42-servers.dn42.     IN AAAA fdea:a15a:77b9:4444::2
+
+souris.dn42-servers.dn42. IN A    172.22.141.2
+souris.dn42-servers.dn42. IN AAAA fdea:a15a:77b9:4444::2
+
+
+::::::::::::::
+db.root-servers.dn42
+::::::::::::::
+$TTL 5m
+root-servers.dn42.  IN SOA  souris.zone-servers.dn42. xuu.dn42.us.  ( 2015050100 5m 15m 1w 5m )
+root-servers.dn42.  IN NS   souris.zone-servers.dn42.
+
+root-servers.dn42.     IN A    172.22.141.1
+root-servers.dn42.     IN AAAA fdea:a15a:77b9:4444::1
+
+souris IN A 172.22.141.1
+souris IN AAAA fdea:a15a:77b9:4444::1
+
+
+::::::::::::::
+db.zone-servers.dn42
+::::::::::::::
+$TTL 5m
+zone-servers.dn42. IN SOA  souris.zone-servers.dn42. xuu.dn42.us.  ( 2015050100 5m 15m 1w 5m )
+                   IN NS   souris.zone-servers.dn42. 
+
+zone-servers.dn42.     IN A    172.22.141.3
+zone-servers.dn42.     IN AAAA fdea:a15a:77b9:4444::3
+
+souris IN A 172.22.141.3
+souris IN AAAA fdea:a15a:77b9:4444::3
+xuu    IN A 172.22.141.180
