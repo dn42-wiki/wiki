@@ -68,7 +68,8 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://media.dn42                                 | A Mediagoblin instance                                   |
-| https://dev.0l.dn42/tvheadend/                    | Digital Video Recorder (TVHeadend frontend)              |
+| http://dev.0l.dn42:9981/tvheadend/                | Digital Video Recorder (TVHeadend frontend)              
+|
 | ftp://dev.0l.dn42/Videos/Recordings/              | Digital Video Recorder (Recorded files)                  |
 
 ## Radio and Video Streaming
