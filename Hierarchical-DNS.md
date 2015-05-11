@@ -1,6 +1,6 @@
 DNS in the global internet is designed as a tree starting from "." and traveling outward in layers. Currently in DN42 dns is flat. This leads to issues when trying to debug problems and makes it difficult to delegate to subnets smaller than /24. Another problem that arises is having the root dns setup as an anycast. If one of the anycast roots is having problems it creates inconsistent errors for some users. This has led to the problem of when a user has a poorly configured anycast available to create their own root anycast. 
 
-The purpose of this project is to create a system of high quality dns roots. With them in place, an anycast resolver would only need to be a simple caching server that uses the roots to query. 
+The purpose of this project is to create a system of high quality dns roots. With them in place, an anycast resolver would only need to be a simple caching resolver that uses the roots to query. 
 
 ## Hierarchy in DN42
 
