@@ -92,7 +92,7 @@ template bgp dnpeers {
     }
     reject;
   };
-  route limit 10000;
+  import limit 10000;
   source address OWNIP;
 };
 
