@@ -9,3 +9,4 @@ Providers:
 | RyanH         | 256 MB | 10 GB | dn42 + 1Gbit Public (FS) | 4 x 3.40GHz | OpenVZ/KVM in RBX, FR (AS4242421011) |12|
 |siska 	        | 384 MB  | 40 GB | 10/10 Mbit | 1 x 2.9Ghz  | KVM / QEMU (VNC) (AS76103) | 0 |
 |florianb       | 384 MB  | 5GB   | dn42 only  | 1x 2.2Ghz   | OpenVZ in Germany, good peers | always enough
+|nellicus       | 384 MB  | 5GB - 10GB   | dn42 only  | 1x 2.6Ghz   | Xen/KVM Washington, DC USA | 0
