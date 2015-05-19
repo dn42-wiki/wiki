@@ -3,7 +3,7 @@ Compared to quagga, bird supports multiple routing, which is useful, if you also
 
 # Debian
 The version in the Debian repositories might be quite old, therefore it makes sense to install a newer one directly from bird:
-```
+```sh
 wget -O - http://bird.network.cz/debian/apt.key | apt-key add -
 apt-get install lsb-release
 echo "deb http://bird.network.cz/debian/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/bird.list
