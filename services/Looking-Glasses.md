@@ -15,6 +15,7 @@ Please sort by AS number.
 * AS 76103: http://lg.nixnodes.dn42 or http://lg.nixnodes.net (IPv4) → interactive (traceroute)
   * http://map.nixnodes.net or http://map.nixnodes.dn42 →  interactive BGP-graph
 * AS 4242420013: http://dn42.netrik.de/de-fra1/ or http://172.22.232.5/de-fra1/ → interactive, bgpmap
+* AS 4242420022: http://mhm.dn42:5001
 * AS 4242420101: http://edge1.core.chaos-darmstadt.de or http://lg.cda.dn42
 * AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
 * AS 4242420300: http://lg-fr-rbx.wolke7.me or http://lg-fr-rbx.wolke7.dn42
