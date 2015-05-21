@@ -6,8 +6,8 @@ If you would like to contact an individual network operator, you will find conta
 
 ## Mailing list
 
-* is at: dn42 /at/ lists.spaceboyz.net,
-* send a mail to dn42-subscribe /at/ lists.spaceboyz.net to subscribe
+* is at: dn42 /at/ lists.nox.tf,
+* send a mail to dn42-subscribe /at/ lists.nox.tf to subscribe
 * has [archive](http://lists.spaceboyz.net/pipermail/dn42/)
 * can be accessed via [NNTP](/services/News) as well. The group is alt.net.dn42.users
 
