@@ -69,6 +69,7 @@ The [[Getting started]] page helps you to get your first node inside the network
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
+* [NixNodes](https://nixnodes.net)
 
 ## About this wiki
 
