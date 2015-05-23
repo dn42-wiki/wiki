@@ -1,6 +1,6 @@
 ## About dn42
 
-dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, [DNS](http://en.wikipedia.org/wiki/Domain_Name_System), etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), [IPsec](http://en.wikipedia.org/wiki/IPsec)), and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.22.0.0/15` range and private AS numbers are used (see [registry](/services/Whois)). We're in process of expanding the used address space to include `172.20.0.0/16`.
+dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, [DNS](http://en.wikipedia.org/wiki/Domain_Name_System), etc).  Participants connect to each other using network tunnels ([GRE](http://en.wikipedia.org/wiki/Generic_Routing_Encapsulation), [OpenVPN](http://en.wikipedia.org/wiki/Openvpn), [Tinc](http://tinc-vpn.org/), [IPsec](http://en.wikipedia.org/wiki/IPsec)) and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.22.0.0/15` range and private AS numbers are used (see [registry](/services/Whois)). We're in process of expanding the used address space to include `172.20.0.0/16`.
 
 A number of services are provided on the network: see [internal](http://wiki.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
 
@@ -20,7 +20,7 @@ Since dn42 is very similar to the Internet, it can be used as a hands-on testing
 
 dn42 is also a great way to connect hacker spaces in a secure way, so that they can provide services to each other.
 
-Have you ever wanted to SSH on your Raspberry Pi hosted at your local hacker space, and had trouble doing so because of NAT? If your hacker space was using dn42, it could have been much easier.
+Have you ever wanted to SSH on your Raspberry Pi hosted at your local hacker space and had trouble doing so because of NAT? If your hacker space was using dn42, it could have been much easier.
 
 Nowadays, most end-user networks use [NAT](http://en.wikipedia.org/wiki/Network_address_translation) to squeeze all those nifty computing devices behind a single public IPv4 address.  This makes it difficult to provide services directly from a machine behind the NAT.  Besides, you might want to provide some services to other hackerspaces, but not to anybody on the Internet.
 
@@ -72,6 +72,6 @@ The [[Getting started]] page helps you to get your first node inside the network
 
 ## About this wiki
 
-This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion), and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/), and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
+This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
 
 A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available for reference, but **beware**, most of the information there is outdated.
