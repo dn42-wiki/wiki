@@ -51,7 +51,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                                  |
 | irc://irc.nixnodes.dn42                     | NixNodes IRC Network                      |
 | ircs://fpletz.darkfasel.dn42 (172.23.214.5) | darkfasel, TLSv1+ only, Ports 6697 & 9999 |
-| irc://irc.byteturtle.dn42 (172.23.255.193)  | dn42 access for nerdhacks.net, SSL: 6697  |
+
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
