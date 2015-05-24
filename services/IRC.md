@@ -11,7 +11,7 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 ### via dn42
 | Hostname                                          | IPv4                       | IPv6         |
 |:------------------------------------------------- |:-------------------------- |:------------ |
-| irc.hackint.dn42                                  | 172.23.96.42               | fdfd42:23:cda::6667 |
+| [irc.hackint.dn42](irc://irc.hackint.dn42)                                  | 172.23.96.42               | fdfd42:23:cda::6667 |
 |                                                   | 172.22.2.235               | -            |
 |                                                   | 172.22.24.1                | -            |
 
@@ -19,14 +19,14 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 ### via chaosvpn
 | Hostname                                          | IPv4                       | IPv6         |
 |:------------------------------------------------- |:-------------------------- |:------------ |
-| irc.hackint.hack | 172.31.0.30 | - |
+| [irc.hackint.hack](irc://irc.hackint.hack) | 172.31.0.30 | - |
 
 ### via public internet
 | Hostname                                          | Comment                    |
 |:------------------------------------------------- |:-------------------------- |
-| irc.hackint.org                                   |                            |
-| irc.eu.hackint.org                                | european server pool       |
-| irc.us.hackint.org                                | american server pool       |
+| [irc.hackint.org](irc.hackint.org)                                   |                            |
+| [irc.eu.hackint.org](irc.eu.hackint.org)                               | european server pool       |
+| [irc.us.hackint.org](irc.us.hackint.org)                                | american server pool       |
 
 
 ## Bouncer Offers
