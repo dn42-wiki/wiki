@@ -24,9 +24,9 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 ### via public internet
 | Hostname                                          | Comment                    |
 |:------------------------------------------------- |:-------------------------- |
-| [irc.hackint.org](irc.hackint.org)                                   |                            |
-| [irc.eu.hackint.org](irc.eu.hackint.org)                               | european server pool       |
-| [irc.us.hackint.org](irc.us.hackint.org)                                | american server pool       |
+| [irc.hackint.org](irc://irc.hackint.org)                                   |                            |
+| [irc.eu.hackint.org](irc://irc.eu.hackint.org)                               | european server pool       |
+| [irc.us.hackint.org](irc://irc.us.hackint.org)                                | american server pool       |
 
 
 ## Bouncer Offers
