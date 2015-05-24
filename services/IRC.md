@@ -11,9 +11,8 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 ### via dn42
 | Hostname                                          | IPv4                       | IPv6         |
 |:------------------------------------------------- |:-------------------------- |:------------ |
-| [irc.hackint.dn42](irc://irc.hackint.dn42)                                  | 172.23.96.42               | fdfd42:23:cda::6667 |
-|                                                   | 172.22.2.235               | -            |
-|                                                   | 172.22.24.1                | -            |
+| [irc.hackint.dn42](irc://irc.hackint.dn42)        | 172.23.96.42/172.22.2.235               | fdfd42:23:cda::6667 |
+
 
 
 ### via chaosvpn
