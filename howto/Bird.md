@@ -116,7 +116,7 @@ Generate the filter list from the monotone repository
 
 ```
 $ cd net.dn42.registry
-$ ruby utils/bgp-filter.rb < data/filter.txt > /etc/bird/filter4.conf
+$ ruby utils/bgp-filter.rb --format bird < data/filter.txt > /etc/bird/filter4.conf
 
 or
 
@@ -245,7 +245,7 @@ Generate the filter list from the monotone repository
 
 ```
 $ cd net.dn42.registry
-$ ruby utils/bgp-filter.rb < data/filter6.txt > /etc/bird/filter6.conf
+$ ruby utils/bgp-filter.rb --format bird < data/filter6.txt > /etc/bird/filter6.conf
 
 or
 
