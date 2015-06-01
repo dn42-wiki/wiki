@@ -1,5 +1,9 @@
 # Statistics
-Please add your public statistics.
+
+
+## IRC
+
+Channel statistics for #dn42@hackint are available at: https://dev.0l.dn42/stats/.
 
 ## Scripts
 
