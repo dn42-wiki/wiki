@@ -27,7 +27,7 @@ For all of these servers they have a specific IP assigned, are not anycasted, on
 
 **{{name}}.dn42-servers.dn42** - This server is authoritative for "dn42" only. This would be where the records for all forward dns nameservers would be. Similar to our current root setup.
 
-**{{name}}.arpa-servers.arpa** - This server is authoritative for "arpa", "in-addr", and each of the 172 zones for dn42 ip space. For non dn42 ip space NS records to the respective darknet would need to be registered. 
+**{{name}}.in-addr-servers.arpa** - This server is authoritative for "arpa", "in-addr", and each of the 172 zones for dn42 ip space. For non dn42 ip space NS records to the respective darknet would need to be registered. 
 
 **{{name}}.zone-servers.arpa** - This server is authoritative for any RFC 2317 delegations. When generating for the rdns zones if nameservers are registered for a /25-28 inetnum the NS should point here to allow for proper delegation.
 
