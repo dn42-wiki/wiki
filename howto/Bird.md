@@ -64,6 +64,7 @@ protocol kernel {
   import none;
   export filter {
     krt_prefsrc = OWNIP;
+    if source = RTS_STATIC then reject;
     accept;
   };
 };
