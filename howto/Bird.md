@@ -62,9 +62,9 @@ protocol kernel {
   scan time 20;
   device routes;
   import none;
-  export filter {
-    krt_prefsrc = OWNIP;
+  export filter {    
     if source = RTS_STATIC then reject;
+    krt_prefsrc = OWNIP;
     accept;
   };
 };
