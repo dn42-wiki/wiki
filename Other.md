@@ -4,7 +4,9 @@
 
 - http://en.wikipedia.org/wiki/List_of_wireless_community_networks_by_region
 - http://en.wikipedia.org/wiki/Darknet_(networking)
+https://en.wikipedia.org/wiki/Category:Anonymity_networks
 - http://anonet2.biz/List%20of%20Anonymous%20Networks
+- https://en.wikipedia.org/wiki/Anonymous_P2P
 
 ## Anonymity
 
