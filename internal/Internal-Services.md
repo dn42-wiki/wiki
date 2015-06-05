@@ -134,9 +134,10 @@ Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure de
 
 ### Tor
 
-| Hostname / IP                                     | Bandwidth   | Nickname     |
-| ------------------------------------------------- | ----------- | ------------ |
-| socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C)
+| Hostname / IP                                     | Bandwidth   | Nickname     | Info   |
+| ------------------------------------------------- | ----------- | ------------ | ------------  |
+| socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis](https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C) |  |
+|tor.dn42 (172.22.0.94 [anycast]) | -- | -- | ORPort: 9001/tcp; DirPort: 9030/tcp; SocksPort: 9050/tcp |
 
 ### Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen
 Bodems (AS76124) is announcing 193.30.112.0/24 via his DFN-Node, so you can access the "[Digibib](http://www.digibib.net/jumpto?LOCATION=Bi10&D_SERVICE=TEMPLATE&D_SUBSERVICE=DIGILINK_BROWSE&DP_FUNC=CategoryView&DP_FILTER=All&DP_CID=14211)" through DN42 with a valid IP. For some parts (like VDE norms) you will need Citrix Receiver.
