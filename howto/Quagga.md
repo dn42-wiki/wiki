@@ -11,3 +11,35 @@ Use this in your `zebra.conf`:
     ip protocol bgp route-map RM_SET_SRC
 
 Unfortunately, this is not possible with IPv6...
+
+## Important bgp commands
+To connect to bgpd use:
+
+    $ vtysh
+
+Which provides an interactive interface.
+In this interface the following commands can be used:
+
+
+# show bpg session status
+
+in this example:
+* an active bgp session exists with peer 64713.
+* no (vpn) connection at all exists with peer 64692
+* a (vpn) connection with 4242421375 exists, but no bgp session
+
+```
+vtysh> show ip bgp summary 
+BGP router identifier 172.22.100.254, local AS number 64698
+RIB entries 938, using 103 KiB of memory
+Peers 11, using 49 KiB of memory
+Peer groups 1, using 32 bytes of memory
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+172.22.92.247   4 64692       0       0        0    0    0 never    Connect
+...
+172.22.113.2    4 64713    2206     865        0    0    0 01:23:11      322
+....
+172.23.64.1     4 4242421375  0       0        0    0    0 never    Active
+fe80::deca:fbad 4 64699     902     694        0    0    0 01:23:57      486
+```
