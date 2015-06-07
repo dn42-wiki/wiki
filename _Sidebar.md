@@ -7,6 +7,7 @@
 * [[How-to|/pages/howto/]]
   * [[Openvpn|openvpn]]
   * [[Bird|Bird]]
+  * [[Quagga|Quagga]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
