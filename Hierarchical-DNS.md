@@ -8,7 +8,7 @@ The purpose of this project is to create a system of high quality dns roots. Wit
    - arpa
      - in-addr
        - 172
-           - 20 (Reserved for future use)
+           - 20
            - 21 (Reserved for future use)
            - 22
            - 23
