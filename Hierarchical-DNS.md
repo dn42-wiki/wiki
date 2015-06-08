@@ -32,7 +32,7 @@ For all of these servers they have a specific IP assigned, only respond to their
 
 **{{name}}.dn42-servers.arpa** - This server is authoritative for any RFC 2317 delegations. When generating for the rdns zones if nameservers are registered for a /25-28 inetnum the NS should point here to allow for proper delegation.
 
-## Adding servers
+## Setup
 
 Contact one of the root-servers.dn42 operators if you wish to set up a root/zone/dn42 server. 
 
