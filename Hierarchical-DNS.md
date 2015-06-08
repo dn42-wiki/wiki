@@ -36,4 +36,6 @@ For all of these servers they have a specific IP assigned, only respond to their
 
 Contact one of the root-servers.dn42 operators if you wish to set up a root/zone/dn42 server. 
 
+You may set up a resolver at any time (link below), or use 172.23.0.53 directly.
+
 Techical information available [here](https://nixnodes.net/wiki/n/DN42_DNS)
