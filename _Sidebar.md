@@ -17,6 +17,7 @@
   * [[IRC]]
   * [[Whois registry|Whois]]
   * [[DNS]]  
+  * [[Hierarchical-DNS]]
   * [[Looking Glasses]]
   * [[Shell]]
   * [[Virtual Machines]]
