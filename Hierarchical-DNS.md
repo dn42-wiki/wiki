@@ -24,7 +24,7 @@ Note: With this system it could be possible to merge the IANA root file.. but it
 
 For all of these servers they have a specific IP assigned, only respond to their authoritative zones, and do not allow recursion. 
 
-**{{name}}.root-servers.dn42** - This server is authoritative for "." (root zone), "172.in-addr.arpa", "10.in-addr.arpa" and "d.f.ip6.arpa". Is authorative for ICANN root as well. "172.in-addr.arpa" is authorative for ICANN, except rfc1918 zones for which dn42 is authorative.
+**{{name}}.root-servers.dn42** - This server is authoritative for "." (root zone). Is authorative for ICANN root as well. "172.in-addr.arpa" is delegated to ICANN, except rfc1918 zones which are delegated to dn42. The rest of rfc1918 as well as rfc4193 address space is delegated to dn42. 
 
 **{{name}}.zone-servers.dn42** - This server is authoritative for "dn42", "hack", .. This would be where the records for all forward dns nameservers would be. Similar to our current root setup.
 
