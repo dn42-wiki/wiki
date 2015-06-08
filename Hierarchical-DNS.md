@@ -34,3 +34,5 @@ For all of these servers they have a specific IP assigned, only respond to their
 ## Adding servers
 
 Contact one of the root-servers.dn42 operators if you wish to set up a root/zone/dn42 server. 
+
+Techical information available [here](https://nixnodes.net/wiki/n/DN42:_Hierarchical_Domain_Name_System#Build_zones)
