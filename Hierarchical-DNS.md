@@ -9,7 +9,6 @@ The purpose of this project is to create a system of high quality dns roots. Wit
      - in-addr
        - 172
            - 20
-           - 21 (Reserved for future use)
            - 22
            - 23
    - dn42
