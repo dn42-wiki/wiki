@@ -14,8 +14,10 @@ The purpose of this project is to create a system of high quality dns roots. Wit
            - 23
    - dn42
      - {{dn42 domain names}}
+   - hack
+   - ffhh
    - {{Future Top Level Domains?}}
-   - {{hack, ano, bit or other organisation TLDs?}}
+   - {{ano, bit or other organisation TLDs?}}
    - {{ICANN TLDs}}
 
 Note: With this system it could be possible to merge the IANA root file.. but it would be beyond the scope of this project. 
