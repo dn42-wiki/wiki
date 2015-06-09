@@ -11,6 +11,7 @@ The purpose of this project is to create a system of high quality dns roots. Wit
            - 20
            - 22
            - 23
+           - 31
    - dn42
      - {{dn42 domain names}}
    - hack
