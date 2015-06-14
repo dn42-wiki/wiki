@@ -356,7 +356,7 @@ bird> show route for 172.22.141.181 # show possible routes to internal.dn42
 172.22.141.0/24    via 172.23.67.1 on tobee [tobee 07:20:30] * (100) [AS64737i]
                    via 172.23.64.1 on chelnok [chelnok 07:20:29] (100) [AS64737i]
                    via 172.23.136.65 on hax404 [hax404 07:20:26] (100) [AS64737i]
-bird> show route filtered
+bird> show route filtered # shows routed filtered out by rules
 172.23.245.1/32    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76175i]
 172.22.247.128/32  via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76175i]
 172.22.227.1/32    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76115i]
@@ -364,6 +364,8 @@ bird> show route filtered
 172.22.41.241/32   via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76115i]
 172.22.249.4/30    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS4242420002i]
 172.22.255.133/32  via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS64654i]
+bird> show route protocol <somepeer> # shows the route they export to you
+bird> show route export <somepeer> # shows the route you export to someone
 ...
 ```
 
