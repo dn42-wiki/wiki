@@ -60,6 +60,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 | http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
 |                                                   |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit)|
 | http://search.dn42 (172.23.184.1)                 | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
+| https://surf.dn42                                 | YaCy node                                       |
 
 ## Images and Media
 
