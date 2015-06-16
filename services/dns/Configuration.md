@@ -55,7 +55,7 @@ Add this to /etc/powerdns/recursor.conf (at least in Debian)
 
 ```
 dont-query=127.0.0.0/8, 10.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
-forward-zones= dn42=172.22.0.53,22.172.in-addr.arpa=172.22.0.53,23.172.in-addr.arpa=172.22.0.53
+forward-zones-**recurse**=dn42=172.22.0.53,22.172.in-addr.arpa=172.22.0.53,23.172.in-addr.arpa=172.22.0.53
 ```
 
 ## MaraDNS
