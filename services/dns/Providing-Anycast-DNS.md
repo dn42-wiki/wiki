@@ -35,7 +35,7 @@ There are a few different scripts for generating zone files. They have been writ
 
 | **Person**  | **Region** | **AS** | **Unicast Address**       | **Comments**       |
 |-------------|---|:------:|:----------------------------------:|--------------------|
-| siska       |SI | 76103  | resolver.nixnodes.dn42  (172.22.177.4)  | caching, dn42-only            |
+| siska       |SI | 76103  | a.resolvers.nic.dn42 (172.22.177.70)  ||
 | xuu         |UT,US | 64737  | xuu.root.dn42   (172.22.141.132)   ||
 | xuu         |ON,CA | 64737  | souris.root.dn42 (172.22.141.180)  ||          
 | Nurtic-Vibe |EU | 4242420123 | ns1.grmml.dn42 (172.23.149.20) || 
