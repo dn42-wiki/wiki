@@ -59,6 +59,36 @@ Apply a prefix list for incoming prefixes to your peer group:
 
     vtysh(config-router)> neighbor <peer-group-name> prefix-list <prefix-list-name> in
 
+#### Example filter list
+
+    ip prefix-list vpn-in description BGP IPv4 import filter
+    ip prefix-list vpn-in seq 10 permit 172.22.0.0/15 ge 22 le 28
+    ip prefix-list vpn-in seq 12 permit 172.22.0.53/32
+    ip prefix-list vpn-in seq 18 permit 192.175.48.0/24
+    ip prefix-list vpn-in seq 20 deny 10.10.10.0/24
+    ip prefix-list vpn-in seq 21 permit 10.0.0.0/8
+    ip prefix-list vpn-in seq 30 permit 172.31.0.0/16
+    ip prefix-list vpn-in seq 39 permit 100.64.0.0/10
+    ip prefix-list vpn-in seq 40 permit 195.160.168.0/23
+    ip prefix-list vpn-in seq 41 permit 91.204.4.0/22
+    ip prefix-list vpn-in seq 43 permit 193.43.220.0/23
+    ip prefix-list vpn-in seq 46 permit 83.133.178.0/23
+    ip prefix-list vpn-in seq 47 permit 87.106.29.254/32
+    ip prefix-list vpn-in seq 50 permit 85.25.246.16/28
+    ip prefix-list vpn-in seq 51 permit 46.4.248.192/27
+    ip prefix-list vpn-in seq 60 permit 94.45.224.0/19
+    ip prefix-list vpn-in seq 70 permit 195.191.196.0/23
+    ip prefix-list vpn-in seq 80 permit 80.244.241.224/27
+    ip prefix-list vpn-in seq 90 permit 46.19.90.48/28
+    ip prefix-list vpn-in seq 91 permit 46.19.90.96/28
+    ip prefix-list vpn-in seq 110 permit 188.40.34.241/32
+    ip p refix-list vpn-in seq 130 permit 37.1.89.192/26
+    ip prefix-list vpn-in seq 140 permit 178.33.32.123/32
+    ip prefix-list vpn-in seq 150 permit 87.98.246.19/32
+    ip prefix-list vpn-in seq 1000 deny 0.0.0.0/0
+
+    ipv6 prefix-list vpn-in seq 10 permit fd00::/8 ge 9
+    ipv6 prefix-list vpn-in seq 15 deny any
 
 ## show bpg session status
 
