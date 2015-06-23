@@ -20,6 +20,43 @@ To connect to bgpd use:
 Which provides an interactive interface.
 In this interface the following commands can be used:
 
+The following text use this placeholders:
+
+- `<AS>` your Autonomous System Number (only the digits)
+- `<GATEWAY_IP>` your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
+- `<SUBNET>` your registered dn42 subnet, which you allocated on [nixnodes](https://io.nixnodes.net/)
+- `<PEER_IP>` dn42 ip of your peer who is connected with you using your favorite vpn/tunnel protocol (openvpn, ipsec, tinc, ...)
+- `<INTERFACE>` Interface which is used to connect to the peer, in case of openvpn it is the tun device
+- `<PEER_AS>` Autonomous System Number of your peer (only the digits)
+
+## Configure a new ipv6 peering
+
+In your interactive vtysh session type the following:
+
+```
+vtysh> configure terminal
+vtysh> router bgp <AS>
+vtysh> neighbor <PEER_IP> remote-as <PEER_AS>
+vtysh> neighbor <PEER_IP> peer-group dn
+vtysh> neighbor <PEER_IP> interface <INTERFACE>
+vtysh> no neighbor <PEER_IP> activate
+vtysh> exit
+vtysh> address-family ipv6
+vtysh> neighbor <PEER_IP> activate
+vtysh> neighbor <PEER_IP> soft-reconfiguration inbound
+vtysh> exit
+```
+
+## Configure a new ipv4 peering
+
+```
+vtysh> configure terminal
+vtysh> router bgp <AS>
+vtysh> neighbor <PEER_IP> remote-as <PEER_AS>
+vtysh> neighbor <PEER_IP> peer-group dn
+vtysh> neighbor <PEER_IP> interface <INTERFACE>
+vtysh> exit
+```
 
 # show bpg session status
 
