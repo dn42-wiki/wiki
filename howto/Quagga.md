@@ -18,47 +18,49 @@ To connect to bgpd use:
     $ vtysh
 
 Which provides an interactive interface.
-In this interface the following commands can be used:
+In this interface '?' can be used to list the available commands or subcommands.
 
-The following text use this placeholders:
+## Configure Quagga
+a minimal config would look like this:
 
-- `<AS>` your Autonomous System Number (only the digits)
-- `<GATEWAY_IP>` your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
-- `<SUBNET>` your registered dn42 subnet, which you allocated on [nixnodes](https://io.nixnodes.net/)
-- `<PEER_IP>` dn42 ip of your peer who is connected with you using your favorite vpn/tunnel protocol (openvpn, ipsec, tinc, ...)
-- `<INTERFACE>` Interface which is used to connect to the peer, in case of openvpn it is the tun device
-- `<PEER_AS>` Autonomous System Number of your peer (only the digits)
+    vtysh> configure terminal
+    vtysh(config)> router bgp <your-asn>
+    vtysh(config-router)> neighbor <neighbor-ip> remote-as <neighbor-asn>
+    vtysh(config-router)> neighbor <neighbor-ip> interface <interface>
+    vtysh(config-router)> exit
+    vtysh(config)> exit
 
-## Configure a new ipv6 peering
+### IPv6
+for IPv6 do something like
 
-In your interactive vtysh session type the following:
+    vtysh> configure terminal
+    vtysh(config)> router bgp <your-asn>
+    vtysh(config-router)> neighbor <neighbor-ip> remote-as <neighbor-asn>
+    vtysh(config-router)> neighbor <neighbor-ip> interface <interface>
+    vtysh(config-router)> no neighbor <neighbor-ip> activate
+    vtysh(config-router)> address-family ipv6
+    vtysh(config-router-af)> neighbor <neighbor-ip> activate
+    vtysh(config-router-af)> exit
+    vtysh(config-router)> exit
+    vtysh(config)> exit
+    
+### peer groups, prefix lists and such
+If you want to use 'prefix-list' to filter some of the prefixes quagga is receiving, you can use a 'peer-group' instead of apply the prefix list to every neighbor. 
 
-```
-vtysh> configure terminal
-vtysh> router bgp <AS>
-vtysh> neighbor <PEER_IP> remote-as <PEER_AS>
-vtysh> neighbor <PEER_IP> peer-group dn
-vtysh> neighbor <PEER_IP> interface <INTERFACE>
-vtysh> no neighbor <PEER_IP> activate
-vtysh> exit
-vtysh> address-family ipv6
-vtysh> neighbor <PEER_IP> activate
-vtysh> neighbor <PEER_IP> soft-reconfiguration inbound
-vtysh> exit
-```
+Define a peer group:
 
-## Configure a new ipv4 peering
+    vtysh(config-router)> neighbor <peer-group-name> peer-group
 
-```
-vtysh> configure terminal
-vtysh> router bgp <AS>
-vtysh> neighbor <PEER_IP> remote-as <PEER_AS>
-vtysh> neighbor <PEER_IP> peer-group dn
-vtysh> neighbor <PEER_IP> interface <INTERFACE>
-vtysh> exit
-```
+Apply to a neighbor:
 
-# show bpg session status
+    vtysh(config-router)> neighbor <neighbor-ip> peer-group <name>
+
+Apply a prefix list for incoming prefixes to your peer group:
+
+    vtysh(config-router)> neighbor <peer-group-name> prefix-list <prefix-list-name> in
+
+
+## show bpg session status
 
 in this example:
 * an active bgp session exists with peer 64713.
