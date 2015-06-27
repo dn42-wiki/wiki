@@ -345,6 +345,17 @@ kernel1: reloading
 chelnok: reloading
 hax404: reloading
 static1: reload failed
+bird> show  ? # Completions work either by pressing tab or pressing '?'
+show bfd ...                                   Show information about BFD protocol
+show interfaces                                Show network interfaces
+show memory                                    Show memory usage
+show ospf ...                                  Show information about OSPF protocol
+show protocols [<protocol> | "<pattern>"]      Show routing protocols
+show roa ...                                   Show ROA table
+show route ...                                 Show routing table
+show static [<name>]                           Show details of static protocol
+show status                                    Show router status
+show symbols ...                               Show all known symbolic names
 bird> show protocols # this command shows your peering status
 name     proto    table    state  since       info
 device1  Device   master   up     07:20:25    
