@@ -39,8 +39,6 @@ For example, if your peer is 12ms away and the link speed between you is 250Mbit
 ## Example configurations 
 ```
 # /etc/bird/peers4/tombii.conf
-# As you are redefining the import and export filters, the check for is_valid_network() is no longer imported from dnpeers
-# This comes from my own experience so let me know if I'm wrong :) -tombii
 protocol bgp tombii from dnpeers {
   neighbor 172.23.102.x as 4242420321;
   import where dn42_import_filter(3,24,33);
