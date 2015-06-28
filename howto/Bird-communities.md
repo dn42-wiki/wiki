@@ -43,56 +43,44 @@ For example, if your peer is 12ms away and the link speed between you is 250Mbit
 # This comes from my own experience so let me know if I'm wrong :) -tombii
 protocol bgp tombii from dnpeers {
   neighbor 172.23.102.x as 4242420321;
-  import filter {
-    if is_valid_network() && !is_self_net() then {
-      update_flags(3,24,33);
-      accept;
-    }
-    reject;
-  };
-  export filter {
-    if is_valid_network() then {
-      update_flags(3,24,33);
-      accept;
-    }
-    reject;
-  };
+  import where dn42_import_filter(3,24,33);
+  export where dn42_export_filter(3,24,33);
 };
 ```
 ```
 #/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
-        bgp_community.add((64511, link_latency));
-             if (64511, 9) ~ bgp_community then { bgp_community.delete([(64511, 1..8)]); return 9; }
-        else if (64511, 8) ~ bgp_community then { bgp_community.delete([(64511, 1..7)]); return 8; }
-        else if (64511, 7) ~ bgp_community then { bgp_community.delete([(64511, 1..6)]); return 7; }
-        else if (64511, 6) ~ bgp_community then { bgp_community.delete([(64511, 1..5)]); return 6; }
-        else if (64511, 5) ~ bgp_community then { bgp_community.delete([(64511, 1..4)]); return 5; }
-        else if (64511, 4) ~ bgp_community then { bgp_community.delete([(64511, 1..3)]); return 4; }
-        else if (64511, 3) ~ bgp_community then { bgp_community.delete([(64511, 1..2)]); return 3; }
-        else if (64511, 2) ~ bgp_community then { bgp_community.delete([(64511, 1..1)]); return 2; }
-        else return 1;
+  bgp_community.add((64511, link_latency));
+       if (64511, 9) ~ bgp_community then { bgp_community.delete([(64511, 1..8)]); return 9; }
+  else if (64511, 8) ~ bgp_community then { bgp_community.delete([(64511, 1..7)]); return 8; }
+  else if (64511, 7) ~ bgp_community then { bgp_community.delete([(64511, 1..6)]); return 7; }
+  else if (64511, 6) ~ bgp_community then { bgp_community.delete([(64511, 1..5)]); return 6; }
+  else if (64511, 5) ~ bgp_community then { bgp_community.delete([(64511, 1..4)]); return 5; }
+  else if (64511, 4) ~ bgp_community then { bgp_community.delete([(64511, 1..3)]); return 4; }
+  else if (64511, 3) ~ bgp_community then { bgp_community.delete([(64511, 1..2)]); return 3; }
+  else if (64511, 2) ~ bgp_community then { bgp_community.delete([(64511, 1..1)]); return 2; }
+  else return 1;
 }
 
 function update_bandwidth(int link_bandwidth) {
-        bgp_community.add((64511, link_bandwidth));
-             if (64511, 21) ~ bgp_community then { bgp_community.delete([(64511, 22..29)]); return 21; }
-        else if (64511, 22) ~ bgp_community then { bgp_community.delete([(64511, 23..29)]); return 22; }
-        else if (64511, 23) ~ bgp_community then { bgp_community.delete([(64511, 24..29)]); return 23; }
-        else if (64511, 24) ~ bgp_community then { bgp_community.delete([(64511, 25..29)]); return 24; }
-        else if (64511, 25) ~ bgp_community then { bgp_community.delete([(64511, 26..29)]); return 25; }
-        else if (64511, 26) ~ bgp_community then { bgp_community.delete([(64511, 27..29)]); return 26; }
-        else if (64511, 27) ~ bgp_community then { bgp_community.delete([(64511, 28..29)]); return 27; }
-        else if (64511, 28) ~ bgp_community then { bgp_community.delete([(64511, 29..29)]); return 28; }
-        else return 29;
+  bgp_community.add((64511, link_bandwidth));
+       if (64511, 21) ~ bgp_community then { bgp_community.delete([(64511, 22..29)]); return 21; }
+  else if (64511, 22) ~ bgp_community then { bgp_community.delete([(64511, 23..29)]); return 22; }
+  else if (64511, 23) ~ bgp_community then { bgp_community.delete([(64511, 24..29)]); return 23; }
+  else if (64511, 24) ~ bgp_community then { bgp_community.delete([(64511, 25..29)]); return 24; }
+  else if (64511, 25) ~ bgp_community then { bgp_community.delete([(64511, 26..29)]); return 25; }
+  else if (64511, 26) ~ bgp_community then { bgp_community.delete([(64511, 27..29)]); return 26; }
+  else if (64511, 27) ~ bgp_community then { bgp_community.delete([(64511, 28..29)]); return 27; }
+  else if (64511, 28) ~ bgp_community then { bgp_community.delete([(64511, 29..29)]); return 28; }
+  else return 29;
 }
 
 function update_crypto(int link_crypto) {
-        bgp_community.add((64511, link_crypto));
-             if (64511, 31) ~ bgp_community then { bgp_community.delete([(64511, 32..34)]); return 31; }
-        else if (64511, 32) ~ bgp_community then { bgp_community.delete([(64511, 33..34)]); return 32; }
-        else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
-        else return 34;
+  bgp_community.add((64511, link_crypto));
+       if (64511, 31) ~ bgp_community then { bgp_community.delete([(64511, 32..34)]); return 31; }
+  else if (64511, 32) ~ bgp_community then { bgp_community.delete([(64511, 33..34)]); return 32; }
+  else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
+  else return 34;
 }
 	
 function update_flags(int link_latency; int link_bandwidth; int link_crypto)
@@ -100,15 +88,41 @@ int dn42_latency;
 int dn42_bandwidth;
 int dn42_crypto;
 {
-dn42_latency = update_latency(link_latency);
-dn42_bandwidth = update_bandwidth(link_bandwidth) - 20;
-dn42_crypto = update_crypto(link_crypto) - 30;
-if dn42_bandwidth > 4 then dn42_bandwidth = 4;
-return true;
-} 
+  dn42_latency = update_latency(link_latency);
+  dn42_bandwidth = update_bandwidth(link_bandwidth) - 20;
+  dn42_crypto = update_crypto(link_crypto) - 30;
+  # replace 4 with your calculated bandwidth value
+  if dn42_bandwidth > 4 then dn42_bandwidth = 4;
+  return true;
+}
+
+# Combines filter from local4.conf/local6.conf and filter4.conf/filter6.conf,
+# which means, these must included before this file
+
+function dn42_import_filter(int link_latency; int link_bandwith; int link_crypto) {
+  if is_valid_network() && !is_self_net() then {
+    update_flags(link_latency, link_bandwith, link_crypto);
+    accept;
+  }
+  reject;
+}
+
+function dn42_export_filter(int link_latency; int link_bandwith; int link_crypto) {
+  if is_valid_network() then {
+    update_flags(link_latency, link_bandwith, link_crypto);
+    accept;
+  }
+  reject;
+}
+
 ```
 Please remember to include /etc/bird/community_filters.conf in your bird.conf/birdc6.conf
 ```
+
+# local configuration
+######################
+include "bird/local4.conf";
+
 # filter helpers
 #################
 
