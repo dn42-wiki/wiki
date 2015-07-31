@@ -3,6 +3,9 @@
 You are asked to show some creativity in terms of network usage and content. ;)
 
 More ideas inspiration is collected on another [page](/internal/ideas).
+## Forum
+florianb is maintaining a forum for dn42 internal. 
+https://forum.dn42/
 
 ## CA
 
