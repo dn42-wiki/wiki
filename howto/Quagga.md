@@ -62,8 +62,15 @@ Apply a prefix list for incoming prefixes to your peer group:
 #### Example filter list
 
     ip prefix-list vpn-in description BGP IPv4 import filter
-    ip prefix-list vpn-in seq 10 permit 172.22.0.0/15 ge 22 le 28
+    !old network:
+    ip prefix-list vpn-in seq 5 permit 172.22.0.0/15 ge 22 le 28
+    !new dn42 allocation:
+    ip prefix-list vpn-in seq 10 permit 172.20.0.0/16 ge 22 le 28
+ 
+    ! Anycast /32s for Whois and DNS:
+    ip prefix-list vpn-in seq 11 permit 172.22.0.43/32
     ip prefix-list vpn-in seq 12 permit 172.22.0.53/32
+
     ip prefix-list vpn-in seq 18 permit 192.175.48.0/24
     ip prefix-list vpn-in seq 20 deny 10.10.10.0/24
     ip prefix-list vpn-in seq 21 permit 10.0.0.0/8
