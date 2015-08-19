@@ -33,6 +33,7 @@ Please sort by AS number.
 * AS 4242420184: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) **currently down**
 * AS 4242420200: http://lg.punkt.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242420321: http://lg.dn42 (IPv4 & IPv6) → interactive (traceroute, BGP-map)
+* AS 4242420812: http://lg.jan.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
 * AS 4242420820: http://node2-lg.servers.dn42 -> interactive (traceroute, BGP-map)
 
