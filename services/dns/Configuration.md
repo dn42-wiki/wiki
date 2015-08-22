@@ -12,6 +12,10 @@ zone "dn42" {
   type forward;
   forwarders { 172.22.0.53; };
 };
+zone "20.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.22.0.53; };
+};
 zone "22.172.in-addr.arpa" {
   type forward;
   forwarders { 172.22.0.53; };
@@ -32,6 +36,7 @@ config dnsmasq
         option rebind_protection '1'
         list rebind_domain 'dn42'
         list server '/dn42/172.22.0.53'
+        list server '/20.172.in-addr.arpa/172.22.0.53'
         list server '/22.172.in-addr.arpa/172.22.0.53'
         list server '/23.172.in-addr.arpa/172.22.0.53'
 ```
@@ -45,6 +50,7 @@ For normal dnsmasq use
 
 ```
 server=/dn42/172.22.0.53
+server=/20.172.in-addr.arpa/172.22.0.53
 server=/22.172.in-addr.arpa/172.22.0.53
 server=/23.172.in-addr.arpa/172.22.0.53
 ```
@@ -64,6 +70,7 @@ Put this in your mararc:
 ```
 ipv4_alias["dn42_root"] = "172.22.0.53"
 root_servers["dn42."] = "dn42_root"
+root_servers["20.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
 root_servers["23.172.in-addr.arpa."] = "dn42_root"
 ```
@@ -76,12 +83,17 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 ```
 server:
       domain-insecure: "dn42"
+      local-zone: "20.172.in-addr.arpa." nodefault
       local-zone: "22.172.in-addr.arpa." nodefault
       local-zone: "23.172.in-addr.arpa." nodefault
       local-zone: "d.f.ip6.arpa." nodefault
 
 forward-zone: 
       name: "dn42"
+      forward-addr: 172.22.0.53
+
+forward-zone: 
+      name: "20.172.in-addr.arpa"
       forward-addr: 172.22.0.53
 
 forward-zone: 
@@ -116,11 +128,16 @@ system {
 	          172.22.0.53;
 	       }
 	    }
+	    default-domain 20.172.in-addr.arpa {
+               forwarders {
+                  172.22.0.53;
+               }
+            }
 	    default-domain 22.172.in-addr.arpa {
                forwarders {
                   172.22.0.53;
                }
-            }                       
+            }
             default-domain 23.172.in-addr.arpa {
                forwarders {
                   172.22.0.53;
