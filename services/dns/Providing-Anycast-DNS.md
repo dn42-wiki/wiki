@@ -64,3 +64,4 @@ There are a few different scripts for generating zone files. They have been writ
 | xuu         |ON,CA| 64737 | souris.root.dn42 (fdea:a15a:77b9:53::1) | |
 | Nurtic-Vibe |EU |4242420123 | ns1.grmml.dn42 (fd42:23:149:cccc::53)  ||
 | hax404 | DE | 76114 | chero.hax404.dn42 (fd58:eb75:347d:101::1) ||
+| florianb | AT | 4242423955 | resolver.flo.dn42 (fd42:d42:d42:53::1) | advertisted in BGP |
