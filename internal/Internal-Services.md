@@ -95,7 +95,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage cloud in dn42.
 
 ### Direct Connect
-An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hub is being run at `hub.dcpp.dn42`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
+An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hub is being run at `hub.dcpp.dn42:2780`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
 
 ### FTP / HTTP
 
