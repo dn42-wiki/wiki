@@ -75,6 +75,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 |------------|---------------------------|-----------------|
 | nixnodes   | whois.nixnodes.dn42       | 172.22.177.77   |
 | org-cccda  | whois.cda.dn42            | 172.23.96.1 / fd42:23:cda::1 |
+| w0h        | whois.w0h.dn42            | 172.22.232.6 / fd2d:a6da:8d1a:1408::6 |
 
 ### Down?
 
