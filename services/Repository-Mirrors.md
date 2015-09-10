@@ -19,10 +19,10 @@ Hosted by:
 <br>
 
 **Proxy to load from regular mirrors:**<br>
-http://172.23.246.129:3142/regularmirror/debian
+http://172.23.246.1:3142/regularmirror/debian
 
 **How to use it:**<br>
-deb http://172.23.246.129:3142/_regularmirror_/debian main
+deb http://172.23.246.1:3142/_regularmirror_/debian main
 
 Hosted by:
 * florianb
