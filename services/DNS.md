@@ -1,4 +1,9 @@
 # DNS
+**The information below is outdated. 
+
+The new anycast resolver for `.dn42` runs on `172.23.0.53` and `TBD`. Please see [[Hierarchical DNS]] for more information.**
+
+***
 
 *(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.22.0.53` and `fd42:d42:d42:53::1`.
 
