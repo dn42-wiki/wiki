@@ -47,7 +47,6 @@ The [[Getting started]] page helps you to get your first node inside the network
 ## Participant Groups
 
 * [SpaceBoyz](http://spaceboyz.net)
-* [mw](http://mw.vc)
 * [CCC Bremen](http://ccchb.de)
 * [CCC Darmstadt](http://darmstadt.ccc.de)
 * [CCC Dresden](http://c3d2.de)
