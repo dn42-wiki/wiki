@@ -4,7 +4,7 @@ dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network
 
 A number of services are provided on the network: see [internal](http://wiki.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
 
-Still have questions? We have a [[FAQ]].
+Still have questions? We have  [[FAQs]].
 
 ## Why dn42?
 
