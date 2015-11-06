@@ -89,7 +89,7 @@ Apply a prefix list for incoming prefixes to your peer group:
     ip prefix-list vpn-in seq 90 permit 46.19.90.48/28
     ip prefix-list vpn-in seq 91 permit 46.19.90.96/28
     ip prefix-list vpn-in seq 110 permit 188.40.34.241/32
-    ip p refix-list vpn-in seq 130 permit 37.1.89.192/26
+    ip prefix-list vpn-in seq 130 permit 37.1.89.192/26
     ip prefix-list vpn-in seq 140 permit 178.33.32.123/32
     ip prefix-list vpn-in seq 150 permit 87.98.246.19/32
     ip prefix-list vpn-in seq 1000 deny 0.0.0.0/0
