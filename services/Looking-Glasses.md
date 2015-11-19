@@ -17,7 +17,6 @@ Please sort by AS number.
 * AS 4242420101: http://edge1.core.chaos-darmstadt.de or http://lg.cda.dn42
 * AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
 * AS 4242420300: http://lg-fr-rbx.wolke7.me or http://lg-fr-rbx.wolke7.dn42
-* AS 4242421588: http://lg.tech9computers.dn42
 
 **BROKEN**
 * AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes) 
@@ -34,6 +33,7 @@ Please sort by AS number.
 * AS 4242420200: http://lg.punkt.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242420321: http://lg.dn42 (IPv4 & IPv6) → interactive (traceroute, BGP-map)
 * AS 4242420812: http://lg.jan.dn42 (IPv4) → interactive (traceroute, BGP-map)
+* AS 4242421588: http://lg.tech9computers.dn42 (IPv4)
 * AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
 * AS 4242423955: http://lg.flo.dn42 -> interactive (traceroute, ping)
 
