@@ -34,6 +34,7 @@ Please sort by AS number.
 * AS 4242420321: http://lg.dn42 (IPv4 & IPv6) → interactive (traceroute, BGP-map)
 * AS 4242420812: http://lg.jan.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242421588: http://lg.tech9computers.dn42 (IPv4)
+* AS 4242422700: http://lg.gotroot.dn42 (IPv4)
 * AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
 * AS 4242423955: http://lg.flo.dn42 -> interactive (traceroute, ping)
 
