@@ -155,6 +155,8 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | ntp1.nixnodes.dn42 (172.22.177.123)               |                                     |
 | ntp2.nixnodes.dn42 (172.22.177.124)               |                                     |
 | ntp.martin89.dn42                                 | more than one A records/server      |
+| tick.gotroot.dn42                                 | Stratum 1, GPS, Vancouver Canada    |
+| tock.gotroot.dn42                                 | Stratum 2 or better, Anycast        |
 
 ## OS Mirror/Repository's
 
