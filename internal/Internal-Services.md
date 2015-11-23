@@ -72,6 +72,7 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
+| http://media.dn42                | A mediagoblin-Instance  |
 | http://dev.0l.dn42:9981/tvheadend/                | Digital Video Recorder (TVHeadend frontend)              
 |
 | ftp://dev.0l.dn42/Videos/Recordings/              | Digital Video Recorder (Recorded files)                  |
@@ -175,7 +176,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
-| denzel.mhm.dn42 (172.22.67.6)                     | Counter-Strike 1.5     | noWON :)                   |
+| hulk.mhm.dn42 (172.22.67.1)                     | Tetrinet     |                   |
 
 ## Misc 
 
