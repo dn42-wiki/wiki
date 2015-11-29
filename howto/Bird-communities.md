@@ -97,9 +97,9 @@ int dn42_crypto;
 # Combines filter from local4.conf/local6.conf and filter4.conf/filter6.conf,
 # which means, these must included before this file
 
-function dn42_import_filter(int link_latency; int link_bandwith; int link_crypto) {
+function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypto) {
   if is_valid_network() && !is_self_net() then {
-    update_flags(link_latency, link_bandwith, link_crypto);
+    update_flags(link_latency, link_bandwidth, link_crypto);
     accept;
   }
   reject;
