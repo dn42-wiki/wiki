@@ -138,6 +138,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 | Nurtic-Vibe | mtn.grmml.dn42 (172.23.149.20)| UP |
 | toBee | mtn.mhm.dn42 (172.23.67.120)| UP |
 | hexa- | mtn.hexa.dn42 (172.23.42.130) | UP |
+| tombii | mtn.tombii.dn42 (172.22.102.133) | UP |
 
 ## Monotone branches
  * net.dn42.registry: Contains the registry and some related code
