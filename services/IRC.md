@@ -27,6 +27,13 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 | [irc.eu.hackint.org](irc://irc.eu.hackint.org)                               | european server pool       |
 | [irc.us.hackint.org](irc://irc.us.hackint.org)                                | american server pool       |
 
+## Internal IRC
+We also have an IRC network accessible only from within dn42. It's currently a small network, consisting of just one server.
+It's accessible via `irc.dn42` on port `6697` with SSL.
+### Channels
+The main channel on this network is (unsurprisingly) `#dn42` however, you are free to open channels on any subject you seem fit.
+### Control Panel
+There's an Anope Web Control Panel available on `https://irc.dn42:8080`. You can register here, or register on IRC and then use your credentials to log into the web panel. It allows you to perform almost any task you are able to do on IRC.
 
 ## Bouncer Offers
 
