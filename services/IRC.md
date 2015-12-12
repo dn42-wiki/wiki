@@ -29,7 +29,7 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 
 ## Internal IRC
 We also have an IRC network accessible only from within dn42. It's currently a small network, consisting of just one server.
-It's accessible via `irc.dn42` on port `6697` with SSL.
+It's accessible via `irc.dn42` on port `6697` with SSL, or on `6667` without encryption.
 ### Channels
 The main channel on this network is (unsurprisingly) `#dn42` however, you are free to open channels on any subject you seem fit.
 ### Control Panel
