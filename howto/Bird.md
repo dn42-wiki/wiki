@@ -180,7 +180,7 @@ protocol device {
 # local configuration
 ######################
 
-include "bird/local6.conf";
+include "/etc/bird/local6.conf";
 
 # filter helpers
 #################
