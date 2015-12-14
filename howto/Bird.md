@@ -10,6 +10,7 @@ echo "deb http://bird.network.cz/debian/ $(lsb_release -sc) main" > /etc/apt/sou
 apt-get update
 apt-get install bird
 ```
+In case you are running Debian Jessie and this is not working for you, try replacing jessie with wheezy in the /etc/apt/sources.list.d/bird.list.
 
 # Example configuration
 
