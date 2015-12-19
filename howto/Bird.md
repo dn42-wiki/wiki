@@ -95,7 +95,7 @@ template bgp dnpeers {
     reject;
   };
   import limit 10000 action block;
-  source address OWNIP;
+  #source address OWNIP;
 };
 
 include "/etc/bird/peers4/*";
