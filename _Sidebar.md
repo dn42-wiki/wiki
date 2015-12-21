@@ -18,6 +18,7 @@
   * [[Hierarchical-DNS]]
   * [[DNS]]  
   * [[Looking Glasses]]
+  * [[Exchanges]]
   * [[Shell]]
   * [[Virtual Machines]]
   * [[Repository Mirrors]]
