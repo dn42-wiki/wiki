@@ -1,3 +1,5 @@
+#DEPRECATED - Please have a look at [Hierarchical DNS](https://internal.dn42/Hierarchical-DNS) instead
+
 You may want to participate in the anycast DNS cloud.
 
 ## Configuration
