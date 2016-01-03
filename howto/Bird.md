@@ -341,11 +341,9 @@ bird can be remote controlled via the `birdc` command. Here is a list of useful 
 ```
 $ birdc
 BIRD 1.4.5 ready.
-bird> reload all # reload configuration
-kernel1: reloading
-chelnok: reloading
-hax404: reloading
-static1: reload failed
+bird> configure # reload configuration
+Reading configuration from /etc/bird.conf
+Reconfigured
 bird> show  ? # Completions work either by pressing tab or pressing '?'
 show bfd ...                                   Show information about BFD protocol
 show interfaces                                Show network interfaces
