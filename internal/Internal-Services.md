@@ -175,7 +175,8 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
-| hulk.mhm.dn42 (172.22.67.1)                     | Tetrinet     |                   |
+| hulk.mhm.dn42 (172.22.67.1)                       | Tetrinet               |                            |
+| 172.20.187.221:27015                              | Counter Strike: Source |                            |
 
 ## Misc 
 
