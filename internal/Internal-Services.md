@@ -164,13 +164,6 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
 | mirror.dn42                                       | Debian, Ubuntu                      |                                     |
 
-
-## Crypto coins
-
-| Hostname / IP                                     | Remarks                             |
-|:------------------------------------------------- |:----------------------------------- |
-| bitcoin.e-utp.dn42 (172.22.165.55) | 8333 for Bitcoin, 9333 for Litecoin |
-
 ## Gaming
 
 | Hostname / IP                                     | Game                   | Remarks                    |
