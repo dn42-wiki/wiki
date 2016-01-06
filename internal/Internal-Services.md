@@ -115,6 +115,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://172.23.136.33                                        |       | 100Mbit/s   | some mediafiles/software                       |
 | http://files.martin89.dn42/                                 |       | max 2Mbit/s | download only                                  |
 | http://172.22.42.2              | ~6.5TB | ~400kbit   | WebDAV enabled, up 24/7z          |  |
+| http://filer.mhm.dn42.          |  4TB | 1GBit | 24/7/365 |  |
 
 ### Down?
 
@@ -168,7 +169,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
-| hulk.mhm.dn42 (172.22.67.1)                       | Tetrinet               |                            |
+| hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | 172.20.187.221:27015                              | Counter Strike: Source |                            |
 
 ## Misc 
