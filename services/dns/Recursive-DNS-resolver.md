@@ -31,3 +31,32 @@ stub-zone:
         stub-addr: 172.22.119.160
         stub-addr: 172.22.119.163
 ```
+
+### Unbound with root-hints
+Alternatively you can put dn42 root servers in the root-hints file for recursive resolving.
+
+```
+# /etc/unbound/unbound.conf.d/dn42.conf 
+server:
+        # DNSSEC validation will fail
+        val-permissive-mode: yes
+        # recursive queries for everyone
+        access-control: 0.0.0.0/0 allow
+        # dn42 root servers
+        root-hints: /etc/unbound/dn42.hints
+
+remote-control:
+        control-enable: no
+```
+
+The `/etc/unbound/dn42.hints` file:
+```
+.                                         NS    a.root-servers.dn42.
+a.root-servers.dn42.           3600000    A     172.22.177.6
+.                                         NS    m.root-servers.dn42.
+m.root-servers.dn42.           3600000    A     172.23.67.67
+.                                         NS    t.root-servers.dn42.
+t.root-servers.dn42.           3600000    A     172.22.102.141
+.                                         NS    x.root-servers.dn42.
+x.root-servers.dn42.           3600000    A     172.22.141.1
+```
