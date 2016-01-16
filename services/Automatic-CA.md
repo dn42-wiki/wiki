@@ -1,7 +1,7 @@
 DN42 Self-Serve CA
 ==================
 
-This client is used for automating the process of requesting TLS certificates. (Available: [dn42](https://ca.dn42/ca-client), [iana](https://ca.dn42.us/ca-client), [git](git@git.dn42:dn42/ca-client) 
+This client is used for automating the process of requesting TLS certificates. (Available: [dn42](https://ca.dn42/ca-client), [iana](https://ca.dn42.us/ca-client), [git](anon@git.dn42:dn42/ca-client) 
 
 
 VALIDATION PROCESS
