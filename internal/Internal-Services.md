@@ -145,7 +145,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | Hostname / IP                                     | Bandwidth   | Nickname     | Info   |
 | ------------------------------------------------- | ----------- | ------------ | ------------  |
 | socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis] | https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C
-| socks5://172.20.11.3:9050                      | 100 Mbit/s  | [twink0r]
+| socks5://172.20.11.33:9050                      | 100 Mbit/s  | [twink0r]
 |tor.dn42 (172.22.0.94 [anycast]) | -- | -- | ORPort: 9001/tcp; DirPort: 9030/tcp; SocksPort: 9050/tcp |
 
 ## NTP
@@ -163,7 +163,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
-| mirror.dn42                                       | Debian, Ubuntu                      |                                     |
+| files.twink0r.dn42                                       | Debian, Ubuntu                      |                                     |
 
 ## Gaming
 
