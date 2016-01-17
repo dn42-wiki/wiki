@@ -12,8 +12,8 @@ Configuration requirements for all members of the anycast group are:
 
 It is _really_ good to hang around in [[IRC]] to get things sorted out, if something doesn't work. Letting some people test your DNS behavior before joining the anycast-group is considered best practice - better safe than sorry.
 
- * **IP:** 172.22.0.53
- * **Announciation Subnet:** 172.22.0.53/32
+ * **IP:** 172.23.0.53
+ * **Announciation Subnet:** 172.23.0.53/32
 
 ### Generating Zone Files
 
