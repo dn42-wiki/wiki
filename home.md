@@ -64,7 +64,7 @@ The [[Getting started]] page helps you to get your first node inside the network
 * [Revelation Space](http://www.revspace.nl)
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
-* [Hackspace Jena e.V.](https://www.hackspace-jena.de)
+* [Hackspace Jena e.V.](https://kraut.space)
 * [breizh-entropy](http://breizh-entropy.dn42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
