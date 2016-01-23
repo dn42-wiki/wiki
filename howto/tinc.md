@@ -68,6 +68,11 @@ P9C5dYrmVWrVAWQznlbuq/w1z+PrTYquoQIDAQAB
 
 The current development version (which is pretty stable by the way), allow to bootstrap networks using by invitation urls. Instead of rsa keys it uses additionally ed25519 keys. It also introduces a tinc command in addition to tincd, which allows tinc to be configured via an readline interface:
 
+Installation:
+
+* Archlinux: install [tinc-pre](https://aur.archlinux.org/packages/tinc-pre) from AUR
+* Debian: follow these [instructions](https://gist.github.com/mweinelt/efff4fb7eba1ee41ef2d) to get a package
+
 On one node which is already part of the network use:
 ```
 $ tinc invite foo
