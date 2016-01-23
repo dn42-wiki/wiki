@@ -56,6 +56,7 @@ dev         <INTERFACE_NAME>
 persist-key
 persist-tun
 cipher aes-256-cbc
+resolv-retry infinite
 float
 port        <LOCAL_PORT>
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
@@ -82,6 +83,7 @@ comp-lzo
 persist-key
 persist-tun
 cipher aes-256-cbc
+resolv-retry infinite
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
@@ -168,6 +170,7 @@ route-delay 2
 nobind
 persist-key
 persist-tun
+resolv-retry infinite
 
 verb 3
 ```
