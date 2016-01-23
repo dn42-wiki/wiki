@@ -1,7 +1,7 @@
-[Tinc](http://www.tinc-vpn.org/) is a mesh-able vpn. It allows multiple parties to connect and discover each other independently, with no single point of failure. Tinc will try to find the shortest path to the other side but can also tunnel traffic over a third node, if 2 peers cannot reach each other directly. Tinc is in use by the Freifunk community where it powers [ICVPN](https://github.com/freifunk/icvpn).
-It is also used for [ChaosVPN](https://wiki.hamburg.ccc.de/ChaosVPN).
+[Tinc](http://www.tinc-vpn.org/) is a meshing VPN daemon. It allows multiple parties to connect and discover each other independently, while minimizing points of failure. Tinc will use a bunch of nodes to build the network graph, which in return all nodes use to learn addresses for each other. If nodes want to reach each other they establish a direct connection to each other. If that is not possible traffic may be routed via a shared neighbour. Tinc is most notably powering the Freifunk communitys [ICVPN](https://github.com/freifunk/icvpn) (in L2/Switch-Mode) and ChaosVPN (in L3/Router-Mode).
 
-Tinc operates in 2 modes: router and switch. In Router mode each peer announce a subnet it serves. Tinc will act as a Layer3 network. This is the default mode, but unsuitable for dn42, because you cannot influence how tinc will route to a certain network. In Switch mode tinc will act like a Layer2 network. Each peer gets a MAC address assigned.
+Tinc primarily operates in two modes: router and switch. A third mode, the hub mode, exists, but it's just a dumb router mode that keeps no routing table and broadcasts everything - don't use it.
+In Router mode each peer announces the addresses/subnets it serves. Tinc will spawn an interface on which it will act as a L3 network, routing according to announcements. This is the default mode, but it is unsuitable for dn42, because you cannot influence how tinc will route to a certain network. In Switch mode tinc will act like a L2 network, in which the routing table reflects the peers mac addresses.
 
 One advantage of tinc is that you can have multiple peering over the same VPN configuration by opening multiple connections.
 
@@ -68,12 +68,6 @@ P9C5dYrmVWrVAWQznlbuq/w1z+PrTYquoQIDAQAB
 ## Fun with tinc-pre
 
 The current development version (which is pretty stable by the way), allow to bootstrap networks using by invitation urls. Instead of rsa keys it uses additionally ed25519 keys. It also introduces a tinc command in addition to tincd, which allows tinc to be configured via an readline interface:
-
-Installation:
-
-* Archlinux: install [tinc-pre](https://aur.archlinux.org/packages/tinc-pre) from AUR
-* Debian: follow these [instructions](https://gist.github.com/mweinelt/efff4fb7eba1ee41ef2d) to get a package
-* Freebsd: Use this [port repo](https://github.com/Mic92/ports/tree/master/security/tinc)
 
 On one node which is already part of the network use:
 ```
