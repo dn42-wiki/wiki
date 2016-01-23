@@ -6,6 +6,7 @@
 
 * [[How-to|/pages/howto/]]
   * [[Openvpn|openvpn]]
+  *  [[Tinc|tinc]]
   * [[Bird|Bird]]
   * [[Quagga|Quagga]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
