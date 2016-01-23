@@ -171,7 +171,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | 172.20.187.221:27015                              | Counter Strike: Source |                            |
-| 172.22.177.179                                    | gmod                   | gLUA coding, pass: 42      |
+| 172.22.177.179                                    | gmod                   | LUA coding, cinema, steam + non-steam    |
 
 ## Misc 
 
