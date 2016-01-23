@@ -1,4 +1,5 @@
 [Tinc](http://www.tinc-vpn.org/) is a mesh-able vpn. It allows multiple parties to connect and discover each other independently, with no single point of failure. Tinc will try to find the shortest path to the other side but can also tunnel traffic over a third node, if 2 peers cannot reach each other directly. Tinc is in use by the Freifunk community where it powers [ICVPN](https://github.com/freifunk/icvpn).
+It is also used for [ChaosVPN](https://wiki.hamburg.ccc.de/ChaosVPN).
 
 Tinc operates in 2 modes: router and switch. In Router mode each peer announce a subnet it serves. Tinc will act as a Layer3 network. This is the default mode, but unsuitable for dn42, because you cannot influence how tinc will route to a certain network. In Switch mode tinc will act like a Layer2 network. Each peer gets a MAC address assigned.
 
