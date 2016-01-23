@@ -19,10 +19,12 @@ rport       <REMOTE_PORT>
 local       <LOCAL_HOST>
 lport       <LOCAL_PORT>
 dev-type    tun
+resolv-retry infinite
 dev         <INTERFACE_NAME>
 comp-lzo
 persist-key
 persist-tun
+cipher aes-256-cbc
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 
@@ -53,6 +55,7 @@ comp-lzo
 dev         <INTERFACE_NAME>
 persist-key
 persist-tun
+cipher aes-256-cbc
 float
 port        <LOCAL_PORT>
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
@@ -78,6 +81,7 @@ dev         <INTERFACE_NAME>
 comp-lzo
 persist-key
 persist-tun
+cipher aes-256-cbc
 ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
@@ -95,6 +99,7 @@ mode server
 tls-server
 
 dh dh2048.pem
+cipher aes-256-cbc
 
 ca keys/ca.crt
 cert keys/roaming-dn42.crt
@@ -151,6 +156,7 @@ key  myclient.key
 
 dev tun
 proto udp6
+cipher aes-256-cbc
 
 remote <SERVER> <PORT>
 
