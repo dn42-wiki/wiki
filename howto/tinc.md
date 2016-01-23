@@ -72,6 +72,7 @@ Installation:
 
 * Archlinux: install [tinc-pre](https://aur.archlinux.org/packages/tinc-pre) from AUR
 * Debian: follow these [instructions](https://gist.github.com/mweinelt/efff4fb7eba1ee41ef2d) to get a package
+* Freebsd: Use this [port repo](https://github.com/Mic92/ports/tree/master/security/tinc)
 
 On one node which is already part of the network use:
 ```
