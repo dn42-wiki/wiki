@@ -47,6 +47,10 @@ http://mwd.dn42/dns.php
 
 MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
 
+### Getting you current dn42 IPv4/6 address
+
+wieistmeineip.dn42 provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
+
 ## IRC
 
 | Hostname / IP                               | Remarks                                   |
