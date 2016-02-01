@@ -33,6 +33,8 @@ protocol device {
 protocol static {
   # Static routes to announce your own range(s) in dn42
   route <SUBNET> reject;
+  import all;
+  export none;
 };
 
 # local configuration
@@ -206,6 +208,8 @@ protocol kernel {
 
 protocol static {
   route <SUBNET> reject;
+  import all;
+  export none;
 }
 
 template bgp dnpeers {
