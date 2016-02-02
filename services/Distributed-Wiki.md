@@ -83,7 +83,7 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
 
 ```
-./ca.dn42 tls-gen wiki.dn42 <NAME>-MNT <email> DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
+./ca.dn42 tls-gen wiki.dn42 MIC92-MNT joerg@higgsboson.tk DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
 ```
 
    Wait for a reply and then sign the certificate:
