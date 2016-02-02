@@ -79,15 +79,16 @@ gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 456
 
 #### SSL
 
- - Generate a private key:
+ - Setup your MNTNR according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
+ - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
 
-   `openssl genrsa -out wiki.key 4096`
+```
+./ca.dn42 tls-gen wiki.dn42 <NAME>-MNT <email> DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
+```
 
- - Generate a [CSR](/services/Certificate-Authority) and send `wiki.csr` to [xuu@sour.is](mailto:xuu@sour.is): 
+   Wait for a reply and then sign the certificate:
 
-   `openssl req -new -sha256 -key wiki.key -out wiki.csr`
-
-   Wait for a reply containing internal.dn42/wiki.dn42 certificate.
+   `./ca.dn42 tls-sign wiki.dn42 MIC92-MNT`
 
 #### Header
 
