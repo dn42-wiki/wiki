@@ -86,7 +86,7 @@ gollum <path> --css <path>/custom.css --host 127.0.0.1  --port 4567 --no-edit
 ./ca.dn42 tls-gen \
    wiki.dn42 \
    MIC92-MNT \
-   joerg@higgsboson.tk 
+   joerg@higgsboson.tk \
    DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42,DNS:<AS>-<CC->.wiki.dn42
 ```
 
