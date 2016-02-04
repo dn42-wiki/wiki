@@ -29,7 +29,6 @@ Please sort by AS number.
 * AS 64835: http://lg.nordkapp-5.dn42 or http://172.22.235.4 (IPv4) → interactive
 * AS 76142: http://lg.ffdn.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242420022: http://mhm.dn42:5001
-* AS 4242420123: http://lg.grmml.dn42/ (IPv4 & IPv6) → interactive (ping currently not working)
 * AS 4242420184: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) **currently down**
 * AS 4242420200: http://lg.punkt.dn42 (IPv4) → interactive (traceroute, BGP-map)
 * AS 4242420321: http://lg.dn42 (IPv4 & IPv6) → interactive (traceroute, BGP-map)
@@ -44,3 +43,4 @@ Please sort by AS number.
 Please sort by AS number.
 
 * AS 65529: http://bgp.freifunk-bielefeld.de/ulg/ulg.py → interactive (BGP-map)
+* AS 4242420123: http://lg.grmml.net → interactive (traceroute, BGP-map)

@@ -66,11 +66,11 @@ exit 0
  
    Read/write (SSL only):
     ```
-gollum <path> --css <path>/custom.css --host 127.0.0.1  --port 4568
+RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4568
     ```
    Read-only:
     ```
-gollum <path> --css <path>/custom.css --host 127.0.0.1  --port 4567 --no-edit
+RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
     ```
 
     Set `<path>` to the location where wiki Git repo was cloned. 
