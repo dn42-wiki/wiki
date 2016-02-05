@@ -121,7 +121,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://files.martin89.dn42/                                 |       | max 2Mbit/s | download only                                  |
 | http://172.22.42.2                                          | ~6.5TB | ~400kbit   | WebDAV enabled, up 24/7z          |  |
 | http://filer.mhm.dn42                                       |  4TB  | 1GBit | 24/7/365 |  |
-| http://storage.hq.c3d2.de                                   |       | 2.4Mbit/s   | download only webdav:k-ot|
+| http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot|
 
 ### Down?
 
