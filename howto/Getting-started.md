@@ -93,7 +93,7 @@ To register for example 172.20.150.0/26, you need to fill in 172.20.150.0-172.20
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
-If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:23:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones.
+If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones.
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
