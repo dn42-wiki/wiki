@@ -97,7 +97,7 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
-If you plan to announce this network in dn42, which probably want in most cases, you also need to create a `route` object for ipv4 and a `route6` object for ipv6. This information is used for ROA checks (route origin authorisation). If you skip this step, your network gets probably filtered by some peers.
+If you plan to announce this network in dn42, which you probably want in most cases, you also need to create a `route` object for ipv4 and a `route6` object for ipv6. This information is used for ROA checks (route origin authorisation). If you skip this step, your network gets probably filtered by some peers.
 
 # Get some peers
 
