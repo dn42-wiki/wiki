@@ -97,6 +97,8 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
+If you plan to announce this network in dn42, which probably want in most cases, you also need to create a `route` object for ipv4 and a `route6` object for ipv6. This information is used for ROA checks (route origin authorisation). If you skip this step, your network gets probably filtered by some peers.
+
 # Get some peers
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/Bird-communities).
