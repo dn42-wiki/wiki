@@ -204,10 +204,18 @@ group gollum-watchdog {
     peer-as <peeras>;
   }
 
-  ## (example) peer with one of our iBGP speakers:
+  ## (example ipv4) peer with one of our iBGP speakers:
   neighbor 172.22.0.1 {
     router-id 172.23.0.80;
     local-address 172.22.0.2;
+    local-as 123456;
+    peer-as 123456;
+  }
+
+  ## (example ipv6) peer with one of our iBGP speakers:
+  neighbor fd42:4992:6a6d::1 {
+    router-id 172.22.0.80;
+    local-address fd42:4992:6a6d::2;
     local-as 123456;
     peer-as 123456;
   }
@@ -233,13 +241,16 @@ Run `gollum-watchdog.sh` in a shell first to validate it's working:
 CURL=curl
 
 ## url's to check (all listed must be alive to send announce)
-URL=( "http://172.23.0.80" "https://172.23.0.80" )
+URL=("http://172.23.0.80" "https://172.23.0.80" "http://[fd42:d42:d42:80::1]" "https://[fd42:d42:d42:80::1]")
 
 ## the anycast route (/28 due to prefix size limits)
 ROUTE='172.23.0.80/28'
-
+## the anycast v6 route (/64 due to prefix size limits)
+ROUTE6='fd42:d42:d42:80::/64'
+                        
 ## the next-hop we'll be advertising to neighbor(s)
 NEXTHOP='<source-address>' 
+NEXTHOP6='<source-address-v6>'
 
 ## regex match this keyword against HTTP response from curl
 VALIDATE_KEYWORD='gollum'
@@ -247,45 +258,45 @@ VALIDATE_KEYWORD='gollum'
 INTERVAL=60
 
 ###########################
-
-RUN_STATE=0
-
-check_urls() {
-	for url in "${URL[@]}"; do
-
+                
+RUN_STATE=0             
+                        
+check_urls() {          
+        for url in "${URL[@]}"; do
+        
                 ## workaround curl errno 23 when piping
                 http_response=`${CURL} --insecure -L -o - "${url}"`
-
-		echo "${http_response}" | egrep -q "${VALIDATE_KEYWORD}" || {
-			return 1
-		}
+                        
+                echo "${http_response}" | egrep -q "${VALIDATE_KEYWORD}" || {
+                        return 1
+                }
 
                 ## add more checks
 
-	done
-	return 0
+        done
+        return 0
 }
 
 while [ 1 ]; do
-	if [ ${RUN_STATE} -eq 0 ]; then
-		check_urls && {
-			RUN_STATE=1
-			echo "announce route ${ROUTE} next-hop ${NEXTHOP}"
-		}
-	else
-		check_urls || {
-			RUN_STATE=0
-			echo "withdraw route ${ROUTE} next-hop ${NEXTHOP}"
-		}
-	fi
+        if [ ${RUN_STATE} -eq 0 ]; then
+                check_urls && {
+                        RUN_STATE=1
+                        echo "announce route ${ROUTE} next-hop ${NEXTHOP}"
+                        echo "announce route ${ROUTE6} next-hop ${NEXTHOP6}"
+                }       
+        else    
+                check_urls || {
+                        RUN_STATE=0
+                        echo "withdraw route ${ROUTE} next-hop ${NEXTHOP}"
+                        echo "withdraw route ${ROUTE6} next-hop ${NEXTHOP6}"
+                }       
+        fi
 
-	sleep ${INTERVAL}
-
-done
+        sleep ${INTERVAL}
+        
+done    
 
 exit 0
-
-
 ```
 
 #### Run
@@ -341,7 +352,6 @@ case ${1} in
 esac
 
 exit 0
-
 ```
 
 
