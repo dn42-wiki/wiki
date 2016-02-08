@@ -148,7 +148,9 @@ server {
         server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:80 default;
-        listen <unicast-address>:80 default;
+        listen [fd42:d42:d42:80::1]:80 default;
+        listen 80;
+        listen [::]:80;
 
         add_header X-SiteID                   '<aut-num>-<cc>';
 
@@ -164,7 +166,9 @@ server {
         server_name internal.dn42 wiki.dn42 as<aut-num>-<cc>.wiki.dn42;
 
         listen 172.23.0.80:443 ssl default;
-        listen <unicast-address>:443 ssl default;
+        listen [fd42:d42:d42:80::1]:443 ssl default;
+        listen 443 ssl;
+        listen [::]:443 ssl;
 
 	ssl on;
         ssl_certificate      <path>/ssl.crt;  
