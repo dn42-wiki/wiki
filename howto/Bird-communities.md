@@ -39,8 +39,9 @@ For example, if your peer is 12ms away and the link speed between you is 250Mbit
 You might want to use this [script](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) to measure round trip time and calculate community values automatically:
 
 ```
-$ ruby bgp-community.rb
-USAGE: bgp-community.rb [-6] host mbit_speed unencrypted|unsafe|encrypted|pfs
+root@dn42 /etc/bird # ruby bgp-community.rb --help
+USAGE: bgp-community.rb host mbit_speed unencrypted|unsafe|encrypted|pfs
+    -6, --ipv6                       Assume ipv6 for ping
 $ ruby bgp-community.rb 212.129.13.123 300 encrypted
   # 15 ms, 300 mbit/s, encrypted tunnel (updated: 2016-02-11)
   import where dn42_import_filter(3,24,33);
