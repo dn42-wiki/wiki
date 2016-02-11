@@ -261,7 +261,8 @@ $ curl -sk https://dn42.us/git/dn42/registry/plain/data/filter6.txt | \
 
 example filter list:
 
-```function is_valid_network() {
+```
+function is_valid_network() {
   return net ~ [
     fc00::/8{48,64}, # ULA (undefined)
     fd00::/8{48,64}, # ULA (defined)
