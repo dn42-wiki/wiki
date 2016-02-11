@@ -11,9 +11,9 @@
 }
 
 @media all and (max-width: 600px) {                                                                                                                                                                                                                                             
-  #wiki-sidebar, #wiki-body,
+  #wiki-sidebar, #wiki-body, #wiki-footer,
   .has-sidebar #wiki-body,
   .has-sidebar #wiki-sidebar,
-  #wiki-footer  { clear:both; width: 100% }
+  .has-sidebar #wiki-footer { clear:both; width: 100% }
 }
 
