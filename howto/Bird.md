@@ -134,17 +134,13 @@ $ curl -sk https://dn42.us/git/dn42/registry/plain/data/filter.txt | \
 example filter list:
 
 ```
-# /etc/bird/filter4.conf
 function is_valid_network() {
   return net ~ [
     172.22.0.0/15{22,28}, # dn42 main net0
-    172.20.0.0/16{22,28}, # dn42 main net1
-    172.22.0.0/23{23,32}, # dn42 Anycast
-    172.22.0.43/32{32,32}, # Whois Anycast
-    172.22.0.53/32{32,32}, # DNS Anycast
-    172.22.0.94/32{32,32}, # TOR Anycast
-    172.23.0.0/24{24,32}, # dn42 Anycast range
-    192.175.48.0/24{24,32}, # AS112-prefix for reverse-dns
+    172.20.0.0/16{21,28}, # dn42 main net1
+    172.22.0.0/23{28,32}, # dn42 Anycast range
+    172.23.0.0/24{28,32}, # dn42 Anycast range
+    192.175.48.0/24{24,32}, # AS112-prefix for reverse-dns  
     10.0.0.0/8{12,28}, # freifunk/chaosvpn
     172.31.0.0/16{22,28}, # chaosvpn
     100.64.0.0/10{12,28}, # iana private range
@@ -159,7 +155,8 @@ function is_valid_network() {
     151.217.0.0/16{16,28}, # ccc event network 2
     195.191.196.0/23{23,29}, # ichdasich pi space
     80.244.241.224/27{27,32}, # jchome service network
-    188.40.34.241/32{32,32},    
+    188.40.34.241/32{32,32},
+    37.1.89.192/26{26,28}, # siska
     87.98.246.19/32{32,32}
   ];
 }
@@ -265,7 +262,6 @@ $ curl -sk https://dn42.us/git/dn42/registry/plain/data/filter6.txt | \
 example filter list:
 
 ```
-/etc/bird/filter6.conf
 function is_valid_network() {
   return net ~ [
     fc00::/8{48,64}, # ULA (undefined)
@@ -305,7 +301,7 @@ function is_valid_network() {
     2001:06f8:1d26::/48{48,64},
     2001:06f8:1d53::/48{48,64},
     2001:07f0:3003::/48{48,64},
-    2001:08d8:0081:05c8::/63{63,64},
+    2001:08d8:0081:05c8::/63{63,64},  
     2001:08d8:0081:05ca::/64{64,64},
     2001:15c0:1000:0100::/64{64,64},
     2001:1b60:1000:0001::/64{64,64},
@@ -330,7 +326,7 @@ function is_valid_network() {
     2a02:0ee0:0002:0051::/64{64,64},
     2a03:2260::/30{30,64}
   ];
-}
+} 
 ```
 
 # Bird communities
