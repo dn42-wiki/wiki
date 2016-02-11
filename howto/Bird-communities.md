@@ -28,7 +28,7 @@ bw = min(up,down) for asymmetric connections
 (64511, 31) :: not encrypted
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
-(64511, 34) :: encrypted with safe vpn solution with PFS 
+(64511, 34) :: encrypted with safe vpn solution with PFS (Perfect Forward Secrecy)
 
 Propagation:
 - - for latency pick max(received_route.latency, link_latency)
