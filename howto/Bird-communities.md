@@ -28,13 +28,29 @@ bw = min(up,down) for asymmetric connections
 (64511, 31) :: not encrypted
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
-(64511, 34) :: encrypted with safe vpn solution with PFS 
+(64511, 34) :: encrypted with safe vpn solution with PFS (Perfect Forward Secrecy)
 
 Propagation:
 - - for latency pick max(received_route.latency, link_latency)
 - - for encryption and bandwidth pick min between received BGP community and peer link
 ```
 For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
+
+You might want to use this [script](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) to measure round trip time and calculate community values automatically:
+
+```
+$ ruby bgp-community.rb --help
+USAGE: bgp-community.rb host mbit_speed unencrypted|unsafe|encrypted|pfs
+    -6, --ipv6                       Assume ipv6 for ping
+$ ruby bgp-community.rb 212.129.13.123 300 encrypted
+  # 15 ms, 300 mbit/s, encrypted tunnel (updated: 2016-02-11)
+  import where dn42_import_filter(3,24,33);
+  export where dn42_export_filter(3,24,33);
+$ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
+  # 11 ms, 1000 mbit/s, pfs tunnel (updated: 2016-02-11)
+  import where dn42_import_filter(3,25,34);
+  export where dn42_export_filter(3,25,34);
+```
 
 See also this [mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) for communities for route origin.
 
