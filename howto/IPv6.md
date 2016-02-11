@@ -20,7 +20,7 @@ If not, you can follow the instructions on the [Getting Started](GettingStarted)
 
 ## What can i do on DN42-v6 ?
 
-A fair share of the services are available through IPv6. However some of the well known addresses might not work, so you'll have to find alternative services. For example, as of current, there's no IPv6-anycast for the wiki.dn42 address, so you want to use an IPv6-capable instance directly, such as [Mic92's Instance of the Wiki](as4242420092-de.wiki.dn42).
+A fair share of the services are available through IPv6. However some of the well known addresses might not work, so you'll have to find alternative services.
 
 Quick list of some native-IPv6-capable services:
  * Some instances of this Wiki, but no anycast yet
@@ -28,6 +28,7 @@ Quick list of some native-IPv6-capable services:
  * DNS, including anycast
  * Media boards, including DN42-Chan
  * torrents.dn42
+ * wiki.dn42/internal.dn42
 
 What doesn't work (yet?): 
  * Search engines, none seems to support IPv6 currently
