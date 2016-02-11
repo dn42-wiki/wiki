@@ -36,6 +36,8 @@ Propagation:
 ```
 For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
+You might want to use this [script](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) to measure round trip time and calculate community values automatically.
+
 See also this [mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) for communities for route origin.
 
 ## Example configurations 
