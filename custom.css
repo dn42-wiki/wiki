@@ -10,9 +10,10 @@
   padding: 0 !important;
 }
 
-@media all and (min-width: 600px) {                                                                                                                                                                                                                                             
-  #wiki-sidebar { clear:both; width: 100% }
-  #wiki-content { clear:both; width: 100% }
+@media all and (max-width: 600px) {                                                                                                                                                                                                                                             
+  #wiki-sidebar, #wiki-body,
+  .has-sidebar #wiki-body,
+  .has-sidebar #wiki-sidebar,
   #wiki-footer  { clear:both; width: 100% }
 }
 
