@@ -9,3 +9,10 @@
 #wiki-body .markdown-body {
   padding: 0 !important;
 }
+
+@media all and (min-width: 600px) {                                                                                                                                                                                                                                             
+  #wiki-sidebar { clear:both; width: 100% }
+  #wiki-content { clear:both; width: 100% }
+  #wiki-footer  { clear:both; width: 100% }
+}
+
