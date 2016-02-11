@@ -62,7 +62,7 @@ So now that you've got IPv6 setup for DN42, you'd like to start using it on the 
 A first approach is to use NPT: Network Prefix Translation. Yes, this sounds a lot like NAT, but fear not: it does not have most of its problems as it is fully stateless. Initially, the purpose of NPT was to allow multi-homing without an ASN: how can you be reachable through several prefixes allocated by different ISPs ? The IPv6-way of doing it would be to assign multiple addresses from the multiple prefixes to all your nodes, but isn't that just too complicated ?
 
 Enter NPT. Address your services using a reserved private block, and map that block to a public block upon routing to internet. 
-For example, if you've been assigned the <PUBLIC-PREFIX>::/48 prefix, and want to be reachable on DN42 aswell, you can use only ULA addresses from DN42 internally (or your own!), then map them to outside prefixes. Note that they'll need to all use the same prefix size to maintain the one-to-one mapping, so you may have to subnet the public prefix.
+For example, if you've been assigned a public /48 prefix, and want to be reachable on DN42 aswell, you can use only ULA addresses from DN42 internally (or your own!), then map them to outside prefixes. Note that they'll need to all use the same prefix size to maintain the one-to-one mapping, so you may have to subnet the public prefix.
 
 In Linux's netfilter, this can be implemented through the use of the NETMAP target, for the example above:
 ```
