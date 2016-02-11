@@ -14,6 +14,8 @@
   #wiki-sidebar, #wiki-body, #wiki-footer,
   .has-sidebar #wiki-body,
   .has-sidebar #wiki-sidebar,
-  .has-sidebar #wiki-footer { clear:both; width: 100% }
+  .has-sidebar #wiki-footer { clear:both; width:initial; float:none; }
+  #wiki-body { margin-right: 0; }
+  #wiki-content { margin: 0 10pt} 
 }
 
