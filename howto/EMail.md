@@ -49,6 +49,7 @@ and add this transport to /etc/postfix/transport for dn42 (and dont forget to po
 This should to the trick for sending mails via your DN42-IP
 
 If you use `smtpd_recipient_restrictions` you can use the following rule to white-list dn42 as sender.
+This can circumvent certain rdns configuration failure or in case you use rbl lists:
 
 ```
 smtpd_recipient_restrictions = permit_mynetworks,
