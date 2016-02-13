@@ -48,6 +48,29 @@ and add this transport to /etc/postfix/transport for dn42 (and dont forget to po
 
 This should to the trick for sending mails via your DN42-IP
 
+If you use `smtpd_recipient_restrictions` you can use the following rule to white-list dn42 as sender.
+
+```
+smtpd_recipient_restrictions = permit_mynetworks,
+                         permit_sasl_authenticated,
+                         check_client_access cidr:/etc/postfix/dn42.cidr,
+                         reject_non_fqdn_sender,
+                         # ...
+                         permit
+```
+
+```
+#/etc/postfix/dn42.cidr
+172.16.0.0/12 OK
+10.0.0.0/8 OK
+fc00::/7 OK
+```
+
+```
+$ postmap /etc/postfix/dn42.cidr
+```
+
+
 ### Receiving emails
 
 The Domain mails should be received for has to be added to `mydestination =` in main.cf
