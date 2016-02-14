@@ -115,6 +115,11 @@ which will show among other things:
 
 - cacert have a comprehensive FAQ on how to import your own root certificates in [browsers](http://wiki.cacert.org/FAQ/BrowserClients) and [other software](http://wiki.cacert.org/FAQ/ImportRootCert)
 
+### Archlinux
+
+Install `ca-certificates-dn42` from [AUR](https://aur.archlinux.org/packages/ca-certificates-dn42/)
+
+
 ## PKI Store
 
 All issued keys and crl information are posted at: https://ca.dn42/
