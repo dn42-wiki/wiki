@@ -133,9 +133,9 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
 |:---------------------|:-----|:------------|:---------------|:----------------------------------------|
-| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    |http://tracker.grmml.dn42:6969/announce |
-| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    |http://tracker.mhm.dn42:6969/announce                                        |
-| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce                                        |
+| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    | http://tracker.grmml.dn42:6969/announce |
+| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42:6969/announce   |
+| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce        |
 
 ### Torrent Index
 
@@ -151,8 +151,8 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | Hostname / IP                                     | Bandwidth   | Nickname     | Info   |
 | ------------------------------------------------- | ----------- | ------------ | ------------  |
 | socks5://172.23.162.132:9050                      | 100 Mbit/s  | [GrmmlLitavis] | https://atlas.torproject.org/#details/7CB8C31432A796731EA7B6BF4025548DFEB25E0C
-| socks5://172.20.11.33:9050                      | 100 Mbit/s  | [twink0r]
-|tor.dn42 (172.22.0.94 [anycast]) | -- | -- | ORPort: 9001/tcp; DirPort: 9030/tcp; SocksPort: 9050/tcp |
+| socks5://172.20.11.33:9050                        | 100 Mbit/s  | [twink0r]     
+|tor.dn42 (172.22.0.94 [anycast])                   | -- | -- | ORPort: 9001/tcp; DirPort: 9030/tcp; SocksPort: 9050/tcp |
 
 ## NTP
 
@@ -177,13 +177,13 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | 172.20.187.221:27015                              | Counter Strike: Source |                            |
-| 172.22.177.179:27017                              | Garry's Mod: Sandbox                   | LUA coding, cinema, steam + non-steam    |
+| 172.22.177.179:27017                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam    |
 
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| http://teams.dn42/                                |                                                                                |
+| http://teams.dn42/                                | Mattermost instance: get notifications for wiki/ CA changes here                                                           |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://zerobin.e-utp.dn42                         | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
@@ -198,7 +198,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
 | nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
 | mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat                            |
-| http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion             | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
+| http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | xmpp://jabber.szf.dn42                            | XMPP/Jabber server, port 5222 w/ STARTTLS only |
 
