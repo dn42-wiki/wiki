@@ -188,11 +188,13 @@ Enter Export Password: ****
 Verifying - Enter Export Password: ****
 ```
 
-The generated certificate will be valid for 3 months, to renew it simply run ```./ca.dn42 tls-sign ca.dn42 XUU-MNT``` again. This could be also automated in cron or with a systemd timer:
+The generated certificate will be valid for 3 months, to renew it simply run ```./ca.dn42 tls-sign ca.dn42 XUU-MNT``` again. This could be also automated in cron:
 
 ```
 0 0 1 * * /etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
 ```
+
+or with a systemd timer:
 
 ```
 # update-dn42-ca.timer
