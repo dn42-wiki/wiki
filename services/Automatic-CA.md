@@ -85,6 +85,7 @@ Read more on this [stack exchange post][osx-2]
 How to Run
 ==========
 
+```
 Usage:  # OWNER is your MNT handle.
    ./ca.dn42 user-gen OWNER EMAIL          # Output to OWNER.csr and OWNER.key
    ./ca.dn42 user-sig OWNER                # Output to OWNER.crt and OWNER.p12
@@ -92,11 +93,13 @@ Usage:  # OWNER is your MNT handle.
    ./ca.dn42 tls-sig DNS OWNER             # Output to OWNER_DNS.crt and OWNER_DNS.p12
    ./ca.dn42 revoke OWNER CERTFILE [REASON]
 
+
 Revoke Reasons: unspecified, keyCompromise, affiliationChanged,
    superseded, cessationOfOperation, certificateHold, removeFromCRL
 
 Environtment Options:
    DN42CA_PKCS12 = 1                # Generate pkcs12 file for certificate.
+```
 
 Example
 =======
