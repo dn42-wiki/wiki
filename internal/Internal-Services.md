@@ -97,7 +97,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 ## File sharing
 
 ### Tahoe LAFS
-Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage cloud in dn42.
+Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage butt in dn42.
 
 ### Direct Connect
 An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hub is being run at `hub.dcpp.dn42:2780`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -183,21 +183,22 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
+| http://teams.dn42/                                |                                                                                |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| http://zerobin.e-utp.dn42                        | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://flo.dn42/paste/                        | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])
-| https://szf.dn42/paste/                        | AES-encrypted pastebin-like, another one |
+| http://zerobin.e-utp.dn42                         | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| https://flo.dn42/paste/                           | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
+| https://szf.dn42/paste/                           | AES-encrypted pastebin-like, another one                                       |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
-| http://nixnodes.dn42/ip                            | Simple 'myip' service |
-| https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service |
-| https://git.dn42, https://dn42.us/git             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)                        |
+| http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
+| https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
+| https://git.dn42, https://dn42.us/git             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
 | http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
-| http://debian.mirror.martin89.dn42                | Debian mirror                                                           |
+| http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
 | nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
 | mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat                            |
-| http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion             | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |
+| http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion             | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | xmpp://jabber.szf.dn42                            | XMPP/Jabber server, port 5222 w/ STARTTLS only |
 
