@@ -188,6 +188,32 @@ Enter Export Password: ****
 Verifying - Enter Export Password: ****
 ```
 
+The generated certificate will be valid for 3 months, to renew it simply run ```./ca.dn42 tls-sign ca.dn42 XUU-MNT``` again. This could be also automated in cron or with a systemd timer:
+
+```
+0 0 1 * * /etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
+```
+
+```
+# update-dn42-ca.timer
+[Timer]
+OnBootSec=1h
+OnUnitActiveSec=1w
+Persistent=yes
+
+[Install]
+WantedBy=timers.target
+```
+
+```
+[Service]
+Type=oneshot
+WorkingDirectory=/etc/ssl/dn42
+ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
+# accept multiple ExecStart lines for other certificates
+#ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign foobar.dn42 MIC92-MNT
+ExecStart=/usr/bin/nginx -s reload
+```
 
 ## Revoke a certificate.
 
