@@ -47,6 +47,7 @@ protocol kernel {
   device routes;
   import none;
   export filter {
+    if source = RTS_STATIC then reject;
     krt_prefsrc = OWNIP;
     accept;
   };
