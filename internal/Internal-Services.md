@@ -78,9 +78,6 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://media.dn42                | A mediagoblin-Instance  |
-| http://dev.0l.dn42:9981/tvheadend/                | Digital Video Recorder (TVHeadend frontend)              
-|
-| ftp://dev.0l.dn42/Videos/Recordings/              | Digital Video Recorder (Recorded files)                  |
 
 ## Radio and Video Streaming
 
@@ -108,7 +105,6 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |
-| ftp://dev.0l.dn42                                           | 10 TB | max 5MBit/s | writable incoming                              |
 | http://filer.nihilus.dn42, http://172.22.92.2               |       | ~60kbps     | mostly up                                      |    
 | ftp://cochimetl.tim.dn42, nfs://cochimetl.tim.dn42/data/ftp | ~3TB  | ~700kbps    |                                                |
 | http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
