@@ -365,6 +365,7 @@ kernel1  Kernel   master   up     07:20:25
 chelnok  BGP      master   up     07:20:29    Established   
 hax404   BGP      master   up     07:20:26    Established     
 static1  Static   master   up     07:20:25
+bird> show protocols all chelnok # show verbose peering status for peering with chelnok
 bird> show route for 172.22.141.181 # show possible routes to internal.dn42
 172.22.141.0/24    via 172.23.67.1 on tobee [tobee 07:20:30] * (100) [AS64737i]
                    via 172.23.64.1 on chelnok [chelnok 07:20:29] (100) [AS64737i]
