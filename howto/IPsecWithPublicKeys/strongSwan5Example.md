@@ -4,7 +4,7 @@
 
     root@debian:~# mkdir /etc/ipsec.d/public
     root@debian:~# ipsec pki --gen --type rsa --outform pem --size 4096 > /etc/ipsec.d/private/mykey.pem
-    root@debian:~# ipsec pki --pub --in /etc/ipsec.d/private/mykey.pem --outform pem > /etc/ipsec.d/public/mykey.pub
+    root@debian:~# ipsec pki --pub --in /etc/ipsec.d/private/mykey.pem --outform pem > /etc/ipsec.d/public/mykey.pem
     root@debian:~# echo ": RSA mykey.pem" >> /etc/ipsec.secrets
 
 ### Exchange public keys with your peer
