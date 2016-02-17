@@ -10,7 +10,7 @@
 ### Exchange public keys with your peer
 1. Display the public key. Send the key data to your peer.
 
-        root@debian:~# more /etc/ipsec.d/public/mykey.pub
+        root@debian:~# more /etc/ipsec.d/public/mykey.pem
         -----BEGIN PUBLIC KEY-----
         MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2/FWIJuVUtfsLovavNp+
         nPSsT2mQoNK3ZUUwuEKfBjT7mhijdXRHh1SAtIaU2aen5+d5q6e27vMCCYOQLagn
