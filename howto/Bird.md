@@ -106,10 +106,10 @@ $ ruby utils/bgp-filter.rb --format bird < data/filter6.txt > /etc/bird/filter6.
 or
 
 $ curl -sk https://ca.dn42.us/reg/filter6.txt | \
-  awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n" } \
-       /^[0-9]/ && $2 ~ /permit/ {printf " %s{%s,%s},\n", $3, $4, $5};' | \
-  sed "$ s/,$/\n ];\n}/" > /etc/bird/filter6.conf
-
+    awk '/^[0-9]/ && $2 ~ /permit/ {printf "%s{%s,%s}\n", $3, $4, $5}' | \
+    awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n"} \
+        NR > 1 {printf ",\n"} {printf "  %s", $1}
+        END {printf "\n ];\n}\n"}' > /etc/bird/filter6.conf
 ```
 
 example filter list:
@@ -286,10 +286,10 @@ $ ruby utils/bgp-filter.rb --format bird < data/filter.txt > /etc/bird/filter4.c
 or
 
 $ curl -sk https://ca.dn42.us/reg/filter.txt | \
-  awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n" } \
-       /^[0-9]/ && $2 ~ /permit/ {printf " %s{%s,%s},\n", $3, $4, $5};' | \
-  sed "$ s/,$/\n ];\n}/" > /etc/bird/filter4.conf
-
+    awk '/^[0-9]/ && $2 ~ /permit/ {printf "%s{%s,%s}\n", $3, $4, $5}' | \
+    awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n"} \
+        NR > 1 {printf ",\n"} {printf "  %s", $1}
+        END {printf "\n ];\n}\n"}' > /etc/bird/filter4.conf
 ```
 
 example filter list:
