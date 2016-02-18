@@ -1,3 +1,7 @@
+Quote from #dn42: `nobody runs racoon on their on free will :)`.
+
+See also [strongswan](howto/IPsecWithPublicKeys/strongSwan5Example)
+
 The keys are generated with plainrsa-gen.
 
 ```
