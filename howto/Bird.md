@@ -182,6 +182,15 @@ function is_valid_network() {
 } 
 ```
 
+```
+# /etc/bird/peers6/<PEER_NAME>
+protocol bgp <PEER_NAME> from dnpeers {
+  neighbor <PEERING_IP> as <PEER_AS>;
+  # if you use link-local ipv6 addresses for peering using the following
+  # neighbor <PEERING_IP> % '<INTERFACE_NAME>' as <PEER_AS>;
+};
+```
+
 ### IPv4
 
 ```
@@ -329,8 +338,6 @@ protocol bgp <PEER_NAME> from dnpeers {
   neighbor <PEERING_IP> as <PEER_AS>;
 };
 ```
-
-
 
 # Bird communities
 
