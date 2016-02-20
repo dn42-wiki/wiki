@@ -80,7 +80,6 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://freemusicradio.dn42:8000/freemusic.ogg     | A free music radio with song voting on http://freemusicradio.dn42 (still beta) |
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://10.112.0.6:8000/mpd.ogg, http://radio.ffhh:8000/mpd.ogg | Freifunk Hamburg radio, yeay 8bit music!    |
 | http://172.23.136.65:8000/                        | haxMPD                                                   |
