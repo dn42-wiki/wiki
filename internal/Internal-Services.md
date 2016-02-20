@@ -81,8 +81,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
-| http://172.23.136.65:8000/                        | haxMPD                                                   |
-| http://stream.media.dn42/                        | icecast-relay, contact toBee for more streams             |
+| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams             |
 
 ## File sharing
 
