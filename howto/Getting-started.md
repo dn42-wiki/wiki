@@ -97,7 +97,48 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
+example: inet6num/fd42:4992:6a6d::_48
+```
+inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+netname:           EVE-NETWORK
+descr:             Network of eve
+country:           DE
+admin-c:           MIC92-DN42
+tech-c:            MIC92-DN42
+mnt-by:            MIC92-MNT
+nserver:           ns1.evenet.dn42
+nserver:           ns2.evenet.dn42
+status:            ASSIGNED
+```
+
+example: inetnum/172.23.75.0_24
+```
+inetnum:           172.23.75.0 - 172.23.75.255
+netname:           EVE-NETWORK
+admin-c:           MIC92-DN42
+tech-c:            MIC92-DN42
+mnt-by:            MIC92-MNT
+nserver:           ns1.evenet.dn42
+nserver:           ns2.evenet.dn42
+status:            ASSIGNED
+```
+
 If you plan to announce this network in dn42, which you probably want in most cases, you also need to create a `route` object for ipv4 and a `route6` object for ipv6. This information is used for ROA checks (route origin authorization). If you skip this step, your network gets probably filtered by some peers.
+
+example: route6/fd42:4992:6a6d::_48
+```
+route6:            fd42:4992:6a6d::/48
+origin:            AS4242420092
+mnt-by:            MIC92-MNT
+```
+
+example route/172.23.75.0_24:
+```
+route:             172.23.75.0/24
+origin:            AS4242420092
+mnt-by:            MIC92-MNT
+bgp-status:        active
+```
 
 # Get some peers
 
