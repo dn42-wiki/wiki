@@ -89,7 +89,7 @@ You may choose your network prefix in one of the currently open netblocks. You c
 
 The current guideline is to allocate a /25 or smaller by default, keeping space for up to a /23 if possible. Don't allocate more than a /23 worth of addresses and please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /26 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but our IPv4-space is valuable too!
 
-For example, if there is no /25 free, you can split up a /24 into two /25. For example if you are looking for a /25 but there are none showing in the Open Netblocks tool, instead pick one of the /24 and click Take it!
+For example, if there is no /25 free, you can split up a /24 into two /25. If you are looking for a /25 but there are none showing in the Open Netblocks tool, instead pick one of the /24 and click Take it!
 When registering your inetnum, instead of writing 172.2x.xxx.0-172.2x.xxx.255 then you can write 172.2x.xxx.0-172.2x.xxx.127. This will get you a /25 and save our IP space for others.
 
 To register for example 172.20.150.0/26, you need to fill in 172.20.150.0-172.20.150.63.
