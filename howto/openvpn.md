@@ -19,6 +19,7 @@ rport       <REMOTE_PORT>
 local       <LOCAL_HOST>
 lport       <LOCAL_PORT>
 dev-type    tun
+tun-ipv6
 resolv-retry infinite
 dev         <INTERFACE_NAME>
 comp-lzo
@@ -55,6 +56,7 @@ comp-lzo
 dev         <INTERFACE_NAME>
 persist-key
 persist-tun
+tun-ipv6
 cipher aes-256-cbc
 resolv-retry infinite
 float
@@ -78,6 +80,7 @@ remote      <REMOTE_HOST>
 rport       <REMOTE_PORT>
 lport       float
 dev-type    tun
+tun-ipv6
 dev         <INTERFACE_NAME>
 comp-lzo
 persist-key
@@ -111,7 +114,7 @@ client-config-dir /etc/openvpn/roaming
 
 dev tun-roaming
 persist-tun
-#link-mtu 
+tun-ipv6
 tun-mtu 1500
 fragment 1300
 mssfix
