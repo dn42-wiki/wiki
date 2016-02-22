@@ -11,7 +11,6 @@
 
 ```
 #/etc/openvpn/<PEER_NAME>
-daemon
 proto       <PROTO>
 mode        p2p
 remote      <REMOTE_HOST>
@@ -26,7 +25,8 @@ comp-lzo
 persist-key
 persist-tun
 cipher aes-256-cbc
-ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
+ifconfig <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 
 # The secret can also be included inline with the config by 
@@ -34,7 +34,6 @@ secret /etc/openvpn/<PEER_NAME>.key
 # <secret>
 # ... Key File contents go here ...
 # </secret>
-
 ```
 
 then create a new key and share it with your peer
@@ -48,20 +47,20 @@ $ openvpn --genkey --secret /etc/openvpn/<PEER_NAME>.key
 ## peer with fixed ip
 
 ```
-daemon
 proto       <PROTO>
 mode        p2p
 dev-type    tun
 comp-lzo
-dev         <INTERFACE_NAME>
+dev  <INTERFACE_NAME>
 persist-key
 persist-tun
 tun-ipv6
 cipher aes-256-cbc
 resolv-retry infinite
 float
-port        <LOCAL_PORT>
-ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+port <LOCAL_PORT>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
+ifconfig  <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
 
@@ -87,7 +86,8 @@ persist-key
 persist-tun
 cipher aes-256-cbc
 resolv-retry infinite
-ifconfig    <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+ifconfig  <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
 
