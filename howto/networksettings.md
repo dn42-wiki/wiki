@@ -1,5 +1,5 @@
-The first rule of dn42 is always disable `rp_filter`. The second rule of dn42
-is always disable `rp_filter`. The third rule of dn42 is to allow ip forwarding!
+The first rule of dn42: Always disable `rp_filter`. The second rule of dn42
+is: Always disable `rp_filter`. The third rule of dn42 is: Allow ip forwarding!
 No serious, in case some packets are dropped check first if your settings are correct.
 
 `rp_filter` also known as reverse path filtering is a security measure, 
