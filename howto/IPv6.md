@@ -23,7 +23,6 @@ If not, you can follow the instructions on the [Getting Started](GettingStarted)
 A fair share of the services are available through IPv6. However some of the well known addresses might not work, so you'll have to find alternative services.
 
 Quick list of some native-IPv6-capable services:
- * Some instances of this Wiki, but no anycast yet
  * Anycast [whois.dn42](whois.dn42)
  * DNS, including anycast
  * Media boards, including DN42-Chan
