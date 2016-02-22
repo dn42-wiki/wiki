@@ -164,13 +164,18 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
 
 ## Configuration Examples
 
-* [Openvpn](openvpn)
-* [EdgeOS Configuration](EdgeOS-Config-Example)
-* [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
-* [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
-* [dn42 on OpenWRT](OpenWRT)
-* [Bird](bird)
-* [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
+* VPN/Tunnel:
+  * [Openvpn](/howto/openvpn)
+  * [Tinc](/howto/tinc)
+  * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
+* BGP:
+  * [Bird](howto/Bird)
+  * [Quagga](howto/Quagga)
+* Router specific:
+  * [dn42 on OpenWRT](OpenWRT)
+  * [EdgeOS Configuration](EdgeOS-Config-Example)
+  * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
+  * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
 
 # Configure DNS
 
