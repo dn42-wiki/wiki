@@ -42,6 +42,16 @@ include "/etc/bird/filter6.conf";
 # Kernel routing tables
 ########################
 
+
+/*
+    krt_prefsrc defines the source address for outgoing connections.
+    On Linux, this causes the "src" attribute of a route to be set.
+    
+    Without this option outgoing connections would use the peering IP which
+    would cause packet loss if some peering disconnects but the interface
+    is still available. (The route would still exist and thus route through
+    the TUN/TAP interface but the VPN daemon would simply drop the packet.)
+*/
 protocol kernel {
   scan time 20;
   device routes;
