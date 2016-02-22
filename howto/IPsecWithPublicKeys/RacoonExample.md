@@ -37,3 +37,7 @@ remote 192.168.255.2 {
   }
 }
 ```
+
+## Se also
+
+[debian specific configuration](IPsecWithPublicKeys/GRE plus IPsec Debian)
