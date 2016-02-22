@@ -8,7 +8,7 @@
 * Replace `<INTERFACE_NAME>` with a self chosen name, this will be the name of your network interface (tun device) for this peering
 * Replace `<LOCAL_GATEWAY_IP>` with your own dn42 ip address
 * Replace `<REMOTE_GATEWAY_IP>` with dn42 ip address of your peer
-* <LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6> same as ipv4, but both ip addresses needs to be in the same subnet. For simplicity you can always use an address from link-local ipv6 range (fe80::/64)
+* `<LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6>` same as ipv4, but both ip addresses needs to be in the same subnet. For simplicity you can always use an address from link-local ipv6 range (fe80::/64)
 
 ```
 #/etc/openvpn/<PEER_NAME>
