@@ -31,7 +31,7 @@
   * [[Internal services|Internal-services]]
 
 * External Tools
-  * [[Paste Board|https://dn42.us/p/]]
+  * [[Paste Board|https://dn42.us/paste/]]
   * [[Git Repositories|https://dn42.us/git]]
 
 --------------
