@@ -121,3 +121,6 @@ In this example, we'll use the following settings:
 If your peer is using a Cisco router and is behind NAT, then you might need to add the following option:
 
         rightid=NATIP
+
+# See also
+* [Network settings](https://internal.dn42/howto/networksettings)
