@@ -36,12 +36,12 @@ https://dn42.us/git/user/ryan/pubkey-converter/plain/pubkey-converter.pl
 ### How-To examples
 | Implementation           | Key format      |
 | :----------------------- | --------------: |
+| [strongSwan >= 5.0.0][f] | PEM             |
 | [Cisco IOS][a]           | Hexadecimal DER |
 | [Mikrotik RouterOS][b]   | PEM             |
 | [OpenBSD][c]             | PEM             |
 | [Racoon][d]              | Base64 RFC 3110 |
 | [strongSwan < 5.0.0][e]  | Base64 RFC 3110 |
-| [strongSwan >= 5.0.0][f] | PEM             |
 | [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
 
 [a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
