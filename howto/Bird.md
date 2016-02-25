@@ -1,5 +1,6 @@
 Bird is a commonly used BGP daemon.  This page provides configuration and help to run Bird for dn42.
-Compared to quagga, bird supports multiple routing tables, which is useful, if you also plan to peer with other federated networks such as freifunk.
+Compared to quagga, bird supports multiple routing tables, which is useful, if you also plan to peer with other federated networks such as freifunk. In the following a working configuration for dn42 is shown. If you 
+want to learn the practical details behind routing protocols in bird, see the following [guide](https://github.com/Mic92/bird-dn42)
 
 # Debian
 The version in the Debian repositories might be quite old, therefore it makes sense to install a newer one directly from bird:
