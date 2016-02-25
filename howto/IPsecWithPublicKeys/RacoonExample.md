@@ -1,4 +1,4 @@
-Quote from #dn42: `hexa: nobody runs racoon on their own free will :)`.
+Quote from #dn42: `hexa: nobody runs racoon on their free will :)`.
 
 See also [strongswan](howto/IPsecWithPublicKeys/strongSwan5Example)
 
