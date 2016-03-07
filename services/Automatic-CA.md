@@ -234,4 +234,4 @@ OK
 ```
 
 ## Certificate transparency
-All issued certificates will be logged to [https://teams.dn42/dn42/channels/tls-certificates](xuu's mattermost instance).
+All issued certificates will be logged to [xuu's mattermost instance](https://teams.dn42/dn42/channels/tls-certificates).
