@@ -232,3 +232,6 @@ $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt
 == REVOKE CERT ==
 OK
 ```
+
+## Certificate transparency
+All issued certificates will be logged to [https://teams.dn42/dn42/channels/tls-certificates](xuu's mattermost instance).
