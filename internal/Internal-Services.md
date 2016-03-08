@@ -169,6 +169,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
 | https://git.dn42, https://dn42.us/git             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
+| https://sour.is/pubkeys.php?user=Mic92            | Get ssh public keys from Git Users of git.dn42 |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
 | http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
 | http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
