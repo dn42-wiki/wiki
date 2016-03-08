@@ -159,7 +159,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| http://teams.dn42/                                | Mattermost instance: get notifications for wiki/ CA changes here                                                           |
+| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | http://zerobin.e-utp.dn42                         | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
@@ -168,8 +168,8 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
-| https://git.dn42, https://dn42.us/git             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
-| https://sour.is/pubkeys.php?user=Mic92            | Get ssh public keys from Git Users of git.dn42 |
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
+| https://git.dn42[.us]/pubkeys                     | Get ssh public keys from Git Users of git.dn42. query parameter 'user' (ex. https://git.dn42/pubkeys?user=xuu) |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
 | http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
 | http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
