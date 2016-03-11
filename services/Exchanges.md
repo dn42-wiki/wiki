@@ -3,6 +3,6 @@ In the real world two organizations have to lay cables to one another when they 
 A few people provide exchanges on DN42.
 
 The following exchanges are available:
-* Amsterdam (OpenVPN) - NL Zuid - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
+* Amsterdam (OpenVPN) - NL Zuid (marlinc) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
