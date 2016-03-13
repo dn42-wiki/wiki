@@ -64,6 +64,9 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://mhm.dn42/search                            | Hosted by toBee                                          |
 | http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
+| http://yacy.marlinc.dn42:8090/                    | Marlinc's YaCy node.                   |
+| https://surf.dn42/                                | siska's YaCy node.                     |
+| http://yacy.hexa.dn42/                            | hexa-'s YaCy node.                     |
 |                                                   |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit)|
 | http://search.dn42 (172.23.184.1)                 | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
 | https://surf.dn42                                 | YaCy node                                       |
