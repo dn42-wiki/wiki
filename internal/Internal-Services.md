@@ -155,7 +155,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| 172.20.187.221:27015                              | Counter Strike: Source |                            |
+| gaming.marlinc.dn42:27015                         | Counter Strike: Source |                            |
 | 172.22.177.179:27017 (external:gmod.nixnodes.net)                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from ICANN)   |
 
 ## Misc 
