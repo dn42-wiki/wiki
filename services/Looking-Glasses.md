@@ -18,6 +18,7 @@ Please sort by AS number.
 * AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
 * AS 4242420300: http://lg-fr-rbx.wolke7.me or http://lg-fr-rbx.wolke7.dn42
 * AS 4242422222: http://as4242422222.dn42/lg.htm or http://as4242422222.hope.mx/lg.htm
+* AS 4242423905: https://lg.weiti.dn42/ulg/ or https://vpn01.weiti.org/ulg/
 
 **BROKEN**
 * AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes) 
