@@ -265,7 +265,7 @@ check_urls() {
         for url in "${URL[@]}"; do
         
                 ## workaround curl errno 23 when piping
-                http_response=`${CURL} --insecure -L -o - "${url}"`
+                http_response=`${CURL} --insecure -g -s -L -o - "${url}"`
                         
                 echo "${http_response}" | egrep -q "${VALIDATE_KEYWORD}" || {
                         return 1
