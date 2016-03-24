@@ -7,4 +7,5 @@ The following exchanges are available:
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * France (OpenVPN/Fastd/Tinc/Plain GRE) - florianb [https://dn42-ix.tk/locations.php](https://dn42-ix.tk/locations.php)
+* UK ( Manchester ) (OpenVPN/Fastd/Tinc/Plain GRE) - florianb [https://dn42-ix.tk/locations.php](https://dn42-ix.tk/locations.php)
 * Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
