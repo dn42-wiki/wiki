@@ -175,6 +175,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | https://weiti.dn42/cgi-bin/my-ip | Another 'myip' service |
 | https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
+| https://ngit.dn42                                 | |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
 | http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
 | http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
