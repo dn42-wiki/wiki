@@ -317,8 +317,8 @@ example filter list:
 ```
 function is_valid_network() {
   return net ~ [
-    172.22.0.0/15{22,28}, # dn42 main net0
-    172.20.0.0/16{21,28}, # dn42 main net1
+    172.22.0.0/15{21,28}, # dn42 main net0
+    172.20.0.0/15{21,28}, # dn42 main net1
     172.22.0.0/23{28,32}, # dn42 Anycast range
     172.23.0.0/24{28,32}, # dn42 Anycast range
     192.175.48.0/24{24,32}, # AS112-prefix for reverse-dns  
