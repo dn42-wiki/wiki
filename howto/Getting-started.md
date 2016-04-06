@@ -172,8 +172,8 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
   * [Tinc](/howto/tinc)
   * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 * BGP:
-  * [Bird](howto/Bird)
-  * [Quagga](howto/Quagga)
+  * [Bird](/howto/Bird)
+  * [Quagga](/howto/Quagga)
 * Router specific:
   * [dn42 on OpenWRT](OpenWRT)
   * [EdgeOS Configuration](EdgeOS-Config-Example)
