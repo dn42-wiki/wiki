@@ -89,7 +89,7 @@ You may choose your network prefix in one of the currently open netblocks. You c
 | /28  | usually enough           |
 | /29  | starter pack             |
 
-The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /24 worth of addresses and please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /28 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but our IPv4-space is valuable too!
+The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /28 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but our IPv4-space is valuable too! If you need a /24 or larger, please ask in the IRC chan or on the mailing list.
 
 For example, if there is no /27 free, you can split up a /26 into two /27. If you are looking for a /27 but there are none showing in the Open Netblocks tool, instead pick one of the /26 and click Take it!
 When registering your inetnum, instead of writing 172.2x.xxx.0-172.2x.xxx.63 then you can write 172.2x.xxx.0-172.2x.xxx.31. This will get you a /27 and save our IP space for others.
