@@ -85,7 +85,7 @@ You may choose your network prefix in one of the currently open netblocks. You c
 | /24  | are you an organization? |
 | /25  | still a lot of IPs!      |
 | /26  | usually enough           |
-| /27  | default allocation       |
+| **/27**  | **default allocation**       |
 | /28  | usually enough           |
 | /29  | starter pack             |
 
