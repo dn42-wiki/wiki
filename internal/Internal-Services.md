@@ -8,6 +8,9 @@ More ideas inspiration is collected on another [page](/internal/ideas).
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
+## Discussion platform
+florianb maintains a discussion platform as alternative to the mailing list. https://forum.flo.dn42
+
 ## Games
 ### Trial Wars
 
