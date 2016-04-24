@@ -28,6 +28,7 @@ Quick list of some native-IPv6-capable services:
  * Media boards, including DN42-Chan
  * torrents.dn42
  * wiki.dn42/internal.dn42
+ * Dn42 Exchange: admin.dn42-ix.tk
 
 What doesn't work (yet?): 
  * Search engines, none seems to support IPv6 currently
