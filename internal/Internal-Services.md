@@ -165,7 +165,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | gaming.marlinc.dn42:27015                         | Counter Strike: Source |                            |
-| 172.22.177.179:27017 (external:gmod.nixnodes.net)                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from ICANN)   |
+| 172.22.177.92:27017 (external:gmod.nixnodes.net)                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from ICANN)   |
 
 ## Misc 
 
