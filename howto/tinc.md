@@ -21,7 +21,7 @@ ConnectTo = remote_host
 #AutoConnect = yes
 ```
 
-Tinc requires to add manually ip addresses and routes to the tap/tun interfaces. On startup it will execute `/etc/tinc/tinc-up` if it exists **and** is executable:
+Tinc requires to add manually ip addresses and routes to the tap/tun interfaces. On startup it will execute `/etc/tinc/dn42_yourpeer/tinc-up` if it exists **and** is executable:
 
 Example `/etc/tinc/dn42_yourpeer/tinc-up`:
 
