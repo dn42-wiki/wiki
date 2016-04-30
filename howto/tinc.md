@@ -18,7 +18,7 @@ Mode = switch
 # To discover other hosts, it is required to initially specify a number of hosts to connect to. ConnectTo can be specified multiple times.
 ConnectTo = remote_host
 # In newer versions (>= 1.1) you can use AutoConnect instead
-AutoConnect = yes
+#AutoConnect = yes
 ```
 
 Tinc requires to add manually ip addresses and routes to the tap/tun interfaces. On startup it will execute `/etc/tinc/tinc-up` if it exists **and** is executable:
