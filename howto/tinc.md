@@ -78,7 +78,7 @@ Set up a new tinc network
 # tinc -n dn42_yourpeer init dn42_yourself
 ```
 
-Invite your peering partner. Tinc will try print the invition which you need to copy to your peering partner.
+Invite your peering partner. Tinc will print the invitaion which you need to copy to your peering partner.
 ```
 $ tinc invite yourpeer
 <ip-or-address>/nIRp5pJCnfnhuV13JUomscGs1q5HqEbz3AydZer7wRaMcpUB
