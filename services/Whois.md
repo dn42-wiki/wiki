@@ -122,8 +122,8 @@ cd whoisd/ruby
 sudo ruby whoisd.rb nobody
 ```
 ## Whois restful API
-This service is in beta testing
-https://whois.rest.dn42/
+Note: this service is in beta testing, API may still change and URL will certainly be changed.
+https://whois.rest.dn42:4242/
 
 # Monotone
 Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvs.
