@@ -192,6 +192,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | xmpp://jabber.szf.dn42                            | XMPP/Jabber server, port 5222 w/ STARTTLS only |
+| https://whois.rest.dn42/                          | whois restful API |
 
 # Other networks
 
