@@ -89,7 +89,7 @@ template bgp dnpeers {
     }
     reject;
   };
-  route limit 10000 action block;
+  import limit 10000 action block;
 }
 
 include "/etc/bird/peers6/*";
