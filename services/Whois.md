@@ -42,6 +42,10 @@ To add or edit records with the web interface, authentication is done thanks to 
 
 The password are not stored in cleartext in the registry: a hash is computed from the password and the name of the maintainer object. To generate such a hash (e.g. in case you forgot your password), use https://io.nixnodes.net/nctlio.php?m=dnr&gen=mypassword&mnt=MYMAINTAINER-MNT
 
+## REST API with JSON response
+
+Read-only, responses are encoded in JSON, for details please consult https://rest.dn42/ .
+
 ## Misc
 
 A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
@@ -56,10 +60,6 @@ There is also a DNS-based interface to query AS information from the registry. T
 The Python code for generating the zone from the registry is available on the monotone repository.
 
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see https://www.team-cymru.org/Services/ip-to-asn.html#dns
-
-# REST API with JSON response
-
-https://rest.dn42/
 
 # Address space
 
