@@ -57,6 +57,10 @@ The Python code for generating the zone from the registry is available on the mo
 
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see https://www.team-cymru.org/Services/ip-to-asn.html#dns
 
+# REST API with JSON response
+
+https://rest.dn42/
+
 # Address space
 
 There is nice 3djs visualisation showing current address space usage: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html ([public](http://dataviz.polyno.me/dn42-netblock-visu/registry.html) or 172.23.184.71). The input data is taken from the registry.
