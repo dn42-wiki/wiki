@@ -8,14 +8,6 @@ More ideas inspiration is collected on another [page](/internal/ideas).
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
-## Discussion platform
-florianb maintains a discussion platform as alternative to the mailing list. https://forum.flo.dn42
-
-## Games
-### Trial Wars
-
-florianb is maintaing a TWLan-Server under https://twlan.flo.dn42/
- 
 ## Network-related
 
   * See [[Looking Glasses]] for more network diagnostic tools
