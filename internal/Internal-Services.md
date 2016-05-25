@@ -91,6 +91,24 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage butt in dn42.
 
+### ipfs
+bootstrap peers
+```
+/ip4/172.20.161.135/tcp/4001/ipfs/QmYgD1wdPjx5oWzYJ195K84PqAXRnw9mcqbyZYAdXfaYkD
+/ip4/172.20.52.220/tcp/4001/ipfs/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc
+```
+test hashes
+```
+/ipfs/QmQ7psrGrXS3GFNC4BtU6pJXq6G7ps5NbYrhS2VYFufj9T
+/ipfs/QmYLapmcSU7q93Ta4eHMh8fq9ios2HTSdbpHDRQwGG6ocJ
+
+```
+cdn (currently only jquery
+```
+/ipns/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc/cdn/jquery
+
+```
+
 ### Direct Connect
 An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hub is being run at `hub.dcpp.dn42:2780`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
 
