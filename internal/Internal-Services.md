@@ -101,12 +101,14 @@ test hashes
 ```
 /ipfs/QmQ7psrGrXS3GFNC4BtU6pJXq6G7ps5NbYrhS2VYFufj9T
 /ipfs/QmYLapmcSU7q93Ta4eHMh8fq9ios2HTSdbpHDRQwGG6ocJ
-
 ```
 cdn (currently only jquery
 ```
 /ipns/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc/cdn/jquery
-
+```
+Until browsers have ipfs access (either through native support or js), one can use the http gateway
+```
+https://rest.dn42/
 ```
 
 ### Direct Connect
