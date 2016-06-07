@@ -130,7 +130,7 @@ status:            ASSIGNED
 
 #### Create route objects
 
-If you plan to announce this network in dn42, which you probably want in most cases, you also need to create a `route` object for ipv4 and a `route6` object for ipv6. This information is used for ROA checks (route origin authorization). If you skip this step, your network gets probably filtered by some peers.
+If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route` object for ipv4 prefixes and a `route6` object for ipv6 prefixes. This information is used for ROA checks (route origin authorization). If you skip this step, your network will probably get filtered by some peers. Many people enforce ROA checks to prevent (accidental) hijacking of other people's prefixes.
 
 example: route6/fd42:4992:6a6d::_48
 ```
