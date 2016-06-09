@@ -356,6 +356,49 @@ protocol bgp <PEER_NAME> from dnpeers {
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
 More information can be found [here](/howto/Bird-communities). 
 
+# Route Origin Authorization
+
+Route Origin Authorizations should be used in BIRD to authenticate prefix announcements. These check the originating AS and validate that they are allowed to advertise a prefix. 
+
+## ROA Tables
+
+The ROA table can be generated from the registry directly or you can use the following pre-built ROA tables for BIRD (generated every 30 mins from the registry):
+
+https://dn42.tech9.io/roa/bird_roa_dn42.conf  
+https://dn42.tech9.io/roa/bird6_roa_dn42.conf
+
+The files above are maintained by **chrismoos**, contact him on IRC if there are any issues.
+
+### Updating ROA tables
+
+You can add cron entries to periodically update the tables:
+
+```
+*/15 * * * * curl -sL -o "/etc/bird/bird6_roa_dn42.conf" "https://dn42.tech9.io/roa/bird6_roa_dn42.conf" && birdc6 configure
+*/15 * * * * curl -sL -o "/etc/bird/bird_roa_dn42.conf" "https://dn42.tech9.io/roa/bird_roa_dn42.conf" && birdc configure
+```
+
+## Filter configuration
+
+In your import filter add the following to reject invalid routes:
+
+```
+if (roa_check(dn42_roa, net, bgp_path.last) = ROA_INVALID) then {
+   print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
+   reject;
+}
+```
+
+Also, define your ROA table with:
+
+```
+roa table dn42_roa {
+    include "bird_roa_dn42.conf";
+};
+```
+
+**NOTE**: Make sure you setup ROA checks for both bird and bird6 (for IPv6).
+
 # Useful bird commmands
 
 bird can be remote controlled via the `birdc` command. Here is a list of useful bird commands:
@@ -405,4 +448,3 @@ bird> show route export <somepeer> # shows the route you export to someone
 # External Links
 * detailed bird configuration from Mic92: https://github.com/Mic92/bird-dn42
 * more bgp commands: http://danrimal.net/doku.php?id=wiki:bgp:bird:postupy
-
