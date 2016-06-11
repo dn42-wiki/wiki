@@ -75,4 +75,5 @@ The [[Getting started]] page helps you to get your first node inside the network
 
 This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
 
+
 A [copy of the old wiki](http://dn42.volcanis.me/initenv.1.html) is available for reference, but **beware**, most of the information there is outdated.
