@@ -116,7 +116,7 @@ $ ruby utils/bgp-filter.rb --format bird < data/filter6.txt > /etc/bird/filter6.
 
 or
 
-$ curl -sk https://ca.dn42.us/reg/filter6.txt | \
+$ curl -s https://ca.dn42.us/reg/filter6.txt | \
     awk '/^[0-9]/ && $2 ~ /permit/ {printf "%s{%s,%s}\n", $3, $4, $5}' | \
     awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n"} \
         NR > 1 {printf ",\n"} {printf "  %s", $1}
@@ -305,7 +305,7 @@ $ ruby utils/bgp-filter.rb --format bird < data/filter.txt > /etc/bird/filter4.c
 
 or
 
-$ curl -sk https://ca.dn42.us/reg/filter.txt | \
+$ curl -s https://ca.dn42.us/reg/filter.txt | \
     awk '/^[0-9]/ && $2 ~ /permit/ {printf "%s{%s,%s}\n", $3, $4, $5}' | \
     awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n"} \
         NR > 1 {printf ",\n"} {printf "  %s", $1}
