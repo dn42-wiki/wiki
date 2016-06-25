@@ -8,7 +8,7 @@ Providers:
 | mortzu        | shell.mortzu.dn42                    | dn42 only        | -           | -             |
 
 ## Entropy shellbox
-The Entropy shellbox runs a [Grsecurity](https://grsecurity.net/) secured kernel, along with various other hardening features such as [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) and some sysctl tweaks. It has an internal mail system which anyone can use to contact a shell user ([user]@entropy.aix.ovh). Additionally, it has all of the [BlackArch tools](http://www.blackarch.org/tools.html) installed and available for everyone to use.
+The Entropy shellbox runs a [Grsecurity](https://grsecurity.net/) secured kernel, along with various other hardening features such as [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) and some sysctl tweaks. It has an internal mail system which anyone can use to contact a shell user (`[user]@entropy.aix.ovh`). Additionally, it has all of the [BlackArch tools](http://www.blackarch.org/tools.html) installed and available for everyone to use.
 To further enhance security, the ownership of various SUID executables and logs has been restricted to members of certain groups, which are nicely explained by the [MOTD](https://entropy.aix.ovh/shell/motd):
 ```
         tpe: allows you to execute files not in root-owned
