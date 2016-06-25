@@ -37,6 +37,6 @@ To further enhance security, the ownership of various SUID executables and logs 
         audit: your activities are logged
 ```
 
-By default, users will be part of only `tpe` and `audit` groups (as well as their own) but may request to be added to other groups. Please note that the only execve() and chdir() calls are logged as a result of a user's membership of the `audit` group.
+By default, users will be part of only `tpe` and `audit` groups (as well as their own) but may request to be added to other groups. Please note that the only `execve()` and `chdir()` calls are logged as a result of a user's membership of the `audit` group.
 
 Lastly, in the interests of full disclosure, here are the [details of the box](http://pastie.org/pastes/10890047/text).
