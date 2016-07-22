@@ -6,7 +6,4 @@ The following exchanges are available:
 * Amsterdam (OpenVPN) - NL Zuid (marlinc) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
-* FR ( Paris ) (OpenVPN/Fastd/Tinc/Plain GRE) - florianb [https://dn42-ix.tk/locations/](https://dn42-ix.tk/locations/)
-* UK ( Manchester ) (OpenVPN/Fastd/Tinc/Plain GRE) - florianb [https://dn42-ix.tk/locations/](https://dn42-ix.tk/locations/)
-* AT ( Vienna ) (OpenVPN/Fastd/Tinc/Plain GRE) - florianb [https://dn42-ix.tk/locations/](https://dn42-ix.tk/locations/)
 * Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
