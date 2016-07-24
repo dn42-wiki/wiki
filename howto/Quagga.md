@@ -97,6 +97,20 @@ Apply a prefix list for incoming prefixes to your peer group:
     ipv6 prefix-list vpn-in seq 10 permit fd00::/8 ge 9
     ipv6 prefix-list vpn-in seq 15 deny any
 
+#### Example filter list script
+```
+#!/bin/bash
+
+vtysh -c 'conf t' -c "no ip prefix-list dn42"; #drop old prefix list
+
+while read pl
+do
+   vtysh -c 'conf t' -c "$pl"; #insert prefix list row by row
+done < <(curl -s https://ca.dn42.us/reg/filter.txt | grep -e  ^[0-9] | awk '{ print "ip prefix-list dn42 seq " $1 " " $2 " " $3 " ge " $4 " le " $5}' | sed "s_/\([0-9]\+\) ge \1_/\1_g;s_/\([0-9]\+\) le \1_/\1_g");
+vtysh -c "wr" #write new prefix list
+
+```
+
 ## show bpg session status
 
 in this example:
