@@ -88,6 +88,12 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams             |
 
+## Voice and video calls
+
+| Hostname / IP                                     | Remarks                                                  |
+|:------------------------------------------------- |:-------------------------------------------------------- |
+| jupiter.zaledia.dn42                              | Zaledia SIP VOIP service. Contact ranma on IRc OR julien@zaledia.dn42 or julien.owls@gmail.com to get your account. 
+
 ## File sharing
 
 ### Tahoe LAFS
