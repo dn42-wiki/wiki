@@ -92,7 +92,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| jupiter.zaledia.dn42                              | Zaledia SIP VOIP service. Contact ranma on IRc OR julien@zaledia.dn42 or julien.owls@gmail.com to get your account. 
+| http://zaledia.dn42/                              | Zaledia VOIP service. Contact ranma on IRC OR julien@zaledia.dn42 or julien.owls@gmail.com to get your account. 
 
 ## File sharing
 
