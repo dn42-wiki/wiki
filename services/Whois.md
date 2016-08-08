@@ -77,10 +77,11 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
-| nixnodes   | whois.nixnodes.dn42       | 172.22.177.77   |
-| org-cccda  | whois.cda.dn42            | 172.23.96.1 / fd42:23:cda::1 |
-| w0h        | whois.w0h.dn42            | 172.22.232.6 / fd2d:a6da:8d1a:1408::6 |
-| weiti      | whois.weiti.dn42          | 172.20.175.253 / fdf7:17d5:de49::43 |
+| nixnodes   | whois.nixnodes.dn42          | 172.22.177.77   |
+| org-cccda  | whois.cda.dn42               | 172.23.96.1 / fd42:23:cda::1 |
+| w0h        | whois.w0h.dn42               | 172.22.232.6 / fd2d:a6da:8d1a:1408::6 |
+| weiti      | whois.weiti.dn42             | 172.20.175.253 / fdf7:17d5:de49::43 |
+| Mic92      | whois.evenet.dn42 ([whois42d](https://git.dn42.us/Mic92/whois42d)) | 172.23.75.1 / fd42:4992:6a6d::6 |
 
 ### Down?
 
