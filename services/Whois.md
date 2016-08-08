@@ -70,7 +70,7 @@ Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn
 # Software
 
  * [[lglass]] is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
-* [whois42d](https://github.com/Mic92/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
+ * [whois42d](https://github.com/Mic92/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
 
 # Whois daemons
 
