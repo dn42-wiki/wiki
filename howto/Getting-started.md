@@ -151,7 +151,7 @@ bgp-status:        active
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/Bird-communities).
 
-If you don't know anybody who can peer with you, you can use this tool: http://peerfinder.polyno.me
+If you don't know anybody who can peer with you, you can use this tool: https://dn42.us/peers
 
 It will let you find people to peer with.  You can then contact them on IRC or by email.  In case you're really at loss, you can also ask for peers on the mailing list.
 
