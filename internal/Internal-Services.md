@@ -4,6 +4,8 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 More ideas inspiration is collected on another [page](/internal/ideas).
 
+You can inspect the service status [on this page](https://services.dn42)
+
 ## CA
 
 xuu is maintaining an [[certificate authority]] for internal services.
