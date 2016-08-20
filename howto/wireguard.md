@@ -60,6 +60,6 @@ or with new iputils without ping6
 ping fe80::<you_peers_suffix>%<interface_name>
 ```
 
-Afterwards configure you [BGP](/howto/Bird) as usual
+Afterwards configure your [BGP session](/howto/Bird) as usual
 
 
