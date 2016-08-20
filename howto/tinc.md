@@ -1,4 +1,4 @@
-[Tinc](http://www.tinc-vpn.org/) is a meshing VPN daemon. It allows multiple parties to connect and discover each other independently, while minimizing points of failure. Tinc will use a bunch of nodes to build the network graph, which in return all nodes use to learn addresses for each other. If nodes want to reach each other they establish a direct connection to each other. If that is not possible traffic may be routed via a shared neighbour. Tinc is most notably powering the Freifunk communitys [ICVPN](https://github.com/freifunk/icvpn) (in L2/Switch-Mode) and [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) (in L3/Router-Mode).
+[Tinc](http://www.tinc-vpn.org/) is a meshing VPN daemon. It allows multiple parties to connect and discover each other independently, while minimizing points of failure. Tinc will use a bunch of nodes to build the network graph, which in return all nodes use to learn addresses from each other. If nodes want to reach each other, they establish a direct connection. If that is not possible traffic may be routed via a shared neighbor. Tinc is most notably powering the Freifunk communitys [ICVPN](https://github.com/freifunk/icvpn) (in L2/Switch-Mode) and [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) (in L3/Router-Mode).
 
 Tinc primarily operates in two modes: router and switch. A third mode, the hub mode, exists, but it's just a dumb router mode that keeps no routing table and broadcasts everything - don't use it.
 In Router mode each peer announces the addresses/subnets it serves. Tinc will spawn an interface on which it will act as a L3 network, routing according to announcements. This is the default mode, but it is unsuitable for dn42, because you cannot influence how tinc will route to a certain network. In Switch mode tinc will act like a L2 network, in which the routing table reflects the peers mac addresses.
@@ -33,11 +33,11 @@ Example `/etc/tinc/dn42_yourpeer/tinc-up`:
 ip link set dev $INTERFACE up
 
 # add transfer networks
-ip -4 addr add 172.16.0.1/30 dev $INTERFACE scope link
-ip -6 addr add fe80::1/64 dev $INTERFACE
+ip addr add 172.16.0.1/30 dev $INTERFACE scope link
+ip addr add fe80::1/64 dev $INTERFACE
 
 # add routes
-ip -4 route add 172.16.0.1/30 dev $INTERFACE table peers
+ip route add 172.16.0.1/30 dev $INTERFACE table peers
 ```
 
 For authentication tinc uses public key authentication instead of certificates or pre-shared keys.
