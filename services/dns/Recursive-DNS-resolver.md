@@ -44,6 +44,11 @@ server:
         access-control: 0.0.0.0/0 allow
         # dn42 root servers
         root-hints: /etc/unbound/dn42.hints
+	# enable IPv6
+	do-ip6: yes
+	# allow reverse lookup of rfc1918 space, which includes the DN42 address space
+	unblock-lan-zones: yes
+	insecure-lan-zones: yes
 
 remote-control:
         control-enable: no
