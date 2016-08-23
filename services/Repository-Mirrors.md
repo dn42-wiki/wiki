@@ -21,11 +21,11 @@ Hosted by:
 * florianb
 
 ## Ubuntu
+**ubuntu.mirror.dn42** 
 
-**ubuntu.mirror.dn42**
+**archive.ubuntu.mirror.dn42**
 
 Hosted by:
-* Nurtic-Vibe
+* Trunet
+* Basil
 
-
-If you consider adding your mirror to the list, contact Nurtic-Vibe via IRC.
