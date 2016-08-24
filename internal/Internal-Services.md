@@ -177,9 +177,15 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 ## OS Mirror/Repository's
 
+Also check [Repository Mirrors](services/Repository-Mirrors)
+
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
-| files.twink0r.dn42                                       | Debian, Ubuntu                      |                                     |
+| http://debian.mirror.martin89.dn42                | Debian mirror                       |                                     |
+| http://ubuntu.trunet.dn42                         | Ubuntu releases mirror              | Each 4 hours                        |
+| http://archive.ubuntu.trunet.dn42                 | Ubuntu archive mirror               | Each 6 hours                        |
+| ~~http://files.twink0r.dn42~~(OFFLINE 2016-08-24) | Debian, Ubuntu                      |                                     |
+| ~~http://freebsd.e-utp.dn42~~(OFFLINE 2016-08-24) | FreeBSD Homepage mirror             |                                     |
 
 ## Gaming
 
@@ -195,10 +201,11 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
-| https://paste.synhacx.dn42                        | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| http://zerobin.e-utp.dn42                         | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://flo.dn42/paste/                           | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
-| https://szf.dn42/paste/                           | AES-encrypted pastebin-like, another one                                       |
+| http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| ~~https://paste.synhacx.dn42~~(OFFLINE 2016-08-24)| AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| ~~http://zerobin.e-utp.dn42~~(OFFLINE 2016-08-24) | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| ~~https://flo.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
+| ~~https://szf.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-encrypted pastebin-like, another one                                       |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
@@ -207,8 +214,6 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://ngit.dn42                                  | |
 | http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
-| http://freebsd.e-utp.dn42                         | FreeBSD Homepage mirror                                                        |
-| http://debian.mirror.martin89.dn42                | Debian mirror                                                                  |
 | nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
 | mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat                            |
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
