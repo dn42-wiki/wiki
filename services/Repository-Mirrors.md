@@ -7,18 +7,8 @@ There are some mirrors available in DN42. All mirrors are subdomains of "mirror.
 **debian.mirror.dn42**
 
 Hosted by:
-* Nurtic-Vibe
-* Martin89
-<br>
+* Basil
 
-**Proxy to load from regular mirrors:**<br>
-http://172.23.246.1:3142/regularmirror/debian
-
-**How to use it:**<br>
-deb http://172.23.246.1:3142/_regularmirror_/debian main
-
-Hosted by:
-* florianb
 
 ## Ubuntu
 **ubuntu.mirror.dn42** 
