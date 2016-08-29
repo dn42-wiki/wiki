@@ -89,7 +89,7 @@ template bgp dnpeers {
     }
     reject;
   };
-  import limit 10000 action block;
+  import limit 1000 action block;
 }
 
 include "/etc/bird/peers6/*";
@@ -277,7 +277,7 @@ template bgp dnpeers {
     }
     reject;
   };
-  import limit 10000 action block;
+  import limit 1000 action block;
   #source address OWNIP;
 };
 
