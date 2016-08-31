@@ -18,7 +18,7 @@ Please sort by AS number.
 |  http://edge1.core.chaos-darmstadt.de   http://lg.cda.dn42        |          4242420101          |                    |  |
 |  http://peerfinder.polyno.me  http://peerfinder.polynome.dn42       |          4242420184           |        it can be used as a distributed looking glass if you give it a dn42 address.            | DOWN |
 |  http://lg-fr-rbx.wolke7.me      http://lg-fr-rbx.wolke7.dn42      |          4242420300            |                    | DOWN |
-|  http://as4242422222.hope.mx/lg.htm  http://as4242422222.dn42/lg.htm         |          4242422222           |                    |  |
+|  http://as4242422222.hope.mx/lg.htm  http://as4242422222.dn42/lg.htm         |          4242422222           |                    | DOWN |
 |  https://vpn01.weiti.org/ulg/  https://lg.weiti.dn42/      |          4242423905           |                    | UP |
 |  http://zeus.nowhere.ws/dn42/routes.cgi  http://zeus.nihilus.dn42/dn42/routes.cgi      |          4242423905           |        (IPv4 & IPv6) → non-interactive (simply displays all known routes)             | DOWN |
 
