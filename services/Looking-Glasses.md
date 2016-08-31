@@ -8,19 +8,19 @@ When a looking glass is described as `IPv4` or `IPv6`, it refers to the informat
 
 Please sort by AS number.
 
-| Public URL   | dn42 URL                           | AS                     | Remarks                    | State |
-|:-------------|:---------------------------------- |:---------------------- |:-------------------------- |:------|
-|  http://lg.prauscher.de |     http://lg.prauscher.dn42       |           64720         |                    |  |
-|  http://sour.is |            |           64737        |         (IPv4 & IPv6) If you would like to submit your own site AS route information contact xuu@sour.is.   | |
-|  http://ix.ucis.nl/routes.php |    http://ix.ucis.dn42/routes.php        |           64766        |        interactive (traceroute)            |  |
-|  http://lg.nixnodes.net |   http://lg.nixnodes.dn42         |           76103          |          interactive (traceroute)          |  |
-|  http://dn42.netrik.de/de-fra1/  |   http://172.22.232.5/de-fra1/         |          4242420013           |      interactive, bgpmap              |  |
-|  http://edge1.core.chaos-darmstadt.de |    http://lg.cda.dn42        |          4242420101          |                    |  |
-|  http://peerfinder.polyno.me |     http://peerfinder.polynome.dn42       |          4242420184           |        it can be used as a distributed looking glass if you give it a dn42 address.            |  |
-|  http://lg-fr-rbx.wolke7.me |    http://lg-fr-rbx.wolke7.dn42      |          4242420300            |                    |  |
-|  http://as4242422222.hope.mx/lg.htm |     http://as4242422222.dn42/lg.htm         |          4242422222           |                    |  |
-|  https://vpn01.weiti.org/ulg/ |      https://lg.weiti.dn42/      |          4242423905           |                    |  |
-|  http://zeus.nowhere.ws/dn42/routes.cgi |      http://zeus.nihilus.dn42/dn42/routes.cgi      |          4242423905           |        (IPv4 & IPv6) → non-interactive (simply displays all known routes)             |  |
+| Public/dn42 URL                            | AS                     | Remarks                    | State |
+|:------------------------------------------------- |:---------------------- |:-------------------------- |:------|
+|  http://lg.prauscher.de  http://lg.prauscher.dn42       |           64720         |                    | UP |
+|  http://sour.is            |           64737        |         (IPv4 & IPv6) If you would like to submit your own site AS route information contact xuu@sour.is.   | UP |
+|  http://ix.ucis.nl/routes.php   http://ix.ucis.dn42/routes.php        |           64766        |        interactive (traceroute)            | UP |
+|  http://lg.nixnodes.net  http://lg.nixnodes.dn42         |           76103          |          interactive (traceroute)          | UP |
+|  http://dn42.netrik.de/de-fra1/    http://172.22.232.5/de-fra1/         |          4242420013           |      interactive, bgpmap              | UP  |
+|  http://edge1.core.chaos-darmstadt.de   http://lg.cda.dn42        |          4242420101          |                    |  |
+|  http://peerfinder.polyno.me  http://peerfinder.polynome.dn42       |          4242420184           |        it can be used as a distributed looking glass if you give it a dn42 address.            | DOWN |
+|  http://lg-fr-rbx.wolke7.me      http://lg-fr-rbx.wolke7.dn42      |          4242420300            |                    | DOWN |
+|  http://as4242422222.hope.mx/lg.htm  http://as4242422222.dn42/lg.htm         |          4242422222           |                    |  |
+|  https://vpn01.weiti.org/ulg/  https://lg.weiti.dn42/      |          4242423905           |                    | UP |
+|  http://zeus.nowhere.ws/dn42/routes.cgi  http://zeus.nihilus.dn42/dn42/routes.cgi      |          4242423905           |        (IPv4 & IPv6) → non-interactive (simply displays all known routes)             | DOWN |
 
 
 ## Reachable only from within dn42
