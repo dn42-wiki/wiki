@@ -8,26 +8,26 @@ When a looking glass is described as `IPv4` or `IPv6`, it refers to the informat
 
 Please sort by AS number.
 
-* AS 64720: http://lg.prauscher.de or http://lg.prauscher.dn42
-* AS 64737 + others: http://sour.is (IPv4 & IPv6) If you would like to submit your own site AS route information contact xuu@sour.is. 
-* AS 64766: http://ix.ucis.dn42/routes.php or http://ix.ucis.nl/routes.php → interactive (traceroute)
-* AS 76103: http://lg.nixnodes.dn42 or http://lg.nixnodes.net (IPv4) → interactive (traceroute)
-  * http://map.nixnodes.net or http://map.nixnodes.dn42 →  interactive BGP-graph
-* AS 4242420013: http://dn42.netrik.de/de-fra1/ or http://172.22.232.5/de-fra1/ → interactive, bgpmap
-* AS 4242420101: http://edge1.core.chaos-darmstadt.de or http://lg.cda.dn42
-* AS 4242420184: http://peerfinder.polynome.dn42 or http://peerfinder.polyno.me : it can be used as a distributed looking glass if you give it a dn42 address.
-* AS 4242420300: http://lg-fr-rbx.wolke7.me or http://lg-fr-rbx.wolke7.dn42
-* AS 4242422222: http://as4242422222.dn42/lg.htm or http://as4242422222.hope.mx/lg.htm
-* AS 4242423905: https://lg.weiti.dn42/ or https://vpn01.weiti.org/ulg/
+| Public URL   | dn42 URL                           | AS                     | Remarks                    | State |
+|:-------------|:---------------------------------- |:---------------------- |:-------------------------- |:------|
+|  http://lg.prauscher.de |     http://lg.prauscher.dn42       |           64720         |                    |  |
+|  http://sour.is |            |           64737        |         (IPv4 & IPv6) If you would like to submit your own site AS route information contact xuu@sour.is.   | |
+|  http://ix.ucis.nl/routes.php |    http://ix.ucis.dn42/routes.php        |           64766        |        interactive (traceroute)            |  |
+|  http://lg.nixnodes.net |   http://lg.nixnodes.dn42         |           76103          |          interactive (traceroute)          |  |
+|  http://dn42.netrik.de/de-fra1/  |   http://172.22.232.5/de-fra1/         |          4242420013           |      interactive, bgpmap              |  |
+|  http://edge1.core.chaos-darmstadt.de |    http://lg.cda.dn42        |          4242420101          |                    |  |
+|  http://peerfinder.polyno.me |     http://peerfinder.polynome.dn42       |          4242420184           |        it can be used as a distributed looking glass if you give it a dn42 address.            |  |
+|  http://lg-fr-rbx.wolke7.me |    http://lg-fr-rbx.wolke7.dn42      |          4242420300            |                    |  |
+|  http://as4242422222.hope.mx/lg.htm |     http://as4242422222.dn42/lg.htm         |          4242422222           |                    |  |
+|  https://vpn01.weiti.org/ulg/ |      https://lg.weiti.dn42/      |          4242423905           |                    |  |
+|  http://zeus.nowhere.ws/dn42/routes.cgi |      http://zeus.nihilus.dn42/dn42/routes.cgi      |          4242423905           |        (IPv4 & IPv6) → non-interactive (simply displays all known routes)             |  |
 
-**BROKEN**
-* AS 64692: http://zeus.nihilus.dn42/dn42/routes.cgi or http://zeus.nowhere.ws/dn42/routes.cgi (IPv4 & IPv6) → non-interactive (simply displays all known routes) 
 
 ## Reachable only from within dn42
 
 Please sort by AS number.
 
-| URL                                    | AS                   | Remarks                    | State     |
+| URL                                               | AS                     | Remarks                    | State |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |:------|
 | http://lg.nordkapp-5.dn42 , http://172.22.235.4                       | 64835               |            interactive                | DOWN |
 | http://lg.ffdn.dn42                        | 76142 |    interactive (traceroute, BGP-map) | DOWN |
