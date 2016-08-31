@@ -35,25 +35,12 @@ Please sort by AS number.
 | http://dataviz.polynome.dn42/dn42/lastseen/                            | 4242420184  | non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes)  | DOWN |
 |  http://lg.punkt.dn42                          |  4242420200 | interactive (traceroute, BGP-map)  | DOWN |
 |  http://lg.dn42                         |  4242420321 | interactive (traceroute, BGP-map) | UP |
-|  http://lg.jan.dn42                          | 4242420812  | interactive (traceroute, BGP-map)  |  |
+|  http://lg.jan.dn42                          | 4242420812  | interactive (traceroute, BGP-map)  | UP |
 |  http://lg.erg.dn4                          | 4242421092  | interactive (traceroute, BGP-map)  | DOWN |
 |  http://lg.tech9computers.dn42                          | 4242421588  | interactive (traceroute, BGP-map)  | UP |
 |  http://lg.gotroot.dn42                          | 4242422700  |  | UP |
 |  http://lg.gbe.dn42                           | 4242422342  |  semi-interactive (no traceroute, no ping) | UP |
 |  http://lg.flo.dn42                          | 4242423955  |   interactive (traceroute, ping) | DOWN |
-
-* AS 64835: http://lg.nordkapp-5.dn42 or http://172.22.235.4 (IPv4) → interactive
-* AS 76142: http://lg.ffdn.dn42 (IPv4) → interactive (traceroute, BGP-map)
-* AS 4242420022: http://mhm.dn42:5001
-* AS 4242420184: http://dataviz.polynome.dn42/dn42/lastseen/ (IPv4) → non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) **currently down**
-* AS 4242420200: http://lg.punkt.dn42 (IPv4) → interactive (traceroute, BGP-map)
-* AS 4242420321: http://lg.dn42 (IPv4 & IPv6) → interactive (traceroute, BGP-map)
-* AS 4242420812: http://lg.jan.dn42 (IPv4) → interactive (traceroute, BGP-map)
-* AS 4242421092: http://lg.erg.dn42 (IPv4) → interactive (traceroute, BGP-map)
-* AS 4242421588: http://lg.tech9computers.dn42 (IPv4 + IPv6) → interactive (traceroute, BGP-map)
-* AS 4242422700: http://lg.gotroot.dn42 (IPv4)
-* AS 4242422342: http://lg.gbe.dn42 → semi-interactive (no traceroute, no ping)
-* AS 4242423955: http://lg.flo.dn42 -> interactive (traceroute, ping)
 
 ## Reachable only from the Internet
 
