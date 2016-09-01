@@ -24,10 +24,9 @@ Please sort by AS number.
 | 4242420200 | dn42: http://lg.punkt.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242420300 | ext: http://lg-fr-rbx.wolke7.me <br> dn42: http://lg-fr-rbx.wolke7.dn42 | DOWN |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
-| 4242420812 | dn42: http://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | UP |
-| 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242420812 | dn42: http://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
-| 4242422222 | ext: http://as4242422222.hope.mx/lg.htm <br> dn42: http://as4242422222.dn42/lg.htm | DOWN |
 | 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 | UP |
 | 4242423905 | ext: https://vpn01.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
