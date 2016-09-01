@@ -4,7 +4,7 @@ There are some mirrors available in DN42. All mirrors are subdomains of "mirror.
 
 ## Debian
 
-**[http://debian.mirror.dn42]**
+**http://debian.mirror.dn42**
 
 Hosted by:
 * Basil
@@ -12,16 +12,16 @@ Hosted by:
 
 
 ## Ubuntu
-**ubuntu.mirror.dn42** 
+**http://ubuntu.mirror.dn42** 
 
-**archive.ubuntu.mirror.dn42**
+**http://archive.ubuntu.mirror.dn42**
 
 Hosted by:
 * Trunet
 * Basil
 
 ## CentOS
-**centos.mirror.dn42**
+**http://centos.mirror.dn42**
 
 Hosted by:
 * Trunet
