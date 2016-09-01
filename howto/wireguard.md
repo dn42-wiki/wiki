@@ -4,8 +4,8 @@ To quote the [homepage](https://www.wireguard.io/):
 
 # Example configuration for dn42
 
-Wireguard is a Layer3 VPN. In theory it allows multiple peers to be served with one interface/port, but it does internal routing based on the public key of the peers. This means you will need one interface per peering on dn42
-to allow your BGP deamon instead to do routing. This approach is comparable to [openvpn p2p tunnels](/howto/openvpn).
+Wireguard is a Layer3 VPN. In theory it allows multiple peers to be served with one interface/port, but it does internal routing based on the peer's public key. This means you will need one interface per peering on dn42
+to allow your BGP daemon instead to do routing. This approach is comparable to [OpenVPN p2p tunnels](/howto/openvpn).
 
 First generate on each peer public and private keys.
 
@@ -51,14 +51,10 @@ Mic92 uses this [script](https://github.com/Mic92/bird-dn42/tree/master/wireguar
 ## Testing
 
 ```
-ping6 fe80::<you_peers_suffix> -I <interface_name>
+ping fe80::<your_peers_suffix>%<interface_name>
 ```
 
-or with new iputils without ping6
-
-```
-ping fe80::<you_peers_suffix>%<interface_name>
-```
+(For older iputils, use `ping6`.)
 
 Afterwards configure your [BGP session](/howto/Bird) as usual
 

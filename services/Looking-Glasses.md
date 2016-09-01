@@ -1,50 +1,35 @@
 # Looking Glasses
 
-This is the list of **looking glasses** available for the dn42 network.  Some only display BGP information, while some others allow interactive queries (traceroute, details of a route, BGP-map visualisation, etc).
+This is the list of **looking glasses** available for the dn42 network. Some only display BGP information, while some others allow interactive queries (traceroute, details of a route, BGP-map visualisation, etc).
 
 When a looking glass is described as `IPv4` or `IPv6`, it refers to the information displayed (or queried) by the looking glass, not to the reachability of the looking glass service itself.
 
-## Reachable from the Internet & dn42
-
 Please sort by AS number.
 
-| Public/dn42 URL                            | AS                     | Remarks                    | State |
-|:------------------------------------------------- |:---------------------- |:-------------------------- |:------|
-|  http://lg.prauscher.de  http://lg.prauscher.dn42       |           64720         |                    | UP |
-|  http://sour.is            |           64737        |         (IPv4 & IPv6) If you would like to submit your own site AS route information contact xuu@sour.is.   | UP |
-|  http://ix.ucis.nl/routes.php   http://ix.ucis.dn42/routes.php        |           64766        |        interactive (traceroute)            | UP |
-|  http://lg.nixnodes.net  http://lg.nixnodes.dn42         |           76103          |          interactive (traceroute)          | UP |
-|  http://dn42.netrik.de/de-fra1/    http://172.22.232.5/de-fra1/         |          4242420013           |      interactive, bgpmap              | UP  |
-|  http://edge1.core.chaos-darmstadt.de   http://lg.cda.dn42        |          4242420101          |                    |  |
-|  http://peerfinder.polyno.me  http://peerfinder.polynome.dn42       |          4242420184           |        it can be used as a distributed looking glass if you give it a dn42 address.            | DOWN |
-|  http://lg-fr-rbx.wolke7.me      http://lg-fr-rbx.wolke7.dn42      |          4242420300            |                    | DOWN |
-|  http://as4242422222.hope.mx/lg.htm  http://as4242422222.dn42/lg.htm         |          4242422222           |                    | DOWN |
-|  https://vpn01.weiti.org/ulg/  https://lg.weiti.dn42/      |          4242423905           |                    | UP |
-|  http://zeus.nowhere.ws/dn42/routes.cgi  http://zeus.nihilus.dn42/dn42/routes.cgi      |          4242423905           |        (IPv4 & IPv6) → non-interactive (simply displays all known routes)             | DOWN |
-
-
-## Reachable only from within dn42
-
-Please sort by AS number.
-
-| URL                                               | AS                     | Remarks                    | State |
-|:------------------------------------------------- |:---------------------- |:-------------------------- |:------|
-| http://lg.nordkapp-5.dn42 , http://172.22.235.4                       | 64835               |            interactive                | DOWN |
-| http://lg.ffdn.dn42                        | 76142 |    interactive (traceroute, BGP-map) | DOWN |
-| http://mhm.dn42:5001                             | 4242420022  | .  | UP |
-| http://dataviz.polynome.dn42/dn42/lastseen/                            | 4242420184  | non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes)  | DOWN |
-|  http://lg.punkt.dn42                          |  4242420200 | interactive (traceroute, BGP-map)  | DOWN |
-|  http://lg.dn42                         |  4242420321 | interactive (traceroute, BGP-map) | UP |
-|  http://lg.jan.dn42                          | 4242420812  | interactive (traceroute, BGP-map)  | UP |
-|  http://lg.erg.dn4                          | 4242421092  | interactive (traceroute, BGP-map)  | DOWN |
-|  http://lg.tech9computers.dn42                          | 4242421588  | interactive (traceroute, BGP-map)  | UP |
-|  http://lg.gotroot.dn42                          | 4242422700  |  | UP |
-|  http://lg.gbe.dn42                           | 4242422342  |  semi-interactive (no traceroute, no ping) | UP |
-|  http://lg.flo.dn42                          | 4242423955  |   interactive (traceroute, ping) | DOWN |
-
-## Reachable only from the Internet
-
-Please sort by AS number.
-
-* AS 65529: http://bgp.freifunk-bielefeld.de/ulg/ulg.py → interactive (BGP-map)
-* AS 4242420123: http://lg.grmml.net → interactive (traceroute, BGP-map)
+| AS | URL | Status |
+|:-- |:--- |:------ |
+| 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
+| 64737 | ext: http://sour.is <br> If you would like to submit your own site AS route information contact xuu@sour.is. | DOWN |
+| 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. Currently not connected to dn42. | DOWN |
+| 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
+| 65529 | ext: http://bgp.freifunk-bielefeld.de/ulg/ulg.py <br> Interactive, BGP-map | DOWN |
+| 76103 | ext: http://lg.nixnodes.net <br> dn42: http://lg.nixnodes.dn42 <br> IPv4 only. | UP |
+| 76142 | dn42: http://lg.ffdn.dn42 <br> Interactive, BGP-map | DOWN |
+| 4242420013 | ext: http://dn42.netrik.de/de-fra1/ <br> dn42: http://172.22.232.5/de-fra1/ <br> Interactive, BGP-map | UP |
+| 4242420022 | dn42: http://mhm.dn42:5001 | UP |
+| 4242420101 | ext: http://core1.darmstadt.ccc.de <br> ext: http://edge1.core.chaos-darmstadt.de <br> dn42: http://lg.cda.dn42 | DOWN |
+| 4242420123 | ext: http://lg.grmml.net <br> Interactive, BGP-map | DOWN |
+| 4242420184 | ext: http://peerfinder.polyno.me <br> dn42: http://peerfinder.polynome.dn42 <br> Can be used as a distributed looking glass if you give it a dn42 address. | DOWN |
+| 4242420184 | dn42: http://dataviz.polynome.dn42/dn42/lastseen/ <br> Non-interactive "BGP last seen" service: keeps an history of previously announced BGP prefixes. | DOWN |
+| 4242420200 | dn42: http://lg.punkt.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242420300 | ext: http://lg-fr-rbx.wolke7.me <br> dn42: http://lg-fr-rbx.wolke7.dn42 | DOWN |
+| 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242420812 | dn42: http://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | UP |
+| 4242422700 | dn42: http://lg.gotroot.dn42 | UP |
+| 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ <br> dn42: http://lg.nullroute.dn42 | UP |
+| 4242423905 | ext: https://vpn01.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
+| 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). | DOWN |
+| 4242423955 | dn42: http://lg.flo.dn42 | DOWN |
