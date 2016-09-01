@@ -8,6 +8,7 @@ There are some mirrors available in DN42. All mirrors are subdomains of "mirror.
 
 Hosted by:
 * Basil
+* Trunet
 
 
 ## Ubuntu
