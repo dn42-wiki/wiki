@@ -177,7 +177,7 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 ## OS Mirror/Repository's
 
-Also check [Repository Mirrors](services/Repository-Mirrors)
+Also check [Repository Mirrors](/services/Repository-Mirrors)
 
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
