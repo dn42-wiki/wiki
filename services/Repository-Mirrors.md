@@ -4,7 +4,7 @@ There are some mirrors available in DN42. All mirrors are subdomains of "mirror.
 
 ## Debian
 
-**[debian.mirror.dn42]**
+**[http://debian.mirror.dn42]**
 
 Hosted by:
 * Basil
