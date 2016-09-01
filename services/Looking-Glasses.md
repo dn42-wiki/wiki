@@ -29,7 +29,7 @@ Please sort by AS number.
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 | UP |
-| 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ | UP |
+| 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ <br> dn42: http://lg.nullroute.dn42 | UP |
 | 4242423905 | ext: https://vpn01.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
 | 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). | DOWN |
 | 4242423955 | dn42: http://lg.flo.dn42 | DOWN |
