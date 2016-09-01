@@ -4,49 +4,32 @@ This is the list of **looking glasses** available for the dn42 network. Some onl
 
 When a looking glass is described as `IPv4` or `IPv6`, it refers to the information displayed (or queried) by the looking glass, not to the reachability of the looking glass service itself.
 
-## Reachable from the Internet & dn42
-
 Please sort by AS number.
 
-| AS | URL | Remarks | Status |
-|:-- |:--- |:------- |:------ |
-| 64720 | http://lg.prauscher.de http://lg.prauscher.dn42 | | UP |
-| 64737 | http://sour.is | If you would like to submit your own site AS route information contact xuu@sour.is. | DOWN |
-| 64766 | http://ix.ucis.nl/routes.php http://ix.ucis.dn42/routes.php | IPv4 only | DOWN (no dn42 routes) |
-| 76103 | http://lg.nixnodes.net http://lg.nixnodes.dn42 | IPv4 only | UP |
-| 4242420013 | http://dn42.netrik.de/de-fra1/ http://172.22.232.5/de-fra1/ | bgpmap | UP |
-| 4242420101 | http://core1.darmstadt.ccc.de http://edge1.core.chaos-darmstadt.de http://lg.cda.dn42 | | DOWN |
-| 4242420184 | http://peerfinder.polyno.me http://peerfinder.polynome.dn42 | it can be used as a distributed looking glass if you give it a dn42 address. | DOWN |
-| 4242420300 | http://lg-fr-rbx.wolke7.me http://lg-fr-rbx.wolke7.dn42 | | DOWN |
-| 4242422222 | http://as4242422222.hope.mx/lg.htm http://as4242422222.dn42/lg.htm | | DOWN |
-| 4242423905 | https://vpn01.weiti.org/ulg/ https://lg.weiti.dn42/ | | UP |
-| 4242423905 | http://zeus.nowhere.ws/dn42/routes.cgi http://zeus.nihilus.dn42/dn42/routes.cgi | route listing only | DOWN |
-
-
-## Reachable only from within dn42
-
-Please sort by AS number.
-
-| AS | URL | Remarks | Status |
-|:-- |:--- |:------- |:------ |
-| 64835 | http://lg.nordkapp-5.dn42 http://172.22.235.4 | interactive | DOWN |
-| 76142 | http://lg.ffdn.dn42 | BGP-map | DOWN |
-| 4242420022 | http://mhm.dn42:5001 | | UP |
-| 4242420184 | http://dataviz.polynome.dn42/dn42/lastseen/ | non-interactive ("BGP last seen" service: keeps an history of previously announced BGP prefixes) | DOWN |
-| 4242420200 | http://lg.punkt.dn42 | interactive (traceroute, BGP-map) | DOWN |
-| 4242420321 | http://lg.dn42 | interactive (traceroute, BGP-map) | UP |
-| 4242420812 | http://lg.jan.dn42 | interactive (traceroute, BGP-map) | UP |
-| 4242421092 | http://lg.erg.dn4 | interactive (traceroute, BGP-map) | DOWN |
-| 4242421588 | http://lg.tech9computers.dn42 | interactive (traceroute, BGP-map) | UP |
-| 4242422700 | http://lg.gotroot.dn42 | | UP |
-| 4242422342 | http://lg.gbe.dn42 | semi-interactive (no traceroute, no ping) | UP |
-| 4242423955 | http://lg.flo.dn42 | interactive (traceroute, ping) | DOWN |
-
-## Reachable only from the Internet
-
-Please sort by AS number.
-
-| AS | URL | Remarks | Status |
-|:-- |:--- |:------- |:------ |
-| 65529 | http://bgp.freifunk-bielefeld.de/ulg/ulg.py | BGP-map | DOWN |
-| 4242420123 | http://lg.grmml.net | BGP-map | DOWN |
+| AS | URL | Status |
+|:-- |:--- |:------ |
+| 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
+| 64737 | ext: http://sour.is <br> If you would like to submit your own site AS route information contact xuu@sour.is. | DOWN |
+| 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. Currently not connected to dn42. | DOWN |
+| 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
+| 65529 | ext: http://bgp.freifunk-bielefeld.de/ulg/ulg.py <br> Interactive, BGP-map | DOWN |
+| 76103 | ext: http://lg.nixnodes.net <br> dn42: http://lg.nixnodes.dn42 <br> IPv4 only. | UP |
+| 76142 | dn42: http://lg.ffdn.dn42 <br> Interactive, BGP-map | DOWN |
+| 4242420013 | ext: http://dn42.netrik.de/de-fra1/ <br> dn42: http://172.22.232.5/de-fra1/ <br> Interactive, BGP-map | UP |
+| 4242420022 | dn42: http://mhm.dn42:5001 | UP |
+| 4242420101 | ext: http://core1.darmstadt.ccc.de <br> ext: http://edge1.core.chaos-darmstadt.de <br> dn42: http://lg.cda.dn42 | DOWN |
+| 4242420123 | ext: http://lg.grmml.net <br> Interactive, BGP-map | DOWN |
+| 4242420184 | ext: http://peerfinder.polyno.me <br> dn42: http://peerfinder.polynome.dn42 <br> Can be used as a distributed looking glass if you give it a dn42 address. | DOWN |
+| 4242420184 | dn42: http://dataviz.polynome.dn42/dn42/lastseen/ <br> Non-interactive "BGP last seen" service: keeps an history of previously announced BGP prefixes. | DOWN |
+| 4242420200 | dn42: http://lg.punkt.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242420300 | ext: http://lg-fr-rbx.wolke7.me <br> dn42: http://lg-fr-rbx.wolke7.dn42 | DOWN |
+| 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242420812 | dn42: http://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
+| 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242422222 | ext: http://as4242422222.hope.mx/lg.htm <br> dn42: http://as4242422222.dn42/lg.htm | DOWN |
+| 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | UP |
+| 4242422700 | dn42: http://lg.gotroot.dn42 | UP |
+| 4242423905 | ext: https://vpn01.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
+| 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). | DOWN |
+| 4242423955 | dn42: http://lg.flo.dn42 | DOWN |
