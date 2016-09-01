@@ -374,8 +374,8 @@ The files above are maintained by **chrismoos**, contact him on IRC if there are
 You can add cron entries to periodically update the tables:
 
 ```
-*/15 * * * * curl -sL -o "/etc/bird/bird6_roa_dn42.conf" "https://dn42.tech9.io/roa/bird6_roa_dn42.conf" && birdc6 configure
-*/15 * * * * curl -sL -o "/etc/bird/bird_roa_dn42.conf" "https://dn42.tech9.io/roa/bird_roa_dn42.conf" && birdc configure
+*/15 * * * * curl -sfSLR {-o,-z}/etc/bird/bird6_roa_dn42.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && chronic birdc6 configure
+*/15 * * * * curl -sfSLR {-o,-z}/etc/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && chronic birdc configure
 ```
 
 ## Filter configuration
