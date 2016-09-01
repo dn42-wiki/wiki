@@ -20,3 +20,8 @@ Hosted by:
 * Trunet
 * Basil
 
+## CentOS
+**centos.mirror.dn42**
+
+Hosted by:
+* Trunet
