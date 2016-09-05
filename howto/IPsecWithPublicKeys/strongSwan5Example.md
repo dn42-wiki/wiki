@@ -47,7 +47,7 @@ In this example, we'll use the following settings:
 
 1. Add your peer's public key
 
-        root@debian:~# cat << EOF > /etc/ipsec.d/public/peerkey.pub
+        root@debian:~# cat << EOF > /etc/ipsec.d/public/peerkey.pem
         -----BEGIN PUBLIC KEY-----
         MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAuQ1hX3+AEiLis4p5jvmY
         IfEgaq9488GU2nkuR1gZK4/CphrccmztgADU/TkiE5IOOo7zKPparcl8dZwJfX+j
@@ -76,8 +76,8 @@ In this example, we'll use the following settings:
             ikelifetime=28800s
             # authentication
             authby=pubkey
-            leftrsasigkey=/etc/ipsec.d/public/mykey.pub
-            rightrsasigkey=/etc/ipsec.d/public/peerkey.pub
+            leftrsasigkey=/etc/ipsec.d/public/mykey.pem
+            rightrsasigkey=/etc/ipsec.d/public/peerkey.pem
         EOF
 
 3. All done! Configure the phase 2 parameters as you otherwise would.
@@ -108,8 +108,8 @@ In this example, we'll use the following settings:
         ikelifetime=28800s
         # authentication
         authby=pubkey
-        leftrsasigkey=/etc/ipsec.d/public/mykey.pub
-        rightrsasigkey=/etc/ipsec.d/public/peerkey.pub
+        leftrsasigkey=/etc/ipsec.d/public/mykey.pem
+        rightrsasigkey=/etc/ipsec.d/public/peerkey.pem
         # phase 2 parameters
         esp=aes128-sha1-modp1536!
         lifetime=3600s
