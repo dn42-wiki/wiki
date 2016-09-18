@@ -301,7 +301,7 @@ Generate the filter list from the monotone repository
 
 ```
 $ cd net.dn42.registry
-$ ruby utils/bgp-filter.rb --format bird < data/filter.txt > /etc/bird/filter4.conf
+$ ruby utils/bgp-filter.rb --format bird < data/filter.txt > /var/lib/bird/filter4.conf
 
 or
 
@@ -309,7 +309,7 @@ $ curl -s https://ca.dn42.us/reg/filter.txt | \
     awk '/^[0-9]/ && $2 ~ /permit/ {printf "%s{%s,%s}\n", $3, $4, $5}' | \
     awk 'BEGIN {printf "function is_valid_network() {\n return net ~ [\n"} \
         NR > 1 {printf ",\n"} {printf "  %s", $1}
-        END {printf "\n ];\n}\n"}' > /etc/bird/filter4.conf
+        END {printf "\n ];\n}\n"}' > /var/lib/bird/filter4.conf
 ```
 
 example filter list:
@@ -374,8 +374,8 @@ The files above are maintained by **chrismoos**, contact him on IRC if there are
 You can add cron entries to periodically update the tables:
 
 ```
-*/15 * * * * curl -sfSLR {-o,-z}/etc/bird/bird6_roa_dn42.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && chronic birdc6 configure
-*/15 * * * * curl -sfSLR {-o,-z}/etc/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && chronic birdc configure
+*/15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird6_roa_dn42.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && chronic birdc6 configure
+*/15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && chronic birdc configure
 ```
 
 ## Filter configuration
@@ -393,7 +393,7 @@ Also, define your ROA table with:
 
 ```
 roa table dn42_roa {
-    include "bird_roa_dn42.conf";
+    include "/var/lib/bird/bird_roa_dn42.conf";
 };
 ```
 
