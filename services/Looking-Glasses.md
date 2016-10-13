@@ -17,7 +17,6 @@ Please sort by AS number.
 | 76142 | dn42: http://lg.ffdn.dn42 <br> Interactive, BGP-map | DOWN |
 | 4242420013 | ext: http://dn42.netrik.de/de-fra1/ <br> dn42: http://172.22.232.5/de-fra1/ <br> Interactive, BGP-map | UP |
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
-| 4242420039 | ext: http://www.martinbrandenburg.com/cgi-bin/bgplg | UP |
 | 4242420101 | ext: http://core1.darmstadt.ccc.de <br> ext: http://edge1.core.chaos-darmstadt.de <br> dn42: http://lg.cda.dn42 | DOWN |
 | 4242420123 | ext: http://lg.grmml.net <br> Interactive, BGP-map | DOWN |
 | 4242420184 | ext: http://peerfinder.polyno.me <br> dn42: http://peerfinder.polynome.dn42 <br> Can be used as a distributed looking glass if you give it a dn42 address. | DOWN |
