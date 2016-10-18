@@ -204,7 +204,7 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| http://paste.weiti.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | ~~https://paste.synhacx.dn42~~(OFFLINE 2016-08-24)| AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | ~~http://zerobin.e-utp.dn42~~(OFFLINE 2016-08-24) | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | ~~https://flo.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
