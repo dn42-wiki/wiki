@@ -1,7 +1,7 @@
 <div class='toc-title'>Site Links</div>
 
  * [[Home]]
-  * [[howto/Getting started]]
+  * [[Getting started]]
   * [[FAQ]]
 
 * [[How-to|/pages/howto/]]
