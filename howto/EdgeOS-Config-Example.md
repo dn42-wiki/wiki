@@ -253,9 +253,9 @@ service {
             listen-on eth2
             name-server 8.8.8.8
             name-server 8.8.4.4
-            options server=/dn42/172.22.0.53
-            options server=/22.172.in-addr.arpa/172.22.0.53
-            options server=/23.172.in-addr.arpa/172.22.0.53
+            options server=/dn42/172.23.0.53
+            options server=/22.172.in-addr.arpa/172.23.0.53
+            options server=/23.172.in-addr.arpa/172.23.0.53
             options rebind-domain-ok=/dn42/
         }
     }
