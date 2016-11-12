@@ -33,9 +33,10 @@ Own ASN: AS111111
 Own IPv4: 172.AA.AA.64/27  
 Own IPv6: fdBB:BBBB:CCCC::/48  
 
-Peer Remote Address: X.X.X.X    
-Peer Remote Host: X.X.X.Y  
-Peer Port: 1194  
+Peer OpenVPN Remote Address: X.X.X.X    
+Peer OpenVPN Remote Host: X.X.X.Y  
+Peer OpenVPN Port: 1194 
+Peer OpenVPN encryption: aes256 
 Peer ASN: AS222222  
 Peer BGP Neighbour IPv4: Z.Z.Z.Z  
 Peer BGP Neighbour IPv6: fdAA::CC
@@ -67,7 +68,7 @@ Set up Interface vtunX -- i used vtun0
     set interfaces openvpn vtun0 remote-address X.X.X.X  
     set interfaces openvpn vtun0 remote-host X.X.X.Y   
     set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
-
+    set interfaces openvpn vtun0 encryption aes256
     set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression  
     commit   
     save  
