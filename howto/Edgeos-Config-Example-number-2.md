@@ -1,4 +1,4 @@
-## EdgeRouterPro-8 DN42 config example with v1.9.0 
+# EdgeRouterPro-8 DN42 config example with v1.9.0 
 
 After a lot of searching and trying I [Phil/ALS7] finnaly got a working config
 
@@ -15,20 +15,26 @@ After a lot of searching and trying I [Phil/ALS7] finnaly got a working config
 
 The data i used are the following:
 
-Own ASN: AS4242422684
-Own IPv4: 172.20.4.64/27
-Own IPv6: fd33:ac1d:d1ce::/48
+Own ASN: AS111111  
+Own IPv4: 172.AA.AA.64/27  
+Own IPv6: fdBB:BBBB:CCCC::/48  
+
+Peer ASN: AS222222 
+Peer Remote Address: X.X.X.X  
+Peer Remote Host: X.X.X.Y
+Peer Port: 1194
 
 2) get a peer --> ask nice @irc
 
-3) You need following data
+3) You need following data from the peer
 
 --tunnel options, secret key
---ASN from the peer (in this example i use remote-as XXXXX)
---ip's
+--ASN from the peer 
+--ip's 
 
 ...
 
+###Create IPv4 OpenVPM Interface
 
 start a ssh session to your router
 
@@ -37,17 +43,30 @@ copy vpn key to /config/auth/giveITaName -- Create folder if needed
 configure
 set interface openssh vtun0  
 set interfaces openvpn vtun0 mode site-to-site  
-set interfaces openvpn vtun0 local-port 1194  //you get the port from your peer  
-set interfaces openvpn vtun0 remote-port 1194 //you get the port from your peer  
-set interfaces openvpn vtun0 local-address 172.20.4.64 //your ip   
-set interfaces openvpn vtun0 remote-address X.X.X.X //from your peer  
-set interfaces openvpn vtun0 remote-host X.X.X.Y //from your peer  
-set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName  // your keyfile  
+set interfaces openvpn vtun0 local-port 1194   
+set interfaces openvpn vtun0 remote-port 1194  
+set interfaces openvpn vtun0 local-address 172.AA.AA.64  
+set interfaces openvpn vtun0 remote-address X.X.X.X 
+set interfaces openvpn vtun0 remote-host X.X.X.Y   
+set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
+
 set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression  
 commit   
 save  
+exit  
 
 Now the ipv4 tunnel should be up&running
+
+Check it with:
+
+show interfaces openvpn    
+show interfaces openvpn detail  
+show openvpn status site-to-site  
+
+### Create IPv4 BGP Session
+
+configure  
+
 
 
 
