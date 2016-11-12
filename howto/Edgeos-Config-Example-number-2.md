@@ -20,11 +20,11 @@ Own ASN: AS111111
 Own IPv4: 172.AA.AA.64/27  
 Own IPv6: fdBB:BBBB:CCCC::/48  
 
-Peer Remote Address: X.X.X.X  
-Peer Remote Host: X.X.X.Y
-Peer Port: 1194
-Peer ASN: AS222222 
-Peer BGP Neighbour IPv4: Z.Z.Z.Z
+Peer Remote Address: X.X.X.X    
+Peer Remote Host: X.X.X.Y  
+Peer Port: 1194  
+Peer ASN: AS222222  
+Peer BGP Neighbour IPv4: Z.Z.Z.Z  
 
 2) get a peer --> ask nice @irc
 
