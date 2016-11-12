@@ -36,13 +36,13 @@ Peer BGP Neighbour IPv4: Z.Z.Z.Z
 
 ...
 
-###Create IPv4 OpenVPM Interface
+###Create IPv4 OpenVPN Interface
 
 start a ssh session to your router
 
 copy vpn key to /config/auth/giveITaName -- Create folder if needed
 
-configure
+configure  
 set interface openssh vtun0  
 set interfaces openvpn vtun0 mode site-to-site  
 set interfaces openvpn vtun0 local-port 1194   
@@ -67,6 +67,10 @@ show openvpn status site-to-site
 
 ### Create IPv4 BGP Session
 
+#### Open Firewall
+
+* You need to open the firewall to local for the tunnel Interface on port 179/tcp
+
 #### Configure the BGP Neighbor
 
 * You must not use AS before the as numbers !!  
@@ -85,11 +89,16 @@ show ip bgp summary
 
 ### Set route to blackhole
 
-*so bgp can announce the route
+* so bgp can announce the route
 
 set protocols static route 172.AA.AA.64/27 blackhole  
 commit  
+save  
 
+### Announce prefix to BGP
+
+set protocols bgp 111111 network 172.A.A.64/27  
+commit  
 
 
 
