@@ -1,6 +1,6 @@
 # EdgeRouterPro-8 config example with v1.9.0 
 
-After a lot of searching and trying I [Phil/ALS7] finnaly got a working config
+After a lot of searching and trying I [Phil/ALS7] finnaly got a working config  
 Also thanx to drathir for his patience and support
 
 
