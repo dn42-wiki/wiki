@@ -75,7 +75,7 @@ Check it with:
 
 * You must not use AS before the as numbers !!   
 
-.  
+With this step you create the basic bgp session    
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
@@ -89,7 +89,7 @@ When commit this configuration you should be able to see a BGP neighbor session 
 
 #### Set route to blackhole
 
-* so bgp can announce the route
+so bgp can announce the route
 
     set protocols static route 172.AA.AA.64/27 blackhole  
     commit  
