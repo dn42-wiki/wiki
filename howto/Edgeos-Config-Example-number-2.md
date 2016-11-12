@@ -46,7 +46,7 @@ set interfaces openvpn vtun0 mode site-to-site
 set interfaces openvpn vtun0 local-port 1194   
 set interfaces openvpn vtun0 remote-port 1194  
 set interfaces openvpn vtun0 local-address 172.AA.AA.64  
-set interfaces openvpn vtun0 remote-address X.X.X.X 
+set interfaces openvpn vtun0 remote-address X.X.X.X  
 set interfaces openvpn vtun0 remote-host X.X.X.Y   
 set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
 
