@@ -1,4 +1,5 @@
 ## EdgeRouterPro-8 DN42 config example with v1.9.0 
+
 After a lot of searching and trying I [Phil/ALS7] finnaly got a working config
 
 ##Features
@@ -34,17 +35,17 @@ start a ssh session to your router
 copy vpn key to /config/auth/giveITaName -- Create folder if needed
 
 configure
-set interface openssh vtun0
-set interfaces openvpn vtun0 mode site-to-site
-set interfaces openvpn vtun0 local-port 1194  //you get the port from your peer
-set interfaces openvpn vtun0 remote-port 1194 //you get the port from your peer
-set interfaces openvpn vtun0 local-address 172.20.4.64 //your ip 
-set interfaces openvpn vtun0 remote-address X.X.X.X //from your peer
-set interfaces openvpn vtun0 remote-host X.X.X.Y //from your peer
-set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName  // your keyfile
-set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression
-commit 
-save
+set interface openssh vtun0  
+set interfaces openvpn vtun0 mode site-to-site  
+set interfaces openvpn vtun0 local-port 1194  //you get the port from your peer  
+set interfaces openvpn vtun0 remote-port 1194 //you get the port from your peer  
+set interfaces openvpn vtun0 local-address 172.20.4.64 //your ip   
+set interfaces openvpn vtun0 remote-address X.X.X.X //from your peer  
+set interfaces openvpn vtun0 remote-host X.X.X.Y //from your peer  
+set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName  // your keyfile  
+set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression  
+commit   
+save  
 
 Now the ipv4 tunnel should be up&running
 
