@@ -75,7 +75,8 @@ Check it with:
 
 * You must not use AS before the as numbers !!   
 
-With this step you create the basic bgp session    
+With this step you create the basic bgp session  
+
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
