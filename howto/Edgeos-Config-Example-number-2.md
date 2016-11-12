@@ -15,6 +15,16 @@ Also thanx to drathir for his patience and support
 
 1) you need to create all required fields in the registry --> look at howto/Getting startet page
 
+2) get a peer --> ask nice @irc
+
+3) You need following data from the peer
+
+--tunnel options, secret key
+--ASN from the peer 
+--ip's 
+
+...
+
 The data i used are the following:
 
 Own ASN: AS111111  
@@ -27,15 +37,7 @@ Peer Port: 1194
 Peer ASN: AS222222  
 Peer BGP Neighbour IPv4: Z.Z.Z.Z  
 
-2) get a peer --> ask nice @irc
 
-3) You need following data from the peer
-
---tunnel options, secret key
---ASN from the peer 
---ip's 
-
-...
 
 ###Create IPv4 OpenVPN Interface
 
