@@ -126,6 +126,26 @@ You should now be able to see networks being advertised via
 
     show ip bgp neighbors Z.Z.Z.Z advertised-routes
 
+### Define Nameservers
 
+Now ping to 172.23.0.53 ... thats the nameserver we are using  
+If everything is allright it should work  
+
+#### NS Config
+
+Enter the configure mode
+
+    configure
+    set service dns forwarding name-server 8.8.8.8  
+    set service dns forwarding name-server 8.8.4.4
+    set service dns forwarding options rebind-domain-ok=/dn42/ 
+    set service dns forwarding options server=/23.172.in-addr.arpa/172.23.0.53  
+    set service dns forwarding options server=/22.172.in-addr.arpa/172.23.0.53  
+    set service dns forwarding options server=/dn42/172.23.0.53  
+    commit
+    save
+    exit
+
+Now try to access any .dn42 tld
 
 
