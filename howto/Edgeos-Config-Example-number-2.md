@@ -1,6 +1,7 @@
-# EdgeRouterPro-8 DN42 config example with v1.9.0 
+# EdgeRouterPro-8 config example with v1.9.0 
 
 After a lot of searching and trying I [Phil/ALS7] finnaly got a working config
+
 
 ##Features
 
@@ -19,10 +20,11 @@ Own ASN: AS111111
 Own IPv4: 172.AA.AA.64/27  
 Own IPv6: fdBB:BBBB:CCCC::/48  
 
-Peer ASN: AS222222 
 Peer Remote Address: X.X.X.X  
 Peer Remote Host: X.X.X.Y
 Peer Port: 1194
+Peer ASN: AS222222 
+Peer BGP Neighbour IPv4: Z.Z.Z.Z
 
 2) get a peer --> ask nice @irc
 
@@ -65,9 +67,28 @@ show openvpn status site-to-site
 
 ### Create IPv4 BGP Session
 
+#### Configure the BGP Neighbor
+
+* You must not use AS before the as numbers !!  
+
+
 configure  
+set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
+set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
+set protocols bgp 111111 neighbor update-source 172.AA.AA.64  
+commit
+save
 
+When commit this configuration you should be able to see a BGP neighbor session start and come up. You can check this with:
 
+show ip bgp summary
+
+### Set route to blackhole
+
+*so bgp can announce the route
+
+set protocols static route 172.AA.AA.64/27 blackhole  
+commit  
 
 
 
