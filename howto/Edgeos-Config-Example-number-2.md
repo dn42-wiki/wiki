@@ -71,8 +71,8 @@ Set up Interface vtunX -- i used vtun0
     set interfaces openvpn vtun0 encryption aes256
 
     set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression  
+    
     commit   
-
     save  
     exit  
 
