@@ -73,9 +73,9 @@ Check it with:
 
 #### Configure the BGP Neighbor
 
-* You must not use AS before the as numbers !!  
+* You must not use AS before the as numbers !!   
 
-.
+.  
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
