@@ -35,13 +35,13 @@ Own IPv6: fdBB:BBBB:CCCC::/48
 
 Peer OpenVPN Remote Address: X.X.X.X    
 Peer OpenVPN Remote Host: X.X.X.Y
-Peer OpenVPN IP for you: fdAA::BBB/64
-Peer OpenVPN IP: fdAA::CC
+Peer OpenVPN IP for you: fdAA::BBB/64  
+Peer OpenVPN IP: fdAA::CC  
 Peer OpenVPN Port: 1194  
 Peer OpenVPN encryption: aes256   
 Peer ASN: AS222222  
 Peer BGP Neighbour IPv4: Z.Z.Z.Z  
-Peer BGP Neighbour IPv6: fdAA::CC
+Peer BGP Neighbour IPv6: fdAA::CC  
 
 
 ### Copy OpenVPN key to the ErPro
