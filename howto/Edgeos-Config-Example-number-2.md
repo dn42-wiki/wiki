@@ -13,6 +13,8 @@ Also thanx to drathir for his patience and support
 
 --> still work in Progress
 
+* Basic EdgeOS knowledge is required
+
 1) you need to create all required fields in the registry --> look at howto/Getting startet page
 
 2) get a peer --> ask nice @irc
@@ -36,14 +38,25 @@ Peer Remote Host: X.X.X.Y
 Peer Port: 1194  
 Peer ASN: AS222222  
 Peer BGP Neighbour IPv4: Z.Z.Z.Z  
+Peer BGP Neighbour IPv6: fdAA::CC
 
 
+### Copy OpenVPN key to the ErPro
 
-###Create IPv4 OpenVPN Interface
+copy vpn key to /config/auth/giveITaName
 
-start a ssh session to your router
+    sudo su
+    cd /config
+    mkdir auth
+    cd auth
+    cat > giveITaName
 
-copy vpn key to /config/auth/giveITaName -- Create folder if needed
+now paste the key in the terminal window, hit return once and kill cat with CTRL+C  
+last thing to do is type exit
+
+### Create IPv4 OpenVPN Interface
+
+Set up Interface vtunX -- i used vtun0
 
     configure  
     set interface openssh vtun0  
