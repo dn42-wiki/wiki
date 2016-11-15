@@ -16,7 +16,7 @@ Also thanx to drathir for his patience and support
 --> still work in Progress  
 
 * Basic EdgeOS knowledge is required 
-* If you are using LoadBalancing make shure 172.20.0.0/14 is under 'PPRIVATE NETS' 
+* If you are using LoadBalancing make shure 172.20.0.0/14 is under 'PRIVATE NETS' 
 
 1) you need to create all required fields in the registry --> look at [[Getting started]] 
 
