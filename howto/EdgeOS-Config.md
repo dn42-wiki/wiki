@@ -1,6 +1,9 @@
-#EdgeRouterPro-8 config example with v1.9.0  
+#EdgeRouter config example   
 
-After a lot of searching and trying I [Phil/ALS7] finnaly got a working config  
+After a lot of searching and trying I [Phil/ALS7] finnaly got a working config    
+
+I used for this example V1.9.0 on an ErPro-8  
+
 Also thanx to drathir for his patience and support  
 
 ##Features
