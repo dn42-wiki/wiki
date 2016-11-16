@@ -33,8 +33,8 @@ The data i used are the following:
 Own ASN: AS111111  
 Own IPv4 Space: 172.AA.AA.64/27  
 Own IPv6 Space: fdBB:BBBB:CCCC::/48  
-Own IPv4 If-Address: 172.AA.AA.65
-Own IPv6 If-Address: fdBB:BBBB:CCCC::1  
+Own IPv4 If-Address: 172.AA.AA.65  
+Own IPv6 If-Address: fdBB:BBBB:CCCC::1   
 
 
 Peer OpenVPN Remote Address: X.X.X.X  
