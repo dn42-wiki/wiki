@@ -37,8 +37,8 @@ Own IPv4 If-Address: 172.AA.AA.65
 Own IPv6 If-Address: fdBB:BBBB:CCCC::1   
 
 
-Peer OpenVPN Remote Address: X.X.X.X  
-Peer OpenVPN Remote Host: X.X.X.Y  
+Peer OpenVPN Remote Address: X.X.X.X  //that's the peers OpenVPN IF IP  
+Peer OpenVPN Remote Host: X.X.X.Y  //that's the peers clearnet IP  
 Peer OpenVPN IP for you: fdAA::BBB/64  
 Peer OpenVPN IP: fdAA::CC  
 Peer OpenVPN Port: 1194  
