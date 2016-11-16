@@ -31,8 +31,11 @@ Also thanx to drathir for his patience and support
 The data i used are the following:
 
 Own ASN: AS111111  
-Own IPv4: 172.AA.AA.64/27  
-Own IPv6: fdBB:BBBB:CCCC::/48  
+Own IPv4 Space: 172.AA.AA.64/27  
+Own IPv6 Space: fdBB:BBBB:CCCC::/48  
+Own IPv4 If-Address: 172.AA.AA.65
+Own IPv6 If-Address: fdBB:BBBB:CCCC::1  
+
 
 Peer OpenVPN Remote Address: X.X.X.X  
 Peer OpenVPN Remote Host: X.X.X.Y  
@@ -66,7 +69,7 @@ Set up Interface vtunX -- i used vtun0
     set interfaces openvpn vtun0 mode site-to-site  
     set interfaces openvpn vtun0 local-port 1194   
     set interfaces openvpn vtun0 remote-port 1194  
-    set interfaces openvpn vtun0 local-address 172.AA.AA.64  
+    set interfaces openvpn vtun0 local-address 172.AA.AA.65  
     set interfaces openvpn vtun0 remote-address X.X.X.X  
     set interfaces openvpn vtun0 remote-host X.X.X.Y   
     set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
@@ -101,7 +104,7 @@ With this step you create the basic bgp session
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
-    set protocols bgp 111111 neighbor update-source 172.AA.AA.64  
+    set protocols bgp 111111 neighbor update-source 172.AA.AA.65  
     commit
     save
 
