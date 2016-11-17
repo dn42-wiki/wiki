@@ -65,7 +65,7 @@ last thing to do is type exit
 Set up Interface vtunX -- i used vtun0  
 
     configure  
-    set interface openssh vtun0  
+    set interface openvpn vtun0  
     set interfaces openvpn vtun0 mode site-to-site  
     set interfaces openvpn vtun0 local-port 1194   
     set interfaces openvpn vtun0 remote-port 1194  
@@ -104,7 +104,7 @@ With this step you create the basic bgp session
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
-    set protocols bgp 111111 neighbor update-source 172.AA.AA.65  
+    set protocols bgp 111111 neighbor Z.Z.Z.Z update-source 172.AA.AA.65  
     commit
     save
 
