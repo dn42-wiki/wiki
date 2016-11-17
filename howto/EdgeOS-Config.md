@@ -137,7 +137,7 @@ You should now be able to see networks being advertised via
 Now ping to 172.23.0.53 ... thats the nameserver we are using  
 If everything is allright it should work  
 
-####NS Config
+####NS & NAT Config
 
 Enter the configure mode  
 
