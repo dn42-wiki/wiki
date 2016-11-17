@@ -65,7 +65,7 @@ last thing to do is type exit
 Set up Interface vtunX -- i used vtun0  
 
     configure  
-    set interface openvpn vtun0  
+    set interfaces openvpn vtun0  
     set interfaces openvpn vtun0 mode site-to-site  
     set interfaces openvpn vtun0 local-port 1194   
     set interfaces openvpn vtun0 remote-port 1194  
