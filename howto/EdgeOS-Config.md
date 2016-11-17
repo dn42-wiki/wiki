@@ -148,6 +148,9 @@ Enter the configure mode
     set service dns forwarding options server=/23.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/22.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/dn42/172.23.0.53  
+    set service nat rule 5013 outbound-interface vtun0
+    set service nat rule 5013 type masquerade
+    set service nat rule 5013 description "masquerade for dn42"
     commit
     save
     exit
