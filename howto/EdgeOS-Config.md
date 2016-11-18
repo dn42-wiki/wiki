@@ -52,9 +52,7 @@ Peer BGP Neighbour IPv6: fdAA::CC
 copy vpn key to /config/auth/giveITaName  
 
     sudo su  
-    cd /config  
-    mkdir auth  
-    cd auth  
+    cd /config/auth  
     cat > giveITaName  
 
 now paste the key in the terminal window, hit return once and kill cat with CTRL+C  
