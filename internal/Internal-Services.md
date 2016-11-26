@@ -195,10 +195,8 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~https://paste.synhacx.dn42~~(OFFLINE 2016-08-24)| AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~http://zerobin.e-utp.dn42~~(OFFLINE 2016-08-24) | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~https://flo.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
-| ~~https://szf.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-encrypted pastebin-like, another one                                       |
+| ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |                    |
+| ~~https://szf.dn42/paste/~~(TLSNOTHAPPY 2016-11-26)   | AES-encrypted pastebin-like, another one                                       |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
