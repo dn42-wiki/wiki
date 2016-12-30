@@ -32,7 +32,7 @@ For all of these servers they have a specific IP assigned, only respond to their
 
 **{{name}}.in-addr-servers.arpa** - This server is authoritative for "arpa", "in-addr", and each of the 172 zones for dn42 ip space. For non dn42 ip space NS records to the respective darknet would need to be registered. 
 
-**{{name}}.dn42-servers.arpa** - This server is authoritative for RFC 2317 delegations. For any inetnum object smaller than /24 and whos parent has no nameserver records, a C class parent zone is created (all its subnetworks are delegated to appropriate namservers with CNAME)
+**{{name}}.dn42-servers.arpa** - This server is authoritative for RFC 2317 delegations. For any inetnum object smaller than /24 and whos parent has no nameserver records, a C class parent zone is created (all its subnetworks are delegated to appropriate nameservers with CNAME)
 
 Real-time server monitor is available at http://nixnodes.net/dn42/dnsview or http://nixnodes.dn42/dn42/dnsview/
 
