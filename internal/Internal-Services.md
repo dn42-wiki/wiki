@@ -194,7 +194,7 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 |https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([zerobin]| 
+| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([privatebin]| 
 (https://github.com/sebsauvage/ZeroBin)) |
 | ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
 | ~~https://szf.dn42/paste/~~(TLSNOTHAPPY 2016-11-26)   | AES-encrypted pastebin-like, another one                                       |
