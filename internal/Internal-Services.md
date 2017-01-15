@@ -202,7 +202,6 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
-| https://weiti.dn42/cgi-bin/my-ip | Another 'myip' service |
 | https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://ngit.dn42                                  | |
