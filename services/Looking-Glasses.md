@@ -9,7 +9,7 @@ Please sort by AS number.
 | AS | URL | Status |
 |:-- |:--- |:------ |
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
-| 64737 | ext: http://sour.is <br> If you would like to submit your own site AS route information contact xuu@sour.is. | DOWN |
+| 64737 | ext: https://lg.dn42.us | UP |
 | 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. Currently not connected to dn42. | DOWN |
 | 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
 | 65529 | ext: http://bgp.freifunk-bielefeld.de/ulg/ulg.py <br> Interactive, BGP-map | DOWN |
