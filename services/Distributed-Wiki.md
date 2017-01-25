@@ -148,8 +148,8 @@ server {
 
         listen 172.23.0.80:80 default;
         listen [fd42:d42:d42:80::1]:80 default;
-        listen 80;
-        listen [::]:80;
+        listen <unicast ipv4> 80;
+        listen [<unicast ipv6>]:80;
 
         add_header X-SiteID                   '<aut-num>-<cc>';
 
@@ -166,8 +166,8 @@ server {
 
         listen 172.23.0.80:443 ssl default;
         listen [fd42:d42:d42:80::1]:443 ssl default;
-        listen 443 ssl;
-        listen [::]:443 ssl;
+        listen <unicast ipv4> 443 ssl;
+        listen [<unicast ipv6>]:443 ssl;
 
 	ssl on;
         ssl_certificate      <path>/ssl.crt;  
