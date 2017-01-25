@@ -19,7 +19,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Network
 
- - Install wiki anycast IP address `172.23.0.80/32` on the system
+ - Install wiki anycast IP addresses `172.23.0.80/32` and `fd42:d42:d42:80::1/64` on the system
  - Assign a unicast IP address to be used by Nginx
  - Establish connectivity to the dn42 network
 
@@ -74,7 +74,7 @@ RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 1
 
     Set `<path>` to the location where wiki Git repo was cloned. 
 
-## Nginx proxy
+## Nginx reverse proxy
 
 #### SSL
 
