@@ -213,7 +213,7 @@ group gollum-watchdog {
 
   ## (example ipv6) peer with one of our iBGP speakers:
   neighbor fd42:4992:6a6d::1 {
-    router-id 172.22.0.80;
+    router-id 172.23.0.80;
     local-address fd42:4992:6a6d::2;
     local-as 123456;
     peer-as 123456;
