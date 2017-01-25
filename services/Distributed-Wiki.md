@@ -78,7 +78,7 @@ RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 1
 
 #### SSL
 
- - Setup your MNTNR according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
+ - Setup your maintainer object according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
 
 ```
