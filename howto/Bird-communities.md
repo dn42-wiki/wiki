@@ -42,7 +42,7 @@ Propagation:
 ```
 For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
-You might want to use this [script](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) to measure round trip time and calculate community values automatically:
+Two utilites which measure round trip time and calculate community values automatically are provided, written in  [ruby](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) and [C](https://github.com/nixnodes/bird/blob/master/misc/dn42-comgen.c). 
 
 ```
 $ ruby bgp-community.rb --help
