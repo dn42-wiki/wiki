@@ -73,7 +73,6 @@ secret /etc/openvpn/<PEER_NAME>.key
 * `<REMOTE_PORT>` is openvpn port, where your peer listen for traffic
 
 ```
-daemon
 proto       <PROTO>
 mode        p2p
 remote      <REMOTE_HOST>
