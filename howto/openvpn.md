@@ -60,7 +60,7 @@ cipher aes-256-cbc
 resolv-retry infinite
 float
 port <LOCAL_PORT>
-ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6>
 ifconfig  <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
