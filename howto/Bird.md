@@ -3,7 +3,10 @@ Compared to quagga, bird supports multiple routing tables, which is useful, if y
 want to learn the practical details behind routing protocols in bird, see the following [guide](https://github.com/knorrie/network-examples)
 
 # Debian
-The version in the Debian repositories might be quite old, therefore it makes sense to install a newer one directly from bird:
+In the Debian release cycle the bird packages may become outdated at times, if that is the case you should use the official bird package repository maintained by the developers of nic.cz.
+
+This is not necessary for Debian Stretch, which currently ships the most recent version (1.6.3) in this repositories.
+
 ```sh
 wget -O - http://bird.network.cz/debian/apt.key | apt-key add -
 apt-get install lsb-release
@@ -11,7 +14,6 @@ echo "deb http://bird.network.cz/debian/ $(lsb_release -sc) main" > /etc/apt/sou
 apt-get update
 apt-get install bird
 ```
-In case you are running Debian Jessie and this is not working for you, try replacing jessie with wheezy in the /etc/apt/sources.list.d/bird.list.
 
 # Example configuration
 
