@@ -121,7 +121,19 @@ Install `ca-certificates-dn42` from [AUR](https://aur.archlinux.org/packages/ca-
 
 ### Debian/Ubuntu
 
-There is no packet at the moment, but you can install it manually:
+#### Unofficial Debian Package
+
+```bash
+wget https://ca.dn42.us/ca-dn42_20161122.0_all.deb
+# If you're on a dn42-only network:
+# wget --no-check-certificate https://ca.dn42/ca-dn42_20161122.0_all.deb
+sudo dpkg -i ca-dn42_20161122.0_all.deb
+sudo dpkg-reconfigure ca-certificates
+```
+
+You will be asked which certificates you would like to enabled. By default, the dn42 root certifcate (dn42/root-ca.crt) is not enable, be sure to enable it. This package is waiting for inclusion in Debian (Debian bug [#845351](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=845351)).
+
+#### Manual Installation
 
 ```bash
 $ mkdir /usr/share/ca-certificates/extra

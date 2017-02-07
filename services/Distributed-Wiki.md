@@ -19,7 +19,7 @@ The local webserver is monitored with a simple [[shell script|Distributed-Wiki#e
 
 ## Network
 
- - Install wiki anycast IP address `172.23.0.80/32` on the system
+ - Install wiki anycast IP addresses `172.23.0.80/32` and `fd42:d42:d42:80::1/64` on the system
  - Assign a unicast IP address to be used by Nginx
  - Establish connectivity to the dn42 network
 
@@ -47,7 +47,6 @@ GIT=/usr/bin/git
 
 cd "${WIKI_PATH}"
 ${GIT} push
-sleep 1
 ${GIT} pull
 
 exit 0
@@ -75,11 +74,11 @@ RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 1
 
     Set `<path>` to the location where wiki Git repo was cloned. 
 
-## Nginx proxy
+## Nginx reverse proxy
 
 #### SSL
 
- - Setup your MNTNR according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
+ - Setup your maintainer object according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
 
 ```
@@ -149,8 +148,8 @@ server {
 
         listen 172.23.0.80:80 default;
         listen [fd42:d42:d42:80::1]:80 default;
-        listen 80;
-        listen [::]:80;
+        listen <unicast ipv4> 80;
+        listen [<unicast ipv6>]:80;
 
         add_header X-SiteID                   '<aut-num>-<cc>';
 
@@ -167,8 +166,8 @@ server {
 
         listen 172.23.0.80:443 ssl default;
         listen [fd42:d42:d42:80::1]:443 ssl default;
-        listen 443 ssl;
-        listen [::]:443 ssl;
+        listen <unicast ipv4> 443 ssl;
+        listen [<unicast ipv6>]:443 ssl;
 
 	ssl on;
         ssl_certificate      <path>/ssl.crt;  
@@ -214,7 +213,7 @@ group gollum-watchdog {
 
   ## (example ipv6) peer with one of our iBGP speakers:
   neighbor fd42:4992:6a6d::1 {
-    router-id 172.22.0.80;
+    router-id 172.23.0.80;
     local-address fd42:4992:6a6d::2;
     local-as 123456;
     peer-as 123456;
