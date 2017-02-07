@@ -68,12 +68,11 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://mhm.dn42/search                            | Hosted by toBee                                          |
 | http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
-| http://yacy.marlinc.dn42:8090/                    | Marlinc's YaCy node.                   |
-| https://surf.dn42/                                | siska's YaCy node.                     |
+| http://yacy.marlinc.dn42:8090/ (OFFLINE 2016-11-26) | Marlinc's YaCy node.                   |
+| https://surf.dn42/ (OFFLINE 2016-11-26)           | siska's YaCy node.                     |
 | http://yacy.hexa.dn42/                            | hexa-'s YaCy node.                     |
 |                                                   |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit)|
-| http://search.dn42 (172.23.184.1)                 | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
-| https://surf.dn42                                 | YaCy node                                       |
+| http://search.dn42 (172.23.184.1) (BROKEN 2016-11-26) | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
 
 ## Images and Media
 
@@ -89,12 +88,6 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams             |
-
-## Voice and video calls
-
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| http://zaledia.dn42/                              | Zaledia VOIP service. Contact ranma on IRC OR julien@zaledia.dn42 or julien.owls@gmail.com to get your account. 
 
 ## File sharing
 
@@ -122,7 +115,12 @@ https://rest.dn42/
 ```
 
 ### Direct Connect
-An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hub is being run at `hub.dcpp.dn42:2780`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
+Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run at `hub.dcpp.dn42:2780`. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
+
+| Address                |
+|:-----------------------|
+| hub.dcpp.dn42:2780     |
+| dcpp.grmml.dn42:4111   |
 
 ### FTP / HTTP
 
@@ -130,14 +128,15 @@ An [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Conne
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |
-| http://172.22.92.2                                  |       | ~60kbps     | mostly up                                      |    
+| http://172.22.92.2                                          |       | ~60kbps     | mostly up                                      |    
 | http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 | http://files.feuerrot.dn42                                  |  6TB  | 1Gbit       | http, ftp, nfs, rsync                          |
 | sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/     | 12TB  | 1Gb/s       | incoming writable                              |
 | http://files.martin89.dn42/                                 |       | max 2Mbit/s | download only                                  |
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit | 24/7/365 |  |
-| http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot|
+| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
+| http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot                      |
 | ftp://nas.jan.dn42/                                         |  6TB  | 10 Mbit/s   | anonymous read/write                           |
+| http://storage.hb.jplitza.de                                |  6TB  | 10 Mbit/s   | http, rsync, download only                     |
 
 ### Torrent Tracker
 
@@ -199,16 +198,16 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
+|https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~https://paste.synhacx.dn42~~(OFFLINE 2016-08-24)| AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~http://zerobin.e-utp.dn42~~(OFFLINE 2016-08-24) | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~https://flo.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-256-encrypted pastebin-like, with HTTPS ([zerobin])                        |
-| ~~https://szf.dn42/paste/~~(OFFLINE 2016-08-24)   | AES-encrypted pastebin-like, another one                                       |
+| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([privatebin]| 
+(https://github.com/sebsauvage/ZeroBin)) |
+| ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
+| ~~https://szf.dn42/paste/~~(TLSNOTHAPPY 2016-11-26)   | AES-encrypted pastebin-like, another one                                       |
+| https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
-| https://weiti.dn42/cgi-bin/my-ip | Another 'myip' service |
 | https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://ngit.dn42                                  | |

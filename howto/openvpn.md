@@ -26,7 +26,7 @@ comp-lzo
 persist-key
 persist-tun
 cipher aes-256-cbc
-ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6>
 ifconfig <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 
@@ -60,7 +60,7 @@ cipher aes-256-cbc
 resolv-retry infinite
 float
 port <LOCAL_PORT>
-ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <LOCAL_GATEWAY_IPV6>
+ifconfig-ipv6 <LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6>
 ifconfig  <LOCAL_GATEWAY_IP>  <REMOTE_GATEWAY_IP>
 secret /etc/openvpn/<PEER_NAME>.key
 ```
@@ -73,7 +73,6 @@ secret /etc/openvpn/<PEER_NAME>.key
 * `<REMOTE_PORT>` is openvpn port, where your peer listen for traffic
 
 ```
-daemon
 proto       <PROTO>
 mode        p2p
 remote      <REMOTE_HOST>

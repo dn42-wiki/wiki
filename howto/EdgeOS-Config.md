@@ -1,6 +1,9 @@
-#EdgeRouterPro-8 config example with v1.9.0  
+#EdgeRouter config example   
 
-After a lot of searching and trying I [Phil/ALS7] finnaly got a working config  
+After a lot of searching and trying I [Phil/ALS7] finnaly got a working config    
+
+I used for this example V1.9.0 on an ErPro-8  
+
 Also thanx to drathir for his patience and support  
 
 ##Features
@@ -12,11 +15,12 @@ Also thanx to drathir for his patience and support
 
 --> still work in Progress  
 
-* Basic EdgeOS knowledge is required  
+* Basic EdgeOS knowledge is required 
+* If you are using LoadBalancing make shure 172.20.0.0/14 is under 'PRIVATE NETS' 
 
-1) you need to create all required fields in the registry --> look at [[Getting started]] page  
+1) you need to create all required fields in the registry --> look at [[Getting started]] 
 
-2) get a peer --> ask nice @ [[IRC]]
+2) get a peer --> ask nice @ [[IRC]] 
 
 3) You need following data from the peer  
 
@@ -27,11 +31,14 @@ Also thanx to drathir for his patience and support
 The data i used are the following:
 
 Own ASN: AS111111  
-Own IPv4: 172.AA.AA.64/27  
-Own IPv6: fdBB:BBBB:CCCC::/48  
+Own IPv4 Space: 172.AA.AA.64/27  
+Own IPv6 Space: fdBB:BBBB:CCCC::/48  
+Own IPv4 If-Address: 172.AA.AA.65  
+Own IPv6 If-Address: fdBB:BBBB:CCCC::1   
 
-Peer OpenVPN Remote Address: X.X.X.X  
-Peer OpenVPN Remote Host: X.X.X.Y  
+
+Peer OpenVPN Remote Address: 172.X.X.X  //that's the peers OpenVPN IF IP  
+Peer OpenVPN Remote Host: X.X.X.Y  //that's the peers clearnet IP  
 Peer OpenVPN IP for you: fdAA::BBB/64  
 Peer OpenVPN IP: fdAA::CC  
 Peer OpenVPN Port: 1194  
@@ -45,9 +52,7 @@ Peer BGP Neighbour IPv6: fdAA::CC
 copy vpn key to /config/auth/giveITaName  
 
     sudo su  
-    cd /config  
-    mkdir auth  
-    cd auth  
+    cd /config/auth  
     cat > giveITaName  
 
 now paste the key in the terminal window, hit return once and kill cat with CTRL+C  
@@ -58,12 +63,12 @@ last thing to do is type exit
 Set up Interface vtunX -- i used vtun0  
 
     configure  
-    set interface openssh vtun0  
+    set interfaces openvpn vtun0  
     set interfaces openvpn vtun0 mode site-to-site  
     set interfaces openvpn vtun0 local-port 1194   
     set interfaces openvpn vtun0 remote-port 1194  
-    set interfaces openvpn vtun0 local-address 172.AA.AA.64  
-    set interfaces openvpn vtun0 remote-address X.X.X.X  
+    set interfaces openvpn vtun0 local-address 172.AA.AA.65  
+    set interfaces openvpn vtun0 remote-address 172.X.X.X  
     set interfaces openvpn vtun0 remote-host X.X.X.Y   
     set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
     set interfaces openvpn vtun0 encryption aes256  
@@ -97,7 +102,7 @@ With this step you create the basic bgp session
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
     set protocols bgp 111111 neighbor Z.Z.Z.Z soft-reconfiguration inbound  
-    set protocols bgp 111111 neighbor update-source 172.AA.AA.64  
+    set protocols bgp 111111 neighbor Z.Z.Z.Z update-source 172.AA.AA.65  
     commit
     save
 
@@ -130,7 +135,7 @@ You should now be able to see networks being advertised via
 Now ping to 172.23.0.53 ... thats the nameserver we are using  
 If everything is allright it should work  
 
-####NS Config
+####NS & NAT Config
 
 Enter the configure mode  
 
@@ -141,6 +146,9 @@ Enter the configure mode
     set service dns forwarding options server=/23.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/22.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/dn42/172.23.0.53  
+    set service nat rule 5013 outbound-interface vtun0
+    set service nat rule 5013 type masquerade
+    set service nat rule 5013 description "masquerade for dn42"
     commit
     save
     exit

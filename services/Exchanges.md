@@ -7,3 +7,7 @@ The following exchanges are available:
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
+
+The NL-Zuid website is also available from the public internet: https://nl-zuid.nl
+
+Its generally recommended to only announce prefixes from your own network and that of your transit customers.
