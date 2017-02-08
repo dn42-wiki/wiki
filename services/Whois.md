@@ -52,7 +52,10 @@ A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](h
 
 # DNS interface
 
-There is also a DNS-based interface to query AS information from the registry. The DNS zone is `asn.dn42`. Example:
+There is also a DNS-based interface to query AS information from the registry. The DNS zone is `asn.dn42`. 
+A mirror is hosted at `asn.grmml.dn42`.
+
+Example:
 
     $ dig +short AS76103.asn.dn42 TXT
     "76103 | DN42 | dn42 |  | NIXNODES-IX - NixNodes CORE Network"
