@@ -24,7 +24,7 @@ ListenPort = <YOUR_LOCAL_UDP_PORT>
 [Peer]
 PublicKey = <public_key_of_your_peer>
 # at least one peer needs to provide this one
-Endpoint = <end_post_hostname_or_ip:port>
+Endpoint = <end_point_hostname_or_ip:port>
 # in theory this could be restricted to dn42 networks,
 # however it is easier to do this with iptables/bgp filters/routing table 
 # instead just like for openvpn-based peerings
@@ -48,7 +48,7 @@ $ ip link set <interface_name> up
 
 Mic92 uses this [script](https://github.com/Mic92/bird-dn42/tree/master/wireguard) to automate this
 
-Maybe you should check the MTU to your peer with e.g. `ping -s 1472 <peer ip>`. If your output looks like `From gateway.local (192.168.0.1) icmp_seq=1 Frag needed and DF set (mtu = <MTU>)` substract `80` from the MTU and set it via `ip link set dev <interface_name> mtu <calculated_mtu>`
+Maybe you should check the MTU to your peer with e.g. `ping -s 1472 <end_point_hostname_or_ip>`. If your output looks like `From gateway.local (192.168.0.1) icmp_seq=1 Frag needed and DF set (mtu = <MTU>)` substract `80` from the MTU and set it via `ip link set dev <interface_name> mtu <calculated_mtu>`
 
 ## Testing
 
