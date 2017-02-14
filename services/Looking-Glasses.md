@@ -18,7 +18,7 @@ Please sort by AS number.
 | 4242420013 | ext: http://dn42.netrik.de/de-fra1/ <br> dn42: http://172.22.232.5/de-fra1/ <br> Interactive, BGP-map | UP |
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
 | 4242420101 | ext: http://core1.darmstadt.ccc.de <br> ext: http://edge1.core.chaos-darmstadt.de <br> dn42: http://lg.cda.dn42 | DOWN |
-| 4242420123 | ext: http://lg.grmml.net <br> Interactive, BGP-map | DOWN |
+| 4242420123 | dn42: http://lg.grmml.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420184 | ext: http://peerfinder.polyno.me <br> dn42: http://peerfinder.polynome.dn42 <br> Can be used as a distributed looking glass if you give it a dn42 address. | DOWN |
 | 4242420184 | dn42: http://dataviz.polynome.dn42/dn42/lastseen/ <br> Non-interactive "BGP last seen" service: keeps an history of previously announced BGP prefixes. | DOWN |
 | 4242420200 | dn42: http://lg.punkt.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
