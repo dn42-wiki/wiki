@@ -32,9 +32,8 @@ Quick list of some native-IPv6-capable services:
 
 What doesn't work (yet?): 
  * Search engines, none seems to support IPv6 currently
- * Network Map (it doesn't show v6 AS-PATHs)
  * Pretty much everything from Freifunk and ChaosVPN
- * Any services hosted by Nixnodes or e-utp.dn42 
+ * Any services hosted by e-utp.dn42 
 
 ## Accessing legacy services from an IPv6-only stack
 In order to access legacy IPv4 services from the IPv6 side of DN42, you're going to need some kind of service to jump from one to the other.
