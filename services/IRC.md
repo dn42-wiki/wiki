@@ -32,8 +32,6 @@ We also have an IRC network accessible only from within dn42.
 It's accessible via `irc.dn42` on port `6697` with SSL, or on `6667` without ssl.
 ### Channels
 The main channel on this network is `#dn42`.
-### Control Panel
-There's an Anope Web Control Panel available on `https://naco.irc.dn42:8080`. You can register there, or register on IRC and then use your credentials to log into the web panel. It allows you to perform almost any task you are able to do on IRC.
 
 ## Bouncer Offers
 
