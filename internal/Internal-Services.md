@@ -61,6 +61,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | irc://irc.hackint.hack/dn42 (172.31.0.30)   | ChaosVPN                                  |
 | irc://irc.nixnodes.dn42                     | NixNodes IRC Network                      |
 | ircs://fpletz.darkfasel.dn42 (172.23.214.5) | darkfasel, TLSv1+ only, Ports 6697 & 9999 |
+| ircs://irc.dn42                             | Internal IRC                              |
 
 ## Search engines
 
