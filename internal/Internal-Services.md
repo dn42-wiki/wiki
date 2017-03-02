@@ -118,10 +118,11 @@ https://rest.dn42/
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
 
-| Address                |
-|:-----------------------|
-| hub.dcpp.dn42:2780     |
-| dcpp.grmml.dn42:4111   |
+| Address                        |
+|:-------------------------------|
+| adcs://hub.dcpp.dn42:1511      |
+| dchub://hub.dcpp.dn42:2780     |
+| dchub://dcpp.grmml.dn42:4111   |
 
 ### FTP / HTTP
 
