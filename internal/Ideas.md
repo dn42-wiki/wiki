@@ -17,7 +17,9 @@ Ideas for stuff that are technically difficult on the Internet:
   - Open Plex Media Server - Anyone within dn42 would have unauthenticated access to the media.
  
 
- - We need to branch out to events etc... have talks, streams and increase our media presence. 
+ - We need to branch out to events etc... have talks, streams and increase our media presence.
+ - Starting a mock domain registrar could be fun -- maybe domains could be bought with DN42coin (see below).
+ - DN42coin! A cryptocurrency based on the quality of your peerings. More/fast/low latency peerings means more coins!
 
 
 
