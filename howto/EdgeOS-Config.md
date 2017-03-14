@@ -3,9 +3,9 @@
 This document describes some possibilities for connecting to dn42 using an Ubiquiti EdgeRouter:
 
 * IPv4/IPv6 tunnel via:
-    * OpenVPN - support built into EdgeOS already
-    * IPsec/IKEv2 - support built into EdgeOS already
-    * QuickTun - see [vyatta-quicktun package](https://github.com/neilalexander/vyatta-quicktun)
+    * OpenVPN - support built into EdgeOS already - covered below
+    * IPsec/IKEv2 - support built into EdgeOS already - not covered here
+    * QuickTun - see [vyatta-quicktun package](https://github.com/neilalexander/vyatta-quicktun) - not covered here
 * Route exchange using BGP
 * DNS resolution for the .dn42 TLD
 
