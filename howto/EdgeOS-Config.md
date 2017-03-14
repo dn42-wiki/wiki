@@ -1,66 +1,55 @@
-#EdgeRouter config example   
+# EdgeOS  
 
-After a lot of searching and trying I [Phil/ALS7] finnaly got a working config    
+This document describes some possibilities for connecting to dn42 using an Ubiquiti EdgeRouter:
 
-I used for this example V1.9.0 on an ErPro-8  
+* IPv4/IPv6 tunnel via:
+    * OpenVPN - support built into EdgeOS already
+    * IPsec/IKEv2 - support built into EdgeOS already
+    * QuickTun - see [vyatta-quicktun package](https://github.com/neilalexander/vyatta-quicktun)
+* Route exchange using BGP
+* DNS resolution for the .dn42 TLD
 
-Also thanx to drathir for his patience and support  
+## First Steps
 
-##Features
+1. Create the required objects in the Registry - see [[Getting started]] 
+2. Find a peer - ask nicely in [[IRC]]!
+3. Get the following details:
+    * Tunnel configuration (OpenVPN, IPsec, QuickTun)
+    * AS numbers 
 
-* IPv4/IPv6 Tunnel via OpenVPN  
-* dn42 DNS  
+### Tunnel Configuration
 
-##How-To
+### OpenVPN 
 
---> still work in Progress  
+Using the below as examples:
 
-* Basic EdgeOS knowledge is required 
-* If you are using LoadBalancing make shure 172.20.0.0/14 is under 'PRIVATE NETS' 
+    Own ASN: AS111111  
+    Own IPv4 Space: 172.AA.AA.64/27  
+    Own IPv6 Space: fdBB:BBBB:CCCC::/48  
+    Own IPv4 If-Address: 172.AA.AA.65  
+    Own IPv6 If-Address: fdBB:BBBB:CCCC::1   
 
-1) you need to create all required fields in the registry --> look at [[Getting started]] 
+    Peer OpenVPN Remote Address: 172.X.X.X  //that's the peers OpenVPN IF IP  
+    Peer OpenVPN Remote Host: X.X.X.Y  //that's the peers clearnet IP  
+    Peer OpenVPN IP for you: fdAA::BBB/64  
+    Peer OpenVPN IP: fdAA::CC  
+    Peer OpenVPN Port: 1194  
+    Peer OpenVPN encryption: aes256  
+    Peer ASN: AS222222  
+    Peer BGP Neighbour IPv4: Z.Z.Z.Z  
+    Peer BGP Neighbour IPv6: fdAA::CC  
 
-2) get a peer --> ask nice @ [[IRC]] 
+#### Copy OpenVPN key to the EdgeRouter  
 
-3) You need following data from the peer  
+Copy the VPN key to `/config/auth/SomeSharedKey.key`:
+ 
+    sudo cat > /config/auth/giveITaName
 
---tunnel options, secret key --ASN from the peer --ip's  
+Paste the key in the terminal window, hit return once and kill `cat` with CTRL+C. Then type `exit`.
 
-...  
+####  Create IPv4 OpenVPN Interface
 
-The data i used are the following:
-
-Own ASN: AS111111  
-Own IPv4 Space: 172.AA.AA.64/27  
-Own IPv6 Space: fdBB:BBBB:CCCC::/48  
-Own IPv4 If-Address: 172.AA.AA.65  
-Own IPv6 If-Address: fdBB:BBBB:CCCC::1   
-
-
-Peer OpenVPN Remote Address: 172.X.X.X  //that's the peers OpenVPN IF IP  
-Peer OpenVPN Remote Host: X.X.X.Y  //that's the peers clearnet IP  
-Peer OpenVPN IP for you: fdAA::BBB/64  
-Peer OpenVPN IP: fdAA::CC  
-Peer OpenVPN Port: 1194  
-Peer OpenVPN encryption: aes256  
-Peer ASN: AS222222  
-Peer BGP Neighbour IPv4: Z.Z.Z.Z  
-Peer BGP Neighbour IPv6: fdAA::CC  
-
-###Copy OpenVPN key to the ErPro  
-
-copy vpn key to /config/auth/giveITaName  
-
-    sudo su  
-    cd /config/auth  
-    cat > giveITaName  
-
-now paste the key in the terminal window, hit return once and kill cat with CTRL+C  
-last thing to do is type exit  
-
-###Create IPv4 OpenVPN Interface
-
-Set up Interface vtunX -- i used vtun0  
+Create the OpenVPN virtual interface, i.e. using `vtun0`:
 
     configure  
     set interfaces openvpn vtun0  
@@ -70,7 +59,7 @@ Set up Interface vtunX -- i used vtun0
     set interfaces openvpn vtun0 local-address 172.AA.AA.65  
     set interfaces openvpn vtun0 remote-address 172.X.X.X  
     set interfaces openvpn vtun0 remote-host X.X.X.Y   
-    set interfaces openvpn vtun0 shared-secret-key-file /config/auth/giveITaName    
+    set interfaces openvpn vtun0 shared-secret-key-file /config/auth/SomeSharedKey.key    
     set interfaces openvpn vtun0 encryption aes256  
 
     set interfaces openvpn vtun0 openvpn-option "--comp-lzo"  //if your peer support compression  
@@ -79,7 +68,7 @@ Set up Interface vtunX -- i used vtun0
     save  
     exit  
 
-Now the ipv4 tunnel should be up&running  
+The OpenVPN tunnel should now be up and running.
 
 Check it with:  
 
@@ -87,17 +76,17 @@ Check it with:
     show interfaces openvpn detail  
     show openvpn status site-to-site  
 
-###Create IPv4 BGP Session
+### Create BGP Session
 
-####Open Firewall
+#### Open Firewall
 
-* You need to open the firewall to local for the tunnel Interface on port 179/tcp
+You need to open the firewall to local for the tunnel Interface on port 179/tcp
 
-####Configure the BGP Neighbor
+#### Configure the BGP Neighbor
 
-* You must not use AS before the as numbers !!
+When entering AS numbers, do not include the "AS" prefix, i.e. enter AS111111 as just 111111.
 
-With this step you create the basic bgp session  
+Build the BGP session with your peer:
 
     configure  
     set protocols bgp 111111 neighbor Z.Z.Z.Z remote-as 222222  
@@ -106,12 +95,11 @@ With this step you create the basic bgp session
     commit
     save
 
-When commit this configuration you should be able to see a BGP neighbor session start and come up.  
-You can check this with:
+Check that the BGP session has come up:
 
     show ip bgp summary  
 
-####Set route to blackhole  
+#### Create Blackhole Route
 
 so bgp can announce the route  
 
@@ -119,38 +107,35 @@ so bgp can announce the route
     commit  
     save  
 
-####Announce prefix to BGP
+#### Announce Route to BGP
   
     set protocols bgp 111111 network 172.A.A.64/27  
     commit  
     save  
     exit  
 
-You should now be able to see networks being advertised via  
+You should now be able to see networks being advertised to your peer: 
 
     show ip bgp neighbors Z.Z.Z.Z advertised-routes  
 
-###Define Nameservers
+### Set DNS Forwarding
 
-Now ping to 172.23.0.53 ... thats the nameserver we are using  
-If everything is allright it should work  
+Try to ping `172.23.0.53` (anycast DNS resolver). If you get a response then you are good to continue. 
 
-####NS & NAT Config
-
-Enter the configure mode  
+Add the DNS forwarder: 
 
     configure
-    set service dns forwarding name-server 8.8.8.8  
-    set service dns forwarding name-server 8.8.4.4
-    set service dns forwarding options rebind-domain-ok=/dn42/ 
     set service dns forwarding options server=/23.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/22.172.in-addr.arpa/172.23.0.53  
     set service dns forwarding options server=/dn42/172.23.0.53  
-    set service nat rule 5013 outbound-interface vtun0
-    set service nat rule 5013 type masquerade
-    set service nat rule 5013 description "masquerade for dn42"
     commit
     save
     exit
 
-Now try to access any .dn42 tld
+### Create NAT rule
+
+    set service nat rule 5013 outbound-interface vtun0
+    set service nat rule 5013 type masquerade
+    set service nat rule 5013 description "Masquerade for dn42"
+
+You should now be able to access .dn42 domains. 
