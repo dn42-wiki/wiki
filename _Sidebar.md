@@ -14,7 +14,7 @@
   * [[Email|email]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
   * [[Mikrotik RouterOS|mikrotik]]
-  * [[EdgeOS Config]]
+  * [[EdgeRouter|EdgeOS Config]]
 
 * [[Services|/pages/services/]]
   * [[IRC]]
