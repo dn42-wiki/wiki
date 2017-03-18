@@ -10,6 +10,10 @@ You can inspect the service status [on this page](https://services.dn42)
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
+## TWLAN
+
+florianbAT is maintaining a Tribal Wars LAN-Server for balance between productivity and fun. [twlan.florianb.dn42](https://twlan.florianb.dn42)
+
 ## Network-related
 
   * See [[Looking Glasses]] for more network diagnostic tools
