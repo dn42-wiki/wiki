@@ -43,7 +43,7 @@ Using the below as examples:
 
 Copy the VPN key to `/config/auth/SomeSharedKey.key`:
  
-    sudo cat > /config/auth/giveITaName
+    sudo cat > /config/auth/SomeSharedKey.key
 
 Paste the key in the terminal window, hit return once and kill `cat` with CTRL+C. Then type `exit`.
 
