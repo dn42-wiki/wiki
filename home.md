@@ -54,6 +54,7 @@ The [[Getting started]] page helps you to get your first node inside the network
 * [CCC Dresden](http://c3d2.de)
 * [CCC Düsseldorf](https://www.chaosdorf.de)
 * [CCC Munich](https://www.muc.ccc.de)
+* [Chaostreff Chemnitz](https://chaoschemnitz.de)
 * [/dev/nulll](https://dev.0l.de)
 * [freifunk](http://freifunk.net)
 * [NoName e.V. Heidelberg](https://www.noname-ev.de)
