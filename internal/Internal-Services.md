@@ -211,6 +211,9 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
 | ~~https://szf.dn42/paste/~~(TLSNOTHAPPY 2016-11-26)   | AES-encrypted pastebin-like, another one                                       |
 | https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
+| http://www.nop.dn42/                              | Basic "whatismyip" service
+| http://freerouter.nop.dn42/                       | freeRouter main site
+| http://rtros.nop.dn42/                            | freeRouter distribution
 | http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
 | http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
 | https://szf.dn42/ip (text) https://szf.dn42/ifconfig (html)   | Another simple 'myip' service                                      |
