@@ -87,6 +87,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://media.dn42                | A mediagoblin-Instance  |
+| http://fun.nop.dn42              | funny image collection  |
 
 ## Radio and Video Streaming
 
