@@ -40,7 +40,7 @@ include "/etc/bird/local6.conf";
 # filter helpers
 #################
 
-include "/etc/bird/filter6.conf";
+##include "/etc/bird/filter6.conf";
 
 # Kernel routing tables
 ########################
@@ -111,7 +111,8 @@ function is_self_net() {
 
 function is_valid_network() {
   return net ~ [
-    'fd00::/8' # ULA address space as per RFC 4193
+
+    fd00::/8{48,80} # ULA address space as per RFC 4193
   ]
 }
 ```
@@ -151,7 +152,7 @@ include "/etc/bird/local4.conf";
 # filter helpers
 #################
 
-include "/etc/bird/filter4.conf";
+##include "/etc/bird/filter4.conf";
 
 # Kernel routing tables
 ########################
@@ -265,6 +266,13 @@ You can add cron entries to periodically update the tables:
 ```
 */15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird6_roa_dn42.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && chronic birdc6 configure
 */15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && chronic birdc configure
+```
+
+Debian version:
+
+```
+*/15 * * * * curl -sfSLR -o/var/lib/bird/bird6_roa_dn42.conf -z/var/lib/bird/bird6_roa_dn42.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && birdc6 configure
+*/15 * * * * curl -sfSLR -o/var/lib/bird/bird_roa_dn42.conf -z/var/lib/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && birdc configure
 ```
 
 ## Filter configuration
