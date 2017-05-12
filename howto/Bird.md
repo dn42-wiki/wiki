@@ -111,9 +111,8 @@ function is_self_net() {
 
 function is_valid_network() {
   return net ~ [
-
-    fd00::/8{48,80} # ULA address space as per RFC 4193
-  ]
+    fd00::/8{44,64} # ULA address space as per RFC 4193
+  ];
 }
 ```
 
@@ -230,7 +229,7 @@ function is_valid_network() {
     172.31.0.0/16+,       # ChaosVPN
     10.100.0.0/14+,       # ChaosVPN
     10.0.0.0/8{15,22}     # Freifunk.net
-  ]
+  ];
 }
 ```
 
