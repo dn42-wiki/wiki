@@ -87,6 +87,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://media.dn42                | A mediagoblin-Instance  |
+| http://fun.nop.dn42              | funny image collection  |
 
 ## Radio and Video Streaming
 
@@ -140,6 +141,7 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | http://files.feuerrot.dn42                                  |  6TB  | 1Gbit       | http, ftp, nfs, rsync                          |
 | sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/     | 12TB  | 1Gb/s       | incoming writable                              |
 | http://files.martin89.dn42/                                 |       | max 1Mbit/s | download only                                  |
+| http://files.nop.dn42/                                      |       | max 1Mbit/s | download only                                  |
 | http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
 | http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot                      |
 | http://storage.hb.jplitza.de                                |  6TB  | 10 Mbit/s   | http, rsync, download only                     |
