@@ -27,6 +27,9 @@ The data for these maps is collected using AS paths from various AS.
 Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
 
 DNS Hosting with PowerDNS GUI is provided by Nellicus. Support for Domains and RDNS. Please contact nellicus in #dn42 or email admin (at) nellic.us
+
+DNS Hosting with PowerDNS GUI is also provided by KaiRaphixx. Support for Domains and RDNS. Please contact KaiRaphixx in #dn42 or email ich (at) kai.cool
+
 ### DNS tunnel
 
 This DNS tunnel service uses [Iodine](http://code.kryo.se/iodine/), and provides access to the dn42 network. Useful when you're on a shitty network (airport, train station) that still allows DNS.
