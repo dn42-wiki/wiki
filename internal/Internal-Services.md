@@ -145,6 +145,7 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
 | http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot                      |
 | http://storage.hb.jplitza.de                                |  6TB  | 10 Mbit/s   | http, rsync, download only                     |
+| http://dump.kai-server.dn42/                                      |       | max 100 Mbit/s | download only 
 
 ### Torrent Tracker
 
