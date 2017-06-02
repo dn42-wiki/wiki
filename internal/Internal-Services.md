@@ -229,6 +229,7 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | xmpp://jabber.szf.dn42                            | XMPP/Jabber server, port 5222 w/ STARTTLS only |
 | https://whois.rest.dn42/                          | whois restful API |
+| ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
 
 # Other networks
 
