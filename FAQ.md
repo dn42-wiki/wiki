@@ -4,7 +4,7 @@
 
 ### Why are you using monotone for the registry? Why not Git?
 
-There is an important difference between the data model of monotone and Git: In Git branches *are* HEADs, while in monotone, branches are a list of HEADs. Or, to state it simpler and probably less correct: It is possible to sync merge conflicts in monotone. In Git, conflicts are part of the index and/or working tree, and thus can't be pushed/pulled.
+There is an important difference between the data model of monotone and Git: In Git branches *are* heads, while in monotone, branches are a list of heads. Or, to state it simpler and probably less correct: It is possible to sync merge conflicts in monotone. In Git, conflicts are part of the index and/or working tree, and thus can't be pushed/pulled.
 
 The DN42 registry is stored on multiple monotone servers which sync with each other. This is not possible in Git, because the Git servers don't know how to handle merge conflicts. In monotone, the servers just sync the conflict.
 
