@@ -141,7 +141,7 @@ Change network and LAN GW to mach your network configuration.
 
 ```
 /ip firewall layer7-protocol
-add name=DN42-DNS regexp="^(.*).dn42"
+add name=DN42-DNS regexp="\\x04dn42.\\x01"
 /ip firewall nat
 add action=src-nat chain=srcnat comment="NAT to DN42 DNS" dst-address=172.23.0.53 dst-port=53 protocol=udp src-address=192.168.0.0/24 to-addresses=192.168.0.1
 add action=dst-nat chain=dstnat dst-address-type=local dst-port=53 layer7-protocol=DN42-DNS protocol=udp src-address=192.168.0.0/24 to-addresses=172.23.0.53 to-ports=53
