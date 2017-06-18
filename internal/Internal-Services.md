@@ -79,7 +79,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
 | http://yacy.marlinc.dn42:8090/ (OFFLINE 2016-11-26) | Marlinc's YaCy node.                   |
 | https://surf.dn42/ (OFFLINE 2016-11-26)           | siska's YaCy node.                     |
-| http://yacy.hexa.dn42/                            | hexa-'s YaCy node.                     |
+| http://yacy.hexa.dn42/ (OFFLINE 2017-06-18)       | hexa-'s YaCy node.                     |
 |                                                   |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit)|
 | http://search.dn42 (172.23.184.1) (BROKEN 2016-11-26) | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
 
