@@ -75,6 +75,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
+| http://googol.dn42      | KaiRaphixx's YaCy node.                     |
 | http://mhm.dn42/search                            | Hosted by toBee                                          |
 | http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
 | http://yacy.marlinc.dn42:8090/ (OFFLINE 2016-11-26) | Marlinc's YaCy node.                   |
