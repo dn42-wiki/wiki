@@ -22,4 +22,4 @@ Ideas for stuff that are technically difficult on the Internet:
 
   - We could make the services zeroconf-browseable with the .dn42 TLD
   - Starting a mock domain registrar could be fun -- maybe domains could be bought with DN42coin (see below).
-  - DN42coin! A cryptocurrency based on the quality of your peerings. More/fast/low latency peerings means more coins!
+  - DN42coin! A cryptocurrency based on the quality of your peerings. More/fast/low latency peerings means more coins! (KaiRaphixx is currently working on this)
