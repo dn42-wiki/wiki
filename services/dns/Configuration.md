@@ -148,3 +148,6 @@ system {
    }
 }
 ```
+
+## MS DNS
+Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.23.0.53 as forwarder. Ignore the error message that the server is not authoritative.
