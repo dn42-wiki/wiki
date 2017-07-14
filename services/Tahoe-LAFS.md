@@ -4,7 +4,7 @@
 Tahoe-LAFS provides a distributed, reliable and crypted file system.
 
 ## How?
-Some people runs Tahoe-LAFS nodes, providing space. With clients files can be published and received to the cloud. Everything will be encrypted on client side and keep redundant in the cloud.
+Some people run Tahoe-LAFS nodes, providing space. With clients files can be published and received to the cloud. Everything will be encrypted on client side and keep redundant in the cloud.
 
 ## Benefit
 Default you need only 3 of 10 parts of a file to reconstruct it. So a downtime of a tahoe node doesn't means data loss.
@@ -30,4 +30,4 @@ With `bin/tahoe start` you start your local node.
 You can reach the local node via web browser at [http://localhost:3456](http://localhost:3456).
 
 ## Further informations
-Look at https://tahoe-lafs.org for further informations.
+Look at https://tahoe-lafs.org for further information.
