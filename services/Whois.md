@@ -92,7 +92,6 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
 | welterde   | thinkbase.srv.welterde.de | 46.4.248.201    |
-| fritz      | whois.fritz.dn42          | 172.22.119.139  |
 | prauscher  | sheldon.prauscher.dn42    | 172.22.120.1    |
 
 ## Usage
