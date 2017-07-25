@@ -80,18 +80,17 @@ To register an IPv4 network prefix, simply create an `inetnum` object.
 
 You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following sites, please mind the allocation guideline below.
 
- * http://core1.darmstadt.ccc.de/free/data.json
- * [Open Netblocks](http://dn42.netrik.de/)
+ * [Open Netblocks](https://dn42.us/peers/free)
  * [graphical visualisation of the assigned ranges](http://dataviz.polyno.me/dn42-netblock-visu/registry.html).
 
 | Size | Comment                  |
 |-----:|:-------------------------|
-| /24  | are you an organization? |
-| /25  | still a lot of IPs!      |
-| /26  | usually enough           |
-| **/27**  | **default allocation**       |
-| /28  | usually enough           |
 | /29  | starter pack             |
+| /28  | usually enough           |
+| **/27**  | **default allocation**       |
+| /26  | usually enough           |
+| /25  | still a lot of IPs!      |
+| /24  | are you an organization? |
 
 The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /28 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but our IPv4-space is valuable too! If you need a /24 or larger, please ask in the IRC chan or on the mailing list.
 
