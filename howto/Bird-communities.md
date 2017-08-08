@@ -59,7 +59,7 @@ $ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
 ```
 
 ### Route Origin
-According to this [mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin:
+According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin:
 ```
 (64511, 41) :: Europe
 (64511, 42) :: North America-E
