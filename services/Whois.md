@@ -148,7 +148,7 @@ Monotone is an distributed revision control system. Monotone tracks revisions to
 | dracoling | dn42.smrsh.net (net.smrsh.dn42)       | UP     |
 | xuu      | mtn.xuu.dn42 (172.22.141.181)          | UP     |  
 | zorun    | mtn.polyno.me / mtn.polynome.dn42 (172.23.184.71)| UP |
-| Nurtic-Vibe | mtn.grmml.dn42 (172.23.149.20)| UP |
+| Nurtic-Vibe | mtn.dn42.eu / mtn.grmml.dn42 (172.23.149.20/fd42:23:149:1::20)| UP |
 | toBee | mtn.mhm.dn42 (172.23.67.120)| UP |
 | hexa- | mtn.hexa.dn42 (172.23.42.130) | UP |
 | tombii | mtn.tombii.dn42 (172.22.102.133) | UP |
