@@ -41,7 +41,7 @@ config dnsmasq
         list server '/23.172.in-addr.arpa/172.23.0.53'
 ```
 
-to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq` restart. After that you are able to resolve `.dn42` 
+to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42` 
 with the anycast DNS-Server, while your normal requests go to your standard DNS-resolver.
 
 Attention: If you go with the default config you'll have to disable "boguspriv" in the first dnsmasq config section.
