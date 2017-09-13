@@ -24,7 +24,7 @@ Please sort by AS number.
 | 4242420200 | dn42: http://lg.punkt.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242420300 | ext: http://lg-fr-rbx.wolke7.me <br> dn42: http://lg-fr-rbx.wolke7.dn42 | DOWN |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
-| 4242420812 | dn42: http://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242420812 | dn42: https://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:lg.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
