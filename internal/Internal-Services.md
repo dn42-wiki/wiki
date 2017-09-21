@@ -92,6 +92,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://media.dn42                | A mediagoblin-Instance  |
 | http://fun.nop.dn42              | funny image collection  |
+| https://kaiflix.dn42           | User: DN42 PW: zbxrs2bu4AgwUMpt (If you want a own user: KaiRaphixx@irc)  |
 
 ## Radio and Video Streaming
 
