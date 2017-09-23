@@ -233,6 +233,7 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | https://whois.rest.dn42/                          | whois restful API |
 | ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
+| pgp.dn42                                          | PGP keyserver, [synchronizes](http://pgp.dn42/pks/lookup?op=stats) with the SKS keyservers |
 
 # Other networks
 
