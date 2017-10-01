@@ -32,6 +32,7 @@ Please sort by AS number.
 | 4242422016 | dn42: https://lg.sidereal.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | UP |
 | 4242422506 | dn42: http://www.as4242422506.dn42/ | UP |
+| 4242421166 | dn42: http://lg.alcatrash.dn42/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ <br> dn42: http://lg.nullroute.dn42 | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
