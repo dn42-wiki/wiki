@@ -57,7 +57,6 @@ include "/etc/bird/local6.conf";
 */
 protocol kernel {
   scan time 20;
-  device routes;
   import none;
   export filter {
     if source = RTS_STATIC then reject;
@@ -167,7 +166,6 @@ include "/etc/bird/local4.conf";
 */
 protocol kernel {
   scan time 20;
-  device routes;
   import none;
   export filter {    
     if source = RTS_STATIC then reject;
