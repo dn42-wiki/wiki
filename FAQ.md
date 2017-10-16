@@ -11,13 +11,11 @@ The DN42 registry is stored on multiple monotone servers which sync with each ot
 
 ### What about IPv6 in dn42?
 
-There are some ASes in dn42 that route IPv6 traffic. It is not yet agreed upon what prefixes should be used. The following proposals are the more sane ones:
+There are some ASes in dn42 that route IPv6 traffic. They generally use the "Unique Local Address" range (ULA, *fd00::/8*) defined by [RFC 4193](https://tools.ietf.org/html/rfc4193). A minor disadvantage of using ULAs is that you need to announce two prefixes in your LAN if you want to use stateless autoconfiguration and no NAT: The ULA and a globally routed prefix. Usually, this works fine, but it may cause issues with legacy clients which don't implement [RFC 6172](https://tools.ietf.org/html/rfc6172) correctly.
 
-* Use Unique Local Addresses (ULAs). This is the *fd00::/8* range. In theory, this would be the obvious winner of this debate. They were standardised for exactly this purpose (not publicly routed networks that still want to use unique prefixes). Sadly, this would require you to announce two prefixes in your LAN if you want to use stateless autoconfiguration and no NAT: The ULA and a globally routed prefix. It is not yet known if this really works. [RFC 3484](https://tools.ietf.org/html/rfc3484) demands a behavior that would make this work at the moment (until globally routed addresses from 8000::/1 are used).
-[This](http://www.sixxs.net/tools/grh/ula) generator can be used to generate a ULA prefix from one of your MAC addresses.
-* Use your globally unique PA space. This fixes the LAN-issue, because you only need to announce a single prefix.  However, this complicates prefix filtering for everybody, and can lead to strange routing patterns, where packets are routed partially on dn42 and partially through the Internet.
+To get your own ULA range, simply pick a *random* prefix of the form fdXX:XXXX:XXXX/48 and enter it into the dn42 registry to make sure there are no collisions.
 
-(*TODO*)
+In theory, globally routable IPv6 networks could also be used inside dn42. However, this would complicate prefix filtering for everybody, and might lead to strange routing patterns, where packets are routed partially on dn42 and partially through the Internet. Most dn42 ASes filter such IPv6 prefixes, which means you'd have a hard time making them reachable in dn42.
 
 At the moment, it is safe to assume that everyone doing IPv6 routing accepts at least prefixes from fd00::/8 with prefix lengths between 48 and 64 bits (inclusive) if they are part of the registry.
 
