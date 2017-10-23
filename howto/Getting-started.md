@@ -18,7 +18,9 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
 
-You must create several objects in the registry. The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](/services/Whois#monotone).
+You must create several objects in the registry. 
+<!-- The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](/services/Whois#monotone). -->
+To do so, create a pull request at <https://git.dn42.us/dn42/registry>.
 
 This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
 
@@ -28,8 +30,8 @@ We will create several types of objects: **maintainer** objects, which have an a
 
 Create a `mntner` object named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
 
-- choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
-- use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later.
+<!-- - choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
+- use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later. -->
 - use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
 
 ### Create person objects
@@ -43,7 +45,7 @@ Create a `person` object for **yourself** (not your organisation/hackerspace/wha
 - you may whish to add other fields, such as `pgp-id`, `pgp-fingerprint`, `remarks`, and so on.
 - don't forget to set `mnt-by` to `<FOO>-MNT`.
 
-You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`).
+<!-- You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`). -->
 
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
