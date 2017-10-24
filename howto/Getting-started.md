@@ -50,7 +50,9 @@ Create a `person` object for **yourself** (not your organisation/hackerspace/wha
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
 - `organisation` is of the form `<ORG-FOO>`.
-- email should be a contact address for your organisation, or maybe a mailing list (but people should be able to send email without subscribing).
+- `org-name` should be the name of your organisation.
+- `e-mail` should be a contact address for your organisation, or maybe a mailing list (but people should be able to send email without subscribing).
+- `admin-c`, `tech-c`, and `abuse-c` may point to `person` objects responsible for the respective role in your organisation.
 - you may provide a website (`www` field).
 - don't forget to set `mnt-by` to `<FOO>-MNT`, since you're managing this object on behalf of your organisation.
 
@@ -59,14 +61,14 @@ If you intend to register resources for an organisation (e.g. your hackerspace),
 From now on, you should use:
 
 - `admin-c: <FOO>-DN42` and `tech-c: <FOO>-DN42` for your own resources.
-- `admin-c: <ORG-FOO>` and `tech-c: <FOO>-DN42` for the resources of your organisation.
+- `admin-c: <FOO>-DN42`, `tech-c: <FOO>-DN42` and `org: <ORG-FOO>` for the resources of your organisation.
 - `mnt-by: <FOO>-MNT` for all objects, so that you can edit them later.
 
 This applies to AS numbers, network prefixes, routes, DNS records...
 
 ### Register an AS number
 
-To register an AS number, simply create an `autnum` object.
+To register an AS number, simply create an `aut-num` object. `as-name` should be a name for your AS.
 
 Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you must allocate your AS number in the new 4242420000-4242423999 range**.
 
@@ -109,6 +111,7 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 example: inet6num/fd42:4992:6a6d::_48
 ```
+cidr:              fd42:4992:6a6d::/48
 inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
 netname:           EVE-NETWORK
 descr:             Network of eve
@@ -123,6 +126,7 @@ status:            ASSIGNED
 
 example: inetnum/172.23.75.0_24
 ```
+cidr:              172.23.75.0/24
 inetnum:           172.23.75.0 - 172.23.75.255
 netname:           EVE-NETWORK
 admin-c:           MIC92-DN42
