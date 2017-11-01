@@ -69,7 +69,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | irc.nixnodes.dn42       |   Yes (7000)  | NixNodes IRC Network                             |
 | fpletz.darkfasel.dn42   |   Yes         | darkfasel, TLSv1+ only, Ports 6697 & 9999         |
 | irc.dn42               |    Yes         | Internal IRC                                      |
-| cyberia.dn42           |    Yes         | Cyberia IRC Gateway                               |
+| irc.2f30.dn42          |    Yes         | 2f30/Cyberia IRC Gateway                          |
 
 ## Search engines
 
