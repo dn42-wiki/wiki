@@ -8,6 +8,7 @@ Please sort by AS number.
 
 | AS | URL | Status |
 |:-- |:--- |:------ |
+| 4242423993 | ext: https://lg.2f30.org/ <br> | UP |
 | 64719 | ext: https://lg.dn42.lutoma.org/ <br> dn42: https://lg.lutoma.dn42/ | UP |
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
 | 64737 | ext: https://lg.dn42.us | UP |
