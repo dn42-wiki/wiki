@@ -13,7 +13,7 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 |:------------------------------------------|:------ |:-------------------------- |:------------ |
 | [irc.hackint.dn42](irc://irc.hackint.dn42)|  Yes    | 172.23.96.42, 172.22.2.235 |  fd42:d42:d42:6667::1           | fd42:23:cda::6667
 | [irc.dn42](ircs://irc.dn42)               |  Yes   | many                        | also many |
-| [cyberia.dn42](ircs://cyberia.dn42)       |  Yes    |      172.20.207.67 - ipv4.cyberia.dn42         |  fde8:8e27:b925::67 - ipv6.cyberia.dn42|
+| [irc.2f30.dn42](ircs://irc.2f30.dn42)       |  Yes    | 172.23.35.0.2, 172.23.0.10 | N/A |
 
 
 
