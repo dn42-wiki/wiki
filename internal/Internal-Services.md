@@ -93,6 +93,7 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 | http://media.dn42                | A mediagoblin-Instance  |
 | http://fun.nop.dn42              | funny image collection  |
 | https://kaiflix.dn42           | User: DN42 PW: zbxrs2bu4AgwUMpt (If you want a own user: KaiRaphixx@irc)  |
+| http://calibre.bodems.dn42/     | sorted ebook library with calibre-web |
 
 ## Radio and Video Streaming
 
@@ -151,6 +152,7 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot                      |
 | http://storage.hb.jplitza.de                                |  6TB  | 10 Mbit/s   | http, rsync, download only                     |
 | http://dump.kai-server.dn42/                                      |       | max 100 Mbit/s | download only 
+| http://poseidon.bodems.dn42/                                | 3TB   | 5 Mbit/s    | upload soon (tm)
 
 ### Torrent Tracker
 
