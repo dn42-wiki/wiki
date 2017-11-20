@@ -65,11 +65,11 @@ exit 0
  
    Read/write (SSL only):
     ```
-RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4568
+RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
     ```
    Read-only:
     ```
-RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 127.0.0.1  --port 4567 --no-edit
+RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
     ```
 
     Set `<path>` to the location where wiki Git repo was cloned. 
@@ -83,10 +83,10 @@ RACK_ENV=production gollum --css <path>/custom.css --gollum-path <path> --host 1
 
 ```
 ./ca.dn42 tls-gen \
-   wiki.dn42 \
-   MIC92-MNT \
-   joerg@higgsboson.tk \
-   DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42,DNS:<AS>-<CC->.wiki.dn42
+   <AS>-<CC>(-<UID>).wiki.dn42 \
+   EXAMPLE-MNT \
+   mail@example.com \
+   DNS:<AS>-<CC>(-<ID>).wiki.dn42,DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
 ```
 
    Wait for a reply and then sign the certificate:
@@ -116,7 +116,7 @@ add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-a
     ```
 
    + `<primary>` - the fingerprint extracted from `wiki.key`
-   + `<backup>`  - the CA fingerprint: `mJ1xUCzfru8Ckq2+M6VkNKGOGgSETImRAHBF24mjalw=`
+   + `<backup>`  - the CA fingerprint: `of00RDinhPeVRNnXm1jXQDagktOL75qQo1pT+xc7VIE=`
 
    Read more about this [here](https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning).
 
@@ -129,7 +129,7 @@ The proxy should accept the following domain names:
 
 Nginx should listen on a unicast address as well, so your site can be reached exclusively. Assign an IP address for the occasion and send it to [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) including your AS `<aut-num>` and the country code `<CC>` where your site is located. A forward DNS record will be created, pointing to the unicast IP address:
 
-  - as`<aut-num>`-`<CC>`.wiki.dn42 
+  - `<aut-num>`-`<CC>``(-<UID>)`.wiki.dn42 
 
 #### Config example
 
