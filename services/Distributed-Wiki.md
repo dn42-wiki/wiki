@@ -188,7 +188,7 @@ server {
 
 #### Announcing
 
-The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/28`). Test the whole thing by shutting down nginx/gollum and watch what happens.
+The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/32`). Test the whole thing by shutting down nginx/gollum and watch what happens.
 
 #### Configuration
 
@@ -242,8 +242,7 @@ CURL=curl
 ## url's to check (all listed must be alive to send announce)
 URL=("http://172.23.0.80" "https://172.23.0.80" "http://[fd42:d42:d42:80::1]" "https://[fd42:d42:d42:80::1]")
 
-## the anycast route (/28 due to prefix size limits)
-ROUTE='172.23.0.80/28'
+ROUTE='172.23.0.80/32'
 ## the anycast v6 route (/64 due to prefix size limits)
 ROUTE6='fd42:d42:d42:80::/64'
                         
