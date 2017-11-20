@@ -80,7 +80,7 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
 
  - Setup your maintainer object according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
- - <AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
+ - \<AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
 
 ```
 ./ca.dn42 tls-gen \
@@ -101,7 +101,7 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
 A custom header `X-SiteID` identifies the site you're connecting to:
 
   - `add_header X-SiteID   '<AS>-<ISO country code>';`
-     - <AS> is the as number prefixed with `as`
+     - \<AS> is the as number prefixed with `as` like `as64737`
 
 ##### Enabling [HPKP](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning)
 
