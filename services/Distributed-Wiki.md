@@ -100,7 +100,8 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
 
 A custom header `X-SiteID` identifies the site you're connecting to:
 
-  - `add_header X-SiteID   '<AS number>-<ISO country code>';`
+  - `add_header X-SiteID   '<AS>-<ISO country code>';`
+     - <AS> is the as number prefixed with `as`
 
 ##### Enabling [HPKP](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning)
 
