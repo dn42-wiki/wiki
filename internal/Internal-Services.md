@@ -213,9 +213,8 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 |https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([privatebin]| 
-(https://github.com/sebsauvage/ZeroBin)) |
-| ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
+| https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
+| ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
 | https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
 | http://www.nop.dn42/                              | Basic "whatismyip" service
 | http://freerouter.nop.dn42/                       | freeRouter main site
