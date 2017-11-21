@@ -10,10 +10,6 @@ You can inspect the service status [on this page](https://services.dn42)
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
-## TWLAN
-
-florianbAT is maintaining a Tribal Wars LAN-Server for balance between productivity and fun. [twlan.florianb.dn42](https://twlan.florianb.dn42)
-
 ## Network-related
 
   * See [[Looking Glasses]] for more network diagnostic tools
@@ -206,7 +202,8 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | gaming.marlinc.dn42:27015                         | Counter Strike: Source |                            |
-| 172.22.177.92:27017 (external:gmod.nixnodes.net)                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from public)   |
+| 172.22.177.92:27017 (external:gmod.nixnodes.net)  | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from public) |
+| twlan.florianb.dn42                               | Tribal Wars             |                           |
 
 ## Misc 
 
