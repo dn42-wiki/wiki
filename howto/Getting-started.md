@@ -25,18 +25,28 @@ To do so, create a pull request at <https://git.dn42.us/dn42/registry>.
 This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
 
 We will create several types of objects: **maintainer** objects, which have an associated password and allow you to authenticate so that you can edit your own objects; **person** objects, which describe people or organisations and provide contact information; and finally, all other objects, which are resources (AS number, IP subnet, DNS zone, etc).
+All objects are simple text files in the specific subfolders.
 
 ### Create a maintainer object
 
-Create a `mntner` object named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
+Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
 
 <!-- - choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
 - use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later. -->
 - use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
+- optionally add a PGP Fingerprint `auth: pgp-fingerprint <pgp-fingerprint>`
+
+Example: data/mntner/EXAMPLE-MNT
+```
+mntner:	EXAMPLE-MNT
+admin-c:	EXAMPLE-DN42
+tech-c:	EXAMPLE-DN42
+mnt-by:	EXAMPLE-MNT
+```
 
 ### Create person objects
 
-Create a `person` object for **yourself** (not your organisation/hackerspace/whatever).
+Create a  `person` object in `data/person/` for **yourself** (not your organisation/hackerspace/whatever).
 
 - use something like `<FOO>-DN42` as `nic-hdl`, it should end with `-DN42`.
 - the `person` field is more freeform, you may use your nickname or even real name here.
@@ -47,6 +57,14 @@ Create a `person` object for **yourself** (not your organisation/hackerspace/wha
 
 <!-- You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`). -->
 
+Example: data/mntner/EXAMPLE-DN42
+```
+person:	John Doe
+contact:	john.doe@example.com
+nic-hdl:	EXAMPLE-DN42
+mnt-by:	EXAMPLE-MNT
+```
+
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
 - `organisation` is of the form `<ORG-FOO>`.
@@ -55,6 +73,15 @@ If you intend to register resources for an organisation (e.g. your hackerspace),
 - `admin-c`, `tech-c`, and `abuse-c` may point to `person` objects responsible for the respective role in your organisation.
 - you may provide a website (`www` field).
 - don't forget to set `mnt-by` to `<FOO>-MNT`, since you're managing this object on behalf of your organisation.
+
+Example: data/organisation/ORG-EXAMPLE
+```
+organisation:	ORG-EXAMPLE
+org-name:	Example Organisation
+admin-c:	EXAMPLE-DN42
+tech-c:	EXAMPLE-DN42
+mnt-by:	EXAMPLE-MNT
+```
 
 ### Guidelines for future objects
 
@@ -68,7 +95,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 ### Register an AS number
 
-To register an AS number, simply create an `aut-num` object. `as-name` should be a name for your AS.
+To register an AS number, simply create an `aut-num` object in `data/aut-num/`. `as-name` should be a name for your AS.
 
 Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you must allocate your AS number in the new 4242420000-4242423999 range**.
 
@@ -77,6 +104,15 @@ For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. 
 If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/) or [this list](http://dataviz.polyno.me/lastseen/).
 
 If unsure, ask on the mailing list or IRC.
+
+Example: data/aut-num/AS4242423999
+```
+aut-num:	AS4242423999
+as-name:	AS for EXAMPLE Network
+admin-c:	EXAMPLE-DN42
+tech-c:	EXAMPLE-DN42
+mnt-by:	EXAMPLE-MNT
+```
 
 ### Register a network prefix
 
@@ -109,7 +145,7 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
-example: inet6num/fd42:4992:6a6d::_48
+example: data/inet6num/fd42:4992:6a6d::_48
 ```
 cidr:              fd42:4992:6a6d::/48
 inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
@@ -124,7 +160,7 @@ nserver:           ns2.evenet.dn42
 status:            ASSIGNED
 ```
 
-example: inetnum/172.23.75.0_24
+example: data/inetnum/172.23.75.0_24
 ```
 cidr:              172.23.75.0/24
 inetnum:           172.23.75.0 - 172.23.75.255
@@ -141,14 +177,14 @@ status:            ASSIGNED
 
 If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route` object for ipv4 prefixes and a `route6` object for ipv6 prefixes. This information is used for ROA checks (route origin authorization). If you skip this step, your network will probably get filtered by some peers. Many people enforce ROA checks to prevent (accidental) hijacking of other people's prefixes.
 
-example: route6/fd42:4992:6a6d::_48
+example: data/route6/fd42:4992:6a6d::_48
 ```
 route6:            fd42:4992:6a6d::/48
 origin:            AS4242420092
 mnt-by:            MIC92-MNT
 ```
 
-example route/172.23.75.0_24:
+example data/route/172.23.75.0_24:
 ```
 route:             172.23.75.0/24
 origin:            AS4242420092
