@@ -38,10 +38,10 @@ Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to
 
 Example: data/mntner/EXAMPLE-MNT
 ```
-mntner:	EXAMPLE-MNT
-admin-c:	EXAMPLE-DN42
-tech-c:	EXAMPLE-DN42
-mnt-by:	EXAMPLE-MNT
+mntner:         EXAMPLE-MNT
+admin-c:        EXAMPLE-DN42
+tech-c:         EXAMPLE-DN42
+mnt-by:         EXAMPLE-MNT
 ```
 
 ### Create person objects
@@ -59,10 +59,10 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 
 Example: data/mntner/EXAMPLE-DN42
 ```
-person:	John Doe
-contact:	john.doe@example.com
-nic-hdl:	EXAMPLE-DN42
-mnt-by:	EXAMPLE-MNT
+person:         John Doe
+contact:        john.doe@example.com
+nic-hdl:        EXAMPLE-DN42
+mnt-by:         EXAMPLE-MNT
 ```
 
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
@@ -76,11 +76,11 @@ If you intend to register resources for an organisation (e.g. your hackerspace),
 
 Example: data/organisation/ORG-EXAMPLE
 ```
-organisation:	ORG-EXAMPLE
-org-name:	Example Organisation
-admin-c:	EXAMPLE-DN42
-tech-c:	EXAMPLE-DN42
-mnt-by:	EXAMPLE-MNT
+organisation:   ORG-EXAMPLE
+org-name:       Example Organisation
+admin-c:        EXAMPLE-DN42
+tech-c:         EXAMPLE-DN42
+mnt-by:         EXAMPLE-MNT
 ```
 
 ### Guidelines for future objects
@@ -107,11 +107,11 @@ If unsure, ask on the mailing list or IRC.
 
 Example: data/aut-num/AS4242423999
 ```
-aut-num:	AS4242423999
-as-name:	AS for EXAMPLE Network
-admin-c:	EXAMPLE-DN42
-tech-c:	EXAMPLE-DN42
-mnt-by:	EXAMPLE-MNT
+aut-num:        AS4242423999
+as-name:        AS for EXAMPLE Network
+admin-c:        EXAMPLE-DN42
+tech-c:         EXAMPLE-DN42
+mnt-by:         EXAMPLE-MNT
 ```
 
 ### Register a network prefix
