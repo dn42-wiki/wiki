@@ -52,7 +52,7 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 - the `person` field is more freeform, you may use your nickname or even real name here.
 - provide an email.
 - you may provide additional ways of contacting you, using one or more `contact` field. For instance `xmpp:luke@theforce.net`, `irc:luke42@hackint`, `twitter: TheGreatLuke`.
-- you may whish to add other fields, such as `pgp-id`, `pgp-fingerprint`, `remarks`, and so on.
+- you may whish to add other fields, such as `pgp-fingerprint`, `remarks`, and so on.
 - don't forget to set `mnt-by` to `<FOO>-MNT`.
 
 <!-- You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`). -->
