@@ -147,8 +147,8 @@ If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-ab
 
 example: data/inet6num/fd42:4992:6a6d::_48
 ```
-cidr:              fd42:4992:6a6d::/48
 inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+cidr:              fd42:4992:6a6d::/48
 netname:           EVE-NETWORK
 descr:             Network of eve
 country:           DE
@@ -162,8 +162,8 @@ status:            ASSIGNED
 
 example: data/inetnum/172.23.75.0_24
 ```
-cidr:              172.23.75.0/24
 inetnum:           172.23.75.0 - 172.23.75.255
+cidr:              172.23.75.0/24
 netname:           EVE-NETWORK
 admin-c:           MIC92-DN42
 tech-c:            MIC92-DN42
