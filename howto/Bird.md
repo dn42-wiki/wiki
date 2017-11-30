@@ -272,6 +272,12 @@ Debian version:
 */15 * * * * curl -sfSLR -o/var/lib/bird/bird_roa_dn42.conf -z/var/lib/bird/bird_roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && birdc configure
 ```
 
+then create the directory to make sure curls can save the files:
+
+```
+mkdir -p /var/lib/bird/
+```
+
 ## Filter configuration
 
 In your import filter add the following to reject invalid routes:
