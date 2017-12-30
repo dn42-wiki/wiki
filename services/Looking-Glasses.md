@@ -8,7 +8,6 @@ Please sort by AS number.
 
 | AS | URL | Status |
 |:-- |:--- |:------ |
-| 4242423993 | ext: https://lg.2f30.org/ <br> IPv4 only. | UP |
 | 64719 | ext: https://lg.dn42.lutoma.org/ <br> dn42: https://lg.lutoma.dn42/ | UP |
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
 | 64737 | ext: https://lg.dn42.us | UP |
@@ -18,9 +17,11 @@ Please sort by AS number.
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
+| 4242422016 | dn42: https://lg.sidereal.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242422506 | dn42: http://www.as4242422506.dn42/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
+| 4242423993 | ext: https://lg.2f30.org/ <br> IPv4 only. | UP |
 
 
 ## Down
@@ -43,7 +44,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420812 | dn42: https://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421166 | dn42: http://lg.alcatrash.dn42/ | DOWN |
-| 4242422016 | dn42: https://lg.sidereal.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | DOWN |
 | 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ <br> dn42: http://lg.nullroute.dn42 | DOWN |
 | 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). | DOWN |
