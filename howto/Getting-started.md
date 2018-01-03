@@ -116,7 +116,30 @@ mnt-by:         EXAMPLE-MNT
 
 ### Register a network prefix
 
-To register an IPv4 network prefix, simply create an `inetnum` object.
+#### IPv6
+
+To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones.
+
+[Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
+
+example: data/inet6num/fd42:4992:6a6d::_48
+```
+inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+cidr:              fd42:4992:6a6d::/48
+netname:           EVE-NETWORK
+descr:             Network of eve
+country:           DE
+admin-c:           MIC92-DN42
+tech-c:            MIC92-DN42
+mnt-by:            MIC92-MNT
+nserver:           ns1.evenet.dn42
+nserver:           ns2.evenet.dn42
+status:            ASSIGNED
+```
+
+#### IPv4 (Legacy)
+
+If you also want to register an IPv4 network prefix, simply create an `inetnum` object.
 
 You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following sites, please mind the allocation guideline below.
 
@@ -141,25 +164,6 @@ To register for example 172.20.150.0/27, you need to fill in 172.20.150.0-172.20
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
-If you want to register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones.
-
-[Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
-
-example: data/inet6num/fd42:4992:6a6d::_48
-```
-inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
-cidr:              fd42:4992:6a6d::/48
-netname:           EVE-NETWORK
-descr:             Network of eve
-country:           DE
-admin-c:           MIC92-DN42
-tech-c:            MIC92-DN42
-mnt-by:            MIC92-MNT
-nserver:           ns1.evenet.dn42
-nserver:           ns2.evenet.dn42
-status:            ASSIGNED
-```
-
 example: data/inetnum/172.23.75.0_24
 ```
 inetnum:           172.23.75.0 - 172.23.75.255
@@ -175,7 +179,7 @@ status:            ASSIGNED
 
 #### Create route objects
 
-If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route` object for ipv4 prefixes and a `route6` object for ipv6 prefixes. This information is used for ROA checks (route origin authorization). If you skip this step, your network will probably get filtered by some peers. Many people enforce ROA checks to prevent (accidental) hijacking of other people's prefixes.
+If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route6` object for ipv6 prefixes and a `route` object for ipv4 prefixes. This information is used for Route Origin Authorization (ROA) checks. If you skip this step, your network will probably get filtered by most major peers.  Checking ROA will prevent (accidental) hijacking of other people's prefixes.
 
 example: data/route6/fd42:4992:6a6d::_48
 ```
