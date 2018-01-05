@@ -65,7 +65,7 @@ nic-hdl:        EXAMPLE-DN42
 mnt-by:         EXAMPLE-MNT
 ```
 
-If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
+Organisations are not required if you are joining dn42 as a single user. If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
 - `organisation` is of the form `<ORG-FOO>`.
 - `org-name` should be the name of your organisation.
