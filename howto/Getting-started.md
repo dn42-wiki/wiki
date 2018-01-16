@@ -193,7 +193,6 @@ example data/route/172.23.75.0_24:
 route:             172.23.75.0/24
 origin:            AS4242420092
 mnt-by:            MIC92-MNT
-bgp-status:        active
 ```
 
 # Get some peers
