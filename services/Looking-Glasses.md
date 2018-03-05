@@ -44,6 +44,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421166 | dn42: http://lg.alcatrash.dn42/ | DOWN |
 | 4242422342 | dn42: http://lg.gbe.dn42 <br> Semi-interactive (no traceroute, no ping) | DOWN |
+| 4242422506 | dn42: http://www.as4242422506.dn42/ | DOWN |
 | 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg/ <br> dn42: http://lg.nullroute.dn42 | DOWN |
 | 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). | DOWN |
 | 4242423955 | dn42: http://lg.flo.dn42 | DOWN |
