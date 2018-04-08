@@ -25,6 +25,7 @@ Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](htt
 
 There are currently multiple decentralized mirrors and domains for the DN42 wiki available:
 
+ * [dn42.net](https://dn42.net) maintained by toBee
  * [dn42.us](https://wiki.dn42.us) maintained by xuu
  * [dn42.eu](https://dn42.eu) maintained by Nurtic-vibe
-
+ * [wiki.dn42.lutoma.org](https://wiki.dn42.lutoma.org) maintained by lutoma

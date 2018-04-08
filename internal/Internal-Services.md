@@ -10,10 +10,6 @@ You can inspect the service status [on this page](https://services.dn42)
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
-## TWLAN
-
-florianbAT is maintaining a Tribal Wars LAN-Server for balance between productivity and fun. [twlan.florianb.dn42](https://twlan.florianb.dn42)
-
 ## Network-related
 
   * See [[Looking Glasses]] for more network diagnostic tools
@@ -206,7 +202,8 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | gaming.marlinc.dn42:27015                         | Counter Strike: Source |                            |
-| 172.22.177.92:27017 (external:gmod.nixnodes.net)                              | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from public)   |
+| 172.22.177.92:27017 (external:gmod.nixnodes.net)  | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from public) |
+| twlan.florianb.dn42                               | Tribal Wars             |                           |
 
 ## Misc 
 
@@ -216,9 +213,8 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
 |https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
 | http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| https://paste.weiti.dn42                       | AES-encrypted pastebin-like ([privatebin]| 
-(https://github.com/sebsauvage/ZeroBin)) |
-| ~~http://zerobin.e-utp.dn42 | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
+| https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
+| ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
 | https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
 | http://www.nop.dn42/                              | Basic "whatismyip" service
 | http://freerouter.nop.dn42/                       | freeRouter main site
