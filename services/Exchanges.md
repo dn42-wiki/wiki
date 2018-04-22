@@ -7,6 +7,7 @@ The following exchanges are available:
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
+* India (OpenVPN) - Technopoint - apply via email to mafiosa.virus@gmail.com (reply within 24hours)
 
 The NL-Zuid website is also available from the public internet: https://nl-zuid.nl
 
