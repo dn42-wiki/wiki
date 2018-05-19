@@ -38,10 +38,11 @@ Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to
 
 Example: data/mntner/EXAMPLE-MNT
 ```
-mntner:         EXAMPLE-MNT
-admin-c:        EXAMPLE-DN42
-tech-c:         EXAMPLE-DN42
-mnt-by:         EXAMPLE-MNT
+mntner:             EXAMPLE-MNT
+admin-c:            EXAMPLE-DN42
+tech-c:             EXAMPLE-DN42
+mnt-by:             EXAMPLE-MNT
+source:             DN42
 ```
 
 ### Create person objects
@@ -59,10 +60,11 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 
 Example: data/mntner/EXAMPLE-DN42
 ```
-person:         John Doe
-contact:        john.doe@example.com
-nic-hdl:        EXAMPLE-DN42
-mnt-by:         EXAMPLE-MNT
+person:             John Doe
+contact:            john.doe@example.com
+nic-hdl:            EXAMPLE-DN42
+mnt-by:             EXAMPLE-MNT
+source:             DN42
 ```
 
 Organisations are not required if you are joining dn42 as a single user. If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
@@ -76,11 +78,12 @@ Organisations are not required if you are joining dn42 as a single user. If you 
 
 Example: data/organisation/ORG-EXAMPLE
 ```
-organisation:   ORG-EXAMPLE
-org-name:       Example Organisation
-admin-c:        EXAMPLE-DN42
-tech-c:         EXAMPLE-DN42
-mnt-by:         EXAMPLE-MNT
+organisation:       ORG-EXAMPLE
+org-name:           Example Organisation
+admin-c:            EXAMPLE-DN42
+tech-c:             EXAMPLE-DN42
+mnt-by:             EXAMPLE-MNT
+source:             DN42
 ```
 
 ### Guidelines for future objects
@@ -107,11 +110,12 @@ If unsure, ask on the mailing list or IRC.
 
 Example: data/aut-num/AS4242423999
 ```
-aut-num:        AS4242423999
-as-name:        AS for EXAMPLE Network
-admin-c:        EXAMPLE-DN42
-tech-c:         EXAMPLE-DN42
-mnt-by:         EXAMPLE-MNT
+aut-num:            AS4242423999
+as-name:            AS for EXAMPLE Network
+admin-c:            EXAMPLE-DN42
+tech-c:             EXAMPLE-DN42
+mnt-by:             EXAMPLE-MNT
+source:             DN42
 ```
 
 ### Register a network prefix
@@ -124,17 +128,18 @@ To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-
 
 example: data/inet6num/fd42:4992:6a6d::_48
 ```
-inet6num:          fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
-cidr:              fd42:4992:6a6d::/48
-netname:           EVE-NETWORK
-descr:             Network of eve
-country:           DE
-admin-c:           MIC92-DN42
-tech-c:            MIC92-DN42
-mnt-by:            MIC92-MNT
-nserver:           ns1.evenet.dn42
-nserver:           ns2.evenet.dn42
-status:            ASSIGNED
+inet6num:           fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+cidr:               fd42:4992:6a6d::/48
+netname:            EVE-NETWORK
+descr:              Network of eve
+country:            DE
+admin-c:            MIC92-DN42
+tech-c:             MIC92-DN42
+mnt-by:             MIC92-MNT
+nserver:            ns1.evenet.dn42
+nserver:            ns2.evenet.dn42
+status:             ASSIGNED
+source:             DN42
 ```
 
 #### IPv4 (Legacy)
@@ -166,15 +171,16 @@ To register for example 172.20.150.0/27, you need to fill in 172.20.150.0-172.20
 
 example: data/inetnum/172.23.75.0_24
 ```
-inetnum:           172.23.75.0 - 172.23.75.255
-cidr:              172.23.75.0/24
-netname:           EVE-NETWORK
-admin-c:           MIC92-DN42
-tech-c:            MIC92-DN42
-mnt-by:            MIC92-MNT
-nserver:           ns1.evenet.dn42
-nserver:           ns2.evenet.dn42
-status:            ASSIGNED
+inetnum:            172.23.75.0 - 172.23.75.255
+cidr:               172.23.75.0/24
+netname:            EVE-NETWORK
+admin-c:            MIC92-DN42
+tech-c:             MIC92-DN42
+mnt-by:             MIC92-MNT
+nserver:            ns1.evenet.dn42
+nserver:            ns2.evenet.dn42
+status:             ASSIGNED
+source:             DN42
 ```
 
 #### Create route objects
@@ -183,16 +189,18 @@ If you plan to announce your prefixes in dn42, which you probably want in most c
 
 example: data/route6/fd42:4992:6a6d::_48
 ```
-route6:            fd42:4992:6a6d::/48
-origin:            AS4242420092
-mnt-by:            MIC92-MNT
+route6:             fd42:4992:6a6d::/48
+origin:             AS4242420092
+mnt-by:             MIC92-MNT
+source:             DN42
 ```
 
 example data/route/172.23.75.0_24:
 ```
-route:             172.23.75.0/24
-origin:            AS4242420092
-mnt-by:            MIC92-MNT
+route:              172.23.75.0/24
+origin:             AS4242420092
+mnt-by:             MIC92-MNT
+source:             DN42
 ```
 
 # Get some peers
