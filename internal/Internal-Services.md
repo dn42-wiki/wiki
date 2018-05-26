@@ -150,6 +150,10 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | http://dump.kai-server.dn42/                                      |       | max 100 Mbit/s | download only 
 | http://poseidon.bodems.dn42/                                | 3TB   | 5 Mbit/s    | upload soon (tm)
 
+### Torrent Search Engine
+
+- https://magnetic.dn42 (DHT Search Engine)
+
 ### Torrent Tracker
 
 | Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
