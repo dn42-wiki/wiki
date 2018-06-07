@@ -169,7 +169,7 @@ include "/etc/bird/peers/*";
 
 He example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, which can be achieved using a simple cronjob:
 
-    */30 * * * * root curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && curl -sfSLR {-o,-z}/etc/bird/roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && sed -i 's/roa/route/g' /etc/bird/roa_dn42{,_v6}.conf && birdc configure
+    */15 * * * * root curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.tech9.io/roa/bird6_roa_dn42.conf && curl -sfSLR {-o,-z}/etc/bird/roa_dn42.conf https://dn42.tech9.io/roa/bird_roa_dn42.conf && sed -i 's/roa/route/g' /etc/bird/roa_dn42{,_v6}.conf && birdc configure
 
 Also make sure the /etc/bird directory exists:
 
