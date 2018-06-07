@@ -185,6 +185,7 @@ First, make sure the /etc/bird/peers directory exists:
 
 Then for each peer, create a configuration file similar to this one:
 
+`/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
 ```
 protocol bgp <name> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
