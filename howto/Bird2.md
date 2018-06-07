@@ -187,11 +187,11 @@ Then for each peer, create a configuration file similar to this one:
 
 `/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
 ```
-protocol bgp <name> from dnpeers {
+protocol bgp <NEIGHBOR_NAME> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
 }
 
-protocol bgp <name>_v6 from dnpeers {
+protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
         neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
 }
 ```
