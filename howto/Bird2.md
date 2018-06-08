@@ -150,7 +150,7 @@ template bgp dnpeers {
     ipv6 {
         import filter {
           if is_valid_network_v6() && !is_self_net_v6() then {
-            if (roa_check(dn42_roa_v6, net, bgp_path.last) = ROA_INVALID) then {
+            if (roa_check(dn42_roa_v6, net, bgp_path.last) != ROA_VALID) then {
               print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
               reject;
             } else accept;
