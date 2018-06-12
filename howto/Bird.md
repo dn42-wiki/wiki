@@ -17,6 +17,8 @@ apt-get install bird
 
 # Example configuration
 
+Note: This file covers the configuration of Bird 1.x. For an example configuration of Bird 2.x see [howto/Bird2](/howto/Bird2)
+
 * Replace `<AS>` with your Autonomous System Number (only the digits)
 * Replace `<GATEWAY_IP>` with your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)
 * Replace `<SUBNET>` with your registered dn42 subnet
