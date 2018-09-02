@@ -175,6 +175,10 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 Entry points to the Tor network are available on dn42. See [[Tor|internal/services/Tor]] for more details.
 
+### Telegram
+
+A MTProxy server is available at https://t.me/proxy?server=172.20.138.19&port=6667&secret=5bd3794d0fe2e00b985ffdac3fd17128.
+
 ## NTP
 
 | Hostname / IP                                     | Remarks                             |
