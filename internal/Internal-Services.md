@@ -205,6 +205,7 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | http://centos.trunet.dn42                         | CentOS mirror                       | Each 6 hours                        |
 | ~~http://files.twink0r.dn42~~(OFFLINE 2016-08-24) | Debian, Ubuntu                      |                                     |
 | ~~http://freebsd.e-utp.dn42~~(OFFLINE 2016-08-24) | FreeBSD Homepage mirror             |                                     |
+| http://mirrors.zhaofeng.dn42/archlinux            | Arch Linux                          | Every hour          |
 
 ## Gaming
 
