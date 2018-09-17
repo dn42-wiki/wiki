@@ -49,12 +49,14 @@ http://mwd.dn42/dns.php
 
 MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
 
-### Getting you current dn42 IPv4/IPv6 address
+### Getting your current dn42 IPv4/IPv6 address
 
 http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
 wieistmeineip.dn42 also provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
 
 You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
+
+An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
 
 ## IRC
 
