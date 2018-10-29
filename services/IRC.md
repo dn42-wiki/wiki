@@ -32,7 +32,6 @@ There's a little [statistic script](https://dev.0l.dn42/stats/) running hourly.
 
 | Network | Hostname                                 |  SSL        | IPv4                       | IPv6         |
 |:--------|:------------------------------------------|:------ |:-------------------------- |:------------ |
-| hackint | [irc.hackint.dn42](irc://irc.hackint.dn42)|  Yes    | 172.20.66.67 |  fd42:d42:d42:6667::1 |
 | | [irc.dn42](ircs://irc.dn42)               |  Yes   | many                        | also many |
 | | [irc.2f30.dn42](ircs://irc.2f30.dn42)       |  Yes    | 172.23.35.2              | N/A |
 
