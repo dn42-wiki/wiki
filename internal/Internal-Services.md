@@ -198,7 +198,6 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
-| http://debian.mirror.martin89.dn42                | Debian mirror                       |                                     |
 | http://debian.trunet.dn42                         | Debian mirror                       | Each 6 hours                        |
 | http://ubuntu.trunet.dn42                         | Ubuntu releases mirror              | Each 4 hours                        |
 | http://archive.ubuntu.trunet.dn42                 | Ubuntu archive mirror               | Each 6 hours                        |
