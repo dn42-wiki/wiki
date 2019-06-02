@@ -5,7 +5,7 @@ Configuration of common resolver softwares, to forward DNS queries for `.dn42` (
 ## BIND
 
 If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
-by adding the following to /etc/bind/named.conf.local 
+by adding the following to /etc/bind/named.conf.local
 
 ```
 zone "dn42" {
@@ -25,6 +25,8 @@ zone "23.172.in-addr.arpa" {
   forwarders { 172.23.0.53; };
 };
 ```
+
+**Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
 
 ## dnsmasq
 
