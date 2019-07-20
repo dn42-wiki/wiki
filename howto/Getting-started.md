@@ -31,10 +31,8 @@ All objects are simple text files in the specific subfolders.
 
 Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
 
-<!-- - choose a password, and don't forget it.  **Note:** even though the field is named `sha512-pw`, you must enter *your password* directly, *not* the sha512 of your password.
-- use `DUMMY-DN42` as `admin-c` and `tech-c`. We will update this later. -->
 - use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
-- optionally add a PGP Fingerprint `auth: pgp-fingerprint <pgp-fingerprint>`
+- recommended: add a PGP Fingerprint `auth: pgp-fingerprint <pgp-fingerprint>` or SSH key `auth: ssh-{rsa,ed25519} <key>` to prevent unauthenticated changes.
 
 Example: data/mntner/EXAMPLE-MNT
 ```
@@ -122,7 +120,7 @@ source:             DN42
 
 #### IPv6
 
-To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones.
+To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones but that is strongly discouraged. dn42 is interconnected with other networks like icvpn which use the same range so a registration in the dn42 registry can't prevent conflicts.
 
 [Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
 
@@ -136,8 +134,6 @@ country:            DE
 admin-c:            MIC92-DN42
 tech-c:             MIC92-DN42
 mnt-by:             MIC92-MNT
-nserver:            ns1.evenet.dn42
-nserver:            ns2.evenet.dn42
 status:             ASSIGNED
 source:             DN42
 ```
@@ -177,8 +173,6 @@ netname:            EVE-NETWORK
 admin-c:            MIC92-DN42
 tech-c:             MIC92-DN42
 mnt-by:             MIC92-MNT
-nserver:            ns1.evenet.dn42
-nserver:            ns2.evenet.dn42
 status:             ASSIGNED
 source:             DN42
 ```
