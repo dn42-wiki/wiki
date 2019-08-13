@@ -34,7 +34,9 @@ Note that other TLDs should also be usable from dn42, most notably from Freifunk
 
 # Web interface
 
-Nixnodes provides a nice web interface, that allows you to **add/edit records** easily.  It is available at https://io.nixnodes.net/?registry. A full guide is available at [Getting started](/howto/Getting-started#Fill-in-the-registry).
+[http://explorer.burble.dn42/](http://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
+
+A previous web interface hosted at Nixnodes, is no longer working. ([https://io.nixnodes.net/?registry](https://io.nixnodes.net/?registry]))
 
 ## Authentication
 
