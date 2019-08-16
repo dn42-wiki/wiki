@@ -122,7 +122,11 @@ source:             DN42
 
 To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones but that is strongly discouraged. dn42 is interconnected with other networks like icvpn which use the same range so a registration in the dn42 registry can't prevent conflicts.
 
-[Unique Local IPv6 Generator](http://unique-local-ipv6.com/)
+A few websites can generate random ULA prefixes for you:
+* [SimpleDNS](https://simpledns.com/private-ipv6)
+* [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
+
+or a small script is available: [ulagen.py](https://git.dn42.us/netravnen/dn42-repo-utils/src/master/ulagen.py)
 
 example: data/inet6num/fd42:4992:6a6d::_48
 ```
