@@ -349,4 +349,4 @@ bird> show route export <somepeer> # shows the route you export to someone
 
 # External Links
 * detailed bird configuration from Mic92: https://github.com/Mic92/bird-dn42
-* more bgp commands: http://danrimal.net/doku.php?id=wiki:bgp:bird:postupy
+* more bird commands: https://bird.network.cz/?get_doc&v=20&f=bird-4.html
