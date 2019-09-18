@@ -59,8 +59,8 @@ A mirror is hosted at `asn.grmml.dn42`.
 
 Example:
 
-    $ dig +short AS76103.asn.dn42 TXT
-    "76103 | DN42 | dn42 |  | NIXNODES-IX - NixNodes CORE Network"
+    $ dig +short AS4242420000.asn.dn42 TXT
+    "4242420000 | DN42 | dn42 |  | PYROPETER-AS PyroPeters AS"
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 
