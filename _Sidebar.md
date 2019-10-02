@@ -20,7 +20,7 @@
   * [[IRC]]
   * [[Whois registry|Whois]]
   * [[DNS]]
-  * [[Original DNS (deprecated)|Original DNS (deprecated)]]
+  * [[|Original DNS (deprecated)]]
   * [[Looking Glasses]]
   * [[Exchanges]]
   * [[Shell]]
