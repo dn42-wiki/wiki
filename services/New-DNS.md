@@ -21,3 +21,11 @@ These are simple authoritative servers for the dn42 zone, rDNS and a few DNS inf
 
 ## *.master.delegation-servers.dn42
 These instances do not serve any clients. They poll the registry regularly and rebuild and resign (DNSSEC) the zones as needed. If any zone changes, all *.delegation-servers.dn42 instances are notified ([RFC1996](https://tools.ietf.org/html/rfc1996)) which then load the new zone data over AXFR ([RFC5936](https://tools.ietf.org/html/rfc5936)). The pool of masters is intentionally kept very small because of its much higher coordination needs and also the lacking support of a multi-master mode in many authoritative server implementations. The masters are only reachable over dedicated IPv6 assignments which are set up in a way that any master operator can hijack the address of a problematic master without having to wait for its operator to fix something.
+
+# [Monitoring](https://grafana.burble.com/d/DjGj6GiWk/dn42-dns-status?orgId=3&refresh=1m)
+burble is providing monitoring for the new DNS system. It does simple checks on all instances every minute and also logs all changes into #dn42-dns@hackint.
+
+# DNSSEC
+There are currently two KSKs managed by JRB0001-MNT and YAMAKAJA-MNT. They are used once per quarter to sign the DNSKEY RRset. Each master operator has one ZSK which is used to sign the zones (except for the DNSKEY RRset). This setup leads to bigger responses but allows each KSK holder to solve emergencies independently. The signatures of the DNSKEY RRset are valid until the end of the first month of the next quarter to give enough time for coordinating the next siging. All other signatures are valid for 3 days and replaced at least once per day.
+
+The set of valid KSKs can be found in the registry.
