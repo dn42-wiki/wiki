@@ -1,0 +1,20 @@
+After frequent issues with the [[Old Hierarchical DNS]] system in early 2018, work has started to build a new and more reliable DNS system. The main goals are:
+* Reliability and Consistency to avoid debugging very obscure issues that are also hard to reproduce.
+* Low maintenance burden on operators.
+* Proper DNSSEC support for everything.
+
+# End Users
+It is **strongly recommended** to run your own resolver for security and privacy reasons. Setting it up and maintaining it should be easy, see [[*.recursive-servers.dn42]].
+
+If running your own resolver is not possible or undesirable, you can choose one or more instances from [dns/recursive-servers.dn42 in the registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42). Please make sure you fully understand the consequences and fully trust these operators.
+
+You can also use the globally anycasted a.recursive-servers.dn42 but you won't have any control over which instance you get. This is a **very bad idea** from a security standpoint.
+
+# *.recursive-servers.dn42
+These are simple resolvers capable of resolving dn42 domains. Every operator gets a single letter name pointing to addresses assigned from his own address space and is strongly encouraged to use anycasting across multiple nodes to improve reliability. There is also the global anycast a.recursive-servers.dn42 which includes some/all other instances.
+
+# *.delegation-servers.dn42
+These are simple authoritative servers for the dn42 zone, rDNS and a few DNS infrastruture zones. Every operator gets a single letter name pointing to addresses assigned from his own address space and is strongly encouraged to use anycasting across multiple nodes to improve reliability. There is no anycast instance because that would make debugging much harder and *.recursive-servers.dn42 instances should do loadbalancing/failover across all instances listed in the registry.
+
+# *.master.delegation-servers.dn42
+These instances do not serve any clients. They poll the registry regularly and rebuild and resign (DNSSEC) the zones as needed. If any zone changes, all *.delegation-servers.dn42 instances are notified ([RFC1996](https://tools.ietf.org/html/rfc1996)) which then load the new zone data over AXFR ([RFC5936](https://tools.ietf.org/html/rfc5936)). The pool of masters is intentionally kept very small because of its much higher coordination needs and also the lacking support of a multi-master mode in many authoritative server implementations. The masters are only reachable over dedicated IPv6 assignments which are set up in a way that any master operator can hijack the address of a problematic master without having to wait for its operator to fix something.
