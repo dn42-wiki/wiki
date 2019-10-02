@@ -34,7 +34,7 @@ For all of these servers they have a specific IP assigned, only respond to their
 
 **{{name}}.dn42-servers.arpa** - This server is authoritative for RFC 2317 delegations. For any inetnum object smaller than /24 and whos parent has no nameserver records, a C class parent zone is created (all its subnetworks are delegated to appropriate nameservers with CNAME)
 
-Real-time server monitor is available at http://nixnodes.net/dn42/dnsview or http://nixnodes.dn42/dn42/dnsview/
+Real-time server monitor is available at http://nixnodes.net/dn42/dnsview
 
 ## Setup
 
