@@ -19,7 +19,7 @@
 * [[Services|/pages/services/]]
   * [[IRC]]
   * [[Whois registry|Whois]]
-  * [[DNS]]
+  * [[Old Hierarchical DNS]]
   * [[Original DNS (deprecated)]]
   * [[Looking Glasses]]
   * [[Exchanges]]
