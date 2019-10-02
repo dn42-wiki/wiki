@@ -11,10 +11,10 @@ If running your own resolver is not possible or undesirable, you can choose one 
 You can also use the globally anycasted a.recursive-servers.dn42 but you won't have any control over which instance you get. This is a **very bad idea** from a security standpoint.
 
 # Instances
-The new DNS system has three different components: *.recursive-servers.dn42 and local resolvers responsible for handling queries from clients and validating DNSSEC. *.delegation-servers.dn42 and *.master.delegation-servers.dn42 are a normal master-slave setup for providing the few official infrastructural zones.
+The new DNS system has three different components: *.recursive-servers.dn42 and local resolvers responsible for handling queries from clients, validating DNSSEC and directing the queries at clearnet/dn42/ICVPN. *.delegation-servers.dn42 and *.master.delegation-servers.dn42 are a normal master-slave setup for providing the few official infrastructural zones.
 
 ## *.recursive-servers.dn42
-These are simple resolvers capable of resolving dn42 domains. Every operator gets a single letter name pointing to addresses assigned from his own address space and is strongly encouraged to use anycasting across multiple nodes to improve reliability. There is also the global anycast a.recursive-servers.dn42 which includes some/all other instances.
+These are simple resolvers capable of resolving dn42 domains. Every operator gets a single letter name pointing to addresses assigned from his own address space and is strongly encouraged to use anycasting across multiple nodes to improve reliability. There is also the global anycast a.recursive-servers.dn42 which includes some/all other instances. Whether an *.recursive-servers.dn42 can resolve clearnet queries or not is decided by its operator but all a.recursive-servers.dn42 instances MUST resolve clearnet queries correctly.
 
 ## *.delegation-servers.dn42
 These are simple authoritative servers for the dn42 zone, rDNS and a few DNS infrastruture zones. Every operator gets a single letter name pointing to addresses assigned from his own address space and is strongly encouraged to use anycasting across multiple nodes to improve reliability. There is no anycast instance because that would make debugging much harder and *.recursive-servers.dn42 instances should do loadbalancing/failover across all instances listed in the registry.
