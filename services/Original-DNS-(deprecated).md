@@ -1,4 +1,4 @@
-# DNS (DEPRECATED)
+# Original DNS (deprecated)
 **The new anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`. Please see [[Hierarchical DNS]] for more information.**
 
 **The information below is outdated.** 
