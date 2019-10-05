@@ -12,7 +12,6 @@ Please sort by AS number.
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
 | 64737 | ext: https://lg.dn42.us | UP |
 | 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. | UP |
-| 76103 | ext: http://lg.nixnodes.net <br> dn42: http://lg.nixnodes.dn42 <br> IPv4 only. | UP |
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
 | 4242420123 | dn42: https://lg.grmml.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
@@ -34,6 +33,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 
 | AS | URL | Status |
 |:-- |:--- |:------ |
+| 76103 | ext: http://lg.nixnodes.net <br> dn42: http://lg.nixnodes.dn42 <br> IPv4 only. | DOWN |
 | 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
 | 65529 | ext: http://bgp.freifunk-bielefeld.de/ulg/ulg.py <br> Interactive, BGP-map | DOWN |
 | 76142 | dn42: http://lg.ffdn.dn42 <br> Interactive, BGP-map | DOWN |
