@@ -33,7 +33,7 @@ These instances do not serve any clients. They poll the registry regularly and r
   * For *.recursive-servers.dn42: Query clearnet, dn42 and ICVPN domains including rDNS. Make sure that both signed and unsigned domains work properly.
 * (Optional) Choose your single letter name and ask in #dn42-dns@hackint to get it added to the registry. Once added to the list, you must implement changes announced to the mailinglist within a week (faster is obviously better) or you might get removed again. We try to keep maintenance work as low as possible but we can't do it without the cooperation of all operators!
 
-# [Monitoring](https://grafana.burble.com/d/DjGj6GiWk/dn42-dns-status?orgId=3&refresh=1m)
+# [Monitoring](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
 burble is providing monitoring for the new DNS system. It does simple checks on all instances every minute and also logs all changes into #dn42-dns@hackint.
 
 # DNSSEC
