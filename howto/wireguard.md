@@ -61,4 +61,35 @@ ping fe80::<your_peers_suffix>%<interface_name>
 
 Afterwards configure your [BGP session](/howto/Bird) as usual
 
+## wg-quick
+
+[wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) is a script that is shipped with Wireguard to help users bring up tunnels in some common use cases. 
+
+> It is designed for users with simple needs, and users with more advanced needs are highly encouraged to use a more specific tool, a more complete network manager, or otherwise just use wg(8) and ip(8), as usual.
+
+The script makes some changes that are not valid when used for DN42 tunnels, and which must be worked around:
+
+- By default, the script will add a routing policy that routes the 'AllowedIP' ranges through the tunnel. In DN42, route selection is managed by BGP so the routing policy *must* be removed to avoid problems. This is achieved by adding the '_Table = off_' directive. 
+
+  - Warning: a common pattern for DN42 tunnels is to use `AllowedIPs = 0.0.0.0/0` or `AllowedIPs = ::/0` then use firewall rules to limit source and destination addresses. If you do not add 'Table = off' this could cause you to route clearnet traffic via your peer and potentially lose connectivity to your node !
+
+- It is common in DN42 to use Point-to-Point addressing schemes on tunnel interfaces (that is, using IPv4/32 and IPv6/128 addresses); this is not supported by wg-quick. To configure PTP addresses you must add a '_PostUp_' statement that first removes the addresses that wg-quick has configured and then re-add them. On Linux, this will typically be done using /sbin/ip.
+
+An example wg-quick script that incorporates the above two workarounds is below, where `<MyIPv[46]>` are the DN42 IP addresses of your node and `<PeerIPv[46]>` are the IP addresses for your peer. 
+
+```
+[Interface]
+PrivateKey = <your private key>
+Address = <MyIPv4>/32, <MyIPv6>/128
+PostUp = /sbin/ip addr del dev wg0 <MyIPv4>/32 && /sbin/ip addr add dev wg0 <MyIPv4>/32 peer <PeerIPv4>/32 && /sbin/ip addr del dev wg0 <MyIPv6>/128 && /sbin/ip addr add dev wg0 <MyIPv6>/128 peer <PeerIPv6>/128
+Table = off
+ 
+[Peer]
+Endpoint = <your peer's wireguard endpoint>
+PublicKey = <your peer's public key>
+AllowedIPs = 172.16.0.0/12
+AllowedIPs = 10.0.0.0/8
+AllowedIPs = fd00::/8
+AllowedIPs = fe80::/10
+```
 
