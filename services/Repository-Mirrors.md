@@ -10,7 +10,13 @@ Hosted by:
 * Trunet (2017-05-18, tested and not sure it still works -- returns 403 Forbidden on multiple packages)
 
 
-## Ubuntu
+## Ubuntu 
+**http://mirror.dn42/ubuntu
+
+Hosted by:
+* mephisto
+
+## Ubuntu (down)
 **http://ubuntu.mirrors.dn42** 
 
 **http://archive.ubuntu.mirrors.dn42**
