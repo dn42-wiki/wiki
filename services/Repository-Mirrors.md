@@ -11,7 +11,7 @@ Hosted by:
 
 
 ## Ubuntu 
-**http://mirror.dn42/ubuntu
+**http://mirror.dn42/ubuntu**
 
 Hosted by:
 * mephisto
