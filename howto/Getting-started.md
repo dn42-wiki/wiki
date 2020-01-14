@@ -20,9 +20,11 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 You must create several objects in the DN42 registry: <https://git.dn42.us/dn42/registry>
 
-The registry is a git repository, so objects are created by forking the main repository, making your changes and then submitting a pull request for review. See the [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories. 
+The registry is a git repository, so objects are created by forking the main repository, making your changes and then submitting a pull request for review. See the [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
 
-Do browse through the registry and look at the pull request queue to see examples, understand how the process works and see the types of questions asked by the registry maintainers. 
+When submitting your pull request, please squash your commits. It makes the request easier to read and simplifies the change history. See this [StackOverflow question](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) for a simple guide on how to do this.
+
+Do browse through the registry and look at the [pull request queue](https://git.dn42.us/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
 *Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits making changes more difficult to track*
 
@@ -35,21 +37,25 @@ We will create several types of objects:
  - **person** objects, which describe people or organisations and provide contact information
  - and **resource** objects (AS number, IP subnet, DNS zone, etc).
 
-All objects are simple text files in the specific subfolders, but they do have a specific format. The files should use spaces and not tabs, and the attribute values must start on the 20th column. 
+All objects are simple text files in the specific subfolders, but the files do have a particular format. The files should use spaces and not tabs, and the attribute values must start on the 20th column. 
 
 ### Create a maintainer object
 
 Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to edit all the objects that are under your responsibility.
 
 - use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
-- recommended: add a PGP Fingerprint `auth: pgp-fingerprint <pgp-fingerprint>` or SSH key `auth: ssh-{rsa,ed25519} <key>` to prevent unauthenticated changes.
+- Add an 'auth' attribute so that changes to your objects can be verified.  
+  Common authentication methods are:
+  - PGP Key: `auth: pgp-fingerprint <pgp-fingerprint>`
+  - SSH Key: `auth: ssh-{rsa,ed25519} <key>`
 
-Example: data/mntner/EXAMPLE-MNT
+Example: data/mntner/FOO-MNT
 ```
-mntner:             EXAMPLE-MNT
-admin-c:            EXAMPLE-DN42
-tech-c:             EXAMPLE-DN42
-mnt-by:             EXAMPLE-MNT
+mntner:             FOO-MNT
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
+auth:               pgp-fingerprint 0123456789ABCDEF0123456789ABCDEF01234567
 source:             DN42
 ```
 
@@ -61,21 +67,23 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 - the `person` field is more freeform, you may use your nickname or even real name here.
 - provide an email.
 - you may provide additional ways of contacting you, using one or more `contact` field. For instance `xmpp:luke@theforce.net`, `irc:luke42@hackint`, `twitter: TheGreatLuke`.
-- you may whish to add other fields, such as `pgp-fingerprint`, `remarks`, and so on.
+- you may wish to add other fields, such as `pgp-fingerprint`, `remarks`, and so on.
 - don't forget to set `mnt-by` to `<FOO>-MNT`.
 
-<!-- You must now edit the maintainer object created earlier, to properly fill in the `admin-c` and `tech-c` fields (set them to `<FOO>-DN42`). -->
-
-Example: data/mntner/EXAMPLE-DN42
+Example: data/person/FOO-DN42
 ```
 person:             John Doe
 contact:            john.doe@example.com
-nic-hdl:            EXAMPLE-DN42
-mnt-by:             EXAMPLE-MNT
+nic-hdl:            FOO-DN42
+mnt-by:             FOO-MNT
 source:             DN42
 ```
 
-Organisations are not required if you are joining dn42 as a single user. If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
+---
+
+**Organisations are not required if you are joining dn42 as an individual**
+
+If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
 
 - `organisation` is of the form `<ORG-FOO>`.
 - `org-name` should be the name of your organisation.
@@ -86,11 +94,11 @@ Organisations are not required if you are joining dn42 as a single user. If you 
 
 Example: data/organisation/ORG-EXAMPLE
 ```
-organisation:       ORG-EXAMPLE
-org-name:           Example Organisation
-admin-c:            EXAMPLE-DN42
-tech-c:             EXAMPLE-DN42
-mnt-by:             EXAMPLE-MNT
+organisation:       ORG-FOO
+org-name:           Foo Organisation
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
 source:             DN42
 ```
 
@@ -106,23 +114,26 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 ### Register an AS number
 
-To register an AS number, simply create an `aut-num` object in `data/aut-num/`. `as-name` should be a name for your AS.
+To register an AS number, simply create an `aut-num` object in `data/aut-num/`.  
+`as-name` should be a name for your AS.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, look at the `as-block` objects. The historic ASN space is around 64600-64855 and 76100-76200. Starting from June 2014, **you must allocate your AS number in the new 4242420000-4242423999 range**.
+Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-block objects](https://git.dn42.us/dn42/registry/src/master/data/as-block) in the registry. 
 
-For a list of currently assigned AS numbers, see http://ix.ucis.nl/dn42/as.php. This list is automatically built from the registry.
+**You should allocate your AS number in the 4242420000-4242423999 range**
 
-If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/) or [this list](http://dataviz.polyno.me/lastseen/).
+For a list of currently assigned AS numbers browse the registry data/aut-num/ directory or [online](https://explorer.burble.com/#/aut-num/). 
+
+If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/).
 
 If unsure, ask on the mailing list or IRC.
 
 Example: data/aut-num/AS4242423999
 ```
 aut-num:            AS4242423999
-as-name:            AS for EXAMPLE Network
-admin-c:            EXAMPLE-DN42
-tech-c:             EXAMPLE-DN42
-mnt-by:             EXAMPLE-MNT
+as-name:            AS for FOO Network
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
 source:             DN42
 ```
 
@@ -130,7 +141,9 @@ source:             DN42
 
 #### IPv6
 
-To register an [IPv6 prefix](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42), you can create an `inet6num` object. A single /48 allocation in [ULA space](https://www.sixxs.net/tools/grh/ula/) will likely provide more than enough room for all devices you will ever connect. Some people use “vanity” prefixes like fd42:_xyz_::/48 instead of the fully standard-conformant pseudorandom ones but that is strongly discouraged. dn42 is interconnected with other networks like icvpn which use the same range so a registration in the dn42 registry can't prevent conflicts.
+To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. A single /48 allocation is typical and will likely provide more than enough room for all devices you will ever connect. 
+
+dn42 is interconnected with other networks, like icvpn, which also use the same ULA range so a registration in the dn42 registry can't prevent IPv6 conflicts. A fully random prefix (see [RFC4193](https://tools.ietf.org/html/rfc4193)) is recommended; finding a conflict and needing to renumber your network is no fun. 
 
 A few websites can generate random ULA prefixes for you:
 * [SimpleDNS](https://simpledns.com/private-ipv6)
@@ -138,16 +151,16 @@ A few websites can generate random ULA prefixes for you:
 
 or a small script is available: [ulagen.py](https://git.dn42.us/netravnen/dn42-repo-utils/src/master/ulagen.py)
 
-example: data/inet6num/fd42:4992:6a6d::_48
+example: data/inet6num/fd35:4992:6a6d::_48
 ```
-inet6num:           fd42:4992:6a6d:0000:0000:0000:0000:0000 - fd42:4992:6a6d:ffff:ffff:ffff:ffff:ffff
-cidr:               fd42:4992:6a6d::/48
-netname:            EVE-NETWORK
-descr:              Network of eve
-country:            DE
-admin-c:            MIC92-DN42
-tech-c:             MIC92-DN42
-mnt-by:             MIC92-MNT
+inet6num:           fd35:4992:6a6d:0000:0000:0000:0000:0000 - fd35:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+cidr:               fd35:4992:6a6d::/48
+netname:            FOO-NETWORK
+descr:              Network of FOO
+country:            XD
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
 status:             ASSIGNED
 source:             DN42
 ```
@@ -156,10 +169,9 @@ source:             DN42
 
 If you also want to register an IPv4 network prefix, simply create an `inetnum` object.
 
-You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following sites, please mind the allocation guideline below.
+You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following site, please mind the allocation guideline below.
 
  * [Open Netblocks](https://dn42.us/peers/free)
- * [graphical visualisation of the assigned ranges](http://dataviz.polyno.me/dn42-netblock-visu/registry.html).
 
 | Size | Comment                  |
 |-----:|:-------------------------|
@@ -170,23 +182,20 @@ You may choose your network prefix in one of the currently open netblocks. You c
 | /25  | still a lot of IPs!      |
 | /24  | are you an organization? |
 
-The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**: If you are going to have 2-3 servers and two VPN-spaces, a /28 is enough to suit your needs. Same will go for most home-networks. This is not public internet, but our IPv4-space is valuable too! If you need a /24 or larger, please ask in the IRC chan or on the mailing list.
-
-For example, if there is no /27 free, you can split up a /26 into two /27. If you are looking for a /27 but there are none showing in the Open Netblocks tool, instead pick one of the /26 and click Take it!
-When registering your inetnum, instead of writing 172.2x.xxx.0-172.2x.xxx.63 then you can write 172.2x.xxx.0-172.2x.xxx.31. This will get you a /27 and save our IP space for others.
+The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**. dn42 typically uses point-to-point addressing in VPN tunnels, so a single IP address per host should be enough. If you are going to have 2-3 servers, a /28 is more than enough to suit your needs; Same will go for most home-networks. dn42 is not the public internet, but our IPv4-space is valuable too! If you need a /24 or larger, please ask in the IRC chan or on the mailing list.
 
 To register for example 172.20.150.0/27, you need to fill in 172.20.150.0-172.20.150.31.
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
-example: data/inetnum/172.23.75.0_24
+example: data/inetnum/172.20.150.0_27
 ```
-inetnum:            172.23.75.0 - 172.23.75.255
-cidr:               172.23.75.0/24
-netname:            EVE-NETWORK
-admin-c:            MIC92-DN42
-tech-c:             MIC92-DN42
-mnt-by:             MIC92-MNT
+inetnum:            172.20.150.0 - 172.20.150.31
+cidr:               172.20.150.0/27
+netname:            FOO-NETWORK
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
 status:             ASSIGNED
 source:             DN42
 ```
@@ -195,19 +204,61 @@ source:             DN42
 
 If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route6` object for ipv6 prefixes and a `route` object for ipv4 prefixes. This information is used for Route Origin Authorization (ROA) checks. If you skip this step, your network will probably get filtered by most major peers.  Checking ROA will prevent (accidental) hijacking of other people's prefixes.
 
-example: data/route6/fd42:4992:6a6d::_48
+example: data/route6/fd35:4992:6a6d::_48
 ```
-route6:             fd42:4992:6a6d::/48
-origin:             AS4242420092
-mnt-by:             MIC92-MNT
+route6:             fd35:4992:6a6d::/48
+origin:             AS4242423999
+max-length:         48
+mnt-by:             FOO-MNT
 source:             DN42
 ```
 
-example data/route/172.23.75.0_24:
+example data/route/172.20.150.0_27:
 ```
-route:              172.23.75.0/24
+route:              172.20.150.0/27
 origin:             AS4242420092
-mnt-by:             MIC92-MNT
+mnt-by:             FOO-MNT
+source:             DN42
+```
+
+#### DNS and Domain Registration
+
+*(Optional)*  
+To register a domain name, create a `dns` object in the data/dns directory.
+
+example: data/dns/foo.dn42
+```
+domain:             foo.dn42
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
+nserver:            ns1.foo.dn42 172.20.150.1
+nserver:            ns1.foo.dn42 fd35:4992:6a6d:53::1
+nserver:            ns2.foo.dn42 172.20.150.2
+nserver:            ns2.foo.dn42 fd35:4992:6a6d:53::2
+source:             DN42
+```
+
+You can also add DNSSEC delegations using `ds-rdata` attributes to your domain:
+
+```
+ds-rdata:           61857 13 2 bd35e3efe3325d2029fb652e01604a48b677cc2f44226eeabee54b456c67680c
+```
+
+For reverse DNS, add `nserver` attributes to you inet{,6}num objects:
+
+```
+inet6num:           fd35:4992:6a6d:0000:0000:0000:0000:0000 - fd35:4992:6a6d:ffff:ffff:ffff:ffff:ffff
+cidr:               fd35:4992:6a6d::/48
+netname:            FOO-NETWORK
+descr:              Network of FOO
+country:            XD
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
+status:             ASSIGNED
+nserver:            ns1.foo.dn42
+nserver:            ns2.foo.dn42
 source:             DN42
 ```
 
@@ -215,13 +266,13 @@ source:             DN42
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/Bird-communities).
 
-If you don't know anybody who can peer with you, you can use this tool: https://dn42.us/peers
+You can use the peerfinder to help you find potential peers close to you: https://dn42.us/peers
 
-It will let you find people to peer with.  You can then contact them on IRC or by email.  In case you're really at loss, you can also ask for peers on the mailing list.
+You can then contact them on IRC or by email. In case you're really at loss, you can also ask for peers on the mailing list.
 
 ## Establishing tunnels
 
-Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
+Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: Wireguard, OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
 
 There is some documentation in this wiki, like [gre-plus-ipsec](GRE-plus-IPsec).
 
@@ -231,11 +282,12 @@ You need a routing daemon to speak BGP with your peers. People usually run Quagg
 
 You can find [configuration examples for Bird here](bird).
 
-Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowToPeer.html) might still be handy, but remember that everything there is terribly outdated.
-
 ## Configuration Examples
 
+* [Important Network configuration](networksettings)
+
 * VPN/Tunnel:
+  * [Wireguard](/howto/wireguard)
   * [Openvpn](/howto/openvpn)
   * [Tinc](/howto/tinc)
   * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
@@ -247,8 +299,6 @@ Some [documentation of the old wiki] (http://dn42.volcanis.me/initenv/wiki/HowTo
   * [EdgeOS Configuration](EdgeOS-Config-Example)
   * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
   * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
-* [Important Network configuration](networksettings)
-
 
 # Configure DNS
 
