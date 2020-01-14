@@ -24,7 +24,7 @@ The registry is a git repository, so objects are created by forking the main rep
 
 When submitting your pull request, please squash your commits. It makes the request easier to read and simplifies the change history. See this [StackOverflow question](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) for a simple guide on how to do this.
 
-Do browse through the registry and look at the [pull request queue](https://git.dn42.us/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
+Remember to add authentication to your `mntner` object, and [sign your commit](/howto/Registry-Authentication)
 
 The registry includes a number of scripts to help check your request:
 
@@ -34,7 +34,9 @@ The registry includes a number of scripts to help check your request:
 
 The registry maintainers run all three scripts against each request, so please run these yourself first to check for simple errors. 
 
-*Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits making changes more difficult to track*
+Do browse through the registry and look at the [pull request queue](https://git.dn42.us/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
+
+*Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits and prevents you from checking your changes with the registry scripts*
 
 ---
 
@@ -53,7 +55,10 @@ Create a `mntner` object in `data/mntner/` named `<FOO>-MNT`. It will be used to
 
 - use `<FOO>-MNT` as `mnt-by`, otherwise, you won't be able to edit your maintainer object.
 - Add an 'auth' attribute so that changes to your objects can be verified.  
-  Common authentication methods are:
+
+The `auth` attribute is used to verify changes to your object. There is a separate page on [registry authentication](/howto/Registry-Authentication) which details what to include in your mntner object, how to sign and verify your commits. 
+
+Common authentication methods are:
   - PGP Key: `auth: pgp-fingerprint <pgp-fingerprint>`
   - SSH Key: `auth: ssh-{rsa,ed25519} <key>`
 
@@ -175,11 +180,13 @@ source:             DN42
 
 #### IPv4 (Legacy)
 
-If you also want to register an IPv4 network prefix, simply create an `inetnum` object.
+If you also want to register an IPv4 network prefix, simply create an `inetnum` object. 
 
 You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following site, please mind the allocation guideline below.
 
  * [Open Netblocks](https://dn42.us/peers/free)
+
+Check the registry (data/inetnum) to make sure no-one else has allocated the same prefix. There are some IP ranges that are not open for assignments or are reserved for specific uses, so you should also check that the parent block has an 'open' policy. A quick and simple way to see the block policies is to run `grep "^policy" data/inetnum/*`. 
 
 | Size | Comment                  |
 |-----:|:-------------------------|
@@ -190,9 +197,11 @@ You may choose your network prefix in one of the currently open netblocks. You c
 | /25  | still a lot of IPs!      |
 | /24  | are you an organization? |
 
-The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**. dn42 typically uses point-to-point addressing in VPN tunnels, so a single IP address per host should be enough. If you are going to have 2-3 servers, a /28 is more than enough to suit your needs; Same will go for most home-networks. dn42 is not the public internet, but our IPv4-space is valuable too! If you need a /24 or larger, please ask in the IRC chan or on the mailing list.
+The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**. 
 
-To register for example 172.20.150.0/27, you need to fill in 172.20.150.0-172.20.150.31.
+dn42 typically uses point-to-point addressing in VPN tunnels making transit network unnecessary, a single IP address per host should be sufficient. If you are going to have 2-3 servers, a /28 is plenty; same will go for most home-networks. dn42 is not the public internet, but our IPv4-space is valuable too! 
+
+If you need a /24 or larger, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
@@ -224,7 +233,7 @@ source:             DN42
 example data/route/172.20.150.0_27:
 ```
 route:              172.20.150.0/27
-origin:             AS4242420092
+origin:             AS4242423999
 mnt-by:             FOO-MNT
 source:             DN42
 ```
@@ -314,6 +323,6 @@ See [Services DNS](/Services/DNS).
 
 # Use and provide services
 
-See [internal](/internal) for internal services.
+See [internal](/internal/Internal-Services) for internal services.
 
 Don't hesitate to provide interesting services, but *please*, document them on the wiki! Otherwise, nobody will use them because nobody can guess they even exist.
