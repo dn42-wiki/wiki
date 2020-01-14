@@ -3,8 +3,8 @@ You want to join dn42, but you don't know where to start. This guide gives gener
 # Requirements
 
 - you have at least one router running 24/7. Any Linux or BSD box can be turned into a router. If your home router runs OpenWRT, you might consider using it for dn42.
-- your router is able to establish network tunnels over the Internet (GRE, OpenVPN, IPSec, Tinc...). Beware, your network operator might filter this kind of traffic, e.g. in schools or universities.
-- you are generally knowledgable with networking and routing (i.e. you've heard about BGP, IGP, forwarding, and you're willing to configure a BGP router such as Quagga or Bird)
+- your router is able to establish network tunnels over the Internet (Wireguard, GRE, OpenVPN, IPSec, Tinc...). Beware, your network operator might filter this kind of traffic, e.g. in schools or universities.
+- you are generally knowledgeable with networking and routing (i.e. you've heard about BGP, IGP, forwarding, and you're willing to configure a BGP router such as Quagga or Bird)
 
 # Formalities
 
@@ -18,14 +18,24 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
 
-You must create several objects in the registry. 
-<!-- The recommended method is to use the [web interface](https://io.nixnodes.net/?registry), but you may still work directly with the [monotone repository](/services/Whois#monotone). -->
-To do so, create a pull request at <https://git.dn42.us/dn42/registry>.
+You must create several objects in the DN42 registry: <https://git.dn42.us/dn42/registry>
+
+The registry is a git repository, so objects are created by forking the main repository, making your changes and then submitting a pull request for review. See the [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories. 
+
+Do browse through the registry and look at the pull request queue to see examples, understand how the process works and see the types of questions asked by the registry maintainers. 
+
+*Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits making changes more difficult to track*
+
+---
 
 This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
 
-We will create several types of objects: **maintainer** objects, which have an associated password and allow you to authenticate so that you can edit your own objects; **person** objects, which describe people or organisations and provide contact information; and finally, all other objects, which are resources (AS number, IP subnet, DNS zone, etc).
-All objects are simple text files in the specific subfolders.
+We will create several types of objects: 
+ - **maintainer** objects, which are authenticated so that only you can edit your own objects
+ - **person** objects, which describe people or organisations and provide contact information
+ - and **resource** objects (AS number, IP subnet, DNS zone, etc).
+
+All objects are simple text files in the specific subfolders, but they do have a specific format. The files should use spaces and not tabs, and the attribute values must start on the 20th column. 
 
 ### Create a maintainer object
 
