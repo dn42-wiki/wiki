@@ -26,6 +26,14 @@ When submitting your pull request, please squash your commits. It makes the requ
 
 Do browse through the registry and look at the [pull request queue](https://git.dn42.us/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
+The registry includes a number of scripts to help check your request:
+
+ - `fmt-my-stuff <FOO>-MNT`: automatically fixes minor formatting errors
+ - `check-my-stuff <FOO>-MNT`: validates your objects against the registry schema
+ - `check-pol origin/master <FOO>-MNT`: checks for policy violations
+
+The registry maintainers run all three scripts against each request, so please run these yourself first to check for simple errors. 
+
 *Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits making changes more difficult to track*
 
 ---
