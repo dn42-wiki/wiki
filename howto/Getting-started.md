@@ -40,7 +40,7 @@ Do browse through the registry and look at the [pull request queue](https://git.
 
 ---
 
-This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace).  Obviously, these should be replaced by the appropriate values in all examples below.
+This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace). *Organisation objects are not required if your are registering as an individual*. Obviously, these should be replaced by the appropriate values in all examples below.
 
 We will create several types of objects: 
  - **maintainer** objects, which are authenticated so that only you can edit your own objects
@@ -94,6 +94,7 @@ source:             DN42
 
 ---
 
+*(Optional)*  
 **Organisations are not required if you are joining dn42 as an individual**
 
 If you intend to register resources for an organisation (e.g. your hackerspace), you must also create an `organisation` object for your organisation:
