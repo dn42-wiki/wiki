@@ -4,60 +4,14 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 More ideas inspiration is collected on another [page](/internal/ideas).
 
-You can inspect the service status [on this page](https://services.dn42)
-
 ## CA
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
 ## Network-related
-
   * See [[Looking Glasses]] for more network diagnostic tools
-  * Polynome has some nice scripts and visualizations here: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html
-  * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
-  * [map.nixnodes.net](http://map.nixnodes.net)
-  * Dn42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
-
-The data for these maps is collected using AS paths from various AS.
-
-### DNS Hosting
-Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
-
-DNS Hosting with PowerDNS GUI is provided by Nellicus. Support for Domains and RDNS. Please contact nellicus in #dn42 or email admin (at) nellic.us
-
-DNS Hosting with PowerDNS GUI is also provided by KaiRaphixx. Support for Domains and RDNS. Please contact KaiRaphixx in #dn42 or email ich (at) kai.cool
-
-### DNS tunnel
-
-This DNS tunnel service uses [Iodine](http://code.kryo.se/iodine/), and provides access to the dn42 network. Useful when you're on a shitty network (airport, train station) that still allows DNS.
-
-Use the anycast DNS servers (172.22.0.53) inside your tunnel.
-
-| Hostname / IP                                     | Password |
-|:------------------------------------------------- |:-------- |
-| t.polyno.me (172.23.185.193)                      | dn42     |
-| t.hax404.de (172.23.136.98)                       | dn42     |
-
-### DNS Tools
-
-This tool allows you to lookup your dn42 domain name and check to see if your name servers are all working and have the correct information.
-
-Select "Disable Recursion" to check only entries found in the registry or leave it off to check all (both are useful tests).
-
-Currently this system only supports IPv4.
-
-http://mwd.dn42/dns.php
-
-MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
-
-### Getting your current dn42 IPv4/IPv6 address
-
-http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
-wieistmeineip.dn42 also provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
-
-You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
-
-An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
+  * Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
+  * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
 
 ### Proving ASN ownership
 Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
@@ -72,68 +26,29 @@ API: https://dn42.g-load.eu/api/verify/documentation.txt
 
 | Hostname / IP                 | SSL             | Remarks                                   |
 |:------------------------------|:------------- |:--------------------------------------------|
-| irc.hackint.dn42        |   Yes         | DN42                                             |
-| irc.hackint.hack/dn42    |  Yes         | ChaosVPN                                          |
-| irc.nixnodes.dn42       |   Yes (7000)  | NixNodes IRC Network                             |
-| fpletz.darkfasel.dn42   |   Yes         | darkfasel, TLSv1+ only, Ports 6697 & 9999         |
-| irc.dn42               |    Yes         | Internal IRC                                      |
-| irc.2f30.dn42          |    Yes         | 2f30/Cyberia IRC Gateway                          |
+| irc.hackint.dn42        |   Yes         | DN42                                              |
+| irc.hackint.hack/dn42   |  Yes          | ChaosVPN                                          |
+| irc.nixnodes.dn42       |   Yes (7000)  | NixNodes IRC Network                              |
+| irc.dn42                |    Yes        | Internal IRC                                      |
 
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://googol.dn42      | KaiRaphixx's YaCy node.                     |
 | http://mhm.dn42/search                            | Hosted by toBee                                          |
-| http://yacy.dn42                                  | YaCy search engine. Indexing local nets|
-| http://yacy.marlinc.dn42:8090/ (OFFLINE 2016-11-26) | Marlinc's YaCy node.                   |
-| https://surf.dn42/ (OFFLINE 2016-11-26)           | siska's YaCy node.                     |
-| http://yacy.hexa.dn42/ (OFFLINE 2017-06-18)       | hexa-'s YaCy node.                     |
-|                                                   |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit)|
-| http://search.dn42 (172.23.184.1) (BROKEN 2016-11-26) | a few chosen HTTP domains are crawled  (taken from the wiki). The previous method, "crawl everything available from the wiki", generated too much data because of FTPs. |
 
-## Images and Media
+## Images, E-Books, Videos and other Media
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
-| http://media.dn42                | A mediagoblin-Instance  |
-| http://fun.nop.dn42              | funny image collection  |
-| https://kaiflix.dn42           | User: DN42 PW: zbxrs2bu4AgwUMpt (If you want a own user: KaiRaphixx@irc)  |
-| http://calibre.bodems.dn42/     | sorted ebook library with calibre-web |
 
 ## Radio and Video Streaming
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://sprawl.smrsh.dn42:8000/                    | [smrsh radio](http://smrsh.net/radio)                    |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams             |
-
-## File sharing
-
-### Tahoe LAFS
-Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage butt in dn42.
-
-### ipfs
-bootstrap peers
-```
-/ip4/172.20.161.135/tcp/4001/ipfs/QmYgD1wdPjx5oWzYJ195K84PqAXRnw9mcqbyZYAdXfaYkD
-/ip4/172.20.52.220/tcp/4001/ipfs/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc
-```
-test hashes
-```
-/ipfs/QmQ7psrGrXS3GFNC4BtU6pJXq6G7ps5NbYrhS2VYFufj9T
-/ipfs/QmYLapmcSU7q93Ta4eHMh8fq9ios2HTSdbpHDRQwGG6ocJ
-```
-cdn (currently only jquery
-```
-/ipns/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc/cdn/jquery
-```
-Until browsers have ipfs access (either through native support or js), one can use the http gateway
-```
-https://rest.dn42/
-```
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -149,35 +64,14 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 **FIXME**: Please add info about (approximate) bandwidth of the servers.
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
-|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |
-| http://172.22.92.2                                          |       | ~60kbps     | mostly up                                      |    
-| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
-| http://files.feuerrot.dn42                                  |  6TB  | 1Gbit       | http, ftp, nfs, rsync                          |
-| sftp://anonsftp:Iich0zieC3retaid@files.crest.dn42:2212/     | 12TB  | 1Gb/s       | incoming writable                              |
-| http://files.martin89.dn42/                                 |       | max 1Mbit/s | download only                                  |
-| http://files.nop.dn42/                                      |       | max 1Mbit/s | download only                                  |
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
-| http://storage.hq.c3d2.de:8080/rpool                        |       | 2.4Mbit/s   | download only webdav:k-ot                      |
-| http://storage.hb.jplitza.de                                |  6TB  | 10 Mbit/s   | http, rsync, download only                     |
-| http://dump.kai-server.dn42/                                      |       | max 100 Mbit/s | download only 
-| http://poseidon.bodems.dn42/                                | 3TB   | 5 Mbit/s    | upload soon (tm)
+|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
+| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                                                                        
+| http://files.nop.dn42/                                      |       | max 1Mbit/s | download only                                  
+| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                                          
 
 ### Torrent Search Engine
 
 - https://magnetic.dn42 (DHT Search Engine)
-
-### Torrent Tracker
-
-| Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
-|:---------------------|:-----|:------------|:---------------|:----------------------------------------|
-| tracker.grmml.dn42   | 6969 | TCP & UDP   | Opentracker    | http://tracker.grmml.dn42:6969/announce |
-| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42:6969/announce   |
-| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce        |
-
-### Torrent Index
-
-* http://torrents.dn42
-* https://torrents.dn42
 
 ## Proxies
 
@@ -191,39 +85,16 @@ Entry points to the Tor network are available on dn42. See [[Tor|internal/servic
 
 A MTProxy server is available at https://t.me/proxy?server=172.20.138.19&port=6667&secret=5bd3794d0fe2e00b985ffdac3fd17128.
 
-## NTP
-
-| Hostname / IP                                     | Remarks                             |
-|:------------------------------------------------- |:----------------------------------- |
-| ntp.e-utp.dn42 (172.22.165.50)                    | Stratum 1, GPS+NMEA                 |
-| ntp1.nixnodes.dn42 (172.22.177.123)               |                                     |
-| ntp2.nixnodes.dn42 (172.22.177.124)               |                                     |
-| ntp.martin89.dn42                                 | more than one A records/server      |
-| tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
-| tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
-
 ## OS Mirror/Repository's
 
-Also check [Repository Mirrors](/services/Repository-Mirrors)
+Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
 
-| Hostname / IP                                     | What's Available:                   | Updates
-|:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
-| http://debian.trunet.dn42                         | Debian mirror                       | Each 6 hours                        |
-| http://ubuntu.trunet.dn42                         | Ubuntu releases mirror              | Each 4 hours                        |
-| http://archive.ubuntu.trunet.dn42                 | Ubuntu archive mirror               | Each 6 hours                        |
-| http://centos.trunet.dn42                         | CentOS mirror                       | Each 6 hours                        |
-| ~~http://files.twink0r.dn42~~(OFFLINE 2016-08-24) | Debian, Ubuntu                      |                                     |
-| ~~http://freebsd.e-utp.dn42~~(OFFLINE 2016-08-24) | FreeBSD Homepage mirror             |                                     |
-| http://mirrors.zhaofeng.dn42/archlinux            | Arch Linux                          | Every hour          |
 
 ## Gaming
 
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| gaming.marlinc.dn42:27015                         | Counter Strike: Source |                            |
-| 172.22.177.92:27017 (external:gmod.nixnodes.net)  | Garry's Mod: Sandbox   | LUA coding, cinema, steam + non-steam, pass: 42 (required from public) |
-| twlan.florianb.dn42                               | Tribal Wars             |                           |
 
 ## Misc 
 
@@ -231,27 +102,17 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
-|https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
-| http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
-| ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | ] 
-| https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
-| http://www.nop.dn42/                              | Basic "whatismyip" service
-| http://freerouter.nop.dn42/                       | freeRouter main site
-| http://rtros.nop.dn42/                            | freeRouter distribution
-| http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
-| http://nixnodes.dn42/ip                           | Simple 'myip' service                                                          |
-| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               |
+| http://www.nop.dn42/                              | Basic "whatismyip" service               |
+| http://freerouter.nop.dn42/                       | freeRouter main site                     |
+| http://rtros.nop.dn42/                            | freeRouter distribution                  |
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
-| http://ngit.dn42                                  | |
-| http://tor.e-utp.dn42                             | Tor Project Homepage mirror                                                    |
-| nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
-| mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat                            |
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
-| https://whois.rest.dn42/                          | whois restful API |
-| ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
-| [pgp.dn42](http://pgp.dn42)                                          | PGP keyserver, [synchronizes](http://pgp.dn42/pks/lookup?op=stats) with the SKS keyservers |
+
+### Usenet Servers / News
+There are some News Servers available [here](/services/News)
 
 # Other networks
 
