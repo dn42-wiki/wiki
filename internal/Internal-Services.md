@@ -16,6 +16,7 @@ xuu is maintaining an [[certificate authority]] for internal services.
   * Polynome has some nice scripts and visualizations here: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html
   * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
   * [map.nixnodes.net](http://map.nixnodes.net)
+  * Dn42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
 
 The data for these maps is collected using AS paths from various AS.
 
