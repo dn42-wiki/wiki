@@ -5,14 +5,13 @@
   * [[FAQ]]
 
 * [[How-to|/pages/howto/]]
-  * [[Openvpn|openvpn]]
-  * [[Tinc|tinc]]
   * [[Wireguard|wireguard]]
-  * [[Bird|Bird]]
-  * [[Quagga|Quagga]]
+  * [[Openvpn|openvpn]]
   * [[IPsec With Public Keys|IPsec with PublicKeys]]
-  * [[Email|email]]
+  * [[Tinc|tinc]]
   * [[GRE on FreeBSD|gre-on-freebsd]]
+  * [[Bird|Bird]] / [[Bird2|Bird2]]
+  * [[Quagga|Quagga]]
   * [[Mikrotik RouterOS|mikrotik]]
   * [[EdgeRouter|EdgeOS Config]]
 
@@ -23,15 +22,14 @@
   * [[Original DNS (deprecated)]]
   * [[Looking Glasses]]
   * [[Exchanges]]
-  * [[Shell]]
-  * [[Virtual Machines]]
   * [[Repository Mirrors]]
   * [[Distributed Wiki|Distributed-Wiki]]
   * [[Certificate Authority|Certificate-Authority]]
-  * [[Tahoe-LAFS|Tahoe-LAFS]]
 
 * [[Internal|/internal/home]]
   * [[Internal services|Internal-services]]
+  * [[APIs|APIs]]
+  * [[Historical services|Historical-Services]]
 
 * External Tools
   * [[Paste Board|https://paste.dn42.us]]
