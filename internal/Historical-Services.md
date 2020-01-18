@@ -102,9 +102,6 @@ https://rest.dn42/
 | ntp.e-utp.dn42 (172.22.165.50)                    | Stratum 1, GPS+NMEA                 |
 | ntp1.nixnodes.dn42 (172.22.177.123)               |                                     |
 | ntp2.nixnodes.dn42 (172.22.177.124)               |                                     |
-| ntp.martin89.dn42                                 | more than one A records/server      |
-| tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
-| tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
 
 ## OS Mirror/Repository's
 
