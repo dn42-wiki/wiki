@@ -2,7 +2,7 @@
 
 You are asked to show some creativity in terms of network usage and content. ;)
 
-More ideas inspiration is collected on another [page](/internal/ideas).
+**More inspiration is collected [here](/internal/Historical-Services) and [here](/internal/ideas).**
 
 ## CA
 
