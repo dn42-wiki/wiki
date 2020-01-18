@@ -59,6 +59,15 @@ You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IP
 
 An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
 
+### Proving ASN ownership
+Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
+This signature can be very easily verified by anyone. This removes the hassle from checking every different authentication method in the registry. This is particularly useful for automated setups.
+
+Manual Verification: https://dn42.g-load.eu/api/verify/manual/
+
+API: https://dn42.g-load.eu/api/verify/documentation.txt
+
+
 ## IRC
 
 | Hostname / IP                 | SSL             | Remarks                                   |
