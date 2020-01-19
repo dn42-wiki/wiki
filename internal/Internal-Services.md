@@ -30,6 +30,12 @@ API: https://dn42.g-load.eu/api/verify/documentation.txt
 | irc.hackint.hack/dn42         |  Yes          | ChaosVPN                                    |
 | irc.dn42                      |  Yes          | Internal IRC                                |
 
+#### Clients
+
+| Hostname / IP | Remarks |
+|:--------------|:--------|
+| https://lounge.burble.dn42 | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
+
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
@@ -91,6 +97,7 @@ A MTProxy server is available at https://t.me/proxy?server=172.20.138.19&port=66
 | ntp.martin89.dn42                                 | more than one A records/server      |
 | tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
 | tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
+| *.burble.dn42 | All burble.dn42 nodes are part of the NTP Pool and provide NTP over clearnet and DN42. See also [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services) |
 
 ## OS Mirror/Repository's
 
