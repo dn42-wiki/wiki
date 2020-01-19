@@ -24,12 +24,11 @@ API: https://dn42.g-load.eu/api/verify/documentation.txt
 
 ## IRC
 
-| Hostname / IP                 | SSL             | Remarks                                   |
+| Hostname / IP                 | SSL           | Remarks                                     |
 |:------------------------------|:------------- |:--------------------------------------------|
-| irc.hackint.dn42        |   Yes         | DN42                                              |
-| irc.hackint.hack/dn42   |  Yes          | ChaosVPN                                          |
-| irc.nixnodes.dn42       |   Yes (7000)  | NixNodes IRC Network                              |
-| irc.dn42                |    Yes        | Internal IRC                                      |
+| irc.hackint.dn42              |  Yes          | DN42                                        |
+| irc.hackint.hack/dn42         |  Yes          | ChaosVPN                                    |
+| irc.dn42                      |  Yes          | Internal IRC                                |
 
 ## Search engines
 
@@ -48,7 +47,7 @@ API: https://dn42.g-load.eu/api/verify/documentation.txt
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams             |
+| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams            |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -73,11 +72,6 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 - https://magnetic.dn42 (DHT Search Engine)
 
-### BitTorrent tracker
-- http://172.20.184.241/ (IPv4)
-- http://[fd43:6d1:3ee2::1]/ (IPv6)
-- http://tracker.dn42/ (info page)
-
 ## Proxies
 
  See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
@@ -89,6 +83,14 @@ Entry points to the Tor network are available on dn42. See [[Tor|internal/servic
 ### Telegram
 
 A MTProxy server is available at https://t.me/proxy?server=172.20.138.19&port=6667&secret=5bd3794d0fe2e00b985ffdac3fd17128.
+
+## NTP
+
+| Hostname / IP                                     | Remarks                             |
+|:------------------------------------------------- |:----------------------------------- |
+| ntp.martin89.dn42                                 | more than one A records/server      |
+| tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
+| tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
 
 ## OS Mirror/Repository's
 
@@ -106,12 +108,12 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
-| http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga            |
+| http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
 | http://www.nop.dn42/                              | Basic "whatismyip" service               |
 | http://freerouter.nop.dn42/                       | freeRouter main site                     |
 | http://rtros.nop.dn42/                            | freeRouter distribution                  |
-| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)               
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)|               
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
