@@ -285,7 +285,7 @@ mkdir -p /var/lib/bird/
 In your import filter add the following to reject invalid routes:
 
 ```
-if (roa_check(dn42_roa, net, bgp_path.last) = ROA_INVALID) then {
+if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
    print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
    reject;
 }
