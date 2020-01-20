@@ -8,7 +8,6 @@ Please sort by AS number.
 
 | AS | URL | Status |
 |:-- |:--- |:------ |
-| 64719 | ext: https://lg.dn42.lutoma.org/ <br> dn42: https://lg.lutoma.dn42/ | UP |
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | UP |
 | 64737 | ext: https://lg.dn42.us | UP |
 | 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. | UP |
@@ -18,13 +17,9 @@ Please sort by AS number.
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
-| 4242422016 | ext: https://dn42.sidereal.ca <br> dn42: https://lg.sidereal.dn42 | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
-| 4242423973 | dn42: http://lg.technopoint.dn42 <br> (traceroute, BGP-map) IPv4 only. | UP | 
-| 4242423993 | ext: https://lg.2f30.org/ <br> IPv4 only. | UP |
-
 
 ## Down
 
@@ -33,6 +28,10 @@ These looking glasses were added to the table at some point, but now seem to be 
 
 | AS | URL | Status |
 |:-- |:--- |:------ |
+| 4242423973 | dn42: http://lg.technopoint.dn42 <br> (traceroute, BGP-map) IPv4 only. | DOWN | 
+| 4242422016 | ext: https://dn42.sidereal.ca <br> dn42: https://lg.sidereal.dn42 | DOWN |
+| 4242423993 | ext: https://lg.2f30.org/ <br> IPv4 only. | DOWN |
+| 64719 | ext: https://lg.dn42.lutoma.org/ <br> dn42: https://lg.lutoma.dn42/ | DOWN |
 | 76103 | ext: http://lg.nixnodes.net <br> dn42: http://lg.nixnodes.dn42 <br> IPv4 only. | DOWN |
 | 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
 | 65529 | ext: http://bgp.freifunk-bielefeld.de/ulg/ulg.py <br> Interactive, BGP-map | DOWN |
