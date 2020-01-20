@@ -78,6 +78,11 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 - https://magnetic.dn42 (DHT Search Engine)
 
+### BitTorrent tracker
+- http://172.20.184.241/ (IPv4)
+- http://[fd43:6d1:3ee2::1]/ (IPv6)
+- http://tracker.dn42/ (info page)
+
 ## Proxies
 
  See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
