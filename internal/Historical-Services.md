@@ -141,6 +141,3 @@ Somebody was providing a FreePhone [here](/services/FreePhone)
 
 ## Email Providers
 There is a page for email Providers [here](/services/E-Mail-Providers)
-
-## Tahoe-LAFS
-There is a page for Tahoe-LAFS[here](/services/Tahoe-LAFS)
