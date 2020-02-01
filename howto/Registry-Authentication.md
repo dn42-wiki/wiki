@@ -54,7 +54,44 @@ git commit --amend --no-edit -S
 
 - Use `git log --show-signature` to show recent commits and signatures.
 
-## Authentication with an SSH RSA key
+## Authentication using an SSH key
+
+The generic format for authentication using an SSH key is as follows:
+```
+auth:               ssh-<keytype> <pubkey>
+```
+There are examples below for each specific key type.
+
+#### Generic process for signing with an SSH key
+
+OpenSSH v8 introduced new functionality for creating signatures using SSH keys. If you have an older version, you can compile the latest version of ssh-keygen from the [openssh-portable repo](https://github.com/openssh/openssh-portable).
+
+Use the following to sign the latest `<commit hash>` (that you found using `git log`)
+```sh
+echo "<commit hash>" | ssh-keygen -Y sign -f <private key file> -n dn42
+```
+
+Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+
+#### Verifying the signature
+
+The following procedure will verify the signature (using the `<commit hash>`, your `<pubkey>` and the `<signature>` generated in the previous step. 
+
+Create a temporary file containing the signature
+```sh
+echo "<signature>" > sig.tmp
+```
+Create a temporary 'allowed users' file
+```sh
+echo "YOU-MNT ssh-<keytype> <pubkey>" > allowed.tmp
+```
+Verify the signature
+```sh
+echo "<commit hash>" | \
+    ssh-keygen -Y verify -f allowed.tmp -n dn42 -I YOU-MNT -s sig.tmp
+```
+
+### Authentication with an SSH RSA key
 
 - Use the following `auth` attribute in your `mntner` object:
 ```
@@ -64,7 +101,9 @@ Where `<pubkey>` is the ssh public key copied from your id_rsa.pub file.
 
 #### Signing your commits
 
-Use the following to sign your `<commit hash>`
+If you cannot use the generic SSH process described above then RSA signatures can also be created using openssl.
+
+Use the following to sign your `<commit hash>` (that you found using `git log`)
 ```sh
 openssl pkeyutl \
    -sign \
@@ -72,7 +111,7 @@ openssl pkeyutl \
    -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it.
+Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 
@@ -90,7 +129,7 @@ openssl pkeyutl \
    -sigfile <(echo "<signature>" | base64 -d)
 ```
 
-## Authentication with an SSH ed25519 key
+### Authentication with an SSH ed25519 key
 
 - Use the following `auth` attribute in your `mntner` object:
 ```
@@ -100,18 +139,18 @@ Where `<pubkey>` is the ssh public key copied from your id_ed25519.pub file.
 
 #### Signing your commits
 
-OpenSSH v8 introduced new functionality for signatures using SSH keys, and you must use a recent version to generate ed25519 signatures. If necessary compile the latest ssh-keygen from the [openssh-portable repo](https://github.com/openssh/openssh-portable).
+There is no alternative process for signing using ed25519 keys, you must use the generic process described above. The process only works with ssh-keygen versions >= v8. 
 
-Use the following to sign your `<commit hash>`
+Use the following to sign your `<commit hash>` (that you found using `git log`)
 ```sh
 echo "<commit hash>" | ssh-keygen -Y sign -f ~/.ssh/id_ed25519 -n dn42
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it.
+Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 
-The following procedure will verify the signature (using the `<commit hash>`, your rsa `<pubkey>` and the `<signature>` generated in the previous step. 
+The following procedure will verify the signature (using the `<commit hash>`, your ed25519 `<pubkey>` and the `<signature>` generated in the previous step. 
 
 Create a temporary file containing the signature
 ```sh
@@ -127,7 +166,7 @@ echo "<commit hash>" | \
     ssh-keygen -Y verify -f allowed.tmp -n dn42 -I YOU-MNT -s sig.tmp
 ```
 
-## Authentication with an SSH ecdsa key
+### Authentication with an SSH ecdsa key
 
 - Use the following `auth` attribute in your `mntner` object:
 ```
@@ -136,6 +175,8 @@ auth:               ecdsa-sha2-nistp256 <pubkey>
 Where `<pubkey>` is the ssh public key copied from your id_ecdsa.pub file. 
 
 #### Signing your commits
+
+If you cannot use the generic SSH process described above then ecdsa signatures can also be created using openssl.
 
 **DO NOT do this on your original ssh key.**  
 Make a copy and use the copy as the ssh-keygen command below will overwrite the key file given.
@@ -153,11 +194,11 @@ openssl pkeyutl -sign \
     -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it.
+Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 
-The following script will verify the signature (using the `<commit hash>`, your rsa `<pubkey>` and the `<signature>` generated in the previous step. 
+The following script will verify the signature (using the `<commit hash>`, your ecdsa `<pubkey>` and the `<signature>` generated in the previous step. 
 ```sh
 openssl pkeyutl \
    -verify \
