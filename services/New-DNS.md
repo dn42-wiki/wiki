@@ -39,6 +39,6 @@ These instances do not serve any clients. They poll the registry regularly and r
 burble is providing monitoring for the new DNS system. It does simple checks on all instances every minute and also logs all changes into #dn42-dns@hackint.
 
 # DNSSEC
-There are currently two KSKs managed by JRB0001-MNT and YAMAKAJA-MNT. They are used once per quarter to sign the DNSKEY RRset. Each master operator has one ZSK which is used to sign the zones (except for the DNSKEY RRset). This setup leads to bigger responses but allows each KSK holder to solve emergencies independently. The signatures of the DNSKEY RRset are valid until the end of the first month of the next quarter to give enough time for coordinating the next siging. All other signatures are valid for 3 days and replaced at least once per day.
+There are currently two KSKs managed by BURBLE-MNT and JRB0001-MNT. They are used once per quarter to sign the DNSKEY RRset. Each master operator has one ZSK which is used to sign the zones (except for the DNSKEY RRset). This setup leads to bigger responses but allows each KSK holder to solve emergencies independently. The signatures of the DNSKEY RRset are valid until the end of the first month of the next quarter to give enough time for coordinating the next siging. All other signatures are valid for 3 days and replaced at least once per day.
 
 The set of valid KSKs can be found in the registry.
