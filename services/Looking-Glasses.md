@@ -22,6 +22,7 @@ Please sort by AS number.
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
 | 4242423088 | ext: http://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
+| 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
 
 ## Down
 
