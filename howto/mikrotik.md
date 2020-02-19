@@ -5,8 +5,9 @@
 
  * 1.1.1.1 - peer external IP
  * 2.2.2.2 - your external IP
- * 172.20.1.116 - remote GRE IPv4 address
- * 172.20.1.117 - local GRE IPv4 address
+ * A private /30 range for the GRE endpoints: 192.168.200.128/30
+ * 192.168.200.129 - remote GRE IPv4 address
+ * 192.168.200.130 - local GRE IPv4 address
  * fd42:c644:5222:3222::40 - remote GRE IPv6 address
  * fd42:c644:5222:3222::41 - local GRE IPv6 address
  * YOUR_AS - your AS number (numbers only)
@@ -17,7 +18,9 @@
  * IPSec only supports IKEv1
  * OpenVPN only works in tcp mode
  * OpenVPN does not support LZO compression
- * You can't use /31 subnet for PtP links
+ * You can't use /31 subnet for Point-to-Point (PtP) links
+
+Also, you can't use a /32 on the GRE/PtP links. Even if you add a local route to your peer, BGP can't resolve the installed routes using "a nexthop interface". Please use any /30 on the GRE link, either from your assigned DN42 pool address or use a private address like 192.168. Please don't choose from 172.16.0.0/12 or 10.0.0.0/8 because they may overlap with DN42 or ChaosVPN.
 
 ## Tunnel
 
@@ -48,22 +51,18 @@ add allow-fast-path=no comment="DN42 somepeer" local-address=2.2.2.2 name=gre-dn
 remote-address=1.1.1.1
 ```
 
-### IPs and routes
+### IPs inside the GRE tunnel
 Your peer most likely provided you with IP adresses for GRE tunnel.  
-As i said before, you can't use /31 for PtP links, so we will be using two /32 with route.  
-Add ip your peer provided you:
+As I said before, you can't use /31 for PtP links, so we will be using /30.
+BGP can't resolve routes if you use a /32 in the GRE link.
+
+Add the IP your peer provided you:
 
 #### IPv4
 
 ```
 /ip address
-add address=172.20.1.117 interface=gre-dn42-peer network=172.20.1.117
-```
-Add route to your peer /32:
-
-```
-/ip route
-add distance=1 dst-address=172.20.1.116/32 gateway=gre-dn42-peer
+add address=192.168.200.130/30 interface=gre-dn42-peer network=192.168.200.128
 ```
 
 #### IPv6
@@ -115,7 +114,7 @@ IPv4:
 ```
 /routing bgp peer
 add comment="DN42: somepeer IPv4" in-filter=dn42-in instance=bgp-dn42-somename multihop=yes \
-name=dn42-somepeer-ipv4 out-filter=dn42-out remote-address=172.20.1.116 remote-as=PEER_AS \
+name=dn42-somepeer-ipv4 out-filter=dn42-out remote-address=192.168.200.129 remote-as=PEER_AS \
 route-reflect=yes ttl=default
 ```
 IPv6 (if needed):  
@@ -126,6 +125,9 @@ add address-families=ipv6 comment="DN42: somepeer IPv6" in-filter=dn42-in \
 instance=bgp-dn42-somename multihop=yes name=dn42-somepeer-ipv6 out-filter=dn42-out \ 
 remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=default
 ```
+
+Also, as a note, Mikrotik doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
+
 ### BGP Advertisements
 You want to advertise your allocated network (most likely), it's very simple:  
 
