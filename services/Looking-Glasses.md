@@ -23,6 +23,7 @@ Please sort by AS number.
 | 4242423088 | ext: http://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
 | 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
+| 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
 
 ## Down
 
