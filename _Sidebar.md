@@ -25,7 +25,7 @@
   * [[Distributed Wiki|Distributed-Wiki]]
   * [[Certificate Authority|Certificate-Authority]]
 
-* [[Internal|/internal/home]]
+* [[Internal|/pages/internal/]]
   * [[Internal services|Internal-services]]
   * [[APIs|APIs]]
   * [[Historical services|Historical-Services]]
