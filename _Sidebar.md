@@ -18,6 +18,7 @@
 * [[Services|/pages/services/]]
   * [[IRC]]
   * [[Whois registry|Whois]]
+  * [[New DNS]]
   * [[Old Hierarchical DNS]]
   * [[Original DNS (deprecated)]]
   * [[Looking Glasses]]
