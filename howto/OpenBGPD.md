@@ -40,7 +40,7 @@ network prefix-set mynetworks set large-community $ASN:1:1
 
 ## neighbors
 For each neighbor its ASN and transfer ULA is required.
-An optional description is provided such that [`bgpctl`](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
+An optional description is provided such that [**bgpctl(8)**](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
 ```
 # peer A, transport over IPSec/GRE
 $A-local="fd00:12:34:A::1"
@@ -109,7 +109,7 @@ match from AS $A-ASN set { nexthop $A-remote }
 OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
 Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this cool cannot be used.
 
-Instead, a shell script parses route objects from the registry repository and generates a `roa-set { ... }` block that is to be included in the main configuration file.
+Instead, a shell script parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
 
 One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
 
