@@ -79,7 +79,7 @@ Allow own announcements:
 allow to ebgp prefix-set kn large-community $ASN:1:1
 ```
 
-Allow all remaining UPDATES based on __O_rigin __V__alidation __S__tates:
+Allow all remaining UPDATES based on **O**rigin **V**alidation **S**tates:
 ```
 # enforce ROA
 allow from ebgp ovs valid
@@ -106,5 +106,26 @@ match from AS $A-ASN set { nexthop $A-remote }
 ```
 
 # ROA
+OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
+Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this cool cannot be used.
+
+Instead, a shell script parses route objects from the registry repository and generates a `roa-set { ... }` block that is to be included in the main configuration file.
+
+One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
+
+`/etc/dn42.roa-set` is the generated set:
+```
+roa-set {
+    fd00:12:34::/48 source-as 4242421234
+    fd00:ab:cd::/44 maxlen 64 source-as 4242427890
+    ...
+}
+```
+
+Include it in `/etc/bgpd.conf`:
+```
+# defines roat-set, see _rpki-client crontab
+include "/etc/dn42.roa-set"
+```
 
 # Looking glass
