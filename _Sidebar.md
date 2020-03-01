@@ -12,6 +12,7 @@
   * [[GRE on FreeBSD|gre-on-freebsd]]
   * [[Bird|Bird]] / [[Bird2|Bird2]]
   * [[Quagga|Quagga]]
+  * [[OpenBSD|OpenBSD]]
   * [[Mikrotik RouterOS|mikrotik]]
   * [[EdgeRouter|EdgeOS Config]]
 
