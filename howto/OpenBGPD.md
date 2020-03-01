@@ -43,14 +43,14 @@ For each neighbor its ASN and transfer ULA is required.
 An optional description is provided such that [**bgpctl(8)**](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
 ```
 # peer A, transport over IPSec/GRE
-$A-local="fd00:12:34:A::1"
-$A-remote="fd00:12:34:A::2"
-$A-ASN="4242425678"
+$A_local="fd00:12:34:A::1"
+$A_remote="fd00:12:34:A::2"
+$A_ASN="4242425678"
 
-listen on $A-local
+listen on $A_local
 
-neighbor  $A-remote {
-    remote-as $A-ASN
+neighbor  $A_remote {
+    remote-as $A_ASN
     descr "A"
 }
 ```
@@ -102,7 +102,7 @@ match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 Misbehaving peers can be adjusted;  for example Bird on FreeBSD is known to sometimes announce routes with incorrect `nexthop` attributes:
 ```
 # XXX otherwise routes are installed with ::/128 nexthop
-match from AS $A-ASN set { nexthop $A-remote }
+match from AS $A_ASN set { nexthop $A_remote }
 ```
 
 # ROA
