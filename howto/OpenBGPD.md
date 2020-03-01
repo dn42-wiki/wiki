@@ -8,7 +8,7 @@ Neighbors use ULA addresses (/127 transfer net) assigned from one of the peer's 
 The goal is to have a small, yet complete setup for all peers with ROA validation and other safety measurements in place.
 
 # Configuration
-[`/etc/bgpd.conf`](https://man.openbsd.org/bgpd.conf.5) contains all information and includes generated pieces such as ROA sets;  see the `ROA` section in this guide.
+[`/etc/bgpd.conf`](https://man.openbsd.org/bgpd.conf.5) contains all information and may include further (automatically generated) files, as is done in this guide.
 
 As per the manual, configuration is divided into logical sections;  [`/etc/examples/bgpd.conf`](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/etc/examples/bgpd.conf?rev=HEAD&content-type=text/plain&only_with_tag=MAIN) is a complete and commented example which this guide is roughly based on.
 
@@ -71,16 +71,38 @@ deny quick from any max-as-len 8
 
 `quick` rules are considered the last matching rule, and evaluation of subsequent rules is skipped.
 
-Next IBGP as well as our own __UPDATES__ are allowed:
+Allow own announcements:
 ```
-# IBGP: allow all updates to and from our IBGP neighbors
-allow from ibgp
-allow to ibgp
-
 # Outbound EBGP: only allow self originated networks to ebgp peers
 # Don't leak any routes from upstream or peering sessions. This is done
 # by checking for routes that are tagged with the large-community $ASN:1:1
 allow to ebgp prefix-set kn large-community $ASN:1:1
+```
+
+Allow all remaining UPDATES based on __O_rigin __V__alidation __S__tates:
+```
+# enforce ROA
+allow from ebgp ovs valid
+```
+
+Note how the `ovs` filter requires the `roa-set {...}` to be defined;  see the `ROA` section below.
+
+### path attributes
+Besides `allow` and `deny` statements, filter rules can modify UPDATE messages, e.g.
+```
+# Scrub normal and large communities relevant to our ASN from EBGP neighbors
+# https://tools.ietf.org/html/rfc7454#section-11
+match from ebgp set { large-community delete $ASN:*:* }
+
+# Honor requests to gracefully shutdown BGP sessions
+# https://tools.ietf.org/html/rfc8326
+match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
+```
+
+Misbehaving peers can be adjusted;  for example Bird on FreeBSD is known to sometimes announce routes with incorrect `nexthop` attributes:
+```
+# XXX otherwise routes are installed with ::/128 nexthop
+match from AS $A-ASN set { nexthop $A-remote }
 ```
 
 # ROA
