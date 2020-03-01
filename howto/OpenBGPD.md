@@ -107,7 +107,7 @@ match from AS $A-ASN set { nexthop $A-remote }
 
 # ROA
 OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
-Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this cool cannot be used.
+Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this tool cannot be used.
 
 Instead, a shell script parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
 
