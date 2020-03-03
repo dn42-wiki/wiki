@@ -10,19 +10,19 @@ by adding the following to /etc/bind/named.conf.local
 ```
 zone "dn42" {
   type forward;
-  forwarders { 172.20.0.53; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "20.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.0.53; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "22.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.0.53; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "23.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.0.53; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 ```
 
@@ -143,24 +143,28 @@ system {
         default-domain dn42 {
            forwarders {
               172.20.0.53;
+	      fd42:d42:d42:54::1;
            }
         }
         default-domain 20.172.in-addr.arpa {
                forwarders {
                   172.20.0.53;
+		  fd42:d42:d42:54::1;
                }
             }
         default-domain 22.172.in-addr.arpa {
                forwarders {
                   172.20.0.53;
+		  fd42:d42:d42:54::1;
                }
             }
             default-domain 23.172.in-addr.arpa {
                forwarders {
                   172.20.0.53;
+                  fd42:d42:d42:54::1;
                }
             }
-     }
+         }
       }
    }
 }
