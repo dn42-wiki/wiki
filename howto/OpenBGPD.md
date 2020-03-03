@@ -99,12 +99,6 @@ match from ebgp set { large-community delete $ASN:*:* }
 match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 ```
 
-Misbehaving peers can be adjusted;  for example Bird on FreeBSD is known to sometimes announce routes with incorrect `nexthop` attributes:
-```
-# XXX otherwise routes are installed with ::/128 nexthop
-match from AS $A_ASN set { nexthop $A_remote }
-```
-
 # ROA
 OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
 Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this tool cannot be used.
