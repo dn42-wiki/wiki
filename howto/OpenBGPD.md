@@ -103,7 +103,7 @@ match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
 Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this tool cannot be used.
 
-Instead, a shell script parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
+Instead, [a shell script](https://t4-2.high5.nl/pub/dn42/generate_roa-set.sh) parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
 
 One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
 
@@ -123,3 +123,7 @@ include "/etc/dn42.roa-set"
 ```
 
 # Looking glass
+This is mostly OpenBSD specific since [bgplg(8)](http://man.openbsd.org/bgplg.8) and [httpd(8)](http://man.openbsd.org/httpd.8) ship as part of the operating system.
+The **bgplg** manual contains the few steps and example [httpd.conf(5)](http://man.openbsd.org/httpd.conf.5) required to enable the looking glass.
+
+See https://t4-2.high5.nl/bgplg for a running instance operating within DN42.
