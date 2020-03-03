@@ -5,7 +5,7 @@
 Tips:old DNS 172.23.0.53 and fd42:d42:d42:53::1 already stop updated.
 
 * [[dns/Configuration|Configuration]] - DN42 DNS forward configuration for openwrt and bind......
-* [[dns/External-DNS]] - external DNS zones from interconnected networks
+* [[dns/External-DNS|External-DNS]] - external DNS zones from interconnected networks
 
 
 # DN42 DNS Architecture
