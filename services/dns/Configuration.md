@@ -1,6 +1,6 @@
 # Forwarder setup
 
-Configuration of common resolver softwares, to forward DNS queries for `.dn42` (and reverse DNS) to `fd42:d42:d42:54::1` (or `172.23.0.53`).
+Configuration of common resolver softwares to forward DNS queries for `.dn42` (and reverse DNS) IPv4 and IPv6 anycast services.
 
 ## BIND
 
@@ -79,8 +79,7 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 
 ## Unbound
 
-`unbound.conf` for forwarding requests to `172.23.0.53`.
-
+Make sure DNSSEC is disabled (`auto-trust-anchor-file` is not set):
 
 ```
 server:
