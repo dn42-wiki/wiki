@@ -19,7 +19,7 @@
 * [[Services|/pages/services/]]
   * [[IRC]]
   * [[Whois registry|Whois]]
-  * [[New DNS]]
+  * [[DNS]]
   * [[Looking Glasses]]
   * [[Exchanges]]
   * [[Repository Mirrors]]
