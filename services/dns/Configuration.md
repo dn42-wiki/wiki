@@ -10,19 +10,19 @@ by adding the following to /etc/bind/named.conf.local
 ```
 zone "dn42" {
   type forward;
-  forwarders { 172.23.0.53; };
+  forwarders { 172.20.0.53; };
 };
 zone "20.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.23.0.53; };
+  forwarders { 172.20.0.53; };
 };
 zone "22.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.23.0.53; };
+  forwarders { 172.20.0.53; };
 };
 zone "23.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.23.0.53; };
+  forwarders { 172.20.0.53; };
 };
 ```
 
@@ -37,10 +37,10 @@ config dnsmasq
         option boguspriv '0'
         option rebind_protection '1'
         list rebind_domain 'dn42'
-        list server '/dn42/172.23.0.53'
-        list server '/20.172.in-addr.arpa/172.23.0.53'
-        list server '/22.172.in-addr.arpa/172.23.0.53'
-        list server '/23.172.in-addr.arpa/172.23.0.53'
+        list server '/dn42/172.20.0.53'
+        list server '/20.172.in-addr.arpa/172.20.0.53'
+        list server '/22.172.in-addr.arpa/172.20.0.53'
+        list server '/23.172.in-addr.arpa/172.20.0.53'
 ```
 
 to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42` 
@@ -51,10 +51,10 @@ Attention: If you go with the default config you'll have to disable "boguspriv" 
 For normal dnsmasq use
 
 ```
-server=/dn42/172.23.0.53
-server=/20.172.in-addr.arpa/172.23.0.53
-server=/22.172.in-addr.arpa/172.23.0.53
-server=/23.172.in-addr.arpa/172.23.0.53
+server=/dn42/172.20.0.53
+server=/20.172.in-addr.arpa/172.20.0.53
+server=/22.172.in-addr.arpa/172.20.0.53
+server=/23.172.in-addr.arpa/172.20.0.53
 ```
 in `dnsmasq.conf`.
 
@@ -63,14 +63,14 @@ Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS), the **f
 
 ```
 dont-query=127.0.0.0/8, 10.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
-forward-zones-recurse=dn42=172.23.0.53,hack=172.23.0.53,ffhh=172.23.0.53,ffac=172.23.0.53,020=172.23.0.53,adm=172.23.0.53,ffa=172.23.0.53,ffhb=172.23.0.53,ffc=172.23.0.53,ffda=172.23.0.53,ffdh=172.23.0.53,ff3l=172.23.0.53,fffl=172.23.0.53,ffffm=172.23.0.53,fffr=172.23.0.53,fffd=172.23.0.53,ffgl=172.23.0.53,fflln=172.23.0.53,ffbcd=172.23.0.53,ffbgl=172.23.0.53,ffgoe=172.23.0.53,ffgt=172.23.0.53,ffh=172.23.0.53,helgo=172.23.0.53,ffhef=172.23.0.53,ffj=172.23.0.53,ffka=172.23.0.53,ffki=172.23.0.53,ffhl=172.23.0.53,fflux=172.23.0.53,ffms=172.23.0.53,mueritz=172.23.0.53,ffnord=172.23.0.53,ffnw=172.23.0.53,ffoh=172.23.0.53,ffpb=172.23.0.53,ffpi=172.23.0.53,ffrade=172.23.0.53,ffrgb=172.23.0.53,ffrg=172.23.0.53,rzl=172.23.0.53,ffsaar=172.23.0.53,fftr=172.23.0.53,fftdf=172.23.0.53,ffwk=172.23.0.53,ffgro=172.23.0.53,ffwk=172.23.0.53,ffwp=172.23.0.53,ffw=172.23.0.53,20.172.in-addr.arpa=172.23.0.53,22.172.in-addr.arpa=172.23.0.53,23.172.in-addr.arpa=172.23.0.53,31.172.in-addr.arpa=172.23.0.53,c.f.ip6.arpa=172.23.0.53
+forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53
 ```
 
 ## MaraDNS
 Put this in your mararc:
 
 ```
-ipv4_alias["dn42_root"] = "172.23.0.53"
+ipv4_alias["dn42_root"] = "172.20.0.53"
 root_servers["dn42."] = "dn42_root"
 root_servers["20.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
@@ -98,32 +98,32 @@ server:
 forward-zone: 
       name: "dn42"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "20.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "21.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "22.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "23.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 
 forward-zone:
       name: "d.f.ip6.arpa"
       forward-addr: fd42:d42:d42:54::1
-      forward-addr: 172.23.0.53
+      forward-addr: 172.20.0.53
 ```
 
 ## JunOS (SRX 12.1X46)
@@ -142,22 +142,22 @@ system {
             }
         default-domain dn42 {
            forwarders {
-              172.23.0.53;
+              172.20.0.53;
            }
         }
         default-domain 20.172.in-addr.arpa {
                forwarders {
-                  172.23.0.53;
+                  172.20.0.53;
                }
             }
         default-domain 22.172.in-addr.arpa {
                forwarders {
-                  172.23.0.53;
+                  172.20.0.53;
                }
             }
             default-domain 23.172.in-addr.arpa {
                forwarders {
-                  172.23.0.53;
+                  172.20.0.53;
                }
             }
      }
@@ -167,4 +167,4 @@ system {
 ```
 
 ## MS DNS
-Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.23.0.53 as forwarder. Ignore the error message that the server is not authoritative.
+Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
