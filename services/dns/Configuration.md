@@ -1,6 +1,6 @@
 # Forwarder setup
 
-Configuration of common resolver softwares, to forward DNS queries for `.dn42` (and reverse DNS) to `fd42:d42:d42:53::1` (or `172.23.0.53`).
+Configuration of common resolver softwares, to forward DNS queries for `.dn42` (and reverse DNS) to `fd42:d42:d42:54::1` (or `172.23.0.53`).
 
 ## BIND
 
@@ -98,32 +98,32 @@ server:
 
 forward-zone: 
       name: "dn42"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 
 forward-zone: 
       name: "20.172.in-addr.arpa"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 
 forward-zone: 
       name: "21.172.in-addr.arpa"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 
 forward-zone: 
       name: "22.172.in-addr.arpa"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 
 forward-zone: 
       name: "23.172.in-addr.arpa"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 
 forward-zone:
       name: "d.f.ip6.arpa"
-      forward-addr: fd42:d42:d42:53::1
+      forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.23.0.53
 ```
 
