@@ -39,8 +39,11 @@ config dnsmasq
         list rebind_domain 'dn42'
         list server '/dn42/172.20.0.53'
         list server '/20.172.in-addr.arpa/172.20.0.53'
+        list server '/21.172.in-addr.arpa/172.20.0.53'
         list server '/22.172.in-addr.arpa/172.20.0.53'
         list server '/23.172.in-addr.arpa/172.20.0.53'
+        list server '/d.f.ip6.arpa/fd42:d42:d42:54::1'
+
 ```
 
 to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42` 
@@ -53,8 +56,10 @@ For normal dnsmasq use
 ```
 server=/dn42/172.20.0.53
 server=/20.172.in-addr.arpa/172.20.0.53
+server=/21.172.in-addr.arpa/172.20.0.53
 server=/22.172.in-addr.arpa/172.20.0.53
 server=/23.172.in-addr.arpa/172.20.0.53
+server=/d.f.ip6.arpa/fd42:d42:d42:54::1
 ```
 in `dnsmasq.conf`.
 
