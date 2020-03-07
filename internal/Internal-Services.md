@@ -116,6 +116,14 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 
+## Shell
+
+Providers of shell access:
+
+| Person        | Hostname                             | Net              | Description | Contact       |
+|:------------- |:------------------------------------ |:---------------- |:----------- |:------------- |
+| mc36          | telnet test.nop.dn42                  | dn42 only        |looking glass| -             |
+
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
