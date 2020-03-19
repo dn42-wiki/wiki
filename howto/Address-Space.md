@@ -1,4 +1,4 @@
-DN42 uses network addresses in the [rfc1918](https://tools.ietf.org/html/rfc1918) and [ULA](https://tools.ietf.org/html/rfc4193) ranges. These are described in detail in the sections below. 
+DN42 uses network addresses in the [rfc1918](https://tools.ietf.org/html/rfc1918) and [ULA](https://tools.ietf.org/html/rfc4193) ranges. These are described in detail within the sections below. 
 
 The [DN42 registry](https://git.dn42.us/dn42/registry) is the authoritative source of information on address space assignment. Within the registry, the DN42 address space is divided in to blocks based on _policies_ that define how the addresses may be used. Policies are defined in `inetnum` and `inet6num` objects and can be:
 
@@ -6,6 +6,12 @@ The [DN42 registry](https://git.dn42.us/dn42/registry) is the authoritative sour
  - **closed** - these ranges cannot be assigned
  - **reserved** - these ranges are reserved for future use
  - **ask** - these ranges are for specific uses, please ask on the mailing list before requesting assignments
+
+A simple way to see all the active policies in the registry is to search the registry content for policy attributes:
+
+```sh
+grep -r ^policy data/inet{,6}num/
+```
 
 The [filter.txt](https://git.dn42.us/dn42/registry/src/master/data/filter.txt) and [filter6.txt](https://git.dn42.us/dn42/registry/src/master/data/filter6.txt) files within the registry detail the network wide constraints on what address ranges are in use together with the global limits on what can be announced. 
 
@@ -17,7 +23,7 @@ Globally routable prefixes are not supported in DN42; they are denied via the re
 
 # IPv6 Address Space
 
-DN42 uses the fd00::/8 ULA range for IPv6 addresses; the whole fd00::/8 block has an open policy and users are free to request any prefix in this range, that is not already allocated. 
+DN42 uses the fd00::/8 ULA range for IPv6 addresses. Apart from a block of addresses reserved for anycast (fd42:d42:d42::/48), the whole fd00::/8 block has an open policy and users are free to request any prefix in this range, that is not already allocated. 
 
 **The DN42 registry is not authoritative for the fd00::/8 range**
 
@@ -25,7 +31,7 @@ DN42 is interconnected with other networks, like icvpn, which also use the same 
 
 # IPv4 Address Space
 
-DN42 uses the 172.20.0.0/14 range for IPv4 addresses. As with the public internet, IPv4 space is limited and users are encouraged to conserve space where possible. 
+DN42 uses the 172.20.0.0/14 range for IPv4 addresses. As with the public internet, IPv4 space is more limited and users are encouraged to conserve space where possible. Any requests for assignments larger than /24 must provide justification. 
 
 Unlike the IPv6 address space, the DN42 IPv4 space is not fully open for assignment to users; some ranges are intended for specific uses and other ranges are reserved. See the policy section, below. Users should always check the policy in the registry before requesting a prefix to be assigned. 
 
@@ -35,7 +41,7 @@ There are other IPv4 ranges in use within DN42 related to the affiliate networks
 
 The diagram below shows the allocation policies for the DN42 address space. 
 
-... image ...
+![Policy Map Image](images/PolicyMap.png)
 
 Specific policy restrictions:
 
@@ -46,5 +52,6 @@ Specific policy restrictions:
 | 172.20.64.0/18 | Reserved for allocations larger than /23, up to /21 |
 | 172.22.0.0/18 | Reserved for allocations of /24 or larger, up to /21 |
 | 172.23.16.0/21 | Closed to new allocations |
+| 172.21.0.0/18<br/>172.21.128.0/17<br/>172.22.192.0/18 | Reserved for future use |
 
 
