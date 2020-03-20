@@ -2,6 +2,8 @@
 
  * [[Home]]
   * [[Getting started]]
+  * [[Registry Authentication]]
+  * [[Address Space]]
   * [[FAQ]]
 
 * [[How-to|/pages/howto/]]
