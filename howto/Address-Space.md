@@ -31,7 +31,7 @@ DN42 is interconnected with other networks, like icvpn, which also use the same 
 
 # IPv4 Address Space
 
-DN42 uses the 172.20.0.0/14 range for IPv4 addresses. As with the public internet, IPv4 space is more limited and users are encouraged to conserve space where possible. Any requests for assignments larger than /24 must provide justification. 
+DN42 uses the 172.20.0.0/14 range for IPv4 addresses. As with the public internet, IPv4 space is more limited and users are encouraged to conserve space where possible. A typical assignment in DN42 is a /27 and any requests for assignments larger than /24 must provide justification. 
 
 Unlike the IPv6 address space, the DN42 IPv4 space is not fully open for assignment to users; some ranges are intended for specific uses and other ranges are reserved. See the policy section, below. Users should always check the policy in the registry before requesting a prefix to be assigned. 
 
