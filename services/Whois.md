@@ -90,6 +90,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | Mic92      | whois.evenet.dn42 ([whois42d](https://git.dn42.us/dn42/whois42d)) | 172.23.75.1 / fd42:4992:6a6d::6 |
 | Fritz      | whois.flhb.de                | 172.22.70.69 / 2001:67c:708:102:5054:ff:fe57:9573 / fdd6:aff6:5f6f:102:5054:ff:fe57:9573 |
 | NIA        | whois.nia.dn42               | 172.20.158.153 / fd00:1926:817:43::1 |
+| Lan Tian   | whois.lantian.dn42           | 172.22.76.108 / fdbc:f9dc:67ad:2547::43 |
 
 ### Down?
 
