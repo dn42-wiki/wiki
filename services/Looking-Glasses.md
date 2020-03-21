@@ -17,6 +17,7 @@ Please sort by AS number.
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
+| 4242422547 | ext: https://lg.lantian.pub <br> ext-alt: https://lg-alt.lantian.pub | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
