@@ -116,6 +116,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
+| mc.nia.dn42 (172.20.168.131)                      | Minecraft              | 1.15.2, Optimized for CN   |
 
 ## Shell
 
