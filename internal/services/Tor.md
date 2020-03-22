@@ -9,6 +9,7 @@ Tor bridges allow for the Tor client to connect to a specific IP address and val
 | photon.flat.dn42:8443 | 500kB/s   | irl@flat.dn42    | obfs4    | 83B02FB88253A7FD313B7912B12B05AF2A42D3B9 | Limited to 100GB transfer per week |
 | gouda.flat.dn42:8443  | 500kB/s   | irl@flat.dn42    | obfs4    | DF8CA08A9BED62B319D1E52610510959374444A2 |                                    |
 | tor.napshome.dn42:8443  | 3000kB/s   | bjackson@napshome.net    | obfs4    | 71C924A772F69451FE97FE5A9025DEDDEF3DB664 |                                    |
+| tor.napshome.dn42:9001  | 3000kB/s   | bjackson@napshome.net    | plain    | 71C924A772F69451FE97FE5A9025DEDDEF3DB664 |                                    |
 
 # Anycast Tor
 
