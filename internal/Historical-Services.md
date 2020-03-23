@@ -59,11 +59,7 @@ An alternative is available at https://ip.naive.network, which displays your cle
 | _Configuring Yacy Network settings:_     |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
 
 
-## File sharing
-
-### Jellyfin
-
-* http://j.munsternet.dn42 
+## File Sharing
 
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
