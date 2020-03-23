@@ -48,7 +48,8 @@ API: https://dn42.g-load.eu/verify/documentation.txt
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
-
+| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test)
+|
 
 ## Radio and Video Streaming
 
