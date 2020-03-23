@@ -61,6 +61,10 @@ An alternative is available at https://ip.naive.network, which displays your cle
 
 ## File sharing
 
+### Jellyfin
+
+* http://j.munsternet.dn42 
+
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
 
