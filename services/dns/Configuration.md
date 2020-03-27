@@ -2,14 +2,11 @@
 
 Configuration of common resolver softwares to forward DNS queries for `.dn42` (and reverse DNS) IPv4 and IPv6 anycast services.
 
-You can use any *.delegation-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is:
+You can use any *.recursive-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is available at the [DN42 registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42). To ease the resolving, an anycast server is provided to the whole network:
 
-* b.delegation-servers.dn42 fd42:4242:2601:ac53::1, 172.20.129.1
-* j.delegation-servers.dn42 fd42:5d71:219:1:a526:d935:281e:22d6, 172.20.1.254
+* a.recursive-servers.dn42 172.20.0.53, fd42:d42:d42:54::1
 
-The most up-to-date information is available at the [DN42 registry](https://git.dn42.us/dn42/registry/src/master/data/dns/delegation-servers.dn42)
-
-All the examples here list 172.20.129.1, but you can use any other *.delegation-servers.dn42
+All the examples here list 172.20.0.53, but you can use any other *.recursive-servers.dn42
 
 ## BIND
 
@@ -19,19 +16,19 @@ by adding the following to /etc/bind/named.conf.local
 ```
 zone "dn42" {
   type forward;
-  forwarders { 172.20.129.1; fd42:4242:2601:ac53::1; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "20.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.129.1; fd42:4242:2601:ac53::1; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "22.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.129.1; fd42:4242:2601:ac53::1; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "23.172.in-addr.arpa" {
   type forward;
-  forwarders { 172.20.129.1; fd42:4242:2601:ac53::1; };
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 ```
 
@@ -46,12 +43,12 @@ config dnsmasq
         option boguspriv '0'
         option rebind_protection '1'
         list rebind_domain 'dn42'
-        list server '/dn42/172.20.129.1'
-        list server '/20.172.in-addr.arpa/172.20.129.1'
-        list server '/21.172.in-addr.arpa/172.20.129.1'
-        list server '/22.172.in-addr.arpa/172.20.129.1'
-        list server '/23.172.in-addr.arpa/172.20.129.1'
-        list server '/d.f.ip6.arpa/fd42:4242:2601:ac53::1'
+        list server '/dn42/172.20.0.53'
+        list server '/20.172.in-addr.arpa/172.20.0.53'
+        list server '/21.172.in-addr.arpa/172.20.0.53'
+        list server '/22.172.in-addr.arpa/172.20.0.53'
+        list server '/23.172.in-addr.arpa/172.20.0.53'
+        list server '/d.f.ip6.arpa/fd42:d42:d42:54::1'
 
 ```
 
@@ -63,12 +60,12 @@ Attention: If you go with the default config you'll have to disable "boguspriv" 
 For normal dnsmasq use
 
 ```
-server=/dn42/172.20.129.1
-server=/20.172.in-addr.arpa/172.20.129.1
-server=/21.172.in-addr.arpa/172.20.129.1
-server=/22.172.in-addr.arpa/172.20.129.1
-server=/23.172.in-addr.arpa/172.20.129.1
-server=/d.f.ip6.arpa/fd42:4242:2601:ac53::1
+server=/dn42/172.20.0.53
+server=/20.172.in-addr.arpa/172.20.0.53
+server=/21.172.in-addr.arpa/172.20.0.53
+server=/22.172.in-addr.arpa/172.20.0.53
+server=/23.172.in-addr.arpa/172.20.0.53
+server=/d.f.ip6.arpa/fd42:d42:d42:54::1
 ```
 in `dnsmasq.conf`.
 
@@ -77,14 +74,14 @@ Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS), the **f
 
 ```
 dont-query=127.0.0.0/8, 10.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
-forward-zones-recurse=dn42=172.20.129.1,hack=172.20.129.1,ffhh=172.20.129.1,ffac=172.20.129.1,020=172.20.129.1,adm=172.20.129.1,ffa=172.20.129.1,ffhb=172.20.129.1,ffc=172.20.129.1,ffda=172.20.129.1,ffdh=172.20.129.1,ff3l=172.20.129.1,fffl=172.20.129.1,ffffm=172.20.129.1,fffr=172.20.129.1,fffd=172.20.129.1,ffgl=172.20.129.1,fflln=172.20.129.1,ffbcd=172.20.129.1,ffbgl=172.20.129.1,ffgoe=172.20.129.1,ffgt=172.20.129.1,ffh=172.20.129.1,helgo=172.20.129.1,ffhef=172.20.129.1,ffj=172.20.129.1,ffka=172.20.129.1,ffki=172.20.129.1,ffhl=172.20.129.1,fflux=172.20.129.1,ffms=172.20.129.1,mueritz=172.20.129.1,ffnord=172.20.129.1,ffnw=172.20.129.1,ffoh=172.20.129.1,ffpb=172.20.129.1,ffpi=172.20.129.1,ffrade=172.20.129.1,ffrgb=172.20.129.1,ffrg=172.20.129.1,rzl=172.20.129.1,ffsaar=172.20.129.1,fftr=172.20.129.1,fftdf=172.20.129.1,ffwk=172.20.129.1,ffgro=172.20.129.1,ffwk=172.20.129.1,ffwp=172.20.129.1,ffw=172.20.129.1,20.172.in-addr.arpa=172.20.129.1,22.172.in-addr.arpa=172.20.129.1,23.172.in-addr.arpa=172.20.129.1,31.172.in-addr.arpa=172.20.129.1,c.f.ip6.arpa=172.20.129.1
+forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53
 ```
 
 ## MaraDNS
 Put this in your mararc:
 
 ```
-ipv4_alias["dn42_root"] = "172.20.129.1"
+ipv4_alias["dn42_root"] = "172.20.0.53"
 root_servers["dn42."] = "dn42_root"
 root_servers["20.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
@@ -111,33 +108,33 @@ server:
 
 forward-zone: 
       name: "dn42"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "20.172.in-addr.arpa"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "21.172.in-addr.arpa"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "22.172.in-addr.arpa"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 
 forward-zone: 
       name: "23.172.in-addr.arpa"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 
 forward-zone:
       name: "d.f.ip6.arpa"
-      forward-addr: fd42:4242:2601:ac53::1
-      forward-addr: 172.20.129.1
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
 ```
 
 ## JunOS (SRX 12.1X46)
@@ -156,26 +153,26 @@ system {
             }
         default-domain dn42 {
            forwarders {
-              172.20.129.1;
-	      fd42:4242:2601:ac53::1;
+              172.20.0.53;
+	      fd42:d42:d42:54::1;
            }
         }
         default-domain 20.172.in-addr.arpa {
                forwarders {
-                  172.20.129.1;
-		  fd42:4242:2601:ac53::1;
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
                }
             }
         default-domain 22.172.in-addr.arpa {
                forwarders {
-                  172.20.129.1;
-		  fd42:4242:2601:ac53::1;
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
                }
             }
             default-domain 23.172.in-addr.arpa {
                forwarders {
-                  172.20.129.1;
-                  fd42:4242:2601:ac53::1;
+                  172.20.0.53;
+                  fd42:d42:d42:54::1;
                }
             }
          }
@@ -185,4 +182,4 @@ system {
 ```
 
 ## MS DNS
-Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.129.1 as forwarder. Ignore the error message that the server is not authoritative.
+Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
