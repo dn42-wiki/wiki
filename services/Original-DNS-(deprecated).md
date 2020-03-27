@@ -1,10 +1,9 @@
 # Original DNS (deprecated)
-**The new anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`. Please see [[Old Hierarchical DNS]] for more information.**
+This information is now **deprecated**. Please check [[New DNS]] for the current architecture.
 
-**The information below is outdated.** 
 ***
 
-*(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`.
+*(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`. At the date March 27 2020, these server are **not working** anymore.
 
 **DNS is build from [[whois database|services/Whois]]. So please edit your DNS-records there.**
 
