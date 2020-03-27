@@ -12,6 +12,10 @@ xuu is maintaining an [[certificate authority]] for internal services.
   * See [[Looking Glasses]] for more network diagnostic tools
   * Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
+  * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
+  * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
+  * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
+  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
 
 ### Proving ASN ownership
 Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
