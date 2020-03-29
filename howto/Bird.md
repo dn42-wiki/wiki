@@ -195,7 +195,7 @@ template bgp dnpeers {
   };
   export filter {
     # here we export the whole net
-    if is_valid_network() then {
+    if is_valid_network() && source ~ [RTS_STATIC, RTS_BGP] then {
       accept;
     }
     reject;
