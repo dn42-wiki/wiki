@@ -27,4 +27,4 @@ The mkdns script currently supports the following setups:
 
 ## Configuration
 
-See [[Recursive DNS resolver]] or [[DNS forwarding configuration|/services/dns/Configuration]].
+See [[DNS forwarding configuration|/services/dns/Configuration]].
