@@ -5,12 +5,17 @@ Running email in dn42 is not very complicated.  Your SMTP daemon probably alread
 * configure your mail server if needed
 
 ## Redirect
+~~There are forwarding rules for _PERSON_ @ dn42.org to the mail addresses which have been given in the registry. Please note that the trailing `-DN42` is stripped from the local part.~~
 
-There are forwarding rules for _PERSON_ @ dn42.org to the mail addresses which hav been given in the registry. Please note that the trailing `-DN42` is stripped from the local part.
+####Example####
+
+| Handle       | Alias          | Redirection           |
+|:------------ |:-------------- |:--------------------- |
+| `STV0G-DN42` | stv0g@dn42.org | post@steffenvogel.de` |
 
 ## Test email
 
-Send an email to `test@evenet.dn42` to check if your mail setup is correct. This host will reply using the following
+~~Send an email to `test@evenet.dn42` to check if your mail setup is correct.~~ This host will reply using the following
 sieve filter:
 
 ```
@@ -22,12 +27,6 @@ if header :contains "To" ["test@evenet.dn42"] {
   vacation :addresses ["test@evenet.dn42"] :seconds 60 :subject  "Re: ${subject_was}" "Your dn42 email setup works!";
 }
 ```
-
-####Example####
-
-| Handle       | Alias          | Redirection           |
-|:------------ |:-------------- |:--------------------- |
-| `STV0G-DN42` | stv0g@dn42.org | post@steffenvogel.de` |
 
 ## Exim tips
 
