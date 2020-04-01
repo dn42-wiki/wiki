@@ -27,6 +27,7 @@ Please sort by AS number.
 | 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
 | 4242421331 | ext: https://net-lg.nia.ac.cn <br> dn42: http://lg.nia.dn42 | UP |
 | 4242422189 | dn42: http://lg.iedon.dn42 | UP |
+| 4242423078 | dn42: http://lg.hex.dn42 | UP |
 
 ## Down
 
