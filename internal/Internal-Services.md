@@ -11,6 +11,7 @@ xuu is maintaining an [[certificate authority]] for internal services.
 ## Network-related
   * See [[Looking Glasses]] for more network diagnostic tools
   * Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
+  * An alternate network map: [map.dn42](http://map.dn42/) (Note: Currently DN42 only, will be public available after testing,  this is a direct copy of nixnodes map with some fixes and new functions since original map is no longer maintained)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
 
 ### Proving ASN ownership
