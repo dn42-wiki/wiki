@@ -32,6 +32,11 @@ dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICAN
 
 Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
 
+# Telegram Bot
+A telegram whois bot owned by [@Oxygen233](https://t.me/oxygen233) is hosted on [@DN42WhoisBot](https://t.me/DN42WhoisBot).
+
+Privacy mode is enabled, please call the bot with @DN42WhoisBot when necessary.
+
 # Web interface
 
 [http://explorer.burble.dn42/](http://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
