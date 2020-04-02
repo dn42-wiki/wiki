@@ -20,6 +20,7 @@ Please sort by AS number.
 | 4242422547 | ext: https://lg.lantian.pub or https://lg-alt.lantian.pub <br> dn42: http://lg.lantian.dn42 or http://lg-alt.lantian.dn42 | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
+| 4242422904 | ext: https://lg.doxz.net/ | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
