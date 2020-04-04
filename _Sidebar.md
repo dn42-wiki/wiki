@@ -17,6 +17,7 @@
   * [[OpenBGPD|OpenBGPD]]
   * [[Mikrotik RouterOS|mikrotik]]
   * [[EdgeRouter|EdgeOS Config]]
+  * [[Static routes on Windows]]
 
 * [[Services|/pages/services/]]
   * [[IRC]]
