@@ -30,6 +30,7 @@ Please sort by AS number.
 | 4242422189 | dn42: http://lg.iedon.dn42 | UP |
 | 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
 | 4242423078 | dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
+| 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 
 ## Down
 
