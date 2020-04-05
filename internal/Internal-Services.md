@@ -8,6 +8,8 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 xuu is maintaining an [[certificate authority]] for internal services.
 
+zotan is maintaining an [ACME server](https://ca.zotan.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+
 ## Network-related
   * See [[Looking Glasses]] for more network diagnostic tools
   * Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
