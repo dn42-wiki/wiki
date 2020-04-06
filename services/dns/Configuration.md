@@ -2,11 +2,21 @@
 
 Configuration of common resolver softwares to forward DNS queries for `.dn42` (and reverse DNS) IPv4 and IPv6 anycast services.
 
-You can use any *.recursive-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is available at the [DN42 registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42). To ease the resolving, an anycast server is provided to the whole network:
+You can use any *.recursive-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is available at the [DN42 registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42) or through querying SRV records of recursive-servers.dn42:
 
-* a.recursive-servers.dn42 172.20.0.53, fd42:d42:d42:54::1
+```sh
+drill -D SRV _dns._udp.recursive-servers.dn42. @172.20.0.53
+```
 
-All the examples here list 172.20.0.53, but you can use any other *.recursive-servers.dn42
+Two independent anycast services are also provided:
+
+| Name | IPv4 | IPv6 |
+|---|---|---|
+| a0.recursive-servers.dn42 | 172.20.0.53 | fd42:d42:d42:54::1 |
+| a3.recursive-servers.dn42 | 172.23.0.53 | fd42:d42:d42:53::1 |
+
+All the examples here list 172.20.0.53/fd42:d42:d42:54::1, but users are encouraged to configure
+multiple services from *.recursive-servers.dn42 for redundancy. 
 
 ## BIND
 
