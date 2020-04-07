@@ -8,10 +8,12 @@ Tor bridges allow for the Tor client to connect to a specific IP address and val
 |-----------------------|-----------|------------------|----------|------------------------------------------|------------------------------------|
 | photon.flat.dn42:8443 | 500kB/s   | irl@flat.dn42    | obfs4    | 83B02FB88253A7FD313B7912B12B05AF2A42D3B9 | Limited to 100GB transfer per week |
 | gouda.flat.dn42:8443  | 500kB/s   | irl@flat.dn42    | obfs4    | DF8CA08A9BED62B319D1E52610510959374444A2 |                                    |
+| tor.napshome.dn42:8443  | 3000KB/s+   | bjackson@napshome.net    | obfs4    | 71C924A772F69451FE97FE5A9025DEDDEF3DB664 |                                    |
+| tor.napshome.dn42:9001  | 3000KB/s+   | bjackson@napshome.net    | plain    | 71C924A772F69451FE97FE5A9025DEDDEF3DB664 |                                    |
 
 # Anycast Tor
 
-There is an anycast address, 172.22.0.94 aka tor.dn42, that provides the following services:
+There is an anycast address, 172.22.0.94 and fd42:d42:d42:9001::1 aka tor.dn42, that provides the following services:
 
 | Service | Port     |
 |---------|----------|
@@ -27,6 +29,10 @@ There is also unfortunately no means by which to tell Tor to use a specific IP a
 
 _Note that the same warnings above also apply to the following proxies._
 
-| Proxy URL                             | Bandwidth   | Contact     | Fingerprint                      |
-|---------------------------------------|-------------|-------------|----------------------------------|
-| socks5://172.20.11.33:9050            | 100 Mbit/s  | twink0r     | ?                                |
+| Proxy URL                             | Bandwidth   | Contact     |
+|---------------------------------------|-------------|-------------|
+| socks5://tor.napshome.dn42:9050       | 100+ Mbit/s | Napsterbater|
+
+| Offline                               |             |             |
+|---------------------------------------|-------------|-------------|
+| socks5://172.20.11.33:9050            | 100 Mbit/s  | twink0r     |

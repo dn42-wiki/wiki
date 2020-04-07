@@ -2,6 +2,8 @@
 
  * [[Home]]
   * [[Getting started]]
+  * [[Registry Authentication]]
+  * [[Address Space]]
   * [[FAQ]]
 
 * [[How-to|/pages/howto/]]
@@ -15,6 +17,7 @@
   * [[OpenBGPD|OpenBGPD]]
   * [[Mikrotik RouterOS|mikrotik]]
   * [[EdgeRouter|EdgeOS Config]]
+  * [[Static routes on Windows]]
 
 * [[Services|/pages/services/]]
   * [[IRC]]

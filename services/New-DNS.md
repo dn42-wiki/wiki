@@ -4,7 +4,7 @@ After frequent issues with the [[Old Hierarchical DNS]] system in early 2018, wo
 * Proper DNSSEC support for everything.
 
 # End Users
-It is **strongly recommended** to run your own resolver for security and privacy reasons. Setting it up and maintaining it should be easy, see [Running your own instances](#running-your-own-instances).
+It is **strongly recommended** to run your own resolver for security and privacy reasons. Setting it up and maintaining it should be easy, see [[dns/Configuration|Configuration]].
 
 If running your own resolver is not possible or undesirable, you can choose one or more instances from [dns/recursive-servers.dn42 in the registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42). Please make sure you fully understand the consequences and fully trust these operators.
 
@@ -37,6 +37,8 @@ These instances do not serve any clients. They poll the registry regularly and r
 
 # [Monitoring](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
 burble is providing monitoring for the new DNS system. It does simple checks on all instances every minute and also logs all changes into #dn42-dns@hackint.
+
+Also, gatuno provides another simple [dns checker for all the top level domains](http://gatuno.dn42/dns/) in the registry. If you want to check whatever a domain is resolving or not, this tool may be useful. The tool gets in sync with the registry every 12 hours. You can schedule checks for any domain.
 
 # DNSSEC
 There are currently two KSKs managed by BURBLE-MNT and JRB0001-MNT. They are used once per quarter to sign the DNSKEY RRset. Each master operator has one ZSK which is used to sign the zones (except for the DNSKEY RRset). This setup leads to bigger responses but allows each KSK holder to solve emergencies independently. The signatures of the DNSKEY RRset are valid until the end of the first month of the next quarter to give enough time for coordinating the next siging. All other signatures are valid for 3 days and replaced at least once per day.

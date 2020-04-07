@@ -2,6 +2,8 @@
 ## Setup
 ### Installation hints
 For IPsec with Public Keys you'll need the package _strongswan-plugin-pubkey_ installed.
+
+Don't forget to disable selinux :)
 ### Generate an RSA keypair
 
     root@debian:~# mkdir /etc/ipsec.d/public

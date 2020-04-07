@@ -12,7 +12,7 @@ The goal is to have a small, yet complete setup for all peers with ROA validatio
 
 As per the manual, configuration is divided into logical sections;  [`/etc/examples/bgpd.conf`](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/etc/examples/bgpd.conf?rev=HEAD&content-type=text/plain&only_with_tag=MAIN) is a complete and commented example which this guide is roughly based on.
 
-By default, [`bgpd(8)`](http://man.openbsd.org/bgpd.8) listens on all local addresses (on the current default [`routing domain`](http://man.openbsd.org/rdomain.4)), but this guide explicitly listens on the configured transfer ULA only for each peer to better illustrate of this setup.
+By default, [bgpd(8)](http://man.openbsd.org/bgpd.8) listens on all local addresses (on the current default [`routing domain`](http://man.openbsd.org/rdomain.4)), but this guide explicitly listens on the configured transfer ULA only for each peer to better illustrate of this setup.
 
 ## local host
 Information such as ASN, router ID and allocated networks are required:
@@ -40,7 +40,7 @@ network prefix-set mynetworks set large-community $ASN:1:1
 
 ## neighbors
 For each neighbor its ASN and transfer ULA is required.
-An optional description is provided such that [**bgpctl(8)**](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
+An optional description is provided such that [bgpctl(8)](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
 ```
 # peer A, transport over IPSec/GRE
 $A_local="fd00:12:34:A::1"
@@ -99,17 +99,11 @@ match from ebgp set { large-community delete $ASN:*:* }
 match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 ```
 
-Misbehaving peers can be adjusted;  for example Bird on FreeBSD is known to sometimes announce routes with incorrect `nexthop` attributes:
-```
-# XXX otherwise routes are installed with ::/128 nexthop
-match from AS $A_ASN set { nexthop $A_remote }
-```
-
 # ROA
-OpenBSD ships with [**rpki-client(8)**](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
+OpenBSD ships with [rpki-client(8)](http://man.openbsd.org/rpki-client.8) which nicely integrates with **bgpd**.
 Since DN42 emulates an IRR WHOIS service through the registry repository instead of providing an RPKI repository, this tool cannot be used.
 
-Instead, a shell script parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
+Instead, [a shell script](https://t4-2.high5.nl/pub/dn42/generate_roa-set.sh) parses route objects from the registry repository and generates a `roa-set {...}` block that is to be included in the main configuration file.
 
 One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
 
@@ -129,3 +123,7 @@ include "/etc/dn42.roa-set"
 ```
 
 # Looking glass
+This is mostly OpenBSD specific since [bgplg(8)](http://man.openbsd.org/bgplg.8) and [httpd(8)](http://man.openbsd.org/httpd.8) ship as part of the operating system.
+The **bgplg** manual contains the few steps and example [httpd.conf(5)](http://man.openbsd.org/httpd.conf.5) required to enable the looking glass.
+
+See https://t4-2.high5.nl/bgplg for a running instance operating within DN42.

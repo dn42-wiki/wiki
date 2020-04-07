@@ -1,10 +1,9 @@
 # Original DNS (deprecated)
-**The new anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`. Please see [[Old Hierarchical DNS]] for more information.**
+This information is now **deprecated**. Please check [[New DNS]] for the current architecture.
 
-**The information below is outdated.** 
 ***
 
-*(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.23.0.53` and `fd42:d42:d42:53::1`.
+*(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.20.0.53` and `fd42:d42:d42:54::1`.
 
 **DNS is build from [[whois database|services/Whois]]. So please edit your DNS-records there.**
 
@@ -16,7 +15,7 @@ Below are several ways to use the `dn42` DNS service, from easiest to more chall
 
 Please be aware that this method sends **all** your DNS queries (e.g. `google.com`) to a random DNS server inside dn42. The server could fake the result and point you towards the russian mafia. They probably won't, but think about what you are doing. At the end of the day, your ISP could be evil as well, so it always boils down to a question of trust.
 
-To do this, just use `172.23.0.53` or `fd42:d42:d42:53::1` as your resolver, for instance in `/etc/resolv.conf`.
+To do this, just use `172.20.0.53` or `fd42:d42:d42:54::1` as your resolver, for instance in `/etc/resolv.conf`.
 
 ### Forwarding `.dn42` queries to the anycast resolver
 

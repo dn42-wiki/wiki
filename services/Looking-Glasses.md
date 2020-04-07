@@ -17,15 +17,20 @@ Please sort by AS number.
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
+| 4242422547 | ext: https://lg.lantian.pub or https://lg-alt.lantian.pub <br> dn42: http://lg.lantian.dn42 or http://lg-alt.lantian.dn42 | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
+| 4242422904 | ext: https://lg.doxz.net/ | UP |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
-| 4242423088 | ext: http://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
+| 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
 | 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
 | 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
 | 4242421331 | ext: https://net-lg.nia.ac.cn <br> dn42: http://lg.nia.dn42 | UP |
-| 4242422189 | dn42: http://lg.iedon.dn42/ | UP |
+| 4242422189 | dn42: http://lg.iedon.dn42 | UP |
+| 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
+| 4242423078 | dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
+| 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 
 ## Down
 
