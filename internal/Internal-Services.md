@@ -12,8 +12,8 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
 
 ## Network-related
   * See [[Looking Glasses]] for more network diagnostic tools
-  * Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
-  * An alternate network map: [map.dn42](http://map.dn42/) (Note: Currently DN42 only, will be public available after testing,  this is a direct copy of nixnodes map with some fixes and new functions since original map is no longer maintained)
+  * Realtime network map: [map.dn42](http://map.dn42/) (via DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (via clearnet) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map uses the GRC as source, so it would be more comprehensive than original one. Data refreshes every 20~30 minutes.)_
+  * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
