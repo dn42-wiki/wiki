@@ -34,7 +34,7 @@ AllowedIPs = 0.0.0.0/0,::/0
 ## Configure tunnel:
 
 Wireguard comes with its own interface type. 
-It supports link-local addresses ipv6 and single /32 addresses for ipv4, which can be used for peering.
+It supports link-local addresses for IPv6 and single /32 addresses for IPv4, which can be used for peering.
 
 ```
 $ ip link add dev <interface_name> type wireguard
@@ -71,9 +71,9 @@ The script makes some changes that are not valid when used for DN42 tunnels, and
 
 - By default, the script will add a routing policy that routes the 'AllowedIP' ranges through the tunnel. In DN42, route selection is managed by BGP so the routing policy *must* be removed to avoid problems. This is achieved by adding the '_Table = off_' directive. 
 
-  - **Warning: a common pattern for DN42 tunnels is to use `AllowedIPs = 0.0.0.0/0` or `AllowedIPs = ::/0` then use firewall rules to limit source and destination addresses. If you do not add 'Table = off' this could cause you to route clearnet traffic via your peer and potentially lose connectivity to your node !**
+  - **Warning: a common pattern for DN42 tunnels is to use `AllowedIPs = 0.0.0.0/0` or `AllowedIPs = ::/0` then use firewall rules to limit source and destination addresses. If you do not add 'Table = off' this could cause you to route clearnet traffic via your peer and potentially lose connectivity to your node!**
 
-- It is common in DN42 to use Point-to-Point addressing schemes on tunnel interfaces (that is, using IPv4/32 and IPv6/128 addresses); this is not supported by wg-quick. To configure PTP addresses you must add a '_PostUp_' statement that first removes the addresses that wg-quick has configured and then re-add them. On Linux, this will typically be done using /sbin/ip.
+- It is common in DN42 to use Point-to-Point addressing schemes on tunnel interfaces (that is, using IPv4/32 and IPv6/128 addresses); this is not supported by wg-quick. To configure PTP addresses you must add a '_PostUp_' statement that first removes the addresses that wg-quick has configured and then re-add them. On Linux, this will typically be done using `ip` from `iproute2`.
 
 An example wg-quick script that incorporates the above two workarounds is below, where `<MyIPv[46]>` are the DN42 IP addresses of your node and `<PeerIPv[46]>` are the IP addresses for your peer. 
 
@@ -92,4 +92,5 @@ AllowedIPs = 10.0.0.0/8
 AllowedIPs = fd00::/8
 AllowedIPs = fe80::/10
 ```
+Use `which ip` to get the full path to your ip binary.
 
