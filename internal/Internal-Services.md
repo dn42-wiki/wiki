@@ -98,7 +98,7 @@ Entry points to the Tor network are available on dn42. See [[Tor|internal/servic
 
 ### Telegram
 
-A MTProxy server is available at https://t.me/proxy?server=172.20.51.97&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d.
+A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
 
 ## NTP
 
