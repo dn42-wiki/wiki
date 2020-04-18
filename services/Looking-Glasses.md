@@ -15,7 +15,7 @@ Please sort by AS number.
 | 4242420123 | dn42: https://lg.grmml.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
-| 4242421231 | ext: https://lg.caesia.net | UP |
+| 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
