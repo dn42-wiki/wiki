@@ -31,6 +31,7 @@ Please sort by AS number.
 | 4242421331 | ext: https://net-lg.nia.ac.cn <br> dn42: http://lg.nia.dn42 | UP |
 | 4242422189 | dn42: http://lg.iedon.dn42 | UP |
 | 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
+| 4242422428 | ext: https://lg.0l.de <br> IPv4 and IPv6 | UP |
 | 4242423078 | dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
 
 
