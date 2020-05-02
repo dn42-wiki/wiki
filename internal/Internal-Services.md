@@ -71,7 +71,7 @@ If you wish to access DN42's IPv4 services on an IPv6 only connection, please us
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams            |
-| https://invidious.doxz.dn42/                       | Invidious instance with proxy (Youtube)                  |
+| https://invidious.doxz.dn42/                      | Invidious instance with proxy (Youtube)                  |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -88,9 +88,10 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
-| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                                                                        
-| http://files.nop.dn42/                                      |       | max 1Mbit/s | download only                                  
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                                          
+| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
+| http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
+| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
+| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps             |
 
 ### Torrent Search Engine
 
