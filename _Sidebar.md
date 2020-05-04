@@ -18,6 +18,7 @@
   * [[Mikrotik RouterOS|mikrotik]]
   * [[EdgeRouter|EdgeOS Config]]
   * [[Static routes on Windows]]
+  * [[Universal Network Requirements|networksettings]]
 
 * [[Services|/pages/services/]]
   * [[IRC]]
