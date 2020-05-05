@@ -124,6 +124,15 @@ Name=<ifname>
 DHCP=no
 IPv6AcceptRA=false
 
+# for networkd >= 244 KeepConfiguration stops networkd from
+# removing routes on this interface when restarting
+KeepConfiguration=yes
+
+# for networkd < 244 the CriticalConnection parameter achieves
+# the same thing
+[DHCP]
+CriticalConnection=true
+
 # if using link local addresses for peering
 [Address]
 Address=fe80::xx:xx:xx:xx/64
@@ -138,5 +147,4 @@ Peer=<your peer's IPv6 address>/128
 Address=<your IPv4 address>/32
 Peer=<your peer's IPv4 address>/32
 ```
-
 
