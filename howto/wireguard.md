@@ -93,3 +93,50 @@ AllowedIPs = fe80::/10
 ```
 Use `which ip` to get the full path to your ip binary.
 
+## systemd-networkd
+
+Example configuration for systemd-networkd.
+
+peer.netdev
+```text
+[NetDev]
+Name=<ifname>
+Kind=wireguard
+
+[WireGuard]
+PrivateKey=<your private key>
+ListenPort=<your listen port>
+
+[WireGuardPeer]
+PublicKey=<peer public key>
+Endpoint=<peer host and port, e.g. 1.2.3.4:9876>
+AllowedIPs=fe80::/64
+AllowedIPs=fd00::/8
+AllowedIPs=0.0.0.0/0
+```
+
+peer.network
+```text
+[Match]
+Name=<ifname>
+
+[Network]
+DHCP=no
+IPv6AcceptRA=false
+
+# if using link local addresses for peering
+[Address]
+Address=fe80::xx:xx:xx:xx/64
+
+# if using IPv6 point to point
+[Address]
+Address=<your ipv6 address>/128
+Peer=<your peer's IPv6 address>/128
+
+# IPv4 point to point
+[Address]
+Address=<your IPv4 address>/32
+Peer=<your peer's IPv4 address>/32
+```
+
+
