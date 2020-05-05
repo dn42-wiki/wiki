@@ -123,6 +123,7 @@ Name=<ifname>
 [Network]
 DHCP=no
 IPv6AcceptRA=false
+IPForward=yes
 
 # for networkd >= 244 KeepConfiguration stops networkd from
 # removing routes on this interface when restarting
