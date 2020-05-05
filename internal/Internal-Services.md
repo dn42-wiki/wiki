@@ -20,6 +20,31 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
   * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/), [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
 
+
+### GeoIP Services
+[Map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
+
+#### API
+Results are in JSON format. 
+
+http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en
+
+http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
+
+#### Client
+There is a client software using above apis to provide GeoIP-based traceroute. 
+It is a modified IPIP.NET Best Trace software with DN42 support injection.
+
+Windows only, no virus scan report available, but our DLL source is provided with the modified client.
+
+It's highly recommended to run this tool in a sandbox. 
+
+** Since the original software is not open source, so use it at your own risk. **
+
+Preview: http://img.dn42/images/GEOTRACE42.jpg
+
+Link: http://map.dn42/BestTrace42.zip
+
 ### Proving ASN ownership
 Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
 This signature can be very easily verified by anyone. This removes the hassle from checking every different authentication method in the registry. This is particularly useful for automated setups.
