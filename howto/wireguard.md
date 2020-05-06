@@ -23,6 +23,8 @@ ListenPort = <YOUR_LOCAL_UDP_PORT>
 
 [Peer]
 PublicKey = <public_key_of_your_peer>
+# OPTIONAL, its also possible to define a pre-shared key for additional security
+PresharedKey = <pre-shared key>
 # at least one peer needs to provide this one
 Endpoint = <end_point_hostname_or_ip:port>
 # in theory this could be restricted to dn42 networks,
@@ -109,6 +111,8 @@ ListenPort=<your listen port>
 
 [WireGuardPeer]
 PublicKey=<peer public key>
+# OPTIONAL, pre-shared key
+PresharedKey=<pre-shared key>
 Endpoint=<peer host and port, e.g. 1.2.3.4:9876>
 AllowedIPs=fe80::/64
 AllowedIPs=fd00::/8
