@@ -27,7 +27,7 @@ Also, you can't use a /32 on the GRE/PtP links. Even if you add a local route to
 ### IPSec
 First, let's add IPSec peer and encryption policy.  
 Peer most likely provided you with encryption details.  
-If not, ask him about it.
+If not, ask them about it.
 Here we're gonna use aes256-sha256-modp1536
 
 ```
