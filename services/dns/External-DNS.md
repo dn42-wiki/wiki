@@ -7,7 +7,7 @@ This page lists external DNS zones, provided by networks that are interconnected
 |:----------------:|:----------:|:------------:|:----------------:|-------------------------------|--------------|---------|
 | ChaosVPN | - | `hack.` | `31.172.in-addr.arpa.` | `172.31.0.5` | Nov. 2013 | - |
 | RaumZeitLabor | - | `rzl.` | - | `172.22.36.250` | Jun. 2017 | - |
-| NeoNetwork | - | `neo.` | - | `10.127.225.2` | Mai 2020 | - |
+| NeoNetwork | - | `neo.` | `127.10.in-addr.arpa` | `10.127.225.2` | Mai 2020 | - |
 ## Freifunk
 
 Freifunk generates its zone configuration from the [icvpn-meta](https://github.com/freifunk/icvpn-meta) repositority via the **mkdns**-script contained in [icvpn-scripts](https://github.com/freifunk/icvpn-scripts). As there are many Freifunk-Communities this is the easiest way to get them all.
