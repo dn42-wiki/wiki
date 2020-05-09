@@ -25,6 +25,10 @@ The mkdns script currently supports the following setups:
 * dnsmasq
 * unbound (forward-zone)
 
+## NeoNetwork
+
+NeoNetwork zone files can be found here: https://github.com/NeoCloud/NeoNetwork/tree/master/dns
+
 ## Configuration
 
 See [[DNS forwarding configuration|/services/dns/Configuration]].
