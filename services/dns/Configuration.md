@@ -32,6 +32,10 @@ zone "20.172.in-addr.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
+zone "21.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
 zone "22.172.in-addr.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
@@ -94,6 +98,7 @@ Put this in your mararc:
 ipv4_alias["dn42_root"] = "172.20.0.53"
 root_servers["dn42."] = "dn42_root"
 root_servers["20.172.in-addr.arpa."] = "dn42_root"
+root_servers["21.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
 root_servers["23.172.in-addr.arpa."] = "dn42_root"
 ```
@@ -173,6 +178,12 @@ system {
 		  fd42:d42:d42:54::1;
                }
             }
+        default-domain 21.172.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
+               }
+            }
         default-domain 22.172.in-addr.arpa {
                forwarders {
                   172.20.0.53;
@@ -192,4 +203,4 @@ system {
 ```
 
 ## MS DNS
-Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
+Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
