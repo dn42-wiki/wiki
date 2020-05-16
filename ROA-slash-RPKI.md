@@ -38,7 +38,7 @@ You can also run dn42regsrv via docker (then available at 127.0.0.1:8042):
 
     git checkout https://git.dn42.us/burble/dn42regsrv.git .
     cd contrib/docker
-    docker-compose build
+    ./build.sh
     docker-compose up -d
   
 Documentation for the api endpoints can be found here: https://git.dn42.us/burble/dn42regsrv/src/master/API.md
