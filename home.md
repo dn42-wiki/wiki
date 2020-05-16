@@ -77,3 +77,7 @@ The [[Getting started]] page helps you to get your first node inside the network
 ## About this wiki
 
 This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
+
+#### DN42 Logo
+
+An svg of the DN42 Logo is available [here](/dn42.svg).
