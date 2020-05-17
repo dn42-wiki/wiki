@@ -32,4 +32,13 @@ Check that ALL your vpn interfaces allow ip forwarding for ipv6/ipv4.
 $ sysctl -a | grep forwarding
 ```
 
+### Note on firewalls, conntrack and asymmetric routing
+
+Do not configure iptables/nftables to drop packets with invalid conntrack state in forward chain.
+
+In some cases your router will not see traffic from both sides e.g. requests are sent via different path not including your networks
+but responses are fowarded via your network. This will prevent conntrack from assigning any meaningful state information to these packets
+and your firewall will drop it if it is configured to drop packets with invalid state.
+
+
 Happy Routing!
