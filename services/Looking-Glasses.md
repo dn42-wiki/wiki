@@ -13,6 +13,7 @@ Please sort by AS number.
 | 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. | UP |
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
 | 4242420123 | dn42: https://lg.grmml.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242420151 | ext: ssh bird-lg@dn42-uk-london0.dn42.bauen1.xyz <br> restricted bird shell | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | UP |
