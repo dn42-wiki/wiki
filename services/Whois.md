@@ -5,6 +5,8 @@
   * Subnet assignations
   * DNS root zone for `dn42.`
 
+The registry is a git repository, hosted here: [https://git.dn42.us/dn42/registry](https://git.dn42.us/dn42/registry), Changes to the registry are managed by submitting pull requests to the repository, these are then reviewed by the registry maintainers before acceptance. 
+
 # Names and numbers
 
 dn42 uses some names and numbers, which are declared in the registry.  Whenever possible, we try to stick to names and numbers that do not conflict with the ICANN-net or other networks similar to dn42, for instance by using private numbers space.
@@ -13,7 +15,9 @@ dn42 uses some names and numbers, which are declared in the registry.  Whenever 
 
 dn42 uses **172.20.0.0/14** for IPv4.
 
-For IPv6, we use ULA (that is, **fd00::/8**). Some participans also announce globally unique PI/PA address space, but these announcements are not accepted by most other participants. See also the [FAQ](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42).
+For IPv6, we use ULA (that is, **fd00::/8**).
+
+See also the howto page covering the [DN42 address space](/howto/Address-Space).
 
 ## AS numbers
 
@@ -37,25 +41,15 @@ A telegram whois bot owned by [@Oxygen233](https://t.me/oxygen233) is hosted on 
 
 Privacy mode is enabled, please call the bot with @DN42WhoisBot when necessary.
 
-# Web interface
+# Web interface and REST API
 
-[http://explorer.burble.dn42/](http://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
+[https://explorer.burble.dn42/](https://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
 
-A previous web interface hosted at Nixnodes, is no longer working. ([https://io.nixnodes.net/?registry](https://io.nixnodes.net/?registry]))
+The service is provided by [dn42regsrv](https://git.dn42.us/burble/dn42regsrv) which can also be run locally.
 
 ## Authentication
 
-To add or edit records with the web interface, authentication is done thanks to **maintainer objects**. Each maintainer object has a password associated to it.
-
-The password are not stored in cleartext in the registry: a hash is computed from the password and the name of the maintainer object. To generate such a hash (e.g. in case you forgot your password), use https://io.nixnodes.net/nctlio.php?m=dnr&gen=mypassword&mnt=MYMAINTAINER-MNT
-
-## REST API with JSON response
-
-Read-only, responses are encoded in JSON, for details please consult https://rest.dn42/ .
-
-## Misc
-
-A read-only interface is also available at http://ix.ucis.dn42/dn42/ ([public](http://ix.ucis.nl/dn42/) or 172.22.166.3). The used PHP scripts are available from UFO a.k.a. Ivo at request.
+See the page on [Registry Authentication](howto/Registry-Authentication)
 
 # DNS interface
 
@@ -71,12 +65,6 @@ The Python code for generating the zone from the registry is available on the mo
 
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see https://www.team-cymru.org/Services/ip-to-asn.html#dns
 
-# Address space
-
-There is nice 3djs visualisation showing current address space usage: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html ([public](http://dataviz.polyno.me/dn42-netblock-visu/registry.html) or 172.23.184.71). The input data is taken from the registry.
-
-Another visualisation shows the prefixes seen by BGP: http://dataviz.polynome.dn42/dn42-netblock-visu/index.html ([public](http://dataviz.polyno.me/dn42-netblock-visu/index.html) or 172.23.184.71).
-
 # Software
 
  * [[lglass]] is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
@@ -88,14 +76,11 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
-| nixnodes   | whois.nixnodes.dn42          | 172.22.177.77 / fd42:1107::c0:e  |
 | org-cccda  | whois.cda.dn42               | 172.23.96.1 / fd42:23:cda::1 |
-| w0h        | whois.w0h.dn42               | 172.22.232.6 / fd2d:a6da:8d1a:1408::6 |
 | weiti      | whois.weiti.dn42             | 172.20.175.253 / fdf7:17d5:de49::43 |
-| Mic92      | whois.evenet.dn42 ([whois42d](https://git.dn42.us/dn42/whois42d)) | 172.23.75.1 / fd42:4992:6a6d::6 |
-| Fritz      | whois.flhb.de                | 172.22.70.69 / 2001:67c:708:102:5054:ff:fe57:9573 / fdd6:aff6:5f6f:102:5054:ff:fe57:9573 |
 | NIA        | whois.nia.dn42               | 172.20.158.153 / fd00:1926:817:43::1 |
 | Lan Tian   | whois.lantian.dn42           | 172.22.76.108 / fdbc:f9dc:67ad:2547::43 |
+| burble     | whois.burble.dn42            | 172.20.129.8 / fd42:4242:2601:ac43::1 |
 
 ### Down?
 
@@ -103,6 +88,9 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 |------------|---------------------------|-----------------|
 | welterde   | thinkbase.srv.welterde.de | 46.4.248.201    |
 | prauscher  | sheldon.prauscher.dn42    | 172.22.120.1    |
+| w0h        | whois.w0h.dn42               | 172.22.232.6 / fd2d:a6da:8d1a:1408::6 |
+| Mic92      | whois.evenet.dn42 ([whois42d](https://git.dn42.us/dn42/whois42d)) | 172.23.75.1 / fd42:4992:6a6d::6 |
+| Fritz      | whois.flhb.de                | 172.22.70.69 / 2001:67c:708:102:5054:ff:fe57:9573 / fdd6:aff6:5f6f:102:5054:ff:fe57:9573 |
 
 ## Usage
 ```sh
@@ -142,58 +130,3 @@ sudo ruby whoisd.rb nobody
 ## Whois restful API
 Note: this service is in beta testing, use at your own risk.
 https://whois.rest.dn42/
-
-# Monotone
-Monotone is an distributed revision control system. Monotone tracks revisions to files, groups sets of revisions into changesets, and tracks history across renames. The design principle is distributed operation making heavy use of cryptographic primitives to track file revisions (via the SHA-1 secure hash) and to authenticate user actions (via RSA cryptographic signatures). Each participant maintains their own revision history store in a local SQLite database. Monotone is especially strong in its support of a diverge/merge workflow, which it achieves in part by always allowing commit before merge. Revisions are exchanged using the custom netsync protocol which shares some conceptual ground with rsync and cvs.
- * [Website](http://monotone.ca/)
- * [Tutorial](http://monotone.ca/docs/Tutorial.html)
-
-## Monotone servers
-
-| Person   | Address                                | Status |
-|----------|----------------------------------------|--------|
-| crest    | mtn.crest.dn42                         | UP     |
-| siska    | mtn.nixnodes.net (mtn.nixnodes.dn42)   | UP     |
-| dracoling | dn42.smrsh.net (net.smrsh.dn42)       | UP     |
-| xuu      | mtn.xuu.dn42 (172.22.141.181)          | UP     |  
-| zorun    | mtn.polyno.me / mtn.polynome.dn42 (172.23.184.71)| UP |
-| Nurtic-Vibe | mtn.dn42.eu / mtn.grmml.dn42 (172.23.149.20/fd42:23:149:1::20)| UP |
-| toBee | mtn.mhm.dn42 (172.23.67.120)| UP |
-| hexa- | mtn.lossy.network (172.23.42.130) | UP |
-| tombii | mtn.tombii.dn42 (172.22.102.133) | UP |
-| Mic92 | mtn.evenet.dn42 (172.23.75.6/fd42:4992:6a6d::6) | UP |
-| weiti | mtn.weiti.dn42 (172.20.175.251/fdf7:17d5:de49::251) | UP |
-
-
-## Monotone branches
- * net.dn42.registry: Contains the registry and some related code
-
-## Client setup
-```sh
-mtn genkey you@domain.tld
-mtn pubkey you@domain.tld # send the output to some $monotone_server operator (do NOT send the keypair!)
-mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry
-cd net.dn42.registry
-$add_your_objects
-mtn add --unknown
-mtn ci -k you@domain.tld
-mtn sync
-```
-
-## Server setup
-
-Debian has a package "monotone-server", with config located in "/etc/monotone".
-
-### Allowing somebody to write to a monotone server
-
-If you want to allow somebody else to write to your monotone server (for instance for somebody to sync with you), you first need to import their key, here on Debian:
-
-    mtn --db /var/lib/monotone/default.mtn read < pubkey
-
-Then edit the file `write-permissions` (`/etc/monotone/write-permissions` on Debian) to add the email address associated with the public key.
-
-References: http://www.monotone.ca/docs/Basic-Network-Service.html#Basic-Network-Service and https://geti2p.net/en/get-involved/guides/monotone#obtaining-and-deploying-developers-keys
-
-### Tips and tricks
-
-Pro-tip: monotone seems to use `SO_V6ONLY`, which is annoying. To bind to both IPv4 and IPv6, use `ADDRESS=":: --bind 0.0.0.0"` in `/etc/default/monotone`.
