@@ -19,6 +19,7 @@
   * [[EdgeRouter|EdgeOS Config]]
   * [[Static routes on Windows]]
   * [[Universal Network Requirements|networksettings]]
+  * [[VyOS|vyos]]
 
 * [[Services|/pages/services/]]
   * [[IRC]]
