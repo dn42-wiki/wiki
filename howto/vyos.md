@@ -43,8 +43,26 @@ _this is a single provided address by your peer that is assigned to them in the 
   
 While a normal world configuration may allow multiple peers on one Wireguard interface, this configuration will not work correctly if multiple peers are defined on the same interface.
 
-####Coming Soon
 
+##BGP
+Now that we have a tunnel to our peer and theoretically can ping them, we can setup BGP.  
+###Initial Router Setup  
+`set protocols bgp 424242XXXX address-family ipv4-unicast network 172.x.x.x\x`  
+_Insert your ASN and your assigned network block.  Note that this should match your exact prefix as listed in the registry; if you try to advertise a subnet of your assigned block it could get filtered by some peers._  
+`set protocols bgp 424242XXX parameters router-id 172.x.x.x`  
+_To keep it simple just make your router ID match your lower IP within the DN42 registered space._  
+###Neighbor Up With Peers
+`set protocols bgp 424242XXXX neighbor 172.x.x.x address-family ipv4-unicast`  
+_This is likely the same IP as the one used in your static route earlier when creating the Wireguard tunnel._  
+`set protocols bgp 424242XXXX neighbor 172.x.x.x ebgp-multihop 20`   
+_This setting may need to be adjusted depending on circumstances_  
+`set protocols bgp 424242XXXX neighbor 172.x.x.x remote-as 424242XXXX`  
+_Your peers ASN_  
+  
+`show ip bgp summary`
+
+
+####Coming Soon  
 Setup BGP
 
 Neighbor Up With Peer via BGP
