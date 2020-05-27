@@ -87,9 +87,10 @@ set policy route-map DN42-ROA rule 30 match rpki 'invalid'
 ```
 This example allows all routes in unless they are marked invalid or in other words possibly been a victim of BGP hijacking.  
 ###Assign Route Map to Neighbor
-`set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map import DN42-ROA`  
-`set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA`  
-
+```
+set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map import DN42-ROA  
+set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   
+```
 
 ####Coming Soon  
  - Recommended firewall configuration
