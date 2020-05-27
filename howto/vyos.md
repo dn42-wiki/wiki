@@ -18,25 +18,28 @@ _1.3-rolling-202004300117 is a known good release to work with Wireguard and DN4
 `generate wireguard default-keypair`    
 `show wireguard keypairs pubkey default`  
 _Grab your public key and save it for later.  This will be shared with peers._  
-###Configure Peer Tunnel
-_They should have provided their endpoint public IP, port, DN42 address, and public wireguard key._  
+###Configure Peer Tunnel  
+Your peer should provide their endpoint public IP, port, single DN42 address, and Wireguard public key.   
+   
 `set interfaces wireguard wg01 address '172.x.x.x/32'`  
 _this is a single address within your DN42 registered address space_  
 `set interfaces wireguard wg01 peer OtherGuy1 allowed-ips '0.0.0.0/0''`  
 _it's just easier to filter traffic with the firewall_  
 `set interfaces wireguard wg01 peer OtherGuy1 address 'x.x.x.x'`  
 _this is the public IP of your peers endpoint_  
-`set interfaces wireguard wg01 OtherGuy1 port '12345'  
+`set interfaces wireguard wg01 OtherGuy1 port '12345'`  
 _the configured port on your peers endpoint_  
 `set interfaces wireguard wg01 peer OtherGuy1 pubkey 'XMrlPykaxhdAAiSjhtPlvi30NVkvLQliQuKP7AI7CyI='`  
 _your peers public wireguard key_  
 `set interfaces wireguard wg01 port '12345'`  
 _the port your wireguard endpoint will "listen" on_  
-###Set Static Route
-_In case you are wondering how you are going to route packets anywhere with a /32, the next command explains it all._    
+###Set Static Route  
+In case you are wondering how you are going to route packets anywhere with a /32, the next command explains it all.  
+     
 `set protocols static interface-route 172.x.x.x/32 next-hop-interface wg01`  
 _this is a single provided address by your peer that is assigned to them in the registry_  
-
+  
+While a normal world configuration may allow multiple peers on one Wireguard interface, this configuration will not work correctly if multiple peers are defined on the same interface.
 
 ####Coming Soon
 
