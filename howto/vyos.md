@@ -14,11 +14,12 @@ _1.3-rolling-202004300117 is a known good release to work with Wireguard and DN4
 
 
 ##Wireguard
-1. First we need to setup keys.  
-`generate wireguard default-keypair`  
-2. Grab your public key and save it for later.  This will be shared with peers.  
+###Setup Keys 
+`generate wireguard default-keypair`    
 `show wireguard keypairs pubkey default`  
-3. Next we need to configure our peer.  They should have provided their endpoint public IP, port, DN42 address, and public wireguard key.  
+_Grab your public key and save it for later.  This will be shared with peers._  
+###Configure Peer Tunnel
+_They should have provided their endpoint public IP, port, DN42 address, and public wireguard key._  
 `set interfaces wireguard wg01 address '172.x.x.x/32'`  
 _this is a single address within your DN42 registered address space_  
 `set interfaces wireguard wg01 peer OtherGuy1 allowed-ips '0.0.0.0/0''`  
@@ -31,7 +32,8 @@ _the configured port on your peers endpoint_
 _your peers public wireguard key_  
 `set interfaces wireguard wg01 port '12345'`  
 _the port your wireguard endpoint will "listen" on_  
-4. In case you are wondering how you are going to route packets anywhere with a /32, the next command explains it all.   
+###Set Static Route
+_In case you are wondering how you are going to route packets anywhere with a /32, the next command explains it all._    
 `set protocols static interface-route 172.x.x.x/32 next-hop-interface wg01`  
 _this is a single provided address by your peer that is assigned to them in the registry_  
 
