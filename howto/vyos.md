@@ -19,7 +19,7 @@ _1.3-rolling-202004300117 is a known good release to work with Wireguard and DN4
 3. Next we need to configure our peer.  They should have provided their endpoint public IP, port, and public wireguard key.
 `set interfaces wireguard wg01 address '172.x.x.x/32'` - this is a single address within your DN42 registered address space
 `set interfaces wireguard wg01 peer OtherGuy1 allowed-ips '0.0.0.0/0''` - it's just easier to filter traffic with the firewall
-`set interfaces wireguard wg01 peer OtherGuy1 address 'x.x.x.x:12345'` - this is the public IP of your peers endpoint
+`set interfaces wireguard wg01 peer OtherGuy1 address 'x.x.x.x'` - this is the public IP of your peers endpoint
 `set interfaces wireguard wg01 OtherGuy1 port '12345'` - the configured port on your peers endpoint
 `set interfaces wireguard wg01 peer OtherGuy1 pubkey 'XMrlPykaxhdAAiSjhtPlvi30NVkvLQliQuKP7AI7CyI='` - your peers public wireguard key
 `set interfaces wireguard wg01 port '12345'` - the port your wireguard endpoint will "listen" on
