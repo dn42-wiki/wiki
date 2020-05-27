@@ -41,7 +41,7 @@ In case you are wondering how you are going to route packets anywhere with a /32
 `set protocols static interface-route 172.x.x.x/32 next-hop-interface wg01`  
 _this is a single provided address by your peer that is assigned to them in the registry_  
   
-While a normal world configuration may allow multiple peers on one Wireguard interface, this configuration will not work correctly if multiple peers are defined on the same interface.
+While a normal world configuration may allow multiple peers on one Wireguard interface, the configuration explained on this page will not work correctly if multiple peers are defined on the same interface.
 
 
 ##BGP
