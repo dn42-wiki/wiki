@@ -93,7 +93,9 @@ set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-
 ```
 
 ####Coming Soon  
- - Recommended firewall configuration
+ - Recommended firewall configuration.  
+  
+This page is a work in progress from Owens Research. Feel free to contact for suggestions or questions. 
 
 
 
