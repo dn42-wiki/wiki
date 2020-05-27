@@ -62,14 +62,7 @@ _Your peers ASN_
 `show ip bgp summary`
 
 
-####Coming Soon  
-Setup BGP
-
-Neighbor Up With Peer via BGP
-
-RPKI/ROA Checking
-
-Firewall Would be a good idea…
+####Recommended firewall configuration coming soon..
 
 
 
