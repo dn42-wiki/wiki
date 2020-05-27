@@ -1,6 +1,8 @@
 #VyOS
-VyOS is an open source router.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.  It can be downloaded here https://www.vyos.io/rolling-release/.  
-
+VyOS is an open source router.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.  
+  
+It can be downloaded here https://www.vyos.io/rolling-release/.  
+  
 
 _1.3-rolling-202004300117 is a known good release to work with Wireguard and DN42._
 
