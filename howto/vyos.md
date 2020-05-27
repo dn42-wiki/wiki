@@ -62,7 +62,8 @@ _Your peers ASN_
 `show ip bgp summary`
 
 
-####Recommended firewall configuration coming soon..
+####Coming Soon  
+ - Recommended firewall configuration
 
 
 
