@@ -6,12 +6,12 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 ## CA
 
-xuu is maintaining an [[certificate authority]] for internal services.
+xuu is maintaining an [[certificate authority|/services/Certificate-Authority]] for internal services.
 
 zotan is maintaining an (experimental, but working) [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
 ## Network-related
-  * See [[Looking Glasses]] for more network diagnostic tools
+  * See [[Looking Glasses|/services/Looking-Glasses]] for more network diagnostic tools
   * Realtime network map: [map.dn42](http://map.dn42/) (via DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (via clearnet) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map uses the GRC as source, so it would be more comprehensive than original one. Data refreshes every 20~30 minutes.)_
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)

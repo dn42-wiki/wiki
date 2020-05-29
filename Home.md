@@ -32,7 +32,7 @@ If your hackerspace is actually using dn42 to provide some services, please let 
 
 dn42 is operated by a group of volunteers. There is no central authority which controls or impersonates the network. Take a look at the [[contact]] page to see how to collaborate or contact us.
 
-The [[Getting started]] page helps you to get your first node inside the network.
+The [[Getting started|howto/Getting-Started]] page helps you to get your first node inside the network.
 
 ## External resources about dn42
 

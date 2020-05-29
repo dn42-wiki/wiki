@@ -1,8 +1,12 @@
 In the real world two organizations have to lay cables to one another when they want to peer. This is why IXPs (Internet Exchange Points) or IXes (Internet Exchanges) for short exist. Instead of laying cables to one another, organizations lay cables to an exchange instead. This allows them to peer with hundreds of other companies.
 
-A few people provide exchanges on DN42.
+In DN42 this is less relevant as links between peers are using 'cheap' VPNs.
 
-The following exchanges are available:
+---
+
+A few people have provided exchanges previously on DN42, however they created single
+points of failure and are no longer operating
+
 * Amsterdam (OpenVPN) - NL Zuid (marlinc) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
 * New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
