@@ -93,18 +93,13 @@ set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-
 ```
 
 ###Example Firewall
-In this example our VyOS router has one upstream uplink on **eth0**, and two tunnels/peers on **wg1** and **wg2**.
+In this example our VyOS router has one upstream uplink on **eth0**, and two tunnels/peers on **wg1** and **wg2**.  We have two access lists: one for transit connections and one for local connections from our peer (BGP).  Notice on the transit access list we don't black hole **invalid** packets - logic behind this is explained [here](https://wiki.dn42/howto/networksettings.md).
 
 ####Interfaces
 ````
  ethernet eth0 {
      address 192.168.1.2/30
      description "Upstream/ISP"
-     firewall {
-         out {
-             name To_Upstream_Network
-         }
-     }
      hw-id 00:00:00:00:00:00
  }
  wireguard wg1 {
@@ -216,7 +211,7 @@ In this example our VyOS router has one upstream uplink on **eth0**, and two tun
      }
      rule 50 {
          action accept
-         description "Allow Peer Transit (DN42 Only)"
+         description "Allow Peer Transit"
          destination {
              group {
                  network-group Allowed-Transit
