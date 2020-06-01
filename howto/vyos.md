@@ -92,8 +92,156 @@ set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-
 set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   
 ```
 
-####Coming Soon  
- - Recommended firewall configuration.  
+###Example Firewall
+In this example our VyOS router has one upstream uplink on **eth0**, and two tunnels/peers on **wg1** and **wg2**.
+
+####Interfaces
+````
+ ethernet eth0 {
+     address 192.168.1.2/30
+     description "Upstream/ISP"
+     firewall {
+         out {
+             name To_Internal_Network
+         }
+     }
+     hw-id 00:00:00:00:00:00
+ }
+ wireguard wg1 {
+     address 172.x.x.x/32
+     description "Tunnel 1"
+     firewall {
+         in {
+             name Tunnels_Inbound
+         }
+         local {
+             name Peer_Local_Connections
+         }
+     }
+     peer us-east01 {
+         address x.x.x.x
+         allowed-ips 0.0.0.0/0
+         port 1100
+         pubkey ***
+     }
+     port 1101
+ }
+ wireguard wg99 {
+     address 172.x.x.x/32
+     description "Tunnel 2"
+     firewall {
+         in {
+             name Tunnels_Inbound
+         }
+         local {
+             name Peer_Local_Connections
+         }
+     }
+     peer us-east02 {
+         address x.x.x.x
+         allowed-ips 0.0.0.0/0
+         port 1102
+         pubkey ***
+     }
+     port 1103
+ }
+````
+####Firewall Rules
+````
+
+ group {
+     network-group Allowed-Transit {
+         network 10.0.0.0/8
+         network 172.20.0.0/14
+     }
+ }
+ name Peer_Local_Connections {
+     default-action drop
+     rule 1 {
+         action accept
+         description "Enable Stateful"
+         state {
+             established enable
+             related enable
+         }
+     }
+     rule 10 {
+         action accept
+         description "Allow BGP"
+         destination {
+             port 179
+         }
+         protocol tcp
+         source {
+             address x.x.x.x  **Peer 1 IP
+         }
+     }
+     rule 11 {
+         action accept
+         description "Allow BGP"
+         destination {
+             port 179
+         }
+         protocol tcp
+         source {
+             address x.x.x.x  **Peer 2 IP
+         }
+     }
+     rule 98 {
+         action drop
+         description "Black Hole"
+         log enable
+         source {
+             address 0.0.0.0/0
+         }
+     }
+     rule 99 {
+         action drop
+         description "Black Hole"
+         log enable
+         state {
+             invalid enable
+         }
+     }
+ }
+ name Tunnels_Inbound {
+     default-action drop
+     rule 1 {
+         action accept
+         description "Enable Stateful"
+         state {
+             established enable
+             related enable
+         }
+     }
+     rule 50 {
+         action accept
+         description "Allow Peer Transit (DN42 Only)"
+         destination {
+             group {
+                 network-group Allowed-Transit
+             }
+         }
+         log enable
+         source {
+             group {
+                 network-group Allowed-Transit
+             }
+         }
+     }
+     rule 99 {
+         action drop
+         description "Black Hole"
+         log enable
+         source {
+             address 0.0.0.0/0
+         }
+     }
+ }
+````
+
+
+
   
 This page is a work in progress from Owens Research. Feel free to contact for suggestions or questions. 
 
