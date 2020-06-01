@@ -102,7 +102,7 @@ In this example our VyOS router has one upstream uplink on **eth0**, and two tun
      description "Upstream/ISP"
      firewall {
          out {
-             name To_Internal_Network
+             name To_Upstream_Network
          }
      }
      hw-id 00:00:00:00:00:00
