@@ -94,7 +94,7 @@ set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-
 set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   
 ```
 
-###Example Firewall
+##Example Firewall
 In this example our VyOS router has one upstream uplink on **eth0**, and two tunnels/peers on **wg1** and **wg2**.  We have two access lists: one for transit connections and one for local connections from our peer (BGP).  Notice on the transit access list we don't black hole **invalid** packets - logic behind this is explained [here](https://wiki.dn42/howto/networksettings.md).
 
 ####Interfaces
