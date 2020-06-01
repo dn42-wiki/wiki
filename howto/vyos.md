@@ -123,7 +123,7 @@ In this example our VyOS router has one upstream uplink on **eth0**, and two tun
      }
      port 1101
  }
- wireguard wg99 {
+ wireguard wg2 {
      address 172.x.x.x/32
      description "Tunnel 2"
      firewall {
