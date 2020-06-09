@@ -155,6 +155,8 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | mc.nia.dn42 (172.20.168.131)                      | Minecraft              | 1.15.2, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132)                     | OpenTTD                | 1.10.1, Optimized for CN   |
+| ttd.jerry.dn42 (172.20.51.99, fd07:d34:7969:2::1) | OpenTTD                | 1.10.1, Hosted by jerry    |
+| stk.jerry.dn42:2759 (172.20.51.99)                | supertuxkart           | 1.1,    Optimized for CN   |
 
 ## Shell
 
