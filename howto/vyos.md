@@ -4,7 +4,7 @@ VyOS is an open source router.  The developers have a nightly rolling release th
 It can be downloaded here https://www.vyos.io/rolling-release/.  
   
 
-_1.3-rolling-202004300117 is a known good release to work with Wireguard and DN42._
+While _1.3-rolling-202004300117_ is a known good release to fallback to, at this time it's recommended to grab the latest nightly build.
 
 
 ##Quick Start
