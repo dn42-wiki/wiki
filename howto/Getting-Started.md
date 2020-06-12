@@ -86,7 +86,7 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 Example: data/person/FOO-DN42
 ```
 person:             John Doe
-contact:            john.doe@example.com
+e-mail:             john.doe@example.com
 nic-hdl:            FOO-DN42
 mnt-by:             FOO-MNT
 source:             DN42
