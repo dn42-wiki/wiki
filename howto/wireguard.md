@@ -82,16 +82,14 @@ An example wg-quick script that incorporates the above two workarounds is below,
 [Interface]
 PrivateKey = <your private key>
 Address = <MyIPv4>/32, <MyIPv6>/128
-PostUp = /sbin/ip addr del dev wg0 <MyIPv4>/32 && /sbin/ip addr add dev wg0 <MyIPv4>/32 peer <PeerIPv4>/32 && /sbin/ip addr del dev wg0 <MyIPv6>/128 && /sbin/ip addr add dev wg0 <MyIPv6>/128 peer <PeerIPv6>/128
+PostUp = /sbin/ip addr del dev wg0 <MyIPv4>/32 && /sbin/ip addr add dev wg0 <MyIPv4>/32 peer <PeerIPv4>/32
+PostUp = /sbin/ip addr del dev wg0 <MyIPv6>/128 && /sbin/ip addr add dev wg0 <MyIPv6>/128 peer <PeerIPv6>/128
 Table = off
  
 [Peer]
 Endpoint = <your peer's wireguard endpoint>
 PublicKey = <your peer's public key>
-AllowedIPs = 172.16.0.0/12
-AllowedIPs = 10.0.0.0/8
-AllowedIPs = fd00::/8
-AllowedIPs = fe80::/10
+AllowedIPs = 172.16.0.0/12, 10.0.0.0/8, fd00::/8, fe80::/10
 ```
 Use `which ip` to get the full path to your ip binary.
 
