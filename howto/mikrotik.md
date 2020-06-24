@@ -149,3 +149,8 @@ add action=src-nat chain=srcnat comment="NAT to DN42 DNS" dst-address=172.23.0.5
 add action=dst-nat chain=dstnat dst-address-type=local dst-port=53 layer7-protocol=DN42-DNS protocol=udp src-address=192.168.0.0/24 to-addresses=172.23.0.53 to-ports=53
 
 ```
+Since version 6.47 have added functionality that can redirect DNS queries according to special rules. If you used to do Layer-7 rules in the firewall, now it's simple and elegant:
+```
+/ip dns static
+add comment=DN42 forward-to=172.23.0.53 regexp=".*\\.dn42" type=FWD
+```
