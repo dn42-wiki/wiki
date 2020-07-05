@@ -1,6 +1,6 @@
 DN42 uses network addresses in the [rfc1918](https://tools.ietf.org/html/rfc1918) and [ULA](https://tools.ietf.org/html/rfc4193) ranges. These are described in detail within the sections below. 
 
-The [DN42 registry](https://git.dn42.us/dn42/registry) is the authoritative source of information on address space assignment. Within the registry, the DN42 address space is divided in to blocks based on _policies_ that define how the addresses may be used. Policies are defined in `inetnum` and `inet6num` objects and can be:
+The [DN42 registry](https://git.dn42.dev/dn42/registry) is the authoritative source of information on address space assignment. Within the registry, the DN42 address space is divided in to blocks based on _policies_ that define how the addresses may be used. Policies are defined in `inetnum` and `inet6num` objects and can be:
 
  - **open** - users may request prefixes in this range, subject to any constraints that are described in the `remark` attributes
  - **closed** - these ranges cannot be assigned
@@ -13,11 +13,11 @@ A simple way to see all the active policies in the registry is to search the reg
 grep -r ^policy data/inet{,6}num/
 ```
 
-The [filter.txt](https://git.dn42.us/dn42/registry/src/master/data/filter.txt) and [filter6.txt](https://git.dn42.us/dn42/registry/src/master/data/filter6.txt) files within the registry detail the network wide constraints on what address ranges are in use together with the global limits on what can be announced. 
+The [filter.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter.txt) and [filter6.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter6.txt) files within the registry detail the network wide constraints on what address ranges are in use together with the global limits on what can be announced. 
 
 `inetnum` and `inet6num` objects within the registry are used to describe the allocation of address space to users. `route` and `route6` objects in the registry are used to validate routing announcements through [ROA](https://wiki.dn42/howto/Bird#route-origin-authorization). 
 
-In addition to the native DN42 address ranges, the registry also contains allocations for the address space used by affiliate networks. These are updated by a regular [sync script](https://git.dn42.us/dn42/registry-sync). 
+In addition to the native DN42 address ranges, the registry also contains allocations for the address space used by affiliate networks. These are updated by a regular [sync script](https://git.dn42.dev/dn42/registry-sync). 
 
 Globally routable prefixes are not supported in DN42; they are denied via the registry filter{6,}.txt files and many networks will filter both announcements and traffic for prefixes that are outside of the allowable ranges.
 
@@ -35,7 +35,7 @@ DN42 uses the 172.20.0.0/14 range for IPv4 addresses. As with the public interne
 
 Unlike the IPv6 address space, the DN42 IPv4 space is not fully open for assignment to users; some ranges are intended for specific uses and other ranges are reserved. See the policy section, below. Users should always check the policy in the registry before requesting a prefix to be assigned. 
 
-There are other IPv4 ranges in use within DN42 related to the affiliate networks, see the [filter.txt](https://git.dn42.us/dn42/registry/src/master/data/filter.txt) file in the registry. 
+There are other IPv4 ranges in use within DN42 related to the affiliate networks, see the [filter.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter.txt) file in the registry. 
 
 ## IPv4 Policies
 

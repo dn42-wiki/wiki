@@ -18,7 +18,7 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
 
-You must create several objects in the DN42 registry: <https://git.dn42.us/dn42/registry>
+You must create several objects in the DN42 registry: <https://git.dn42.dev/dn42/registry>
 
 The registry is a git repository, so objects are created by forking the main repository, making your changes and then submitting a pull request for review. See the [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
 
@@ -34,7 +34,7 @@ The registry includes a number of scripts to help check your request:
 
 The registry maintainers run all three scripts against each request, so please run these yourself first to check for simple errors. 
 
-Do browse through the registry and look at the [pull request queue](https://git.dn42.us/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
+Do browse through the registry and look at the [pull request queue](https://git.dn42.dev/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
 *Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits and prevents you from checking your changes with the registry scripts*
 
@@ -131,7 +131,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 To register an AS number, simply create an `aut-num` object in `data/aut-num/`.  
 `as-name` should be a name for your AS.
 
-Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-block objects](https://git.dn42.us/dn42/registry/src/master/data/as-block) in the registry. 
+Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-block objects](https://git.dn42.dev/dn42/registry/src/master/data/as-block) in the registry. 
 
 **You should allocate your AS number in the 4242420000-4242423999 range**
 
@@ -163,7 +163,7 @@ A few websites can generate random ULA prefixes for you:
 * [SimpleDNS](https://simpledns.com/private-ipv6)
 * [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
 
-or a small script is available: [ulagen.py](https://git.dn42.us/netravnen/dn42-repo-utils/src/master/ulagen.py)
+or a small script is available: [ulagen.py](https://git.dn42.dev/netravnen/dn42-repo-utils/src/master/ulagen.py)
 
 example: data/inet6num/fd35:4992:6a6d::_48
 ```

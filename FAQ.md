@@ -27,7 +27,7 @@ Many users do use a virtual private server (VPS) for connecting to DN42. A VPS i
 The DN42 registry used to be maintained in monotone, but was moved to git following resource and performance
 issues. There may still be references back to monotone in some of the documentation, but the registry location is now:
 
-https://git.dn42.us/dn42/registry (https://git.dn42/dn42/registry)
+https://git.dn42.dev/dn42/registry (https://git.dn42/dn42/registry)
 
 
 ### Can I reuse my public AS number/IPv4/IPv6?
