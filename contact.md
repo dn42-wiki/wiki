@@ -6,9 +6,9 @@ If you would like to contact an individual network operator, you will find conta
 
 ## Mailing list
 
-* is at: dn42 /at/ lists.nox.tf,
-* send a mail to dn42-subscribe /at/ lists.nox.tf to subscribe
-* has [archive](https://lists.nox.tf/pipermail/dn42/)
+* is at: dn42 /at/ groups.io,
+* send a mail to dn42+subscribe /at/ groups.io to subscribe
+* has [archive](https://groups.io/g/dn42)
 * can be accessed via [NNTP](/services/News) as well. The group is alt.net.dn42.users
 
 ## IRC
