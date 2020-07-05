@@ -44,6 +44,10 @@ zone "23.172.in-addr.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
+zone "d.f.ip6.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+}
 ```
 
 **Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
@@ -105,16 +109,11 @@ root_servers["23.172.in-addr.arpa."] = "dn42_root"
 
 ## Unbound
 
-Make sure DNSSEC is disabled (`auto-trust-anchor-file` is not set):
+Make sure to disable `auto-trust-anchor-file` and manually configure `trust-anchor-file` to 
+point to a file with DNSKEY records for dn42.
 
 ```
 server:
-      domain-insecure: "dn42"
-      domain-insecure: "20.172.in-addr.arpa"
-      domain-insecure: "21.172.in-addr.arpa"
-      domain-insecure: "22.172.in-addr.arpa"
-      domain-insecure: "23.172.in-addr.arpa"
-      domain-insecure: "d.f.ip6.arpa"
       local-zone: "20.172.in-addr.arpa." nodefault
       local-zone: "21.172.in-addr.arpa." nodefault
       local-zone: "22.172.in-addr.arpa." nodefault
