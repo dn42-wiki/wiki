@@ -75,12 +75,12 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1. Please consider joining these anycast-adresses when you setup your server. Updates every 1 hour would be nice for a start.
 
 | **person**  | **dns**                   | **ip**          |
-|------------|---------------------------|-----------------|
-| org-cccda  | whois.cda.dn42               | 172.23.96.1 / fd42:23:cda::1 |
-| weiti      | whois.weiti.dn42             | 172.20.175.253 / fdf7:17d5:de49::43 |
-| NIA        | whois.nia.dn42               | 172.20.158.153 / fd00:1926:817:43::1 |
-| Lan Tian   | whois.lantian.dn42           | 172.22.76.108 / fdbc:f9dc:67ad:2547::43 |
-| burble     | whois.burble.dn42            | 172.20.129.8 / fd42:4242:2601:ac43::1 |
+|-------------|---------------------------|-----------------|
+| org-cccda   | whois.cda.dn42            | 172.23.96.1 / fd42:23:cda::1 |
+| weiti       | whois.weiti.dn42          | 172.20.175.253 / fdf7:17d5:de49::43 |
+| StrExp / NIA| whois.nia.dn42            | 172.20.158.153 / fd00:1926:817:43::1 |
+| Lan Tian    | whois.lantian.dn42        | 172.22.76.108 / fdbc:f9dc:67ad:2547::43 |
+| burble      | whois.burble.dn42         | 172.20.129.8 / fd42:4242:2601:ac43::1 |
 
 ### Down?
 
