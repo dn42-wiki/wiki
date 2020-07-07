@@ -37,7 +37,7 @@
 
 * External Tools
   * [[Paste Board|https://paste.dn42.us]]
-  * [[Git Repositories|https://git.dn42.us]]
+  * [[Git Repositories|https://git.dn42.dev]]
 
 --------------
 
