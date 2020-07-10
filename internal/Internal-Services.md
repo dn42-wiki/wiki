@@ -53,15 +53,6 @@ Manual Verification: https://dn42.g-load.eu/verify/manual/
 
 API: https://dn42.g-load.eu/verify/documentation.txt
 
-## DNS64 / NAT64
-If you wish to access DN42's IPv4 services on an IPv6 only connection, please use one of the DNS servers from the table below.
-
-| IP                                                | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| fd43:6d1:3ee2:1000::6464                          | Hosted by santost12                                      |
-
-
-
 ## IRC
 
 | Hostname / IP                 | SSL           | Remarks                                     |
