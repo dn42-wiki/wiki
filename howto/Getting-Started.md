@@ -20,9 +20,9 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 You must create several objects in the DN42 registry: <https://git.dn42.dev/dn42/registry>
 
-The registry is a git repository, so objects are created by forking the main repository, making your changes and then submitting a pull request for review. See the [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
+The registry is a git repository, objects are created by creating a branch in the main repository, making your changes and then submitting a pull request for review. There are detailed instructions in the registry [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) how to do this. See also the the generic git documentation [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
 
-When submitting your pull request, please squash your commits. It makes the request easier to read and simplifies the change history. See this [StackOverflow question](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git) for a simple guide on how to do this.
+When submitting your pull request, please squash your commits, again there are instructions in the [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) for how to do this. 
 
 Remember to add authentication to your `mntner` object, and [sign your commit](/howto/Registry-Authentication)
 
