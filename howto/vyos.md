@@ -12,7 +12,7 @@ set firewall state-policy established action 'accept'
 set firewall state-policy related action 'accept'
 ```
 
-We also need to accept invalids on our network’s edge.  More on this is explained [here](https://wiki.dn42/howto/networksettings.md).  However, this should not become common practice elsewhere.
+We also need to accept invalids on our network’s edge.  More on this is explained [here](https://dn42.wiki/howto/networksettingsd).  However, this should not become common practice elsewhere.
 ```
 set firewall state-policy invalid action 'accept'
 ```
