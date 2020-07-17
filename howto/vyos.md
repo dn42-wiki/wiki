@@ -1,47 +1,104 @@
 #VyOS
-VyOS is an open source router.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.  
-  
+VyOS is an open source software router.  It is feature rich and supports multiple deployment options such as physical hardware (Old PC's) or a VPC/VM.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.
+
 It can be downloaded here https://www.vyos.io/rolling-release/.  
-  
 
-While _1.3-rolling-202004300117_ is a known good release to fallback to, at this time it's recommended to grab the latest nightly build.
+## Firewall Baseline
+We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network’s edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface. The examples here only cover **IPv4**, but the same concepts can be applied to **IPv6** rulesets.
 
+By default, VyOS is a **stateless** firewall.  To enable **stateful** packet inspection globally enter the following commands.
+```
+set firewall state-policy established action 'accept'
+set firewall state-policy related action 'accept'
+```
 
-##Quick Start
-###Quick to-do-list from router deployment to receiving DN42 routes
-1. Establish internet connectivity.
-2. Setup Wireguard.
-3. Setup BGP.
-4. `show ip route`
+We also need to accept invalids on our network’s edge.  More on this is explained [here](https://wiki.dn42/howto/networksettings.md).  However, this should not become common practice elsewhere.
+```
+set firewall state-policy invalid action 'accept'
+```
 
+The below commands create **in** and **local** baseline templates to be applied to all Wireguard interfaces that are facing peers.  In this example, **172.20.20.0/24** is your assigned address space.
+```
+#Create Groups
+set firewall group network-group Allowed-Transit-v4 network '10.0.0.0/8'
+set firewall group network-group Allowed-Transit-v4 network '172.20.0.0/14'
 
-##Wireguard
-###Setup Keys 
-`generate wireguard default-keypair`    
-`show wireguard keypairs pubkey default`  
+#Inbound Connections
+set firewall name Tunnels_In_v4 default-action 'drop'
+set firewall name Tunnels_In_v4 enable-default-log
+set firewall name Tunnels_In_v4 rule 68 action 'drop'
+set firewall name Tunnels_In_v4 rule 68 description 'Block Traffic to DN42 Space'
+set firewall name Tunnels_In_v4 rule 68 source address '172.20.20.0/24'
+set firewall name Tunnels_In_v4 rule 68 log 'enable'
+set firewall name Tunnels_In_v4 rule 68 action 'drop'
+set firewall name Tunnels_In_v4 rule 69 description 'Block Traffic to DN42 Space'
+set firewall name Tunnels_In_v4 rule 69 destination address '172.20.20.0/24'
+set firewall name Tunnels_In_v4 rule 69 log 'enable'
+set firewall name Tunnels_In_v4 rule 70 action 'accept'
+set firewall name Tunnels_In_v4 rule 70 description 'Allow Peer Transit'
+set firewall name Tunnels_In_v4 rule 70 destination group network-group 'Allowed-Transit-v4'
+set firewall name Tunnels_In_v4 rule 70 source group network-group 'Allowed-Transit-v4'
+set firewall name Tunnels_In_v4 rule 70 log 'enable'
+set firewall name Tunnels_In_v4 rule 98 action 'drop'
+set firewall name Tunnels_In_v4 rule 98 description 'Black Hole'
+set firewall name Tunnels_In_v4 rule 98 destination address '0.0.0.0/0'
+set firewall name Tunnels_In_v4 rule 98 log 'enable'
+set firewall name Tunnels_In_v4 rule 99 action 'drop'
+set firewall name Tunnels_In_v4 rule 99 description 'Black Hole'
+set firewall name Tunnels_In_v4 rule 99 log 'enable'
+set firewall name Tunnels_In_v4 rule 99 source address '0.0.0.0/0'
+
+#Local Connections
+set firewall name Tunnels_Local_v4 default-action 'drop'
+set firewall name Tunnels_Local_v4 rule 61 action 'accept'
+set firewall name Tunnels_Local_v4 rule 61 description 'Allow BGP'
+set firewall name Tunnels_Local_v4 rule 61 destination port '179'
+set firewall name Tunnels_Local_v4 rule 61 protocol 'tcp'
+set firewall name Tunnels_Local_v4 rule 98 action 'drop'
+set firewall name Tunnels_Local_v4 rule 98 description 'Black Hole'
+set firewall name Tunnels_Local_v4 rule 98 log 'enable'
+set firewall name Tunnels_Local_v4 rule 98 destination address '0.0.0.0/0'
+set firewall name Tunnels_Local_v4 rule 99 action 'drop'
+set firewall name Tunnels_Local_v4 rule 99 description 'Black Hole'
+set firewall name Tunnels_Local_v4 rule 99 log 'enable'
+set firewall name Tunnels_Local_v4 rule 99 source address '0.0.0.0/0'
+```
+
+## Wireguard
+### Setup Keys
+```
+generate wireguard default-keypair
+show wireguard keypairs pubkey default
+```
 _Grab your public key and save it for later.  This will be shared with peers._  
-###Configure Peer Tunnel  
-Your peer should provide their endpoint public IP, port, single DN42 address, and Wireguard public key.   
-   
-`set interfaces wireguard wg01 address '172.x.x.x/32'`  
-_this is a single address within your DN42 registered address space_  
-`set interfaces wireguard wg01 peer OtherGuy1 allowed-ips '0.0.0.0/0''`  
-_it's just easier to filter traffic with the firewall_  
-`set interfaces wireguard wg01 peer OtherGuy1 address 'x.x.x.x'`  
-_this is the public IP of your peers endpoint_  
-`set interfaces wireguard wg01 OtherGuy1 port '12345'`  
-_the configured port on your peers endpoint_  
-`set interfaces wireguard wg01 peer OtherGuy1 pubkey 'XMrlPykaxhdAAiSjhtPlvi30NVkvLQliQuKP7AI7CyI='`  
-_your peers public wireguard key_  
-`set interfaces wireguard wg01 port '12345'`  
-_the port your wireguard endpoint will "listen" on_  
-###Set Static Route  
-In case you are wondering how you are going to route packets anywhere with a /32, the next command explains it all.  
-     
-`set protocols static interface-route 172.x.x.x/32 next-hop-interface wg01`  
-_this is a single provided address by your peer that is assigned to them in the registry_  
-  
-While a normal world configuration may allow multiple peers on one Wireguard interface, the configuration explained on this page will not work correctly if multiple peers are defined on the same interface.
+### Configure First Peer
+```
+#Your DN42 Address
+set interfaces wireguard wg92 address '172.20.20.1/32'
+
+#Apply Description and Firewall
+set interfaces wireguard wg92 description 'First Peer Example'
+set interfaces wireguard wg92 firewall in name 'Tunnels_In_v4'
+set interfaces wireguard wg92 firewall local name 'Tunnels_Local_v4'
+
+#Peer Endpoint Address (Clearnet)
+set interfaces wireguard wg92 peer de2 address '116.203.141.239'
+
+#Best to allow everything here - This is why we have a firewall
+set interfaces wireguard wg92 peer de2 allowed-ips '0.0.0.0/0'
+
+#First Peer's Endpoint Port and Public Key
+set interfaces wireguard wg92 peer de2 port '12345'
+set interfaces wireguard wg92 peer de2 pubkey 'B1xSG/XTJRLd+GrWDsB06BqnIq8Xud93YVh/LYYYtUY='
+
+#Port Your Endpoint Listens On
+set interfaces wireguard wg92 port '12345'
+
+#Set static interface route to first peers /32 DN42 IPv4 on their tunnel endpoint
+set protocols static interface-route 172.20.50.1/32 next-hop-interface wg92
+```
+
+
 
 
 ##BGP
@@ -93,161 +150,3 @@ This example allows all routes in unless they are marked invalid or in other wor
 set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map import DN42-ROA  
 set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   
 ```
-
-##Example Firewall
-In this example our VyOS router has one upstream uplink on **eth0**, and two tunnels/peers on **wg1** and **wg2**.  We have two access lists: one for transit connections and one for local connections from our peer (BGP).  Notice on the transit access list we don't black hole **invalid** packets - logic behind this is explained [here](https://wiki.dn42/howto/networksettings.md).
-
-####Interfaces
-````
- ethernet eth0 {
-     address 192.168.1.2/30
-     description "Upstream/ISP"
-     hw-id 00:00:00:00:00:00
- }
- wireguard wg1 {
-     address 172.x.x.x/32
-     description "Tunnel 1"
-     firewall {
-         in {
-             name Tunnels_Inbound
-         }
-         local {
-             name Peer_Local_Connections
-         }
-     }
-     peer us-east01 {
-         address x.x.x.x
-         allowed-ips 0.0.0.0/0
-         port 1100
-         pubkey ***
-     }
-     port 1101
- }
- wireguard wg2 {
-     address 172.x.x.x/32
-     description "Tunnel 2"
-     firewall {
-         in {
-             name Tunnels_Inbound
-         }
-         local {
-             name Peer_Local_Connections
-         }
-     }
-     peer us-east02 {
-         address x.x.x.x
-         allowed-ips 0.0.0.0/0
-         port 1102
-         pubkey ***
-     }
-     port 1103
- }
-````
-####Firewall Rules
-````
-
- group {
-     network-group Allowed-Transit {
-         network 10.0.0.0/8
-         network 172.20.0.0/14
-     }
- }
- name Peer_Local_Connections {
-     default-action drop
-     rule 1 {
-         action accept
-         description "Enable Stateful"
-         state {
-             established enable
-             related enable
-         }
-     }
-     rule 10 {
-         action accept
-         description "Allow BGP"
-         destination {
-             port 179
-         }
-         protocol tcp
-         source {
-             address x.x.x.x  **Peer 1 IP
-         }
-     }
-     rule 11 {
-         action accept
-         description "Allow BGP"
-         destination {
-             port 179
-         }
-         protocol tcp
-         source {
-             address x.x.x.x  **Peer 2 IP
-         }
-     }
-     rule 98 {
-         action drop
-         description "Black Hole"
-         log enable
-         source {
-             address 0.0.0.0/0
-         }
-     }
-     rule 99 {
-         action drop
-         description "Black Hole"
-         log enable
-         state {
-             invalid enable
-         }
-     }
- }
- name Tunnels_Inbound {
-     default-action drop
-     rule 1 {
-         action accept
-         description "Enable Stateful"
-         state {
-             established enable
-             related enable
-         }
-     }
-     rule 50 {
-         action accept
-         description "Allow Peer Transit"
-         destination {
-             group {
-                 network-group Allowed-Transit
-             }
-         }
-         log enable
-         source {
-             group {
-                 network-group Allowed-Transit
-             }
-         }
-     }
-     rule 99 {
-         action drop
-         description "Black Hole"
-         log enable
-         source {
-             address 0.0.0.0/0
-         }
-     }
- }
-````
-
-
-
-  
-This page is a work in progress from Owens Research. Feel free to contact for suggestions or questions. 
-
-
-
-
-
-
-
-
-
-
