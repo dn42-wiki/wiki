@@ -82,14 +82,14 @@ set interfaces wireguard wg92 firewall in name 'Tunnels_In_v4'
 set interfaces wireguard wg92 firewall local name 'Tunnels_Local_v4'
 
 #Peer Endpoint Address (Clearnet)
-set interfaces wireguard wg92 peer de2 address '116.203.141.239'
+set interfaces wireguard wg92 peer location1 address '123.243.141.39'
 
 #Best to allow everything here - This is why we have a firewall
 set interfaces wireguard wg92 peer de2 allowed-ips '0.0.0.0/0'
 
 #First Peer's Endpoint Port and Public Key
 set interfaces wireguard wg92 peer de2 port '12345'
-set interfaces wireguard wg92 peer de2 pubkey 'B1xSG/XTJRLd+GrWDsB06BqnIq8Xud93YVh/LYYYtUY='
+set interfaces wireguard wg92 peer de2 pubkey '=kjhfkasdhjdsfasdefghjklfghjkl/'
 
 #Port Your Endpoint Listens On
 set interfaces wireguard wg92 port '12345'
