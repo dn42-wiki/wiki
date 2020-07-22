@@ -151,5 +151,66 @@ set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-
 set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   
 ```
  
- 
+## Example Route Map
+### No RPKI/ROA and Internal Network Falls Into DN42 Range
+```
+##Build prefix list to match personal internal network
+set policy prefix-list BlockIPConflicts description 'Prevent Conflicting Routes'
+set policy prefix-list BlockIPConflicts rule 10 action 'permit'
+set policy prefix-list BlockIPConflicts rule 10 description 'Internal IP Space'
+set policy prefix-list BlockIPConflicts rule 10 le '32'
+set policy prefix-list BlockIPConflicts rule 10 prefix '10.10.0.0/16'
+
+
+##Build prefix list to match personal internal network
+set policy prefix-list6 BlockIPConflicts-v6 description 'Prevent Conflicting Routes'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 action 'permit'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 description 'Internal IP Space'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 le '128'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 prefix 'fd42:4242:1111::/48'
+
+
+
+##Build prefix list to match DN42's IPv4 network
+set policy prefix-list DN42-Network rule 10 action 'permit'
+set policy prefix-list DN42-Network rule 10 le '32'
+set policy prefix-list DN42-Network rule 10 prefix '172.20.0.0/14'
+set policy prefix-list DN42-Network rule 20 action 'permit'
+set policy prefix-list DN42-Network rule 20 le '32'
+set policy prefix-list DN42-Network rule 20 prefix '10.0.0.0/8'
+
+
+##Build prefix list to match DN42's IPv6 network
+set policy prefix-list6 DN42-Network-v6 rule 10 action 'permit'
+set policy prefix-list6 DN42-Network-v6 rule 10 le '128'
+set policy prefix-list6 DN42-Network-v6 rule 10 prefix 'fd00::/8'
+
+
+
+
+##Block prefixes within internal network range, then allow everything else within DN42, then block everything else.
+set policy route-map Default-Peering rule 10 action 'deny'
+set policy route-map Default-Peering rule 10 description 'Prevent IP Conflicts'
+set policy route-map Default-Peering rule 10 match ip address prefix-list 'BlockIPConflicts'
+set policy route-map Default-Peering rule 11 action 'deny'
+set policy route-map Default-Peering rule 11 description 'Prevent IP Conflicts'
+set policy route-map Default-Peering rule 11 match ip address prefix-list6 'BlockIPConflicts-v6'
+set policy route-map Default-Peering rule 20 action 'permit'
+set policy route-map Default-Peering rule 20 description 'Allow DN42-Network'
+set policy route-map Default-Peering rule 20 match ip address prefix-list 'DN42-Network-Network'
+set policy route-map Default-Peering rule 21 action 'permit'
+set policy route-map Default-Peering rule 21 description 'Allow DN42-Network'
+set policy route-map Default-Peering rule 21 match ip address prefix-list6 'DN42-Network-Network-v6'
+set policy route-map Default-Peering rule 99 action 'deny'
+
+
+##Apply the route-map on import/export
+
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv4-unicast route-map export 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv4-unicast route-map import 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv6-unicast route-map export 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv6-unicast route-map import 'Default-Peering'
+```
+
+
 This page is a work-in-progress by Owens Research.  If you have any suggestions or questions please reach out.
