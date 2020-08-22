@@ -148,7 +148,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | ttd.jerry.dn42 (172.20.51.99, fd07:d34:7969:2::1) | OpenTTD                | 1.10.2, Hosted by jerry, Optimized for CN |
 | stk.jerry.dn42:2759 (172.20.51.99, fd07:d34:7969:2::1) | SuperTuxKart      | 1.1,    Optimized for CN   |
-| ns1.deltaman.dn42 (172.22.134.131) | OpenTTD      | 1.10.3, Hosted in NL   |
+| ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 
 ## Shell
 
