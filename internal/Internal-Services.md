@@ -149,6 +149,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | mc.jerry.dn42                            | Minecraft         | spigot 1.16.1             |
 | ttd.jerry.dn42 / ttd.jerry.neo           | OpenTTD           | latest version            |
 | stk.jerry.dn42:2759 / stk.jerry.neo:2759 | SuperTuxKart      | latest version, ipv4 only |
+| ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 
 ## Shell
 
@@ -173,7 +174,6 @@ Providers of shell access:
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |                
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
-| https://git.zotan.dn42                            | Git Repository Hosting, open signup (Powered by gitea)|               
 
 ### Usenet Servers / News
 There are some News Servers available [here](/services/News)

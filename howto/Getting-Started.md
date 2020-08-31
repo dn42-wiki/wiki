@@ -22,7 +22,7 @@ You must create several objects in the DN42 registry: <https://git.dn42.dev/dn42
 
 The registry is a git repository, objects are created by creating a branch in the main repository, making your changes and then submitting a pull request for review. There are detailed instructions in the registry [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) how to do this. See also the the generic git documentation [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
 
-When submitting your pull request, please squash your commits, again there are instructions in the [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) for how to do this. 
+When submitting your pull request, you must squash multiple changes to a single commit, again there are instructions in the [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) for how to do this. 
 
 Remember to add authentication to your `mntner` object, and [sign your commit](/howto/Registry-Authentication)
 
@@ -31,12 +31,13 @@ The registry includes a number of scripts to help check your request:
  - `fmt-my-stuff <FOO>-MNT`: automatically fixes minor formatting errors
  - `check-my-stuff <FOO>-MNT`: validates your objects against the registry schema
  - `check-pol origin/master <FOO>-MNT`: checks for policy violations
+ - `squash-my-commits`: automatically update and squash your local commits
 
-The registry maintainers run all three scripts against each request, so please run these yourself first to check for simple errors. 
+The registry maintainers run the checking scripts against each request, so please run these yourself first to check for simple errors. 
 
 Do browse through the registry and look at the [pull request queue](https://git.dn42.dev/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
-*Whilst it is possible to use the web interface to edit files, you are encouraged to clone your repo locally and use the command line git tools. It's easy to do and learning how to use git is a skill worth knowing. Using the web interface creates a large number of commits and prevents you from checking your changes with the registry scripts*
+*You should not use the gitea web interface to edit files, doing so would create a large number of commits and prevents running of the registry scripts*
 
 ---
 
@@ -83,6 +84,11 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 - you may wish to add other fields, such as `pgp-fingerprint`, `remarks`, and so on.
 - don't forget to set `mnt-by` to `<FOO>-MNT`.
 
+**Data Privacy**
+
+Contact attributes are optional but DN42 is a dynamic network and being able to contact users is really important if there are changes or problems. However, please also be aware that the DN42 registry is a public resource and you must assume that any details provided will be made public and cannot be fully removed. If this is a concern for you, please do not provide bogus contact details; simply provide anonymous details that are specific for use within DN42 or leave them out entirely.
+
+
 Example: data/person/FOO-DN42
 ```
 person:             John Doe
@@ -116,7 +122,7 @@ mnt-by:             FOO-MNT
 source:             DN42
 ```
 
-### Guidelines for future objects
+### Guidelines for resource objects
 
 From now on, you should use:
 
@@ -128,7 +134,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 ### Register an AS number
 
-To register an AS number, simply create an `aut-num` object in `data/aut-num/`.  
+To register an AS number, create an `aut-num` object in `data/aut-num/`.  
 `as-name` should be a name for your AS.
 
 Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-block objects](https://git.dn42.dev/dn42/registry/src/master/data/as-block) in the registry. 
@@ -137,7 +143,9 @@ Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-bloc
 
 For a list of currently assigned AS numbers browse the registry data/aut-num/ directory or [online](https://explorer.burble.com/#/aut-num/). 
 
-If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). For a list of ASN currently announced in dn42, see [this map](http://nixnodes.net/dn42/graph/).
+If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). 
+
+Internet ASNs may be used, but you must take care to clearly separate Internet and DN42 routes and prevent routes leaking between the networks. For Internet ASNs, the `source` attribute must be the originating registry and you will be required to prove you are the owner of the ASN. 
 
 If unsure, ask on the mailing list or IRC.
 
