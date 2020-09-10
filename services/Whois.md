@@ -5,7 +5,7 @@
   * Subnet assignations
   * DNS root zone for `dn42.`
 
-The registry is a git repository, hosted here: [https://git.dn42.us/dn42/registry](https://git.dn42.us/dn42/registry), Changes to the registry are managed by submitting pull requests to the repository, these are then reviewed by the registry maintainers before acceptance. 
+The registry is a git repository, hosted here: [https://git.dn42.dev/dn42/registry.git](https://git.dn42.dev/dn42/registry.git), Changes to the registry are managed by submitting pull requests to the repository, these are then reviewed by the registry maintainers before acceptance. 
 
 # Names and numbers
 
