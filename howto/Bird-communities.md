@@ -151,9 +151,9 @@ function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypt
   reject;
 }
 
-function dn42_export_filter(int link_latency; int link_bandwith; int link_crypto) {
+function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto) {
   if is_valid_network() then {
-    update_flags(link_latency, link_bandwith, link_crypto);
+    update_flags(link_latency, link_bandwidth, link_crypto);
     accept;
   }
   reject;
