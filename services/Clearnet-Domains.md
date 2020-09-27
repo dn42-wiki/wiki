@@ -1,6 +1,6 @@
 # DN42 Clearnet Domains
 
-To provide services over the public internet some community members have contributed public internet domain names to be used for DN42.
+To provide services over the public internet some community members have contributed clearnet domain names to be used for DN42.
 
 |Domain|
 |:--|
