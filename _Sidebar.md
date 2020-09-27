@@ -25,6 +25,7 @@
   * [[IRC|services/IRC]]
   * [[Whois registry|services/Whois]]
   * [[DNS|services/DNS]]
+  * [[Public DNS|services/Clearnet-Domains]]
   * [[Looking Glasses|services/Looking-Glasses]]
   * [[Repository Mirrors|services/Repository-Mirrors]]
   * [[Distributed Wiki|services/Distributed-Wiki]]
