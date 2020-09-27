@@ -36,6 +36,14 @@ dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICAN
 
 Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
 
+# Drone CI/CD
+
+The gitea instance hosting the registry has an associated [Drone CI/CD](https://drone.io/) service:
+
+- [https://drone.git.dn42/](https://drone.git.dn42/)
+
+Users are free to add drone pipelines to their own repositories. Repositories can be enabled using the Drone server [user interface](https://drone.git.dn42/).
+
 # Telegram Bot
 A telegram whois bot owned by [@Oxygen233](https://t.me/oxygen233) is hosted on [@DN42WhoisBot](https://t.me/DN42WhoisBot).
 
