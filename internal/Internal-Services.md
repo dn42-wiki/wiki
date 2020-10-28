@@ -149,7 +149,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
-| stk.jerry.dn42:2759                               | SuperTuxKart           | latest, IPv4 only, NeoNetwork users please use stk.jerry.neo |
+| stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 
 ## Shell
@@ -159,7 +159,7 @@ Providers of shell access:
 | Person        | Hostname                             | Net              | Description | Contact       |
 |:------------- |:------------------------------------ |:---------------- |:----------- |:------------- |
 | mc36          | telnet test.nop.dn42                 | dn42 only        |looking glass| -             |
-| JerryXiao     | ssh lg@lg.jerry.dn42                 | dn42 and neonet  |looking glass| -             |
+| JerryXiao     | ssh lg@lg.jerry.dn42                 | dn42 and icvpn   |looking glass| -             |
 
 ## Misc 
 
