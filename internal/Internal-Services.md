@@ -71,7 +71,7 @@ API: https://dn42.g-load.eu/verify/documentation.txt
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://mhm.dn42/search                            | Hosted by toBee                                          |
+| http://mhm.dn42/search                            | Hosted by toBee (DOWN 2020-11-02)                        |
 
 ## Images, E-Books, Videos and other Media
 
@@ -79,16 +79,15 @@ API: https://dn42.g-load.eu/verify/documentation.txt
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
-| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test)
-|
+| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams            |
-| https://invidious.doxz.dn42/                      | Invidious instance with proxy (Youtube)                  |
-| http://radio.hex.dn42/                            | Ambient musics
+| Hostname / IP                                     | Remarks                                                        |
+|:------------------------------------------------- |:-------------------------------------------------------------- |
+| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02)|
+| https://invidious.doxz.dn42/                      | Invidious instance with proxy (Youtube)                        |
+| http://radio.hex.dn42/                            | Ambient musics                                                 |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -107,12 +106,12 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
 | http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 | http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
-| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps             |
+| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365 (DOWN 2020-11-02)                     |
+| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps (DOWN 2020-11-02)|
 
 ### Torrent Search Engine
 
-- https://magnetic.dn42 (DHT Search Engine)
+- https://magnetic.dn42 (DHT Search Engine, DOWN 2020-11-02)
 
 ## Proxies
 
@@ -165,7 +164,7 @@ Providers of shell access:
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
+| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here (DOWN 2020-11-02)  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
 | http://www.nop.dn42/                              | Basic "whatismyip" service               |
