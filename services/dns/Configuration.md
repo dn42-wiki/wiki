@@ -47,7 +47,7 @@ zone "23.172.in-addr.arpa" {
 zone "d.f.ip6.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
-}
+};
 ```
 
 **Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
