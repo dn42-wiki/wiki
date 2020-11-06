@@ -13,6 +13,7 @@
   * [[Tinc|howto/tinc]]
   * [[GRE on FreeBSD|howto/GRE-on-FreeBSD]]
   * [[Bird|howto/Bird]] / [[Bird2|howto/Bird2]]
+  * [[IPv6 Multicast (PIM-SM)|howto/IPv6-Multicast]]
   * [[Quagga|howto/Quagga]]
   * [[OpenBGPD|howto/OpenBGPD]]
   * [[Mikrotik RouterOS|howto/mikrotik]]
