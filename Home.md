@@ -39,7 +39,6 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
  * [Wikipedia about dn42](http://en.wikipedia.org/wiki/Decentralized_network_42)
  * [Lecture on 26c3](http://events.ccc.de/congress/2009/Fahrplan/events/3504.en.html)
  * [Lecture on GPN8](http://entropia.de/wiki/GPN8:dn42)
- * [soup.io group](http://dn42.soup.io/)
  * [nobody about dn42](http://nowhere.ws/guides/dn42/)
  * [Lecture on mrmcd0x8](http://web.archive.org/web/20090831211324/http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
  * [dn42-category in hackerspaces.org wiki](https://hackerspaces.org/wiki/Category:DN42)
@@ -60,7 +59,6 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [freifunk](http://freifunk.net)
 * [NoName e.V. Heidelberg](https://www.noname-ev.de)
 * [raumzeitlabor/hackerspace rhein-neckar](http://www.raumzeitlabor.de)
-* [Cyberpipe](https://www.kiberpipa.org)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
 * [[hsmr] / Hackspace Marburg](https://hsmr.cc)
 * [Whitespace (0x20)](http://www.0x20.be)
@@ -68,7 +66,6 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
 * [Hackspace Jena e.V.](https://kraut.space)
-* [breizh-entropy](http://breizh-entropy.dn42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
@@ -76,7 +73,7 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 
 ## About this wiki
 
-This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
+This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here] (https://dn42.us) or [here] (https://dn42.dev), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
 
 #### DN42 Logo
 
