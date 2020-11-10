@@ -66,6 +66,7 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
 * [Hackspace Jena e.V.](https://kraut.space)
+* [Breizh-Entropy](http://wiki.breizh-entropy.org/wiki/DN42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
