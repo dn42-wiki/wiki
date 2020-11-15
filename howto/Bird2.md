@@ -2,7 +2,7 @@ This guide is similar to the normal [Bird](/howto/Bird) guide in that it provide
 
 # Arch Linux
 
-The `extra/bird` package in the arch repositories will usually have a relatively recent version and there is (usually) no need for a manual install over the usual `# pacman -S bird'.
+The `extra/bird` package in the arch repositories will usually have a relatively recent version and there is (usually) no need for a manual install over the usual `# pacman -S bird`.
 
 # Example configuration
 
