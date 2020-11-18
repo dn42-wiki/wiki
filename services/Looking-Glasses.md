@@ -39,7 +39,7 @@ Please sort by AS number.
 | 4242422428 | ext: https://lg.0l.de <br> IPv4 and IPv6 | UP |
 | 4242423078 | ext: https://lg.hexanet.dev <br> dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
 | 4242421224 | dn42: http://lg.bit.dn42 | UP |
-
+| 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 | UP |
 
 ## Down
 
