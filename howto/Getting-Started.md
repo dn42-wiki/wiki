@@ -250,7 +250,8 @@ source:             DN42
 #### DNS and Domain Registration
 
 *(Optional)*  
-To register a domain name, create a `dns` object in the data/dns directory.
+To register a domain name, create a `dns` object in the data/dns directory.  
+Domain names and nserver attributes must be lowercase.
 
 example: data/dns/foo.dn42
 ```
