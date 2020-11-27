@@ -15,12 +15,12 @@
 
 ## RouterOS limitations
 
- * IPSec only supports IKEv1
+ * IPSec only supports IKEv1.
  * OpenVPN only works in tcp mode
  * OpenVPN does not support LZO compression
  * You can't use /31 subnet for Point-to-Point (PtP) links
 
-Also, you can't use a /32 on the GRE/PtP links. Even if you add a local route to your peer, BGP can't resolve the installed routes using "a nexthop interface". Please use any /30 on the GRE link, either from your assigned DN42 pool address or use a private address like 192.168. Please don't choose from 172.16.0.0/12 or 10.0.0.0/8 because they may overlap with DN42 or ChaosVPN.
+Mikrotik/RouterOS can't handle very well /32 on Point-to-Point links (like GRE). There is a [separate howto](/howto/mikrotik/ptp32) to explain how to setup /32 between in a GRE link (or even a OpenVPN). What is the easy way? Just use any /30 on the GRE Link, either from your assigned DN42 pool address or use a private address like 192.168. Please don't choose from 172.16.0.0/12 or 10.0.0.0/8 because they may overlap with DN42 or ChaosVPN.
 
 ## Tunnel
 
