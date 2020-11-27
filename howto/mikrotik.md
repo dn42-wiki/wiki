@@ -15,7 +15,7 @@
 
 ## RouterOS limitations
 
- * IPSec only supports IKEv1.
+ * IPSec only supports IKEv1
  * OpenVPN only works in tcp mode
  * OpenVPN does not support LZO compression
  * You can't use /31 subnet for Point-to-Point (PtP) links
