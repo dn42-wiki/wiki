@@ -1,7 +1,7 @@
 ## RouterOS issues
 
  * RouterOS doesn't have direct Point-to-Point addresses.
- * BGP doesn't resolve next-hop route for a /32 route that uses a interface as next-hop
+ * BGP doesn't resolve the next-hop for their routes using a rescursive route that uses a interface as next-hop
 
 The long explanation about how mikrotik resolves recursive routes is documentated at [Mikrotik's page](https://wiki.mikrotik.com/wiki/Manual:IP/Route#Nexthop_lookup).
 
