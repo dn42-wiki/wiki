@@ -1,3 +1,5 @@
+# How to setup Mikrotik with point-to-point /32 address on interfaces
+
 ## RouterOS issues
 
  * RouterOS doesn't have direct Point-to-Point addresses.
@@ -5,7 +7,7 @@
 
 The long explanation about how mikrotik resolves recursive routes is documentated at [Mikrotik's page](https://wiki.mikrotik.com/wiki/Manual:IP/Route#Nexthop_lookup).
 
-How can we workaround these issues? Simple. We setup a /32 on the Point-to-Point interface, we setup a direct route to our to other peer (using the interface as next-hop for this route) and use bgp filters to change the next-hop interface.
+How can we workaround these issues? Simple. We setup a /32 on the Point-to-Point interface, we setup a direct route to the other peer (using the interface as next-hop for this route) and use bgp filters to change the next-hop interface.
 
 ## Legend
 
@@ -14,7 +16,7 @@ How can we workaround these issues? Simple. We setup a /32 on the Point-to-Point
  * gre-dn42-peer -> This is the name of the interface
  * 1.1.1.1 - peer external IP
  * 2.2.2.2 - your external IP
- * bgp-dn42-peer-in -> This is the name of the chain filter. You should use a different chain per point to point link
+ * bgp-dn42-peer-in -> This is the name of the chain filter. You need to use a different chain per point to point link
 
 ## Setup
 
