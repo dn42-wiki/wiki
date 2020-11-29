@@ -53,8 +53,8 @@ remote-address=1.1.1.1
 
 ### IPs inside the GRE tunnel
 Your peer most likely provided you with IP adresses for GRE tunnel.  
-As I said before, you can't use /31 for PtP links, so we will be using /30.
-BGP can't resolve routes if you use a /32 in the GRE link.
+As I said before, you can't use /31 for PtP links, so, in the "easy way" we will be using /30.
+If you want to avoid wasting a whole /30 for your peering, please check the [point-to-point configuration for RouterOS](/howto/mikrotik/ptp32)
 
 Add the IP your peer provided you:
 
@@ -70,7 +70,7 @@ Here we can use /127, so it's simple:
 
 ```
 /ipv6 address
-add address=fdc8:c633:5319:3300::41/127 advertise=no interface=gre-dn42-moos
+add address=fdc8:c633:5319:3300::41/127 advertise=no interface=gre-dn42-peer
 ```
 
 If you configured everything correctly, you should be able to ping 
