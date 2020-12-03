@@ -186,6 +186,18 @@ There are some News Servers available [here](/services/News)
  * https://mirror.frubar.net 100MBit
  * https://frucman.frubar.net
 
+### NAT64
+
+Niantic Network (AS4242421331) is providing a NAT64 service at Strategic Explorations (AS207268). 
+
+* IPv6 at public Internet: `2a0e:b107:b7f::[DN42 IPv4]`
+
+* IPv4 endpoint at DN42: 
+  * `172.20.158.177`: Seattle
+  * `172.20.158.178`: Singapore
+
+* DNS64: `2602:feda:3c9::` or `dns.strexp.net`
+
 ## AnoNet
 
 A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
