@@ -12,6 +12,7 @@
   * [[IPsec With Public Keys|howto/IPsec-with-PublicKeys]]
   * [[Tinc|howto/tinc]]
   * [[GRE on FreeBSD|howto/GRE-on-FreeBSD]]
+  * [[GRE on OpenBSD|howto/GRE-on-OpenBSD]]
   * [[IPv6 Multicast (PIM-SM)|howto/IPv6-Multicast]]
   * [[Bird|howto/Bird]] / [[Bird2|howto/Bird2]]
   * [[Quagga|howto/Quagga]]
