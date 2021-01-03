@@ -24,7 +24,7 @@ Please sort by AS number.
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
 | 4242422024 | ext: http://lg.dn42.gcc.ac.cn/ <br> Interactive (ping, traceroute, BGP-map)| UP |
-| 4242422547 | ext: https://lg.lantian.pub or https://lg-alt.lantian.pub <br> dn42: http://lg.lantian.dn42 or http://lg-alt.lantian.dn42 | UP |
+| 4242422547 | ext: https://lg.lantian.pub <br> dn42: http://lg.lantian.dn42 | UP |
 | 4242422575 | dn42: https://lg.androw.dn42 <br> ext: https://lg.androw.eu/ | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
