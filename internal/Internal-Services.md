@@ -13,6 +13,7 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
 ## Network-related
   * See [[Looking Glasses|/services/Looking-Glasses]] for more network diagnostic tools
   * Realtime network map: [map.dn42](http://map.dn42/) (via DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (via clearnet) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map uses the GRC as source, so it would be more comprehensive than original one. Data refreshes every 20~30 minutes.)_
+  * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
@@ -145,7 +146,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | 172.20.34.168                                     | Minecraft              | 1.16.4, Bedrock supported, Abuse may lead to a network-wide ban or peer removal |
-| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4, Optimized for CN   |
+| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.1, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
