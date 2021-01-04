@@ -165,7 +165,7 @@ Providers of shell access:
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
-|[https://bbs.dn42](https://bbs.dn42)               | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
+|[https://bbs.dn42](https://bbs.dn42), [https://dn42bbs.0b1.me](https://dn42bbs.0b1.me) via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
