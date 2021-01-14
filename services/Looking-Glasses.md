@@ -16,6 +16,7 @@ Please sort by AS number.
 | 4242420151 | ext: ssh bird-lg@dn42-uk-london0.dn42.bauen1.xyz <br> restricted bird shell | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420827 | ext: https://lg.aasg.name <br> dn42: http://lg.lorkep.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
+| 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute | UP |
