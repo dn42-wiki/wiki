@@ -14,34 +14,34 @@ Please sort by AS number.
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
 | 4242420123 | dn42: https://lg.grmml.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420151 | ext: ssh bird-lg@dn42-uk-london0.dn42.bauen1.xyz <br> restricted bird shell | UP |
+| 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420827 | ext: https://lg.aasg.name <br> dn42: http://lg.lorkep.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
 | 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute | UP |
+| 4242421224 | dn42: http://lg.bit.dn42 | UP |
 | 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | UP |
+| 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
+| 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
 | 4242422024 | ext: http://lg.dn42.gcc.ac.cn/ <br> Interactive (ping, traceroute, BGP-map)| UP |
+| 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 | UP |
+| 4242422189 | dn42: http://lg.iedon.dn42 | UP |
+| 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
+| 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
+| 4242422428 | ext: https://lg.0l.de <br> IPv4 and IPv6 | UP |
 | 4242422547 | ext: https://lg.lantian.pub <br> dn42: http://lg.lantian.dn42 | UP |
 | 4242422575 | dn42: https://lg.androw.dn42 <br> ext: https://lg.androw.eu/ | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242422904 | ext: https://lg.doxz.net/ | UP |
-| 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
-| 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
-| 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
-| 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
-| 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
-| 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 | UP |
-| 4242422189 | dn42: http://lg.iedon.dn42 | UP |
-| 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
-| 4242422428 | ext: https://lg.0l.de <br> IPv4 and IPv6 | UP |
 | 4242423078 | ext: https://lg.hexanet.dev <br> dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
-| 4242421224 | dn42: http://lg.bit.dn42 | UP |
-| 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 | UP |
+| 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
+| 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
 
 ## Down
 
