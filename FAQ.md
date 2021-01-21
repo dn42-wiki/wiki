@@ -29,6 +29,11 @@ issues. There may still be references back to monotone in some of the documentat
 
 https://git.dn42.dev/dn42/registry (https://git.dn42/dn42/registry)
 
+### Can I use Windows to clone and update the registry ?
+
+No. The registry includes IPv6 resources but NTFS does not support having a `:` in filenames.
+
+A simple workaround is to use a non-Windows VM to do your changes.
 
 ### Can I reuse my public AS number/IPv4/IPv6?
 
