@@ -46,13 +46,10 @@ Preview: http://img.dn42/images/GEOTRACE42.jpg
 
 Link: http://map.dn42/BestTrace42.zip
 
-### Proving ASN ownership
-Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
-This signature can be very easily verified by anyone. This removes the hassle from checking every different authentication method in the registry. This is particularly useful for automated setups.
-
-Manual Verification: https://dn42.g-load.eu/verify/manual/
-
-API: https://dn42.g-load.eu/verify/documentation.txt
+### ASN Authentication Solution
+Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way.  
+More Information in the setup tutorial: https://dn42.g-load.eu/auth/documentation/tutorial.html  
+To use the service, please message Kioubit on IRC to have your domain activated.
 
 ## IRC
 
