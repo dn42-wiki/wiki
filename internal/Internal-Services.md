@@ -28,22 +28,18 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
 #### API
 Results are in JSON format. 
 
-http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en
-
+http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en  
 http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
 
 #### Client
 There is a client software using above apis to provide GeoIP-based traceroute. 
 It is a modified IPIP.NET Best Trace software with DN42 support injection.
 
-Windows only, no virus scan report available, but our DLL source is provided with the modified client.
-
-It's highly recommended to run this tool in a sandbox. 
+Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox. 
 
 ** Since the original software is not open source, so use it at your own risk. **
 
-Preview: http://img.dn42/images/GEOTRACE42.jpg
-
+Preview: http://img.dn42/images/GEOTRACE42.jpg  
 Link: http://map.dn42/BestTrace42.zip
 
 ### ASN Authentication Solution
