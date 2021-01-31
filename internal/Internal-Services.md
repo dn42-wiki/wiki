@@ -146,6 +146,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.1, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
+| mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6 |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759                               | SuperTuxKart           | latest, IPv4 only, NeoNetwork users please use stk.jerry.neo |
