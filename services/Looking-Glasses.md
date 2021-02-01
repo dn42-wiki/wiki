@@ -17,7 +17,7 @@ Please sort by AS number.
 | 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242420827 | ext: https://lg.aasg.name <br> dn42: http://lg.lorkep.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
-| 4242420925 | ext: https://lg-dn42.yuetau.net | UP |
+| 4242420925 | dn42: https://lg.yuetau.dn42/ <br> ext: https://lg-dn42.yuetau.net | UP |
 | 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
