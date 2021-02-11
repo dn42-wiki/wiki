@@ -68,4 +68,4 @@ destination: fd42::1
 ```
 
 # Security
-GRE may be protected with IPsec to encrypt and authenticate traffic, [OpenIKED](http://www.openiked.org/) can be used to establish an IKEv2 session between *A* and *B*.
+GRE may be protected with IPsec to encrypt and authenticate traffic, [OpenIKED](http://www.openiked.org/) can be used to establish an IKEv2 session between *A* and *D*.
