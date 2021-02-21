@@ -17,7 +17,7 @@ Please sort by AS number.
 | 4242420321 | dn42: http://lg.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
-| 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ <br> ext: https://bgp.owensresearch.org <br> dn42: https://bgp.owensresearch.dn42 | UP |
+| 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ | UP |
 | 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
