@@ -42,6 +42,7 @@ Please sort by AS number.
 | 4242422904 | ext: https://lg.doxz.net/ | UP |
 | 4242423078 | ext: https://lg.hexanet.dev <br> dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42/ | UP |
+| 4242423735 | ext: https://lg.dn42.cperrin.xyz <br> dn42: http://lg.cperrin.dn42 | UP | 
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg/ <br> dn42: https://lg.weiti.dn42/ | UP |
 
 ## Down
