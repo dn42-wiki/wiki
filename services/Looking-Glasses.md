@@ -26,6 +26,7 @@ Please sort by AS number.
 | 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42/ | UP |
+| 4242421876 <br> 211876 | ext: https://lg.fixmix.tech | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
 | 4242421955 | dn42: http://lg.nop.dn42/ <br> telnet:test.nop.dn42 <br> ext: http://freerouter.nop.hu/online.html| UP |
 | 4242422024 | ext: http://lg.dn42.gcc.ac.cn/ <br> Interactive (ping, traceroute, BGP-map)| UP |
