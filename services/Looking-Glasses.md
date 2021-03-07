@@ -39,6 +39,7 @@ Please sort by AS number.
 | 4242422547 | ext: https://lg.lantian.pub <br> dn42: http://lg.lantian.dn42 | UP |
 | 4242422575 | dn42: https://lg.androw.dn42 <br> ext: https://lg.androw.eu/ | UP |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com/ | UP |
+| 4242422633 | dn42: http://lg.eb.dn42/ <br> ext: https://lg.eastbnd.com/ | UP |
 | 4242422700 | dn42: http://lg.gotroot.dn42 <br> ext: http://dn42.gotroot.ca/ | UP |
 | 4242422904 | ext: https://lg.doxz.net/ | UP |
 | 4242423078 | ext: https://lg.hexanet.dev <br> dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only | UP |
