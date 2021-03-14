@@ -20,7 +20,7 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
-  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/), [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
+  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
 
 
 ### GeoIP Services
@@ -62,12 +62,6 @@ To use the service, please message Kioubit on IRC to have your domain activated.
 |:--------------|:--------|
 | https://lounge.burble.dn42 | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
 
-## Search engines
-
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| http://mhm.dn42/search                            | Hosted by toBee (DOWN 2020-11-02)                        |
-
 ## Images, E-Books, Videos and other Media
 
 | Hostname / IP                                     | Remarks                                                  |
@@ -101,12 +95,6 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
 | http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 | http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365 (DOWN 2020-11-02)                     |
-| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps (DOWN 2020-11-02)|
-
-### Torrent Search Engine
-
-- https://magnetic.dn42 (DHT Search Engine, DOWN 2020-11-02)
 
 ## Proxies
 
