@@ -179,6 +179,9 @@ Providers of shell access:
 ### Usenet Servers / News
 There are some News Servers available [here](/services/News)
 
+## E-Mail
+There is a list of E-Mail providers [here](/services/E-Mail-Providers)
+
 # Other networks
 
 ## Public Internet
