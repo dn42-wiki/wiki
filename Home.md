@@ -1,8 +1,8 @@
 ## About dn42
 
-dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, [DNS](http://en.wikipedia.org/wiki/Domain_Name_System), etc).  Participants connect to each other using network tunnels ([GRE](/howto/GRE-on-FreeBSD), [OpenVPN](/howto/openvpn), [Tinc](/howto/tinc), [IPsec](/howto/IPsec-with-PublicKeys)) and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.20.0.0/14` range and private AS numbers are used (see [registry](/services/Whois)) as well as IPv6 addresses from the ULA-Range (`fd00::/8`) - see [FAQ](https://internal.dn42/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42).
+dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network), which employs Internet technologies ([BGP](http://en.wikipedia.org/wiki/Bgp), whois database, [DNS](http://en.wikipedia.org/wiki/Domain_Name_System), etc).  Participants connect to each other using network tunnels ([GRE](/howto/GRE-on-FreeBSD), [OpenVPN](/howto/openvpn), [Tinc](/howto/tinc), [IPsec](/howto/IPsec-with-PublicKeys)) and exchange routes thanks to the Border Gateway Protocol.  Network addresses are assigned in the `172.20.0.0/14` range and private AS numbers are used (see [registry](/services/Whois)) as well as IPv6 addresses from the ULA-Range (`fd00::/8`) - see [FAQ](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42).
 
-A number of services are provided on the network: see [internal](http://wiki.dn42/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
+A number of services are provided on the network: see [internal](/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
 
 Still have questions? We have  [[FAQs|FAQ]] listed.
 
@@ -39,7 +39,6 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
  * [Wikipedia about dn42](http://en.wikipedia.org/wiki/Decentralized_network_42)
  * [Lecture on 26c3](http://events.ccc.de/congress/2009/Fahrplan/events/3504.en.html)
  * [Lecture on GPN8](http://entropia.de/wiki/GPN8:dn42)
- * [soup.io group](http://dn42.soup.io/)
  * [nobody about dn42](http://nowhere.ws/guides/dn42/)
  * [Lecture on mrmcd0x8](http://web.archive.org/web/20090831211324/http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
  * [dn42-category in hackerspaces.org wiki](https://hackerspaces.org/wiki/Category:DN42)
@@ -60,7 +59,6 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [freifunk](http://freifunk.net)
 * [NoName e.V. Heidelberg](https://www.noname-ev.de)
 * [raumzeitlabor/hackerspace rhein-neckar](http://www.raumzeitlabor.de)
-* [Cyberpipe](https://www.kiberpipa.org)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
 * [[hsmr] / Hackspace Marburg](https://hsmr.cc)
 * [Whitespace (0x20)](http://www.0x20.be)
@@ -68,7 +66,7 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
 * [Hackspace Jena e.V.](https://kraut.space)
-* [breizh-entropy](http://breizh-entropy.dn42)
+* [Breizh-Entropy](http://wiki.breizh-entropy.org/wiki/DN42)
 * [Fédération FDN](https://www.ffdn.org)
 * [Le LOOP](https://leloop.org/)
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
@@ -76,7 +74,7 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 
 ## About this wiki
 
-This wiki is the main reference about dn42.  It is available in read-only mode [from the Internet](https://dn42.net), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
+This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here](https://wiki.dn42.us) or [here](https://dn42.dev) or [here](https://dn42.tk) or [here](https://dn42.eu), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
 
 #### DN42 Logo
 
