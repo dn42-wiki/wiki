@@ -78,7 +78,7 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
 
 #### SSL
 
- - Setup your maintainer object according to [Automatic CA](https://internal.dn42/services/Automatic-CA)
+ - Setup your maintainer object according to [Automatic CA](/services/Automatic-CA)
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
  - \<AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
 

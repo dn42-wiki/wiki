@@ -43,23 +43,31 @@ http://mwd.dn42/dns.php
 MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
 
 ### Getting your current dn42 IPv4/IPv6 address
+  * What is my IP: [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
 
-http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
+  * http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
 wieistmeineip.dn42 also provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
 
-You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
+  * You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
 
-An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
+  * An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
 
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://yacy.dn42 (OFFLINE 2020-01-18)             | YaCy search engine. Indexing local nets                  |
-| _Configuring Yacy Network settings:_     |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
-
+| _Configuring Yacy Network settings:_              |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
+| http://mhm.dn42/search                            | Hosted by toBee                                          |
 
 ## File Sharing
+
+### FTP / HTTP
+
+| Hostname / IP                                               | Space | Speed       | Remarks                                        |
+|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------- |                              
+| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                           |
+| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps |
 
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
@@ -83,6 +91,10 @@ Until browsers have ipfs access (either through native support or js), one can u
 ```
 https://rest.dn42/
 ```
+
+### Torrent Search Engine
+
+* https://magnetic.dn42 (DHT Search Engine)
 
 ### Torrent Index
 

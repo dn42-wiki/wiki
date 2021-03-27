@@ -62,7 +62,7 @@ See the page on [Registry Authentication](howto/Registry-Authentication)
 # DNS interface
 
 There is also a DNS-based interface to query AS information from the registry. The DNS zone is `asn.dn42`. 
-A mirror is hosted at `asn.grmml.dn42`.
+Mirrors are hosted at `asn.grmml.dn42` and `asn.lorkep.dn42`.
 
 Example:
 
