@@ -2,7 +2,7 @@
 
 You are asked to show some creativity in terms of network usage and content. ;)
 
-**More inspiration is collected [here](/internal/Historical-Services) and [here](/internal/ideas).**
+**More inspiration is collected [here](/internal/Historical-Services) and [here](/internal/Ideas).**
 
 ## CA
 
@@ -13,12 +13,14 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
 ## Network-related
   * See [[Looking Glasses|/services/Looking-Glasses]] for more network diagnostic tools
   * Realtime network map: [map.dn42](http://map.dn42/) (via DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (via clearnet) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map uses the GRC as source, so it would be more comprehensive than original one. Data refreshes every 20~30 minutes.)_
+  * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
+  * Yet Another WIP network map: [map.jerry.dn42](http://map.jerry.dn42/) (via DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses GRC shell as source, updated every 24 hours.)_
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
-  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/), [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
+  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
 
 
 ### GeoIP Services
@@ -27,31 +29,24 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
 #### API
 Results are in JSON format. 
 
-http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en
-
+http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en  
 http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
 
 #### Client
 There is a client software using above apis to provide GeoIP-based traceroute. 
 It is a modified IPIP.NET Best Trace software with DN42 support injection.
 
-Windows only, no virus scan report available, but our DLL source is provided with the modified client.
-
-It's highly recommended to run this tool in a sandbox. 
+Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox. 
 
 ** Since the original software is not open source, so use it at your own risk. **
 
-Preview: http://img.dn42/images/GEOTRACE42.jpg
-
+Preview: http://img.dn42/images/GEOTRACE42.jpg  
 Link: http://map.dn42/BestTrace42.zip
 
-### Proving ASN ownership
-Through this automated service you prove your ASN ownership to KIOUBIT-MNT who then automatically creates a "ownership verification signature".
-This signature can be very easily verified by anyone. This removes the hassle from checking every different authentication method in the registry. This is particularly useful for automated setups.
-
-Manual Verification: https://dn42.g-load.eu/verify/manual/
-
-API: https://dn42.g-load.eu/verify/documentation.txt
+### ASN Authentication Solution
+Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way.  
+More Information in the setup tutorial: https://dn42.g-load.eu/auth/documentation/tutorial.html  
+To use the service, please message Kioubit on IRC to have your domain activated.
 
 ## IRC
 
@@ -67,27 +62,21 @@ API: https://dn42.g-load.eu/verify/documentation.txt
 |:--------------|:--------|
 | https://lounge.burble.dn42 | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
 
-## Search engines
-
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| http://mhm.dn42/search                            | Hosted by toBee                                          |
-
 ## Images, E-Books, Videos and other Media
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
-| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test)
-|
+| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
-| Hostname / IP                                     | Remarks                                                  |
-|:------------------------------------------------- |:-------------------------------------------------------- |
-| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams            |
-| https://invidious.doxz.dn42/                      | Invidious instance with proxy (Youtube)                  |
+| Hostname / IP                                     | Remarks                                                        |
+|:------------------------------------------------- |:-------------------------------------------------------------- |
+| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02)|
+| https://invidious.doxz.dn42/                      | Invidious instance with proxy (Youtube)                        |
+| http://radio.hex.dn42/                            | Ambient musics                                                 |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -106,12 +95,6 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
 | http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 | http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                                       |
-| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps             |
-
-### Torrent Search Engine
-
-- https://magnetic.dn42 (DHT Search Engine)
 
 ## Proxies
 
@@ -133,6 +116,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
 | tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
 | *.burble.dn42 | All burble.dn42 nodes are part of the NTP Pool and provide NTP over clearnet and DN42. See also [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services) |
+| ntp.yuetau.dn42 (172.21.68.50)                    | Anycast on all node     |
 
 ## OS Mirror/Repository's
 
@@ -144,11 +128,12 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.1, Optimized for CN   |
+| 172.20.34.168                                     | Minecraft              | 1.16.4, Bedrock supported, Abuse may lead to a network-wide ban or peer removal |
+| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4 Mod, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
-| stk.jerry.dn42:2759                               | SuperTuxKart           | latest, IPv4 only, NeoNetwork users please use stk.jerry.neo |
+| stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 
 ## Shell
@@ -158,13 +143,13 @@ Providers of shell access:
 | Person        | Hostname                             | Net              | Description | Contact       |
 |:------------- |:------------------------------------ |:---------------- |:----------- |:------------- |
 | mc36          | telnet test.nop.dn42                 | dn42 only        |looking glass| -             |
-| JerryXiao     | ssh lg@lg.jerry.dn42                 | dn42 and neonet  |looking glass| -             |
+| JerryXiao     | ssh lg@lg.jerry.dn42                 | dn42 and icvpn   |looking glass| -             |
 
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
+| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here (DOWN 2020-11-02)  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
 | http://www.nop.dn42/                              | Basic "whatismyip" service               |
@@ -184,6 +169,18 @@ There are some News Servers available [here](/services/News)
 
  * https://mirror.frubar.net 100MBit
  * https://frucman.frubar.net
+
+### NAT64
+
+Niantic Network (AS4242421331) is providing a NAT64 service at Strategic Explorations (AS207268). 
+
+* IPv6 at public Internet: `2a0e:b107:b7f::[DN42 IPv4]`
+
+* IPv4 endpoint at DN42: 
+  * `172.20.158.177`: Seattle
+  * `172.20.158.178`: Singapore
+
+* DNS64: `2602:feda:3c9::` or `dns.strexp.net`
 
 ## AnoNet
 

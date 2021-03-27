@@ -39,6 +39,8 @@ nameserver fd42:d42:d42:53::1
 nameserver fd42:d42:d42:54::1
 nameserver 172.23.0.53
 nameserver 172.20.0.53
+option inet6       # Linux/glibc
+family inet6 inet4 # BSD
 search dn42
 ```
 
