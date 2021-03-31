@@ -71,6 +71,7 @@ The [[Getting started|howto/Getting-Started]] page helps you to get your first n
 * [Le LOOP](https://leloop.org/)
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
 * [NixNodes](https://nixnodes.net)
+* [fixmix Technologies Ltd](https://fixmix.tech)
 
 ## About this wiki
 
