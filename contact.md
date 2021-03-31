@@ -29,8 +29,7 @@ There are currently multiple decentralized mirrors and domains for the DN42 wiki
  * [dn42.dev](https://dn42.dev) / [wiki.burble.dn42](https://wiki.burble.dn42/) maintained by Burble
  * [dn42.eu](https://dn42.eu) maintained by Nurtic-vibe
  * [dn42.tk](https://dn42.tk) maintained by Androw
+ * [dn42.net](https://dn42.net) maintained by toBee
 
 No longer maintained:
-
- * [dn42.net](https://dn42.net) maintained by toBee
  * [wiki.dn42.lutoma.org](https://wiki.dn42.lutoma.org) maintained by lutoma
