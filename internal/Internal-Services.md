@@ -128,7 +128,6 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| 172.20.34.168                                     | Minecraft              | 1.16.4, Bedrock supported, Abuse may lead to a network-wide ban or peer removal |
 | mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4 Mod, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
