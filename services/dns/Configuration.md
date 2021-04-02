@@ -48,9 +48,37 @@ zone "d.f.ip6.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
+
+# for reverse dns to work the following option must be set:
+options {
+  # [...]
+
+  # disable the integrated handling of RFC1918 and non-assigned IPv6 space reverse dns
+  empty-zones-enable no;
+
+  # [...]
+};
 ```
 
 **Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
+
+To disable DNSSEC validation only for certain TLDs include the following in the options section:
+```
+options {
+  # [...]
+  
+  validate-except {
+    "dn42";
+    "20.172.in-addr.arpa";
+    "21.172.in-addr.arpa";
+    "22.172.in-addr.arpa";
+    "23.172.in-addr.arpa";
+    "d.f.ip6.arpa";
+  };
+
+  # [...]
+};
+```
 
 ## dnsmasq
 
