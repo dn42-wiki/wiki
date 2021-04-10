@@ -176,21 +176,3 @@ include "/etc/bird/community_filters.conf";
 
 
 ***
-
-### Bird bgp_local_pref calculation
-If you are running a bigger network and also want to prioritize your traffic based on the communities, then you can look at the following below:
-```
-bgp_local_pref = 10000+100*dn42_bandwidth + 50*(10-dn42_latency)-200*bgp_path.len+100*dn42_crypto; (as suggested by tombii)
-bgp_local_pref = 1000*dn42_bandwidth - 10*dn42_latency; if dn42_crypto < 2 then bgp_local_pref = 0; (as suggested by Jplitza)
-bgp_local_pref = 10000+100*dn42_bandwidth + 50*(10-dn42_latency)-400*(bgp_path.len-1)+100*dn42_crypto; (as suggested by Mic92 - prefer direct tunnel)
-```
-This calculation goes into the /etc/bird/community_filters.conf  just above the return true; line. However for starters I recommend to skip the bgp_local_pref calculation part until you fully unterstand BGP routing and how this will affect not only you but the whole network. Assigning community flags to your peerings will however have an impact on dn42 in total. Remember, probably none of these alternatives are a good fit for your network, you will need to apply one and see how it affects your traffic and then going back and tweaking the formula and checking again.
-
-Original implementation by Jplitza: https://gist.github.com/welterde/524cc9b37a618e29093d
-
-All props to him for the bird code based on the suggestion from welterde. 
-
-Original email from welterde: http://lists.spaceboyz.net/pipermail/dn42/2015-February/000982.html
-
-My modification is only for the calculation of bgp_local_pref to adjust for prefering lower latency. Feel free to play around with the formula to find something that suits your needs.
--tombii
