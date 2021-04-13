@@ -33,7 +33,7 @@ https://git.dn42.dev/dn42/registry (https://git.dn42/dn42/registry)
 
 No. The registry includes IPv6 resources but NTFS does not support having a `:` in filenames.
 
-A simple workaround is to use a non-Windows VM to do your changes.
+A simple workaround is to use a non-Windows VM to do your changes, or use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) when working with the registry. 
 
 ### Can I reuse my public AS number/IPv4/IPv6?
 
