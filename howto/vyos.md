@@ -117,7 +117,7 @@ _Your peers ASN_
 
 ##RPKI/ROA Checking
 ###Setup RPKI Caching Server
-Burble has made this super easy.  More info can be found [here](https://wiki.dn42/ROA-slash-RPKI) on this wiki.  Get started by running the below command on a Linux server with Docker installed.     
+Burble has made this super easy.  More info can be found [here](https://wiki.dn42/howto/ROA-slash-RPKI) on this wiki.  Get started by running the below command on a Linux server with Docker installed.     
 
 ```  
 sudo docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
