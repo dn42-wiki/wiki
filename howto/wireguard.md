@@ -62,6 +62,22 @@ ping fe80::<your_peers_suffix>%<interface_name>
 
 Afterwards configure your [BGP session](/howto/Bird) as usual
 
+## Debugging
+
+The wireguard kernel module on linux has support for enabling dynamic debugging. This can be useful to help track down some problems, e.g. if public keys don't match. 
+
+Debug messages are logged via dmesg and can be enabled using:
+
+```sh
+$ echo 'module wireguard +p' > /sys/kernel/debug/dynamic_debug/control
+```
+
+To disable debug:
+
+```sh
+$ echo 'module wireguard -p' > /sys/kernel/debug/dynamic_debug/control
+```
+
 ## wg-quick
 
 [wg-quick](https://git.zx2c4.com/wireguard-tools/about/src/man/wg-quick.8) is a script that is shipped with Wireguard to help users bring up tunnels in some common use cases. 
