@@ -37,6 +37,9 @@ OneSwarm can be run as a darknet for friend-to-friend file-sharing.
 - **Netsukuku**
 - **Agora**
 
+## AnoNet
+A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
+
 ## TINC Clouds
 
 > This information is a caryover from the original dn42 wiki. most is unsubstantiated and probably invalid now. Included here for historical reasons. Keys and other parameters can be found in the registry under `tinc-key` and `tinc-keyset`
