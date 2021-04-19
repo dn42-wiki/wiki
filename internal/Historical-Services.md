@@ -10,6 +10,8 @@ You can inspect the services status [on this page](https://services.dn42)
 ## Network-related
   * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
   * Polynome has some nice scripts and visualizations here: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html
+  * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
+  * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
 
 ### DNS Hosting
 Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
@@ -59,6 +61,14 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 | http://yacy.dn42 (OFFLINE 2020-01-18)             | YaCy search engine. Indexing local nets                  |
 | _Configuring Yacy Network settings:_              |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
 | http://mhm.dn42/search                            | Hosted by toBee                                          |
+
+## Radio and Video Streaming
+
+| Hostname / IP                                     | Remarks                                                         |
+|:------------------------------------------------- |:--------------------------------------------------------------- |
+| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
+| http://radio.hex.dn42/                            | Ambient musics                                                  |
+                   
 
 ## File Sharing
 
@@ -146,7 +156,10 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
 | https://whois.rest.dn42/                          | whois restful API |
 | [pgp.dn42](http://pgp.dn42)                                          | PGP keyserver, [synchronizes](http://pgp.dn42/pks/lookup?op=stats) with the SKS keyservers |
-         
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)|               
+| https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
+| http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
+| http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 
 ## DN42 FreePhone
 Somebody was providing a FreePhone [here](/services/FreePhone)
