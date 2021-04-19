@@ -36,6 +36,7 @@
 
 * Internal
   * [[Internal services|internal/Internal-Services]]
+  * [[Interconnections|internal/interconnections]]
   * [[APIs|internal/APIs]]
   * [[Historical services|internal/Historical-Services]]
 
