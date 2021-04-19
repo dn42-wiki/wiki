@@ -166,3 +166,19 @@ Somebody was providing a FreePhone [here](/services/FreePhone)
 
 ## Email Providers
 There is a page for email Providers [here](/services/E-Mail-Providers)
+
+# Other Networks
+
+## ChaosVPN
+
+  * Anybody can add services to this list, which will be monitored for uptime: http://10.100.44.1
+  * Check your IP and reverse lookup: [ifconfig.hack](http://ifconfig.hack)
+  * View of the network: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.png
+  * List of nodes: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.nodes.html
+
+## Freifunk
+
+### Augsburg
+
+We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at http://10.11.0.8/cgi-bin/luci/freifunk/services to see what we have to offer.
+(Upload is not fast, most probably DSL speed only)
