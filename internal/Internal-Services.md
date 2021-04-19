@@ -162,6 +162,8 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 
 # Other networks
 
+###[List of other Overlay Networks](/other)
+
 ## Public Internet
 
  * https://mirror.frubar.net 100MBit
@@ -178,21 +180,3 @@ Niantic Network (AS4242421331) is providing a NAT64 service at Strategic Explora
   * `172.20.158.178`: Singapore
 
 * DNS64: `2602:feda:3c9::` or `dns.strexp.net`
-
-## AnoNet
-
-A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
-
-## ChaosVPN
-
-  * Anybody can add services to this list, which will be monitored for uptime: http://10.100.44.1
-  * Check your IP and reverse lookup: [ifconfig.hack](http://ifconfig.hack)
-  * View of the network: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.png
-  * List of nodes: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.nodes.html
-
-## Freifunk
-
-### Augsburg
-
-We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at http://10.11.0.8/cgi-bin/luci/freifunk/services to see what we have to offer.
-(Upload is not fast, most probably DSL speed only)
