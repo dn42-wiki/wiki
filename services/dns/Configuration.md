@@ -18,6 +18,10 @@ Two independent anycast services are also provided:
 All the examples here list 172.20.0.53/fd42:d42:d42:54::1, but users are encouraged to configure
 multiple services from *.recursive-servers.dn42 for redundancy. 
 
+## Note on ICVPN Zones
+
+DN42 is [interconnected](/internal/Interconnections) with the Inter City VPN or in short "ICVPN". The registry of the ICVPN includes all the DNS information such as the Top level domains (TLDs) used inside ICVPN and the reverse DNS for the IP ranges of the ICVPN. Additionally, it includes the TLDs of other some other networks that are interconnected with dn42 and share some of the IP space of ICVPN. The ICVPN [repository](https://github.com/freifunk/icvpn-meta) includes a handy script to automatically generate all the required zones.
+
 ## BIND
 
 If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
@@ -41,6 +45,10 @@ zone "22.172.in-addr.arpa" {
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
 zone "23.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "10.in-addr.arpa" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
 };
@@ -73,6 +81,7 @@ options {
     "21.172.in-addr.arpa";
     "22.172.in-addr.arpa";
     "23.172.in-addr.arpa";
+    "10.in-addr.arpa";
     "d.f.ip6.arpa";
   };
 
@@ -94,6 +103,7 @@ config dnsmasq
         list server '/21.172.in-addr.arpa/172.20.0.53'
         list server '/22.172.in-addr.arpa/172.20.0.53'
         list server '/23.172.in-addr.arpa/172.20.0.53'
+        list server '/10.in-addr.arpa/172.20.0.53'
         list server '/d.f.ip6.arpa/fd42:d42:d42:54::1'
 
 ```
@@ -111,6 +121,7 @@ server=/20.172.in-addr.arpa/172.20.0.53
 server=/21.172.in-addr.arpa/172.20.0.53
 server=/22.172.in-addr.arpa/172.20.0.53
 server=/23.172.in-addr.arpa/172.20.0.53
+server=/10.in-addr.arpa/172.20.0.53
 server=/d.f.ip6.arpa/fd42:d42:d42:54::1
 ```
 in `dnsmasq.conf`.
@@ -119,8 +130,8 @@ in `dnsmasq.conf`.
 Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS), the **forward-zone-recurse** is _**one line**_.
 
 ```
-dont-query=127.0.0.0/8, 10.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
-forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,21.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53
+dont-query=127.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
+forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,21.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,10.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53
 ```
 
 ## MaraDNS
@@ -133,6 +144,7 @@ root_servers["20.172.in-addr.arpa."] = "dn42_root"
 root_servers["21.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
 root_servers["23.172.in-addr.arpa."] = "dn42_root"
+root_servers["10.in-addr.arpa."] = "dn42_root"
 ```
 
 ## Unbound
@@ -146,6 +158,7 @@ server:
       local-zone: "21.172.in-addr.arpa." nodefault
       local-zone: "22.172.in-addr.arpa." nodefault
       local-zone: "23.172.in-addr.arpa." nodefault
+      local-zone: "10.in-addr.arpa." nodefault
       local-zone: "d.f.ip6.arpa." nodefault
 
 forward-zone: 
@@ -170,6 +183,11 @@ forward-zone:
 
 forward-zone: 
       name: "23.172.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "10.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
@@ -223,6 +241,12 @@ system {
                   fd42:d42:d42:54::1;
                }
             }
+            default-domain 10.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+                  fd42:d42:d42:54::1;
+               }
+            }
          }
       }
    }
@@ -230,4 +254,4 @@ system {
 ```
 
 ## MS DNS
-Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
+Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa", "10.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
