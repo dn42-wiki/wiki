@@ -14,7 +14,7 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
   * See [[Looking Glasses|/services/Looking-Glasses]] for more network diagnostic tools
   * Realtime network map: [map.dn42](http://map.dn42/) (DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (IANA) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
   * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
-  * Yet Another WIP network map: [map.jerry.dn42](http://map.jerry.dn42/) (via DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses GRC dump as source, updated every 24 hours.)_
+  * Yet Another WIP network map: [map.jerry.dn42](http://map.jerry.dn42/) (via DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 30 minutes.)_
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
@@ -73,7 +73,7 @@ To use the service, please message Kioubit on IRC to have your domain activated.
 | Hostname / IP                                     | Remarks                                                        |
 |:------------------------------------------------- |:-------------------------------------------------------------- |
 | https://invidious.doxz.dn42/ (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                        |
-
+| http://live.jerry.dn42/                           | Live audio stream powered by mpd                        |
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
 
