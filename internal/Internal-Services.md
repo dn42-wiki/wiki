@@ -163,7 +163,7 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 
 # Other networks
 
-###[List of other Overlay Networks](/other)
+**[List of other Overlay Networks](/Other)**
 
 ## Public Internet
 
