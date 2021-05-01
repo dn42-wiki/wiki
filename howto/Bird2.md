@@ -18,6 +18,7 @@ When copying the configuration below onto your system, you will have to enter th
 * Then replace `<OWNNET>` with the IPv4 subnet that was assigned to you.
 * The same goes for `<OWNNETv6>`, but it takes an IPv6 subnet (Who'd have thought).
 * Keep in mind that you'll have to enter both networks in the OWNNET{,v6} and OWNNETSET{,v6}, the two variables are required due to set parsing difficulties with variables.
+
 ```
 ################################################
 #               Variable header                #
@@ -72,13 +73,19 @@ roa6 table dn42_roa_v6;
 
 protocol static {
     roa4 { table dn42_roa; };
-    include "/etc/bird/roa_dn42.conf";
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v4_and_v6.conf";
 };
 
-protocol static {
-    roa6 { table dn42_roa_v6; };
-    include "/etc/bird/roa_dn42_v6.conf";
-};
+## or use this:
+# protocol static {
+#     roa4 { table dn42_roa; };
+#     include "/etc/bird/roa_dn42.conf";
+# };
+# protocol static {
+#     roa6 { table dn42_roa_v6; };
+#     include "/etc/bird/roa_dn42_v6.conf";
+# };
 
 function is_valid_network_v6() {
   return net ~ [
@@ -176,11 +183,14 @@ Please note: This section assumes that you've already got a tunnel to your peeri
 
 First, make sure the /etc/bird/peers directory exists:
 
-    # mkdir -p /etc/bird/peers
+```
+# mkdir -p /etc/bird/peers
+```
 
 Then for each peer, create a configuration file similar to this one:
 
 `/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
+
 ```
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
