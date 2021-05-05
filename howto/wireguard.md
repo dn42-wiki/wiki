@@ -98,8 +98,8 @@ An example wg-quick script that incorporates the above two workarounds is below,
 [Interface]
 PrivateKey = <your private key>
 Address = <your link-local address, if any>
-PostUp = /sbin/ip addr add dev wg0 <MyIPv4>/32 peer <PeerIPv4>/32
-PostUp = /sbin/ip addr add dev wg0 <MyIPv6>/128 peer <PeerIPv6>/128
+PostUp = /sbin/ip addr add dev %i <MyIPv4>/32 peer <PeerIPv4>/32
+PostUp = /sbin/ip addr add dev %i <MyIPv6>/128 peer <PeerIPv6>/128
 Table = off
  
 [Peer]
