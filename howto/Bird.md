@@ -294,10 +294,10 @@ mkdir -p /var/lib/bird/
 `https://github.com/cloudflare/gortr/releases`
 
 * Running gortr
-`./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json`
 
-* Add this your bird configure file,other ROA protocol must remove
+./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
 
+* Add this your bird configure file,other ROA protocol must remov
 
 ```
 protocol rpki rpki_dn42{
