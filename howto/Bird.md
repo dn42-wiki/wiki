@@ -288,6 +288,29 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
+# Use RPKI ROA for bird2
+Download  gortr
+
+`https://github.com/cloudflare/gortr/releases`
+Running gortr
+`./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json`
+
+Add this your bird configure file,other ROA protocol must remove
+
+
+```
+protocol rpki rpki_dn42{
+  roa4 { table dn42_roa; };
+  roa6 { table dn42_roa_v6; };
+
+  remote "<your rpki server ip or domain>" port 8282;
+
+  retry keep 90;
+  refresh keep 900;
+  expire keep 172800;
+}
+```
+
 ## Filter configuration
 
 In your import filter add the following to reject invalid routes:
@@ -306,6 +329,7 @@ roa table dn42_roa {
     include "/var/lib/bird/bird_roa_dn42.conf";
 };
 ```
+
 
 **NOTE**: Make sure you setup ROA checks for both bird and bird6 (for IPv6).
 
