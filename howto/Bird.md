@@ -289,17 +289,14 @@ mkdir -p /var/lib/bird/
 ```
 
 # Use RPKI ROA for bird2
-Download  gortr
+* Download  gortr
 
-`https://github.com/cloudflare/gortr/releases`                                                  
+`https://github.com/cloudflare/gortr/releases`
 
-
-Running gortr
-
-
+* Running gortr
 `./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json`
 
-Add this your bird configure file,other ROA protocol must remove
+* Add this your bird configure file,other ROA protocol must remove
 
 
 ```
