@@ -295,7 +295,18 @@ mkdir -p /var/lib/bird/
 
 * Running gortr,need golang environment.
 
+```
 ./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
+```
+
+
+* run with dokcer
+
+`docker pull cloudflare/gortr`
+
+```
+docker run --name dn42rpki -p 8282:8282 --restart=always -d cloudflare/gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
+```
 
 * Add this your bird configure file,other ROA protocol must removed.
 
