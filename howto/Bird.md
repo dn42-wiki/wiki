@@ -288,7 +288,7 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
-### Use RPKI ROA for bird2
+# Use RPKI ROA for bird2
 * Download  gortr
 
 `https://github.com/cloudflare/gortr/releases`
@@ -308,7 +308,7 @@ mkdir -p /var/lib/bird/
 docker run --name dn42rpki -p 8282:8282 --restart=always -d cloudflare/gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
 ```
 
-* Add this your bird configure file,other ROA protocol must removed.
+* Add this to your bird configure file,other ROA protocol must removed.
 
 ```
 protocol rpki rpki_dn42{
