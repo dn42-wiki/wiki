@@ -300,7 +300,7 @@ mkdir -p /var/lib/bird/
 ```
 
 
-* run with dokcer
+* run with docker
 
 `docker pull cloudflare/gortr`
 
