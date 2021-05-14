@@ -288,7 +288,7 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
-# Use RPKI ROA for bird2
+### Use RPKI ROA for bird2
 * Download  gortr
 
 `https://github.com/cloudflare/gortr/releases`
