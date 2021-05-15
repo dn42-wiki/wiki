@@ -8,7 +8,7 @@ The signature and verification process varies depending on the type of public ke
 
 ---
 
-*The registry now contains an experimental script 'sign-my-commit' which can authentication requests using PGP or generic SSH key signing. Users are encouraged to use the script where possible as it will help with automating pull request reviews.*
+*The registry now contains an experimental script 'sign-my-commit' which can authenticate requests using PGP or generic SSH key signing. Users are encouraged to use the script where possible as it will help with automating pull request reviews.*
 
 *Run `./sign-my-commit --help` to get usage information.*
 
