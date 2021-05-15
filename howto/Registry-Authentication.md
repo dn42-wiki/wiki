@@ -4,7 +4,17 @@
 
 When a pull request is submitted to the registry, the submitter signs the git commit hash with their private key. The registry maintainers will then check the signature against the registered public key to authorise the change. 
 
-The signature and verification process varies depending on the type of public key within the `auth` attribute. 
+The signature and verification process varies depending on the type of public key within the `auth` attribute.
+
+---
+
+*The registry now contains an experimental script 'sign-my-commit' which can authentication requests using PGP or generic SSH key signing. Users are encouraged to use the script where possible as it will help with automating pull request reviews.*
+
+*Run `./sign-my-commit --help` to get usage information.*
+
+*If the script fails, please report the problem using the registry issue log (or better fix it and submit a PR!). You can always sign your commit manually using the methods below.*
+
+---
 
 #### Finding the commit hash
 
