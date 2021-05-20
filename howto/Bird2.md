@@ -73,19 +73,13 @@ roa6 table dn42_roa_v6;
 
 protocol static {
     roa4 { table dn42_roa; };
-    roa6 { table dn42_roa_v6; };
-    include "/etc/bird/roa_dn42_v4_and_v6.conf";
+    include "/etc/bird/roa_dn42.conf";
 };
 
-## or use this:
-# protocol static {
-#     roa4 { table dn42_roa; };
-#     include "/etc/bird/roa_dn42.conf";
-# };
-# protocol static {
-#     roa6 { table dn42_roa_v6; };
-#     include "/etc/bird/roa_dn42_v6.conf";
-# };
+protocol static {
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v6.conf";
+};
 
 function is_valid_network_v6() {
   return net ~ [
