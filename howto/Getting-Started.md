@@ -32,6 +32,7 @@ The registry includes a number of scripts to help check your request:
  - `check-my-stuff <FOO>-MNT`: validates your objects against the registry schema
  - `check-pol origin/master <FOO>-MNT`: checks for policy violations
  - `squash-my-commits`: automatically update and squash your local commits
+ - `sign-my-commit`: sign your commit using a pgp key or standard SSH signing
 
 The registry maintainers run the checking scripts against each request, so please run these yourself first to check for simple errors. 
 
@@ -141,7 +142,7 @@ Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-bloc
 
 **You should allocate your AS number in the 4242420000-4242423999 range**
 
-For a list of currently assigned AS numbers browse the registry data/aut-num/ directory or [online](https://explorer.burble.com/#/aut-num/). 
+[dn42regsrv](https://explorer.burble.com/free#/asn) includes a page for finding free ASN. For a list of currently assigned AS numbers browse the registry data/aut-num/ directory or [online](https://explorer.burble.com/#/aut-num/).
 
 If you intend to use an ASN outside of the native dn42 ranges, please check that it doesn't clash with the [Freifunk AS-Numbers] (http://wiki.freifunk.net/AS-Nummern) or other networks (ChaosVPN, etc). 
 
@@ -152,7 +153,7 @@ If unsure, ask on the mailing list or IRC.
 Example: data/aut-num/AS4242423999
 ```
 aut-num:            AS4242423999
-as-name:            AS for FOO Network
+as-name:            AS-FOO-DN42
 admin-c:            FOO-DN42
 tech-c:             FOO-DN42
 mnt-by:             FOO-MNT
@@ -168,6 +169,7 @@ To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00:
 dn42 is interconnected with other networks, like icvpn, which also use the same ULA range so a registration in the dn42 registry can't prevent IPv6 conflicts. A fully random prefix (see [RFC4193](https://tools.ietf.org/html/rfc4193)) is recommended; finding a conflict and needing to renumber your network is no fun. 
 
 A few websites can generate random ULA prefixes for you:
+* [dn42regsrv](https://explorer.burble.com/free#/6)
 * [SimpleDNS](https://simpledns.com/private-ipv6)
 * [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
 
@@ -193,7 +195,8 @@ If you also want to register an IPv4 network prefix, simply create an `inetnum` 
 
 You may choose your network prefix in one of the currently open netblocks. You can get a list of unassigned subnets on the following site, please mind the allocation guideline below.
 
- * [Open Netblocks](https://dn42.us/peers/free)
+* [Free blocks in dn42regsrv](https://explorer.burble.com/free#/4)
+* [Open Netblocks](https://dn42.us/peers/free)
 
 Check the registry (data/inetnum) to make sure no-one else has allocated the same prefix. There are some IP ranges that are not open for assignments or are reserved for specific uses, so you should also check that the parent block has an 'open' policy. A quick and simple way to see the block policies is to run `grep "^policy" data/inetnum/*`. 
 
