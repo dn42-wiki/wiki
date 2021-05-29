@@ -183,3 +183,10 @@ Niantic Network (AS4242421331) is providing a NAT64 service at Strategic Explora
   * `172.20.158.178`: Singapore
 
 * DNS64: `2602:feda:3c9::` or `dns.strexp.net`
+
+### Self-serve Peering System
+
+* AS4242423914
+  * https://dn42.g-load.eu/
+* AS4242421588
+  * https://www.chrismoos.com/dn42-peering/
