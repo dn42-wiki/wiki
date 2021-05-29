@@ -23,6 +23,7 @@ Please sort by AS number.
 | 4242421055 | dn42: http://lg.tmwawpl.dn42 | UP |
 | 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute | UP |
+| 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 | UP |
 | 4242421224 | dn42: http://lg.bit.dn42 | UP |
 | 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 | UP |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | UP |
