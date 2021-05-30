@@ -25,7 +25,7 @@ These are simple authoritative servers for the dn42 zone, rDNS and a few DNS inf
 These instances do not serve any clients. They poll the registry regularly and rebuild and resign (DNSSEC) the zones as needed. If any zone changes, all *.delegation-servers.dn42 instances are notified ([RFC1996](https://tools.ietf.org/html/rfc1996)) which then load the new zone data over AXFR ([RFC5936](https://tools.ietf.org/html/rfc5936)). The pool of masters is intentionally kept very small because of its much higher coordination needs and also the lacking support of a multi-master mode in many authoritative server implementations. The masters are only reachable over dedicated IPv6 assignments which are set up in a way that any master operator can hijack the address of a problematic master without having to wait for its operator to fix something.
 
 # Running your own instances
-* If you want to run your own instances, make sure you are subscribed to the [mailinglist](//contact). It is also strongly recommended to join #dn42-dns@hackint. All changes are announced to the mailinglist but IRC makes debugging sessions much easier.
+* If you want to run your own instances, make sure you are subscribed to the [mailinglist](/contact). It is also strongly recommended to join #dn42-dns@hackint. All changes are announced to the mailinglist but IRC makes debugging sessions much easier.
 * Choose the implementation(s) you want to use. It should support at least AXFR+NOTIFY (*.delegation-servers.dn42) or DNSSEC (*.recursive-servers.dn42).
 * Check if [TODO](/TODO) already has configuration snippets for your implementation.
   * If yes, download it from there and include it in the main configuration.

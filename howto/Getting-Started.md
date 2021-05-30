@@ -169,6 +169,7 @@ To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00:
 dn42 is interconnected with other networks, like icvpn, which also use the same ULA range so a registration in the dn42 registry can't prevent IPv6 conflicts. A fully random prefix (see [RFC4193](https://tools.ietf.org/html/rfc4193)) is recommended; finding a conflict and needing to renumber your network is no fun. 
 
 A few websites can generate random ULA prefixes for you:
+
 * [dn42regsrv](https://explorer.burble.com/free#/6)
 * [SimpleDNS](https://simpledns.com/private-ipv6)
 * [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
@@ -317,18 +318,18 @@ You can find [configuration examples for Bird here](bird).
 * [Important Network configuration](networksettings)
 
 * VPN/Tunnel:
-  * [Wireguard](/howto/wireguard)
-  * [Openvpn](/howto/openvpn)
-  * [Tinc](/howto/tinc)
-  * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
+    * [Wireguard](/howto/wireguard)
+    * [Openvpn](/howto/openvpn)
+    * [Tinc](/howto/tinc)
+    * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 * BGP:
-  * [Bird](/howto/Bird)
-  * [Quagga](/howto/Quagga)
+    * [Bird](/howto/Bird)
+    * [Quagga](/howto/Quagga)
 * Router specific:
-  * [dn42 on OpenWRT](OpenWRT)
-  * [EdgeOS Configuration](EdgeOS-Config-Example)
-  * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
-  * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
+    * [dn42 on OpenWRT](OpenWRT)
+    * [EdgeOS Configuration](EdgeOS-Config-Example)
+    * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
+    * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
 
 # Configure DNS
 

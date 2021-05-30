@@ -4,7 +4,7 @@
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
-  * [FAQ](//FAQ)
+  * [FAQ](/FAQ)
 
 * How-To
   * [Wireguard](/howto/wireguard)
