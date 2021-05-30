@@ -1,7 +1,3 @@
-# Frequently Asked Questions
-
-[[_TOC_]]
-
 
 ### How do I connect to DN42?
 

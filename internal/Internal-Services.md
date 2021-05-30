@@ -6,12 +6,12 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 ## CA
 
-xuu is maintaining an [[certificate authority|/services/Certificate-Authority]] for internal services.
+xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
 
 zotan is maintaining an (experimental, but working) [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
 ## Network-related
-  * See [[Looking Glasses|/services/Looking-Glasses]] for more network diagnostic tools
+  * See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
   * Realtime network map: [map.dn42](http://map.dn42/) (DN42) or [map42.0x7f.cc](https://map42.0x7f.cc) (IANA) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
   * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
   * Yet Another WIP network map: [map.jerry.dn42](https://map.jerry.dn42/) (via DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 30 minutes.)_
@@ -101,7 +101,7 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 ### Tor
 
-Entry points to the Tor network are available on dn42. See [[Tor|internal/services/Tor]] for more details.
+Entry points to the Tor network are available on dn42. See [Tor](/internal/services/Tor) for more details.
 
 ### Telegram
 

@@ -4,7 +4,7 @@ The Global Route Collector (GRC) provides a real time view of routing and peerin
 
 Technically the GRC is a [bird](https://bird.network.cz/) instance that anyone can peer with, it imports all routes whilst exporting none and provides a number of interfaces for querying the route data.
 
-Data from the GRC is used to generate some of the DN42 Maps (see the [[Internal Services|/internal/Internal-Services]] page).
+Data from the GRC is used to generate some of the DN42 Maps (see the [Internal Services](//internal/Internal-Services) page).
 
 ## Peering with the collector
 

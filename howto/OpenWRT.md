@@ -80,4 +80,4 @@ You have to use this patch: https://dev.openwrt.org/changeset/35484 (monkeypatch
 
 ## DNS
 
-See [[DNS Configuration|/services/dns/Configuration]]. This will use the anycast dn42 DNS server to resolve `dn42` and relevant reverse domains.
+See [DNS Configuration](/services/dns/Configuration). This will use the anycast dn42 DNS server to resolve `dn42` and relevant reverse domains.
