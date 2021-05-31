@@ -30,26 +30,26 @@ Peer most likely provided you with encryption details.
 If not, ask them about it.
 Here we're gonna use aes256-sha256-modp1536
 
-```
+````
 /ip ipsec peer
 add address=1.1.1.1 comment=gre-dn42-peer dh-group=modp1536 \ 
 enc-algorithm=aes-256 hash-algorithm=sha256 local-address=2.2.2.2 secret=PASSWORD
 
-```
-```
+````
+````
 /ip ipsec policy
 add comment=gre-dn42-peer dst-address=1.1.1.1/32 proposal=dn42 protocol=gre \ 
 sa-dst-address=1.1.1.1 sa-src-address=2.2.2.2 src-address=2.2.2.2/32
-```
+````
 
 ### GRE
 Pretty straightforward here
 
-```
+````
 /interface gre
 add allow-fast-path=no comment="DN42 somepeer" local-address=2.2.2.2 name=gre-dn42-peer \
 remote-address=1.1.1.1
-```
+````
 
 ### IPs inside the GRE tunnel
 Your peer most likely provided you with IP adresses for GRE tunnel.  
@@ -60,18 +60,18 @@ Add the IP your peer provided you:
 
 #### IPv4
 
-```
+````
 /ip address
 add address=192.168.200.130/30 interface=gre-dn42-peer network=192.168.200.128
-```
+````
 
 #### IPv6
 Here we can use /127, so it's simple:  
 
-```
+````
 /ipv6 address
 add address=fdc8:c633:5319:3300::41/127 advertise=no interface=gre-dn42-peer
-```
+````
 
 If you configured everything correctly, you should be able to ping 
 
@@ -83,74 +83,74 @@ In this example, we will be filtering IN: 192.168.0.0/16 and 169.254.0.0/16
 OUT: 192.168.0.0/16 and 169.254.0.0/16, you really don't want to advertise this networks.  
 This filter will not only catch /8 or /16 networks, but smaller networks inside this subnets as well.  
 
-```
+````
 /routing filter
 add action=discard address-family=ip chain=dn42-in prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
 add action=discard address-family=ip chain=dn42-in prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
 add action=discard address-family=ip chain=dn42-out prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
 add action=discard address-family=ip chain=dn42-out prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
-```
+````
 
 Now, if you want only DN42 connection, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
 
-```
+````
 /routing filter
 add action=discard address-family=ip chain=dn42-in prefix=10.0.0.0/8 prefix-length=8-32 protocol=bgp
-```
+````
 
 ### BGP
 Now, for actual BGP configuration.
 
-```
+````
 /routing bgp instance
 set default disabled=yes
 add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in \
 router-id=1.1.1.1
-```
+````
 Let's add some peers. Right now we have just one, but we still need two connections - to IPv4 and IPv6  
 
 IPv4:
 
-```
+````
 /routing bgp peer
 add comment="DN42: somepeer IPv4" in-filter=dn42-in instance=bgp-dn42-somename multihop=yes \
 name=dn42-somepeer-ipv4 out-filter=dn42-out remote-address=192.168.200.129 remote-as=PEER_AS \
 route-reflect=yes ttl=default
-```
+````
 IPv6 (if needed):  
 
-```
+````
 /routing bgp peer
 add address-families=ipv6 comment="DN42: somepeer IPv6" in-filter=dn42-in \ 
 instance=bgp-dn42-somename multihop=yes name=dn42-somepeer-ipv6 out-filter=dn42-out \ 
 remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=default
-```
+````
 
 Also, as a note, Mikrotik doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
 
 ### BGP Advertisements
 You want to advertise your allocated network (most likely), it's very simple:  
 
-```
+````
 /routing bgp network
 add network=YOUR_ALLOCATED_SUBNET synchronize=no
-```
+````
 You can repeat that with as much IPv4 and IPv6 networks which you own.
 
 ## Split DNS
 Separate dns requests for dn42 tld from your default dns traffic with L7 filter in Mikrotik.
 Change network and LAN GW to mach your network configuration.
 
-```
+````
 /ip firewall layer7-protocol
 add name=DN42-DNS regexp="\\x04dn42.\\x01"
 /ip firewall nat
 add action=src-nat chain=srcnat comment="NAT to DN42 DNS" dst-address=172.23.0.53 dst-port=53 protocol=udp src-address=192.168.0.0/24 to-addresses=192.168.0.1
 add action=dst-nat chain=dstnat dst-address-type=local dst-port=53 layer7-protocol=DN42-DNS protocol=udp src-address=192.168.0.0/24 to-addresses=172.23.0.53 to-ports=53
 
-```
+````
 Since version 6.47 have added functionality that can redirect DNS queries according to special rules. If you used to do Layer-7 rules in the firewall, now it's simple and elegant:
-```
+````
 /ip dns static
 add comment=DN42 forward-to=172.23.0.53 regexp=".*\\.dn42" type=FWD
-```
+````

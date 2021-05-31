@@ -5,16 +5,16 @@ This is the config that is used on ZOTAN Networks (AS4242422341). Full network c
 # Configuration
 
 ## loopback device (lo.network)
-```
+````
 [Match]
 Name=lo
 
 [Network]
 Address=fdff:b02d:2ef7::2/128
-```
+````
 
 ## wireguard netdev (dn42p1.netdev)
-```
+````
 [NetDev]
 Name = dn42p1
 Kind = wireguard
@@ -28,10 +28,10 @@ PrivateKeyFile = /etc/wireguard/private.key
 PublicKey = <peer wg pubkey>
 Endpoint = <peer wg endpoint>:<peer wg port>
 AllowedIPs = 172.16.0.0/12,10.0.0.0/8,fd00::/8,fe80::/10,ff00::/8
-```
+````
 
 ## wireguard network (dn42p1.network)
-```
+````
 [Match]
 Name = dn42p1
 
@@ -43,4 +43,4 @@ Peer = <peer tunnel linklocal address>/128
 Address = <your DN42 ipv4>/32
 Peer = <peer DN42 ipv4>/32
 
-```
+````

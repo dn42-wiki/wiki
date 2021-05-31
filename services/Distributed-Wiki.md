@@ -39,7 +39,7 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
      
      + **wiki-sync.sh**:
 
-     ```sh
+     ````sh
 #!/bin/bash
 
 WIKI_PATH=<repo path>
@@ -50,7 +50,7 @@ ${GIT} push
 ${GIT} pull
 
 exit 0
-     ```
+     ````
 
      + **Cron entry**:
 
@@ -64,13 +64,13 @@ exit 0
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
  
    Read/write (SSL only):
-    ```
+    ````
 RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
-    ```
+    ````
    Read-only:
-    ```
+    ````
 RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
-    ```
+    ````
 
     Set `<path>` to the location where wiki Git repo was cloned. 
 
@@ -82,13 +82,13 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
  - \<AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
 
-```
+````
 ./ca.dn42 tls-gen \
    <AS>-<CC>(-<UID>).wiki.dn42 \
    EXAMPLE-MNT \
    mail@example.com \
    DNS:<AS>-<CC>(-<ID>).wiki.dn42,DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
-```
+````
 
    Wait for a reply and then sign the certificate:
 
@@ -107,15 +107,15 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 
   - Extract base64 encoded SPKI fingerprint from private key `wiki.key`:
 
-    ```
+    ````
 openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
-    ```
+    ````
 
   - Configure Nginx to send the fingerprint in header (SSL block):
 
-    ```
+    ````
 add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=5184000; includeSubDomains';
-    ```
+    ````
 
    + `<primary>` - the fingerprint extracted from `wiki.key`
    + `<backup>`  - the CA fingerprint: `of00RDinhPeVRNnXm1jXQDagktOL75qQo1pT+xc7VIE=`
@@ -135,7 +135,7 @@ Nginx should listen on a unicast address as well, so your site can be reached ex
 
 #### Config example
 
-```
+````
 ssl_protocols  TLSv1.2 TLSv1.1 TLSv1;
 ssl_session_cache shared:SSL:2m;
  
@@ -184,7 +184,7 @@ server {
         }
 }
 
-```
+````
 
 ## ExaBGP
 
@@ -194,7 +194,7 @@ The prefix AS-PATH should show the announcement is originating from your AS. Aft
 
 #### Configuration
 
-```
+````
 # exabgp.conf
 
 group gollum-watchdog {
@@ -228,7 +228,7 @@ group gollum-watchdog {
   }
 }
 
-```
+````
 
 #### Watchdog script
 
@@ -236,7 +236,7 @@ Watchdog runs in an infinite loop, sending the appropriate commands to stdout. [
 
 Run `gollum-watchdog.sh` in a shell first to validate it's working:
 
-```sh
+````sh
 #!/bin/bash
 
 CURL=curl
@@ -297,7 +297,7 @@ while [ 1 ]; do
 done    
 
 exit 0
-```
+````
 
 #### Run
 
@@ -305,7 +305,7 @@ exit 0
 
 `USAGE: /etc/exabgp/run.sh [start|stop|restart]`
 
-```sh
+````sh
 #!/bin/bash
 
 PID_FILE=/var/run/exaBGP/exabgp_PID
@@ -352,7 +352,7 @@ case ${1} in
 esac
 
 exit 0
-```
+````
 
 
 

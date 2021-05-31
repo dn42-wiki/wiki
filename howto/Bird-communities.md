@@ -11,7 +11,7 @@ Below, you will see an example config for peers4 based on the original filter im
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
 ## BGP community criteria
-```
+````
 (64511, 1) :: latency \in (0, 2.7ms]
 (64511, 2) :: latency \in (2.7ms, 7.3ms]
 (64511, 3) :: latency \in (7.3ms, 20ms]
@@ -39,12 +39,12 @@ bw = min(up,down) for asymmetric connections
 Propagation:
 - - for latency pick max(received_route.latency, link_latency)
 - - for encryption and bandwidth pick min between received BGP community and peer link
-```
+````
 For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
 Two utilites which measure round trip time and calculate community values automatically are provided, written in  [ruby](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) and [C](https://github.com/nixnodes/bird/blob/master/misc/dn42-comgen.c). 
 
-```
+````
 $ ruby bgp-community.rb --help
 USAGE: bgp-community.rb host mbit_speed unencrypted|unsafe|encrypted|pfs
     -6, --ipv6                       Assume ipv6 for ping
@@ -56,11 +56,11 @@ $ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
   # 11 ms, 1000 mbit/s, pfs tunnel (updated: 2016-02-11)
   import where dn42_import_filter(3,25,34);
   export where dn42_export_filter(3,25,34);
-```
+````
 
 ### Route Origin
 According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin:
-```
+````
 (64511, 41) :: Europe
 (64511, 42) :: North America-E
 (64511, 43) :: North America-C
@@ -74,7 +74,7 @@ According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/00125
 (64511, 51) :: Asia-SE (TH,SG,PH,ID,MY)
 (64511, 52) :: Asia-E (JP,CN,KR)
 (64511, 53) :: Pacific
-```
+````
 
 You need to add following lines to your config(s):
 - `define DN42_REGION = $VALUE_FROM_ABOVE` to your node's config (where OWNAS and OWNIP are set)
@@ -83,15 +83,15 @@ just above `update_flags` in `dn42_export_filter` function
 
 
 ## Example configurations 
-```
+````
 # /etc/bird/peers4/tombii.conf
 protocol bgp tombii from dnpeers {
   neighbor 172.23.102.x as 4242420321;
   import where dn42_import_filter(3,24,33);
   export where dn42_export_filter(3,24,33);
 };
-```
-```
+````
+````
 #/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
   bgp_community.add((64511, link_latency));
@@ -159,9 +159,9 @@ function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypt
   reject;
 }
 
-```
+````
 Please remember to include /etc/bird/community_filters.conf in your bird.conf/birdc6.conf
-```
+````
 
 # local configuration
 ######################
@@ -172,7 +172,7 @@ include "bird/local4.conf";
 
 include "/etc/bird/filter4.conf";
 include "/etc/bird/community_filters.conf"; 
-```
+````
 
 
 ***

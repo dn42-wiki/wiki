@@ -18,7 +18,7 @@ Running email in dn42 is not very complicated.  Your SMTP daemon probably alread
 ~~Send an email to `test@evenet.dn42` to check if your mail setup is correct.~~ This host will reply using the following
 sieve filter:
 
-```
+````
 require ["regex", "variables", "vacation-seconds"];
 if header :contains "To" ["test@evenet.dn42"] {
   if header :matches "Subject" "*" {
@@ -26,7 +26,7 @@ if header :contains "To" ["test@evenet.dn42"] {
   }
   vacation :addresses ["test@evenet.dn42"] :seconds 60 :subject  "Re: ${subject_was}" "Your dn42 email setup works!";
 }
-```
+````
 
 ## Exim tips
 
@@ -65,25 +65,25 @@ This should to the trick for sending mails via your DN42-IP
 If you use `smtpd_recipient_restrictions` you can use the following rule to white-list dn42 as sender.
 This can circumvent certain rdns configuration failure or in case you use rbl lists:
 
-```
+````
 smtpd_recipient_restrictions = permit_mynetworks,
                          permit_sasl_authenticated,
                          check_client_access cidr:/etc/postfix/dn42.cidr,
                          reject_non_fqdn_sender,
                          # ...
                          permit
-```
+````
 
-```
+````
 #/etc/postfix/dn42.cidr
 172.16.0.0/12 OK
 10.0.0.0/8 OK
 fc00::/7 OK
-```
+````
 
-```
+````
 $ postmap /etc/postfix/dn42.cidr
-```
+````
 
 
 ### Receiving emails

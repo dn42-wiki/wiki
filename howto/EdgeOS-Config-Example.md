@@ -12,7 +12,7 @@ This is the config I (Felicitus) am running on an Ubiquiti EdgeRouter Lite (AS76
 
 ## Upcoming
 
-* AICCU integration (SIXXS), probably not possible with the config, so ```apt-get install aiccu``` should do the trick
+* AICCU integration (SIXXS), probably not possible with the config, so ````apt-get install aiccu```` should do the trick
 * dn42 IPv6 routing (probably)
 
 Ask me if you want to know if I have implemented those items already.
@@ -20,7 +20,7 @@ Ask me if you want to know if I have implemented those items already.
 
 # Configuration
 
-```
+````
 firewall {
     all-ping enable
     broadcast-ping disable
@@ -376,4 +376,4 @@ traffic-policy {
 /* Warning: Do not remove the following line. */
 /* === vyatta-config-version: "config-management@1:dhcp-relay@1:dhcp-server@4:firewall@4:ipsec@3:nat@3:qos@1:quagga@2:system@4:ubnt-pptp@1:ubnt-util@1:vrrp@1:webgui@1:webproxy@1:zone-policy@1" === */
 /* Release version: v1.3.0.4605130.131011.1754 */
-```
+````

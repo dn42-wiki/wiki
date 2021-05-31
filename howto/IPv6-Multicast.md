@@ -5,14 +5,14 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
 ## Quickstart
 
 * Install pim6sd from here: https://github.com/troglobit/pim6sd/
-    ```sh
+    ````sh
     cd /usr/src
     git clone https://github.com/troglobit/pim6sd.git
     cd pim6sd
     ./autogen.sh
     ./configure
     make
-    ```
+    ````
 * Find a peer who is already connected to the dn42 multicast backbone
 * Calculate your personal, embedded-RP multicast prefix matching your network prefix via [RFC3956](https://tools.ietf.org/html/rfc3956)
   * Example:
@@ -26,7 +26,7 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
 
 * Create a dummy interface to hold your calculated unicast Rendezvous Point address. This one needs to be reachable from within dn42. Also set "multicast on" on this dummy interface. Example:
 
-    ```
+    ````
     # /etc/network/interfaces.d/pim6sd
     auto pim-router-id
     iface pim-router-id inet manual
@@ -34,11 +34,11 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
             post-up ip link set multicast on dev $IFACE
             post-up ip -6 a a fd00:2001:db8::2/128 dev $IFACE
             post-down ip link del $IFACE
-    ```
+    ````
 
 * Create the configuration file:
 
-    ```sh
+    ````sh
     # /etc/pim6sd.conf
     # disable all interfaces by default
     default_phyint_status disable;
@@ -52,7 +52,7 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
     # configure rendezvous point for the personal multicast prefix
     cand_rp pim-router-id;
     group_prefix ff7e:230:fd00:2001:db8::/96;
-    ```
+    ````
 
     The `phyint` statement enables [PIM](https://tools.ietf.org/html/rfc7761) and [MLD](https://tools.ietf.org/html/rfc2710) on the target interface - by default all interfaces are in the disable state. Enable an interface if it is directed towards a multicast-capable peer or other multicast-capable routers in your autonomous system. Also enable it for downstream network segments with multicast listeners and senders, like for example your home (W)LAN segments.
     
@@ -66,7 +66,7 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
 
 On your router:
 
-```sh
+````sh
 allow-hotplug pim-ns0
 iface pim-ns0 inet manual
     pre-up ip link add pim-ns0 type veth peer name pim-ns1
@@ -78,24 +78,24 @@ iface pim-ns0 inet manual
     post-up ip netns exec pim-ns0 ip -6 r a default via fdd5:69d5:c530:1::1
     post-down ip link del pim-ns0
     post-down ip netns del pim-ns0
-```
+````
 
 You can now switch into this test network namespace via "ip netns exec /bin/bash". Inside this network namespace you can try:
 
 ### Creating a test multicast listener
 
-```
+````
 $ socat -u UDP6-RECV:1234,reuseaddr,ipv6-join-group="[ff7e:230:fdd5:69d5:c530::123]:eth0" -
-```
+````
 
 ### Creating a test multicast sender
 
 First select which interface should be the default one for your multicast traffic. Then send multicast packets via ICMPv6:
 
-```
+````
 $ ip -6 route add ff7e:230:fdd5:69d5:c530::/96 dev eth0 table local
 $ ping6 -t 16 ff7e:230:fdd5:69d5:c530::123
-```
+````
 
 The "-t 16", a hop-limit of 16, is important here as **by default all multicast traffic is usually send with a hop-limit of just 1**.
 

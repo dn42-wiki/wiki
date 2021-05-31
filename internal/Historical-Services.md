@@ -84,23 +84,23 @@ Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure de
 
 ### ipfs
 bootstrap peers
-```
+````
 /ip4/172.20.161.135/tcp/4001/ipfs/QmYgD1wdPjx5oWzYJ195K84PqAXRnw9mcqbyZYAdXfaYkD
 /ip4/172.20.52.220/tcp/4001/ipfs/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc
-```
+````
 test hashes
-```
+````
 /ipfs/QmQ7psrGrXS3GFNC4BtU6pJXq6G7ps5NbYrhS2VYFufj9T
 /ipfs/QmYLapmcSU7q93Ta4eHMh8fq9ios2HTSdbpHDRQwGG6ocJ
-```
+````
 cdn (currently only jquery
-```
+````
 /ipns/QmW5ZhZFav8MZLJyvKuK6pKaR4vnQ5MVHfXY3LuMXqa4kc/cdn/jquery
-```
+````
 Until browsers have ipfs access (either through native support or js), one can use the http gateway
-```
+````
 https://rest.dn42/
-```
+````
 
 ### Torrent Search Engine
 

@@ -65,10 +65,10 @@ Enter NPT. Address your services using a reserved private block, and map that bl
 For example, if you've been assigned a public /48 prefix, and want to be reachable on DN42 aswell, you can use only ULA addresses from DN42 internally (or your own!), then map them to outside prefixes. Note that they'll need to all use the same prefix size to maintain the one-to-one mapping, so you may have to subnet the public prefix.
 
 In Linux's netfilter, this can be implemented through the use of the NETMAP target, for the example above:
-```
+````
 ip6tables -t nat -A POSTROUTING -d 2000::/3 -s <DN42-PREFIX>:<SUBNET>::/56 -j NETMAP --to <PUBLIC-PREFIX>:<SUBNET>::/56; # Map ULA to the public prefix for outgoing packets
 ip6tables -t nat -A PREROUTING -s 2000::/3 -d <PUBLIC-PREFIX>:<SUBNET>::/56 -j NETMAP --to <DN42-PREFIX>:<SUBNET>::/56; # Map public prefix to ULA for incoming packets
-```
+````
 
 
 ### With Multiple Prefixes

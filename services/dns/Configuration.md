@@ -4,9 +4,9 @@ Configuration of common resolver softwares to forward DNS queries for `.dn42` (a
 
 You can use any *.recursive-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is available at the [DN42 registry](https://git.dn42.dev/dn42/registry/src/master/data/dns/recursive-servers.dn42) or through querying SRV records of recursive-servers.dn42:
 
-```sh
+````sh
 drill -D SRV _dns._udp.recursive-servers.dn42. @172.20.0.53
-```
+````
 
 Two independent anycast services are also provided:
 
@@ -27,7 +27,7 @@ DN42 is [interconnected](/internal/Interconnections) with the Inter City VPN or 
 If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
 by adding the following to /etc/bind/named.conf.local
 
-```
+````
 zone "dn42" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
@@ -66,12 +66,12 @@ options {
 
   # [...]
 };
-```
+````
 
 **Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
 
 To disable DNSSEC validation only for certain TLDs include the following in the options section:
-```
+````
 options {
   # [...]
   
@@ -87,13 +87,13 @@ options {
 
   # [...]
 };
-```
+````
 
 ## dnsmasq
 
 If you are running dnsmasq under openwrt, you just have to add 
 
-```
+````
 config dnsmasq
         option boguspriv '0'
         option rebind_protection '1'
@@ -106,7 +106,7 @@ config dnsmasq
         list server '/10.in-addr.arpa/172.20.0.53'
         list server '/d.f.ip6.arpa/fd42:d42:d42:54::1'
 
-```
+````
 
 to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42` 
 with the anycast DNS-Server, while your normal requests go to your standard DNS-resolver.
@@ -115,7 +115,7 @@ Attention: If you go with the default config you'll have to disable "boguspriv" 
 
 For normal dnsmasq use
 
-```
+````
 server=/dn42/172.20.0.53
 server=/20.172.in-addr.arpa/172.20.0.53
 server=/21.172.in-addr.arpa/172.20.0.53
@@ -123,21 +123,21 @@ server=/22.172.in-addr.arpa/172.20.0.53
 server=/23.172.in-addr.arpa/172.20.0.53
 server=/10.in-addr.arpa/172.20.0.53
 server=/d.f.ip6.arpa/fd42:d42:d42:54::1
-```
+````
 in `dnsmasq.conf`.
 
 ## PowerDNS recursor
 Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS), the **forward-zone-recurse** is _**one line**_.
 
-```
+````
 dont-query=127.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
 forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,21.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,10.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53
-```
+````
 
 ## MaraDNS
 Put this in your mararc:
 
-```
+````
 ipv4_alias["dn42_root"] = "172.20.0.53"
 root_servers["dn42."] = "dn42_root"
 root_servers["20.172.in-addr.arpa."] = "dn42_root"
@@ -145,14 +145,14 @@ root_servers["21.172.in-addr.arpa."] = "dn42_root"
 root_servers["22.172.in-addr.arpa."] = "dn42_root"
 root_servers["23.172.in-addr.arpa."] = "dn42_root"
 root_servers["10.in-addr.arpa."] = "dn42_root"
-```
+````
 
 ## Unbound
 
 Make sure to disable `auto-trust-anchor-file` and manually configure `trust-anchor-file` to 
 point to a file with DNSKEY records for dn42.
 
-```
+````
 server:
       local-zone: "20.172.in-addr.arpa." nodefault
       local-zone: "21.172.in-addr.arpa." nodefault
@@ -195,15 +195,15 @@ forward-zone:
       name: "d.f.ip6.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
-```
+````
 
 ## JunOS (SRX 12.1X46)
 Should also work in 12.1X44 and 12.1X45. After making the changes below you may need to run:
-```
+````
 restart named-service
-```
+````
 Config (vlan.0 is presumed to be your LAN/Trust interface)
-```
+````
 system {
    services {
       dns {
@@ -251,7 +251,7 @@ system {
       }
    }
 }
-```
+````
 
 ## MS DNS
 Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa", "10.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.

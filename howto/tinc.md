@@ -10,7 +10,7 @@ One advantage of tinc is that you can have multiple peering over the same VPN co
 
 Example `/etc/tinc/dn42_yourpeer/tinc.conf`:
 
-```
+````
 Interface = dn42_yourpeer
 Name = your_host
 # Only switch mode is feasible for dn42 peerings, since in router mode tinc takes care of routing decisions on its own
@@ -19,14 +19,14 @@ Mode = switch
 ConnectTo = remote_host
 # In newer versions (>= 1.1) you can use AutoConnect instead
 #AutoConnect = yes
-```
+````
 
 Tinc requires to add manually ip addresses and routes to the tap/tun interfaces. On startup it will execute `/etc/tinc/dn42_yourpeer/tinc-up` if it exists **and** is executable:
 
 Example `/etc/tinc/dn42_yourpeer/tinc-up`:
 
 **Linux/iproute2**
-```
+````
 #!/bin/sh
 
 # set the interface up
@@ -38,19 +38,19 @@ ip addr add fe80::1/64 dev $INTERFACE
 
 # add routes
 ip route add 172.16.0.1/30 dev $INTERFACE table peers
-```
+````
 
 For authentication tinc uses public key authentication instead of certificates or pre-shared keys.
 For each key tinc should connect to or allow to connect, a file with the name of the peer in tincd -n twwh -K
 is required. To generate a public/private key pair use:
 
-```
+````
 $ tincd -K
-```
+````
 
 Import for each other party the key like this `/etc/tinc/dn42_yourpeer/hosts/<peername>`:
 
-```
+````
 # address/port are optional, in case they're missing you only expect connections from that host
 Address = <fqdn/ip_addr>
 Port = <port|655>
@@ -62,7 +62,7 @@ tcJpbgbYRzBTUPdSL3OB8k0qlmFI2ZYTnCzOSpgxRQARIB1ecoqOYVxQISK2pzxi
 MHQQlVbquwldaKiVoj7tD7PFW4oQxpiMHZnHIA6dnZCsT3ktTOzCjhf2XMi8o8u5
 P9C5dYrmVWrVAWQznlbuq/w1z+PrTYquoQIDAQAB
 -----END RSA PUBLIC KEY-----
-```
+````
 
 ## Fun with tinc-pre
 
@@ -74,21 +74,21 @@ Installation:
 * Freebsd: Use this [port repo](https://github.com/Mic92/ports/tree/master/security/tinc)
 
 Set up a new tinc network
-```
+````
 # tinc -n dn42_yourpeer init dn42_yourself
-```
+````
 
 Invite your peering partner. Tinc will print the invitaion which you need to copy to your peering partner.
-```
+````
 $ tinc invite yourpeer
 <ip-or-address>/nIRp5pJCnfnhuV13JUomscGs1q5HqEbz3AydZer7wRaMcpUB
-```
+````
 
 On the other node you can join by using:
 
-```
+````
 $ tinc join <invitation-url>
-```
+````
 
 This node will then automatically generate configuration, private/public keys and will exchange this key with the other node on connection.
 

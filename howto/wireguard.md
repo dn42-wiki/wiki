@@ -9,13 +9,13 @@ to allow your BGP daemon instead to do routing. This approach is comparable to [
 
 First generate on each peer public and private keys.
 
-```
+````
 $ wg genkey | tee privatekey | wg pubkey > publickey
-```
+````
 
 ## Configuration
 
-```
+````
 # tunnel.conf
 [Interface]
 PrivateKey = <private_key>
@@ -31,14 +31,14 @@ Endpoint = <end_point_hostname_or_ip:port>
 # however it is easier to do this with iptables/bgp filters/routing table 
 # instead just like for openvpn-based peerings
 AllowedIPs = 0.0.0.0/0,::/0
-```
+````
 
 ## Configure tunnel:
 
 Wireguard comes with its own interface type. 
 It supports link-local addresses for IPv6 and single /32 addresses for IPv4, which can be used for peering.
 
-```
+````
 $ ip link add dev <interface_name> type wireguard
 $ wg setconf <interface_name> tunnel.conf
 # both side pick a different link-local ipv6 address
@@ -46,7 +46,7 @@ $ ip addr add fe80::<some_random_suffix>/64 dev <interface_name>
 # choose the first ip from your subnet and the second one from the peer
 $ ip addr add 172.xx.xx.xx/32 peer 172.xx.xx.xx/32 dev <interface_name>
 $ ip link set <interface_name> up
-```
+````
   
 <!-- Nurtic-Vibe has another [script](https://git.dn42.us/Nurtic-Vibe/grmml-helper/src/master/create_wg.sh) to interactively automate the peering process. -->
 
@@ -54,9 +54,9 @@ Maybe you should check the MTU to your peer with e.g. `ping -s 1472 <end_point_h
 
 ## Testing
 
-```
+````
 ping fe80::<your_peers_suffix>%<interface_name>
-```
+````
 
 (For older iputils, use `ping6`.)
 
@@ -68,15 +68,15 @@ The wireguard kernel module on linux has support for enabling dynamic debugging.
 
 Debug messages are logged via dmesg and can be enabled using:
 
-```sh
+````sh
 $ echo 'module wireguard +p' > /sys/kernel/debug/dynamic_debug/control
-```
+````
 
 To disable debug:
 
-```sh
+````sh
 $ echo 'module wireguard -p' > /sys/kernel/debug/dynamic_debug/control
-```
+````
 
 ## wg-quick
 
@@ -94,7 +94,7 @@ The script makes some changes that are not valid when used for DN42 tunnels, and
 
 An example wg-quick script that incorporates the above two workarounds is below, where `<MyIPv[46]>` are the DN42 IP addresses of your node and `<PeerIPv[46]>` are the IP addresses for your peer. 
 
-```
+````
 [Interface]
 PrivateKey = <your private key>
 Address = <your link-local address, if any>
@@ -106,7 +106,7 @@ Table = off
 Endpoint = <your peer's wireguard endpoint>
 PublicKey = <your peer's public key>
 AllowedIPs = 172.16.0.0/12, 10.0.0.0/8, fd00::/8, fe80::/10
-```
+````
 Use `which ip` to get the full path to your ip binary.
 
 ## systemd-networkd
@@ -114,7 +114,7 @@ Use `which ip` to get the full path to your ip binary.
 Example configuration for systemd-networkd.
 
 peer.netdev
-```text
+````text
 [NetDev]
 Name=<ifname>
 Kind=wireguard
@@ -131,10 +131,10 @@ Endpoint=<peer host and port, e.g. 1.2.3.4:9876>
 AllowedIPs=fe80::/64
 AllowedIPs=fd00::/8
 AllowedIPs=0.0.0.0/0
-```
+````
 
 peer.network
-```text
+````text
 [Match]
 Name=<ifname>
 
@@ -165,5 +165,5 @@ Peer=<your peer's IPv6 address>/128
 [Address]
 Address=<your IPv4 address>/32
 Peer=<your peer's IPv4 address>/32
-```
+````
 

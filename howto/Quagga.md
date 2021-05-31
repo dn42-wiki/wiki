@@ -98,7 +98,7 @@ Apply a prefix list for incoming prefixes to your peer group:
     ipv6 prefix-list vpn-in seq 15 deny any
 
 #### Example filter list script
-```
+````
 #!/bin/bash
 
 vtysh -c 'conf t' -c "no ip prefix-list dn42"; #drop old prefix list
@@ -109,7 +109,7 @@ do
 done < <(curl -s https://ca.dn42.us/reg/filter.txt | grep -e  ^[0-9] | awk '{ print "ip prefix-list dn42 seq " $1 " " $2 " " $3 " ge " $4 " le " $5}' | sed "s_/\([0-9]\+\) ge \1_/\1_g;s_/\([0-9]\+\) le \1_/\1_g");
 vtysh -c "wr" #write new prefix list
 
-```
+````
 
 ## show bpg session status
 
@@ -118,7 +118,7 @@ in this example:
 * no (vpn) connection at all exists with peer 64692
 * a (vpn) connection with 4242421375 exists, but no bgp session
 
-```
+````
 vtysh> show ip bgp summary 
 BGP router identifier 172.22.100.254, local AS number 64698
 RIB entries 938, using 103 KiB of memory
@@ -132,4 +132,4 @@ Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
 ....
 172.23.64.1     4 4242421375  0       0        0    0    0 never    Active
 fe80::deca:fbad 4 64699     902     694        0    0    0 01:23:57      486
-```
+````

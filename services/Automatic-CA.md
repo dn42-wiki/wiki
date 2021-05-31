@@ -90,7 +90,7 @@ Read more on this [stack exchange post][osx-2]
 How to Run
 ==========
 
-```
+````
 Usage:  # OWNER is your MNT handle.
    ./ca.dn42 user-gen OWNER EMAIL          # Output to OWNER.csr and OWNER.key
    ./ca.dn42 user-sig OWNER                # Output to OWNER.crt and OWNER.p12
@@ -104,14 +104,14 @@ Revoke Reasons: unspecified, keyCompromise, affiliationChanged,
 
 Environtment Options:
    DN42CA_PKCS12 = 1                # Generate pkcs12 file for certificate.
-```
+````
 
 Example
 =======
 
 Generate the user key
 
-```
+````
 $ ./ca.dn42 user-gen XUU-MNT xuu@sour.is
 Generating a 2048 bit RSA private key
 ...............................+++
@@ -122,11 +122,11 @@ writing new private key to 'XUU-MNT.key'
 = You need to have this pin added to your mnt object before proceeding to the next step.
 =
 |MNT Key Pin| remarks: pin-sha256:HdqCid0sedWXX3Q0uG98rYjJyTNOzaT13WfWpr1GvIw=
-```
+````
 
 ## Sign the user key
 
-````
+`````
 $ ./ca.dn42 user-sign XUU-MNT xuu@sour.is
 == USER CERT ==
    C:XD
@@ -139,11 +139,11 @@ $ ./ca.dn42 user-sign XUU-MNT xuu@sour.is
 OK https://ca.dn42/crt/XUU-MNT.crt
 Enter Export Password:
 Verifying - Enter Export Password:
-```
+````
 
 ## Generate the server key
 
-```
+````
 $ ./ca.dn42 tls-gen ca.dn42 XUU-MNT xuu@sour.is DNS:ca.dn42
 
 Generating a 2048 bit RSA private key
@@ -156,18 +156,18 @@ writing RSA key
 = |DNS Key Pin| You need to have this pin added to your dns records  before proceeding to the next step.
 =
 _dn42_tlsverify.ca.dn42. IN TXT XUU-MNT:pin-sha256:Qu/X5GNqOo05TdL7oexkamE34OUuDE60T+f0xc60UPQ=
-```
+````
 
 After you set this TXT-Record for your domain, you can verify it with the following command (by replacing the domain with your own):
 
-```
+````
 $ dig +short TXT _dn42_tlsverify.ca.dn42.
 "XUU-MNT:pin-sha256:Qu/X5GNqOo05TdL7oexkamE34OUuDE60T+f0xc60UPQ="
-```
+````
 
 ## Sign the server key
 
-```
+````
 $ ./ca.dn42 tls-sign ca.dn42 XUU-MNT
 == USER CERT ==
    C:XD 
@@ -191,17 +191,17 @@ $ ./ca.dn42 tls-sign ca.dn42 XUU-MNT
 OK https://ca.dn42/crt/XUU-MNT_ca.dn42.crt
 Enter Export Password: ****
 Verifying - Enter Export Password: ****
-```
+````
 
-The generated certificate will be valid for 3 months, to renew it simply run ```./ca.dn42 tls-sign ca.dn42 XUU-MNT``` again. This could be also automated in cron:
+The generated certificate will be valid for 3 months, to renew it simply run ````./ca.dn42 tls-sign ca.dn42 XUU-MNT```` again. This could be also automated in cron:
 
-```
+````
 0 0 1 * * /etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
-```
+````
 
 or with a systemd timer:
 
-```
+````
 # update-dn42-ca.timer
 [Timer]
 OnBootSec=1h
@@ -210,9 +210,9 @@ Persistent=yes
 
 [Install]
 WantedBy=timers.target
-```
+````
 
-```
+````
 [Service]
 Type=oneshot
 WorkingDirectory=/etc/ssl/dn42
@@ -220,11 +220,11 @@ ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
 # accept multiple ExecStart lines for other certificates
 #ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign foobar.dn42 MIC92-MNT
 ExecStart=/usr/bin/nginx -s reload
-```
+````
 
 ## Revoke a certificate.
 
-```
+````
 $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt 
 == USER CERT ==
    C:XD 
@@ -236,7 +236,7 @@ $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt
    pin-sha256:HdqCid0sedWXX3Q0uG98rYjJyTNOzaT13WfWpr1GvIw= 
 == REVOKE CERT ==
 OK
-```
+````
 
 ## Certificate transparency
 All issued certificates will be logged to [xuu's mattermost instance](https://teams.dn42/dn42/channels/tls-certificates).
