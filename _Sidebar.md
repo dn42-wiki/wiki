@@ -1,4 +1,3 @@
-<div class='toc-title'>Site Links</div>
 
  * [Home](/Home)
   * [Getting Started](/howto/Getting-Started)
@@ -46,4 +45,3 @@
 
 --------------
 
-[[_TOC_]]
