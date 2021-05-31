@@ -74,7 +74,7 @@ To disable DNSSEC validation only for certain TLDs include the following in the 
 ```
 options {
   # [...]
-  
+
   validate-except {
     "dn42";
     "20.172.in-addr.arpa";

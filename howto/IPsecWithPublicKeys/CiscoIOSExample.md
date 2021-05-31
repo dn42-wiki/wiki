@@ -62,7 +62,7 @@ In this example, we'll use the following settings:
         foo(config-pubkey-chain)#addressed-key 192.0.2.2
         foo(config-pubkey-key)#key-string
         Enter a public key as a hexidecimal number ....
-        
+
         foo(config-pubkey)#30820122 300D0609 2A864886 F70D0101 01050003 82010F00 3082010A 02820101
         foo(config-pubkey)#00F3E0AA 8924E512 C08BA87C 73820A15 E5180DDC EF827221 2B3864BF B2D2A5E0
         foo(config-pubkey)#33D04C1D 43A0CAF8 617EEEBA 7DB5BD38 429660CC 3144618E 4F386201 52483DA7

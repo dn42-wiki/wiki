@@ -47,7 +47,7 @@ $ ip addr add fe80::<some_random_suffix>/64 dev <interface_name>
 $ ip addr add 172.xx.xx.xx/32 peer 172.xx.xx.xx/32 dev <interface_name>
 $ ip link set <interface_name> up
 ```
-  
+
 <!-- Nurtic-Vibe has another [script](https://git.dn42.us/Nurtic-Vibe/grmml-helper/src/master/create_wg.sh) to interactively automate the peering process. -->
 
 Maybe you should check the MTU to your peer with e.g. `ping -s 1472 <end_point_hostname_or_ip>`. If your output looks like `From gateway.local (192.168.0.1) icmp_seq=1 Frag needed and DF set (mtu = 1440)` substract `80` from the MTU and set it via `ip link set dev <interface_name> mtu <calculated_mtu>`
@@ -101,7 +101,7 @@ Address = <your link-local address, if any>
 PostUp = /sbin/ip addr add dev %i <MyIPv4>/32 peer <PeerIPv4>/32
 PostUp = /sbin/ip addr add dev %i <MyIPv6>/128 peer <PeerIPv6>/128
 Table = off
- 
+
 [Peer]
 Endpoint = <your peer's wireguard endpoint>
 PublicKey = <your peer's public key>

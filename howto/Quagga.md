@@ -43,7 +43,7 @@ for IPv6 do something like
     vtysh(config-router-af)> exit
     vtysh(config-router)> exit
     vtysh(config)> exit
-    
+
 ### peer groups, prefix lists and such
 If you want to use 'prefix-list' to filter some of the prefixes quagga is receiving, you can use a 'peer-group' instead of apply the prefix list to every neighbor. 
 
@@ -66,7 +66,7 @@ Apply a prefix list for incoming prefixes to your peer group:
     ip prefix-list vpn-in seq 5 permit 172.22.0.0/15 ge 22 le 28
     !new dn42 allocation:
     ip prefix-list vpn-in seq 10 permit 172.20.0.0/16 ge 22 le 28
- 
+
     ! Anycast /32s for Whois and DNS:
     ip prefix-list vpn-in seq 11 permit 172.22.0.43/32
     ip prefix-list vpn-in seq 12 permit 172.22.0.53/32

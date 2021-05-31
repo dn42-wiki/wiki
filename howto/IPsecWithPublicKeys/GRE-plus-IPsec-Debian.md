@@ -55,7 +55,7 @@ remote 5.6.7.8 [500] {
   verify_cert      on;
   send_cert        off;
   send_cr          off;
-  
+
   proposal {
     encryption_algorithm  aes 256;
     hash_algorithm        sha256;

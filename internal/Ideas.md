@@ -2,7 +2,7 @@
 
 … or the service that would make dn42 truly interesting for people (for non-technical reasons).
 
-#### Criterias
+## Criterias
 
   - it should be difficult to setup on the Internet (for technical or legal reasons)
   - it should interest people that are likely to know dn42 (hackerspaces, etc)

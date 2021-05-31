@@ -10,11 +10,11 @@
      #    NAME                                                             KEY-SIZE
      0 PR mykey                                                            4096-bit
 
-### Exchange public keys with your peer
+## Exchange public keys with your peer
 1. Export the public key to a file.
 
         [admin@mtk1] /ip ipsec key> export-pub-key mykey file-name=mykey.pub
-        
+
         [admin@mtk1] /ip ipsec key> /file print where name=mykey.pub
          # NAME                   TYPE                        SIZE CREATION-TIME
          2 mykey.pub              ssh key                      451 jul/20/2014 12:35:33
@@ -52,7 +52,7 @@ In this example, we'll use the following settings:
 
         [admin@mtk1] /ip ipsec key> import peer-key.pub name=peer-key
         passphrase:
-        
+
         [admin@mtk1] /ip ipsec key> print
         Flags: P - private-key, R - rsa
          #    NAME                                                             KEY-SIZE

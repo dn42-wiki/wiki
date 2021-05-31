@@ -7,7 +7,7 @@ Running email in dn42 is not very complicated.  Your SMTP daemon probably alread
 ## Redirect
 ~~There are forwarding rules for _PERSON_ @ dn42.org to the mail addresses which have been given in the registry. Please note that the trailing `-DN42` is stripped from the local part.~~
 
-####Example####
+### Example
 
 | Handle       | Alias          | Redirection           |
 |:------------ |:-------------- |:--------------------- |

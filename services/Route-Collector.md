@@ -37,7 +37,7 @@ protocol bgp ROUTE_COLLECTOR
   ipv4 {
     # export all available paths to the collector    
     add paths tx;
-  
+
     # import/export filters
     import none;
     export filter {
