@@ -11,18 +11,18 @@ Channel statistics for #dn42@hackint are available at: https://dev.0l.dn42/stats
 
 #### collectd.conf
 
-````
+```
 LoadPlugin exec
 <Plugin exec>
    Exec nobody "/etc/collectd/bgp_prefixes-quagga.sh"
 </Plugin>
-````
+```
 
 collectd refuses to exec scripts as root. On Debian vtysh is compiled with PAM support: adding nobody to the quaggavty group suffices.
 
 #### bgp_prefixes-quagga.sh
 
-````sh
+```sh
 #!/bin/bash
 
 INTERVAL=10
@@ -37,11 +37,11 @@ echo "PUTVAL $HOSTNAME/quagga-bgpd/routes-IPv6 interval=$INTERVAL N:$n6"
 
 sleep $INTERVAL
 done
-````
+```
 
 #### Number of prefixes per neighbour for bird
 
-````sh
+```sh
 #!/bin/sh
 #
 # Collectd script for collecting the number of routes going through each
@@ -65,19 +65,19 @@ do
     echo "PUTVAL $HOSTNAME/bird-bgpd/routes-all interval=$INTERVAL N:$totalroutes"
     sleep $INTERVAL
 done
-````
+```
 
 ### munin plugin
 * add the following to /etc/munin/plugin-conf.d/munin-node
 
-````
+```
 [quagga_bgp]
 user root
-````
+```
 
 * place the script as quagga_bgp in /etc/munin/plugins
 
-````sh
+```sh
 #!/bin/sh
 #
 #
@@ -111,5 +111,5 @@ user root
      echo bgproutes.value    $data
   fi
 # Measure Section ##########
-````
+```
 * restart munin-node

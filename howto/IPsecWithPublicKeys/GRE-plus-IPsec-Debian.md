@@ -12,26 +12,26 @@
 
 ## Define an IPsec security policy
 Example policy on 1.2.3.4:
-````bash
+```bash
 #!/usr/sbin/setkey -f
 spdadd 1.2.3.4 5.6.7.8 gre -P out ipsec esp/transport//require;
 spdadd 5.6.7.8 1.2.3.4 gre -P in  ipsec esp/transport//require;
-````
+```
 Change the direction on 5.6.7.8.
 
 ## Load the IPsec security policy into the IPsec security policy database
 Load the policy with the setkey command.
-````
+```
 setkey -f /etc/ipsec-tools.conf
-````
+```
 Afterward check the policy database with:
-````
+```
 setkey -DP
-````
+```
 
 ## Configure the racoon daemon
 An example /etc/racoon/racoon.conf.
-````
+```
 path pre_shared_key "/etc/racoon/psk.txt";
 path certificate    "/etc/racoon/certs";
 log info;
@@ -72,11 +72,11 @@ sainfo address 1.2.3.4 47 address 5.6.7.8 47 {
   authentication_algorithm hmac_sha1;
   compression_algorithm    deflate;
 }
-````
+```
 
 ## Configure a GRE tunnel
 Add this to /etc/network/interfaces:
-````
+```
 auto gre1
 iface gre1 inet tunnel
   mode gre
@@ -86,4 +86,4 @@ iface gre1 inet tunnel
   endpoint 5.6.7.8
   local 1.2.3.4
   ttl 255
-````
+```

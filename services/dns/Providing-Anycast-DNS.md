@@ -8,7 +8,7 @@ Configuration requirements for all members of the anycast group are:
  * maintain your own zones based on whois database (scripts included in monotone repository)
  * allow recursion (including `.`)
  * listen on a unicast IP too for testing/debugging reasons
- * with bind, please use ````minimal-responses yes;```` (goes into ````options````/````view````)
+ * with bind, please use ```minimal-responses yes;``` (goes into ```options```/```view```)
 
 It is _really_ good to hang around in [IRC](/IRC) to get things sorted out, if something doesn't work. Letting some people test your DNS behavior before joining the anycast-group is considered best practice - better safe than sorry.
 

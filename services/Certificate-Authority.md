@@ -5,7 +5,7 @@ If you would like to have a certificate signed by this CA there is [an automated
 
 The CA certificate ([dn42](https://ca.dn42/crt/root-ca.crt), [iana](https://ca.dn42.us/crt/root-ca.crt)):
 
-````
+```
 Certificate:
     Data:
         Version: 3 (0x2)
@@ -95,21 +95,21 @@ P6v/P0WrfgdFTk0LGEA9OwKcTqkPpcI/SjB3rmZcs42yQWvimAF94GtScE09uKlI
 1zAi8vbktPY7OMprTOc8pHDL3q8KFP8jJcoEzZ5Jw0vkCrULhLXvtFtjB0djzVxQ
 C0IKqQ==
 -----END CERTIFICATE-----
-````
+```
 
 
 ## Testing constraints
 
 The name constraints can be verified for example by using openssl:
-````
+```
     openssl x509 -in dn42.crt -text -noout
-````
+```
 which will show among other things:
-````
+```
     X509v3 Name Constraints: 
       Permitted:
         DNS:.dn42
-````
+```
 
 ## Importing the certificate
 
@@ -123,19 +123,19 @@ Install `ca-certificates-dn42` from [AUR](https://aur.archlinux.org/packages/ca-
 
 #### Unofficial Debian Package
 
-````bash
+```bash
 wget https://ca.dn42.us/ca-dn42_20161122.0_all.deb
 # If you're on a dn42-only network:
 # wget --no-check-certificate https://ca.dn42/ca-dn42_20161122.0_all.deb
 sudo dpkg -i ca-dn42_20161122.0_all.deb
 sudo dpkg-reconfigure ca-certificates
-````
+```
 
 You will be asked which certificates you would like to enabled. By default, the dn42 root certifcate (dn42/root-ca.crt) is not enable, be sure to enable it. This package is waiting for inclusion in Debian (Debian bug [#845351](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=845351)).
 
 #### Manual Installation
 
-````bash
+```bash
 $ mkdir /usr/share/ca-certificates/extra
 $ cat > /usr/share/ca-certificates/extra/dn42.crt <<EOF
 -----BEGIN CERTIFICATE-----
@@ -164,7 +164,7 @@ C0IKqQ==
 -----END CERTIFICATE-----
 EOF
 $ update-ca-certificates
-````
+```
 
 ## PKI Store
 

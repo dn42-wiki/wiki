@@ -9,10 +9,10 @@ Let `fd42::` and `fd42::1` be the IPs of *A* and *D* respectively where both are
 
 ## pseudo interface
 Populate [`/etc/hostname.gre0`](https://man.openbsd.org/hostname.if.5) with:
-````
+```
 tunnel A.example.com D.example.net
 inet6 fd42::/127
-````
+```
 This will resolve FQDNs at parse time, set *A*'s and *D*'s IPs as source and destination tunnel address and set *A*'s assigned IP as point-to-point address on the interface.
 
 Replace hostnames in the `tunnel` line with literal IPs if DNS is not available (at system boot).
@@ -21,14 +21,14 @@ Reboot or run [`sh /etc/netstart gre0`](https://man.openbsd.org/netstart.8) to b
 
 ## miscellaneous
 Populate `/etc/sysctl.conf` with:
-````
+```
 net.inet.gre.allow=1
-````
+```
 Reboot or run `sysctl net.inet.gre.allow=1` to allow GRE packet processing.
 
 -
 At this point, `gre0` will be administratively *UP*:
-````
+```
 $ ifconfig gre0
 gre0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1476
         index 22 priority 0 llprio 6
@@ -37,10 +37,10 @@ gre0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1476
         tunnel: inet6 2001:db8::a --> 2001:db9::d ttl 64 nodf ecn
         inet6 fe80::221:28ff:fef9:c1d8%gre0 -->  prefixlen 64 scopeid 0x16
         inet6 fd42:: -->  prefixlen 127
-````
+```
 
 All traffic destined to `fd42::1/127` will be encapsulated and routed to *D*:
-````
+```
 $ route show
 [...]
 Internet6:
@@ -53,8 +53,8 @@ fe80::221:28ff:fef9:c1d8%gre0      fe80::221:28ff:fef9:c1d8%gre0  UHl        0  
 ff01::%gre0/32                     fe80::221:28ff:fef9:c1d8%gre0  Um         0        1     -     4 gre0
 ff02::%gre0/32                     fe80::221:28ff:fef9:c1d8%gre0  Um         0        1     -     4 gre0
 [...]
-````
-````
+```
+```
 $ route -n get fd42::1
    route to: fd42::1
 destination: fd42::1
@@ -65,7 +65,7 @@ destination: fd42::1
       flags: <UP,HOST,DONE,CLONED>
      use       mtu    expire
     3181         0         0 
-````
+```
 
 # Security
 GRE may be protected with IPsec to encrypt and authenticate traffic, [OpenIKED](http://www.openiked.org/) can be used to establish an IKEv2 session between *A* and *D*.

@@ -9,9 +9,9 @@ The [DN42 registry](https://git.dn42.dev/dn42/registry) is the authoritative sou
 
 A simple way to see all the active policies in the registry is to search the registry content for policy attributes:
 
-````sh
+```sh
 grep -r ^policy data/inet{,6}num/
-````
+```
 
 The [filter.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter.txt) and [filter6.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter6.txt) files within the registry detail the network wide constraints on what address ranges are in use together with the global limits on what can be announced. 
 

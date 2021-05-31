@@ -4,7 +4,7 @@ See also [strongswan](howto/IPsecWithPublicKeys/strongSwan5Example)
 
 The keys are generated with plainrsa-gen.
 
-````
+```
 Usage: plainrsa-gen [options]
 
   -b bits       Generate <bits> long RSA key (default=1024)
@@ -12,12 +12,12 @@ Usage: plainrsa-gen [options]
   -f filename   Filename to store the key to (default=stdout)
   -i filename   Input source for format conversion
   -h            Help
-````
+```
 I'd probably go with 4096 bits.
 
 
 in your racoon.conf:
-````
+```
 path certificate "/etc/racoon/keys";
 
 listen {
@@ -36,7 +36,7 @@ remote 192.168.255.2 {
     dh_group modp1024;
   }
 }
-````
+```
 
 ## Se also
 

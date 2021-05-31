@@ -13,24 +13,24 @@ That is why `rp_filter` needs to be disabled.
 
 **Note** using sysctl is not persistent. Depending on your linux distribution put it into `/etc/sysctl.conf` or `/etc/sysctl.d`
 
-````
+```
 sysctl -w net.ipv4.conf.all.rp_filter=0 net.ipv4.conf.default.rp_filter=0
-````
+```
 
 Check that its really disabled:
-````
+```
 sysctl -a | grep rp_filter
-````
+```
 
 Also the following options must be set.
-````
+```
 $ sysctl -w net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1
-````
+```
 
 Check that ALL your vpn interfaces allow ip forwarding for ipv6/ipv4.
-````
+```
 $ sysctl -a | grep forwarding
-````
+```
 
 ### Note on firewalls, conntrack and asymmetric routing
 

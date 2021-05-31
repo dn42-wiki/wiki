@@ -25,7 +25,7 @@ The collector uses the dynamic peering capability in Bird2 to allow anyone to pe
 
 Example bird2 config:
 
-````text
+```text
 protocol bgp ROUTE_COLLECTOR
 {
   local as ***YOUR_ASN***;
@@ -66,7 +66,7 @@ protocol bgp ROUTE_COLLECTOR
     };
   };
 }
-````
+```
 
 
 ## Querying the collector
@@ -106,7 +106,7 @@ The collector bird instance can be queried directly using a birdc shell.
 
  - ssh shell@collector.dn42
 
-````sh
+```sh
 $ ssh shell@collector.dn42
 ------------------------------------
 *    DN42 Global Route Collector   *
@@ -129,5 +129,5 @@ bird>       297441 of 297441 routes for 502 networks in table master4
 Total: 586116 of 586116 routes for 3597 networks in 4 tables
 bird> 
 
-````
+```
 

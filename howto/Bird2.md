@@ -19,7 +19,7 @@ When copying the configuration below onto your system, you will have to enter th
 * The same goes for `<OWNNETv6>`, but it takes an IPv6 subnet (Who'd have thought).
 * Keep in mind that you'll have to enter both networks in the OWNNET{,v6} and OWNNETSET{,v6}, the two variables are required due to set parsing difficulties with variables.
 
-````
+```
 ################################################
 #               Variable header                #
 ################################################
@@ -165,7 +165,7 @@ template bgp dnpeers {
 
 
 include "/etc/bird/peers/*";
-````
+```
 
 # Route Origin Authorization
 
@@ -177,15 +177,15 @@ Please note: This section assumes that you've already got a tunnel to your peeri
 
 First, make sure the /etc/bird/peers directory exists:
 
-````
+```
 # mkdir -p /etc/bird/peers
-````
+```
 
 Then for each peer, create a configuration file similar to this one:
 
 `/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
 
-````
+```
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
 }
@@ -193,6 +193,6 @@ protocol bgp <NEIGHBOR_NAME> from dnpeers {
 protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
         neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
 }
-````
+```
 
 Due to the special link local addresses of IPv6, an interface has to be specified using the %<if> syntax if a link local address is used (Which is recommended)

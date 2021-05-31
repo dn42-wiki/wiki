@@ -102,13 +102,13 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | weiti       | whois.weiti.dn42          | 172.20.175.253 / fdf7:17d5:de49::43 |
 
 ## Usage
-````sh
+```sh
 whois -h $host $query
-````
+```
 
 ## Using a whois config
 
-````sh
+```sh
 $ cat /etc/whois.conf 
 \.dn42$           whois.dn42
 \-DN42$           whois.dn42
@@ -124,18 +124,18 @@ $ cat /etc/whois.conf
 # dn42 ula ipv6 address space
 ^fd**:****:****:****:****:****:****:**** whois.dn42
 
-````
+```
 
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
 
 ## Running your own whoisd
-````sh
+```sh
 cd /home/some/path/to/store/branch
 sudo aptitude install ruby rubygems
 sudo gem install netaddr
 cd whoisd/ruby
 sudo ruby whoisd.rb nobody
-````
+```
 ## Whois restful API
 Note: this service is in beta testing, use at your own risk.
 https://whois.rest.dn42/

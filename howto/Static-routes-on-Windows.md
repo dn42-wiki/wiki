@@ -1,6 +1,6 @@
 Modern versions of Windows do not support OSPF and manually adding static routes every time after a reboot is annoying. Below is a batch script you can edit and run to help make adding routes easier. This script assumes that your BGP router and Windows computer are on the same LAN.
 
-````
+```
 @echo off
 REM fill in YOUR network information
 REM right click and RUN AS ADMIN
@@ -60,4 +60,4 @@ ping %gateway4%
 pause
 ping %gateway6%
 pause
-````
+```
