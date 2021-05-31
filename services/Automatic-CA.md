@@ -126,7 +126,7 @@ writing new private key to 'XUU-MNT.key'
 
 ## Sign the user key
 
-````
+```
 $ ./ca.dn42 user-sign XUU-MNT xuu@sour.is
 == USER CERT ==
    C:XD
