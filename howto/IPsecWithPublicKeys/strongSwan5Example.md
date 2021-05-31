@@ -94,13 +94,13 @@ In this example, we'll use the following settings:
            valid_lft forever preferred_lft forever
     root@debian:~# more /etc/ipsec.conf
     # ipsec.conf - strongSwan IPsec configuration file
-    
+
     config setup
-    
+
     conn %default
         keyexchange=ikev1
         dpdaction=restart
-    
+
     conn MYPEER
         # peer IPs
         left=192.0.2.1

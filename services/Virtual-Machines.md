@@ -2,7 +2,7 @@
 
 Previously, some DN42 users had provided VMs to the community, but it is not known if any of these are currently active any more. The list of old providers is below the break.
 
-#### burble.dn42
+## burble.dn42
 
 If you have a DN42 project but do not have the resources to host it yourself, the burble.dn42 network may be able to provide hosting for you. Contact burble on IRC or via email to discuss. 
 
@@ -13,7 +13,7 @@ If you have a DN42 project but do not have the resources to host it yourself, th
 
 ---
 
-#### Old Providers:
+### Old Providers:
 
 | Person        | RAM     | HDD       | Net        | CPU         | Description                | No. Available
 |:------------- |:------  |:--------- |:---------- |:----------  |:-------------------------- |:--------------------------|

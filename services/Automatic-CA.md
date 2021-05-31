@@ -218,7 +218,7 @@ Type=oneshot
 WorkingDirectory=/etc/ssl/dn42
 ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
 # accept multiple ExecStart lines for other certificates
-#ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign foobar.dn42 MIC92-MNT
+# ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign foobar.dn42 MIC92-MNT
 ExecStart=/usr/bin/nginx -s reload
 ```
 

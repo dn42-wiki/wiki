@@ -36,7 +36,7 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
 
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo (simple example):
-     
+
      + **wiki-sync.sh**:
 
      ```sh
@@ -62,7 +62,7 @@ exit 0
 
  - Install [gollum](https://github.com/gollum/gollum)
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
- 
+
    Read/write (SSL only):
     ```
 RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
@@ -76,7 +76,7 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
 
 ## Nginx reverse proxy
 
-#### SSL
+### SSL
 
  - Setup your maintainer object according to [Automatic CA](/services/Automatic-CA)
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
@@ -138,7 +138,7 @@ Nginx should listen on a unicast address as well, so your site can be reached ex
 ```
 ssl_protocols  TLSv1.2 TLSv1.1 TLSv1;
 ssl_session_cache shared:SSL:2m;
- 
+
 ssl_ciphers   ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA;
 
 ssl_prefer_server_ciphers   on;
@@ -188,7 +188,7 @@ server {
 
 ## ExaBGP
 
-#### Announcing
+### Announcing
 
 The prefix AS-PATH should show the announcement is originating from your AS. After peering ExaBGP to the nearest speaker(s), check if the prefix is routing properly inside your network. Try not to blackhole the passing traffic (e.g. no static routes to `172.23.0.80/32`). Test the whole thing by shutting down nginx/gollum and watch what happens.
 
@@ -247,7 +247,7 @@ URL=("http://172.23.0.80" "https://172.23.0.80" "http://[fd42:d42:d42:80::1]" "h
 ROUTE='172.23.0.80/32'
 ## the anycast v6 route (/64 due to prefix size limits)
 ROUTE6='fd42:d42:d42:80::/64'
-                        
+
 ## the next-hop we'll be advertising to neighbor(s)
 NEXTHOP='<source-address>' 
 NEXTHOP6='<source-address-v6>'
@@ -258,15 +258,15 @@ VALIDATE_KEYWORD='gollum'
 INTERVAL=60
 
 ###########################
-                
+
 RUN_STATE=0             
-                        
+
 check_urls() {          
         for url in "${URL[@]}"; do
-        
+
                 ## workaround curl errno 23 when piping
                 http_response=`${CURL} --insecure -g -s -L -o - "${url}"`
-                        
+
                 echo "${http_response}" | egrep -q "${VALIDATE_KEYWORD}" || {
                         return 1
                 }
@@ -293,7 +293,7 @@ while [ 1 ]; do
         fi
 
         sleep ${INTERVAL}
-        
+
 done    
 
 exit 0
@@ -325,7 +325,7 @@ start() {
 	cpid=$!
 	[ ${cpid} -eq 0 ] && {
 		echo "ERROR: could not start process"; return 1
-		
+
 	}
         echo ${cpid} > ${PID_FILE}
 }
@@ -356,4 +356,4 @@ exit 0
 
 
 
-    
+

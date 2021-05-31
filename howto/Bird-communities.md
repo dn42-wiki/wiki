@@ -22,7 +22,7 @@ To properly assign the right community to your peer, please reference the table 
 (64511, 8) :: latency \in (1097ms, 2981ms]
 (64511, 9) :: latency > 2981ms
 (64511, x) :: latency \in [exp(x-1), exp(x)] ms (for x < 10)
- 
+
 (64511, 21) :: bw >= 0.1mbit
 (64511, 22) :: bw >= 1mbit
 (64511, 23) :: bw >= 10mbit
@@ -30,7 +30,7 @@ To properly assign the right community to your peer, please reference the table 
 (64511, 25) :: bw >= 1000mbit
 (64511, 2x) :: bw >= 10^(x-2) mbit
 bw = min(up,down) for asymmetric connections
- 
+
 (64511, 31) :: not encrypted
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
@@ -126,7 +126,7 @@ function update_crypto(int link_crypto) {
   else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
   else return 34;
 }
-	
+
 function update_flags(int link_latency; int link_bandwidth; int link_crypto)
 int dn42_latency;
 int dn42_bandwidth;
