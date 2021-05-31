@@ -4,7 +4,7 @@ dn42 is a big dynamic [VPN](http://en.wikipedia.org/wiki/Virtual_private_network
 
 A number of services are provided on the network: see [internal](/internal/Internal-Services) (only available from within dn42).  Also, dn42 is interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) or some [Freifunk](http://en.wikipedia.org/wiki/Freifunk) networks.
 
-Still have questions? We have  [[FAQs|FAQ]] listed.
+Still have questions? We have  [FAQs](/FAQ) listed.
 
 ## Why dn42?
 
@@ -30,9 +30,9 @@ If your hackerspace is actually using dn42 to provide some services, please let 
 
 ## Join or Contact us
 
-dn42 is operated by a group of volunteers. There is no central authority which controls or impersonates the network. Take a look at the [[contact]] page to see how to collaborate or contact us.
+dn42 is operated by a group of volunteers. There is no central authority which controls or impersonates the network. Take a look at the [contact](/contact) page to see how to collaborate or contact us.
 
-The [[Getting started|howto/Getting-Started]] page helps you to get your first node inside the network.
+The [Getting started](/howto/Getting-Started) page helps you to get your first node inside the network.
 
 ## External resources about dn42
 

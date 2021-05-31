@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 
 ## What is ROA?
 

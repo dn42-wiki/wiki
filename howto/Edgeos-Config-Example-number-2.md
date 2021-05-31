@@ -14,9 +14,9 @@ Also thanx to drathir for his patience and support
 
 * Basic EdgeOS knowledge is required  
 
-1) you need to create all required fields in the registry --> look at [[Getting started]] page  
+1) you need to create all required fields in the registry --> look at [Getting Started](/Getting-Started) page  
 
-2) get a peer --> ask nice @ [[IRC]]
+2) get a peer --> ask nice @ [IRC](/IRC)
 
 3) You need following data from the peer  
 

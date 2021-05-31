@@ -1,4 +1,4 @@
-This information is now **deprecated**. Please check [[New DNS]] for the current architecture.
+This information is now **deprecated**. Please check [New DNS](/New DNS) for the current architecture.
 
 ***
 

@@ -32,7 +32,7 @@ Note that currently, most AS are using one of the legacy ASN range (and will pro
 
 ## DNS zones
 
-dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [[DNS]].
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](/DNS).
 
 Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
 
@@ -75,7 +75,7 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 
 # Software
 
- * [[lglass|internal/lglass]] is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
+ * [lglass](/internal/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
  * [whois42d](https://github.com/dn42/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
 
 # Whois daemons

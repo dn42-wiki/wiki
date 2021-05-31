@@ -31,4 +31,4 @@ NeoNetwork zone files can be found here: https://github.com/NeoCloud/NeoNetwork/
 
 ## Configuration
 
-See [[DNS forwarding configuration|/services/dns/Configuration]].
+See [DNS forwarding configuration](/services/dns/Configuration).
