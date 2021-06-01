@@ -101,7 +101,7 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 ### Tor
 
-Entry points to the Tor network are available on dn42. See [Tor](/internal/services/Tor) for more details.
+Entry points to the Tor network are available on dn42. See [Tor](/internal/Tor) for more details.
 
 ### Telegram
 
