@@ -90,7 +90,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | burble      | whois.burble.dn42         | 172.20.129.8 / fd42:4242:2601:ac43::1 |
 | taavi       | whois.svc.as4242423270.dn42 | 172.22.130.143 / fd96:70f6:b174:<span>ac</span>::43 |
 
-### Down?
+## Down?
 
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|

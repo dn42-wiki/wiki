@@ -42,7 +42,7 @@ Using the below as examples:
 #### Copy OpenVPN key to the EdgeRouter  
 
 Copy the VPN key to `/config/auth/SomeSharedKey.key`:
- 
+
     sudo cat > /config/auth/SomeSharedKey.key
 
 Paste the key in the terminal window, hit return once and kill `cat` with CTRL+C. Then type `exit`.
@@ -108,7 +108,7 @@ so bgp can announce the route
     save  
 
 #### Announce Route to BGP
-  
+
     set protocols bgp 111111 network 172.A.A.64/27  
     commit  
     save  

@@ -89,7 +89,7 @@ function is_valid_network_v6() {
 
 protocol kernel {
     scan time 20;
-    
+
     ipv6 {
         import none;
         export filter {
@@ -134,7 +134,7 @@ protocol static {
 template bgp dnpeers {
     local as OWNAS;
     path metric 1;
-    
+
     ipv4 {
         import filter {
           if is_valid_network() && !is_self_net() then {

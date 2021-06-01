@@ -26,7 +26,7 @@ Note: This file covers the configuration of Bird 1.x. For an example configurati
 * Replace `<PEER_AS>` the Autonomous System Number of your peer (only the digits)
 * Replace `<PEER_NAME>` a self chosen name for your peer
 
-### IPv6
+## IPv6
 
 ```
 #/etc/bird/bird6.conf
@@ -51,7 +51,7 @@ include "/etc/bird/local6.conf";
 /*
     krt_prefsrc defines the source address for outgoing connections.
     On Linux, this causes the "src" attribute of a route to be set.
-    
+
     Without this option outgoing connections would use the peering IP which
     would cause packet loss if some peering disconnects but the interface
     is still available. (The route would still exist and thus route through
@@ -160,7 +160,7 @@ include "/etc/bird/local4.conf";
 /*
     krt_prefsrc defines the source address for outgoing connections.
     On Linux, this causes the "src" attribute of a route to be set.
-    
+
     Without this option outgoing connections would use the peering IP which
     would cause packet loss if some peering disconnects but the interface
     is still available. (The route would still exist and thus route through

@@ -54,7 +54,7 @@ To use the service, please message Kioubit on IRC to have your domain activated.
 | irc.hackint.hack/dn42         |  Yes          | ChaosVPN                                    |
 | irc.dn42                      |  Yes          | Internal IRC                                |
 
-#### Clients
+### Clients
 
 | Hostname / IP | Remarks |
 |:--------------|:--------|

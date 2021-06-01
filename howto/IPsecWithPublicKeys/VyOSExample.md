@@ -4,19 +4,19 @@
 
     ubnt@ubnt:~$ generate vpn rsa-key bits 4096 random /dev/urandom
     Generating rsa-key to /config/ipsec.d/rsa-keys/localhost.key
-    
+
     Your new local RSA key has been generated
     The public portion of the key is:
-    
+
     0sAQPNdF370ZEbN+kZUJQ10qnBlZujrg39ujfk20ILTjELksOIdJw/4jiU1MfpqFDKuB/XxERwJQp2POsFyV/n76jAgxIYBfFYfuaBcIH1rdNQtDhCnkmWzlueRXGEsz0Af79n8TKyQ9otzNhJ2cPE1CWCJbKqbIUN3piviLgGlItWNeya+Tl3Oj3ZfEVwr1QOvUAw32+m4L8T9jf1vqSlOTHpRpxxPWBrLEzstk0FOcZISji2JBpDOCU8Kpyyf74JM+LxsOIHwmS15b6iFZR3U9KZLqbbd0dSy/cM8P4XjrwM5UMyRDjrLqvuA/K/33BgtnxdQR3e9DJoYH3Qr8eRgSkR+jHyq06LvgHkHbMvrEjUnc3n8bg+YfR4oyJpIWsKjfIXmN1Q51KzxAPIAww+YSYUYtamSsQsspVAtMIQqR4e0r1In1qyoSn8VCPlksNMWpqYHbSjDo5HJYoSwxf2epzMtCvhenn0OuiH0xlgzziA+wBi6txksTMvJYcPJYnBVR2NIBjkWftOfmkY+rKMozViGjyd6kB7C8lqd8W7Ha5Ds2WxIY22DM3HcYH/zTp9z2xbuMOsbIgib/Y12Kh0wHyCz0lzFvs+d6CZwinyIXNKB/Vo4iiwT5luL5mGqf3pZx4zB+30GYSs/6MaELRF9BxD7tfqYCkOLXUtxyZ4Pdl2sw==
 
 ### Exchange public keys with your peer
 1. Display the public key. Send the key data portion to your peer.
 
         ubnt@ubnt:~$ show vpn ike rsa-keys
-        
+
         Local public key (/config/ipsec.d/rsa-keys/localhost.key):
-        
+
         0sAQPNdF370ZEbN+kZUJQ10qnBlZujrg39ujfk20ILTjELksOIdJw/4jiU1MfpqFDKuB/XxERwJQp2POsFyV/n76jAgxIYBfFYfuaBcIH1rdNQtDhCnkmWzlueRXGEsz0Af79n8TKyQ9otzNhJ2cPE1CWCJbKqbIUN3piviLgGlItWNeya+Tl3Oj3ZfEVwr1QOvUAw32+m4L8T9jf1vqSlOTHpRpxxPWBrLEzstk0FOcZISji2JBpDOCU8Kpyyf74JM+LxsOIHwmS15b6iFZR3U9KZLqbbd0dSy/cM8P4XjrwM5UMyRDjrLqvuA/K/33BgtnxdQR3e9DJoYH3Qr8eRgSkR+jHyq06LvgHkHbMvrEjUnc3n8bg+YfR4oyJpIWsKjfIXmN1Q51KzxAPIAww+YSYUYtamSsQsspVAtMIQqR4e0r1In1qyoSn8VCPlksNMWpqYHbSjDo5HJYoSwxf2epzMtCvhenn0OuiH0xlgzziA+wBi6txksTMvJYcPJYnBVR2NIBjkWftOfmkY+rKMozViGjyd6kB7C8lqd8W7Ha5Ds2WxIY22DM3HcYH/zTp9z2xbuMOsbIgib/Y12Kh0wHyCz0lzFvs+d6CZwinyIXNKB/Vo4iiwT5luL5mGqf3pZx4zB+30GYSs/6MaELRF9BxD7tfqYCkOLXUtxyZ4Pdl2sw==
 
 2. Convert your peer's public key to the Base64 RFC 3110 format using the [pubkey-converter][pubkey-converter] script, if necessary.

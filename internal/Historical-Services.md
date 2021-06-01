@@ -68,7 +68,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 |:------------------------------------------------- |:--------------------------------------------------------------- |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
 | http://radio.hex.dn42/                            | Ambient musics                                                  |
-                   
+
 
 ## File Sharing
 

@@ -42,20 +42,20 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
     # /etc/pim6sd.conf
     # disable all interfaces by default
     default_phyint_status disable;
-    
+
     # enable the pim-router-id interface first to acquire the correct primary address
     phyint pim-router-id enable;
-    
+
     # add multicast-capable peer interfaces below
     phyint dn42-peer1 enable;
-    
+
     # configure rendezvous point for the personal multicast prefix
     cand_rp pim-router-id;
     group_prefix ff7e:230:fd00:2001:db8::/96;
     ```
 
     The `phyint` statement enables [PIM](https://tools.ietf.org/html/rfc7761) and [MLD](https://tools.ietf.org/html/rfc2710) on the target interface - by default all interfaces are in the disable state. Enable an interface if it is directed towards a multicast-capable peer or other multicast-capable routers in your autonomous system. Also enable it for downstream network segments with multicast listeners and senders, like for example your home (W)LAN segments.
-    
+
     With `cand_rp` and `group_prefix` statements you can configure this router as a Rendezvous Point (RP) for your personal multicast group prefix. The address on the interface given as `cand_rp` will be used as the primary address for your RP, it therefore *must* be routable.
 
 ---

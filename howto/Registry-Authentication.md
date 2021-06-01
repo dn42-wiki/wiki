@@ -16,7 +16,7 @@ The signature and verification process varies depending on the type of public ke
 
 ---
 
-#### Finding the commit hash
+## Finding the commit hash
 
 `git log` will list all the recent commits and show the commit hash:
 ```
@@ -31,7 +31,7 @@ Date:   Mon Jan 01 01:01:01 2020 +0000
 
 PGP keys may be uploaded to a public keyserver for verification, or added in the registry.
 
-#### Using a public keyserver
+### Using a public keyserver
 
 - Use the following `auth` attribute in your `mntner` object:
 ```
@@ -72,7 +72,7 @@ auth:               ssh-<keytype> <pubkey>
 ```
 There are examples below for each specific key type.
 
-#### Generic process for signing with an SSH key
+### Generic process for signing with an SSH key
 
 OpenSSH v8 introduced new functionality for creating signatures using SSH keys. If you have an older version, you can compile the latest version of ssh-keygen from the [openssh-portable repo](https://github.com/openssh/openssh-portable).
 

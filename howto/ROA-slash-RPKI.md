@@ -19,7 +19,7 @@ It provides the router with validity information regarding prefix origination:
   The route announcement is covered by a ROA and the announcing AS is invalid (possibly hijacking)
 * UNKNOWN  
   There exists no ROA for the route announcement
- 
+
 ## How can I implement ROA on dn42?
 
 On dn42 we generate ROA information from the dn42 registry.  
@@ -31,14 +31,14 @@ It is also possible to integrate this with a RTR cache server such as [gortr](ht
 You can find a hosted example of dn42regsrv at https://explorer.burble.com/ 
 
 Instructions on how to host dn42regsrv yourself can be found on the git repo of [dn42regsrv](https://git.dn42.us/burble/dn42regsrv). 
-     
+
 You can also run dn42regsrv via docker (then available at 127.0.0.1:8042):
 
     git checkout https://git.dn42.us/burble/dn42regsrv.git .
     cd contrib/docker
     ./build.sh
     docker-compose up -d
-  
+
 Documentation for the api endpoints can be found here: https://git.dn42.us/burble/dn42regsrv/src/master/API.md
 
 ### gortr
