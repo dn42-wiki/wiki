@@ -139,11 +139,19 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 
 Providers of shell access:
 
-| Person        | Hostname                             | Net              | Description | Contact       |
-|:------------- |:------------------------------------ |:---------------- |:----------- |:------------- |
-| mc36          | telnet test.nop.dn42                 | dn42 only        |looking glass| -             |
-| JerryXiao     | ssh lg@lg.jerry.dn42                 | dn42 and icvpn   |looking glass| -             |
+| Person        | Hostname                               | Net              | Description | Contact       |
+|:------------- |:-------------------------------------- |:---------------- |:---------------- |:------------- |
+| mc36          | telnet test.nop.dn42                   | dn42 only        |looking glass     | -             |
+| JerryXiao     | ssh lg@lg.jerry.dn42                   | dn42 and icvpn   |looking glass     | -             |
+| burble        | ssh <mntner>@shell.fr-rbx1.burble.dn42 | dn42             |Full shell account| See below |
 
+### burble.dn42 shell access
+
+Full shell accounts are available for any dn42 MNTNER that has an SSH auth method configured. Usernames are 
+constructed using the MNTNER name, lowercased and without the '-MNT' suffix and the SSH public key from the 
+registry `auth` method is used for authentication. 
+
+See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for more details.
 
 ## Misc 
 
