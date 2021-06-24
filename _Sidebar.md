@@ -20,6 +20,7 @@
   * [Static routes on Windows](/howto/Static-routes-on-Windows)
   * [Universal Network Requirements](/howto/networksettings)
   * [VyOS](/howto/vyos)
+  * [NixOS](/howto/nixos)
 
 * Services
   * [IRC](/services/IRC)
