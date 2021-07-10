@@ -134,7 +134,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
-| valheim.pebkac.dn42 (172.21.83.5, fd63:672f:38e7:beef::5) | [Valheim](https://www.valheimgame.com/) | Hosted in GR |
+| valheim.pebkac.dn42 (172.21.83.5, fd63:672f:38e7:beef::5) | [Valheim](https://www.valheimgame.com/) | Hosted in GR by AS4242422092 (ask for password) |
 
 ## Shell
 
