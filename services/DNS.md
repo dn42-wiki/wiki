@@ -58,12 +58,12 @@ to the anycast service. Example configurations for different recursor implementa
 ### Full recursion 
 
 Authoritative DNS for DN42 is provided by the *.delegation-servers.dn42 servers, see the DNS architecture here 
-[New DNS](/New-DNS) Delegations servers have full support for DNSSEC. 
+[New DNS](/services/New-DNS) Delegations servers have full support for DNSSEC. 
 
 ## Further Information
 
 * [dns/Configuration](/services/dns/Configuration) - Forwarder configuration examples
-* [New DNS](/New-DNS) - current architecture
+* [New DNS](/services/New-DNS) - current architecture
 * [dns/External-DNS](/services/dns/External-DNS) - external DNS zones from interconnected networks
 * [Old Hierarchical DNS](/Old-Hierarchical-DNS) - deprecated
 * [Original DNS (deprecated)](/Original-DNS-(deprecated)) - deprecated
