@@ -17,4 +17,15 @@ Hosted by:
 Hosted by:
 * ne-vlezay80
 
+## mirrors.nia.dn42
+**http://mirrors.nia.dn42/**
+**http://[fd01:1926:817:1000::ac14:a8c5]/**
+
+## mirror.z.dn42
+
+Not hosting repositories itself, it collects other mirrors
+
+* Dynamic page: **http://mirror.z.dn42/**
+* Static page: **http://mirror.z.dn42/_/**
+
 
