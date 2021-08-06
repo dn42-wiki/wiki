@@ -1,10 +1,9 @@
 # Application Programming Interfaces (APIs)
 This page can be useful if you are trying to automate something or if you are trying to retrieve data programmatically.
 
-## ASN Authentication Solution
-Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way.
-More Information in the setup tutorial: https://dn42.g-load.eu/auth/documentation/tutorial.html
-To use the service, please message Kioubit on IRC to have your domain activated.
+### ASN Authentication Solution
+Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
+To use the service, please message Kioubit on IRC to have your domain activated and receive the required documentation.
 
 ## Registry REST API
 
