@@ -42,9 +42,8 @@ Preview: http://img.dn42/images/GEOTRACE42.jpg
 Link: http://map.dn42/BestTrace42.zip
 
 ### ASN Authentication Solution
-Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way.  
-More Information in the setup tutorial: https://dn42.g-load.eu/auth/documentation/tutorial.html  
-To use the service, please message Kioubit on IRC to have your domain activated.
+Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
+To use the service, please message Kioubit on IRC to have your domain activated and receive the required documentation.
 
 ## IRC
 
