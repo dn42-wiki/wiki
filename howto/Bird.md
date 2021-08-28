@@ -288,12 +288,12 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
-### Using RPKI ROA in bird2
+### Use RPKI ROA for bird2
 * Download  gortr
 
 `https://github.com/cloudflare/gortr/releases`
 
-* Running gortr,need golang environment.
+* Run gortr,need golang environment.
 
 ```
 ./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
