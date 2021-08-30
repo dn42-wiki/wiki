@@ -136,6 +136,7 @@ template bgp dnpeers {
     path metric 1;
 
     ipv4 {
+        next hop self;
         import filter {
           if is_valid_network() && !is_self_net() then {
             if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
@@ -150,6 +151,7 @@ template bgp dnpeers {
     };
 
     ipv6 {
+        next hop self;     
         import filter {
           if is_valid_network_v6() && !is_self_net_v6() then {
             if (roa_check(dn42_roa_v6, net, bgp_path.last) != ROA_VALID) then {
