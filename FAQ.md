@@ -1,4 +1,3 @@
-
 ## How do I connect to DN42?
 
 We have a [page](/howto/Getting-started) for that!
