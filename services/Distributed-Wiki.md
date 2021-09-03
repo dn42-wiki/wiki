@@ -32,7 +32,7 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
 
  - Clone the dn42 wiki repo:
 
-    `git clone ssh://git@dn42.us/dn42/wiki <path>`
+    `git clone git@git.dn42.dev:wiki/wiki.git <path>`
 
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo (simple example):
