@@ -1,3 +1,5 @@
+# this page is outdated and need update
+
 The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the wiki. Sites are powered by [gollum](https://github.com/gollum/gollum) which has no native SSL support, so Nginx acts as a reverse proxy and handles the encryption.
 The local webserver is monitored with a simple [shell script](/Distributed-Wiki#exabgp_watchdog-script) working [in conjunction](/Distributed-Wiki#exabgp) with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.
 
