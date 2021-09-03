@@ -20,7 +20,7 @@ Please sort by AS number.
 | 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 | UP |
 | 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 | UP |
 | 4242421055 | dn42: http://lg.tmwawpl.dn42 | UP |
-| 4242421080 | dn42: http://lg.jlu5.dn42 | UP |
+| 4242421080 | ext: https://lg.highdef.network <br> dn42: http://lg.highdef.dn42 | UP |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42/ <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute | UP |
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 | UP |
 | 4242421224 | dn42: http://lg.bit.dn42 | UP |
