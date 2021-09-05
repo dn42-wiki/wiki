@@ -8,11 +8,9 @@ In the Debian release cycle the bird packages may become outdated at times, if t
 This is not necessary for Debian Stretch, which currently ships the most recent version (1.6.3) in this repositories.
 
 ```sh
-wget -O - http://bird.network.cz/debian/apt.key | apt-key add -
-apt-get install lsb-release
-echo "deb http://bird.network.cz/debian/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/bird.list
-apt-get update
-apt-get install bird
+echo "deb http://deb.debian.org/debian buster-backports main" > /etc/apt/sources.list.d/buster-backports.list
+apt update
+apt install bird
 ```
 
 # Example configuration
