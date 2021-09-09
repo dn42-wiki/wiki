@@ -286,7 +286,8 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
-### Use RPKI ROA for bird2
+### Use RPKI ROA in bird2
+
 * Download  gortr
 
 `https://github.com/cloudflare/gortr/releases`
@@ -298,7 +299,7 @@ mkdir -p /var/lib/bird/
 ```
 
 
-* run with docker
+* Run with docker
 
 `docker pull cloudflare/gortr`
 
