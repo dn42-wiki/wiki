@@ -15,3 +15,6 @@ A public instance of the API and associated explorer web app is available at the
 
 https://explorer.burble.com/ (public internet link)  
 https://explorer.collector.dn42/ (DN42 link)
+
+https://explorer.dn42.pebkac.gr/ (public internet link)  
+https://explorer.pebkac.dn42/ (DN42 link)
