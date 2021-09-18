@@ -66,15 +66,17 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
+| https://j.pebkac.dn42                             | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
 | Hostname / IP                                     | Remarks                                                        |
 |:------------------------------------------------- |:-------------------------------------------------------------- |
 | https://invidious.doxz.dn42/ (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                        |
-| https://live.jerry.dn42/                           | Live audio stream powered by mpd                        |
+| https://live.jerry.dn42/                          | Live audio stream powered by mpd                               |
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
 | https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
+| http://pluto.vm.pebkac.dn42:8000/                 | Icecast2 Streaming Server (Home)                               |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
