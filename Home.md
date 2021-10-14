@@ -72,6 +72,7 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 * [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
 * [NixNodes](https://nixnodes.net)
 * [fixmix Technologies Ltd](https://fixmix.tech)
+* [Strategic Explorations Ltd](https://strexp.net)
 
 ## About this wiki
 
