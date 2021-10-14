@@ -22,6 +22,7 @@ The below commands create **in** and **local** baseline templates to be applied 
 #Create Groups
 set firewall group network-group Allowed-Transit-v4 network '10.0.0.0/8'
 set firewall group network-group Allowed-Transit-v4 network '172.20.0.0/14'
+set firewall group network-group Allowed-Transit-v4 network '172.31.0.0/16'
 
 #Inbound Connections
 set firewall name Tunnels_In_v4 default-action 'drop'
