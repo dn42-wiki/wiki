@@ -1,7 +1,7 @@
 DN42 ACME CA
 ==================
 
-Certificates can be automatically generated with the [ACME-CA](http://acme.dn42). More information can be found on [acme.dn42](http://acme.dn42/)
+Certificates can be automatically generated with the [ACME-CA](http://acme.dn42) using [acme.sh](https://github.com/acmesh-official/acme.sh) or [lego](https://github.com/go-acme/lego). More information can be found on [acme.dn42](http://acme.dn42/)
 
 DN42 Self-Serve CA
 ==================
@@ -9,8 +9,7 @@ DN42 Self-Serve CA
 This client is used for automating the process of requesting TLS certificates. (Available via: [dn42](https://ca.dn42/ca-client), [iana](https://ca.dn42.us/ca-client), [git](anon@git.dn42:dn42/ca-client)) 
 
 
-VALIDATION PROCESS
-==================
+## VALIDATION PROCESS
 
 The process validates ownership by verifying control of both a users MNT object in the registry and the authoritative DNS server. 
 The following steps take place in creating a signed certificate.
@@ -52,8 +51,7 @@ Server certificates are signed for 45 days. To renew follow the steps above star
 3. CA checks that owner in certificate matches.
 4. CA revokes certificate and updates revocation list.
 
-INSTALL
-=======
+## INSTALL
 
 get the script here: 
 
@@ -62,10 +60,9 @@ curl https://ca.dn42/ca.dn42 > ca.dn42; chmod +x ca.dn42
 available via git: anon@git.dn42:dn42/ca-client
 
 
-KNOWN ISSUES
-============
+## KNOWN ISSUES
 
-## openssl prior to 1.0.2 returns "SSL certificate problem: permitted subtree violation"
+### openssl prior to 1.0.2 returns "SSL certificate problem: permitted subtree violation"
 
 The way openssl validated name constraints prevented it from accepting dns names that started with a dot.
 Because the name constraint is "DNS:.dn42" it fails to validate.
@@ -76,7 +73,7 @@ Because the name constraint is "DNS:.dn42" it fails to validate.
 [libssl-1]: https://groups.google.com/forum/#!topic/mailing.openssl.dev/drG3U-S4iaE
 
 
-## X.509 nameConstraints on certificates not supported on OS X
+### X.509 nameConstraints on certificates not supported on OS X
 
 Browsers and clients that rely on Apple's [Secure Transport][osx-1] library does not support X.509's nameConstraints.
 
@@ -87,8 +84,7 @@ Read more on this [stack exchange post][osx-2]
 [osx-2]: http://security.stackexchange.com/a/97133
 
 
-How to Run
-==========
+## How to Run
 
 ```
 Usage:  # OWNER is your MNT handle.
@@ -106,8 +102,7 @@ Environtment Options:
    DN42CA_PKCS12 = 1                # Generate pkcs12 file for certificate.
 ```
 
-Example
-=======
+## Example
 
 Generate the user key
 
@@ -124,7 +119,7 @@ writing new private key to 'XUU-MNT.key'
 |MNT Key Pin| remarks: pin-sha256:HdqCid0sedWXX3Q0uG98rYjJyTNOzaT13WfWpr1GvIw=
 ```
 
-## Sign the user key
+### Sign the user key
 
 ```
 $ ./ca.dn42 user-sign XUU-MNT xuu@sour.is
@@ -141,7 +136,7 @@ Enter Export Password:
 Verifying - Enter Export Password:
 ```
 
-## Generate the server key
+### Generate the server key
 
 ```
 $ ./ca.dn42 tls-gen ca.dn42 XUU-MNT xuu@sour.is DNS:ca.dn42
@@ -165,7 +160,7 @@ $ dig +short TXT _dn42_tlsverify.ca.dn42.
 "XUU-MNT:pin-sha256:Qu/X5GNqOo05TdL7oexkamE34OUuDE60T+f0xc60UPQ="
 ```
 
-## Sign the server key
+### Sign the server key
 
 ```
 $ ./ca.dn42 tls-sign ca.dn42 XUU-MNT
@@ -222,7 +217,7 @@ ExecStart=/etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
 ExecStart=/usr/bin/nginx -s reload
 ```
 
-## Revoke a certificate.
+### Revoke a certificate.
 
 ```
 $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt 
@@ -238,5 +233,5 @@ $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt
 OK
 ```
 
-## Certificate transparency
+### Certificate transparency
 All issued certificates will be logged to [xuu's mattermost instance](https://teams.dn42/dn42/channels/tls-certificates).
