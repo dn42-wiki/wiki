@@ -66,7 +66,6 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | http://img.dn42                                   | Imagehoster                                              |
 | http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
-| https://j.pebkac.dn42                             | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
@@ -76,7 +75,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | https://live.jerry.dn42/                          | Live audio stream powered by mpd                               |
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
 | https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
-| http://pluto.vm.pebkac.dn42:8000/                 | Icecast2 Streaming Server (Home)                               |
+| https://stream.pebkac.dn42/                       | Web Radio Streaming                                            |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -135,7 +134,6 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
-| valheim.pebkac.dn42 (172.21.83.5, fd63:672f:38e7:beef::5) | [Valheim](https://www.valheimgame.com/) | Hosted in GR by AS4242422092 (ask for password) |
 
 ## Shell
 
@@ -166,6 +164,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | http://rtros.nop.dn42/                            | freeRouter distribution                  |
 | http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
+| https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client)     |
 
 ### Usenet Servers / News
 There are some News Servers available [here](/services/News)
