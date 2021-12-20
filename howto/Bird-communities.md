@@ -78,8 +78,10 @@ According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/00125
 
 You need to add following lines to your config(s):
 - `define DN42_REGION = $VALUE_FROM_ABOVE` to your node's config (where OWNAS and OWNIP are set)
-- `if source = RTS_STATIC then bgp_community.add((64511, DN42_REGION));` 
+- `if source = RTS_STATIC then bgp_community.add((64511, DN42_REGION));`
 just above `update_flags` in `dn42_export_filter` function
+- Unlike the other community values, **the DN42_REGION community should only be set on routes originating from your network!** (This is what the `source = RTS_STATIC` check does).
+  - Otherwise, if you export routes across multiple regions within your network, you may be sending incorrect origin information to other peers.
 
 
 ## Example configurations 
