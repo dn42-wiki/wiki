@@ -131,7 +131,7 @@ sudo dpkg -i ca-dn42_20161122.0_all.deb
 sudo dpkg-reconfigure ca-certificates
 ```
 
-You will be asked which certificates you would like to enabled. By default, the dn42 root certifcate (dn42/root-ca.crt) is not enable, be sure to enable it. This package is waiting for inclusion in Debian (Debian bug [#845351](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=845351)).
+You will be asked which certificates you would like to enabled. By default, the dn42 root certifcate (dn42/root-ca.crt) is not enabled, be sure to enable it. This package is waiting for inclusion in Debian (Debian bug [#845351](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=845351)).
 
 #### Manual Installation
 
