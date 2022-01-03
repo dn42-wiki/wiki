@@ -33,7 +33,7 @@ Please sort by AS number.
 | 4242422024 | ext: http://lg.dn42.gcc.ac.cn/ <br> Interactive (ping, traceroute, BGP-map)| UP |
 | 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 | UP |
 | 4242422189 | dn42: http://lg.iedon.dn42 | UP |
-| 4242422237 | ext: https://lg.dn42.munsternet.eu | UP |
+| 4242422237 | ext: https://lg.dn42.munsternet.eu <br> dn42: http://lg.munsternet.dn42 <br> IPv6 only | UP |
 | 4242422341 | ext: https://lg.dn42.zotan.network <br> dn42: https://lg.zotan.dn42 | UP |
 | 4242422428 | ext: https://lg.0l.de <br> IPv4 and IPv6 | UP |
 | 4242422547 | ext: https://lg.lantian.pub <br> dn42: http://lg.lantian.dn42 | UP |
