@@ -76,6 +76,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
 | https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
 | https://stream.pebkac.dn42/                       | Web Radio Streaming                                            |
+| https://dn42:dn42@tv.munsternet.dn42/playlist     | TV Channels Streaming                                          |
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
