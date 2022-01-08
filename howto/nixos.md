@@ -217,6 +217,7 @@ in
 ### Bird Looking Glass
 
 There is now (thanks to [Tchekda](https://github.com/NixOS/nixpkgs/pull/153481)) a direct way to setup a looking glass for bird on Nixos. [Documentation](https://github.com/NixOS/nixpkgs/blob/3aab5ebd436023ca8343a84804d51cd227dd01dd/nixos/modules/services/networking/bird-lg.nix) and sample : 
+
 ```nix
 bird-lg = {
     proxy = {
