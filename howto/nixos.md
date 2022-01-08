@@ -170,6 +170,71 @@ As seen, the IP configuration is applied via ip-commands in the postSetup. This 
 
 Like ferm, Bird2 is configured by ```services.bird2.config``` containing a string. In there the example bird2 config from [wiki.dn42](https://wiki.dn42/howto/Bird2) can be imported. Roa tables can be generated or downloaded from host providing them. 
 
-### services
+
+#### ROA Updating script
+
+Sample example to update ROA's : 
+```nix
+{ pkgs, lib, ... }:
+let
+  script = pkgs.writeShellScriptBin "update-roa" ''
+    mkdir -p /etc/bird/
+    ${pkgs.curl}/bin/curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf
+    ${pkgs.curl}/bin/curl -sfSLR {-o,-z}/etc/bird/roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird2_4.conf
+    ${pkgs.bird2}/bin/birdc c 
+    ${pkgs.bird2}/bin/birdc reload in all
+  '';
+in
+{
+  systemd.timers.dn42-roa = {
+    description = "Trigger a ROA table update";
+
+    timerConfig = {
+      OnBootSec = "5m";
+      OnUnitInactiveSec = "1h";
+      Unit = "dn42-roa.service";
+    };
+
+    wantedBy = [ "timers.target" ];
+    before = [ "bird.service" ];
+  };
+
+  systemd.services = {
+    dn42-roa = {
+      after = [ "network.target" ];
+      description = "DN42 ROA Updated";
+      unitConfig = {
+        Type = "one-shot";
+      };
+      serviceConfig = {
+        ExecStart = "${script}/bin/update-roa";
+      };
+    };
+  };
+}
+```
+
+### Bird Looking Glass
+
+There is now (thanks to [Tchekda](https://github.com/NixOS/nixpkgs/pull/153481)) a direct way to setup a looking glass for bird on Nixos. [Documentation](https://github.com/NixOS/nixpkgs/blob/3aab5ebd436023ca8343a84804d51cd227dd01dd/nixos/modules/services/networking/bird-lg.nix) and sample : 
+```nix
+bird-lg = {
+    proxy = {
+      enable = true;
+      allowedIPs = [ "172.20.XX.XX" "172.20.XX.YY" ];
+    };
+    frontend = {
+      enable = true;
+      netSpecificMode = "dn42";
+      servers = [ "node1" "node2" ];
+      domain = "domain.dn42";
+    };
+};
+
+### Services
 
 I also run services like a nameserver for .litschi.dn42 zones and a nginx webserver within this container. Since Host path for ```/var/www/dn42``` and ```/var/dns/dn42``` are booth binded into the container, zone config and e.g. website and be edited directly from Host without need the rebuild the hole container. 
+
+### Sample configuration
+
+You can find a sample Wireguard + Bird configuration made by Tchekda ready for dn42 on [this](https://github.com/Tchekda/nixos-configuration/tree/master/llitt/dn42) repository
