@@ -230,6 +230,7 @@ bird-lg = {
       domain = "domain.dn42";
     };
 };
+```
 
 ### Services
 
