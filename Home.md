@@ -41,7 +41,7 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
  * [Lecture on GPN8](http://entropia.de/wiki/GPN8:dn42)
  * [nobody about dn42](http://nowhere.ws/guides/dn42/)
  * [Lecture on mrmcd0x8](http://web.archive.org/web/20090831211324/http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
- * [dn42-category in hackerspaces.org wiki](https://hackerspaces.org/wiki/Category:DN42)
+ * [dn42-category in hackerspaces.org wiki](https://wiki.hackerspaces.org/Category:DN42)
  * [pentaradio24 – german podcast](https://www.c3d2.de/news/pentaradio24-20150428.html)
  * [dn42 in your browser](http://freerouter.nop.hu/online.html)
 
