@@ -46,12 +46,10 @@ MWD will also provide a secondary DNS server and/or cacti monitoring of your dev
 
 ### Getting your current dn42 IPv4/IPv6 address
   * What is my IP: [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
-
+  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
   * http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
 wieistmeineip.dn42 also provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
-
   * You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
-
   * An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
 
 ## Search engines
@@ -66,9 +64,17 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 
 | Hostname / IP                                     | Remarks                                                         |
 |:------------------------------------------------- |:--------------------------------------------------------------- |
+| https://invidious.doxz.dn42/ (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                         |
 | http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
 | http://radio.hex.dn42/                            | Ambient musics                                                  |
+| https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
 
+## Images, E-Books, Videos and other Media
+
+| Hostname / IP                                     | Remarks                                                  |
+|:------------------------------------------------- |:-------------------------------------------------------- |
+| http://img.dn42                                   | Imagehoster                                              |
+| http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 
 ## File Sharing
 
@@ -78,6 +84,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------- |                              
 | http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                           |
 | http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps |
+| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
@@ -160,6 +167,14 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
+| https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
+
+
+## Gaming
+
+| Hostname / IP                                     | Game                   | Remarks                    |
+|:------------------------------------------------- |:---------------------- |:-------------------------- |
+| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4 Mod, Optimized for CN   |
 
 ## DN42 FreePhone
 Somebody was providing a FreePhone [here](/services/FreePhone)
