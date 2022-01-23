@@ -4,7 +4,7 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 **More inspiration is collected [here](/internal/Historical-Services) and [here](/internal/Ideas).**
 
-## CA
+## Certificate Authority
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
 
@@ -18,8 +18,6 @@ zotan is maintaining an (experimental, but working) [ACME server](https://acme.d
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
   * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
-  * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
-
 
 ### GeoIP Services
 [Map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
@@ -63,20 +61,18 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://img.dn42                                   | Imagehoster                                              |
-| http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
 | http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
 | Hostname / IP                                     | Remarks                                                        |
 |:------------------------------------------------- |:-------------------------------------------------------------- |
-| https://invidious.doxz.dn42/ (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                        |
 | https://live.jerry.dn42/                          | Live audio stream powered by mpd                               |
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
-| https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
-| https://stream.pebkac.dn42/                       | Web Radio Streaming                                            |
+| https://stream.pebkac.dn42/ (BROKEN 23-01-22)     | Web Radio Streaming                                            |
 | https://dn42:dn42@tv.munsternet.dn42/playlist     | TV Channels Streaming                                          |
+
+## File Sharing
 
 ### Direct Connect
 Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
@@ -93,20 +89,18 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
-| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
 | http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
 
-## Proxies
 
+## Proxies
  See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
 
-### Tor
+### Telegram
+A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
+
+## Tor
 
 Entry points to the Tor network are available on dn42. See [Tor](/internal/Tor) for more details.
-
-### Telegram
-
-A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
 
 ## NTP
 
@@ -128,7 +122,6 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4 Mod, Optimized for CN   |
 | ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
 | mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
@@ -161,13 +154,13 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 |[https://bbs.dn42](https://bbs.dn42), [https://dn42bbs.0b1.me](https://dn42bbs.0b1.me) via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
-| https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
 | http://www.nop.dn42/                              | Basic "whatismyip" service               |
 | http://freerouter.nop.dn42/                       | freeRouter main site                     |
 | http://rtros.nop.dn42/                            | freeRouter distribution                  |
-| http://wiki.dn42, http://internal.dn42, [dn42.i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) (i2p), jsptropkiix3ki5u.onion  | This wiki! Web Hosted by [xuu](https://xuu.dn42). Git Repo hosted on git.dn42  |
+| http://wiki.dn42, http://internal.dn42            | This wiki!  Git Repo hosted on git.dn42  |
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
-| https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
+| https://p.pebkac.dn42/      (BROKEN 23-01-22)     | PasteBin Service (Netcat/Bash CLI Client) |
+
 
 ### Usenet Servers / News
 There are some News Servers available [here](/services/News)
