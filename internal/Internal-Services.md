@@ -122,7 +122,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
-| ttd.nia.dn42 (172.20.168.132, fd01:1926:817:2::)                     | OpenTTD                | 1.10.1, Optimized for CN   |
+| mc.nia.dn42 (172.20.168.137, fd01:1926:817:7::)   | Minecraft              | Latest Stable, Optimized for CN , Map available on mc-map.nia.dn42  |
 | mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
 | mc.jerry.dn42                                     | Minecraft              | 1.16.3, IPv4 & IPv6 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
@@ -176,18 +176,6 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 
  * https://mirror.frubar.net 100MBit
  * https://frucman.frubar.net
-
-### NAT64
-
-Niantic Network (AS4242421331) is providing a NAT64 service at Strategic Explorations (AS207268). 
-
-* IPv6 at public Internet: `2a0e:b107:b7f::[DN42 IPv4]`
-
-* IPv4 endpoint at DN42: 
-  * `172.20.158.177`: Seattle
-  * `172.20.158.178`: Singapore
-
-* DNS64: `2602:feda:3c9::` or `dns.strexp.net`
 
 ### Self-serve Peering System
 
