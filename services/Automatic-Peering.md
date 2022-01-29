@@ -11,3 +11,6 @@ It is recommended to use the DN42 Pingfinder to find the network with the lowest
  ## 4242421588
  TECH9 CORE NETWORK
  https://www.chrismoos.com/dn42-peering/
+
+ ## AS4242423847
+https://dn42.0011.de
