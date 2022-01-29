@@ -28,6 +28,7 @@
   * [DNS](/services/DNS)
   * [Public DNS](/services/Clearnet-Domains)
   * [Looking Glasses](/services/Looking-Glasses)
+  * [Automatic Peering](/services/Automatic-Peering)
   * [Repository Mirrors](/services/Repository-Mirrors)
   * [Distributed Wiki](/services/Distributed-Wiki)
   * [Certificate Authority](/services/Certificate-Authority)
