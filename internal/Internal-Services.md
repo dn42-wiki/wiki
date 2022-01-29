@@ -91,6 +91,10 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
 | http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
 
+## VPN
+
+DN42 Network Access over Automatic Wireguard VPN Service (IPv6 only, fd00::/8)
+provided by TheQ at https://dn42.0011.de/vpnusers 
 
 ## Proxies
  See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
@@ -183,3 +187,5 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
   * https://dn42.g-load.eu/
 * AS4242421588
   * https://www.chrismoos.com/dn42-peering/
+* AS4242423847
+  * https://dn42.0011.de/
