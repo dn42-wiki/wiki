@@ -180,12 +180,4 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 
  * https://mirror.frubar.net 100MBit
  * https://frucman.frubar.net
-
-### Self-serve Peering System
-
-* AS4242423914
-  * https://dn42.g-load.eu/
-* AS4242421588
-  * https://www.chrismoos.com/dn42-peering/
-* AS4242423847
-  * https://dn42.0011.de/
+ 
