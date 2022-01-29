@@ -20,7 +20,6 @@ Please sort by AS number.
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42 <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute | UP |
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 | UP |
 | 4242421224 | dn42: http://lg.bit.dn42 | UP |
-| 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | UP |
 | 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 | UP |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42 | UP |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network | UP |
@@ -64,6 +63,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421166 | dn42: http://lg.alcatrash.dn42 | DOWN |
 | 4242421224 | dn42: http://lg.bit.dn42 | DOWN |
+| 4242421231 | dn42: http://lg.caesia.dn42 <br> ext: https://lg.caesia.net | DOWN |
 | 4242421588 | dn42: http://lg.tech9computers.dn42 <br> Interactive (traceroute, BGP-map) | DOWN |
 | 4242421876 | dn42: https://lg.potato.dn42&lt;br&gt;ext: https://lg.dn42.ac.cn | DOWN |
 | 4242422016 | ext: https://dn42.sidereal.ca <br> dn42: https://lg.sidereal.dn42 | DOWN |
