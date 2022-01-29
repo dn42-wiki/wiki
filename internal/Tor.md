@@ -36,3 +36,16 @@ _Note that the same warnings above also apply to the following proxies._
 | Offline                               |             |             |
 |---------------------------------------|-------------|-------------|
 | socks5://172.20.11.33:9050            | 100 Mbit/s  | twink0r     |
+
+
+# DNS Proxy - Tor Hidden Services
+
+_Note that the same warnings above also apply to the following proxies._
+
+See https://blog.benjojo.co.uk/post/tor-onions-to-v6-with-iptables-proxy for more details
+
+| Suffix Change                         | Bandwidth   | Contact     |
+|---------------------------------------|-------------|-------------|
+| .onion -> .oni.dns42 (IPv6 Mapping)   | 1000 Mbit/s | TheQ        |
+
+
