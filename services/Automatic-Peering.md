@@ -6,9 +6,10 @@ It is recommended to use the [DN42 Pingfinder](https://dn42.us/peers/) to find t
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
-AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering/) |https://www.chrismoos.com/dn42-peering |
-AS4242422189 | [IEDON-NET](https://dn42.kuu.moe/) | https://dn42.kuu.moe/ |
-AS4242422717 | [JK-Network](https://net.whojk.com/) | https://net.whojk.com/ |
+AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) |https://www.chrismoos.com/dn42-peering |
+AS4242422189 | [IEDON-NET](https://dn42.kuu.moe) | https://dn42.kuu.moe |
+AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | https://dn42.kskb.eu.org|
+AS4242422717 | [JK-Network](https://net.whojk.com) | https://net.whojk.com |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) |https://dn42.g-load.eu|
 
 Sort by AS number
