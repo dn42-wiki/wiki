@@ -8,6 +8,7 @@ Please sort by AS number.
 
 | AS | URL | Status |
 |:--:|:--- |:------ |
+| 64719 | ext: https://lg.dn42.lutoma.org <br> dn42: https://lg.lutoma.dn42 | UP |
 | 64737 | ext: https://lg.dn42.us | UP |
 | 4242420022 | dn42: http://mhm.dn42:5001 | UP |
 | 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 | UP |
@@ -42,7 +43,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 
 | AS | URL | Status |
 |:--:|:--- |:------ |
-| 64719 | ext: https://lg.dn42.lutoma.org <br> dn42: https://lg.lutoma.dn42 | DOWN |
 | 64720 | ext: http://lg.prauscher.de <br> dn42: http://lg.prauscher.dn42 | DOWN |
 | 64766 | ext: http://ix.ucis.nl/routes.php <br> dn42: http://ix.ucis.dn42/routes.php <br> IPv4 only. | DOWN |
 | 64835 | ext: http://lg.nordkapp-5.dn42 <br> dn42: http://172.22.235.4 | DOWN |
