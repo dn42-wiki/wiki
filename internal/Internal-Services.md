@@ -71,6 +71,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
 | https://stream.pebkac.dn42/ (BROKEN 23-01-22)     | Web Radio Streaming                                            |
 | https://dn42:dn42@tv.munsternet.dn42/playlist     | TV Channels Streaming                                          |
+| http://icy.jones.dn42                             | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
 
 ## File Sharing
 
