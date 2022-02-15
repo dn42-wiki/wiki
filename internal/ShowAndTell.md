@@ -8,7 +8,7 @@ Document your mad setups in the categories below, with links to a full write up,
 ## Things peered in to dn42
  - Fun devices peered in to dn42,
  - Or fun ways to connect them
- - The thing must be running BGP and connected in to dn42 as a full dyanamic peer
+ - The thing must be running BGP and connected in to dn42 as a full dynamic peer
 
 *Examples*:
  - Fun with virtualisation
