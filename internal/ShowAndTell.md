@@ -49,3 +49,8 @@ Document your mad setups in the categories below, with links to a full write up,
    - Unique or obscure network and routing protocols
 
 *... your stuff goes here*  
+
+***
+
+* Hardware Random Number Generator by Kioubit
+ - A raspberry pi was connected to a random number source and random bytes offered via dn42. The raspberry pi is running a custom server to take requests via a simple HTTPS API and interface with the device.
