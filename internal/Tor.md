@@ -46,6 +46,7 @@ See https://blog.benjojo.co.uk/post/tor-onions-to-v6-with-iptables-proxy for mor
 
 | Suffix Change                         | Bandwidth   | Contact     |
 |---------------------------------------|-------------|-------------|
+| .onion -> .onion.dns42 (IPv6 Mapping)   | 1000 Mbit/s | TheQ        |
 | .onion -> .oni.dns42 (IPv6 Mapping)   | 1000 Mbit/s | TheQ        |
 
 
