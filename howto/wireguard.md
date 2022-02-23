@@ -167,3 +167,11 @@ Address=<your IPv4 address>/32
 Peer=<your peer's IPv4 address>/32
 ```
 
+## Dynamics IP
+
+As wireguard are only resolving the hostname to IP only on start, dynamics DNS will stop working after a while without further configuration. The Following is a [script](https://github.com/WireGuard/wireguard-tools/blob/master/contrib/reresolve-dns/reresolve-dns.sh) from wireguard which will "re-resolve" the DNS and update the wireguard. 
+
+You can add cron entries to periodically  "re-resolve" the DNS:
+```
+* * * * * /path-to-the-script/reresolve-dns.sh
+```
