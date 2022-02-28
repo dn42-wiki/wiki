@@ -4,6 +4,10 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 **More inspiration is collected [here](/internal/Historical-Services) and [here](/internal/Ideas).**
 
+## Search engine
+
+There is a search engine at [search.dn42](search.dn42) that can also be used to discover services and content. It attempts to index all sites on DN42.
+
 ## Certificate Authority
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
