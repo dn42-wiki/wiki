@@ -74,7 +74,6 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 |:------------------------------------------------- |:-------------------------------------------------------------- |
 | https://live.jerry.dn42/                          | Live audio stream powered by mpd                               |
 | http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
-| https://stream.pebkac.dn42/ (BROKEN 23-01-22)     | Web Radio Streaming                                            |
 | https://dn42:dn42@tv.munsternet.dn42/playlist     | TV Channels Streaming                                          |
 | http://icy.jones.dn42                             | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
 
@@ -138,7 +137,6 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
-| valheim.pebkac.dn42:2456 (IPv4 only/UDP) | [Valheim](https://www.valheimgame.com/) | Ask [TOMKAP-DN42](https://explorer.dn42.pebkac.gr/?#/person/TOMKAP-DN42) for password/whitelisting |
 | terraria.pebkac.dn42:7777 (IPv4 only/TCP) | [Terraria](https://terraria.org/) | Ask [TOMKAP-DN42](https://explorer.dn42.pebkac.gr/?#/person/TOMKAP-DN42) for password/whitelisting |
 
 ## Shell
@@ -169,7 +167,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | http://rtros.nop.dn42/                            | freeRouter distribution                  |
 | http://wiki.dn42, http://internal.dn42            | This wiki!  Git Repo hosted on git.dn42  |
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
-| https://p.pebkac.dn42/      (BROKEN 23-01-22)     | PasteBin Service (Netcat/Bash CLI Client) |
+| https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
 
 
 ### Usenet Servers / News
