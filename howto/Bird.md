@@ -292,7 +292,7 @@ mkdir -p /var/lib/bird/
 
 `https://github.com/cloudflare/gortr/releases`
 
-* Run gortr,need golang environment.
+* Run gortr.
 
 ```
 ./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
