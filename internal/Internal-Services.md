@@ -118,7 +118,7 @@ Entry points to the Tor network are available on dn42. See [Tor](/internal/Tor) 
 | ntp.martin89.dn42                                 | more than one A records/server      |
 | tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
 | tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
-| *.burble.dn42 | All burble.dn42 nodes are part of the NTP Pool and provide NTP over clearnet and DN42. See also [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services) |
+| *.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services) |
 | ntp.yuetau.dn42 (172.21.68.50)                    | Anycast on all node     |
 
 ## OS Mirror/Repository's
@@ -138,6 +138,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 | terraria.pebkac.dn42:7777 (IPv4 only/TCP) | [Terraria](https://terraria.org/) | Ask [TOMKAP-DN42](https://explorer.dn42.pebkac.gr/?#/person/TOMKAP-DN42) for password/whitelisting |
+| The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 
 ## Shell
 
@@ -147,13 +148,12 @@ Providers of shell access:
 |:------------- |:-------------------------------------- |:---------------- |:---------------- |:------------- |
 | mc36          | telnet test.nop.dn42                   | dn42 only        |looking glass     | -             |
 | JerryXiao     | ssh lg@lg.jerry.dn42                   | dn42 and icvpn   |looking glass     | -             |
-| burble        | ssh <mntner>@shell.fr-rbx1.burble.dn42<br>/ssh <mntner>@shell.ca-bhs2.burble.dn42 | dn42             |Full shell account| See below |
+| burble        | ssh <mntner>@shell.fr-rbx1.burble.dn42 <br/> ssh <mntner>@shell.ca-bhs2.burble.dn42 | dn42             |Full shell account| See below |
 
 ### burble.dn42 shell access
 
-Full shell accounts are available for any dn42 MNTNER that has an SSH auth method configured. Usernames are 
-constructed using the MNTNER name, lowercased and without the '-MNT' suffix and the SSH public key from the 
-registry `auth` method is used for authentication. 
+Full shell accounts are available for all dn42 users. Usernames are 
+constructed using the MNTNER name, lowercased and without the '-MNT' suffix. SSH public keys are imported automatically from the registry or alternatively, a password can be used instead.
 
 See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for more details.
 
