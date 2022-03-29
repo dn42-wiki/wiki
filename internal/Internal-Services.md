@@ -12,7 +12,7 @@ There is a search engine at [search.dn42](https://search.dn42) that can also be 
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
 
-zotan is maintaining an (experimental, but working) [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
 ## Network-related
   * See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
