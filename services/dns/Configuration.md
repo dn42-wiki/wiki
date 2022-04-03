@@ -255,3 +255,124 @@ system {
 
 ## MS DNS
 Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa", "10.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
+
+# Resolver setup
+
+Configuration of common resolver softwares to do full recursion DNS queries for `.dn42` (and reverse DNS) IPv4 and IPv6 anycast services.
+
+You can use any *.delegation-servers.dn42 (where * is a letter) as an authoritative server for .dn42 TLD. The current list is available at the [DN42 registry](https://git.dn42.dev/dn42/registry/src/master/data/dns/delegation-servers.dn42) or through querying NS records of dn42.:
+
+```sh
+dig dn42. NS @172.20.0.53
+```
+
+Current list of delegation servers (as of 03/04/2022):
+
+| Name | IPv4 | IPv6 |
+|---|---|---|
+| b.delegation-servers.dn42 | 172.20.129.1 | fd42:4242:2601:ac53::1 |
+| j.delegation-servers.dn42 | 172.20.1.254 | fd42:5d71:219:0:216:3eff:fe1e:22d6 |
+| k.delegation-servers.dn42 | 172.20.14.34 | fdcf:8538:9ad5:1111::2 |
+
+All the examples here list 172.20.129.1/fd42:4242:2601:ac53::1, but users are encouraged to configure
+multiple services from *.delegation-servers.dn42 for redundancy. 
+
+## Dnssec
+All delegation servers have DNSSEC support and all record are signed, for more information about DNSSEC visit [New-DNS#dnssec](/services/New-DNS#dnssec).
+
+Following is a list of links to the DS record for TLD and reverse zone, to configure the key file, extract the value of ds-rdata and format it as follows, you must add all ds-rdata to the key file for dnssec to work. P.S. each ds-rdata or DS record should contain 4 numbers.
+
+This is an example for dn42. and (fake) ds-rdata of 1 2 3 456
+```
+dn42.	86400	IN	DS	1 2 3 456
+```
+
+This is an example for 172.20.0.0/16 and (fake) ds-rdata of 1 2 3 456
+```
+20.172.in-addr.arpa.	86400	IN	DS	1 2 3 456
+```
+
+This is an example for fd00::/8 and (fake) ds-rdata of 1 2 3 456
+```
+d.f.ip6.arpa.	86400	IN	DS	1 2 3 456
+```
+
+### DN42 DS record
+[dn42. TLD](https://git.dn42.dev/dn42/registry/src/branch/master/data/dns/dn42)
+
+[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.20.0.0_16)
+
+[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.21.0.0_16)
+
+[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.22.0.0_16)
+
+[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.23.0.0_16)
+
+[fd00::/8 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inet6num/fd00::_8)
+
+### Non DN42 DS record
+[172.31.0.0/16 (chaosvpn) range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.31.0.0_16)
+
+[10.0.0.0/8 (Freifunk) range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/10.0.0.0_8)
+
+
+## Unbound
+```
+trust-anchor-file: <path to key file>
+
+server:
+local-zone: "dn42" typetransparent
+local-zone: "20.172.in-addr.arpa" typetransparent
+local-zone: "21.172.in-addr.arpa" typetransparent
+local-zone: "22.172.in-addr.arpa" typetransparent
+local-zone: "23.172.in-addr.arpa" typetransparent
+local-zone: "d.f.ip6.arpa" typetransparent
+
+private-domain: "dn42"
+private-domain: "20.172.in-addr.arpa"
+private-domain: "21.172.in-addr.arpa"
+private-domain: "22.172.in-addr.arpa"
+private-domain: "23.172.in-addr.arpa"
+private-domain: "d.f.ip6.arpa"
+
+stub-zone:
+	name: "dn42"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+stub-zone:
+	name: "20.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "21.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "22.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "23.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone: 
+    name: "23.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone: 
+      name: "10.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "d.f.ip6.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+```
+
