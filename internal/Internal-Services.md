@@ -140,6 +140,15 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | terraria.pebkac.dn42:7777 (IPv4 only/TCP) | [Terraria](https://terraria.org/) | Ask [TOMKAP-DN42](https://explorer.dn42.pebkac.gr/?#/person/TOMKAP-DN42) for password/whitelisting |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 
+## Challenges
+
+Test out your skills with online challenges
+
+| Start here                                        | Remarks                            |
+|:------------------------------------------------- |:---------------------------------- |
+| https://burble.dn42/services/ping/                | burble.dn42 ping challenge         |
+
+
 ## Shell
 
 Providers of shell access:
