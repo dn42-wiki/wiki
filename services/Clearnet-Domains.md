@@ -6,7 +6,6 @@ To provide services over the public internet some community members have contrib
 |:--|
 |dn42.dev|
 |dn42.no|
-|dn42.fi|
 |dn42.tk|
 
 
@@ -25,4 +24,3 @@ Domains and services should meet the following criteria:
 - Services and DNS should be resilient and highly available, where possible
 - The owner must ensure their contact details are current and respond promptly to any failures
 - If a domain or service is unavailable for a length of time, it may be removed
-
