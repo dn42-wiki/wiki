@@ -11,13 +11,13 @@ The signature and verification process varies depending on the type of public ke
 *Tip: Add your GPG or SSH key to your account in gitea, doing so enables gitea to automatically check your signature when you sign the commit*
 
 ### When using a GPG/PGP Key
-1) **Sign the commit using git** - this is the best option as the signature is recorded directly in the git log 
-2) Sign using `gpg --clearsign` and provide the signature in the PR comments - only do this if you absolutely cannot sign the commit in git
+1. **Sign the commit using git** - this is the best option as the signature is recorded directly in the git log 
+2. Sign using `gpg --clearsign` and provide the signature in the PR comments - only do this if you absolutely cannot sign the commit in git
 
 ### When using an SSH key
-1) **Sign the commit using git** - git >= 2.34.0 can now sign commits using ssh keys, this is the best option if you able to do so
-2) Use the `sign-my-commit` script in the registry - the script adds your signature in a format that allows for automated checking
-3) Manually provide a signature in the PR comments using one of the methods detailed below - only do this if you can't sign using git or with the included script
+1. **Sign the commit using git** - git >= 2.34.0 can now sign commits using ssh keys, this is the best option if you able to do so
+2. Use the `sign-my-commit` script in the registry - the script adds your signature in a format that allows for automated checking
+3. Manually provide a signature in the PR comments using one of the methods detailed below - only do this if you can't sign using git or with the included script
 
 The sections below provide detailed instructions for each of the auth methods.
 
@@ -43,9 +43,9 @@ In this case the full commit hash is `6e2e9ac540e2e4e3c3a135ad90c8575bb8fa1784`
 To verify your key, the registry maintainers need to be able to find your full public key.  
 There are three options for doing this. but you only need to do **one** of these:  
 
- 1) **Add your public key to your account in gitea** - this is the best option as gitea will automatically check your signature
- 2) Upload your key to a public key server 
- 3) Create a `key-cert` object in the registry containing your public key
+ 1. **Add your public key to your account in gitea** - this is the best option as gitea will automatically check your signature
+ 2. Upload your key to a public key server 
+ 3. Create a `key-cert` object in the registry containing your public key
 
 ### `auth` attribute format, when your public key is in gitea or a public keyserver
 
@@ -94,13 +94,13 @@ Older versions of git and ssh don't support generic ssh signing so there are mul
 
 In preference order:
 
-1) **Sign using git**
-2) Sign using the included `sign-my-commit` script
+1. **Sign using git**
+2. Sign using the included `sign-my-commit` script
 
 If you cannot get the above to work you may also: 
 
-3) Manually sign using the generic ssh-keygen method
-4) Manual sign using specific methods for rsa or ecdsa
+3. Manually sign using the generic ssh-keygen method
+4. Manual sign using specific methods for rsa or ecdsa
 
 ### `auth` attribute format when using an ssh key
 
