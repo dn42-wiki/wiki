@@ -29,7 +29,7 @@ set firewall name Tunnels_In_v4 default-action 'drop'
 set firewall name Tunnels_In_v4 enable-default-log
 set firewall name Tunnels_In_v4 rule 68 action 'drop'
 set firewall name Tunnels_In_v4 rule 68 description 'Block Traffic to Operator Assigned IP Space'
-set firewall name Tunnels_In_v4 rule 68 source address '172.20.20.0/24'
+set firewall name Tunnels_In_v4 rule 68 destination address '172.20.20.0/24'
 set firewall name Tunnels_In_v4 rule 68 log 'enable'
 set firewall name Tunnels_In_v4 rule 68 action 'drop'
 set firewall name Tunnels_In_v4 rule 70 action 'accept'
