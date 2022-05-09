@@ -1,4 +1,3 @@
-
 ## What is ROA?
 
 A Route Origination Authorization details which AS is authorised to advertise which originating IP prefixes. A ROA may also include prefix length information.
@@ -50,6 +49,10 @@ https://dn42.burble.com/roa/dn42_roa_46.json
 You can use these to simply run gortr via docker:
 
     docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
+
+### Other tools / generators
+- bauen1's dn42-roagen: https://gitlab.com/bauen1/dn42-roagen
+- Kioubit's registry wizard:  https://git.dn42.dev/Kioubit/RegistryWizard
 
 ### This is all to complicated, is there an easy all-in-one package for RTR?
 
