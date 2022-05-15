@@ -171,6 +171,50 @@ include "/etc/bird/peers/*";
 
 The example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, [see the bird1 page](/howto/Bird#route-origin-authorization) for more details and links to the ROA files. 
 
+# RPKI / RTR for ROA
+
+To use an RTR server for ROA information, replace this config in your bird2 configuration file:
+
+```
+protocol static {
+    roa4 { table dn42_roa; };
+    include "/etc/bird/roa_dn42.conf";
+};
+
+protocol static {
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v6.conf";
+};
+```
+
+... with this one (by changing address and port so it points to your RTR server)
+
+```
+protocol rpki roa_dn42 {
+        roa4 { table dn42_roa; };
+        roa6 { table dn42_roa_v6; };
+        remote 10.1.3.3;
+        port 323;
+        refresh 600;
+        retry 300;
+        expire 7200;
+}
+```
+To reflect changes in the ROA table without a manual reload, **ADD** "import table" switch for both channels in your DN42 BGP template:
+
+```
+template bgp dnpeers {
+  ipv4 {
+    ...existing configuration
+    import table;
+  };
+  ipv6 {
+    ...existing configuration
+    import table;
+  };
+}
+```
+
 # Setting up peers
 
 Please note: This section assumes that you've already got a tunnel to your peering partner setup.
