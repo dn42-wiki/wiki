@@ -4,6 +4,13 @@ This guide is similar to the normal [Bird](/howto/Bird) guide in that it provide
 
 The `extra/bird` package in the arch repositories will usually have a relatively recent version and there is (usually) no need for a manual install over the usual `# pacman -S bird`.
 
+# Bird2 Version <2.0.8 / Debian
+
+Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended nexthops for IPv4 destinations (https://bird.network.cz/pipermail/bird-users/2020-April/014412.html).
+Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when an used RPKI source changes.
+
+Debian 11 Bullseye delivers Bird 2.0.7. But you can use the Debian Bullseye backport-repository which provides version 2.0.8 (see https://backports.debian.org/Instructions/ for adding backports repository and install packages from the repository).
+
 # Example configuration
 
 Please note: This example configuration is made for use with IPv4 and IPv6 (Really, there is no excuse not to get started with IPv6 networking! :) )

@@ -50,6 +50,30 @@ You can use these to simply run gortr via docker:
 
     docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
 
+### rtrtr
+
+rtrtr is a RTR server from NLNet Labs. It's compatible with the dn42regsrv ROA-JSON or burbles provided one (https://dn42.burble.com/roa/dn42_roa_46.json) too. 
+
+NLNet Labs provides an official docker image. You just have to bind mount a suitable configuration file:
+
+    docker run -d -v /etc/rtrtr.conf:/etc/rtrtr.conf -p 323:323/tcp nlnetlabs/rtrtr -c /etc/rtrtr.conf
+
+This is a working configuration file for dn42. Maybe change the listen addresses:
+
+    log_level = "debug"
+    log_target = "stderr"
+    http-listen = []
+    [units.dn42-json]
+    type = "json"
+    uri = "https://dn42.burble.com/roa/dn42_roa_46.json"
+    refresh = 600
+    [targets.dn42-rtr]
+    type = "rtr"
+    listen = ["0.0.0.0:323", "[::]:323"]
+    unit = "dn42-json"
+
+For more information cosult the official documentation: https://rtrtr.docs.nlnetlabs.nl/en/stable/
+
 ### Other tools / generators
 - bauen1's dn42-roagen: https://gitlab.com/bauen1/dn42-roagen
 - Kioubit's registry wizard:  https://git.dn42.dev/Kioubit/RegistryWizard
