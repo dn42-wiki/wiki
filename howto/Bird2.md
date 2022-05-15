@@ -4,6 +4,13 @@ This guide is similar to the normal [Bird](/howto/Bird) guide in that it provide
 
 The `extra/bird` package in the arch repositories will usually have a relatively recent version and there is (usually) no need for a manual install over the usual `# pacman -S bird`.
 
+# Bird2 Version <2.0.8 / Debian
+
+Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended nexthops for IPv4 destinations (https://bird.network.cz/pipermail/bird-users/2020-April/014412.html).
+Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when an used RPKI source changes.
+
+Debian 11 Bullseye delivers Bird 2.0.7. But you can use the Debian Bullseye backport-repository which provides version 2.0.8 (see https://backports.debian.org/Instructions/ for adding backports repository and install packages from the repository).
+
 # Example configuration
 
 Please note: This example configuration is made for use with IPv4 and IPv6 (Really, there is no excuse not to get started with IPv6 networking! :) )
@@ -170,6 +177,50 @@ include "/etc/bird/peers/*";
 # Route Origin Authorization
 
 The example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, [see the bird1 page](/howto/Bird#route-origin-authorization) for more details and links to the ROA files. 
+
+# RPKI / RTR for ROA
+
+To use an RTR server for ROA information, replace this config in your bird2 configuration file:
+
+```
+protocol static {
+    roa4 { table dn42_roa; };
+    include "/etc/bird/roa_dn42.conf";
+};
+
+protocol static {
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v6.conf";
+};
+```
+
+... with this one (by changing address and port so it points to your RTR server)
+
+```
+protocol rpki roa_dn42 {
+        roa4 { table dn42_roa; };
+        roa6 { table dn42_roa_v6; };
+        remote 10.1.3.3;
+        port 323;
+        refresh 600;
+        retry 300;
+        expire 7200;
+}
+```
+To reflect changes in the ROA table without a manual reload, **ADD** "import table" switch for both channels in your DN42 BGP template:
+
+```
+template bgp dnpeers {
+  ipv4 {
+    ...existing configuration
+    import table;
+  };
+  ipv6 {
+    ...existing configuration
+    import table;
+  };
+}
+```
 
 # Setting up peers
 

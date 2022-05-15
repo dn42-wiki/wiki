@@ -22,6 +22,8 @@
 
 Mikrotik/RouterOS can't handle very well /32 on Point-to-Point links (like GRE). There is a [separate howto](/howto/mikrotik/ptp32) to explain how to setup /32 between in a GRE link (or even a OpenVPN). What is the easy way? Just use any /30 on the GRE Link, either from your assigned DN42 pool address or use a private address like 192.168. Please don't choose from 172.16.0.0/12 or 10.0.0.0/8 because they may overlap with DN42 or ChaosVPN.
 
+RouterOS v7.2 has some nasty bugs when using PTP configuration or IPv6 link local addresses as NEXTHOP. It won't work (confirmed for v7.2 by their support staff).
+
 ## Tunnel
 
 ### IPSec
