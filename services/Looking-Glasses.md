@@ -22,6 +22,7 @@ Please sort by AS number.
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network |
 | 4242421955 | dn42: http://lg.nop.dn42 <br> telnet:test.nop.dn42 <br> ext: http://sandbox.freertr.org|
 | 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 |
+| 4242422206 | ext: https://lg.dn42.est-it.de <br> dn42: https://lg.techanit.dn42 <br> IPv4 and IPv6 |
 | 4242422237 | ext: https://lg.dn42.munsternet.eu <br> dn42: http://lg.munsternet.dn42 <br> IPv6 only |
 | 4242422575 | dn42: https://lg.androw.dn42 <br> ext: https://lg.androw.eu |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com |
