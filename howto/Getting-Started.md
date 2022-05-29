@@ -20,7 +20,7 @@ See [Contact](/contact#contact_mailing-list) to subscribe.
 
 You must create several objects in the DN42 registry: <https://git.dn42.dev/dn42/registry>
 
-The registry is a git repository, objects are created by creating a branch in the main repository, making your changes and then submitting a pull request for review. There are detailed instructions in the registry [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) how to do this. See also the the generic git documentation [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
+The registry is a git repository, objects are created by forking the main repository, making your changes and then submitting a pull request for review. There are detailed instructions in the registry [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) how to do this. See also the the generic git documentation [git documentation](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) and guides on [github](https://help.github.com/en/github/using-git) for how to use git to work with remote repositories.
 
 While filling out the objects in the DN42 registry make sure to refer to the [schema](https://explorer.dn42.dev/#/schema) to speed up the review process.
 
