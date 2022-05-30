@@ -6,7 +6,6 @@ To provide services over the public internet some community members have contrib
 |:--|
 |dn42.dev|
 |dn42.no|
-|dn42.tk|
 
 
 DNS records for these domains are managed by a gitea repository:
