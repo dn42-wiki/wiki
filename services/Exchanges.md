@@ -2,6 +2,8 @@ In the real world two organizations have to lay cables to one another when they 
 
 In DN42 this is less relevant as links between peers are using 'cheap' VPNs.
 
+IXP frnte operated by LGP Corp: [IXP frnte](/services/IXP-frnte)
+
 ---
 
 A few people have provided exchanges previously on DN42, however they created single
