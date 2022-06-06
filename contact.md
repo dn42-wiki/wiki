@@ -17,9 +17,9 @@ Channel #dn42 in [hackint](http://www.hackint.eu/)
 
 See [IRC](/IRC) too.
 
-## Twitter
+## Telegram
 
-Join us on Twitter for news and chances to win awesome prizes... [@dn42_net](https://twitter.com/dn42_net).
+[unofficial group, english only](https://t.me/dn42dn42)
 
 ## Web
 
@@ -29,8 +29,3 @@ There are currently multiple decentralized mirrors and domains for the DN42 wiki
  * [dn42.dev](https://dn42.dev) / [wiki.burble.dn42](https://wiki.burble.dn42/) maintained by Burble
  * [dn42.eu](https://dn42.eu) maintained by Nurtic-vibe
  * [dn42.tk](https://dn42.tk) maintained by Androw
- * [dn42.net](https://dn42.net) maintained by toBee
- * [dn42.ca](http://dn42.ca) maintained by Scooter
-
-No longer maintained:
- * [wiki.dn42.lutoma.org](https://wiki.dn42.lutoma.org) maintained by lutoma
