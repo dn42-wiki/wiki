@@ -7,6 +7,14 @@ In a virtual IXP, the servers are not "real". They are not physically connected 
 
 In dn42 almost all connections are virtual. One builds on the Internet and creates virtual links between the single nodes. In IXP frnte, all providers have virtual machines, which are connected to each other. Due to the large number of providers in IXP, it is possible to reach them easily and with low latency. However, the large number also leads to the fact that no direct peerings are established within an IXP, instead route servers are used. This receives and coordinates all routes of the providers and sends out appropriate routes. This way, many indirect peerings can be established.
 
+Current participants
+--------------------
+| Name | AS  | Route server | IRC |
+| --- | --- | --- | --- |
+| Bandura's network | 4242422923 | 4242421081 | mark22k\|m |
+| highdef network | 4242421080 | 4242421081 | jlu5 |
+| burble |  4242422601  | 4242421081 | burble |
+
 History and origin
 ------------------
 
