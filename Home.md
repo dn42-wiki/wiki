@@ -36,11 +36,11 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 
 ## External resources about dn42
 
- * [Wikipedia about dn42](http://en.wikipedia.org/wiki/Decentralized_network_42)
- * [Lecture on 26c3](http://events.ccc.de/congress/2009/Fahrplan/events/3504.en.html)
- * [Lecture on GPN8](http://entropia.de/wiki/GPN8:dn42)
+ * [Wikipedia about dn42](https://en.wikipedia.org/wiki/Decentralized_network_42)
+ * [Lecture on 26c3](https://fahrplan.events.ccc.de/congress/2009/Fahrplan/events/3504.en.html)
+ * [Lecture on GPN8](https://entropia.de/GPN8:dn42)
  * [nobody about dn42](http://nowhere.ws/guides/dn42/)
- * [Lecture on mrmcd0x8](http://web.archive.org/web/20090831211324/http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
+ * [Lecture on mrmcd0x8](https://web.archive.org/web/20090831211324/http://mrmcd0x8.metarheinmain.de/fahrplan/events/3321.de.html)
  * [dn42-category in hackerspaces.org wiki](https://wiki.hackerspaces.org/Category:DN42)
  * [pentaradio24 – german podcast](https://www.c3d2.de/news/pentaradio24-20150428.html)
  * [dn42 in your browser](http://www.freertr.net/online.html)
@@ -48,35 +48,34 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 ## Participant Groups
 
 * [SpaceBoyz](http://spaceboyz.net)
-* [CCC Aachen](https://aachen.ccc.de)
-* [CCC Bremen](http://ccchb.de)
-* [CCC Darmstadt](http://darmstadt.ccc.de)
-* [CCC Dresden](http://c3d2.de)
-* [CCC Düsseldorf](https://www.chaosdorf.de)
-* [CCC Munich](https://www.muc.ccc.de)
-* [Chaostreff Chemnitz](https://chaoschemnitz.de)
+* [CCC Aachen (German)](https://aachen.ccc.de)
+* [CCC Bremen (German)](http://ccchb.de)
+* [CCC Darmstadt (German)](http://darmstadt.ccc.de)
+* [CCC Dresden (German)](http://c3d2.de)
+* [CCC Düsseldorf (German)](https://www.chaosdorf.de)
+* [CCC Munich (German)](https://www.muc.ccc.de)
+* [Chaostreff Chemnitz (German)](https://chaoschemnitz.de)
 * [/dev/nulll](https://dev.0l.de)
-* [freifunk](http://freifunk.net)
-* [NoName e.V. Heidelberg](https://www.noname-ev.de)
-* [raumzeitlabor/hackerspace rhein-neckar](http://www.raumzeitlabor.de)
+* [freifunk (German)](http://freifunk.net)
+* [NoName e.V. Heidelberg (German)](https://www.noname-ev.de)
+* [raumzeitlabor/hackerspace rhein-neckar (German)](http://www.raumzeitlabor.de)
 * [Hackerspace Brussels (HSB)](http://hackerspace.be)
-* [[hsmr] / Hackspace Marburg](https://hsmr.cc)
+* [[hsmr] / Hackspace Marburg (German)](https://hsmr.cc)
 * [Whitespace (0x20)](http://www.0x20.be)
-* [Revelation Space](http://www.revspace.nl)
+* [Revelation Space (Dutch)](http://www.revspace.nl)
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
-* [Hackspace Jena e.V.](https://kraut.space)
-* [Breizh-Entropy](http://wiki.breizh-entropy.org/wiki/DN42)
-* [Fédération FDN](https://www.ffdn.org)
-* [Le LOOP](https://leloop.org/)
-* [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
-* [NixNodes](https://nixnodes.net)
-* [fixmix Technologies Ltd](https://fixmix.tech)
+* [Hackspace Jena e.V. (German)](https://kraut.space)
+* [Breizh-Entropy (French)](http://wiki.breizh-entropy.org/wiki/DN42)
+* [Fédération FDN (French)](https://www.ffdn.org)
+* [Le LOOP (French)](https://leloop.org/)
+* [Hackerspace Bielefeld (German)](https://hackerspace-bielefeld.de)
+* [fixmix Technologies Ltd](https://dn42.fixmix.tech/)
 * [Strategic Explorations Ltd](https://strexp.net)
 
 ## About this wiki
 
-This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here](https://wiki.dn42.us) or [here](https://dn42.dev) or [here](https://dn42.tk) or [here](https://dn42.eu) or [here (v6 only)](https://dn42.de), [tor](http://jsptropkiix3ki5u.onion) and [i2p](http://beb6v2i4jevo72vvnx6segsk4zv3pu3prbwcfuta3bzrcv7boy2q.b32.i2p/) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
+This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here](https://wiki.dn42.us) or [here](https://dn42.dev) or [here](https://dn42.tk) or [here](https://dn42.eu) or [here (v6 only)](https://dn42.de) and for editing from within dn42, at [https://wiki.dn42](https://wiki.dn42) - [https](services/Certificate-Authority) required for editing.
 
 ### DN42 Logo
 
