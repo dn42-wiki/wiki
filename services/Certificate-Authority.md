@@ -163,6 +163,7 @@ P6v/P0WrfgdFTk0LGEA9OwKcTqkPpcI/SjB3rmZcs42yQWvimAF94GtScE09uKlI
 C0IKqQ==
 -----END CERTIFICATE-----
 EOF
+$ echo "extra/dn42.crt" >> /etc/ca-certificates.conf
 $ update-ca-certificates
 ```
 
