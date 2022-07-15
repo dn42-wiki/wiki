@@ -6,8 +6,9 @@ This page lists external DNS zones, provided by networks that are interconnected
 | **Network name** | **Contact** | **DNS zone** | **Reverse zone** | **Authoritative nameservers** | **Last update** | **Comments** |
 |:----------------:|:----------:|:------------:|:----------------:|-------------------------------|--------------|---------|
 | ChaosVPN | - | `hack.` | `31.172.in-addr.arpa.` | `172.31.0.5` | Nov. 2013 | - |
-| RaumZeitLabor | - | `rzl.` | - | `172.22.36.250` | Jun. 2017 | - |
-| NeoNetwork | - | `neo.` | `127.10.in-addr.arpa` | `10.127.225.2` | May 2020 | - |
+| NeoNetwork | - | `neo.` | `127.10.in-addr.arpa` | `10.127.255.53` | Jul. 2022 | - |
+| NeoNetwork | - | `neo.` | `7.2.1.0.0.1.d.f.ip6.arpa` | `fd10:127:ffff:53::` | Jul. 2022 | - |
+
 ## Freifunk
 
 Freifunk generates its zone configuration from the [icvpn-meta](https://github.com/freifunk/icvpn-meta) repositority via the **mkdns**-script contained in [icvpn-scripts](https://github.com/freifunk/icvpn-scripts). As there are many Freifunk-Communities this is the easiest way to get them all.
@@ -15,9 +16,9 @@ Freifunk generates its zone configuration from the [icvpn-meta](https://github.c
     git clone https://github.com/freifunk/icvpn-scripts.git
     git clone https://github.com/freifunk/icvpn-meta.git
     cd icvpn-scripts
-    ./mkdns -f bind -s ../icvpn-meta/ -x dn42 -x chaosvpn -x rzl
+    ./mkdns -f bind -s ../icvpn-meta/ -x dn42 -x chaosvpn -x rzl -x neonetwork
 
-_Note: dn42, chaosvpn and rzl are excluded (-x), because they are not part of Freifunk and you might want to configure them yourself._
+_Note: dn42, chaosvpn (, rzl which has been removed, but is still in the script) and neonetwork are excluded (-x), because they are not part of Freifunk and you might want to configure them yourself._
 
 The mkdns script currently supports the following setups:
 * bind (static-stub)
@@ -27,7 +28,8 @@ The mkdns script currently supports the following setups:
 
 ## NeoNetwork
 
-NeoNetwork zone files can be found here: https://github.com/NeoCloud/NeoNetwork/tree/master/dns
+The NeoNetwork also has a recursive DNS server at `10.127.255.54` and `fd10:127:53:53::`.
+The zone files can be found here: https://github.com/NeoCloud/NeoNetwork/tree/master/dns
 
 ## Configuration
 
