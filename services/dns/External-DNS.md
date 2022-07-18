@@ -5,9 +5,8 @@ This page lists external DNS zones, provided by networks that are interconnected
 
 | **Network name** | **Contact** | **DNS zone** | **Reverse zone** | **Authoritative nameservers** | **Last update** | **Comments** |
 |:----------------:|:----------:|:------------:|:----------------:|-------------------------------|--------------|---------|
-| ChaosVPN | - | `hack.` | `31.172.in-addr.arpa.` | `172.31.0.5` | Nov. 2013 | - |
-| NeoNetwork | - | `neo.` | `127.10.in-addr.arpa` | `10.127.255.53` | Jul. 2022 | - |
-| NeoNetwork | - | `neo.` | `7.2.1.0.0.1.d.f.ip6.arpa` | `fd10:127:ffff:53::` | Jul. 2022 | - |
+| ChaosVPN | - | `hack.` | `31.172.in-addr.arpa.` `100.10.in-addr.arpa` `101.10.in-addr.arpa` `102.10.in-addr.arpa` `103.10.in-addr.arpa` | `172.31.0.5` `172.31.255.53` (anycast) | Nov. 2013 | - |
+| NeoNetwork | - | `neo.` | `127.10.in-addr.arpa` `7.2.1.0.0.1.d.f.ip6.arpa` | `10.127.255.53` `fd10:127:ffff:53::` | Jul. 2022 | - |
 
 ## Freifunk
 
