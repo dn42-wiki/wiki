@@ -59,7 +59,11 @@ $ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
 ```
 
 ### Route Origin
-According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin:
+There are two type of route origin: `region` and `country`
+
+#### Region
+The range `41~70` are assgined to the region property.  
+According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin(region):
 ```
 (64511, 41) :: Europe
 (64511, 42) :: North America-E
@@ -73,7 +77,33 @@ According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/00125
 (64511, 50) :: Asia-S (IN,PK,BD)
 (64511, 51) :: Asia-SE (TH,SG,PH,ID,MY)
 (64511, 52) :: Asia-E (JP,CN,KR)
-(64511, 53) :: Pacific
+(64511, 53) :: Pacific&Oceania (AU,NZ,FJ)
+(64511, 54) :: Antarctica
+(64511, 55) :: Asia-N (RU)
+(64511, 56) :: Asia-W (IR,TR,UAE)
+(64511, 57) :: Central Asia (AF,UZ,KZ)
+```
+
+#### Country
+The range `1000~1999` are assigned to the country property, we uses the country code from [ISO-3166-1 Numeric](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)
+The `1000 + country code` are the communities for route origin(country).
+```
+(64511, 1124) :: Canada
+(64511, 1156) :: China
+(64511, 1158) :: Taiwan
+(64511, 1250) :: France
+(64511, 1276) :: Germany
+(64511, 1344) :: Hong Kong
+(64511, 1392) :: Japan
+(64511, 1528) :: Netherlands
+(64511, 1578) :: Norway
+(64511, 1643) :: Russian Federation
+(64511, 1702) :: Singapore
+(64511, 1756) :: Switzerland
+(64511, 1826) :: United Kingdom
+(64511, 1840) :: United States of America
+# etc. Please follow the ISO-3166-1 Numeric standard
+# https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
 ```
 
 You need to add following lines to your config(s):

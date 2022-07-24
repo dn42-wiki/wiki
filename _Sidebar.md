@@ -2,6 +2,7 @@
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
+  * [BGP communities](/howto/Bird-communities)
   * [FAQ](/FAQ)
 
 * How-To
