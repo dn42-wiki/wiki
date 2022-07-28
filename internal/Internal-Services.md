@@ -138,6 +138,8 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | yuan.nia.dn42 (172.20.168.244)                    | Genshi Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet  |
 | mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
 | mc.jerry.dn42 & jerry.dn42                        | Minecraft              | latest, IPv4 & IPv6 |
+| mc.northrend.dn42				    | Minecraft		     | latest, IPv4 only   |
+| redtrap.northrend.dn42			    | Minecraft		     | latest, IPv4 only   |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
