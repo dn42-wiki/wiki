@@ -201,6 +201,8 @@ You may choose your network prefix in one of the currently open netblocks. You c
 * [Free blocks in dn42regsrv](https://explorer.burble.com/free#/4)
 * [Open Netblocks](https://dn42.us/peers/free)
 
+If there are no free subnets of the size you want, you may split a larger block as required.
+
 Check the registry (data/inetnum) to make sure no-one else has allocated the same prefix. There are some IP ranges that are not open for assignments or are reserved for specific uses, so you should also check that the parent block has an 'open' policy. A quick and simple way to see the block policies is to run `grep "^policy" data/inetnum/*`. 
 
 | Size | Comment                  |
