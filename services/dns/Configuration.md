@@ -302,11 +302,11 @@ d.f.ip6.arpa.	86400	IN	DS	1 2 3 456
 
 [172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.20.0.0_16)
 
-[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.21.0.0_16)
+[172.21.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.21.0.0_16)
 
-[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.22.0.0_16)
+[172.22.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.22.0.0_16)
 
-[172.20.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.23.0.0_16)
+[172.23.0.0/16 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.23.0.0_16)
 
 [fd00::/8 range](https://git.dn42.dev/dn42/registry/src/branch/master/data/inet6num/fd00::_8)
 
