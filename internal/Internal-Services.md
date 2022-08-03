@@ -144,6 +144,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 | terraria.pebkac.dn42:7777 (IPv4 only/TCP) | [Terraria](https://terraria.org/) | Ask [TOMKAP-DN42](https://explorer.dn42.pebkac.gr/?#/person/TOMKAP-DN42) for password/whitelisting |
+| factorio.catgirls.dn42 (IPv6 only)                | factorio               | Still in testing, expect downtime |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 
 ## Challenges
