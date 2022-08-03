@@ -34,6 +34,7 @@ Please sort by AS number.
 | 4242422904 | ext: https://lg.doxz.net |
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42 |
 | 4242423315 | ext: http://lg.unknownts.tk <br> dn42: http://unknownts.dn42 |
+| 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
 
 ## Down
 
