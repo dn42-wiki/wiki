@@ -121,7 +121,7 @@ Entry points to the Tor network are available on dn42. See [Tor](/internal/Tor) 
 | ntp.martin89.dn42                                 | more than one A records/server      |
 | tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
 | tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
-| *.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services) |
+| *.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
 | ntp.yuetau.dn42 (172.21.68.50)                    | Anycast on all node     |
 
 ## OS Mirror/Repository's
