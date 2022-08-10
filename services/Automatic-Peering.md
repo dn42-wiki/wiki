@@ -8,6 +8,7 @@ ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS64719      | [lutoma](https://dn42.lutoma.org) | https://dn42.lutoma.org |
 AS4242420603 | [MolMoe Network](https://dn42.mol.moe) |https://dn42.mol.moe |
+AS4242420927 | [Liki4](https://dn42.liki.link) |https://dn42.liki.link |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) |https://www.chrismoos.com/dn42-peering |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | https://dn42.potat0.cc |
 AS4242422189 | [IEDON-NET](https://dn42.kuu.moe) | https://dn42.kuu.moe |
