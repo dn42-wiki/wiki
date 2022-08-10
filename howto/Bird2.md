@@ -176,7 +176,7 @@ include "/etc/bird/peers/*";
 
 # Route Origin Authorization
 
-The example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, [see the bird1 page](/howto/Bird#route-origin-authorization) for more details and links to the ROA files. 
+The example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, [see the bird1 page](/howto/Bird#route-origin-authorization) for more details and links to the ROA files. Note: edit the links to replace roa_bird1 to say roa_bird2 if using the cron jobs listed on that page. 
 
 # RPKI / RTR for ROA
 
