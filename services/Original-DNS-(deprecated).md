@@ -1,5 +1,5 @@
 # Original DNS (deprecated)
-This information is now **deprecated**. Please check [New DNS](/New DNS) for the current architecture.
+This information is now **deprecated**. Please check [New DNS](New-DNS) for the current architecture.
 
 ***
 
@@ -23,7 +23,7 @@ If you run your own resolver (`unbound`, `dnsmasq`, `bind`), you can configure i
 
 ### Recursive resolver
 
-You may also want to configure your resolver to recursively resolve dn42 domains. For this, you need to find authoritative DNS servers for the `dn42` zone (and for the reverse zones). See [services/dns/Recursive DNS resolver](/services/dns/Recursive DNS resolver).
+You may also want to configure your resolver to recursively resolve dn42 domains. For this, you need to find authoritative DNS servers for the `dn42` zone (and for the reverse zones). See [services/dns/Recursive DNS resolver](/services/dns/Recursive-DNS-resolver).
 
 ### Building the dn42 zones from the registry
 
@@ -35,12 +35,12 @@ The root zone for `dn42.` is built from the [whois registry](/services/Whois). I
 
 ## DNS services for other networks
 
-Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](/External DNS).
+Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](dns/External-DNS).
 
 ## Providing DNS services
 
-See [Providing Anycast DNS](/Providing Anycast DNS).
+See [Providing Anycast DNS](dns/Providing-Anycast-DNS).
 
-## [Old Hierarchical DNS](/Old Hierarchical DNS)
+## [Old Hierarchical DNS](Old-Hierarchical-DNS)
 
 This is a new effort to build a DNS system that mirrors how DNS was designed to work in clearnet. 

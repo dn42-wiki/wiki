@@ -11,8 +11,8 @@ This document describes some possibilities for connecting to dn42 using an Ubiqu
 
 ## First Steps
 
-1. Create the required objects in the Registry - see [Getting Started](/Getting-Started) 
-2. Find a peer - ask nicely in [IRC](/IRC)!
+1. Create the required objects in the Registry - see [Getting Started](/howto/Getting-Started) 
+2. Find a peer - ask nicely in [IRC](/services/IRC)!
 3. Get the following details:
     * Tunnel configuration (OpenVPN, IPsec, QuickTun)
     * AS numbers 

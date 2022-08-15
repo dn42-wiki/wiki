@@ -1,6 +1,6 @@
 Quote from #dn42: `hexa: nobody runs racoon on their free will :)`.
 
-See also [strongswan](howto/IPsecWithPublicKeys/strongSwan5Example)
+See also [strongSwan](/howto/IPsecWithPublicKeys/strongSwan5Example)
 
 The keys are generated with plainrsa-gen.
 
@@ -40,4 +40,4 @@ remote 192.168.255.2 {
 
 ## Se also
 
-[debian specific configuration](IPsecWithPublicKeys/GRE plus IPsec Debian)
+[Debian specific configuration](/howto/IPsecWithPublicKeys/GRE-plus-IPsec-Debian)

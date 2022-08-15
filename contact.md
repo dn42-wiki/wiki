@@ -2,7 +2,7 @@
 
 Members of the dn42 network mostly communicate via IRC or the mailing list.
 
-If you would like to contact an individual network operator, you will find contact information in the [Whois](/Whois) registry.
+If you would like to contact an individual network operator, you will find contact information in the [Whois](/services/Whois) registry.
 
 ## Mailing list
 
@@ -15,7 +15,7 @@ If you would like to contact an individual network operator, you will find conta
 
 Channel #dn42 in [hackint](http://www.hackint.eu/)
 
-See [IRC](/IRC) too.
+See [IRC](/services/IRC) too.
 
 ## Telegram
 

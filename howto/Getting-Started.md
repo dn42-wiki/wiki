@@ -313,9 +313,9 @@ There is some documentation in this wiki, like [gre-plus-ipsec](GRE-plus-IPsec).
 
 ## Running a routing daemon
 
-You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](bgp-on-extreme-summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
+You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](BGP-on-Extreme-Summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
 
-You can find [configuration examples for Bird here](bird).
+You can find [configuration examples for Bird here](Bird).
 
 ## Configuration Examples
 
@@ -337,7 +337,7 @@ You can find [configuration examples for Bird here](bird).
 
 # Configure DNS
 
-See [Services DNS](/Services/DNS).
+See [Services DNS](/services/DNS).
 
 # Use and provide services
 

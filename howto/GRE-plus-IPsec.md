@@ -25,10 +25,10 @@
 * At least one peer should operate his own (Sub-)CA.
 
 ## How to configure a GRE tunnel on FreeBSD
-See [GRE on FreeBSD](gre-on-freebsd).
+See [GRE on FreeBSD](GRE-on-FreeBSD).
 
 ## How to configure IPsec on FreeBSD
-See [IPsec on FreeBSD](ipsec-on-freebsd).
+See [IPsec on FreeBSD](IPsec-on-FreeBSD).
 
 ## How to configure GRE + IPsec on Debian
-See [GRE + IPsec on Debian](gre-plus-ipsec-debian).
+See [GRE + IPsec on Debian](IPsecWithPublicKeys/GRE-plus-IPsec-Debian).

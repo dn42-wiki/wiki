@@ -32,7 +32,7 @@ Note that currently, most AS are using one of the legacy ASN range (and will pro
 
 ## DNS zones
 
-dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](/DNS).
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](DNS).
 
 Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
 
@@ -57,7 +57,7 @@ The service is provided by [dn42regsrv](https://git.dn42.us/burble/dn42regsrv) w
 
 ## Authentication
 
-See the page on [Registry Authentication](howto/Registry-Authentication)
+See the page on [Registry Authentication](/howto/Registry-Authentication)
 
 # DNS interface
 

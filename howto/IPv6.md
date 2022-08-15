@@ -16,7 +16,7 @@ If you're already running IPv4 on DN42, here's how to get started:
  * ???
  * Profit!
 
-If not, you can follow the instructions on the [Getting Started](GettingStarted) page, as they'll mostly apply to IPv6 aswell.
+If not, you can follow the instructions on the [Getting Started](Getting-Started) page, as they'll mostly apply to IPv6 aswell.
 
 ## What can i do on DN42-v6 ?
 

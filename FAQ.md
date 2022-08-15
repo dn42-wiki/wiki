@@ -1,6 +1,6 @@
 ## How do I connect to DN42?
 
-We have a [page](/howto/Getting-started) for that!
+We have a [page](/howto/Getting-Started) for that!
 
 
 ### What BGP daemon should I use?

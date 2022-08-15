@@ -18,7 +18,7 @@ Remember, if you announce an anycast /64, then you need to provide **all** servi
 | internal Wiki          | `fd42:d42:d42:80::1/64`   | TCP/80, TCP/443   |                               |
 
 
-[Providers]: Providing-Anycast-DNS#Persons-providing-anycast-DNS-for-IPv6
+[Providers]: dns/Providing-Anycast-DNS#Persons-providing-anycast-DNS-for-IPv6
 
 ### Future services
 
