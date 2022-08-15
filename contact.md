@@ -27,7 +27,8 @@ See [IRC](/IRC) too.
 There are currently multiple decentralized mirrors and domains for the DN42 wiki available:
 
  * [dn42.us](https://wiki.dn42.us) maintained by xuu
- * [dn42.dev](https://dn42.dev) / [wiki.burble.dn42](https://wiki.burble.dn42/) maintained by Burble
+ * [dn42.dev](https://dn42.dev) / [wiki.burble.dn42](https://wiki.burble.dn42) maintained by Burble
  * [dn42.eu](https://dn42.eu) maintained by Nurtic-vibe
  * [dn42.tk](https://dn42.tk) maintained by Androw
+ * [dn42.wiki](https://dn42.wiki) maintained by DannyAAM
  * [dn42.de (ipv6 only)](https://dn42.de)
