@@ -174,7 +174,7 @@ The registry includes a script that uses ssh-keygen signatures to sign your chan
 e.g.
 
 ```
-./sign-my-commit --ssh -key /home/foo/.ssh/id_ed25519 --push FOO-MNT
+./sign-my-commit --ssh --key /home/foo/.ssh/id_ed25519 --push FOO-MNT
 ```
 
 #### Verifying the signature
