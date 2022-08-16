@@ -22,6 +22,7 @@ Please sort by AS number.
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42 <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute |
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 |
 | 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 |
+| 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42 |
 | 4242421926 | dn42: https://lg.zhaofeng.dn42 <br> ext: https://lg.naive.network |
 | 4242421955 | dn42: http://lg.nop.dn42 <br> telnet:test.nop.dn42 <br> ext: http://sandbox.freertr.org|
@@ -36,7 +37,7 @@ Please sort by AS number.
 | 4242422904 | ext: https://lg.doxz.net |
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42 |
 | 4242423315 | ext: http://lg.unknownts.tk <br> dn42: http://unknownts.dn42 |
-| 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
+| 4242423868 | ext: http://lg.dn42.cooo.cool <br> dn42: http://lg.chimon.dn42 |
 
 ## Down
 
