@@ -77,6 +77,7 @@ For more information cosult the official documentation: https://rtrtr.docs.nlnet
 ### Other tools / generators
 - bauen1's dn42-roagen: https://gitlab.com/bauen1/dn42-roagen
 - Kioubit's registry wizard:  https://git.dn42.dev/Kioubit/RegistryWizard
+- chuangzhu's pure bash script: https://paste.sr.ht/~chuang/e98d2fe791de68a6cf5aade7877cd0dbc1cdb84e
 
 ### This is all to complicated, is there an easy all-in-one package for RTR?
 
