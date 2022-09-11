@@ -26,7 +26,7 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
   * whatsmyip: 
     * ipv4+ipv6: [myip.dn42](http://myip.dn42/) 
     * ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.22.125.30](http://172.22.125.30)
-    * ipv6 only:[v6.myip.dn42](http://v6.myip.dn42/) or [fd63:5d40:47e5::1111](http://[fd63:5d40:47e5::1111]/)
+    * ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd63:5d40:47e5::1111](http://[fd63:5d40:47e5::1111]/)
 
 ### GeoIP Services
 [Map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
