@@ -189,6 +189,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
 | https://sdr.pebkac.dn42/                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
+| https://urandom.catgirls.dn42/                    | Message board |
 
 
 ### Usenet Servers / News
