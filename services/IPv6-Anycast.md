@@ -15,7 +15,8 @@ Remember, if you announce an anycast /64, then you need to provide **all** servi
 | Recursive DNS resolver | `fd42:d42:d42:54::1/64`   | UDP/53            | `.` and `dn42.` [Providers][] |
 | Whois Database         | `fd42:d42:d42:43::1/64`   | TCP/43            |                               |
 | TOR SOCKS5 Proxy       | `fd42:d42:d42:9050::1/64` | TCP/9050          |                               |        
-| internal Wiki          | `fd42:d42:d42:80::1/64`   | TCP/80, TCP/443   |                               |
+| internal Wiki          | `fd42:d42:d42:80::1/64`   | TCP/80, TCP/443   |                               |      
+| myip.dn42              | `fd42:d42:d42:81::1/64`   | TCP/80            |                               |
 
 
 [Providers]: dns/Providing-Anycast-DNS#Persons-providing-anycast-DNS-for-IPv6
