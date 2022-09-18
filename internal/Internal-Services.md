@@ -25,8 +25,9 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
   * whatsmyip: 
     * ipv4+ipv6: [myip.dn42](http://myip.dn42/) 
-    * ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.22.125.30](http://172.22.125.30)
-    * ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd63:5d40:47e5::1111](http://[fd63:5d40:47e5::1111]/)
+    * ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
+    * ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
+    * /index.html: "fancy" human readable site; /raw: just your ip address; /api: json with ip,serverip,AS of server, location of server and "node_id"
 
 ### GeoIP Services
 [Map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
