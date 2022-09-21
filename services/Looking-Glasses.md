@@ -31,6 +31,7 @@ Please sort by AS number.
 | 4242422237 | ext: https://lg.dn42.munsternet.eu <br> dn42: http://lg.munsternet.dn42 <br> IPv6 only |
 | 4242422439 | ext: https://lg.dn42.saru.moe <br> dn42: https://lg.saru.dn42 |
 | 4242422575 | dn42: https://lg.androw.dn42 <br> ext: https://lg.androw.eu |
+| 4242422596 | dn42: http://lg.ty3r0x.dn42 |
 | 4242422601 | dn42: http://lg.burble.dn42 <br> ext: https://lg.burble.com |
 | 4242422633 | dn42: http://lg.eb.dn42 <br> ext: https://lg.eastbnd.com |
 | 4242422717 | ext: https://lg.whojk.com |
