@@ -36,6 +36,7 @@ Please sort by AS number.
 | 4242422633 | dn42: http://lg.eb.dn42 <br> ext: https://lg.eastbnd.com |
 | 4242422717 | ext: https://lg.whojk.com |
 | 4242422904 | ext: https://lg.doxz.net |
+| 4242423035 | ext: https://lg.lare.cc <br> dn42: https://lg.lare.dn42 |
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42 |
 | 4242423315 | ext: http://lg.unknownts.tk <br> dn42: http://unknownts.dn42 |
 | 4242423868 | ext: http://lg.dn42.cooo.cool <br> dn42: http://lg.chimon.dn42 |
