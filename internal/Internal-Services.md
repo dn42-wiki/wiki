@@ -152,6 +152,12 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | factorio.catgirls.dn42 (IPv6 only)                | factorio               | Still in testing, expect downtime |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 
+## Voice chat
+
+|Hostname / IP         | Remarks              |
+|:---------------------|:---------------------|
+| [ty3r0x.dn42](mumble://ty3r0x.dn42:64738) | Ty3r0X's Lair (men's club)|
+
 ## Challenges
 
 Test out your skills with online challenges
