@@ -156,7 +156,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 
 |Hostname / IP         | Remarks              |
 |:---------------------|:---------------------|
-| [ty3r0x.dn42](mumble://ty3r0x.dn42:64738) | Ty3r0X's Lair (men's club)|
+| mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club)|
 
 ## Challenges
 
