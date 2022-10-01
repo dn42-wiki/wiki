@@ -158,6 +158,10 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 |:---------------------|:---------------------|
 | mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club)|
 
+## VOIP/SIP Endpoints
+
+ - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
+
 ## Challenges
 
 Test out your skills with online challenges
