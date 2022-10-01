@@ -44,8 +44,6 @@ Document your mad setups in the categories below, with links to a full write up,
 * Retro dn42 access service by Burble
  - burble.dn42 provides a [dn42 dialup service](https://dn42.burble.com/retro/) using real modems over VOIP, together with a [modem emulator](https://dn42.burble.com/retro/fake/) to ease attaching retro computers or virtual machines in to dn42
 
-  <video source="https://dn42.burble.com/retro/intro.webm" width="640" autoplay="true" loop="true"></video>
-
 
 ## Things that use dn42
  - Fun stuff that you've done with dn42
