@@ -44,9 +44,13 @@ Document your mad setups in the categories below, with links to a full write up,
 * Retro dn42 access service by Burble
  - burble.dn42 provides a [dn42 dialup service](https://dn42.burble.com/retro/) using real modems over VOIP, together with a [modem emulator](https://dn42.burble.com/retro/fake/) to ease attaching retro computers or virtual machines in to dn42
 
-* Connections through the above access service by 04dco
- - At a maximum theoretical speed of a whopping 28.8 Kbps, web browsing and IRC chatting were done. My site still loads faster than everyone else's :)
-![Screenshot of Windows XP while chatting on a familiar client](images/ircdun.png)
+ - 04dco: At a maximum theoretical speed of a whopping 28.8 Kbps, web browsing and IRC chatting were done. My site still loads faster than everyone else's :)
+
+   ![Screenshot of Windows XP while chatting on a familiar client](images/ircdun.png)
+
+ - grawity: Lacking a physical modem, configured VirtualBox to attach the Windows 98 serial port to a TCP modem emulator at dialup.burble.dn42. Listening to a shoutcast stream of local FM radio station.
+
+   ![Screenshot of Win98 showing "Connection Established"](images/win98dun.png)
 
 ## Things that use dn42
  - Fun stuff that you've done with dn42
