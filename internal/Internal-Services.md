@@ -201,6 +201,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
 | https://sdr.pebkac.dn42/                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
 | https://urandom.catgirls.dn42/                    | Message board |
+| [https://flapping.p2p-node.de/dashboard/](Clearnet), [https://flapping.bandura.dn42/dashboard/](dn42), [https://flapping.bandura.neo/dashboard/](NeoNetwork) | FlapAlertedPro by Kioubit hosted by mark22k |
 
 
 ### Usenet Servers / News
