@@ -286,6 +286,36 @@ then create the directory to make sure curls can save the files:
 mkdir -p /var/lib/bird/
 ```
 
+Or use a systemd timer: (check the commands before copy-pasting)
+
+```
+# /etc/systemd/system/dn42-roa.service
+[Unit]
+Description=Update DN42 ROA
+
+[Service]
+Type=oneshot
+ExecStart=curl -sfSLR -o /etc/bird/roa_dn42.conf -z /etc/bird/roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird2_4.conf
+ExecStart=curl -sfSLR -o /etc/bird/roa_dn42_v6.conf -z /etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf
+ExecStart=birdc configure
+```
+
+```
+# /etc/systemd/system/dn42-roa.timer
+[Unit]
+Description=Update DN42 ROA periodically
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=15m
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target
+```
+
+then enable and start the timer with `systemctl enable --now dn42-roa.timer`.
+
 ### Use RPKI ROA in bird2
 
 * Download  gortr
