@@ -202,6 +202,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | https://sdr.pebkac.dn42/                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
 | https://urandom.catgirls.dn42/                    | Message board |
 | [Clearnet](https://flapping.p2p-node.de/dashboard/), [dn42](https://flapping.bandura.dn42/dashboard), [NeoNetwork](https://flapping.bandura.neo/dashboard/) | FlapAlertedPro by Kioubit hosted by mark22k |
+| [Clearnet](https://monkic.mk16.de/), [dn42](https://monkic.mk16.de/) | Monkic (Game in German) |
 
 
 ### Usenet Servers / News
