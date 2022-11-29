@@ -27,6 +27,7 @@ OneSwarm can be run as a darknet for friend-to-friend file-sharing.
 - **DN42**
 - **ChaosVPN**
 - **Anonet**
+- **router.city**
 
 ## Wireless
 
@@ -36,6 +37,10 @@ OneSwarm can be run as a darknet for friend-to-friend file-sharing.
 
 - **Netsukuku**
 - **Agora**
+
+## Babel
+
+- **CRXN**
 
 ## AnoNet
 A wiki page dedicated to the AnoNet Network: http://wiki.qontrol.nl/Anonet
