@@ -14,6 +14,7 @@ Please sort by AS number.
 | 4242420197 | ext: https://lg.n0emis.eu <br> dn42: https://lg.n0emis.dn42 (soon) |
 | 4242420458 | ext: https://lg.huajinet.org |
 | 4242420585 | ext: https://dn42.atolm.net/lg <br> dn42: http://atolm.dn42/lg |
+| 4242420831 | ext: https://lg.dn42.tms.im |
 | 4242420927 | ext: https://lg.dn42.liki.link |
 | 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 |
 | 4242421022 | ext: https://lg.bsdrocker.com |
