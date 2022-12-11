@@ -23,6 +23,7 @@ Please sort by AS number.
 | 4242421080 | ext: https://lg.highdef.network <br> dn42: http://lg.highdef.dn42 |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42 <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute |
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 |
+| 4242421197 | dn42: http://lg.scoopta.dn42 <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421331<br>4242421332<br>207268 | ext: https://lg.strexp.net <br> dn42: http://lg.nia.dn42 |
 | 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42 |
