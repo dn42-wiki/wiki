@@ -20,7 +20,7 @@
   * [EdgeRouter](/howto/EdgeOS-Config)
   * [Static routes on Windows](/howto/Static-routes-on-Windows)
   * [Universal Network Requirements](/howto/networksettings)
-  * [VyOS](/howto/vyos)
+  * [VyOS](/howto/vyos) / [VyOS 1.4.x](/howto/vyos1.4.x)
   * [NixOS](/howto/nixos)
 
 * Services
