@@ -120,9 +120,8 @@ set interfaces wireguard wg1234 private-key 'SOoPQdMdmXE3ssp0/vwwoIMhQqvcQls+DhD
 # One of your DN42 IPv4 addresses (not really needed if you'll enable extended next-hop)
 set interfaces wireguard wg1234 address '172.20.20.1/32'
 
-# An arbitrary link-local IPv6 address
+# An arbitrary link-local IPv6 address (that you'll have to tell to your peer)
 set interfaces wireguard wg1234 address 'fe80::1234/128'
-
 
 set interfaces wireguard wg1234 peer location1 address '<clearnet ipv6 or ipv4 address of your peer wireguard endpoint>'
 set interfaces wireguard wg1234 peer location1 port '<wireguard endpoint port of your peer>'
@@ -173,13 +172,14 @@ set protocols bgp neighbor fe80::1234 address-family ipv6-unicast
 ```
 #### Option 2: BGP (no Multi Protocol) - no Extended Next-Hop
 ```
-# First we need to add a static ipv4 route to our peer tunneled ipv4 address
-set protocols static route 172.20.x.y interface wg1234
-
+# First, we set the ipv6 part.
 set protocols bgp neighbor fe80::1234 interface remote-as '<your peer ASN>'
 set protocols bgp neighbor fe80::1234 interface source-interface 'wg1234'
 set protocols bgp neighbor fe80::1234 remote-as '<your peer ASN>'
 set protocols bgp neighbor fe80::1234 address-family ipv6-unicast 
+
+# For the ipv4 part we need to add first a static ipv4 route to our peer tunneled ipv4 address
+set protocols static route 172.20.x.y interface wg1234
 
 # 172.20.x.y is your peer tunneled IPv4
 set protocols bgp neighbor 172.20.x.y remote-as '<your peer ASN>'
@@ -298,7 +298,7 @@ set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map import 
 ## Credits
 This How-To has to be considered a work-in-progress by **Matwolf**.
 
-It's based on the original VyOS How-To made by **Owens Research**: [How-To/VyOS](howto/vyos).
+It's based on the original VyOS How-To made by **Owens Research**: [How-To/VyOS](/howto/vyos).
 
 The commands in this page have been adapted to be compatible with the new version of VyOS 1.4.x (sagitta) and to include configurations for IPv6 (MP-BGP over link-local and extended next-hop).
 
