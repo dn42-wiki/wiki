@@ -296,9 +296,9 @@ set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map import 
 ```
 
 ## Credits
-This page has to be considered a work-in-progress by **Matwolf**.
+This How-To has to be considered a work-in-progress by **Matwolf**.
 
-It's based on the original page made by **Owens Research**: [How-To/VyOS](howto/vyos).
+It's based on the original VyOS How-To made by **Owens Research**: [How-To/VyOS](howto/vyos).
 
 The commands in this page have been adapted to be compatible with the new version of VyOS 1.4.x (sagitta) and to include configurations for IPv6 (MP-BGP over link-local and extended next-hop).
 
