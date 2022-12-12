@@ -110,7 +110,15 @@ generate pki wireguard key-pair
 Private key: SOoPQdMdmXE3ssp0/vwwoIMhQqvcQls+DhDjmaLw03U=
 Public key: ArkXeK1c0pCWCouePcRRBCQpXfi4ZIvRFFwTxO60dxs=
 ```
-_In any case you'll have to take note of the generated keys, because they won't be saved into the system after generation and you'll need them later. The public key will be shared with your peers. Keep secret the secret key!_  
+To retrieve keys later
+```
+show wireguard keypairs pubkey [key name]
+
+Example:
+show wireguard keypairs pubkey default
+ArkXeK1c0pCWCouePcRRBCQpXfi4ZIvRFFwTxO60dxs=
+```
+
 ### Configure First Peer
 ```
 set interfaces wireguard wg1234 description 'ASnnnnnnn - My First Peer'
