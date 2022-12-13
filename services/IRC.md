@@ -20,16 +20,4 @@ We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is 
 | [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)                                | Germany       |
 | [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)                                | Netherlands       |
 
-## Other Networks
 
-### via dn42
-
-| Network | Hostname                                 |  SSL        | IPv4                       | IPv6         |
-|:--------|:------------------------------------------|:------ |:-------------------------- |:------------ |
-| | [irc.dn42](ircs://irc.dn42)               |  Yes   | many                        | also many |
-| | [irc.2f30.dn42](ircs://irc.2f30.dn42)       |  Yes    | 172.23.35.2              | N/A |
-
-
-## Bouncer Offers
-
-* stv0g: offering ZNC accounts (ask in IRC, [Webinterface](https://dev.0l.dn42/znc/))
