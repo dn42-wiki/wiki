@@ -1,29 +1,24 @@
 # IRC
 > TLDR: irc.hackint.dn42, #dn42
 
-We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is reachable from within DN42, ChaosVPN and the public internet. A connection is only possible via TLS on port 9999.
+We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is reachable from within DN42, ChaosVPN and the public internet. A connection is only possible via TLS on port 6697.
 
 
 ## hackint.org
 
-### via dn42
 | Network | Hostname                                 |  SSL        | IPv4                       | IPv6         |
 |:--------|:------------------------------------------|:------ |:-------------------------- |:------------ |
-| hackint | [irc.hackint.dn42](irc://irc.hackint.dn42)|  Yes    | 172.20.66.67 |  fd42:d42:d42:6667::1 |
+| DN42 | [irc.hackint.dn42](ircs://irc.hackint.dn42:6697)|  Yes    | 172.20.66.67 |  fd42:d42:d42:6667::1 |
+| ChaosVPN | [irc.hackint.hack](ircs://irc.hackint.hack:6697)|  Yes    | 172.20.66.67 |  - |
 
-
-### via chaosvpn
-| Hostname                                          | IPv4                       | IPv6         |
-|:------------------------------------------------- |:-------------------------- |:------------ |
-| [irc.hackint.hack](irc://irc.hackint.hack) | 172.20.66.67 | - |
 
 ### via public internet
-| Hostname                                          | Comment                    |
+| Hostname                                          | Location                    |
 |:------------------------------------------------- |:-------------------------- |
-| [irc.hackint.org](irc://irc.hackint.org)                                   |                            |
-| [irc.eu.hackint.org](irc://irc.eu.hackint.org)                               | european server pool       |
-| [irc.us.hackint.org](irc://irc.us.hackint.org)                                | american server pool       |
-
+| [irc.hackint.org](ircs://irc.hackint.org:6697)                                   | Global                     |
+| [irc.eu.hackint.org](ircs://irc.eu.hackint.org:6697)                               | European        |
+| [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)                                | Germany       |
+| [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)                                | Netherlands       |
 
 ## Other Networks
 
