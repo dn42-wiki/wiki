@@ -227,6 +227,8 @@ example: data/inetnum/172.20.150.0_27
 inetnum:            172.20.150.0 - 172.20.150.31
 cidr:               172.20.150.0/27
 netname:            FOO-NETWORK
+descr:              Network of FOO
+country:            XD
 admin-c:            FOO-DN42
 tech-c:             FOO-DN42
 mnt-by:             FOO-MNT
@@ -251,9 +253,11 @@ example data/route/172.20.150.0_27:
 ```
 route:              172.20.150.0/27
 origin:             AS4242423999
+max-length:         27
 mnt-by:             FOO-MNT
 source:             DN42
 ```
+**Note**: the "max-length" should be the same as the prefix length (i.e. 27 for default ipv4 allocation size and 48 for default ipv6 allocation size) except if you have special needs in announcing larger prefixes
 
 #### DNS and Domain Registration
 
