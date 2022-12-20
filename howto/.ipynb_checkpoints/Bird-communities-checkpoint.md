@@ -42,7 +42,7 @@ Propagation:
 ```
 For example, if your peer is 12ms away and the link speed between you is 250Mbit/s and you are peering using OpenVPN P2P, then the community string would be (3, 24, 33).
 
-Two utilities which measure round trip time and calculate community values automatically are provided, written in  [ruby](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) and [C](https://github.com/nixnodes/bird/blob/master/misc/dn42-comgen.c).
+Two utilites which measure round trip time and calculate community values automatically are provided, written in  [ruby](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) and [C](https://github.com/nixnodes/bird/blob/master/misc/dn42-comgen.c). 
 
 ```
 $ ruby bgp-community.rb --help
@@ -62,9 +62,8 @@ $ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
 There are two type of route origin: `region` and `country`
 
 #### Region
-The range `41-70` is assigned to the region property.
-The communities for route origin region were first defined in [December 2015](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) and further extended in [May 2022](https://groups.io/g/dn42/topic/91226190):
-
+The range `41~70` are assgined to the region property.  
+According to [this mail](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) these are the communities for route origin(region):
 ```
 (64511, 41) :: Europe
 (64511, 42) :: North America-E
@@ -77,7 +76,7 @@ The communities for route origin region were first defined in [December 2015](ht
 (64511, 49) :: Africa-S (below Sahara)
 (64511, 50) :: Asia-S (IN,PK,BD)
 (64511, 51) :: Asia-SE (TH,SG,PH,ID,MY)
-(64511, 52) :: Asia-E (JP,CN,KR,TW,HK)
+(64511, 52) :: Asia-E (JP,CN,KR)
 (64511, 53) :: Pacific&Oceania (AU,NZ,FJ)
 (64511, 54) :: Antarctica
 (64511, 55) :: Asia-N (RU)
@@ -86,8 +85,8 @@ The communities for route origin region were first defined in [December 2015](ht
 ```
 
 #### Country
-The range `1000-1999` is assigned to the country property. Here we use [ISO-3166-1 numeric](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv) country codes, adding `1000` to each value to get the country origin community:
-
+The range `1000~1999` are assigned to the country property, we uses the country code from [ISO-3166-1 Numeric](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)
+The `1000 + country code` are the communities for route origin(country).
 ```
 (64511, 1124) :: Canada
 (64511, 1156) :: China
@@ -115,7 +114,7 @@ just above `update_flags` in `dn42_export_filter` function
   - Otherwise, if you export routes across multiple regions within your network, you may be sending incorrect origin information to other peers.
 
 
-## Example configurations
+## Example configurations 
 ```
 # /etc/bird/peers4/tombii.conf
 protocol bgp tombii from dnpeers {
@@ -204,7 +203,7 @@ include "bird/local4.conf";
 #################
 
 include "/etc/bird/filter4.conf";
-include "/etc/bird/community_filters.conf";
+include "/etc/bird/community_filters.conf"; 
 ```
 
 
