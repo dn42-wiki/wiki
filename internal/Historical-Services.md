@@ -12,6 +12,7 @@ You can inspect the services status [on this page](https://services.dn42)
   * Polynome has some nice scripts and visualizations here: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
+  * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
 
 ### DNS Hosting
 Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
