@@ -21,7 +21,7 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
   * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
   * Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
-  * DN42 IP address lookup tool: [dn42.g-load.eu/ip](https://dn42.g-load.eu/ip/)
+  * DN42 IP address lookup tool: [dn42.g-load.eu/lookup](https://dn42.g-load.eu/lookup/)
   * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
   * whatsmyip: 
     * ipv4+ipv6: [myip.dn42](http://myip.dn42/) 
