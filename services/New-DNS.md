@@ -6,7 +6,7 @@ After frequent issues with the [Old Hierarchical DNS](Old-Hierarchical-DNS) syst
 # End Users
 It is **strongly recommended** to run your own resolver for security and privacy reasons. Setting it up and maintaining it should be easy, see [services/dns/Configuration](/services/dns/Configuration).
 
-If running your own resolver is not possible or undesirable, you can choose one or more instances from [dns/recursive-servers.dn42 in the registry](https://git.dn42.us/dn42/registry/src/master/data/dns/recursive-servers.dn42). Please make sure you fully understand the consequences and fully trust these operators.
+If running your own resolver is not possible or undesirable, you can choose one or more instances from [dns/recursive-servers.dn42 in the registry](https://git.dn42.dev/dn42/registry/src/master/data/dns/recursive-servers.dn42). Please make sure you fully understand the consequences and fully trust these operators.
 
 You can also use the globally anycasted a.recursive-servers.dn42 but you won't have any control over which instance you get. This is a **very bad idea** from a security standpoint.
 

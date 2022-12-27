@@ -53,7 +53,7 @@ Privacy mode is enabled, please call the bot with @DN42WhoisBot when necessary.
 
 [https://explorer.burble.dn42/](https://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
 
-The service is provided by [dn42regsrv](https://git.dn42.us/burble/dn42regsrv) which can also be run locally.
+The service is provided by [dn42regsrv](https://git.burble.com/burble.dn42/dn42regsrv) which can also be run locally.
 
 ## Authentication
 
@@ -76,7 +76,7 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 # Software
 
  * [lglass](/internal/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
- * [whois42d](https://github.com/dn42/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
+ * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
 
 # Whois daemons
 

@@ -7,7 +7,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 ## Registry REST API
 
-[dn42regsrv](https://git.dn42.us/burble/dn42regsrv) is a REST API for the DN42 registry that provides a bridge between interactive applications and the registry.
+[dn42regsrv](https://git.burble.com/burble.dn42/dn42regsrv) is a REST API for the DN42 registry that provides a bridge between interactive applications and the registry.
 
 As well as the main REST API to the DN42 registry, the server can also generate ROA tables and provides a small web application for exploring registry data.
 
