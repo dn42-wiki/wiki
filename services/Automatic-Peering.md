@@ -14,6 +14,7 @@ AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | https://dn42.potat0.cc
 AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | https://dn42.kskb.eu.org|
 AS4242422189 | [IEDON-NET](https://dn42.kuu.moe) | https://dn42.kuu.moe |
 AS4242422717 | [JK-Network](https://net.whojk.com) | https://net.whojk.com |
+AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | https://dn42.lare.cc/autopeer |
 AS4242423088 | [SUNNET](https://dn42.6700.cc) |https://peer.dn42.6700.cc|
 AS4242423847 | [TheQ Network](https://dn42.0011.de) |https://dn42.0011.de|
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) |https://dn42.g-load.eu|
