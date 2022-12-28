@@ -21,6 +21,7 @@ Please sort by AS number.
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 |
 | 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
 | 4242421722 | ext: https://lg42.tchekda.fr <br> dn42: http://lg42.tchekda.dn42 |
+| 4242421816 | ext: https://lg.dn42.potat0.cc <br> dn42: http://lg.potat0.dn42 |
 | 4242421955 | dn42: http://lg.nop.dn42 <br> telnet:test.nop.dn42 <br> ext: http://sandbox.freertr.org|
 | 4242422092 | ext: https://lg.dn42.pebkac.gr <br> dn42: http://lg.pebkac.dn42 <br> IPv4 and IPv6 |
 | 4242422206 | ext: https://lg.dn42.est-it.de <br> dn42: https://lg.techanit.dn42 <br> IPv4 and IPv6 |
