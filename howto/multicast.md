@@ -18,5 +18,8 @@ grawity-mnt
 
 mirsal-mnt
 
+current streams:
+
+vlc rtp://172.23.199.110@232.2.3.2:1234/
 
 feel free to ask for a peering and set it up!
