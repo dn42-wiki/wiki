@@ -8,7 +8,7 @@ ask your peering to enable ipv4/ipv6 multicast afi on your peering
 
 set up ipv4/ipv6 pim for the (s,g) joins to pass through
 
-you're done, you should listen to some metal via " vlc rtp://172.23.199.110@232.2.3.2:1234/ "
+you're done, you should have your streams
 
 current participants:
 
