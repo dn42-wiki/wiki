@@ -20,4 +20,6 @@ AS4242423847 | [TheQ Network](https://dn42.0011.de) |https://dn42.0011.de|
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) |https://dn42.g-load.eu|
 AS4242422244 | [ICEZ-DN42](https://sgp.dn42.icez.net/) | https://sgp.dn42.icez.net/ |
 
+TODO: add https://theresa.network/peer.html
+
 Sort by AS number
