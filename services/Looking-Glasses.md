@@ -12,6 +12,7 @@ Please sort by AS number.
 | 64737 | ext: https://lg.dn42.us |
 | 4242420181 | ext: https://lg.dn42.miegl.cz <br> dn42: http://lg.mgl.dn42 |
 | 4242420197 | ext: https://lg.n0emis.eu <br> dn42: https://lg.n0emis.dn42 (soon) |
+| 4242420304 | ext: https://lg.04d.co <br> dn42: https://lg.04dco.dn42 |
 | 4242420458 | ext: https://lg.huajinet.org |
 | 4242420585 | ext: https://dn42.atolm.net/lg <br> dn42: http://atolm.dn42/lg |
 | 4242420831 | ext: https://lg.dn42.tms.im |
@@ -36,7 +37,7 @@ Please sort by AS number.
 | 4242423088 | ext: https://lg.dn42.6700.cc <br> dn42: http://lg.sun.dn42 |
 | 4242423315 | ext: http://lg.unknownts.tk <br> dn42: http://unknownts.dn42 |
 | 4242423411 | ext: --------------------------- <br> dn42: http://lg.goldlineit.dn42 |
-| 4242420304 | ext: https://lg.04d.co <br> dn42: https://lg.04dco.dn42 |
+| 4242423868 | ext: http://lg-dn42.chimon.org |
 
 ## Down
 
@@ -90,7 +91,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242423078 | ext: https://lg.hexanet.dev <br> dn42: http://lg.hex.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
 | 4242423735 | ext: https://lg.dn42.cperrin.xyz <br> dn42: http://lg.cperrin.dn42 |
 | 4242423827 | ext: https://sky.nullroute.eu.org/dn42/lg <br> dn42: http://lg.nullroute.dn42 |
-| 4242423868 | ext: http://lg.dn42.cooo.cool <br> dn42: http://lg.chimon.dn42 |
 | 4242423905 | ext: https://dn42-svc.weiti.org/ulg <br> dn42: https://lg.weiti.dn42
 | 4242423905 | ext: http://zeus.nowhere.ws/dn42/routes.cgi <br> dn42: http://zeus.nihilus.dn42/dn42/routes.cgi <br> Non-interactive (route listing only). |
 | 4242423955 | dn42: http://lg.flo.dn42 |
