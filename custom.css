@@ -13,6 +13,7 @@
 
 #wiki-body .markdown-body {
     padding: 0 !important;
+    padding-right: 3% !important;
 }
 
 .Box {
@@ -28,10 +29,6 @@
 
 #sidebar-content {
     padding: 7px !important;
-}
-
-#wiki-sidebar .Box {
-    margin-left: 3%;
 }
 
 #footer-content {
