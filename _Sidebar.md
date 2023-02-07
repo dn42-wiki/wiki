@@ -1,4 +1,4 @@
- * [Home](/Home)
+* [Home](/Home)
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
