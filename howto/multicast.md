@@ -8,6 +8,8 @@ ask your peering to enable ipv4/ipv6 multicast afi on your peering
 
 set up ipv4/ipv6 pim for the (s,g) joins to pass through
 
+be prepared to igmpv3 and mldv2 from your listeners
+
 you're done, you should have your streams
 
 current participants:
@@ -26,8 +28,11 @@ kioubit-mnt
 
 current streams:
 
-vlc rtp://172.23.199.110@232.2.3.2:1234/      controllable at http://webdj.nop.dn42/
-
+vlc rtp://172.23.199.110@232.2.3.2:1234/
+controllable at http://webdj.nop.dn42/
+public multicast to unicast relay with vlc4 and above:
+vlc --amt-relay amt-relay.geant.org amt://10.2.255.1@232.2.3.2:1234/
+it's the same stream but i had to nat it to my dn42 ip range to be listenable natively in dn42 :)
 
 
 feel free to ask for a peering and set it up!
