@@ -13,6 +13,7 @@
   * [GRE on FreeBSD](/howto/GRE-on-FreeBSD)
   * [GRE on OpenBSD](/howto/GRE-on-OpenBSD)
   * [IPv6 Multicast (PIM-SM)](/howto/IPv6-Multicast)
+  * [SSM Multicast](/howto/multicast)
   * [Bird](/howto/Bird) / [Bird2](/howto/Bird2)
   * [Quagga](/howto/Quagga)
   * [OpenBGPD](/howto/OpenBGPD)
