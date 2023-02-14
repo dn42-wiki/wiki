@@ -22,9 +22,11 @@ C4TG1RL5-MNT
 [frr configuration](https://git.lemonsh.moe/C4TG1RL5/dn42/src/branch/master/lab.rtr.famfo.catgirls.dn42/frr) 
 _Please make sure you understand how to configure and use frr before you use anything from this configuration!_
 
+kioubit-mnt
+
 current streams:
 
-vlc rtp://172.23.199.110@232.2.3.2:1234/  controllable at http://webdj.nop.dn42/
+vlc rtp://172.23.199.110@232.2.3.2:1234/      controllable at http://webdj.nop.dn42/
 
 
 
