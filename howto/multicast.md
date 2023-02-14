@@ -24,6 +24,8 @@ _Please make sure you understand how to configure and use frr before you use any
 
 current streams:
 
-vlc rtp://172.23.199.110@232.2.3.2:1234/
+vlc rtp://172.23.199.110@232.2.3.2:1234/  controllable at http://webdj.nop.dn42/
+
+
 
 feel free to ask for a peering and set it up!
