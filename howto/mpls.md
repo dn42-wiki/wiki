@@ -8,9 +8,12 @@ you can control visibility / reachability by route target export / imports, so y
 
 hiding service addresses (ip / mac) from the infra resulting in less resource needs: in the simplest mpls, you dont need bgp route table only where the packet enters the network
 
-you can hide your core from traceroute by disabling ip ttl protopagation
+you can hide your core from traceroute by disabling ip ttl propagation
 
 
+hints:
+
+as being layer2.5 technology, you'll need a tunnel which carry ethettype, like gre
 
 inside the core you can do ldp, rsvp-te (strategic or auto-tunnel) or segment-routing
 
