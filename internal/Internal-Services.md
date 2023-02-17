@@ -203,6 +203,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | [Clearnet](https://flapping.p2p-node.de/dashboard/), [dn42](https://flapping.bandura.dn42/dashboard), [NeoNetwork](https://flapping.bandura.neo/dashboard/) | FlapAlertedPro by Kioubit hosted by mark22k |
 | https://flaps.pebkac.dn42/                        | FlapAlertedPro by Kioubit hosted by AS4242422092 |
 | [Clearnet](https://monkic.mk16.de/), [dn42](https://monkic.mk16.de/) | Monkic (Game in German) |
+| [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 
 
 ### Usenet Servers / News
