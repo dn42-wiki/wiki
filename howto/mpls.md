@@ -28,10 +28,8 @@ participating networks:
 
 nop-mnt
 
-
+C4TG1RLS-MNT
 
 planned:
-
-C4TG1RL5-famfo
 
 Fortless
