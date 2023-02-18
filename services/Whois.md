@@ -75,7 +75,7 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 
 # Software
 
- * [lglass](/internal/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
+ * [lglass](/howto/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
  * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
 
 # Whois daemons
