@@ -80,7 +80,7 @@ TBD: add yourself please here while keeping some ordering
 | bad-corp-rtr1   | telnet ix.nop.dn42 20003   |
 
 
-
+public config archive of the infra http://ix.nop.dn42/ here
 
 
 
