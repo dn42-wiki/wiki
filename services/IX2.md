@@ -65,7 +65,7 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 | rtr1-badcorp  | 1952? | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64  | fe80::260:54ff:fe33:2178 | TBD: SOON |
 | rs1-mcastix   | 1951? | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64  | TBD: SOON                | TBD: SOON |
 | rtr1-nopmnt   | 1955  | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64 | TBD: SOON                | TBD: SOON |
-| rtr1-catgirls | 1411  | TBD                | TBD                         | fe80::1411:5             | TBD: SOON |
+| rtr1-catgirls | 1411  | 172.23.124.101/27  | TBD                         | fe80::1411:5             | TBD: SOON |
 | rtr1-laremnt  | 3035  | 172.23.124.115/27  | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/ |
 
 TBD: add yourself please here while keeping some ordering
