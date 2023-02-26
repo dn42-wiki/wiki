@@ -65,7 +65,6 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 * [Revelation Space (Dutch)](http://www.revspace.nl)
 * [SNE group](https://www.os3.nl)
 * [smrsh](http://www.smrsh.net)
-* [Hackspace Jena e.V. (German)](https://kraut.space)
 * [Breizh-Entropy (French)](http://wiki.breizh-entropy.org/wiki/DN42)
 * [Fédération FDN (French)](https://www.ffdn.org)
 * [Le LOOP (French)](https://leloop.org/)
