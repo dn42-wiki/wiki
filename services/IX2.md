@@ -4,6 +4,14 @@ now we have a pull req with cosmetical issues only: https://git.dn42.dev/dn42/re
 
 the whole idea is to consider the following hypervisor configuration:
 
+how to participate:
+
+all you have to do is prepare a qcow2 or vmdk image and upload it to somewhere and ping nop-mnt (mc36 @ irc) with the url... i'll wget it once then boot up your vm connected to the switchport... you'll have raw dn42 reachability there and pat-ed clearnet to continue your installation or upgrades or to connect to the rest of your infra...
+
+only one thing to look for twice, the "console=ttyS0,115200n8" be present as a kernel parameter as there won't be vnc console... maybe i can lift that later....
+
+
+
 ```
 dn42ix#show startup-config vdc                                                                                        
 vdc definition vm-bri
