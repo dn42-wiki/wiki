@@ -58,16 +58,15 @@ like a real ix...
 
 static addressing plan, there is a randomized dhcp and slaac on the subnet but consider picking up a static ip and pere with that:
 
-| nick/mnter    |  asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip                    | your-ipv6-linklocal      |
-| ------------- | ----- | ------------------ | ------------------------------------- | ------------------------ |
-| rtr1-badcorp  | 1952? | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64            | fe80::260:54ff:fe33:2178 |
-| rs1-mcastix   | 1951? | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | TBD                      |
-| rtr1-nopmnt   | 1955  | TBD                | TBD                                   | TBD                      |
-| rtr1-catgirls | TBD   | TBD                | TBD                                   | TBD                      |
-| rtr1-laremnt  | 3935  | 172.23.124.115     | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 |
-| TBD: add yourself please here while keeping some ordering                                                     |
+| nick/mnter    |  asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip          | your-ipv6-linklocal      | public lg |
+| rtr1-badcorp  | 1952? | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64  | fe80::260:54ff:fe33:2178 | TBD: SOON |
+| rs1-mcastix   | 1951? | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64  | TBD: SOON                | TBD: SOON |
+| rtr1-nopmnt   | 1955  | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64 | TBD: SOON                | TBD: SOON |
+| rtr1-catgirls | TBD   | TBD                | TBD                         | TBD                      | TBD: SOON |
+| rtr1-laremnt  | TBD   | TBD                | TBD                         | TBD                      | TBD: SOON |
+| TBD: add yourself please here while keeping some ordering
 
-** *: so your as number xxxx shortened here, the rigthmost part after the 424242xxxx.... **
+*: so your as number xxxx shortened here, the rigthmost part after the 424242xxxx.... this also will be your ethernetXXXX and so on so just remember this by heart XD
 
 
 
@@ -76,4 +75,3 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 
 
 it'll be shitload in the beginning but hopefully it could improve the common knowledge....
-
