@@ -73,6 +73,13 @@ TBD: add yourself please here while keeping some ordering
 *: so your as number xxxx shortened here, the rigthmost part after the 424242xxxx.... this also will be your ethernetXXXX and so on so just remember this by heart XD
 
 
+| function        |  console                   |
+|:----------------|:---------------------------|
+| switch          | telnet ix.nop.dn42 20001   |
+| route server 1  | telnet ix.nop.dn42 20002   |
+| bad-corp-rtr1   | telnet ix.nop.dn42 20003   |
+
+
 
 
 
