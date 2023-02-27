@@ -11,6 +11,10 @@ all you have to do is prepare a qcow2 or vmdk image and upload it to somewhere a
 only one thing to look for twice, the "console=ttyS0,115200n8" be present as a kernel parameter as there won't be vnc console... maybe i can lift that later....
 
 
+always save your configs! there will be a daily recurring power cut sheduled to 21:00pm +-1minutes to have the infrastructure auto-upgraded
+
+
+
 
 ```
 dn42ix#show startup-config vdc                                                                                        
