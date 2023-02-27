@@ -29,6 +29,7 @@
   * [IRC](/services/IRC)
   * [Whois registry](/services/Whois)
   * [DNS](/services/DNS)
+  * [IX](/services/IX2)
   * [Public DNS](/services/Clearnet-Domains)
   * [Looking Glasses](/services/Looking-Glasses)
   * [Automatic Peering](/services/Automatic-Peering)
