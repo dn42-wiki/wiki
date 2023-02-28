@@ -194,18 +194,18 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 |[https://bbs.dn42](https://bbs.dn42), [https://dn42bbs.0b1.me](https://dn42bbs.0b1.me) via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
-| http://www.nop.dn42/                              | Basic "whatismyip" service               |
-| http://freertr.dn42/                              | freeRouter main site                     |
-| http://sources.nop.dn42                           | freeRouter source tree                   |
-| http://webdj.nop.dn42/                            | webdj for a multicast ssm stream         |
-| http://fun.nop.dn42/                              | some funny images and videos             |
-| http://pvrp.nop.dn42/                             | a path vector igp main site              |
-| http://lsrp.nop.dn42                              | a link state igp main site               |
-| http://paste.nop.dn42                             | yet another paste service                |
-| http://rtros.nop.dn42/                            | freeRouter distribution                  |
-| http://ix.nop.dn42                                | mcast-ix main site                       |
-| http://mpls.dn42/                                 | a brief description of MPLS technology   |
-| http://wiki.dn42, http://internal.dn42            | This wiki!  Git Repo hosted on git.dn42  |
+| http://www.nop.dn42/                              | Basic "whatismyip" service                                       |
+| http://freertr.dn42/                              | freeRouter main site                                             |
+| http://sources.nop.dn42                           | freeRouter source tree                                           |
+| http://webdj.nop.dn42/                            | controller of the rtp://172.23.199.110@232.2.3.2:1234/ stream    |
+| http://fun.nop.dn42/                              | some funny images and videos                                     |
+| http://pvrp.nop.dn42/                             | a path vector igp main site                                      |
+| http://lsrp.nop.dn42                              | a link state igp main site                                       |
+| http://paste.nop.dn42                             | yet another paste service                                        |
+| http://rtros.nop.dn42/                            | freeRouter distribution                                          |
+| http://ix.nop.dn42                                | mcast-ix main site                                               |
+| http://mpls.dn42/                                 | a brief description of MPLS technology                           |
+| http://wiki.dn42, http://internal.dn42            | This wiki!  Git Repo hosted on git.dn42                          |
 | http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
 | https://sdr.pebkac.dn42/                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
