@@ -8,7 +8,7 @@ how to participate:
 
 all you have to do is prepare a qcow2 or vmdk image and upload it to somewhere and ping nop-mnt (mc36 @ irc) with the url... i'll wget it once then boot up your vm connected to the switchport... you'll have raw dn42 reachability there and pat-ed clearnet to continue your installation or upgrades or to connect to the rest of your infra...
 
-only one thing to look for twice, the "console=ttyS0,115200n8" be present as a kernel parameter as there won't be vnc console... maybe i can lift that later....
+only one thing to look for twice, the "console=ttyS0,115200n8" be present as a kernel parameter... if you need vnc access instead, just ask for it....
 
 
 always save your configs! there will be a daily recurring power cut sheduled to 21:00pm +-1minutes to have the infrastructure auto-upgraded
@@ -17,7 +17,7 @@ always save your configs! there will be a daily recurring power cut sheduled to 
 
 
 ```
-dn42ix#show startup-config vdc                                                                                        
+dn42ix#show startup-config vdc
 vdc definition vm-bri
  connect ethernet2825 vm-switch
  cpu host
@@ -48,7 +48,7 @@ vdc definition vm-nop
  connect ethernet1955 vm-switch
  exit
 vdc definition vm-routeserver
- exit              
+ exit
 vdc definition vm-switch
  connect ethernet1080 vm-jlu5
  connect ethernet1955 vm-nop
@@ -57,7 +57,7 @@ vdc definition vm-switch
  connect ethernet66601 vm-clearnet
  exit
 
-dn42ix#      
+dn42ix#
 ```
 
 now you can have drop-in replacement vm-s to experiment with like whats it looks a like if the ix is provisioned on a juniper vsrx3 shitload or a cisco nxosv or plain freerouter in software mode or in p4dpdk mode.... 
