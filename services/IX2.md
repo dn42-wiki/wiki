@@ -1,6 +1,6 @@
 we're planning to have a mcast-ix.dn42 somewhere in the cloud at #dn42 for years now...
 
-now we have a pull req with cosmetical issues only: https://git.dn42.dev/dn42/registry/pulls/2572
+now we have a pull req with cosmetical issues only: https://git.dn42.dev/dn42/registry/pulls/2575
 
 the whole idea is to consider the following hypervisor configuration:
 
