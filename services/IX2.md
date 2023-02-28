@@ -85,7 +85,7 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 | nick/mnter     | asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip                    | your-ipv6-linklocal      | public lg                                                 |
 |:---------------|:-----|:-------------------|:--------------------------------------|:-------------------------|:----------------------------------------------------------|
 | sw1-mcastix    | 1951 | N/A                | N/A                                   | N/A                      | TBD: SOON                                                 |
-| rs1-mcastix    | 1951 | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | fe80::20a:74ff:fe78:6a6  | TBD: SOON                                                 |
+| rs1-mcastix    | 1951 | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | fe80::200:bff:fead:beef  | TBD: SOON                                                 |
 | rtr1-badcorp   | 1952 | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64            | fe80::260:54ff:fe33:2178 | TBD: SOON                                                 |
 | rtr1-nop       | 1955 | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64           | fe80::200:ccff:fe1e:c0de | telnet sandbox.freertr.org                                |
 | rtr1-catgirls  | 1411 | 172.23.124.101/27  | TBD                                   | fe80::1411:5             | TBD: SOON                                                 |
