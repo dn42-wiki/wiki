@@ -72,13 +72,20 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 
 
 
-| nick/mnter    |  asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip          | your-ipv6-linklocal      | public lg |
-|:--------------|:------|:-------------------|:----------------------------|:-------------------------|:----------|
-| rtr1-badcorp  | 1952? | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64  | fe80::260:54ff:fe33:2178 | TBD: SOON |
-| rs1-mcastix   | 1951? | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64  | TBD: SOON                | TBD: SOON |
-| rtr1-nopmnt   | 1955  | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64 | TBD: SOON                | TBD: SOON |
-| rtr1-catgirls | 1411  | 172.23.124.101/27  | TBD                         | fe80::1411:5             | TBD: SOON |
-| rtr1-laremnt  | 3035  | 172.23.124.115/27  | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/ |
+| nick/mnter    | asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip                    | your-ipv6-linklocal      | public lg                                                 |
+|:--------------|:-----|:-------------------|:--------------------------------------|:-------------------------|:----------------------------------------------------------|
+| sw1-mcastix   | 1951 | N/A                | N/A                                   | N/A                      | TBD: SOON                                                 |
+| rs1-mcastix   | 1951 | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | fe80::20a:74ff:fe78:6a6  | TBD: SOON                                                 |
+| rtr1-badcorp  | 1952 | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64            | fe80::260:54ff:fe33:2178 | TBD: SOON                                                 |
+| rtr1-nop      | 1955 | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64           | fe80::200:ccff:fe1e:c0de | telnet sandbox.freertr.org                                |
+| rtr1-catgirls | 1411 | 172.23.124.101/27  | TBD                                   | fe80::1411:5             | TBD: SOON                                                 |
+| rtr1-lare     | 3035 | 172.23.124.115/27  | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/ |
+| rtr1-bri      | 2825 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+| rtr1-jlu5     | 1080 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+| rtr1-fl       | 1975 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+
+
+
 
 TBD: add yourself please here while keeping some ordering
 
@@ -92,9 +99,11 @@ TBD: add yourself please here while keeping some ordering
 | bad-corp-rtr1   | telnet ix.nop.dn42 20003   |
 
 
-public config archive of the infra http://ix.nop.dn42/ here
+public mrt dumps and config archive of the infra at http://ix.nop.dn42/ here
 
 
 
 it'll be shitload in the beginning but hopefully it could improve the common knowledge....
 
+
+please consider joining #dn42-ix#2 to speed up sorting out potential issues, etc
