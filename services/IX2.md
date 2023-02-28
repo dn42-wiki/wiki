@@ -10,8 +10,9 @@ all you have to do is prepare a qcow2 or vmdk image and upload it to somewhere a
 
 only one thing to look for twice, the "console=ttyS0,115200n8" be present as a kernel parameter... if you need vnc access instead, just ask for it....
 
+if you need a private peering here between you and an other participant, just ask for a private ethernet connection
 
-always save your configs! there will be a daily recurring power cut sheduled to 21:00pm +-1minutes to have the infrastructure auto-upgraded
+last but not least, always save your configs! there will be a daily recurring power cut sheduled to 21:00pm +-1minutes to have the infrastructure auto-upgraded
 
 
 
