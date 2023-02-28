@@ -2,7 +2,11 @@ we're planning to have a mcast-ix.dn42 somewhere in the cloud at #dn42 for years
 
 now we have a pull req with cosmetical issues only: https://git.dn42.dev/dn42/registry/pulls/2575
 
-the whole idea is to consider the following hypervisor configuration:
+the main goal is to have a shared lan where ases can peer to each other with the following conditions:
+* pure ethernet
+* low latency between the vms
+* native support for jumbo frames
+* possibility to private vlans between participants with the same conditions
 
 how to participate:
 
@@ -18,6 +22,7 @@ last but not least, always save your configs! there will be a daily recurring po
 
 
 
+the whole idea is to consider the following hypervisor configuration:
 
 ```
 dn42ix#show startup-config vdc
