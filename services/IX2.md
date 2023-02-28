@@ -18,6 +18,8 @@ if you need a private peering here between you and an other participant, just as
 
 consider enabling lldp on your interfaces because it helps speed up things on the switch moreover if you'll have more interfaces there then will help you too...
 
+also consider enabling pim sparse mode on the ix and then you can have the rtp://172.23.199.110@232.2.3.2:1234/ stream
+
 last but not least, always save your configs! there will be a daily recurring power cut sheduled to 21:00pm cest +-1minutes to have the infrastructure auto-upgraded...
 
 
@@ -80,17 +82,18 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 
 
 
-| nick/mnter    | asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip                    | your-ipv6-linklocal      | public lg                                                 |
-|:--------------|:-----|:-------------------|:--------------------------------------|:-------------------------|:----------------------------------------------------------|
-| sw1-mcastix   | 1951 | N/A                | N/A                                   | N/A                      | TBD: SOON                                                 |
-| rs1-mcastix   | 1951 | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | fe80::20a:74ff:fe78:6a6  | TBD: SOON                                                 |
-| rtr1-badcorp  | 1952 | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64            | fe80::260:54ff:fe33:2178 | TBD: SOON                                                 |
-| rtr1-nop      | 1955 | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64           | fe80::200:ccff:fe1e:c0de | telnet sandbox.freertr.org                                |
-| rtr1-catgirls | 1411 | 172.23.124.101/27  | TBD                                   | fe80::1411:5             | TBD: SOON                                                 |
-| rtr1-lare     | 3035 | 172.23.124.115/27  | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/ |
-| rtr1-bri      | 2825 | TBD                | TBD                                   | TBD                      | TBD                                                       |
-| rtr1-jlu5     | 1080 | TBD                | TBD                                   | TBD                      | TBD                                                       |
-| rtr1-fl       | 1975 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+| nick/mnter     | asn* | your-ipv4-fixed-ip | your-ipv6-fixed-ip                    | your-ipv6-linklocal      | public lg                                                 |
+|:---------------|:-----|:-------------------|:--------------------------------------|:-------------------------|:----------------------------------------------------------|
+| sw1-mcastix    | 1951 | N/A                | N/A                                   | N/A                      | TBD: SOON                                                 |
+| rs1-mcastix    | 1951 | 172.23.124.126/27  | fde0:93fa:7a0:c1ca::179/64            | fe80::20a:74ff:fe78:6a6  | TBD: SOON                                                 |
+| rtr1-badcorp   | 1952 | 172.23.124.97/27   | fde0:93fa:7a0:c1ca::666/64            | fe80::260:54ff:fe33:2178 | TBD: SOON                                                 |
+| rtr1-nop       | 1955 | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64           | fe80::200:ccff:fe1e:c0de | telnet sandbox.freertr.org                                |
+| rtr1-catgirls  | 1411 | 172.23.124.101/27  | TBD                                   | fe80::1411:5             | TBD: SOON                                                 |
+| rtr1-catgirls2 | 1411 | TBD                | TBD                                   | TBD                      | TBD: SOON                                                 |
+| rtr1-lare      | 3035 | 172.23.124.115/27  | fde0:93fa:7a0:c1ca:21f:45ff:fe11:7356 | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/ |
+| rtr1-bri       | 2825 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+| rtr1-jlu5      | 1080 | TBD                | TBD                                   | TBD                      | TBD                                                       |
+| rtr1-fl        | 1975 | TBD                | TBD                                   | TBD                      | TBD                                                       |
 
 
 
