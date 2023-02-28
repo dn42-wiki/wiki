@@ -201,6 +201,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | http://fun.nop.dn42/                              | some funny images and videos                                     |
 | http://pvrp.nop.dn42/                             | a path vector igp main site                                      |
 | http://lsrp.nop.dn42                              | a link state igp main site                                       |
+| http://hwp0rn.nop.dn42                            | girls with switches and routers, a hwpr0n.se mirror              |
 | http://paste.nop.dn42                             | yet another paste service                                        |
 | http://rtros.nop.dn42/                            | freeRouter distribution                                          |
 | http://ix.nop.dn42                                | mcast-ix main site                                               |
