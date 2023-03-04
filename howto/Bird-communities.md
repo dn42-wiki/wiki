@@ -44,6 +44,8 @@ For example, if your peer is 12ms away and the link speed between you is 250Mbit
 
 Two utilities which measure round trip time and calculate community values automatically are provided, written in  [ruby](https://github.com/Mic92/bird-dn42/blob/master/bgp-community.rb) and [C](https://github.com/nixnodes/bird/blob/master/misc/dn42-comgen.c).
 
+**Note: In general, the link latency metric only reflects the latency of the *immediate* link, and not the overall latency from following a path**. A route may traverse multiple internal routers once it enters an AS, and because this is invisible to BGP, it's best to treat latency values as informational only and not use them to make routing decisions.
+
 ```
 $ ruby bgp-community.rb --help
 USAGE: bgp-community.rb host mbit_speed unencrypted|unsafe|encrypted|pfs
