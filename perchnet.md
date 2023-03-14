@@ -6,7 +6,7 @@ perchnet is a network on dn42. The goal of perchnet is to facilitate learning ab
 
 
 ## Background
-perchnet is still being designed and deployed. Presently we consist of two physical nodes at _bri_'s residence in New York City that provide a core router and various services, and we're in the process of onboarding a virtual dedicated server graciously donated by [Evolution Host](https://evolution-host.com).
+perchnet is still being designed and deployed. Presently we consist of two physical nodes at _bri_'s residence in New York City that provide a core router and various services, and we're in the process of onboarding a virtual server graciously donated by [Evolution Host](https://evolution-host.com).
 
 _bri_ enjoys hacking together complex systems out of weird, secondhand, obsolete hardware. As such, their on-site residence nodes are:
 
