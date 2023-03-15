@@ -191,6 +191,14 @@ constructed using the MNTNER name, lowercased and without the '-MNT' suffix. SSH
 
 See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for more details.
 
+## Personal/network/blogs websites 
+
+| Website                                     | Description                                                                        |
+| ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| https://burble.dn42/                              | burble.dn42 website |
+| http://www.marlinc.dn42/                          | Marlinc website     |
+
+
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
