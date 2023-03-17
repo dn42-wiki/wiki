@@ -38,7 +38,7 @@ Please sort by AS number.
 | 4242423315 | ext: http://lg.unknownts.tk <br> dn42: http://unknownts.dn42 |
 | 4242423411 | ext: --------------------------- <br> dn42: http://lg.goldlineit.dn42 |
 | 4242423868 | ext: http://lg-dn42.chimon.org |
-| 4242421869 | ext: http://lg.usman.network <br> dn42: lg.usman.dn42 (soon)  |
+| 4242421869 | ext: https://lg.usman.network <br> dn42: http://lg.usman.dn42   |
 
 ## Down
 
