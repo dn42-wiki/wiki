@@ -198,6 +198,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | https://burble.dn42/                              | burble.dn42 website |
 | http://www.marlinc.dn42/                          | Marlinc website     |
 | [https://mk16de.bandura.dn42/](https://mk16de.bandura.dn42/) | Marek's site |
+| https://lpnet0.dn42/                              | LAUNCHPAD-NETWORK official website |
 
 
 ## Misc 
