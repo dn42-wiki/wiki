@@ -149,6 +149,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | redtrap.northrend.dn42 (172.20.222.252)	    | Minecraft		     | RedTrap DN42 Bridge, 1.8.8 - 1.19, IPv4 only   |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
+| stk2.jerry.dn42:2759, stk2.jerry.neo:2759         | SuperTuxKart           | latest, IPv4 & IPv6 |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD      | 1.10.3, Hosted in NL   |
 | factorio.catgirls.dn42 (IPv6 only)                | factorio               | Still in testing, expect downtime |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
@@ -163,6 +164,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 ## VOIP/SIP Endpoints
 
  - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
+ - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 
 ## Challenges
 
