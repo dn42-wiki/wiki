@@ -76,7 +76,7 @@ Allow own announcements:
 # Outbound EBGP: only allow self originated networks to ebgp peers
 # Don't leak any routes from upstream or peering sessions. This is done
 # by checking for routes that are tagged with the large-community $ASN:1:1
-allow to ebgp prefix-set kn large-community $ASN:1:1
+allow to ebgp prefix-set mynetworks large-community $ASN:1:1
 ```
 
 Allow all remaining UPDATES based on **O**rigin **V**alidation **S**tates:
