@@ -32,3 +32,4 @@ There are currently multiple decentralized mirrors and domains for the DN42 wiki
  * [dn42.tk](https://dn42.tk) maintained by Androw
  * [dn42.wiki](https://dn42.wiki) maintained by DannyAAM
  * [dn42.de (ipv6 only)](https://dn42.de)
+ * [dn42.cc](https://dn42.cc) maintained by LARE (uses [wiki-ng](https://git.dn42.dev/wiki/wiki-ng))
