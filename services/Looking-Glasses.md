@@ -18,6 +18,7 @@ Please sort by AS number.
 | 4242420831 | ext: https://lg.dn42.tms.im |
 | 4242420927 | ext: https://lg.dn42.liki.link |
 | 4242421022 | ext: https://lg.bsdrocker.com |
+| 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 |
 | 4242421080 | ext: https://lg.highdef.network <br> dn42: http://lg.highdef.dn42 |
 | 4242421123 | ext: https://dn42.ccp.ovh <br> dn42: http://n.dn42 |
 | 4242421411 | ext: https://lg.famfo.xyz <br> dn42: https://lg.catgirls.dn42 |
@@ -67,7 +68,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420812 | dn42: https://lg.jan.dn42 <br> Interactive (traceroute, BGP-map) |
 | 4242420827 | ext: https://lg.llyn.lorkep.trade <br> dn42: https://lg.lorkep.dn42 <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
 | 4242420977 | ext: https://lg.moerail.ml <br> dn42: http://lg.moerail.dn42 |
-| 4242421050 | ext: https://lg.dn42.napshome.net <br> dn42: http://lg.napshome.dn42 |
 | 4242421055 | dn42: http://lg.tmwawpl.dn42 |
 | 4242421092 | dn42: http://lg.erg.dn42 <br> Interactive (traceroute, BGP-map) |
 | 4242421099 | ext: https://lg.owensresearch.org <br> dn42: https://lg.owensresearch.dn42 <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute |
