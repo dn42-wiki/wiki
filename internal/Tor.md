@@ -42,7 +42,7 @@ _Note that the same warnings above also apply to the following proxies._
 
 _Note that the same warnings above also apply to the following proxies._
 
-See https://blog.benjojo.co.uk/post/tor-onions-to-v6-with-iptables-proxy for more details
+See <https://blog.benjojo.co.uk/post/tor-onions-to-v6-with-iptables-proxy> for more details
 
 | Suffix Change                         | Bandwidth   | Contact     |
 |---------------------------------------|-------------|-------------|

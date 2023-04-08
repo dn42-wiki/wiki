@@ -187,7 +187,7 @@ Build the CA: `. vars`, `./build-ca`, then generate the server key: `./build-key
 Then, for each client, generate a private key and a certificate: ```./build-key myclient```.  The Common Name is the only important information (it will be used to identify the client, for instance in the logs).
 
 # See also
-* [Network settings](https://internal.dn42/howto/networksettings)
+* [Network settings](/howto/networksettings)
 
 # External Links
 * multicast: 

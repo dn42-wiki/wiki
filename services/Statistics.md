@@ -3,7 +3,7 @@
 
 ## IRC
 
-Channel statistics for #dn42@hackint are available at: https://dev.0l.dn42/stats/.
+Channel statistics for #dn42@hackint are available at: <https://dev.0l.dn42/stats/>.
 
 ## Scripts
 

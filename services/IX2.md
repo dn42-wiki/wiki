@@ -1,6 +1,6 @@
 we're planning to have a mcast-ix.dn42 somewhere in the cloud at #dn42 for years now...
 
-now we have a pull req with cosmetical issues only: https://git.dn42.dev/dn42/registry/pulls/2575
+now we have a pull req with cosmetical issues only: <https://git.dn42.dev/dn42/registry/pulls/2575>
 
 the main goal is to have a shared lan where ases can peer to each other with the following conditions:
 * pure ethernet
@@ -90,7 +90,7 @@ static addressing plan, there is a randomized dhcp and slaac on the subnet but c
 | rtr1-nop       | 1955 | 172.23.124.122/27  | fde0:93fa:7a0:c1ca::1955/64           | fe80::200:ccff:fe1e:c0de | telnet sandbox.freertr.org                                |
 | rtr1-catgirls  | 1411 | 172.23.124.101/27  | fde0:93fa:7a0:c1ca:581a:fc3f:a2d0:828c/64 | fe80::1411:5             | TBD: SOON                                                 |
 | rtr1-catgirls2 | 1411 | TBD                | TBD                                   | TBD                      | TBD: SOON                                                 |
-| rtr1-lare      | 3035 | 172.23.124.114/27  | fde0:93fa:7a0:c1ca:0:42:4242:3035/64  | fe80::21f:45ff:fe11:7356 | clearnet: https://lg.lare.cc/ dn42: https://lg.lare.dn42/           |
+| rtr1-lare      | 3035 | 172.23.124.114/27  | fde0:93fa:7a0:c1ca:0:42:4242:3035/64  | fe80::21f:45ff:fe11:7356 | clearnet: <https://lg.lare.cc/> dn42: <https://lg.lare.dn42/>           |
 | rtr1-bri       | 2825 | TBD                | TBD                                   | TBD                      | TBD                                                       |
 | rtr1-jlu5      | 1080 | TBD                | TBD                                   | TBD                      | TBD                                                       |
 | rtr1-fl        | 1975 | TBD                | TBD                                   | TBD                      | TBD                                                       |
@@ -110,7 +110,7 @@ TBD: add yourself please here while keeping some ordering
 | bad-corp-rtr1   | telnet ix.nop.dn42 20003   |
 
 
-public mrt dumps and config archive of the infra at http://ix.nop.dn42/ here
+public mrt dumps and config archive of the infra at <http://ix.nop.dn42/> here
 
 
 

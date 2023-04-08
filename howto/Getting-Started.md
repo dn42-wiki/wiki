@@ -305,7 +305,7 @@ source:             DN42
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/Bird-communities).
 
-You can use the peerfinder to help you find potential peers close to you: https://dn42.us/peers
+You can use the peerfinder to help you find potential peers close to you: <https://dn42.us/peers>
 
 You can then contact them on IRC or by email. In case you're really at loss, you can also ask for peers on the mailing list.
 
@@ -313,17 +313,17 @@ You can then contact them on IRC or by email. In case you're really at loss, you
 
 Unless your dn42 peers are on the same network, you must establish tunnels. Choose anything you like: Wireguard, OpenVPN, GRE, GRE + IPSec, IPIP, Tinc, ...
 
-There is some documentation in this wiki, like [gre-plus-ipsec](GRE-plus-IPsec).
+There is some documentation in this wiki, like [gre-plus-ipsec](/howto/GRE-plus-IPsec).
 
 ## Running a routing daemon
 
 You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](BGP-on-Extreme-Summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
 
-You can find [configuration examples for Bird here](Bird).
+You can find [configuration examples for Bird here](/howto/Bird).
 
 ## Configuration Examples
 
-* [Important Network configuration](networksettings)
+* [Important Network configuration](/howto/networksettings)
 
 * VPN/Tunnel:
     * [Wireguard](/howto/wireguard)
@@ -334,10 +334,10 @@ You can find [configuration examples for Bird here](Bird).
     * [Bird](/howto/Bird)
     * [Quagga](/howto/Quagga)
 * Router specific:
-    * [dn42 on OpenWRT](OpenWRT)
-    * [EdgeOS Configuration](EdgeOS-Config-Example)
-    * [EdgeOS GRE/IPsec Example](EdgeOS-GRE-IPsec-Example)
-    * [BGP on Extreme Networks Summit 1i](BGP-on-Extreme-Summit1i)
+    * [dn42 on OpenWRT](/howto/OpenWRT)
+    * [EdgeOS Configuration](/howto/EdgeOS-Config-Example)
+    * [EdgeOS GRE/IPsec Example](/howto/EdgeOS-GRE-IPsec-Example)
+    * [BGP on Extreme Networks Summit 1i](/howto/BGP-on-Extreme-Summit1i)
 
 # Configure DNS
 

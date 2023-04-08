@@ -168,7 +168,7 @@ As seen, the IP configuration is applied via ip-commands in the postSetup. This 
 
 ### BGP Routing with bird2
 
-Like ferm, Bird2 is configured by ```services.bird2.config``` containing a string. In there the example bird2 config from [wiki.dn42](https://wiki.dn42/howto/Bird2) can be imported. Roa tables can be generated or downloaded from host providing them. 
+Like ferm, Bird2 is configured by ```services.bird2.config``` containing a string. In there the example bird2 config from [wiki.dn42](/howto/Bird2) can be imported. Roa tables can be generated or downloaded from host providing them. 
 
 
 #### ROA Updating script
@@ -240,3 +240,4 @@ I also run services like a nameserver for .litschi.dn42 zones and a nginx webser
 ### Sample configuration
 
 You can find a sample Wireguard + Bird configuration made by Tchekda ready for dn42 on [this](https://github.com/Tchekda/nixos-configuration/tree/master/llitt/dn42) repository
+

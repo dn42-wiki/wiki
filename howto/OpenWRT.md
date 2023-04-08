@@ -74,9 +74,9 @@ This is more tricky. In theory, all you have to do is to set
 
         option forward          ACCEPT
 
-in the definition of the zone. However, due to a bug in Attitude Adjustment (see https://dev.openwrt.org/ticket/12945), this will allow forwarding **everything everywhere**.
+in the definition of the zone. However, due to a bug in Attitude Adjustment (see <https://dev.openwrt.org/ticket/12945>), this will allow forwarding **everything everywhere**.
 
-You have to use this patch: https://dev.openwrt.org/changeset/35484 (monkeypatching the relevant files in `/lib` should work).
+You have to use this patch: <https://dev.openwrt.org/changeset/35484> (monkeypatching the relevant files in `/lib` should work).
 
 ## DNS
 

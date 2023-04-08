@@ -22,7 +22,7 @@ between two ases, you can enable ipv4/ipv6 labeled-unicast address family
 to do inter-as-mpls-vpn on top of it, you can enable rr-to-rr, asbr-to-asbr or rr-to-asbr vpnv4/vpnv6/vpls/evpn peerings
 
 
-more info at http://mpls.dn42/ or at http://mp.ls/
+more info at <http://mpls.dn42/> or at <http://mp.ls/>
 
 participating networks:
 

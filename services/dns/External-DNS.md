@@ -28,7 +28,7 @@ The mkdns script currently supports the following setups:
 ## NeoNetwork
 
 The NeoNetwork also has a recursive DNS server at `10.127.255.54` and `fd10:127:53:53::`.
-The zone files can be found here: https://github.com/NeoCloud/NeoNetwork/tree/master/dns
+The zone files can be found here: <https://github.com/NeoCloud/NeoNetwork/tree/master/dns>
 
 ## Configuration
 

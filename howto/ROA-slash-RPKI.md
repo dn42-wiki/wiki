@@ -27,7 +27,7 @@ It is also possible to integrate this with a RTR cache server such as [gortr](ht
 
 ### dn42regsrv 
 
-You can find a hosted example of dn42regsrv at https://explorer.burble.com/ 
+You can find a hosted example of dn42regsrv at <https://explorer.burble.com/>
 
 Instructions on how to host dn42regsrv yourself can be found on the git repo of [dn42regsrv](https://git.burble.com/burble.dn42/dn42regsrv). 
 
@@ -38,13 +38,13 @@ You can also run dn42regsrv via docker (then available at 127.0.0.1:8042):
     ./build.sh
     docker-compose up -d
 
-Documentation for the api endpoints can be found here: https://git.burble.com/burble.dn42/dn42regsrv/src/master/API.md
+Documentation for the api endpoints can be found here: <https://git.burble.com/burble.dn42/dn42regsrv/src/master/API.md>
 
 ### gortr
 
 burble kindly provides ready-to-use files for gortr here:
 
-https://dn42.burble.com/roa/dn42_roa_46.json
+<https://dn42.burble.com/roa/dn42_roa_46.json>
 
 You can use these to simply run gortr via docker:
 
@@ -72,12 +72,12 @@ This is a working configuration file for dn42. Maybe change the listen addresses
     listen = ["0.0.0.0:323", "[::]:323"]
     unit = "dn42-json"
 
-For more information cosult the official documentation: https://rtrtr.docs.nlnetlabs.nl/en/stable/
+For more information cosult the official documentation: <https://rtrtr.docs.nlnetlabs.nl/en/stable/>
 
 ### Other tools / generators
-- bauen1's dn42-roagen: https://gitlab.com/bauen1/dn42-roagen
-- Kioubit's registry wizard:  https://git.dn42.dev/Kioubit/RegistryWizard
-- chuangzhu's pure bash script: https://paste.sr.ht/~chuang/e98d2fe791de68a6cf5aade7877cd0dbc1cdb84e
+- bauen1's dn42-roagen: <https://gitlab.com/bauen1/dn42-roagen>
+- Kioubit's registry wizard: <https://git.dn42.dev/Kioubit/RegistryWizard>
+- chuangzhu's pure bash script: <https://paste.sr.ht/~chuang/e98d2fe791de68a6cf5aade7877cd0dbc1cdb84e>
 
 ### This is all to complicated, is there an easy all-in-one package for RTR?
 

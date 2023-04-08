@@ -1,5 +1,5 @@
 # Original DNS (deprecated)
-This information is now **deprecated**. Please check [New DNS](New-DNS) for the current architecture.
+This information is now **deprecated**. Please check [New DNS](/services/New-DNS) for the current architecture.
 
 ***
 
@@ -35,12 +35,12 @@ The root zone for `dn42.` is built from the [whois registry](/services/Whois). I
 
 ## DNS services for other networks
 
-Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](dns/External-DNS).
+Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](/service/dns/External-DNS).
 
 ## Providing DNS services
 
-See [Providing Anycast DNS](dns/Providing-Anycast-DNS).
+See [Providing Anycast DNS](/services/dns/Providing-Anycast-DNS).
 
-## [Old Hierarchical DNS](Old-Hierarchical-DNS)
+## [Old Hierarchical DNS](/services/Old-Hierarchical-DNS)
 
 This is a new effort to build a DNS system that mirrors how DNS was designed to work in clearnet. 

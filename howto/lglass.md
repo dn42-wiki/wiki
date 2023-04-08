@@ -73,11 +73,11 @@ The configuration file format is JSON and allows configuration of the database c
 
 | Option   |      Meaning      |
 |----------|:-------------|
-| listen.host |IP address for listening socket (Default: ::)|
-|listen.port|TCP port for listening socket (Default: 4343)|
-|listen.protocol|Protocol for listening socket (4 or 6, by default 6)|
+| listen.host |IP address for listening socket (Default: ::) |
+|listen.port|TCP port for listening socket (Default: 4343) |
+|listen.protocol|Protocol for listening socket (4 or 6, by default 6) |
 |database|Array of database URLs to initialize database chain|
-|database.types|Array of object types in database (Default: undefined)<br/>Default chain:<br/>[<br/>  "whois+lglass.database.file+file:.",<br/>  "whois+lglass.database.cidr+cidr:",<br/>  "whois+lglass.database.schema+schema:",<br/>  "whois+lglass.database.cache+cached:"<br/>]|
+|database.types|Array of object types in database (Default: undefined) <br/>Default chain:<br/>[<br/>  "whois+lglass.database.file+file:.",<br/>  "whois+lglass.database.cidr+cidr:",<br/>  "whois+lglass.database.schema+schema:",<br/>  "whois+lglass.database.cache+cached:"<br/>]|
 |messages.preamble|String preamble for whois responses|
 |messages.help|String help message for help requests|
 |process.user|User to change after initialization|

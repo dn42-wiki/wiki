@@ -10,7 +10,7 @@ To provide services over the public internet some community members have contrib
 
 DNS records for these domains are managed by a gitea repository:
 
-- [https://git.dn42.dev/dns/clearnet](https://git.dn42.dev/dns/clearnet)
+- <https://git.dn42.dev/dns/clearnet>
 
 The repository uses the registry drone CI service and [DNSControl](https://stackexchange.github.io/dnscontrol/) to automatically build and push changes. This provides a degree of independence for the domains and allows them to be updated by any of the registry maintainers.
 

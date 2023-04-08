@@ -7,9 +7,9 @@
 *  The [insecure][1] [IKE][2] [aggressive mode][3] must be used to support distinct PSKs for multiple dynamic peers, or
 *  All dynamic peers must use the same PSK in order to use the more secure IKE main mode
 
-[1]: http://www.sersc.org/journals/IJAST/vol8/2.pdf "Vulnerabilities of VPN using IPSec and Defensive Measures"
-[2]: http://carnal0wnage.attackresearch.com/2011/12/aggressive-mode-vpn-ike-scan-psk-crack.html "Aggressive Mode VPN -- IKE-Scan, PSK-Crack, and Cain"
-[3]: http://rayas-security.blogspot.com/2013/06/ipsec-vpn-main-mode-vs-aggressive-mode.html "IPsec VPN, Main mode Vs Aggressive mode"
+[1]: <http://www.sersc.org/journals/IJAST/vol8/2.pdf> "Vulnerabilities of VPN using IPSec and Defensive Measures"
+[2]: <http://carnal0wnage.attackresearch.com/2011/12/aggressive-mode-vpn-ike-scan-psk-crack.html> "Aggressive Mode VPN -- IKE-Scan, PSK-Crack, and Cain"
+[3]: <http://rayas-security.blogspot.com/2013/06/ipsec-vpn-main-mode-vs-aggressive-mode.html> "IPsec VPN, Main mode Vs Aggressive mode"
 
 ### Public keys are _better_
 *  They can be transmitted over insecure channels without compromising security
@@ -31,7 +31,7 @@ Keep in mind that certificates are just public keys wrapped with some extra meta
 ### Conversion tool
 Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them. Here is a script for that purpose:
 
-[https://raw.githubusercontent.com/zeroae/pubkey-converter/master/pubkey-converter.pl](https://raw.githubusercontent.com/zeroae/pubkey-converter/master/pubkey-converter.pl)
+<https://raw.githubusercontent.com/zeroae/pubkey-converter/master/pubkey-converter.pl>
 
 ### How-To examples
 | Implementation           | Key format      |
@@ -44,13 +44,13 @@ Different implementations use different formats to represent public keys, and it
 | [strongSwan < 5.0.0][e]  | Base64 RFC 3110 |
 | [VyOS/EdgeOS][g]         | Base64 RFC 3110 |
 
-[a]: /howto/IPsecWithPublicKeys/CiscoIOSExample
-[b]: /howto/IPsecWithPublicKeys/RouterOSExample
-[c]: /howto/IPsecWithPublicKeys/OpenBSDExample
-[d]: /howto/IPsecWithPublicKeys/RacoonExample
-[e]: /howto/IPsecWithPublicKeys/strongSwan4Example
-[f]: /howto/IPsecWithPublicKeys/strongSwan5Example
-[g]: /howto/IPsecWithPublicKeys/VyOSExample
+[a]: </howto/IPsecWithPublicKeys/CiscoIOSExample>
+[b]: </howto/IPsecWithPublicKeys/RouterOSExample>
+[c]: </howto/IPsecWithPublicKeys/OpenBSDExample>
+[d]: </howto/IPsecWithPublicKeys/RacoonExample>
+[e]: </howto/IPsecWithPublicKeys/strongSwan4Example>
+[f]: </howto/IPsecWithPublicKeys/strongSwan5Example>
+[g]: </howto/IPsecWithPublicKeys/VyOSExample>
 
 ### Notes
 1.  Best practice is to generate the private key on the router itself, and not transfer it to another machine. This part should be kept secret!

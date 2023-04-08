@@ -69,7 +69,7 @@ In order to prevent this, you need to supply a different subnet range to the Doc
   ]
 }
 ```
-Note, I (@bri / AS4242422825) have only tested this with Docker version 23.0.0, build e92dd87. But it should work with any current version. I don't know how Swarm etc. networking works, this might need additional tweaking for other versions. (Referenced from https://straz.to/2021-09-08-docker-address-pools/ and https://docs.docker.com/network/bridge/ — I used this to get my `thelounge` container to connect to hackint.dn42.)
+Note, I (@bri / AS4242422825) have only tested this with Docker version 23.0.0, build e92dd87. But it should work with any current version. I don't know how Swarm etc. networking works, this might need additional tweaking for other versions. (Referenced from <https://straz.to/2021-09-08-docker-address-pools/> and <https://docs.docker.com/network/bridge/> — I used this to get my `thelounge` container to connect to hackint.dn42.)
 
 ### Can I update the wiki?
 

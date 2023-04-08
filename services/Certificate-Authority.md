@@ -1,7 +1,7 @@
 # SSL Certificate Authority
 
 internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains.
-If you would like to have a certificate signed by this CA there is [an automated process to do so](Automatic-CA). The CA is maintained by xuu@dn42.us
+If you would like to have a certificate signed by this CA there is [an automated process to do so](/services/Automatic-CA). The CA is maintained by xuu@dn42.us
 
 The CA certificate ([dn42](https://ca.dn42/crt/root-ca.crt), [iana](https://ca.dn42.us/crt/root-ca.crt)):
 
@@ -169,4 +169,4 @@ $ update-ca-certificates
 
 ## PKI Store
 
-All issued keys and crl information are posted at: https://ca.dn42/
+All issued keys and crl information are posted at: <https://ca.dn42/>

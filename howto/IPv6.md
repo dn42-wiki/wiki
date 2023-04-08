@@ -16,14 +16,14 @@ If you're already running IPv4 on DN42, here's how to get started:
  * ???
  * Profit!
 
-If not, you can follow the instructions on the [Getting Started](Getting-Started) page, as they'll mostly apply to IPv6 aswell.
+If not, you can follow the instructions on the [Getting Started](/howto/Getting-Started) page, as they'll mostly apply to IPv6 aswell.
 
 ## What can i do on DN42-v6 ?
 
 A fair share of the services are available through IPv6. However some of the well known addresses might not work, so you'll have to find alternative services.
 
 Quick list of some native-IPv6-capable services:
- * Anycast [whois.dn42](whois.dn42)
+ * Anycast [whois.dn42](/services/whois)
  * DNS, including anycast
  * Media boards, including DN42-Chan
  * torrents.dn42

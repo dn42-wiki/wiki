@@ -33,7 +33,7 @@
 
 3. Convert your peer's public key to the PEM format using the [pubkey-converter][pubkey-converter] script, if necessary.
 
-[pubkey-converter]: https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl "Public key conversion script"
+[pubkey-converter]: <https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl> "Public key conversion script"
 
 ## Configuration
 ### Configure the phase 1 IKE parameters

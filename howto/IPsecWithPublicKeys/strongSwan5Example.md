@@ -32,7 +32,7 @@ Don't forget to disable selinux :)
 
 2. Convert your peer's public key to the PEM format using the [pubkey-converter][pubkey-converter] script, if necessary.
 
-[pubkey-converter]: https://git.dn42.dev/ryan/pubkey-converter/raw/master/pubkey-converter.pl "Public key conversion script"
+[pubkey-converter]: <https://git.dn42.dev/ryan/pubkey-converter/raw/master/pubkey-converter.pl> "Public key conversion script"
 
 ## Configuration
 ### Configure the phase 1 IKE parameters
@@ -127,4 +127,4 @@ If your peer is using a Cisco router and is behind NAT, then you might need to a
         rightid=NATIP
 
 # See also
-* [Network settings](https://internal.dn42/howto/networksettings)
+* [Network settings](/howto/networksettings)

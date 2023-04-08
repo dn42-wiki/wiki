@@ -32,7 +32,7 @@ Note that currently, most AS are using one of the legacy ASN range (and will pro
 
 ## DNS zones
 
-dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](DNS).
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](/services/DNS).
 
 Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
 
@@ -40,7 +40,7 @@ Note that other TLDs should also be usable from dn42, most notably from Freifunk
 
 The gitea instance hosting the registry has an associated [Drone CI/CD](https://drone.io/) service:
 
-- [https://drone.git.dn42/](https://drone.git.dn42/)
+- <https://drone.git.dn42/>
 
 Users are free to add drone pipelines to their own repositories. Repositories can be enabled using the Drone server [user interface](https://drone.git.dn42/).
 
@@ -51,7 +51,7 @@ Privacy mode is enabled, please call the bot with @DN42WhoisBot when necessary.
 
 # Web interface and REST API
 
-[https://explorer.burble.dn42/](https://explorer.burble.dn42/) ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
+<https://explorer.burble.dn42/> ([https://explorer.burble.com/](https://explorer.burble.com/) via clearnet) provides a web interface and REST API for querying the DN42 registry.
 
 The service is provided by [dn42regsrv](https://git.burble.com/burble.dn42/dn42regsrv) which can also be run locally.
 
@@ -71,7 +71,7 @@ Example:
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 
-The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see https://www.team-cymru.org/Services/ip-to-asn.html#dns
+The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see <https://www.team-cymru.org/Services/ip-to-asn.html#dns>
 
 # Software
 
@@ -139,4 +139,4 @@ sudo ruby whoisd.rb nobody
 ```
 ## Whois restful API
 Note: this service is in beta testing, use at your own risk.
-https://whois.rest.dn42/
+<https://whois.rest.dn42/>

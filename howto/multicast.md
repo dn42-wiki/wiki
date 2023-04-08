@@ -30,7 +30,7 @@ current streams:
 
 vlc rtp://172.23.199.110@232.2.3.2:1234/
 
-controllable at http://webdj.nop.dn42/
+controllable at <http://webdj.nop.dn42/>
 
 public multicast to unicast relay with vlc4 and above:
 

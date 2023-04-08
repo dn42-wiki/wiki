@@ -1,7 +1,7 @@
 # VyOS 1.4.x sagitta
 VyOS is an open source software router.  It is feature rich and supports multiple deployment options such as physical hardware (Old PC's) or a VPC/VM.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.
 
-It can be downloaded here https://www.vyos.io/rolling-release/.  
+It can be downloaded here <https://www.vyos.io/rolling-release/>.  
 
 ## Firewall Baseline
 We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network’s edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface.
@@ -203,7 +203,7 @@ You can now check your BGP summary
 
 ## RPKI/ROA Checking
 ### Setup RPKI Caching Server
-Burble has made this super easy.  More info can be found [here](https://wiki.dn42/howto/ROA-slash-RPKI) on this wiki.  Get started by running the below command on a Linux server with Docker installed (VyOS now supports containers, but doesn't yet supports commands to pass to them... so we still need another machine to run GoRTR)     
+Burble has made this super easy.  More info can be found [here](/howto/ROA-slash-RPKI) on this wiki.  Get started by running the below command on a Linux server with Docker installed (VyOS now supports containers, but doesn't yet supports commands to pass to them... so we still need another machine to run GoRTR)
 
 ```  
 sudo docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082

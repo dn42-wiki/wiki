@@ -41,8 +41,8 @@ User certificates are signed for 180 days. To renew follow the steps above start
 
 Server certificates are signed for 45 days. To renew follow the steps above starting from number 3. 
 
-[keypin]: https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning
-[ca-mtn]: https://ca.dn42/reg/mntner/
+[keypin]: <https://developer.mozilla.org/en-US/docs/Web/Security/Public_Key_Pinning>
+[ca-mtn]: <https://ca.dn42/reg/mntner/>
 
 *Certificate Revocations*
 
@@ -70,7 +70,7 @@ Because the name constraint is "DNS:.dn42" it fails to validate.
 [Read more on this mailing list thread][libssl-1]
 
 
-[libssl-1]: https://groups.google.com/forum/#!topic/mailing.openssl.dev/drG3U-S4iaE
+[libssl-1]: <https://groups.google.com/forum/#!topic/mailing.openssl.dev/drG3U-S4iaE>
 
 
 ### X.509 nameConstraints on certificates not supported on OS X
@@ -80,8 +80,8 @@ Browsers and clients that rely on Apple's [Secure Transport][osx-1] library does
 Read more on this [stack exchange post][osx-2]
 
 
-[osx-1]: https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/
-[osx-2]: http://security.stackexchange.com/a/97133
+[osx-1]: <https://developer.apple.com/library/mac/documentation/Security/Reference/secureTransportRef/>
+[osx-2]: <http://security.stackexchange.com/a/97133>
 
 
 ## How to Run

@@ -35,8 +35,10 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
 #### API
 Results are in JSON format. 
 
+```
 http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en  
 http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
+```
 
 #### Client
 There is a client software using above apis to provide GeoIP-based traceroute. 
@@ -44,10 +46,10 @@ It is a modified IPIP.NET Best Trace software with DN42 support injection.
 
 Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox. 
 
-** Since the original software is not open source, so use it at your own risk. **
+**Since the original software is not open source, so use it at your own risk.**
 
-Preview: http://img.dn42/images/GEOTRACE42.jpg  
-Link: http://map.dn42/BestTrace42.zip
+Preview: <http://img.dn42/images/GEOTRACE42.jpg><br>
+Link: <http://map.dn42/BestTrace42.zip>
 
 ### ASN Authentication Solution
 Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
@@ -66,24 +68,24 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 | Hostname / IP | Remarks |
 |:--------------|:--------|
-| https://lounge.burble.dn42 | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
-| https://irc.pebkac.dn42 | [thelounge](https://thelounge.chat/) for lurking on #dn42, ask TOMKAP-DN42 for an account |
+| <https://lounge.burble.dn42> | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
+| <https://irc.pebkac.dn42> | [thelounge](https://thelounge.chat/) for lurking on #dn42, ask TOMKAP-DN42 for an account |
 
 ## Images, E-Books, Videos and other Media
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://j.munsternet.dn42                          | Jellyfin instance with movies and TV shows (test).       |
+| <http://j.munsternet.dn42>                        | Jellyfin instance with movies and TV shows (test).       |
 
 ## Radio and Video Streaming
 
 | Hostname / IP                                     | Remarks                                                        |
 |:------------------------------------------------- |:-------------------------------------------------------------- |
-| https://live.jerry.dn42/                          | Live audio stream powered by mpd                               |
-| http://deep.radio.unknownts.dn42/                 | Internet radio playing random music                            |
-| https://dn42:dn42@tv.munsternet.dn42/playlist     | TV Channels Streaming                                          |
-| http://icy.jones.dn42                             | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
-| http://rickroll.dn42                              | Play Rickroll Video
+| <https://live.jerry.dn42/>                        | Live audio stream powered by mpd                               |
+| <http://deep.radio.unknownts.dn42/>               | Internet radio playing random music                            |
+| <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
+| <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
+| <http://rickroll.dn42>                            | Play Rickroll Video
 
 
 ## File Sharing
@@ -103,16 +105,16 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
-| http://files.nop.dn42                                       |       | max 1Mbit/s | download only                                  |
-| http://rfc-editor.dn42                                      |       | max 1Mbit/s | download only                                  |
+| <http://files.nop.dn42>                                     |       | max 1Mbit/s | download only                                  |
+| <http://rfc-editor.dn42>                                    |       | max 1Mbit/s | download only                                  |
 
 ## VPN
 
 DN42 Network Access over Automatic Wireguard VPN Service (IPv6 only, fd00::/8)
-provided by TheQ at https://dn42.0011.de/vpnusers 
+provided by TheQ at <https://dn42.0011.de/vpnusers>
 
 ## Proxies
- See http://wiki.hamburg.ccc.de/ChaosVPN:Proxy
+ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 ### Telegram
 A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
@@ -160,12 +162,12 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 
 |Hostname / IP         | Remarks              |
 |:---------------------|:---------------------|
-| mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club)|
+| mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club) |
 
 ## VOIP/SIP Endpoints
 
- - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
- - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
+- burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
+- jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 
 ## Challenges
 
@@ -173,8 +175,8 @@ Test out your skills with online challenges
 
 | Start here                                        | Remarks                            |
 |:------------------------------------------------- |:---------------------------------- |
-| https://burble.dn42/services/ping/                | burble.dn42 ping challenge         |
-| http://172.20.14.37:3333/                         | Kioubit.dn42 challenge             |
+| <https://burble.dn42/services/ping/>              | burble.dn42 ping challenge         |
+| <http://172.20.14.37:3333/>                       | Kioubit.dn42 challenge             |
 
 
 
@@ -199,37 +201,37 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 
 | Website                                     | Description                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
-| https://burble.dn42/                              | burble.dn42 website |
-| http://www.marlinc.dn42/                          | Marlinc website     |
-| [https://mk16de.bandura.dn42/](https://mk16de.bandura.dn42/) | Marek's site |
-| http://lpnet0.dn42/                              | LAUNCHPAD-NETWORK official website |
+| <https://burble.dn42/>                              | burble.dn42 website |
+| <http://www.marlinc.dn42/>                          | Marlinc website     |
+| <https://mk16de.bandura.dn42/> | Marek's site |
+| <http://lpnet0.dn42/>                              | LAUNCHPAD-NETWORK official website |
 
 
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
-|[https://bbs.dn42](https://bbs.dn42), [https://dn42bbs.0b1.me](https://dn42bbs.0b1.me) via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
-| http://www.nop.dn42/                              | Basic "whatismyip" service                                       |
-| http://freertr.dn42/                              | freeRouter main site                                             |
-| http://sources.nop.dn42                           | freeRouter source tree                                           |
-| http://webdj.nop.dn42/                            | controller of the rtp://172.23.199.110@232.2.3.2:1234/ stream    |
-| http://fun.nop.dn42/                              | some funny images and videos                                     |
-| http://pvrp.nop.dn42/                             | a path vector igp main site                                      |
-| http://lsrp.nop.dn42                              | a link state igp main site                                       |
-| http://hwp0rn.nop.dn42                            | girls with switches and routers, a hwpr0n.se mirror              |
-| http://paste.nop.dn42                             | yet another paste service                                        |
-| http://rtros.nop.dn42/                            | freeRouter distribution                                          |
-| http://ix.nop.dn42                                | mcast-ix main site                                               |
-| http://mpls.dn42/                                 | a brief description of MPLS technology                           |
-| http://wiki.dn42, http://internal.dn42            | This wiki!  Git Repo hosted on git.dn42                          |
-| http://jack.pyropeter.eu/dn42/routecount/         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
-| https://p.pebkac.dn42/                            | PasteBin Service (Netcat/Bash CLI Client) |
-| https://sdr.pebkac.dn42/                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
-| http://www.marlinc.dn42/                          | Marlinc website |
-| https://urandom.catgirls.dn42/                    | Message board |
+| <https://bbs.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
+| <http://www.nop.dn42/>                              | Basic "whatismyip" service                                       |
+| <http://freertr.dn42/>                              | freeRouter main site                                             |
+| <http://sources.nop.dn42>                           | freeRouter source tree                                           |
+| <http://webdj.nop.dn42/>                            | controller of the rtp://172.23.199.110@232.2.3.2:1234/ stream    |
+| <http://fun.nop.dn42/>                              | some funny images and videos                                     |
+| <http://pvrp.nop.dn42/>                             | a path vector igp main site                                      |
+| <http://lsrp.nop.dn42>                              | a link state igp main site                                       |
+| <http://hwp0rn.nop.dn42>                            | girls with switches and routers, a hwpr0n.se mirror              |
+| <http://paste.nop.dn42>                             | yet another paste service                                        |
+| <http://rtros.nop.dn42/>                            | freeRouter distribution                                          |
+| <http://ix.nop.dn42>                                | mcast-ix main site                                               |
+| <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |
+| <http://wiki.dn42>, <http://internal.dn42>          | This wiki!  Git Repo hosted on git.dn42                          |
+| <http://jack.pyropeter.eu/dn42/routecount/>         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
+| <https://p.pebkac.dn42/>                            | PasteBin Service (Netcat/Bash CLI Client) |
+| <https://sdr.pebkac.dn42/>                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
+| <http://www.marlinc.dn42/>                          | Marlinc website |
+| <https://urandom.catgirls.dn42/>                    | Message board |
 | [Clearnet](https://flapping.p2p-node.de/dashboard/), [dn42](https://flapping.bandura.dn42/dashboard), [NeoNetwork](https://flapping.bandura.neo/dashboard/) | FlapAlertedPro by Kioubit hosted by mark22k |
-| https://flaps.pebkac.dn42/                        | FlapAlertedPro by Kioubit hosted by AS4242422092 |
+| <https://flaps.pebkac.dn42/>                        | FlapAlertedPro by Kioubit hosted by AS4242422092 |
 | [Clearnet](https://monkic.mk16.de/), [dn42](https://monkic.mk16.de/) | Monkic (Game in German) |
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 
@@ -242,7 +244,7 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 
 ## SIM cards / Home cable connections (in NL)
 
-For people in The Netherlands you can join cooperation ONT as member, our goal it is to give anyone the ability to be their own ISP with SIM cards and home connections. Allowing you to connect your own phone or home directly to DN42 and other networks. Interested? Check http://www.marlinc.dn42/ont/
+For people in The Netherlands you can join cooperation ONT as member, our goal it is to give anyone the ability to be their own ISP with SIM cards and home connections. Allowing you to connect your own phone or home directly to DN42 and other networks. Interested? Check <http://www.marlinc.dn42/ont/>
 
 # Other networks
 
@@ -250,6 +252,6 @@ For people in The Netherlands you can join cooperation ONT as member, our goal i
 
 ## Public Internet
 
- * https://mirror.frubar.net 100MBit
- * https://frucman.frubar.net
+ * <https://mirror.frubar.net> 100MBit
+ * <https://frucman.frubar.net>
  

@@ -2,11 +2,11 @@
 
 The following guide illustrates how to set up an IPv6 multicast router using [PIM-SM](https://en.wikipedia.org/wiki/Protocol_Independent_Multicast#Sparse_mode) (Protocol Independent Multicast in Sparse Mode) with your own personal multicast prefix.
 
-rfc8815 deprecated pim-sm, please take a look at the new multicast page about pim-ssm: wiki.dn42/howto/multicast.md
+rfc8815 deprecated pim-sm, please take a look at the new multicast page about pim-ssm: </howto/multicast>
 
 ## Quickstart
 
-* Install pim6sd from here: https://github.com/troglobit/pim6sd/
+* Install pim6sd from here: <https://github.com/troglobit/pim6sd/>
     ```sh
     cd /usr/src
     git clone https://github.com/troglobit/pim6sd.git

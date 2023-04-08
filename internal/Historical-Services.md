@@ -9,7 +9,7 @@ You can inspect the services status [on this page](https://services.dn42)
 
 ## Network-related
   * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
-  * Polynome has some nice scripts and visualizations here: http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html
+  * Polynome has some nice scripts and visualizations here: <http://dataviz.polynome.dn42/dn42-netblock-visu/registry.html>
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
@@ -41,41 +41,41 @@ Select "Disable Recursion" to check only entries found in the registry or leave 
 
 Currently this system only supports IPv4.
 
-http://mwd.dn42/dns.php
+<http://mwd.dn42/dns.php>
 
-MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: http://mwd.dn42
+MWD will also provide a secondary DNS server and/or cacti monitoring of your devices. Just ask on IRC. More info: <http://mwd.dn42>
 
 ### Getting your current dn42 IPv4/IPv6 address
   * What is my IP: [ip4.dn42](http://ip4.dn42/), [ip6.dn42](http://ip6.dn42/)
   * What is my IP: [whatismyip.dn42](http://whatismyip.dn42/)
-  * http://wieistmeineip.dn42 provides a service like http://wieistmeineip.de, but for dn42.
+  * <http://wieistmeineip.dn42> provides a service like <http://wieistmeineip.de>, but for dn42.
 wieistmeineip.dn42 also provides a telnet service that returns the address you connected with. This service only shows you the address of the preferred protocol, but there are also ipv4.wieistmeineip.dn42 and ipv6.wieistmeineip.dn42 that accept only connections via IPv4/IPv6.
-  * You can also use http://whatismyip.dn42 from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
-  * An alternative is available at https://ip.naive.network, which displays your clearnet and dn42 IP addresses.
+  * You can also use <http://whatismyip.dn42> from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
+  * An alternative is available at <https://ip.naive.network>, which displays your clearnet and dn42 IP addresses.
 
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://yacy.dn42 (OFFLINE 2020-01-18)             | YaCy search engine. Indexing local nets                  |
+| <http://yacy.dn42> (OFFLINE 2020-01-18)             | YaCy search engine. Indexing local nets                  |
 | _Configuring Yacy Network settings:_              |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
-| http://mhm.dn42/search                            | Hosted by toBee                                          |
+| <http://mhm.dn42/search>                            | Hosted by toBee                                          |
 
 ## Radio and Video Streaming
 
 | Hostname / IP                                     | Remarks                                                         |
 |:------------------------------------------------- |:--------------------------------------------------------------- |
-| https://invidious.doxz.dn42/ (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                         |
-| http://stream.media.dn42/                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
-| http://radio.hex.dn42/                            | Ambient musics                                                  |
-| https://yp.unknownts.dn42/                        | A YellowPages for internet radio stations inside dn42          |
+| <https://invidious.doxz.dn42/> (BROKEN 2021-04-19)  | Invidious instance with proxy (Youtube)                         |
+| <http://stream.media.dn42/>                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
+| <http://radio.hex.dn42/>                            | Ambient musics                                                  |
+| <https://yp.unknownts.dn42/>                        | A YellowPages for internet radio stations inside dn42          |
 
 ## Images, E-Books, Videos and other Media
 
 | Hostname / IP                                     | Remarks                                                  |
 |:------------------------------------------------- |:-------------------------------------------------------- |
-| http://img.dn42                                   | Imagehoster                                              |
-| http://chan.dn42                                  | DN42-Chan, an imageboard                                 |
+| <http://img.dn42>                                   | Imagehoster                                              |
+| <http://chan.dn42>                                  | DN42-Chan, an imageboard                                 |
 
 ## File Sharing
 
@@ -83,9 +83,9 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
 |:----------------------------------------------------------- |:----- |:----------- |:---------------------------------- |                              
-| http://filer.mhm.dn42                                       |  4TB  | 1GBit       | 24/7/365                           |
-| http://data.0l.dn42                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps |
-| http://seafile.dn42                                         |       |             | Opensource Dropbox, yay!                       |
+| <http://filer.mhm.dn42>                                       |  4TB  | 1GBit       | 24/7/365                           |
+| <http://data.0l.dn42>                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps |
+| <http://seafile.dn42>                                         |       |             | Opensource Dropbox, yay!                       |
 
 ### Tahoe LAFS
 Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
@@ -112,18 +112,18 @@ https://rest.dn42/
 
 ### Torrent Search Engine
 
-* https://magnetic.dn42 (DHT Search Engine)
+* <https://magnetic.dn42> (DHT Search Engine)
 
 ### Torrent Index
 
-* http://torrents.dn42
+* <http://torrents.dn42>
 
 ### Torrent Tracker
 
 | Hostname / IP        | Port | Protocol    | Remarks        | Announce URL                            |
 |:---------------------|:-----|:------------|:---------------|:----------------------------------------|
-| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42:6969/announce   |
-| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | http://tracker.mhm.dn42/announce        |
+| tracker.mhm.dn42     | 6969 | TCP & UDP   | Opentracker    | <http://tracker.mhm.dn42:6969/announce>   |
+| tracker.mhm.dn42     | 80   | TCP & UDP   | Opentracker    | <http://tracker.mhm.dn42/announce>        |
 
 ## NTP
 
@@ -139,36 +139,36 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 
 | Hostname / IP                                     | What's Available:                   | Updates
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |
-| http://debian.trunet.dn42                         | Debian mirror                       | Each 6 hours                        |
-| http://ubuntu.trunet.dn42                         | Ubuntu releases mirror              | Each 4 hours                        |
-| http://archive.ubuntu.trunet.dn42                 | Ubuntu archive mirror               | Each 6 hours                        |
-| http://centos.trunet.dn42                         | CentOS mirror                       | Each 6 hours                        |
+| <http://debian.trunet.dn42>                       | Debian mirror                       | Each 6 hours                        |
+| <http://ubuntu.trunet.dn42>                       | Ubuntu releases mirror              | Each 4 hours                        |
+| <http://archive.ubuntu.trunet.dn42>               | Ubuntu archive mirror               | Each 6 hours                        |
+| <http://centos.trunet.dn42>                       | CentOS mirror                       | Each 6 hours                        |
 | ~~http://files.twink0r.dn42~~(OFFLINE 2016-08-24) | Debian, Ubuntu                      |                                     |
 | ~~http://freebsd.e-utp.dn42~~(OFFLINE 2016-08-24) | FreeBSD Homepage mirror             |                                     |
-| http://mirrors.zhaofeng.dn42/archlinux            | Arch Linux                          | Every hour          |
+| <http://mirrors.zhaofeng.dn42/archlinux>          | Arch Linux                          | Every hour          |
 
 
 ## Misc 
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-|https://bin.dn42 | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
-| http://pastebin.trunet.dn42                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
+| <https://bin.dn42> | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
+| <http://pastebin.trunet.dn42>                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
-| https://pad.dn42 | [Etherpad](http://etherpad.org) service for collaborative work |
-| http://ip.synhacx.dn42                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
-| http://tor.e-utp.dn42                             | Tor Project Homepage mirror  |   
-| http://ngit.dn42                                  ||
+| <https://pad.dn42> | [Etherpad](http://etherpad.org) service for collaborative work |
+| <http://ip.synhacx.dn42>                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
+| <http://tor.e-utp.dn42>                             | Tor Project Homepage mirror  |   
+| <http://ngit.dn42>                                  ||
 | nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
 | mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat |
 | ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
-| https://whois.rest.dn42/                          | whois restful API |
+| <https://whois.rest.dn42/>                          | whois restful API |
 | [pgp.dn42](http://pgp.dn42)                                          | PGP keyserver, [synchronizes](http://pgp.dn42/pks/lookup?op=stats) with the SKS keyservers |
-| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us)|               
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us) |               
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
-| http://nowhere.ws/dn42                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
-| https://paste.weiti.dn42                          | AES-encrypted pastebin-like (privatebin) |
+| <http://nowhere.ws/dn42>                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
+| <https://paste.weiti.dn42>                          | AES-encrypted pastebin-like (privatebin) |
 
 
 ## Gaming
@@ -187,14 +187,14 @@ There is a page for email Providers [here](/services/E-Mail-Providers)
 
 ## ChaosVPN
 
-  * Anybody can add services to this list, which will be monitored for uptime: http://10.100.44.1
+  * Anybody can add services to this list, which will be monitored for uptime: <http://10.100.44.1>
   * Check your IP and reverse lookup: [ifconfig.hack](http://ifconfig.hack)
-  * View of the network: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.png
-  * List of nodes: http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.nodes.html
+  * View of the network: <http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.png>
+  * List of nodes: <http://vpnhub1-intern.hamburg.ccc.de/chaosvpn.nodes.html>
 
 ## Freifunk
 
 ### Augsburg
 
-We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at http://10.11.0.8/cgi-bin/luci/freifunk/services to see what we have to offer.
+We have a plugin that enables us to announce services in the mesh. So instead of listing them here again just have a look at <http://10.11.0.8/cgi-bin/luci/freifunk/services> to see what we have to offer.
 (Upload is not fast, most probably DSL speed only)

@@ -9,12 +9,12 @@ IXP frnte operated by LGP Corp: [IXP frnte](/services/IXP-frnte)
 A few people have provided exchanges previously on DN42, however they created single
 points of failure and are no longer operating
 
-* Amsterdam (OpenVPN) - NL Zuid (marlinc) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
-* Los Angeles (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
-* New York (OpenVPN) - tombii - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
-* Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - [https://nl-zuid.dn42/](https://nl-zuid.dn42/)
-* India (OpenVPN) - Technopoint - apply via email to mafiosa.virus@gmail.com (reply within 24hours)
+* Amsterdam (OpenVPN) - NL Zuid (marlinc) - <https://nl-zuid.dn42/>
+* Los Angeles (OpenVPN) - tombii - <https://nl-zuid.dn42/>
+* New York (OpenVPN) - tombii - <https://nl-zuid.dn42/>
+* Falkenstein/Hetzner (OpenVPN) - GRMML (Nurtic-Vibe) - <https://nl-zuid.dn42/>
+* India (OpenVPN) - Technopoint - apply via email to [mafiosa.virus@gmail.com](mailto:mafiosa.virus@gmail.com) (reply within 24hours)
 
-The NL-Zuid website is also available from the public internet: https://nl-zuid.nl
+The NL-Zuid website is also available from the public internet: <https://nl-zuid.nl>
 
 Its generally recommended to only announce prefixes from your own network and that of your transit customers.

@@ -46,11 +46,11 @@ Document your mad setups in the categories below, with links to a full write up,
 
  - 04dco: At a maximum theoretical speed of a whopping 28.8 Kbps, web browsing and IRC chatting were done. My site still loads faster than everyone else's :)
 
-   ![Screenshot of Windows XP while chatting on a familiar client](images/ircdun.png)
+   ![Screenshot of Windows XP while chatting on a familiar client](/internal/images/ircdun.png)
 
  - grawity: Lacking a physical modem, configured VirtualBox to attach the Windows 98 serial port to a TCP modem emulator at dialup.burble.dn42. Listening to a shoutcast stream of local FM radio station.
 
-   ![Screenshot of Win98 showing "Connection Established"](images/win98dun.png)
+   ![Screenshot of Win98 showing "Connection Established"](/internal/images/win98dun.png)
 
 ## Things that use dn42
  - Fun stuff that you've done with dn42

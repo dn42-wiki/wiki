@@ -36,7 +36,7 @@ fi
 ## Graph routes and activity for every neighbour
 
 This munin-plugin makes it very easy to graph the announced routes and activity for each neighbour over time:  
-https://github.com/luben/bird-multigraph-plugin
+<https://github.com/luben/bird-multigraph-plugin>
 
 It's also possible to get notified by Munin when a problem with the peering persists. You have to define a critical value in line 138: 
 ```
@@ -54,4 +54,4 @@ graph_title $name routes
 ```
 
 Example installation: 
-http://stats.tbspace.de/munin-cgi/munin-cgi-graph/tbspace.de/server.tbspace.de/dn42_crest_routes-day.png
+<http://stats.tbspace.de/munin-cgi/munin-cgi-graph/tbspace.de/server.tbspace.de/dn42_crest_routes-day.png>
