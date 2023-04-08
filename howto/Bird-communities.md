@@ -11,7 +11,7 @@ Below, you will see an example config for peers4 based on the original filter im
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
 ## BGP community criteria
-```
+```conf
 (64511, 1) :: latency \in (0, 2.7ms]
 (64511, 2) :: latency \in (2.7ms, 7.3ms]
 (64511, 3) :: latency \in (7.3ms, 20ms]
@@ -46,7 +46,7 @@ Two utilities which measure round trip time and calculate community values autom
 
 **Note: In general, the link latency metric only reflects the latency of the *immediate* link, and not the overall latency from following a path**. A route may traverse multiple internal routers once it enters an AS, and because this is invisible to BGP, it's best to treat latency values as informational only and not use them to make routing decisions.
 
-```
+```sh
 $ ruby bgp-community.rb --help
 USAGE: bgp-community.rb host mbit_speed unencrypted|unsafe|encrypted|pfs
     -6, --ipv6                       Assume ipv6 for ping
@@ -67,7 +67,7 @@ There are two type of route origin: `region` and `country`
 The range `41-70` is assigned to the region property.
 The communities for route origin region were first defined in [December 2015](https://lists.nox.tf/pipermail/dn42/2015-December/001259.html) and further extended in [May 2022](https://groups.io/g/dn42/topic/91226190):
 
-```
+```conf
 (64511, 41) :: Europe
 (64511, 42) :: North America-E
 (64511, 43) :: North America-C
@@ -90,7 +90,7 @@ The communities for route origin region were first defined in [December 2015](ht
 #### Country
 The range `1000-1999` is assigned to the country property. Here we use [ISO-3166-1 numeric](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv) country codes, adding `1000` to each value to get the country origin community:
 
-```
+```conf
 (64511, 1124) :: Canada
 (64511, 1156) :: China
 (64511, 1158) :: Taiwan
@@ -105,9 +105,9 @@ The range `1000-1999` is assigned to the country property. Here we use [ISO-3166
 (64511, 1756) :: Switzerland
 (64511, 1826) :: United Kingdom
 (64511, 1840) :: United States of America
-# etc. Please follow the ISO-3166-1 Numeric standard
-# https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
 ```
+etc. Please follow the ISO-3166-1 Numeric standard
+<https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv>.
 
 You need to add following lines to your config(s):
 - `define DN42_REGION = $VALUE_FROM_ABOVE` to your node's config (where OWNAS and OWNIP are set)
@@ -118,7 +118,7 @@ just above `update_flags` in `dn42_export_filter` function
 
 
 ## Example configurations
-```
+```conf
 # /etc/bird/peers4/tombii.conf
 protocol bgp tombii from dnpeers {
   neighbor 172.23.102.x as 4242420321;
@@ -126,7 +126,7 @@ protocol bgp tombii from dnpeers {
   export where dn42_export_filter(3,24,33);
 };
 ```
-```
+```conf
 #/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
   bgp_community.add((64511, link_latency));
@@ -193,11 +193,9 @@ function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypt
   }
   reject;
 }
-
 ```
 Please remember to include /etc/bird/community_filters.conf in your bird.conf/birdc6.conf
-```
-
+```conf
 # local configuration
 ######################
 include "bird/local4.conf";
