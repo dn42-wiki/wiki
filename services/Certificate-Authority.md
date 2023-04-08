@@ -101,11 +101,11 @@ C0IKqQ==
 ## Testing constraints
 
 The name constraints can be verified for example by using openssl:
-```
-    openssl x509 -in dn42.crt -text -noout
+```sh
+openssl x509 -in dn42.crt -text -noout
 ```
 which will show among other things:
-```
+```text
     X509v3 Name Constraints: 
       Permitted:
         DNS:.dn42

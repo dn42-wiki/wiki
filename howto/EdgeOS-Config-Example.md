@@ -20,7 +20,7 @@ Ask me if you want to know if I have implemented those items already.
 
 # Configuration
 
-```
+```conf
 firewall {
     all-ping enable
     broadcast-ping disable

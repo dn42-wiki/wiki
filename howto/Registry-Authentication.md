@@ -50,7 +50,7 @@ There are three options for doing this. but you only need to do **one** of these
 ### `auth` attribute format, when your public key is in gitea or a public keyserver
 
 - Use the following `auth` attribute in your `mntner` object:
-```
+```conf
 auth:               pgp-fingerprint <fingerprint>
 ```
 Where `<fingerprint>` is your **full 40-digit** key fingerprint, without spaces.
@@ -62,7 +62,7 @@ Where `<fingerprint>` is your **full 40-digit** key fingerprint, without spaces.
 *Tip: look at the existing key-cert objects for examples of how to add your public key*
 
 - In this case the `auth` attribute must refer to the new key-cert object so use the following in your `mntner` object:
-```
+```conf
 auth:               PGPKEY-<short fingerprint>
 ```
 Where `<short fingerprint>` is the last **8** digits from your key fingerprint.
@@ -76,7 +76,7 @@ Where `<short fingerprint>` is the last **8** digits from your key fingerprint.
 - Use `git commit -S` to commit and sign your change.
 
 - If you have already committed your change without signing it, you can sign the existing commit using:
-```
+```sh
 git commit --amend --no-edit -S
 ```
 If you had already pushed your change to gitea, you must also do a force push (`git push --force`) to update the remote copy.
@@ -105,17 +105,17 @@ If you cannot get the above to work you may also:
 ### `auth` attribute format when using an ssh key
 
 The generic format for authentication using an SSH key is as follows:
-```
+```conf
 auth:               ssh-<keytype> <pubkey>
 ```
 
 Common examples:
 
-```
+```conf
 auth:               ssh-ed25519 <pubkey>
 ```
 
-```
+```conf
 auth:               ssh-rsa <pubkey>
 ```
 
@@ -131,13 +131,13 @@ Brief instructions are below, however there are also more detailed guides availa
 
 - Set your git signature format to be SSH
 
-```
+```sh
 git config --global gpg.format ssh
 ```
 
 - Tell git which SSH key to use
 
-```
+```sh
 git config --global user.signingKey '<ssh public key>'
 ```
 
@@ -167,13 +167,13 @@ The registry includes a script that uses ssh-keygen signatures to sign your chan
 
 #### How to sign
 
-```
+```sh
 ./sign-my-commit --ssh --key <path to your SSH private key> --push <MNTNER>
 ```
 
 e.g.
 
-```
+```sh
 ./sign-my-commit --ssh --key /home/foo/.ssh/id_ed25519 --push FOO-MNT
 ```
 
@@ -181,7 +181,7 @@ e.g.
 
 The script can also verify your signature:
 
-```
+```sh
 ./sign-my-commit --ssh --verify <MNTNER>
 ```
 
@@ -231,7 +231,7 @@ Please try and upgrade your ssh-keygen version and use the generic ssh-keygen me
 ### Authentication with an SSH RSA key
 
 - Use the following `auth` attribute in your `mntner` object:
-```
+```conf
 auth:               ssh-rsa <pubkey>
 ```
 Where `<pubkey>` is the ssh public key copied from your id_rsa.pub file. 
@@ -269,7 +269,7 @@ openssl pkeyutl \
 ### Authentication with an SSH ecdsa key
 
 - Use the following `auth` attribute in your `mntner` object:
-```
+```conf
 auth:               ecdsa-sha2-nistp256 <pubkey>
 ```
 Where `<pubkey>` is the ssh public key copied from your id_ecdsa.pub file. 

@@ -66,8 +66,10 @@ Mirrors are hosted at `asn.grmml.dn42` and `asn.lorkep.dn42`.
 
 Example:
 
-    $ dig +short AS4242420000.asn.dn42 TXT
-    "4242420000 | DN42 | dn42 |  | PYROPETER-AS PyroPeters AS"
+```sh
+$ dig +short AS4242420000.asn.dn42 TXT
+"4242420000 | DN42 | dn42 |  | PYROPETER-AS PyroPeters AS"
+```
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 

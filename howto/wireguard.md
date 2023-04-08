@@ -9,13 +9,13 @@ to allow your BGP daemon instead to do routing. This approach is comparable to [
 
 First generate on each peer public and private keys.
 
-```
+```sh
 $ wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
 ## Configuration
 
-```
+```conf
 # tunnel.conf
 [Interface]
 PrivateKey = <private_key>
@@ -38,7 +38,7 @@ AllowedIPs = 0.0.0.0/0,::/0
 Wireguard comes with its own interface type. 
 It supports link-local addresses for IPv6 and single /32 addresses for IPv4, which can be used for peering.
 
-```
+```sh
 $ ip link add dev <interface_name> type wireguard
 $ wg setconf <interface_name> tunnel.conf
 # both side pick a different link-local ipv6 address
@@ -54,7 +54,7 @@ Maybe you should check the MTU to your peer with e.g. `ping -s 1472 <end_point_h
 
 ## Testing
 
-```
+```sh
 ping fe80::<your_peers_suffix>%<interface_name>
 ```
 
@@ -94,7 +94,7 @@ The script makes some changes that are not valid when used for DN42 tunnels, and
 
 An example wg-quick script that incorporates the above two workarounds is below, where `<MyIPv[46]>` are the DN42 IP addresses of your node and `<PeerIPv[46]>` are the IP addresses for your peer. 
 
-```
+```conf
 [Interface]
 PrivateKey = <your private key>
 Address = <your link-local address, if any>
@@ -114,7 +114,7 @@ Use `which ip` to get the full path to your ip binary.
 Example configuration for systemd-networkd.
 
 peer.netdev
-```text
+```conf
 [NetDev]
 Name=<ifname>
 Kind=wireguard
@@ -134,7 +134,7 @@ AllowedIPs=0.0.0.0/0
 ```
 
 peer.network
-```text
+```conf
 [Match]
 Name=<ifname>
 
@@ -172,6 +172,6 @@ Peer=<your peer's IPv4 address>/32
 As wireguard are only resolving the hostname to IP only on start, dynamics DNS will stop working after a while without further configuration. The Following is a [script](https://github.com/WireGuard/wireguard-tools/blob/master/contrib/reresolve-dns/reresolve-dns.sh) from wireguard which will "re-resolve" the DNS and update the wireguard. 
 
 You can add cron entries to periodically  "re-resolve" the DNS:
-```
+```sh
 * * * * * /path-to-the-script/reresolve-dns.sh
 ```

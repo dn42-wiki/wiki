@@ -48,15 +48,19 @@ A Ruby script to calculate the IPv6 can be found on [ixp\_frnte\_dn42\_prefix.rb
 
 An example configuration for Debian based Linux distributions would be:  
 
-    iface ensXX inet6 static
-        address fde0:93fa:7a0:2:0:fcde:3558:1/64
+```sh
+iface ensXX inet6 static
+    address fde0:93fa:7a0:2:0:fcde:3558:1/64
+```
 
 Here `ensXX` is the dn42 VLAN interface. This can be determined by comparing the MAC address of the interface with the MAC address of the dn42 VLAN in Proxmox. The MAC address can be determined on Linux with `ip l`:
 
-    ensXX: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu
-        1500 qdisc pfifo_fast state UP mode DEFAULT group
-        default qlen 1000
-        link/ether MAC brd ff:ff:ff:ff:ff:ff
+```sh
+ensXX: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu
+    1500 qdisc pfifo_fast state UP mode DEFAULT group
+    default qlen 1000
+    link/ether MAC brd ff:ff:ff:ff:ff:ff
+```
 
 `MAC` would be the MAC address. After that you can activate the interface with ifup or a reboot of the VM.  
 Of course there are other configuration possibilities. This is only an example for Debian-based Linux distributions.
@@ -71,17 +75,19 @@ You can now enter this configuration into your routing daemon and it will connec
 
 An example configuration for bird2 would be the following:
 
-    protocol bgp ixp_rs from dnpeers {
-        neighbor fde0:93fa:7a0:2:0:fcde:3559:1 as 4242421081;
+```conf
+protocol bgp ixp_rs from dnpeers {
+    neighbor fde0:93fa:7a0:2:0:fcde:3559:1 as 4242421081;
     
-        enable extended messages on;
-    	direct;
-    	enforce first as off;
+    enable extended messages on;
+    direct;
+    enforce first as off;
     
-    	ipv4 {
-    	    extended next hop;
-    	};
-    }
+    ipv4 {
+    	extended next hop;
+    };
+}
+```
 
 **What does this configuration do?**
 
@@ -107,8 +113,8 @@ Furthermore, you can display different routes (in case of bird with `birdc show 
 One can also try to ping the IP of some at the IXP. From the latency you can also see if everything is working:  
 
 *   Burble's pingable
-    *   172.20.129.5
-    *   fd42:4242:2601:ac05::1
+    *   `172.20.129.5`
+    *   `fd42:4242:2601:ac05::1`
 *   Bandura's pingable:
-    *   172.22.149.224
-    *   fd04:234e:fc31::
+    *   `172.22.149.224`
+    *   `fd04:234e:fc31::`

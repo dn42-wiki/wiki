@@ -39,9 +39,9 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
  - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo (simple example):
 
-     + **wiki-sync.sh**:
+  + **wiki-sync.sh**:
 
-     ```sh
+   ```sh
 #!/bin/bash
 
 WIKI_PATH=<repo path>
@@ -52,13 +52,13 @@ ${GIT} push
 ${GIT} pull
 
 exit 0
-     ```
+   ```
 
-     + **Cron entry**:
+  + **Cron entry**:
 
-     `*/10 * * * * <path>/wiki-sync.sh &> /dev/null`
+   `*/10 * * * * <path>/wiki-sync.sh &> /dev/null`
 
-       Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes.
+   Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes.
 
 ## gollum
 
@@ -84,7 +84,7 @@ RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
  - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
  - \<AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
 
-```
+```sh
 ./ca.dn42 tls-gen \
    <AS>-<CC>(-<UID>).wiki.dn42 \
    EXAMPLE-MNT \
@@ -109,13 +109,13 @@ A custom header `X-SiteID` identifies the site you're connecting to:
 
   - Extract base64 encoded SPKI fingerprint from private key `wiki.key`:
 
-    ```
+    ```sh
 openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
     ```
 
   - Configure Nginx to send the fingerprint in header (SSL block):
 
-    ```
+    ```conf
 add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=5184000; includeSubDomains';
     ```
 
@@ -137,7 +137,7 @@ Nginx should listen on a unicast address as well, so your site can be reached ex
 
 #### Config example
 
-```
+```conf
 ssl_protocols  TLSv1.2 TLSv1.1 TLSv1;
 ssl_session_cache shared:SSL:2m;
 
@@ -196,7 +196,7 @@ The prefix AS-PATH should show the announcement is originating from your AS. Aft
 
 #### Configuration
 
-```
+```conf
 # exabgp.conf
 
 group gollum-watchdog {

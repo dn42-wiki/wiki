@@ -9,7 +9,7 @@ Let `fd42::` and `fd42::1` be the IPs of *A* and *D* respectively where both are
 
 ## pseudo interface
 Populate [`/etc/hostname.gre0`](https://man.openbsd.org/hostname.if.5) with:
-```
+```conf
 tunnel A.example.com D.example.net
 inet6 fd42::/127
 ```
@@ -21,7 +21,7 @@ Reboot or run [`sh /etc/netstart gre0`](https://man.openbsd.org/netstart.8) to b
 
 ## miscellaneous
 Populate `/etc/sysctl.conf` with:
-```
+```conf
 net.inet.gre.allow=1
 ```
 Reboot or run `sysctl net.inet.gre.allow=1` to allow GRE packet processing.

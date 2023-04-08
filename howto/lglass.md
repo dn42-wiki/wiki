@@ -1,6 +1,8 @@
 lglass is a Python software package designed for Internet Registries like the DN42. You can generate zone files for DNS and rDNS IPv4/v6, and handle the registry. It is available on GitHub as free software:
 
-    $ git clone git://github.com/fritz0705/lglass.git
+```sh
+$ git clone git://github.com/fritz0705/lglass.git
+```
 
 ## Links
 - [Fritz Gihub repo](https://github.com/fritz0705/lglass)
@@ -10,27 +12,31 @@ lglass is a Python software package designed for Internet Registries like the DN
 
 lglass provides an event-based whois daemon with internal caching, which was written in Python. It is very simple to run an instance:
 
-    $ ./bin/lglass-whoisd
+```sh
+$ ./bin/lglass-whoisd
+```
 
 without the configfile:
 
-    $ ./bin/lglass-regtool whoisd -H $HOST -p $PORT
-.
+```sh
+$ ./bin/lglass-regtool whoisd -H $HOST -p $PORT
+```
 
-    usage: lglass-whoisd [-h] [-4] [-6] [--host HOST] [--port PORT]
-                                 [--cidr] [--no-cidr] [--inverse] [--no-inverse]
+```
+usage: lglass-whoisd [-h] [-4] [-6] [--host HOST] [--port PORT]
+                     [--cidr] [--no-cidr] [--inverse] [--no-inverse]
 
-    optional arguments:
-      -h, --help            show this help message and exit
-      -4                    Listen on IPv4
-      -6                    Listen on IPv6
-      --host HOST, -H HOST  Listen on host
-      --port PORT, -p PORT  Listen on port
-      --cidr, -c            Perform CIDR matching on queries
-      --no-cidr             Do not perform CIDR matching on queries
-      --inverse, -i         Perform inverse matching on queries
-      --no-inverse          Do not perform inverse matching on queries
-
+optional arguments:
+    -h, --help            show this help message and exit
+    -4                    Listen on IPv4
+    -6                    Listen on IPv6
+    --host HOST, -H HOST  Listen on host
+    --port PORT, -p PORT  Listen on port
+    --cidr, -c            Perform CIDR matching on queries
+    --no-cidr             Do not perform CIDR matching on queries
+    --inverse, -i         Perform inverse matching on queries
+    --no-inverse          Do not perform inverse matching on queries
+```
 
 ## Generate zone files
 
@@ -38,32 +44,42 @@ lglass also provides a script to generate zone files from the registry. It's nam
 
 To generate DNS zones:
 
-    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com dns -z dn42
+```sh
+$ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com dns -z dn42
+```
 
 To generate IPv4 rDNS zones:
 
-    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns4 -N 172.22.0.0/16
+```sh
+$ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns4 -N 172.22.0.0/16
+```
 
 To generate IPv6 rDNS zones:
-
-    $ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
+```sh
+$ ./bin/lglass-zonegen -d $PATH_TO_DATA_DIR -n ns1... -n ns2... -e foo.bar.com rdns6 -N fd00::/8
+```
 
 ## Reformat RPSL files
 
 You can also reformat RPSL files using lglass by using the lglass.rpsl module:
 
-    $ ./bin/lglass-rpsl < $DATA/inetnum/172.22.0.53_32
+```sh
+$ ./bin/lglass-rpsl < $DATA/inetnum/172.22.0.53_32
+```
 
 lglass.rpsl also supports in-place operation:
 
-    $ ./bin/lglass-rpsl -i $DATA/inetnum/172.22.0.53_32
+```sh
+$ ./bin/lglass-rpsl -i $DATA/inetnum/172.22.0.53_32
+```
 
 This opens the file, reads the content into memory, seeks to position 0, writes the formatted object and truncates the file.
 Simple web interface
 
 lglass also comes with a simple web interface written in Python3 using Bottle and Jinja2. It also provides a binary to run it using wsgiref:
-
-    $ ./bin/lglass-web
+```sh
+$ ./bin/lglass-web
+```
 
 Furthermore you can use any WSGI server like Gunicorn by using lglass.web.application:app as WSGI callback. You can provide a path to the configuration file in the environment variable `LGLASS_WEB_CFG`.
 

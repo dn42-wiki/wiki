@@ -32,11 +32,12 @@ You can find a hosted example of dn42regsrv at <https://explorer.burble.com/>
 Instructions on how to host dn42regsrv yourself can be found on the git repo of [dn42regsrv](https://git.burble.com/burble.dn42/dn42regsrv). 
 
 You can also run dn42regsrv via docker (then available at 127.0.0.1:8042):
-
-    git checkout https://git.burble.com/burble.dn42/dn42regsrv.git .
-    cd contrib/docker
-    ./build.sh
-    docker-compose up -d
+```sh
+git checkout https://git.burble.com/burble.dn42/dn42regsrv.git .
+cd contrib/docker
+./build.sh
+docker-compose up -d
+```
 
 Documentation for the api endpoints can be found here: <https://git.burble.com/burble.dn42/dn42regsrv/src/master/API.md>
 
@@ -48,7 +49,9 @@ burble kindly provides ready-to-use files for gortr here:
 
 You can use these to simply run gortr via docker:
 
-    docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
+```sh
+docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
+```
 
 ### rtrtr
 
@@ -56,21 +59,25 @@ rtrtr is a RTR server from NLNet Labs. It's compatible with the dn42regsrv ROA-J
 
 NLNet Labs provides an official docker image. You just have to bind mount a suitable configuration file:
 
-    docker run -d -v /etc/rtrtr.conf:/etc/rtrtr.conf -p 323:323/tcp nlnetlabs/rtrtr -c /etc/rtrtr.conf
+```sh
+docker run -d -v /etc/rtrtr.conf:/etc/rtrtr.conf -p 323:323/tcp nlnetlabs/rtrtr -c /etc/rtrtr.conf
+```
 
 This is a working configuration file for dn42. Maybe change the listen addresses:
 
-    log_level = "debug"
-    log_target = "stderr"
-    http-listen = []
-    [units.dn42-json]
-    type = "json"
-    uri = "https://dn42.burble.com/roa/dn42_roa_46.json"
-    refresh = 600
-    [targets.dn42-rtr]
-    type = "rtr"
-    listen = ["0.0.0.0:323", "[::]:323"]
-    unit = "dn42-json"
+```conf
+log_level = "debug"
+log_target = "stderr"
+http-listen = []
+[units.dn42-json]
+type = "json"
+uri = "https://dn42.burble.com/roa/dn42_roa_46.json"
+refresh = 600
+[targets.dn42-rtr]
+type = "rtr"
+listen = ["0.0.0.0:323", "[::]:323"]
+unit = "dn42-json"
+```
 
 For more information cosult the official documentation: <https://rtrtr.docs.nlnetlabs.nl/en/stable/>
 

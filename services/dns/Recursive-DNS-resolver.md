@@ -8,7 +8,7 @@ You may use some servers listed in the [table of anycast servers](/services/dns/
 
 Configuration for `unbound.conf`
 
-```
+```conf
 server:
         local-zone: "22.172.in-addr.arpa." nodefault
         local-zone: "23.172.in-addr.arpa." nodefault
@@ -35,7 +35,7 @@ stub-zone:
 ### Unbound with root-hints
 Alternatively you can put dn42 root servers in the root-hints file for recursive resolving.
 
-```
+```conf
 # /etc/unbound/unbound.conf.d/dn42.conf 
 server:
         # DNSSEC validation will fail
@@ -55,7 +55,7 @@ remote-control:
 ```
 
 The `/etc/unbound/dn42.hints` file:
-```
+```conf
 .                                         NS    a.root-servers.dn42.
 a.root-servers.dn42.           3600000    A     172.22.177.6
 .                                         NS    m.root-servers.dn42.

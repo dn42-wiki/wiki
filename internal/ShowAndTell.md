@@ -22,7 +22,7 @@ Document your mad setups in the categories below, with links to a full write up,
    - Wired: Token Ring/X.25/ATM/ISDN etc (encapsulation allowed, but bonus points for real physical networks)
    - Wireless: dn42 via microwave/laser/satellite
 
-*... your stuff goes here*    
+*... your stuff goes here*
 
 ## Things attached to dn42
  - The thing must be pingable from dn42

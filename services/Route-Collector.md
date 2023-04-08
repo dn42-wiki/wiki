@@ -25,7 +25,7 @@ The collector uses the dynamic peering capability in Bird2 to allow anyone to pe
 
 Example bird2 config:
 
-```text
+```conf
 protocol bgp ROUTE_COLLECTOR
 {
   local as ***YOUR_ASN***;

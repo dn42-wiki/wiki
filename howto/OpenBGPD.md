@@ -16,7 +16,7 @@ By default, [bgpd(8)](http://man.openbsd.org/bgpd.8) listens on all local addres
 
 ## local host
 Information such as ASN, router ID and allocated networks are required:
-```
+```conf
 # macros
 ASN="4242421234"
 
@@ -31,7 +31,7 @@ prefix-set mynetworks {
 
 These can be used in subsequent filter rules.
 The local peer's announcements is then defined as follows:
-```
+```conf
 # Generate routes for the networks our ASN will originate.
 # The communities (read 'tags') are later used to match on what
 # is announced to EBGP neighbors
@@ -41,7 +41,7 @@ network prefix-set mynetworks set large-community $ASN:1:1
 ## neighbors
 For each neighbor its ASN and transfer ULA is required.
 An optional description is provided such that [bgpctl(8)](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
-```
+```conf
 # peer A, transport over IPSec/GRE
 $A_local="fd00:12:34:A::1"
 $A_remote="fd00:12:34:A::2"
@@ -61,7 +61,7 @@ The filter rules are evaluated in sequential order, form first to last.
 The last matching allow or deny rule decides what action is taken.
 
 Start off with basic protection and sanity rules:
-```
+```conf
 # deny more-specifics of our own originated prefixes
 deny quick from ebgp prefix-set mynetworks or-longer
 
@@ -72,7 +72,7 @@ deny quick from any max-as-len 8
 `quick` rules are considered the last matching rule, and evaluation of subsequent rules is skipped.
 
 Allow own announcements:
-```
+```conf
 # Outbound EBGP: only allow self originated networks to ebgp peers
 # Don't leak any routes from upstream or peering sessions. This is done
 # by checking for routes that are tagged with the large-community $ASN:1:1
@@ -80,7 +80,7 @@ allow to ebgp prefix-set mynetworks large-community $ASN:1:1
 ```
 
 Allow all remaining UPDATES based on **O**rigin **V**alidation **S**tates:
-```
+```conf
 # enforce ROA
 allow from ebgp ovs valid
 ```
@@ -89,7 +89,7 @@ Note how the `ovs` filter requires the `roa-set {...}` to be defined;  see the `
 
 ### path attributes
 Besides `allow` and `deny` statements, filter rules can modify UPDATE messages, e.g.
-```
+```conf
 # Scrub normal and large communities relevant to our ASN from EBGP neighbors
 # https://tools.ietf.org/html/rfc7454#section-11
 match from ebgp set { large-community delete $ASN:*:* }
@@ -123,7 +123,7 @@ roa-set {
 ```
 
 Include it in `/etc/bgpd.conf`:
-```
+```conf
 # defines roat-set, see _rpki-client crontab
 include "/etc/dn42.roa-set"
 ```

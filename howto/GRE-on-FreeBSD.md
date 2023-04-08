@@ -21,7 +21,7 @@ ifconfig gre$INDEX descr $DESCR
 
 Add this to your `rc.conf`.
 
-```
+```conf
 cloned_interfaces="$cloned_interfaces gre0"
 ifconfig_gre0="10.0.0.1 10.0.0.2 netmask 0xffffffff tunnel 1.2.3.4 5.6.7.8 descr foo"
 ```

@@ -15,7 +15,7 @@ If you still want to give it a try, here you'll find some inspiration from my se
 Defining the container environment is the base part of the setup. Beginning with network setup, Private Network disables the passthrough of Host Interfaces into the container and adds a bridged Interface to the host default Interface (e.g. eth0). The localAddress is the container side address and the hostAddress is the one the Host gets. Inside the ```container.<name>.config```, you can basicly import the same nix expression as from the Host and don't need to add some special container parts. 
 
 ```nix 
-  containers.dn42 = {
+containers.dn42 = {
     hostAddress = "192.168.254.1"; # Transfer Network
     hostAddress6 = "2001:db08::42"; # Transfer Network
     localAddress = "116.203.1.5";
@@ -24,22 +24,22 @@ Defining the container environment is the base part of the setup. Beginning with
     autoStart = true;
 
     config = { config, pkgs, ... }: {
-      imports = [
-        ./peers # Folder with a config for every Peer
-        ./dns.nix # Bind with the litschi.dn42 zone deligated
-        ./bird.nix # Bird config for BGP Routing
-        ./networking.nix # Static Network configuration (with firewall)
-        ./nginx.nix # nginx config for litschi.dn42 
-      ];
-      environment.systemPackages = with pkgs; [ 
-        # Network debug tools
-        dnsutils
-        mtr
-        tcpdump
-        wireguard-tools
-      ];
+        imports = [
+            ./peers # Folder with a config for every Peer
+            ./dns.nix # Bind with the litschi.dn42 zone deligated
+            ./bird.nix # Bird config for BGP Routing
+            ./networking.nix # Static Network configuration (with firewall)
+            ./nginx.nix # nginx config for litschi.dn42
+        ];
+        environment.systemPackages = with pkgs; [ 
+            # Network debug tools
+            dnsutils
+            mtr
+            tcpdump
+            wireguard-tools
+        ];
     }
-  }
+}
 ```
 
 In theory the container should now be starting and you can get shell access  with ```sudo nixos-container root-login <name> ```.
@@ -47,20 +47,20 @@ In theory the container should now be starting and you can get shell access  wit
 I mounted some host paths into the container for dns zone files and static homepage since the container is the only one providing .dn42 webservers. 
 
 ```nix
-  containers.dn42 = {
+containers.dn42 = {
     bindMounts = {
-      "/var/www/dn42" = {
-        hostPath = "/var/www/dn42";
-        isReadOnly = true;
-        mountPoint = "/var/www/dn42";
-      };
-      "/var/dns/dn42" = {
-        hostPath = "/var/dns/dn42";
-        isReadOnly = true;
-        mountPoint = "/var/dns";
-      };
+        "/var/www/dn42" = {
+            hostPath = "/var/www/dn42";
+            isReadOnly = true;
+            mountPoint = "/var/www/dn42";
+        };
+        "/var/dns/dn42" = {
+            hostPath = "/var/dns/dn42";
+            isReadOnly = true;
+            mountPoint = "/var/dns";
+        };
     };
-  }
+}
 ```
 
 ### Network Setup 
@@ -68,28 +68,28 @@ I mounted some host paths into the container for dns zone files and static homep
 As mentioned above, I got a spare public IPv4 Address, but by adding it as ```localAddress```, the container Part is configured static enough. But to forward traffic between Intferfaces ```/proc/sys/net/``` should configured
 
 ```nix
-  boot.kernel.sysctl = {
+boot.kernel.sysctl = {
     "net.ipv4.ip_forward" = 1;
     "net.ipv6.conf.all.forwarding" = 1;
-  };
+};
 ```
 This allows our firewall to configure forwarding between peers and other tunnels. What is allowed to be forwarded can be configured in the firewall. Ferm has only few NixOS Options, but is pretty basic. Its configured with the ```services.ferm.config``` options, that contains just a string. Within this string there's standard plain ferm config. Example config is attached below. 
 If the dn42 address is not bound at any other Interface, you need to add it to the lo Interface to use it as source IP when routing via peers with dedicated transfer net. 
 ```nix
-    networking.interfaces.lo = {
-      ipv4.addresses = [
+networking.interfaces.lo = {
+    ipv4.addresses = [
         {
-          address = "172.23.73.65";
-          prefixLength = 32;
+            address = "172.23.73.65";
+            prefixLength = 32;
         }
-      ];
-      ipv6.addresses = [
+    ];
+    ipv6.addresses = [
         {
-          address = "fd67:24bd:a1ea::1";
-          prefixLength = 128;
+            address = "fd67:24bd:a1ea::1";
+            prefixLength = 128;
         }
-      ];
-    };
+    ];
+};
 ```
 
 #### Ferm example
@@ -100,40 +100,40 @@ services.ferm = {
         domain ip table filter chain INPUT proto icmp ACCEPT;
         domain ip6 table filter chain INPUT proto (ipv6-icmp icmp) ACCEPT;
         domain (ip ip6) table filter {
-          chain INPUT {
-            policy DROP;
-            interface lo ACCEPT;
-            interface intern-+ ACCEPT;
-            # website
-            proto tcp dport (http https) ACCEPT;
-            # wireguard
-            proto udp dport ( <Wireguard Ports> ) ACCEPT;
-            # bgp
-            proto tcp dport (179) ACCEPT;
-            # dns
-            proto (udp tcp) dport domain ACCEPT;
-            mod state state (INVALID) DROP;
-            mod state state (ESTABLISHED RELATED) ACCEPT;
-          }
-          chain OUTPUT {
-            policy ACCEPT;
-          }
-          chain FORWARD {
-            policy DROP;
-            # allow intern routing and dn42 forwarding
-            interface dn42-+ outerface dn42-+ ACCEPT;
-            interface intern-+ outerface intern-+ ACCEPT;
-            interface intern-+ outerface dn42-+ ACCEPT;
-            # but dn42 -> intern only with execptions
-            interface dn42-+ outerface intern-+ {
-              proto (ipv6-icmp icmp) ACCEPT; # Allow SSH Access from dn42 to devices behind intern-+ Interfaces
-              proto tcp dport (ssh) ACCEPT;
-              mod state state (ESTABLISHED) ACCEPT;
+            chain INPUT {
+                policy DROP;
+                interface lo ACCEPT;
+                interface intern-+ ACCEPT;
+                # website
+                proto tcp dport (http https) ACCEPT;
+                # wireguard
+                proto udp dport ( <Wireguard Ports> ) ACCEPT;
+                # bgp
+                proto tcp dport (179) ACCEPT;
+                # dns
+                proto (udp tcp) dport domain ACCEPT;
+                mod state state (INVALID) DROP;
+                mod state state (ESTABLISHED RELATED) ACCEPT;
             }
-          }
+            chain OUTPUT {
+                policy ACCEPT;
+            }
+            chain FORWARD {
+                policy DROP;
+                # allow intern routing and dn42 forwarding
+                interface dn42-+ outerface dn42-+ ACCEPT;
+                interface intern-+ outerface intern-+ ACCEPT;
+                interface intern-+ outerface dn42-+ ACCEPT;
+                # but dn42 -> intern only with execptions
+                interface dn42-+ outerface intern-+ {
+                    proto (ipv6-icmp icmp) ACCEPT; # Allow SSH Access from dn42 to devices behind intern-+ Interfaces
+                    proto tcp dport (ssh) ACCEPT;
+                    mod state state (ESTABLISHED) ACCEPT;
+                }
+            }
         }
     '';
-  };
+};
 ```
 
 ### Peering with wireguard
@@ -144,23 +144,23 @@ A sample wireguard config may look like this:
 ```nix
 {config, pkgs, ...}:
 {
-  networking.wireguard.interfaces.dn42-peer = {
-    privateKey = "";
-    allowedIPsAsRoutes = false;
-    listenPort = 42420;
+    networking.wireguard.interfaces.dn42-peer = {
+        privateKey = "";
+        allowedIPsAsRoutes = false;
+        listenPort = 42420;
 
-    peers = [
-      {
-        publicKey = "";
-        allowedIPs = [ "0.0.0.0/0" "::/0" ];
-        endpoint = "42.42.42.42:42421";
-      }
-    ];
-    postSetup = ''
-      ${pkgs.iproute}/bin/ip addr add 169.254.0.1/32 peer 169.254.0.0/32 dev dn42-peer
-      ${pkgs.iproute}/bin/ip -6 addr add fe80::1220/64 dev dn42-peer
-    '';
-  };
+        peers = [
+            {
+                publicKey = "";
+                allowedIPs = [ "0.0.0.0/0" "::/0" ];
+                endpoint = "42.42.42.42:42421";
+            }
+        ];
+        postSetup = ''
+            ${pkgs.iproute}/bin/ip addr add 169.254.0.1/32 peer 169.254.0.0/32 dev dn42-peer
+            ${pkgs.iproute}/bin/ip -6 addr add fe80::1220/64 dev dn42-peer
+        '';
+    };
 }
 ```
 
@@ -176,41 +176,40 @@ Like ferm, Bird2 is configured by ```services.bird2.config``` containing a strin
 Sample example to update ROA's : 
 ```nix
 { pkgs, lib, ... }:
-let
-  script = pkgs.writeShellScriptBin "update-roa" ''
+let script = pkgs.writeShellScriptBin "update-roa" ''
     mkdir -p /etc/bird/
     ${pkgs.curl}/bin/curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf
     ${pkgs.curl}/bin/curl -sfSLR {-o,-z}/etc/bird/roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird2_4.conf
     ${pkgs.bird2}/bin/birdc c 
     ${pkgs.bird2}/bin/birdc reload in all
-  '';
+    '';
 in
 {
-  systemd.timers.dn42-roa = {
-    description = "Trigger a ROA table update";
+    systemd.timers.dn42-roa = {
+        description = "Trigger a ROA table update";
 
-    timerConfig = {
-      OnBootSec = "5m";
-      OnUnitInactiveSec = "1h";
-      Unit = "dn42-roa.service";
+        timerConfig = {
+            OnBootSec = "5m";
+            OnUnitInactiveSec = "1h";
+            Unit = "dn42-roa.service";
+        };
+
+        wantedBy = [ "timers.target" ];
+        before = [ "bird.service" ];
     };
 
-    wantedBy = [ "timers.target" ];
-    before = [ "bird.service" ];
-  };
-
-  systemd.services = {
-    dn42-roa = {
-      after = [ "network.target" ];
-      description = "DN42 ROA Updated";
-      unitConfig = {
-        Type = "one-shot";
-      };
-      serviceConfig = {
-        ExecStart = "${script}/bin/update-roa";
-      };
+    systemd.services = {
+        dn42-roa = {
+            after = [ "network.target" ];
+            description = "DN42 ROA Updated";
+            unitConfig = {
+                Type = "one-shot";
+            };
+            serviceConfig = {
+                ExecStart = "${script}/bin/update-roa";
+            };
+        };
     };
-  };
 }
 ```
 
@@ -221,14 +220,14 @@ There is now (thanks to [Tchekda](https://github.com/NixOS/nixpkgs/pull/153481))
 ```nix
 bird-lg = {
     proxy = {
-      enable = true;
-      allowedIPs = [ "172.20.XX.XX" "172.20.XX.YY" ];
+        enable = true;
+        allowedIPs = [ "172.20.XX.XX" "172.20.XX.YY" ];
     };
     frontend = {
-      enable = true;
-      netSpecificMode = "dn42";
-      servers = [ "node1" "node2" ];
-      domain = "domain.dn42";
+        enable = true;
+        netSpecificMode = "dn42";
+        servers = [ "node1" "node2" ];
+        domain = "domain.dn42";
     };
 };
 ```

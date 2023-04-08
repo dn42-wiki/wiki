@@ -26,7 +26,7 @@ When copying the configuration below onto your system, you will have to enter th
 * The same goes for `<OWNNETv6>`, but it takes an IPv6 subnet (Who'd have thought).
 * Keep in mind that you'll have to enter both networks in the OWNNET{,v6} and OWNNETSET{,v6}, the two variables are required due to set parsing difficulties with variables.
 
-```
+```conf
 ################################################
 #               Variable header                #
 ################################################
@@ -182,7 +182,7 @@ The example config above relies on ROA configuration files in `/etc/bird/roa_dn4
 
 To use an RTR server for ROA information, replace this config in your bird2 configuration file:
 
-```
+```conf
 protocol static {
     roa4 { table dn42_roa; };
     include "/etc/bird/roa_dn42.conf";
@@ -196,7 +196,7 @@ protocol static {
 
 ... with this one (by changing address and port so it points to your RTR server)
 
-```
+```conf
 protocol rpki roa_dn42 {
         roa4 { table dn42_roa; };
         roa6 { table dn42_roa_v6; };
@@ -228,7 +228,7 @@ Please note: This section assumes that you've already got a tunnel to your peeri
 
 First, make sure the /etc/bird/peers directory exists:
 
-```
+```sh
 # mkdir -p /etc/bird/peers
 ```
 
@@ -246,4 +246,4 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
 }
 ```
 
-Due to the special link local addresses of IPv6, an interface has to be specified using the %<if> syntax if a link local address is used (Which is recommended)
+Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` syntax if a link local address is used (Which is recommended)

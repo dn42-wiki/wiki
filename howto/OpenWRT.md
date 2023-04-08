@@ -28,9 +28,11 @@ This is needed so that OpenWRT is aware of the new interfaces (for firewall and 
 
 In `/etc/config/network`, add entries for each dn42 interface:
 
-    config interface dn42peer1
-        option ifname tun-peer1
-        option proto none
+```conf
+config interface dn42peer1
+    option ifname tun-peer1
+    option proto none
+```
 
 ## Firewall
 
@@ -43,28 +45,36 @@ Everything is done in `/etc/config/firewall`.
 
 ### Zone declaration
 
-    config zone
-        option name             dn42
-        option network          'dn42peer1 dn42peer2 dn42peer3'
-        option input            REJECT
-        option output           ACCEPT
-        option forward          REJECT
+```conf
+config zone
+    option name             dn42
+    option network          'dn42peer1 dn42peer2 dn42peer3'
+    option input            REJECT
+    option output           ACCEPT
+    option forward          REJECT
+```
 
 If you need to NAT your home network into dn42, you probably just need to add: 
 
-        option masq             1
+```conf
+option masq             1
+```
 
 ### dn42 ↔ LAN forwarding
 
-    config forwarding                   
-        option src              lan
-        option dest             dn42
+```conf
+config forwarding                   
+    option src              lan
+    option dest             dn42
+```
 
 If you're confident enough, you can also forward dn42 into your LAN:
 
-    config forwarding                   
-        option src              dn42
-        option dest             lan
+```conf
+config forwarding                   
+    option src              dn42
+    option dest             lan
+```
 
 Or you can forward only certain ports, to certain hosts, etc (standard `config rule` stuff)
 
@@ -72,7 +82,9 @@ Or you can forward only certain ports, to certain hosts, etc (standard `config r
 
 This is more tricky. In theory, all you have to do is to set
 
-        option forward          ACCEPT
+```conf
+option forward          ACCEPT
+```
 
 in the definition of the zone. However, due to a bug in Attitude Adjustment (see <https://dev.openwrt.org/ticket/12945>), this will allow forwarding **everything everywhere**.
 

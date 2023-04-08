@@ -67,7 +67,7 @@ Common authentication methods are:
   - SSH Key: `auth: ssh-{rsa,ed25519} <key>`
 
 Example: data/mntner/FOO-MNT
-```
+```conf
 mntner:             FOO-MNT
 admin-c:            FOO-DN42
 tech-c:             FOO-DN42
@@ -93,7 +93,7 @@ Contact attributes are optional but DN42 is a dynamic network and being able to 
 
 
 Example: data/person/FOO-DN42
-```
+```conf
 person:             John Doe
 e-mail:             john.doe@example.com
 nic-hdl:            FOO-DN42
@@ -116,7 +116,7 @@ If you intend to register resources for an organisation (e.g. your hackerspace),
 - don't forget to set `mnt-by` to `<FOO>-MNT`, since you're managing this object on behalf of your organisation.
 
 Example: data/organisation/ORG-EXAMPLE
-```
+```conf
 organisation:       ORG-FOO
 org-name:           Foo Organisation
 admin-c:            FOO-DN42
@@ -153,7 +153,7 @@ Internet ASNs may be used, but you must take care to clearly separate Internet a
 If unsure, ask on the mailing list or IRC.
 
 Example: data/aut-num/AS4242423999
-```
+```conf
 aut-num:            AS4242423999
 as-name:            AS-FOO-DN42
 admin-c:            FOO-DN42
@@ -179,7 +179,7 @@ A few websites can generate random ULA prefixes for you:
 or a small script is available: [ulagen.py](https://git.dn42.dev/netravnen/dn42-repo-utils/src/master/ulagen.py)
 
 example: data/inet6num/fd35:4992:6a6d::_48
-```
+```conf
 inet6num:           fd35:4992:6a6d:0000:0000:0000:0000:0000 - fd35:4992:6a6d:ffff:ffff:ffff:ffff:ffff
 cidr:               fd35:4992:6a6d::/48
 netname:            FOO-NETWORK
@@ -223,7 +223,7 @@ If you need a /24 or larger, please ask in the IRC chan or on the mailing list a
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
 example: data/inetnum/172.20.150.0_27
-```
+```conf
 inetnum:            172.20.150.0 - 172.20.150.31
 cidr:               172.20.150.0/27
 netname:            FOO-NETWORK
@@ -241,7 +241,7 @@ source:             DN42
 If you plan to announce your prefixes in dn42, which you probably want in most cases, you will also need to create a `route6` object for ipv6 prefixes and a `route` object for ipv4 prefixes. This information is used for Route Origin Authorization (ROA) checks. If you skip this step, your network will probably get filtered by most major peers.  Checking ROA will prevent (accidental) hijacking of other people's prefixes.
 
 example: data/route6/fd35:4992:6a6d::_48
-```
+```conf
 route6:             fd35:4992:6a6d::/48
 origin:             AS4242423999
 max-length:         48
@@ -250,7 +250,7 @@ source:             DN42
 ```
 
 example data/route/172.20.150.0_27:
-```
+```conf
 route:              172.20.150.0/27
 origin:             AS4242423999
 max-length:         27
@@ -266,7 +266,7 @@ To register a domain name, create a `dns` object in the data/dns directory.
 Domain names and nserver attributes must be lowercase.
 
 example: data/dns/foo.dn42
-```
+```conf
 domain:             foo.dn42
 admin-c:            FOO-DN42
 tech-c:             FOO-DN42
@@ -280,13 +280,13 @@ source:             DN42
 
 You can also add DNSSEC delegations using `ds-rdata` attributes to your domain:
 
-```
+```conf
 ds-rdata:           61857 13 2 bd35e3efe3325d2029fb652e01604a48b677cc2f44226eeabee54b456c67680c
 ```
 
 For reverse DNS, add `nserver` attributes to you inet{,6}num objects:
 
-```
+```conf
 inet6num:           fd35:4992:6a6d:0000:0000:0000:0000:0000 - fd35:4992:6a6d:ffff:ffff:ffff:ffff:ffff
 cidr:               fd35:4992:6a6d::/48
 netname:            FOO-NETWORK

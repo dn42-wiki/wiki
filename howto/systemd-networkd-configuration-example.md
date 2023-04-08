@@ -5,7 +5,7 @@ This is the config that is used on ZOTAN Networks (AS4242422341). Full network c
 # Configuration
 
 ## loopback device (lo.network)
-```
+```conf
 [Match]
 Name=lo
 
@@ -14,7 +14,7 @@ Address=fdff:b02d:2ef7::2/128
 ```
 
 ## wireguard netdev (dn42p1.netdev)
-```
+```conf
 [NetDev]
 Name = dn42p1
 Kind = wireguard
@@ -31,7 +31,7 @@ AllowedIPs = 172.16.0.0/12,10.0.0.0/8,fd00::/8,fe80::/10,ff00::/8
 ```
 
 ## wireguard network (dn42p1.network)
-```
+```conf
 [Match]
 Name = dn42p1
 

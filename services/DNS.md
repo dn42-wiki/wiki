@@ -24,7 +24,7 @@ service and configure the other service as the secondary or backup nameserver.
 
 Example resolv.conf, preferring a0.recursive-servers.dn42 and IPv4:
 
-```text
+```conf
 nameserver 172.20.0.53
 nameserver 172.23.0.53
 nameserver fd42:d42:d42:54::1
@@ -34,7 +34,7 @@ search dn42
 
 Example resolv.conf, preferring a3.recursive-servers.dn42 and IPv6:
 
-```text
+```conf
 nameserver fd42:d42:d42:53::1
 nameserver fd42:d42:d42:54::1
 nameserver 172.23.0.53

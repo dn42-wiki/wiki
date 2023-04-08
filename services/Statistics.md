@@ -11,7 +11,7 @@ Channel statistics for #dn42@hackint are available at: <https://dev.0l.dn42/stat
 
 #### collectd.conf
 
-```
+```conf
 LoadPlugin exec
 <Plugin exec>
    Exec nobody "/etc/collectd/bgp_prefixes-quagga.sh"

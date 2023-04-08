@@ -55,7 +55,9 @@ Server certificates are signed for 45 days. To renew follow the steps above star
 
 get the script here: 
 
+```sh
 curl https://ca.dn42/ca.dn42 > ca.dn42; chmod +x ca.dn42
+```
 
 available via git: anon@git.dn42:dn42/ca-client
 
@@ -106,7 +108,7 @@ Environtment Options:
 
 Generate the user key
 
-```
+```sh
 $ ./ca.dn42 user-gen XUU-MNT xuu@sour.is
 Generating a 2048 bit RSA private key
 ...............................+++
@@ -121,7 +123,7 @@ writing new private key to 'XUU-MNT.key'
 
 ### Sign the user key
 
-```
+```sh
 $ ./ca.dn42 user-sign XUU-MNT xuu@sour.is
 == USER CERT ==
    C:XD
@@ -138,7 +140,7 @@ Verifying - Enter Export Password:
 
 ### Generate the server key
 
-```
+```sh
 $ ./ca.dn42 tls-gen ca.dn42 XUU-MNT xuu@sour.is DNS:ca.dn42
 
 Generating a 2048 bit RSA private key
@@ -162,7 +164,7 @@ $ dig +short TXT _dn42_tlsverify.ca.dn42.
 
 ### Sign the server key
 
-```
+```sh
 $ ./ca.dn42 tls-sign ca.dn42 XUU-MNT
 == USER CERT ==
    C:XD 
@@ -190,13 +192,13 @@ Verifying - Enter Export Password: ****
 
 The generated certificate will be valid for 3 months, to renew it simply run ```./ca.dn42 tls-sign ca.dn42 XUU-MNT``` again. This could be also automated in cron:
 
-```
+```sh
 0 0 1 * * /etc/ssl/dn42/ca.dn42 tls-sign wiki.dn42 MIC92-MNT
 ```
 
 or with a systemd timer:
 
-```
+```conf
 # update-dn42-ca.timer
 [Timer]
 OnBootSec=1h
@@ -207,7 +209,7 @@ Persistent=yes
 WantedBy=timers.target
 ```
 
-```
+```conf
 [Service]
 Type=oneshot
 WorkingDirectory=/etc/ssl/dn42
@@ -219,7 +221,7 @@ ExecStart=/usr/bin/nginx -s reload
 
 ### Revoke a certificate.
 
-```
+```sh
 $ ./ca.dn42 revoke XUU-MNT XUU-MNT.crt 
 == USER CERT ==
    C:XD 

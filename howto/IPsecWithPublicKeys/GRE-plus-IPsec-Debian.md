@@ -21,17 +21,17 @@ Change the direction on 5.6.7.8.
 
 ## Load the IPsec security policy into the IPsec security policy database
 Load the policy with the setkey command.
-```
+```sh
 setkey -f /etc/ipsec-tools.conf
 ```
 Afterward check the policy database with:
-```
+```sh
 setkey -DP
 ```
 
 ## Configure the racoon daemon
 An example /etc/racoon/racoon.conf.
-```
+```conf
 path pre_shared_key "/etc/racoon/psk.txt";
 path certificate    "/etc/racoon/certs";
 log info;

@@ -10,7 +10,7 @@
 * Replace `<REMOTE_GATEWAY_IP>` with dn42 ip address of your peer
 * `<LOCAL_GATEWAY_IPV6> <REMOTE_GATEWAY_IPV6>` same as ipv4, but both ip addresses needs to be in the same subnet. For simplicity you can always use an address from link-local ipv6 range (fe80::/64)
 
-```
+```conf
 #/etc/openvpn/<PEER_NAME>
 proto       <PROTO>
 mode        p2p
@@ -39,7 +39,7 @@ secret /etc/openvpn/<PEER_NAME>.key
 
 then create a new key and share it with your peer
 
-```
+```sh
 $ openvpn --genkey --secret /etc/openvpn/<PEER_NAME>.key
 ```
 
@@ -47,7 +47,7 @@ $ openvpn --genkey --secret /etc/openvpn/<PEER_NAME>.key
 
 ## peer with fixed ip
 
-```
+```conf
 proto       <PROTO>
 mode        p2p
 dev-type    tun
@@ -72,7 +72,7 @@ secret /etc/openvpn/<PEER_NAME>.key
 * `<REMOTE_HOST>` is the ip address of your peer
 * `<REMOTE_PORT>` is openvpn port, where your peer listen for traffic
 
-```
+```conf
 proto       <PROTO>
 mode        p2p
 remote      <REMOTE_HOST>
@@ -99,7 +99,7 @@ Clients connect using certificates, and simply get attributed dn42 IPs in the or
 
 Replace `<PORT>` with the UDP port you want OpenVPN to listen to, and change the IP ranges (`ifconfig` and `route-gateway` options).
 
-```
+```conf
 mode server
 tls-server
 
@@ -152,7 +152,7 @@ push "route 172.22.0.0 255.254.0.0"
 
 Change `<SERVER>` and `<PORT>`.
 
-```
+```conf
 client
 
 ca   ca.crt

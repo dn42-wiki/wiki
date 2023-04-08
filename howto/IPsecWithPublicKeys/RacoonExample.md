@@ -17,7 +17,7 @@ I'd probably go with 4096 bits.
 
 
 in your racoon.conf:
-```
+```conf
 path certificate "/etc/racoon/keys";
 
 listen {
@@ -38,6 +38,6 @@ remote 192.168.255.2 {
 }
 ```
 
-## Se also
+## See also
 
 [Debian specific configuration](/howto/IPsecWithPublicKeys/GRE-plus-IPsec-Debian)

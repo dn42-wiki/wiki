@@ -10,9 +10,9 @@ These instructions are for IPsec in transport mode not IPsec in tunnel mode. IPs
 ## Kernel configuration
 The FreeBSD GENERIC kernel lacks support for in-kernel IPsec processing. Add this two lines to your kernel config and (re-)build your own kernel.
 If you're new to FreeBSD check Chapters [15.9.1](http://www.freebsd.org/doc/handbook/ipsec.html) and [9](http://www.freebsd.org/doc/handbook/kernelconfig.html) of the FreeBSD handbook.
-```
-  options   IPSEC        #IP security
-  device    crypto
+```conf
+options   IPSEC        #IP security
+device    crypto
 ```
 Reboot into your new kernel.
 
@@ -20,7 +20,7 @@ Reboot into your new kernel.
 
 Install the racoon daemon. It's included in the [security/ipsec-tools](http://www.freshports.org/security/ipsec-tools/) port.
 Racoon is pain in the ass to configure the first time because it's error messages aren't helping and the complexity of IPsec. Don't let this stop you.
-```
+```conf
 path    pre_shared_key  "/usr/local/etc/racoon/psk";
 path    certificate     "/usr/local/etc/racoon/certs";
 log     info;

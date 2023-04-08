@@ -19,7 +19,7 @@
 - **RetroShare** can be run as a darknet (friend-to-friend) by default to perform anonymous file transfers if DHT and Discovery features are disabled.
 - **GNUnet** is a darknet if the "F2F (network) topology" option is enabled.
 - **Syndie** is software used to publish distributed forums over the anonymous networks of I2P, Tor and Freenet.
-OneSwarm can be run as a darknet for friend-to-friend file-sharing.
+- OneSwarm can be run as a darknet for friend-to-friend file-sharing.
 - **Tribler** can be run as a darknet for file-sharing.
 
 ## BGP Routed IP

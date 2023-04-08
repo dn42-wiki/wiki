@@ -27,7 +27,7 @@ DN42 is [interconnected](/internal/Interconnections) with the Inter City VPN or 
 If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
 by adding the following to /etc/bind/named.conf.local
 
-```
+```conf
 zone "dn42" {
   type forward;
   forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
@@ -71,7 +71,7 @@ options {
 **Note**: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: `validating dn42/SOA: got insecure response; parent indicates it should be secure`.
 
 To disable DNSSEC validation only for certain TLDs include the following in the options section:
-```
+```conf
 options {
   # [...]
 
@@ -93,7 +93,7 @@ options {
 
 If you are running dnsmasq under openwrt, you just have to add 
 
-```
+```conf
 config dnsmasq
         option boguspriv '0'
         option rebind_protection '1'
@@ -115,7 +115,7 @@ Attention: If you go with the default config you'll have to disable "boguspriv" 
 
 For normal dnsmasq use
 
-```
+```conf
 server=/dn42/172.20.0.53
 server=/20.172.in-addr.arpa/172.20.0.53
 server=/21.172.in-addr.arpa/172.20.0.53
@@ -129,7 +129,7 @@ in `dnsmasq.conf`.
 ## PowerDNS recursor
 Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS).
 
-```
+```conf
 dont-query=127.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
 forward-zones-recurse=dn42=172.20.0.53
 forward-zones-recurse+=20.172.in-addr.arpa=172.20.0.53
@@ -143,7 +143,7 @@ forward-zones-recurse+=d.f.ip6.arpa=172.20.0.53
 ## MaraDNS
 Put this in your mararc:
 
-```
+```conf
 ipv4_alias["dn42_root"] = "172.20.0.53"
 root_servers["dn42."] = "dn42_root"
 root_servers["20.172.in-addr.arpa."] = "dn42_root"
@@ -158,7 +158,7 @@ root_servers["10.in-addr.arpa."] = "dn42_root"
 Make sure to disable `auto-trust-anchor-file` and manually configure `trust-anchor-file` to 
 point to a file with DNSKEY records for dn42.
 
-```
+```conf
 server:
       local-zone: "20.172.in-addr.arpa." nodefault
       local-zone: "21.172.in-addr.arpa." nodefault
@@ -205,11 +205,11 @@ forward-zone:
 
 ## JunOS (SRX 12.1X46)
 Should also work in 12.1X44 and 12.1X45. After making the changes below you may need to run:
-```
+```sh
 restart named-service
 ```
 Config (vlan.0 is presumed to be your LAN/Trust interface)
-```
+```conf
 system {
    services {
       dns {
@@ -289,17 +289,17 @@ All delegation servers have DNSSEC support and all record are signed, for more i
 Following is a list of links to the DS record for TLD and reverse zone, to configure the key file, extract the value of ds-rdata and format it as follows, you must add all ds-rdata to the key file for dnssec to work. P.S. each ds-rdata or DS record should contain 4 numbers.
 
 This is an example for dn42. and (fake) ds-rdata of 1 2 3 456
-```
+```conf
 dn42.	86400	IN	DS	1 2 3 456
 ```
 
 This is an example for 172.20.0.0/16 and (fake) ds-rdata of 1 2 3 456
-```
+```conf
 20.172.in-addr.arpa.	86400	IN	DS	1 2 3 456
 ```
 
 This is an example for fd00::/8 and (fake) ds-rdata of 1 2 3 456
-```
+```conf
 d.f.ip6.arpa.	86400	IN	DS	1 2 3 456
 ```
 
@@ -323,7 +323,7 @@ d.f.ip6.arpa.	86400	IN	DS	1 2 3 456
 
 
 ## Unbound
-```
+```conf
 trust-anchor-file: <path to key file>
 
 server:
