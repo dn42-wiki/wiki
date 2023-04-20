@@ -110,81 +110,107 @@ generate pki wireguard key-pair
 Private key: SOoPQdMdmXE3ssp0/vwwoIMhQqvcQls+DhDjmaLw03U=
 Public key: ArkXeK1c0pCWCouePcRRBCQpXfi4ZIvRFFwTxO60dxs=
 ```
-To retrieve keys later
+
+If you choose to generate unique keypairs for peerings, you can generate and install the keypair in a single command. Note that you have to be in `configure` mode, at the top level, as shown below:
+```shellsession
+vyos@vyos$ configure
+
+[edit]
+vyos@vyos# run generate pki wireguard key-pair install interface wg4242424242
+1 value(s) installed. Use "compare" to see the pending changes, and "commit" to apply.
+Corresponding public-key to use on peer system is: 'UcqcZsJvq1MlYgo3gObjaJ8FH+N7wkfV+EH3YDAMyRE='
+[edit]
+vyos@vyos-home# show interfaces wireguard wg4242424242 
++private-key kHCqfe/GZ8phoNnWfkL3+joXi/qK3ZfdfAnlNuX/9FU=
 ```
-show wireguard keypairs pubkey [key name]
+
+To retrieve keys later, use the op-mode command `show interfaces wireguard wg4242424242 public-key`.
 
 Example:
-show wireguard keypairs pubkey default
-ArkXeK1c0pCWCouePcRRBCQpXfi4ZIvRFFwTxO60dxs=
+```shellsession
+vyos@vyos$ show interfaces wireguard wg4242424242 public-key 
+UcqcZsJvq1MlYgo3gObjaJ8FH+N7wkfV+EH3YDAMyRE=
 ```
 
-### Configure First Peer
+### Configure First Peer's tunnel
+This example assumes that your ASN is 4242421234 and your peer's ASN is 4242424242
 ```
-set interfaces wireguard wg1234 description 'ASnnnnnnn - My First Peer'
-set interfaces wireguard wg1234 port '41234'
-set interfaces wireguard wg1234 private-key 'SOoPQdMdmXE3ssp0/vwwoIMhQqvcQls+DhDjmaLw03U='
+set interfaces wireguard wg4242424242 description 'AS4242424242 - My First Peer'
 
-# One of your DN42 IPv4 addresses (not really needed if you'll enable extended next-hop)
-set interfaces wireguard wg1234 address '172.20.20.1/32'
+# Common practice on DN42 is for peers to use 2+the last four digits of your peer's ASN as the port.
+# You will have to let your peer know what you choose for your port, as well as your clearnet IP address.
+set interfaces wireguard wg4242424242 port '24242'
+set interfaces wireguard wg4242424242 private-key 'SOoPQdMdmXE3ssp0/vwwoIMhQqvcQls+DhDjmaLw03U='
 
 # An arbitrary link-local IPv6 address (that you'll have to tell to your peer)
-set interfaces wireguard wg1234 address 'fe80::1234/128'
+set interfaces wireguard wg4242424242 address 'fe80::1234/64'
 
-set interfaces wireguard wg1234 peer location1 address '<clearnet ipv6 or ipv4 address of your peer wireguard endpoint>'
-set interfaces wireguard wg1234 peer location1 port '<wireguard endpoint port of your peer>'
+# One of your DN42 IPv4 addresses (not really needed if you'll enable extended next-hop)
+set interfaces wireguard wg4242424242 address '172.20.20.1/32'
+
+# Set your peer's clearnet endpoint information. You need to use an IPv4 or IPv6 address
+# (as opposed to a DNS name).
+# If you have a static IP address but your peer does not,
+# you can leave out this part of the configuration.
+set interfaces wireguard wg4242424242 peer location1 address '192.0.2.1'
+set interfaces wireguard wg4242424242 peer location1 port '21234'
 
 # You can allow everything here and relay on your firewall
-set interfaces wireguard wg1234 peer location1 allowed-ips '0.0.0.0/0'
-set interfaces wireguard wg1234 peer location1 allowed-ips '::/0'
-set interfaces wireguard wg1234 peer location1 public-key '<wireguard public key of your peer>'
+set interfaces wireguard wg4242424242 peer location1 allowed-ips '0.0.0.0/0'
+set interfaces wireguard wg4242424242 peer location1 allowed-ips '::/0'
+set interfaces wireguard wg4242424242 peer location1 public-key '<wireguard public key of your peer>'
 
 # (persistent-keepalive option could be optional, but in my case I noticed that helps starting BGP session)
-set interfaces wireguard wg1234 peer location1 persistent-keepalive '60'
+set interfaces wireguard wg4242424242 peer location1 persistent-keepalive '60'
 
 # Configure firewall
-set firewall interface wg1234 in ipv6-name 'Tunnels_In_v6'
-set firewall interface wg1234 in name 'Tunnels_In_v4'
-set firewall interface wg1234 local ipv6-name 'Tunnels_Local_v6'
-set firewall interface wg1234 local name 'Tunnels_Local_v4'
+set firewall interface wg4242424242 interface-group ipv6-name 'Tunnels_In_v6'
+set firewall interface wg4242424242 interface-group name 'Tunnels_In_v4'
+set firewall interface wg4242424242 local ipv6-name 'Tunnels_Local_v6'
+set firewall interface wg4242424242 local name 'Tunnels_Local_v4'
 
 ```
 
 ## BGP
 Now that we have a tunnel to our peer and theoretically can ping them, we can setup BGP.  
 ### Initial Router Setup
-`set protocols bgp system-as '424242XXXX'`
+```
+# Set your ASN and IP blocks
+set protocols bgp system-as '4242424242'
 
-_Insert your ASN_
+set protocols bgp address-family ipv4-unicast network 172.20.20.0/24`  
+set protocols bgp address-family ipv6-unicast network fd88:9deb:a69e::/48`
 
-`set protocols bgp address-family ipv4-unicast network 172.20.20.0/24`  
-`set protocols bgp address-family ipv6-unicast network fd88:9deb:a69e::/48`
+# Note that your address blocks should match your exact prefix as listed in the registry.
+# if you try to advertise a subnet of your assigned block, it could get filtered by some peers.
 
-_Insert your assigned network blocks. Note that they should match your exact prefix as listed in the registry; if you try to advertise a subnet of your assigned block it could get filtered by some peers._  
+# To keep it simple, just make your router ID match your lower IP within the DN42 registered space.
+set protocols bgp parameters router-id '172.20.20.1'
+```
 
-`set protocols bgp parameters router-id '172.20.20.1'`  
-
-_To keep it simple just make your router ID match your lower IP within the DN42 registered space._  
 
 ### Neighbor Up With Peers
 #### Option 1: MP-BGP (with Multi Protocol) - with Extended Next-Hop
 ```
-set protocols bgp neighbor fe80::1234 interface remote-as '<your peer ASN>'
-set protocols bgp neighbor fe80::1234 interface source-interface 'wg1234'
-set protocols bgp neighbor fe80::1234 remote-as '<your peer ASN>'
+# For these examples, your peer's link-local address is fe80::4242
 
-set protocols bgp neighbor fe80::1234 capability extended-nexthop
+set protocols bgp neighbor fe80::4242 interface v6only remote-as '4242424242'
+set protocols bgp neighbor fe80::4242 remote-as '4242424242'
+set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
+set protocols bgp neighbor fe80::4242 update-source 'wg4242424242'
 
-set protocols bgp neighbor fe80::1234 address-family ipv4-unicast 
-set protocols bgp neighbor fe80::1234 address-family ipv6-unicast 
+set protocols bgp neighbor fe80::4242 capability extended-nexthop
+
+set protocols bgp neighbor fe80::4242 address-family ipv4-unicast 
+set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
 ```
 #### Option 2: BGP (no Multi Protocol) - no Extended Next-Hop
 ```
 # First, we set the ipv6 part.
-set protocols bgp neighbor fe80::1234 interface remote-as '<your peer ASN>'
-set protocols bgp neighbor fe80::1234 interface source-interface 'wg1234'
-set protocols bgp neighbor fe80::1234 remote-as '<your peer ASN>'
-set protocols bgp neighbor fe80::1234 address-family ipv6-unicast 
+set protocols bgp neighbor fe80::4242 interface remote-as '4242424242'
+set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
+set protocols bgp neighbor fe80::4242 remote-as '4242424242'
+set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
 
 # For the ipv4 part we need to add first a static ipv4 route to our peer tunneled ipv4 address
 set protocols static route 172.20.x.y interface wg1234
