@@ -4,7 +4,7 @@ VyOS is an open source software router.  It is feature rich and supports multipl
 It can be downloaded here <https://www.vyos.io/rolling-release/>.  
 
 ## Firewall Baseline
-We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network’s edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface.
+We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network's edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface.
 
 By default, VyOS is a **stateless** firewall.  To enable **stateful** packet inspection globally enter the following commands.
 ```
@@ -12,7 +12,7 @@ set firewall state-policy established action 'accept'
 set firewall state-policy related action 'accept'
 ```
 
-We also need to accept invalids on our network’s edge.  However, this should not become common practice elsewhere.
+We also need to accept invalids on our network's edge.  However, this should not become common practice elsewhere.
 ```
 set firewall state-policy invalid action 'accept'
 ```
