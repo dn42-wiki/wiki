@@ -191,6 +191,7 @@ set protocols bgp parameters router-id '172.20.20.1'
 
 ### Neighbor Up With Peers
 #### Option 1: MP-BGP (with Multi Protocol) - with Extended Next-Hop
+MP-BGP peerings over IPv6 are recommended on DN42.
 ```
 # For these examples, your peer's link-local address is fe80::4242
 
@@ -198,11 +199,16 @@ set protocols bgp neighbor fe80::4242 interface v6only remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
 set protocols bgp neighbor fe80::4242 update-source 'wg4242424242'
+set protocols bgp neighbor fe80::4242 description 'FriendlyNet'
+
+# Set the RFC 9234 role to "peer". 
+set protocols bgp neighbor fe80::4242 local-role peer
 
 set protocols bgp neighbor fe80::4242 capability extended-nexthop
 
 set protocols bgp neighbor fe80::4242 address-family ipv4-unicast 
 set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
+
 ```
 #### Option 2: BGP (no Multi Protocol) - no Extended Next-Hop
 ```
@@ -211,6 +217,7 @@ set protocols bgp neighbor fe80::4242 interface remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
 set protocols bgp neighbor fe80::4242 remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
+set protocols bgp neighbor fe80::4242 description 'FriendlyNet'
 
 # For the ipv4 part we need to add first a static ipv4 route to our peer tunneled ipv4 address
 set protocols static route 172.20.x.y interface wg1234
@@ -218,14 +225,58 @@ set protocols static route 172.20.x.y interface wg1234
 # 172.20.x.y is your peer tunneled IPv4
 set protocols bgp neighbor 172.20.x.y remote-as '<your peer ASN>'
 set protocols bgp neighbor 172.20.x.y address-family ipv4-unicast 
+set protocols bgp neighbor 172.20.x.y description 'FriendlyNet'
 
 # This setting may need to be adjusted depending on circumstances
 set protocols bgp neighbor 172.20.x.y ebgp-multihop 20
 ```
 
-You can now check your BGP summary
 
-`show ip bgp summary`
+You can now check your BGP summary:
+
+```shellsession
+vyos@vyos$ show ip bgp summary
+
+IPv4 Unicast Summary (VRF default):
+BGP router identifier 172.20.20.1, local AS number 4242421234 vrf-id 0
+BGP table version 2782
+RIB entries 1378, using 258 KiB of memory
+Peers 1, using 1 MiB of memory
+Peer groups 1, using 64 bytes of memory
+
+Neighbor               V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
+fe80::4242             4 4242424242      1031         6        0    0    0 00:04:20          710        1 FriendlyNet
+
+IPv6 Unicast Summary (VRF default):
+BGP router identifier 172.20.20.1, local AS number 4242421234 vrf-id 0
+BGP table version 2782
+RIB entries 1378, using 258 KiB of memory
+Peers 1, using 1 MiB of memory
+Peer groups 1, using 64 bytes of memory
+
+Neighbor               V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
+fe80::4242             4 4242424242      1031         6        0    0    0 00:04:20          710        1 FriendlyNet
+```
+
+Setting up peer-groups might help standardize multiple peerings:
+
+```
+# One peer group for all IPv6 MP-BGP link-local extended-nexthop peers
+set protocols bgp peer-group dn42 address-family ipv4-unicast
+set protocols bgp peer-group dn42 address-family ipv6-unicast
+set protocols bgp peer-group dn42 capability extended-nexthop
+set protocols bgp peer-group dn42 local-role peer
+
+set protocols bgp neighbor fe80::4242 peer-group dn42
+
+# If you have any non-multiprotocol peerings you'll need to set up peer-groups
+# for the individual address families. This is left up to the reader.
+
+# Delete the settings that are now redundant
+delete protocols bgp neighbor fe80::4242 address-family
+delete protocols bgp neighbor fe80::4242 capability
+```
+
 
 ## RPKI/ROA Checking
 ### Setup RPKI Caching Server
@@ -330,10 +381,13 @@ set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map import 
 ```
 
 ## Credits
-This How-To has to be considered a work-in-progress by **Matwolf**.
+This How-To has to be considered a work-in-progress by **Matwolf** with parts co-authored by **bri**
 
 It's based on the original VyOS How-To made by **Owens Research**: [How-To/VyOS](/howto/vyos).
 
 The commands in this page have been adapted to be compatible with the new version of VyOS 1.4.x (sagitta) and to include configurations for IPv6 (MP-BGP over link-local and extended next-hop).
 
-If you have any questions or suggestions please reach me out.
+If you have any questions or suggestions please reach out.
+
+## See also
+[WireGuard](https://docs.vyos.io/en/latest/configuration/interfaces/wireguard.html) and [BGP](https://docs.vyos.io/en/latest/configuration/protocols/bgp.html) in the official VyOS documentation.
