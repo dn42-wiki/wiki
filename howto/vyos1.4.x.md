@@ -176,7 +176,7 @@ Now that we have a tunnel to our peer and theoretically can ping them, we can se
 ### Initial Router Setup
 ```
 # Set your ASN and IP blocks
-set protocols bgp system-as '4242424242'
+set protocols bgp system-as '4242421234'
 
 set protocols bgp address-family ipv4-unicast network 172.20.20.0/24`  
 set protocols bgp address-family ipv6-unicast network fd88:9deb:a69e::/48`
