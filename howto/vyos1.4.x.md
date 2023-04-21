@@ -380,6 +380,18 @@ set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map export 
 set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map import 'Default-Peering' 
 ```
 
+
+# Add your VyOS router to the [Global Route Collector](/services/Route-Collector)!
+```
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast
+set protocols bgp neighbor fd42:4242:2601:ac12::1 description 'https://lg.collector.dn42'
+set protocols bgp neighbor fd42:4242:2601:ac12::1 ebgp-multihop '10'
+set protocols bgp neighbor fd42:4242:2601:ac12::1 remote-as '4242422602'
+```
+
+
+
 ## Credits
 This How-To has to be considered a work-in-progress by **Matwolf** with parts co-authored by **bri**
 
