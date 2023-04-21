@@ -70,11 +70,14 @@ protocol bgp ROUTE_COLLECTOR
 
 Example VyOS 1.4 "Sagitta" config
 ```
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast
+# The route collector should never export routes, so let's make a route-map to reject them if it does.
+set policy route-map Deny-All rule 1 action deny
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast route-map import 'Deny-All'
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast route-map import 'Deny-All'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 description 'https://lg.collector.dn42'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 ebgp-multihop '10'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 remote-as '4242422602'
+
 ```
 
 
