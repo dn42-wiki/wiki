@@ -354,37 +354,37 @@ set policy prefix-list6 DN42-Network-v6 rule 10 le '128'
 set policy prefix-list6 DN42-Network-v6 rule 10 prefix 'fd00::/8'
 
 
-
-
 ##Block prefixes within internal network range, then allow everything else within DN42, then block everything else.
 set policy route-map Default-Peering rule 10 action 'deny'
 set policy route-map Default-Peering rule 10 description 'Prevent IP Conflicts'
 set policy route-map Default-Peering rule 10 match ip address prefix-list 'BlockIPConflicts'
 set policy route-map Default-Peering rule 11 action 'deny'
 set policy route-map Default-Peering rule 11 description 'Prevent IP Conflicts'
-set policy route-map Default-Peering rule 11 match ip address prefix-list6 'BlockIPConflicts-v6'
+set policy route-map Default-Peering rule 11 match ipv6 address prefix-list 'BlockIPConflicts-v6'
 set policy route-map Default-Peering rule 20 action 'permit'
 set policy route-map Default-Peering rule 20 description 'Allow DN42-Network'
-set policy route-map Default-Peering rule 20 match ip address prefix-list 'DN42-Network-Network'
+set policy route-map Default-Peering rule 20 match ip address prefix-list 'DN42-Network'
 set policy route-map Default-Peering rule 21 action 'permit'
 set policy route-map Default-Peering rule 21 description 'Allow DN42-Network'
-set policy route-map Default-Peering rule 21 match ip address prefix-list6 'DN42-Network-Network-v6'
+set policy route-map Default-Peering rule 21 match ipv6 address prefix-list 'DN42-Network-v6'
 set policy route-map Default-Peering rule 99 action 'deny'
 
 
 ##Apply the route-map on import/export
 
-set protocols bgp neighbor x.x.x.x address-family ipv4-unicast route-map export 'Default-Peering'
-set protocols bgp neighbor x.x.x.x address-family ipv4-unicast route-map import 'Default-Peering'
-set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map export 'Default-Peering'
-set protocols bgp neighbor x.x.x.x address-family ipv6-unicast route-map import 'Default-Peering' 
+set protocols bgp peer-group dn42 address-family ipv4-unicast route-map export 'Default-Peering'
+set protocols bgp peer-group dn42 address-family ipv4-unicast route-map import 'Default-Peering'
+set protocols bgp peer-group dn42 address-family ipv6-unicast route-map export 'Default-Peering'
+set protocols bgp peer-group dn42 address-family ipv6-unicast route-map import 'Default-Peering' 
 ```
 
 
 # Add your VyOS router to the [Global Route Collector](/services/Route-Collector)!
 ```
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast
+# The route collector should never export routes, so let's make a route-map to reject them if it does.
+set policy route-map Deny-All rule 1 action deny
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast route-map import 'Deny-All'
+set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast route-map import 'Deny-All'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 description 'https://lg.collector.dn42'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 ebgp-multihop '10'
 set protocols bgp neighbor fd42:4242:2601:ac12::1 remote-as '4242422602'
