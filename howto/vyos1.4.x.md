@@ -112,7 +112,7 @@ Public key: ArkXeK1c0pCWCouePcRRBCQpXfi4ZIvRFFwTxO60dxs=
 ```
 
 If you choose to generate unique keypairs for peerings, you can generate and install the keypair in a single command. Note that you have to be in `configure` mode, at the top level, as shown below:
-```shellsession
+```
 vyos@vyos$ configure
 
 [edit]
@@ -127,7 +127,7 @@ vyos@vyos-home# show interfaces wireguard wg4242424242
 To retrieve keys later, use the op-mode command `show interfaces wireguard wg4242424242 public-key`.
 
 Example:
-```shellsession
+```
 vyos@vyos$ show interfaces wireguard wg4242424242 public-key 
 UcqcZsJvq1MlYgo3gObjaJ8FH+N7wkfV+EH3YDAMyRE=
 ```
@@ -234,7 +234,7 @@ set protocols bgp neighbor 172.20.x.y ebgp-multihop 20
 
 You can now check your BGP summary:
 
-```shellsession
+```
 vyos@vyos$ show ip bgp summary
 
 IPv4 Unicast Summary (VRF default):
