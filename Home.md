@@ -72,7 +72,7 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 * [Hackerspace Bielefeld (German)](https://hackerspace-bielefeld.de)
 * [fixmix Technologies Ltd](https://dn42.fixmix.tech/)
 * [Strategic Explorations Ltd](https://strexp.net)
-* [perchnet](perchnet.md) (VPS donated by [Evolution Host](https://evolution-host.com))
+* [perchnet](perchnet) (VPS donated by [Evolution Host](https://evolution-host.com))
 
 ## About this wiki
 
