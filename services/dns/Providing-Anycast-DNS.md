@@ -1,4 +1,4 @@
-# DEPRECATED - Please have a look at [Hierarchical DNS](/services/dns/Old-Hierarchical-DNS) instead
+# DEPRECATED - Please have a look at [Hierarchical DNS](/services/Old-Hierarchical-DNS) instead
 
 You may want to participate in the anycast DNS cloud.
 

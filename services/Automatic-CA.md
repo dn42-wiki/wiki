@@ -157,7 +157,7 @@ _dn42_tlsverify.ca.dn42. IN TXT XUU-MNT:pin-sha256:Qu/X5GNqOo05TdL7oexkamE34OUuD
 
 After you set this TXT-Record for your domain, you can verify it with the following command (by replacing the domain with your own):
 
-```
+```sh
 $ dig +short TXT _dn42_tlsverify.ca.dn42.
 "XUU-MNT:pin-sha256:Qu/X5GNqOo05TdL7oexkamE34OUuDE60T+f0xc60UPQ="
 ```

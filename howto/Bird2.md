@@ -209,7 +209,7 @@ protocol rpki roa_dn42 {
 ```
 To reflect changes in the ROA table without a manual reload, **ADD** "import table" switch for both channels in your DN42 BGP template:
 
-```
+```conf
 template bgp dnpeers {
   ipv4 {
     ...existing configuration
@@ -236,7 +236,7 @@ Then for each peer, create a configuration file similar to this one:
 
 `/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
 
-```
+```conf
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
 }

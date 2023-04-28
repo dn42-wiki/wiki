@@ -148,7 +148,7 @@ Once configured, you can now use git to sign your commit as normal:
 - Use `git commit -S` to commit and sign your change.
 
 - If you have already committed your change without signing it, you can sign the existing commit using:
-```
+```sh
 git commit --amend --no-edit -S
 ```
 If you had already pushed your change to gitea, you must also do a force push (`git push --force`) to update the remote copy.

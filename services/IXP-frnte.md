@@ -91,7 +91,7 @@ protocol bgp ixp_rs from dnpeers {
 
 **What does this configuration do?**
 
-First we create a new BGP session (`protocol bgp`). This is based on the dnpeers template which can be found in the standard Bird2 configuration in the [wiki](https://dn42.eu/howto/Bird2). We name this session "ixp\_rs". However, this is only an internal name and can be replaced with another one.
+First we create a new BGP session (`protocol bgp`). This is based on the dnpeers template which can be found in the standard Bird2 configuration in the [wiki](/howto/Bird2). We name this session "ixp\_rs". However, this is only an internal name and can be replaced with another one.
 
 After that we determine with whom we want to have the session. This would be the RS. Therefore we put IPv6 address and ASN there.
 

@@ -35,7 +35,7 @@ The root zone for `dn42.` is built from the [whois registry](/services/Whois). I
 
 ## DNS services for other networks
 
-Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](/service/dns/External-DNS).
+Other networks are interconnected with dn42 (ChaosVPN, Freifunk, etc). Some of them also provide DNS service, you can configure your resolver to use it. See [External DNS](/services/dns/External-DNS).
 
 ## Providing DNS services
 
