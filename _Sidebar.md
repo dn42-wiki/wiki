@@ -17,6 +17,7 @@
   * [MPLS](/howto/mpls)
   * [Bird](/howto/Bird) / [Bird2](/howto/Bird2)
   * [Quagga](/howto/Quagga)
+  * [FRRouting](/howto/frr)
   * [OpenBGPD](/howto/OpenBGPD)
   * [Mikrotik RouterOS](/howto/mikrotik)
   * [EdgeRouter](/howto/EdgeOS-Config)
