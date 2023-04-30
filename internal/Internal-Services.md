@@ -68,7 +68,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 | Hostname / IP | Remarks |
 |:--------------|:--------|
-| <https://lounge.burble.dn42> | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/home/burble-dn42-services). |
+| <https://lounge.burble.dn42> | [thelounge](https://thelounge.chat/) for lurking on #dn42, see [burble.dn42 services](https://dn42.burble.com/services/internal/#loungeburbledn42). |
 | <https://irc.pebkac.dn42> | [thelounge](https://thelounge.chat/) for lurking on #dn42, ask TOMKAP-DN42 for an account |
 
 ## Images, E-Books, Videos and other Media
