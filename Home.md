@@ -72,11 +72,11 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
 * [Hackerspace Bielefeld (German)](https://hackerspace-bielefeld.de)
 * [fixmix Technologies Ltd](https://dn42.fixmix.tech/)
 * [Strategic Explorations Ltd](https://strexp.net)
-* [perchnet](perchnet) (VPS donated by [Evolution Host](https://evolution-host.com))
+* [perchnet](/perchnet) (VPS donated by [Evolution Host](https://evolution-host.com))
 
 ## About this wiki
 
-This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here](https://wiki.dn42.us) or [here](https://dn42.dev) or [here](https://dn42.tk) or [here](https://dn42.eu) or [here](https://dn42.wiki) or [here](https://dn42.cc) or [here (v6 only)](https://dn42.de) and for editing from within dn42, at <https://wiki.dn42> - [https](services/Certificate-Authority) required for editing.
+This wiki is the main reference about dn42.  It is available in read-only mode from the Internet [here](https://wiki.dn42.us) or [here](https://dn42.dev) or [here](https://dn42.tk) or [here](https://dn42.eu) or [here](https://dn42.wiki) or [here](https://dn42.cc) or [here (v6 only)](https://dn42.de) and for editing from within dn42, at <https://wiki.dn42> - [https](/services/Certificate-Authority) required for editing.
 
 ### DN42 Logo
 
