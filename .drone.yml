@@ -1,0 +1,18 @@
+kind: pipeline
+type: docker
+
+trigger:
+  branch:
+   - master
+
+steps:
+  - name: build
+    image: famfo/wiki-ng-sync
+    commands:
+    - bash  /scripts/sync.sh
+    environment:
+      # Gitea access token with repository read
+      # and write pemissions to wiki and wiki-ng
+      API_TOKEN:
+        from_secret: API_KEY
+
