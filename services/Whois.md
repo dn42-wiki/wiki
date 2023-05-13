@@ -123,6 +123,8 @@ $ cat /etc/whois.conf
 ^as761[0-9][0-9]$   whois.dn42
 # dn42 range 4242420000-4242429999
 ^as424242[0-9]{4}$ whois.dn42
+# NeoNetwork range
+^as420127[0-9]{4}$ whois.bandura.dn42
 # dn42 ipv4 address space
 ^172\.2[0-3]\.[0-9]{1,3}\.[0-9]{1,3}(/(1[56789]|2[0-9]|3[012]))?$ whois.dn42
 
