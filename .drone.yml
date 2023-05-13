@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 
@@ -16,3 +17,8 @@ steps:
       API_TOKEN:
         from_secret: API_KEY
 
+---
+kind: signature
+hmac: aecbf74e80aa00712ff2d52833db1cc57d67e9cf7dc94f86dc074a94e8e15b04
+
+...
