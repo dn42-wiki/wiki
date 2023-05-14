@@ -57,12 +57,13 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 ## IRC
 
-| Hostname / IP                 | SSL           | Remarks                                     |
-|:------------------------------|:------------- |:--------------------------------------------|
-| irc.hackint.dn42              |  Yes          | DN42                                        |
-| irc.hackint.hack/dn42         |  Yes          | ChaosVPN                                    |
-| irc.dn42                      |  Yes          | Internal IRC                                |
-| 172.22.69.1 / fda7:3ae7:e04d::1 | Yes         | BonoboNET                                   |
+| Hostname / IP                 | SSL           | Remarks                                           |
+|:------------------------------|:------------- |:--------------------------------------------------|
+| irc.hackint.dn42              |  Yes          | DN42                                              |
+| irc.hackint.hack/dn42         |  Yes          | ChaosVPN                                          |
+| irc.dn42                      |  Yes          | Internal IRC                                      |
+| 172.22.69.1 / fda7:3ae7:e04d::1 | Yes         | BonoboNET                                         |
+| irc.catgirls.dn42             | Yes           | Karx IRC, clearnet karx.xyz/6697, dn42 v6 only    |
 
 ### Clients
 
