@@ -8,7 +8,7 @@ Please sort by AS number.
 
 | AS | URL |
 |:--:|:--- |
-| 1955 | ext: telnet lg.hbone.hu // show ipv[46] bgp 65535 vpnuni rd 65535:42  |
+| 1955 | ext: $ telnet lg.hbone.hu #then: show ipv[46] bgp 65535 vpnuni rd 65535:42  |
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
 | 4242420181 | ext: <https://lg.dn42.miegl.cz> <br> dn42: <http://lg.mgl.dn42> |
