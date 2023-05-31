@@ -8,7 +8,7 @@ Please sort by AS number.
 
 | AS | URL |
 |:--:|:--- |
-| 1955 | ext: $ telnet://lg.hbone.hu <br> show ipv6 bgp 65535 vpnuni rd 65535:42  <br>show ipv6 bgp 65535 vpnuni rd 65535:42 <br>ext2: http://embed.ftelnet.ca/?Hostname=hbonelg.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto <br> this node have full v4/v6 unicast/multicast and some more fun tables from https://www.hbone.hu like inner ospfv2/v3, ldp and mpls-segment-routing states/trees, or the https://map.geant.org/ mdvpn routes and the looback0/32+label connectivity for them see the login banner for more things to look here|
+| 1955 | ext: <br>$ telnet lg.hbone.hu <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> ext2: <http://embed.ftelnet.ca/?Hostname=hbonelg.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br>this node have full v4/v6 unicast/multicast and some more fun tables from <https://www.hbone.hu> like inner ospfv2/v3, ldp and mpls-segment-routing states/trees, or the <https://map.geant.org/> mdvpn routes and the looback0/32+label connectivity for them see the login banner for more things to look here |
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
 | 4242420181 | ext: <https://lg.dn42.miegl.cz> <br> dn42: <http://lg.mgl.dn42> |
