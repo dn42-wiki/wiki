@@ -1,42 +1,35 @@
-## multicast
+## Multicast
 
-rfc8815 deprecated pim-sm so pim-ssm is the way to go!
+RFC 8815 deprecated PIM-SM so PIM-SSM is the way to go!
 
-for it to work, you'll need to do the following:
+### Setup
 
-ask your peering to enable ipv4/ipv6 multicast afi on your peering
+For it to work, you'll need to do the following:
+  * Ask your peering to enable ipv4/ipv6 multicast AFI on your peering
+  * Set up IPv4/IPv6 PIM for the (s,g) joins to pass through
+  * Be prepared to setup IGMP v3 and MLD v2 from your listeners
 
-set up ipv4/ipv6 pim for the (s,g) joins to pass through
+You're done! You should receive the multicast routes from peers advertising them.
 
-be prepared to igmpv3 and mldv2 from your listeners
-
-you're done, you should have your streams
-
-current participants:
-
-nop-mnt
-
-grawity-mnt
-
-mirsal-mnt
-
-C4TG1RL5-MNT -
-[frr configuration](https://git.lemonsh.moe/C4TG1RL5/dn42/src/branch/master/lab.rtr.famfo.catgirls.dn42/frr) 
+[FRR configuration](https://git.lemonsh.moe/C4TG1RL5/dn42/src/branch/master/lab.rtr.famfo.catgirls.dn42/frr) used by C4TG1RL5.
 _Please make sure you understand how to configure and use frr before you use anything from this configuration!_
 
-kioubit-mnt
+### Participants
 
-current streams:
+Current participants:
+  * NOP-MNT
+  * GRAWITY-MNT
+  * MIRSAL-MNT
+  * C4TG1RL5-MNT
+  * KIOUBIT-MNT
+  * PREVARINITE-MNT
 
-vlc rtp://172.23.199.110@232.2.3.2:1234/
+## Current streams
 
-controllable at <http://webdj.nop.dn42/>
+Public multicast to unicast relay with vlc4 and above:
+  * `vlc rtp://172.23.199.110@232.2.3.2:1234/`
+  * `vlc --amt-relay amt-relay.geant.org amt://10.2.255.1@232.2.3.2:1234/`
 
-public multicast to unicast relay with vlc4 and above:
+Controllable at <http://webdj.nop.dn42/>
 
-vlc --amt-relay amt-relay.geant.org amt://10.2.255.1@232.2.3.2:1234/
-
-it's the same stream but i had to nat it to my dn42 ip range to be listenable natively in dn42 :)
-
-
-feel free to ask for a peering and set it up!
+Feel free to ask for a peering and set it up!
