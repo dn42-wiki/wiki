@@ -22,6 +22,7 @@ Please sort by AS number.
 | 4242421050 | ext: <https://lg.dn42.napshome.net> <br> dn42: <http://lg.napshome.dn42> |
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
 | 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
+| 4242421197 | dn42: <https://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> <br> Not all nodes are currently accessable over it due to some nodes using frr |
 | 4242421722 | ext: <https://lg42.tchekda.fr> <br> dn42: <http://lg42.tchekda.dn42> |
 | 4242421780 | ext: <https://lg.sfsarfe.com> <br> dn42: <http://lg.sfsarfe.dn42> |
@@ -76,7 +77,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421092 | dn42: <http://lg.erg.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242421099 | ext: <https://lg.owensresearch.org> <br> dn42: <https://lg.owensresearch.dn42> <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute |
 | 4242421166 | dn42: <http://lg.alcatrash.dn42> |
-| 4242421197 | dn42: <https://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421224 | dn42: <http://lg.bit.dn42> |
 | 4242421231 | dn42: <http://lg.caesia.dn42> <br> ext: <https://lg.caesia.net> |
 | 4242421331<br>4242421332<br>207268 | ext: <https://lg.strexp.net> <br> dn42: <http://lg.nia.dn42> |
