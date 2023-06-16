@@ -186,11 +186,11 @@ Test out your skills with online challenges
 
 Providers of shell access:
 
-| Person        | Hostname                               | Net              | Description | Contact       |
-|:------------- |:-------------------------------------- |:---------------- |:---------------- |:------------- |
-| mc36          | `telnet test.nop.dn42`                   | dn42 only        |looking glass     | -             |
-| JerryXiao     | `ssh lg@lg.jerry.dn42`                   | dn42 and icvpn   |looking glass     | -             |
-| burble        | `ssh <mntner>@shell.fr-rbx1.burble.dn42` <br/> `ssh <mntner>@shell.ca-bhs2.burble.dn42` | dn42             | Full shell account | See below |
+| Person        | Hostname                                 | Net              | Description        | Contact       |
+|:------------- |:---------------------------------------- |:---------------- |:------------------ |:------------- |
+| mc36          | `telnet test.nop.dn42`                   | dn42 only        |looking glass       | -             |
+| JerryXiao     | `ssh lg@lg.jerry.dn42`                   | dn42 and icvpn   |looking glass       | -             |
+| burble        | `ssh <mntner>@shell.burble.dn42`         | dn42             | Full shell account | See below     |
 
 ### burble.dn42 shell access
 
