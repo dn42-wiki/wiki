@@ -317,7 +317,7 @@ There is some documentation in this wiki, like [gre-plus-ipsec](/howto/GRE-plus-
 
 ## Running a routing daemon
 
-You need a routing daemon to speak BGP with your peers. People usually run Quagga or Bird, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](BGP-on-Extreme-Summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
+You need a routing daemon to speak BGP with your peers. People usually run Bird or FRR, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](BGP-on-Extreme-Summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
 
 You can find [configuration examples for Bird here](/howto/Bird).
 
