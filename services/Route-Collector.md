@@ -106,12 +106,6 @@ The collector runs [bird_exporter](https://github.com/czerwonk/bird_exporter) an
 
  - <http://collector.dn42:9324/metrics>
 
-### ~~Flapping routes~~ (In maintenance)
-
-~~A real time view showing the number of route updates is available to help identify where routes are flapping:~~
-
- - ~~[https://flaps.collector.dn42/](https://flaps.collector.dn42/)~~
-
 ### SSH Interface
 
 The collector bird instance can be queried directly using a birdc shell.
