@@ -28,6 +28,7 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
     * ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
     * ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
     * /index.html: "fancy" human readable site; /raw: just your ip address; /api: json with ip,serverip,AS of server, location of server and "node_id"
+  * Observed routes over time (from the perspective of the C4TG1RL5 network): <https://catgirls.dn42/routes/>
 
 ### GeoIP Services
 [Map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
