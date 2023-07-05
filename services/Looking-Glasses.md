@@ -23,7 +23,7 @@ Please sort by AS number.
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
 | 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
 | 4242421197 | dn42: <https://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
-| 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg-at-vie1.catgirls.dn42> <br> Not all nodes are currently accessable over it due to operator laziness |
+| 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> |
 | 4242421722 | ext: <https://lg42.tchekda.fr> <br> dn42: <http://lg42.tchekda.dn42> |
 | 4242421780 | ext: <https://lg.sfsarfe.com> <br> dn42: <http://lg.sfsarfe.dn42> |
 | 4242421816 | ext: <https://lg.dn42.potat0.cc> <br> dn42: <http://lg.potat0.dn42> |
