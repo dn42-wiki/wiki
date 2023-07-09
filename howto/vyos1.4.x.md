@@ -195,14 +195,8 @@ MP-BGP peerings over IPv6 are recommended on DN42.
 ```
 # For these examples, your peer's link-local address is fe80::4242
 
-set protocols bgp neighbor fe80::4242 interface v6only remote-as '4242424242'
-set protocols bgp neighbor fe80::4242 remote-as '4242424242'
-set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
 set protocols bgp neighbor fe80::4242 update-source 'wg4242424242'
 set protocols bgp neighbor fe80::4242 description 'FriendlyNet'
-
-# Set the RFC 9234 role to "peer". 
-set protocols bgp neighbor fe80::4242 local-role peer
 
 set protocols bgp neighbor fe80::4242 capability extended-nexthop
 
@@ -213,8 +207,6 @@ set protocols bgp neighbor fe80::4242 address-family ipv6-unicast
 #### Option 2: BGP (no Multi Protocol) - no Extended Next-Hop
 ```
 # First, we set the ipv6 part.
-set protocols bgp neighbor fe80::4242 interface remote-as '4242424242'
-set protocols bgp neighbor fe80::4242 interface source-interface 'wg4242424242'
 set protocols bgp neighbor fe80::4242 remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
 set protocols bgp neighbor fe80::4242 description 'FriendlyNet'
@@ -265,7 +257,6 @@ Setting up peer-groups might help standardize multiple peerings:
 set protocols bgp peer-group dn42 address-family ipv4-unicast
 set protocols bgp peer-group dn42 address-family ipv6-unicast
 set protocols bgp peer-group dn42 capability extended-nexthop
-set protocols bgp peer-group dn42 local-role peer
 
 set protocols bgp neighbor fe80::4242 peer-group dn42
 
