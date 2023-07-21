@@ -28,6 +28,7 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
         * /raw: return your IP address as plain text
         * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 * Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
+* BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: https://flaps.pebkac.dn42
 
 ### GeoIP Services
 
@@ -35,19 +36,19 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
 
 #### API
 
-Results are in JSON format. 
+Results are in JSON format.
 
 ```
-http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en  
+http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en
 http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
 ```
 
 #### Client
 
-There is a client software using above apis to provide GeoIP-based traceroute. 
+There is a client software using above apis to provide GeoIP-based traceroute.
 It is a modified IPIP.NET Best Trace software with DN42 support injection.
 
-Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox. 
+Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox.
 
 **Since the original software is not open source, so use it at your own risk.**
 
@@ -89,6 +90,8 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | <https://live.jerry.dn42/>                        | Live audio stream powered by mpd                               |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
 | <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
+| <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
+| <https://sdr.pebkac.dn42/>                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
 
 ## File Sharing
 
@@ -96,10 +99,15 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 
 **FIXME**: Please add info about (approximate) bandwidth of the servers.
 
-| Hostname / IP                                               | Space | Speed       | Remarks                                        |
-|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------------------- |                              
-| <http://files.nop.dn42>                                     |       | max 1Mbit/s | download only                                  |
-| <http://rfc-editor.dn42>                                    |       | max 1Mbit/s | download only                                  |
+Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
+
+| Hostname / IP                                       | Remarks                                        |
+|:--------------------------------------------------- | ---------------------------------------------- |
+| <http://files.nop.dn42>                             | download only, max 1Mbit/s                     |
+| <http://rfc-editor.dn42>                            | download only, max 1Mbit/s                     |
+| <http://freertr.dn42/>                              | freeRouter main site                           |
+| <http://sources.nop.dn42>                           | freeRouter source tree                         |
+| <http://rtros.nop.dn42/>                            | freeRouter distribution                        |
 
 ## VPN
 
@@ -120,10 +128,6 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 |:------------------------------------------------- |:----------------------------------- |
 | *.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
 
-## OS Mirror/Repository's
-
-Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
-
 ## Gaming
 
 | Hostname / IP                                     | Game                   | Remarks                    |
@@ -141,6 +145,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 | telnet tetris.dn42                                | tetris in your terminal| other games available on request, ping mc36 @ irc |
 | <https://clicker.burble.dn42/>                    | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
+| [monkic.mk16.de](https://monkic.mk16.de/) | Monkic (Game in German) |
 
 ## Voice chat
 
@@ -174,12 +179,12 @@ Providers of shell access:
 
 ### burble.dn42 shell access
 
-Full shell accounts are available for all dn42 users. Usernames are 
+Full shell accounts are available for all dn42 users. Usernames are
 constructed using the MNTNER name, lowercased and without the '-MNT' suffix. SSH public keys are imported automatically from the registry or alternatively, a password can be used instead.
 
 See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for more details.
 
-## Personal/network/blogs websites 
+## Personal/network/blogs websites
 
 | Website                                     | Description                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -188,28 +193,31 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://mk16de.bandura.dn42/> | Marek's site |
 | <http://lpnet0.dn42/>                              | LAUNCHPAD-NETWORK official website |
 
-## Misc 
+## Pastebins
 
 | Hostname / IP                                     | Remarks                                                                        |
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| <http://paste.nop.dn42>                             | yet another paste service                                        |
+| <https://p.pebkac.dn42/>                            | PasteBin Service (Netcat/Bash CLI Client) |
+
+## Forums / Message boards
+
+| Hostname / IP                                     | Remarks                                                                        |
+| ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| <https://urandom.catgirls.dn42/>                    | Message board |
+
+## Misc
+
+| Hostname / IP                                     | Remarks                                                                        |
+| ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| <http://wiki.dn42>, <http://internal.dn42>          | This wiki!  Git Repo hosted on git.dn42
 | <http://www.nop.dn42/>                              | Basic "whatismyip" service                                       |
-| <http://freertr.dn42/>                              | freeRouter main site                                             |
-| <http://sources.nop.dn42>                           | freeRouter source tree                                           |
-| <http://webdj.nop.dn42/>                            | controller of the rtp://172.23.199.110@232.2.3.2:1234/ stream    |
 | <http://fun.nop.dn42/>                              | some funny images and videos                                     |
 | <http://pvrp.nop.dn42/>                             | a path vector igp main site                                      |
 | <http://lsrp.nop.dn42>                              | a link state igp main site                                       |
 | <http://hwp0rn.nop.dn42>                            | girls with switches and routers, a hwpr0n.se mirror              |
-| <http://paste.nop.dn42>                             | yet another paste service                                        |
-| <http://rtros.nop.dn42/>                            | freeRouter distribution                                          |
 | <http://ix.nop.dn42>                                | mcast-ix main site                                               |
-| <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |
-| <http://wiki.dn42>, <http://internal.dn42>          | This wiki!  Git Repo hosted on git.dn42                          |
-| <https://p.pebkac.dn42/>                            | PasteBin Service (Netcat/Bash CLI Client) |
-| <https://sdr.pebkac.dn42/>                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
-| <https://urandom.catgirls.dn42/>                    | Message board |
-| <https://flaps.pebkac.dn42/>                        | FlapAlertedPro by Kioubit hosted by AS4242422092 |
-| [Clearnet](https://monkic.mk16.de/), [dn42](https://monkic.mk16.de/) | Monkic (Game in German) |
+| <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |                         |
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 
 ## Usenet Servers / News
