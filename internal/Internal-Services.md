@@ -27,6 +27,7 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
     * API endpoints:
         * /raw: return your IP address as plain text
         * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
+* Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 
 ### GeoIP Services
 
