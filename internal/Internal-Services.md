@@ -20,11 +20,13 @@ n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), com
 * Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 * DN42 IP address lookup tool: [dn42.g-load.eu/lookup](https://dn42.g-load.eu/lookup/)
 * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
-* whatsmyip: 
-    * ipv4+ipv6: [myip.dn42](http://myip.dn42/) 
+* whatsmyip:
+    * ipv4+ipv6: [myip.dn42](http://myip.dn42/)
     * ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
     * ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
-    * /index.html: "fancy" human readable site; /raw: just your ip address; /api: json with ip,serverip,AS of server, location of server and "node_id"
+    * API endpoints:
+        * /raw: return your IP address as plain text
+        * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 
 ### GeoIP Services
 
