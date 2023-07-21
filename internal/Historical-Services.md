@@ -13,6 +13,9 @@ You can inspect the services status [on this page](https://services.dn42)
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
+  * IP base network map: [map.jh0project.dn42](https://jh0project.dn42/map) (DN42) or [dn42.jh0project.com](https://dn42.jh0project.com/map) (IANA) _(uses ping and traceroute the whole DN42's ipv4 addresss block.)_
+  * BGP lookup tool: [bgp.charlie.dn42](https://bgp.charlie.dn42/) (DN42)
+  * Observed routes over time (from the perspective of the C4TG1RL5 network): <https://catgirls.dn42/routes/>
 
 ### DNS Hosting
 Free DNS Hosting is provided by tombii - currently in a beta test phase. Please contact tombii in #dn42 to get an account.
@@ -60,6 +63,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 | <http://yacy.dn42> (OFFLINE 2020-01-18)             | YaCy search engine. Indexing local nets                  |
 | _Configuring Yacy Network settings:_              |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
 | <http://mhm.dn42/search>                            | Hosted by toBee                                          |
+| <search.marlinc.dn42>                               | Hosted by marlinc                                        |
 
 ## Radio and Video Streaming
 
@@ -69,6 +73,8 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 | <http://stream.media.dn42/>                         | icecast-relay, contact toBee for more streams (DOWN 2020-11-02) |
 | <http://radio.hex.dn42/>                            | Ambient musics                                                  |
 | <https://yp.unknownts.dn42/>                        | A YellowPages for internet radio stations inside dn42          |
+| <http://deep.radio.unknownts.dn42/>                 | Internet radio playing random music                            |
+| <http://rickroll.dn42>                              | Play Rickroll Video                                            |
 
 ## Images, E-Books, Videos and other Media
 
@@ -82,7 +88,7 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
 ### FTP / HTTP
 
 | Hostname / IP                                               | Space | Speed       | Remarks                                        |
-|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------- |                              
+|:----------------------------------------------------------- |:----- |:----------- |:---------------------------------- |
 | <http://filer.mhm.dn42>                                       |  4TB  | 1GBit       | 24/7/365                           |
 | <http://data.0l.dn42>                                         |  5TB  | 1GBit       | 24/7/365, download, dn42 MRT dumps |
 | <http://seafile.dn42>                                         |       |             | Opensource Dropbox, yay!                       |
@@ -132,6 +138,10 @@ https://rest.dn42/
 | ntp.e-utp.dn42 (172.22.165.50)                    | Stratum 1, GPS+NMEA                 |
 | ntp1.nixnodes.dn42 (172.22.177.123)               |                                     |
 | ntp2.nixnodes.dn42 (172.22.177.124)               |                                     |
+| ntp.martin89.dn42                                 | more than one A records/server      |
+| tick.gotroot.dn42 (172.20.14.247)                 | Stratum 1, GPS, Vancouver Canada    |
+| tock.gotroot.dn42 (172.20.14.250)                 | Stratum 2, Anycast on each node     |
+| ntp.yuetau.dn42 (172.21.68.50)                    | Anycast on all node                 |
 
 ## OS Mirror/Repository's
 
@@ -147,35 +157,48 @@ Also check [Repository Mirrors](/services/Repository-Mirrors)
 | ~~http://freebsd.e-utp.dn42~~(OFFLINE 2016-08-24) | FreeBSD Homepage mirror             |                                     |
 | <http://mirrors.zhaofeng.dn42/archlinux>          | Arch Linux                          | Every hour          |
 
+### Direct Connect
+Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Connect) Hubs are being run DN42 internally. Choose a [client](https://en.wikipedia.org/wiki/Comparison_of_ADC_software#Client_software) and connect to exchange files.
 
-## Misc 
+| Address                        |
+|:-------------------------------|
+| adcs://hub.dcpp.dn42:1511      |
+| dchub://hub.dcpp.dn42:2780     |
+| dchub://dcpp.grmml.dn42:4111   |
+
+
+## Misc
 
 | Hostname / IP                                     | Remarks                                                                        |
-| ------------------------------------------------- | ------------------------------------------------------------------------------ | 
-| <https://bin.dn42> | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
+| ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| <https://bin.dn42> | AES-encrypted pastebin-like service ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | <http://pastebin.trunet.dn42>                       | AES-encrypted pastebin-like ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
-| ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) | 
+| ~~http://zerobin.e-utp.dn42~~                     | AES-encrypted pastebin-like, second one ([zerobin](https://github.com/sebsauvage/ZeroBin)) |
 | <https://pad.dn42> | [Etherpad](http://etherpad.org) service for collaborative work |
 | <http://ip.synhacx.dn42>                            | Basic "whatismyip" service ([description](http://synhacx.dn42/showmyip))       |
-| <http://tor.e-utp.dn42>                             | Tor Project Homepage mirror  |   
+| <http://tor.e-utp.dn42>                             | Tor Project Homepage mirror  |
 | <http://ngit.dn42>                                  ||
 | nntp://news.blacksheep.dn42                       | Martin's newsgroup server (ping MB-DN42 for a rw account or a nntp/uucp feed)  |
 | mumble://shard.smrsh.dn42:64738                   | [Mumble](http://mumble.sourceforge.net/) Voice Chat |
 | ts3.kai-server.dn42 / ts3.fastnameserver.eu       | Teamspeak 3 Server (also reachable over clearnet) |
 | <https://whois.rest.dn42/>                          | whois restful API |
 | [pgp.dn42](http://pgp.dn42)                                          | PGP keyserver, [synchronizes](http://pgp.dn42/pks/lookup?op=stats) with the SKS keyservers |
-| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us) |               
+| https://git.dn42[.us]                             | Git Repository Hosting (Signup: email ssh pubkey to xuu@dn42.us) |
 | https://git.dn42[.us]/pubkeys/[username]          | Get ssh public keys from Git Users of git.dn42. |
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | <http://nowhere.ws/dn42>                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | <https://paste.weiti.dn42>                          | AES-encrypted pastebin-like (privatebin) |
-
+| <https://bbs.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
+| <http://jack.pyropeter.eu/dn42/routecount/>         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
+| [Clearnet](https://flapping.p2p-node.de/dashboard/), [dn42](https://flapping.bandura.dn42/dashboard), [NeoNetwork](https://flapping.bandura.neo/dashboard/) | FlapAlertedPro by Kioubit hosted by mark22k |
 
 ## Gaming
 
 | Hostname / IP                                     | Game                   | Remarks                    |
 |:------------------------------------------------- |:---------------------- |:-------------------------- |
-| mc.nia.dn42 (172.20.168.133, fd01:1926:817:3::)                      | Minecraft              | 1.16.4 Mod, Optimized for CN   |
+| mc.nia.dn42 (172.20.168.137, fd01:1926:817:7::)   | Minecraft              | Latest Stable, Optimized for CN , Map available on mc-map.nia.dn42 |
+| hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
+| ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD | 1.10.3, Hosted in NL   |
 
 ## DN42 FreePhone
 Somebody was providing a FreePhone [here](/services/FreePhone)
