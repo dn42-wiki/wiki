@@ -165,7 +165,7 @@ Test out your skills with online challenges
 | Start here                                        | Remarks                            |
 |:------------------------------------------------- |:---------------------------------- |
 | <https://burble.dn42/services/ping/>              | burble.dn42 ping challenge         |
-| <http://172.20.14.37:3333/>                       | Kioubit.dn42 challenge             |
+| <http://kioubit.dn42/challenge/>                  | Kioubit.dn42 challenge             |
 
 ## Shell
 
