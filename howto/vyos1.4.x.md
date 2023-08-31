@@ -7,18 +7,18 @@ It can be downloaded here <https://www.vyos.io/rolling-release/>.
 We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network's edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface.
 
 By default, VyOS is a **stateless** firewall.  To enable **stateful** packet inspection globally enter the following commands.
-```shell
+```sh
 set firewall state-policy established action 'accept'
 set firewall state-policy related action 'accept'
 ```
 
 We also need to accept invalids on our network's edge.  However, this should not become common practice elsewhere.
-```shell
+```sh
 set firewall state-policy invalid action 'accept'
 ```
 
 The below commands create **in** and **local** baseline templates to be applied to all Wireguard interfaces that are facing peers.  In this example, **172.20.20.0/24** and **fd88:9deb:a69e::/48** are your assigned address spaces.
-```shell
+```sh
 #Create Groups v4
 set firewall group network-group Allowed-Transit-v4 network '10.0.0.0/8'
 set firewall group network-group Allowed-Transit-v4 network '172.20.0.0/14'
@@ -127,14 +127,14 @@ vyos@vyos-home# show interfaces wireguard wg4242424242
 To retrieve keys later, use the op-mode command `show interfaces wireguard wg4242424242 public-key`.
 
 Example:
-```shell
+```sh
 vyos@vyos$ show interfaces wireguard wg4242424242 public-key 
 UcqcZsJvq1MlYgo3gObjaJ8FH+N7wkfV+EH3YDAMyRE=
 ```
 
 ### Configure First Peer's tunnel
 This example assumes that your ASN is 4242421234 and your peer's ASN is 4242424242
-```shell
+```sh
 set interfaces wireguard wg4242424242 description 'AS4242424242 - My First Peer'
 
 # Common practice on DN42 is for peers to use 2+the last four digits of your peer's ASN as the port.
@@ -173,7 +173,7 @@ set firewall interface wg4242424242 local name 'Tunnels_Local_v4'
 ## BGP
 Now that we have a tunnel to our peer and theoretically can ping them, we can setup BGP.  
 ### Initial Router Setup
-```shell
+```sh
 # Set your ASN and IP blocks
 set protocols bgp system-as '4242421234'
 
@@ -191,7 +191,7 @@ set protocols bgp parameters router-id '172.20.20.1'
 ### Neighbor Up With Peers
 #### Option 1: MP-BGP (with Multi Protocol) - with Extended Next-Hop
 MP-BGP peerings over IPv6 are recommended on DN42.
-```shell
+```sh
 # For these examples, your peer's link-local address is fe80::4242
 
 set protocols bgp neighbor fe80::4242 update-source 'wg4242424242'
@@ -204,7 +204,7 @@ set protocols bgp neighbor fe80::4242 address-family ipv6-unicast
 
 ```
 #### Option 2: BGP (no Multi Protocol) - no Extended Next-Hop
-```shell
+```sh
 # First, we set the ipv6 part.
 set protocols bgp neighbor fe80::4242 remote-as '4242424242'
 set protocols bgp neighbor fe80::4242 address-family ipv6-unicast 
@@ -225,7 +225,7 @@ set protocols bgp neighbor 172.20.x.y ebgp-multihop 20
 
 You can now check your BGP summary:
 
-```shell
+```sh
 show ip bgp summary
 
 IPv4 Unicast Summary (VRF default):
@@ -251,7 +251,7 @@ fe80::4242             4 4242424242      1031         6        0    0    0 00:04
 
 Setting up peer-groups might help standardize multiple peerings:
 
-```shell
+```sh
 # One peer group for all IPv6 MP-BGP link-local extended-nexthop peers
 set protocols bgp peer-group dn42 address-family ipv4-unicast
 set protocols bgp peer-group dn42 address-family ipv6-unicast
@@ -274,20 +274,20 @@ You can achieve this by running docker on a seperate server in the network but a
 ### Setup RPKI Caching Server on the Vyos machine
 
 Run this command in operation mode to pull the container image to the vyos machine.
-```shell
+```sh
 add container image cloudflare/gortr
 ```
 
 Run the following commands in configuration mode:
 
 To create the network for the prki container so it is only reachable on the vyos machine.
-```shell
+```sh
 set container network rpki
 set container network rpki prefix 172.16.2.0/24
 ```
 
 To create the container itself
-```shell
+```sh
 set container name gortr image cloudflare/gortr
 set container name gortr command "-cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082"
 set container name gortr network rpki address 172.16.2.10
@@ -298,20 +298,20 @@ set container name gortr restart on-failure
 But its also possible to setup the container on a seperate machine.
 Run the following docker command to setup the clouflare gortr container on a seperate server with docker installed.
 
-```shell
+```sh
 docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082
 ```
 This will start a docker container that listens on the host server's IP at port 8082.
 
 ### Point VyOS Router at RPKI Caching Server
 
-```shell
+```sh
 set protocols rpki cache <ip address of your GoRTR instance> port '8082'
 set protocols rpki cache <ip address of your GoRTR instance> preference '1'   
 ```
 
 You can check the connection with `show rpki cache-connection` the output will look like this:
-```shell
+```sh
 show rpki cache-connection
 Connected to group 1
 rpki tcp cache <ip address of your GoRTR instance>  8082 pref 1 (connected)
@@ -320,7 +320,7 @@ rpki tcp cache <ip address of your GoRTR instance>  8082 pref 1 (connected)
 You can also see the received prefix-table with `show rpki prefix-table`.  
 
 ### Create Route Map
-```shell
+```sh
 set policy route-map DN42-ROA rule 10 action 'permit'
 set policy route-map DN42-ROA rule 10 match rpki 'valid'
 set policy route-map DN42-ROA rule 20 action 'permit'
@@ -334,7 +334,7 @@ You can also consider to "deny" the "notfound" prefixes, for better control.
 You can also consider to combine within the same route-map the RPKI and one or more a prefix lists containing your internal network prefixes, as described later (The example "No RPKI/ROA and Internal Network Falls Into DN42 Range").
 
 ### Assign Route Map to Neighbor
-```shell
+```sh
 set protocols bgp neighbor fe80::1234 address-family ipv4-unicast route-map export 'DN42-ROA'
 set protocols bgp neighbor fe80::1234 address-family ipv4-unicast route-map import 'DN42-ROA'
 set protocols bgp neighbor fe80::1234 address-family ipv6-unicast route-map export 'DN42-ROA'
@@ -344,7 +344,7 @@ _Remember to do that for all your new peerings!_
 
 ## Example Route Map
 ### No RPKI/ROA and Internal Network Falls Into DN42 Range
-```shell
+```sh
 ##Build prefix list to match personal internal network
 set policy prefix-list BlockIPConflicts description 'Prevent Conflicting Routes'
 set policy prefix-list BlockIPConflicts rule 10 action 'permit'
@@ -403,7 +403,7 @@ set protocols bgp peer-group dn42 address-family ipv6-unicast route-map import '
 
 
 # Add your VyOS router to the [Global Route Collector](/services/Route-Collector)!
-```shell
+```sh
 # The route collector should never export routes, so let's make a route-map to reject them if it does.
 set policy route-map Deny-All rule 1 action deny
 set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast route-map import 'Deny-All'
