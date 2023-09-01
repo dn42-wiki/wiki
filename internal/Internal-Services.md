@@ -135,7 +135,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | yuan.nia.dn42 (172.20.168.244)                    | Genshi Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet  |
 | mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
 | mc.jerry.dn42 & jerry.dn42                        | Minecraft              | latest, IPv4 & IPv6 |
-| mc.razuritta.dn42                             | Minecraft | latest(1.19.4 atm), IPv4 and IPv6, map at https://mcmap.razuritta.dn42/ |
+| mc.razuritta.dn42                             | Minecraft | latest(1.20.1 atm), IPv4 and IPv6, map at https://mcmap.razuritta.dn42/ |
 | mc.northrend.dn42 (172.20.222.240)		    | Minecraft		     | latest, IPv4 only   |
 | redtrap.northrend.dn42 (172.20.222.252)	    | Minecraft		     | RedTrap DN42 Bridge, 1.8.8 - 1.19, IPv4 only   |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
