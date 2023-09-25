@@ -1,14 +1,16 @@
 To quote from <https://frrouting.org/>:
 
-"FRRouting (FRR) is a free and open source Internet routing protocol suite for Linux and Unix platforms. It implements BGP, OSPF, RIP, IS-IS, PIM, LDP, BFD, Babel, PBR, OpenFabric and VRRP, with alpha support for EIGRP and NHRP."
+> FRRouting (FRR) is a free and open source Internet routing protocol suite for Linux and Unix platforms. It implements BGP, OSPF, RIP, IS-IS, PIM, LDP, BFD, Babel, PBR, OpenFabric and VRRP, with alpha support for EIGRP and NHRP.
 
 It features a similar configuration style to Cisco IOS.
 
 ### Installation 
-Install the `frr` and `frr-pythontools` package on your favourite Linux/BSD distribution. For BGP RPKI support, also install `frr-rpki`. _Make sure you are using frr version 8.5 or greater for IPv6 link local peerings._
+Install the `frr` and `frr-pythontools` package on your favourite Linux/BSD distribution. For BGP RPKI support, also install `frr-rpki`. _Make sure you are using FRR version 8.5 or greater for IPv6 link local peerings._
 
 - More installation options: <https://docs.frrouting.org/en/latest/installation.html>
-- Releases: <https://frrouting.org/release/>
+- releases: <https://frrouting.org/release/>
+
+If your distribution doesn't have the latest FRR version, check the releases page. FRR supplies Debian packages, RPM packages and Snaps.
 
 ## Configuration
 
