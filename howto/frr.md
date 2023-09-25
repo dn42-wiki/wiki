@@ -101,18 +101,22 @@ router bgp <AS of the network>
  neighbor <IPv6 peer address> interface <Peer interface>
  !
  address-family ipv4 unicast
+  network <Your IPv4 subnet>
   neighbor <IPv4 peer address> activate
   neighbor <IPv4 peer address> route-map dn42 in
   neighbor <IPv4 peer address> route-map dn42 out
  exit
  !
  address-family ipv6 unicast
+  network <Your IPv6 subnet>
   neighbor <IPv6 peer address> activate
   neighbor <IPv6 peer address> route-map dn42v6 in
   neighbor <IPv6 peer address> route-map dn42v6 out
  exit
 exit
 ```
+
+**Note**: to advertise your prefixes, you will also have to have the full prefix assigned to an interface on the system.
 
 With everything configured, the BGP session should come up. In the normal VTY shell mode the status of BGP peerings can be checked using the `show bgp summary` command.
 
@@ -126,12 +130,14 @@ router bgp <Your AS here>
  neighbor <Peer IPv6> interface <Peer interface>
  !
  address-family ipv4 unicast
+  network <Your IPv4 subnet>
   neighbor <IPv4 peer address> activate
   neighbor <IPv4 peer address> route-map dn42 in
   neighbor <IPv4 peer address> route-map dn42 out
  exit
  !
  address-family ipv6 unicast
+  network <Your IPv6 subnet>
   neighbor <IPv6 peer address> activate
   neighbor <IPv6 peer address> route-map dn42v6 in
   neighbor <IPv6 peer address> route-map dn42v6 out
