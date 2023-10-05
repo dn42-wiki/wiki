@@ -2,6 +2,8 @@ Bird is a commonly used BGP daemon.  This page provides configuration and help t
 Compared to quagga, bird supports multiple routing tables, which is useful, if you also plan to peer with other federated networks such as freifunk. In the following a working configuration for dn42 is shown. If you 
 want to learn the practical details behind routing protocols in bird, see the following [guide](https://github.com/knorrie/network-examples)
 
+**Bird 1.6.x will be EOL by the end of 2023, it's recommended to upgrade to 2.13.**
+
 # Debian
 In the Debian release cycle the bird packages may become outdated at times, if that is the case you should use the official bird package repository maintained by the developers of nic.cz.
 
