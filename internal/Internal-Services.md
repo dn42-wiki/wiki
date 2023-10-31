@@ -145,7 +145,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 | telnet tetris.dn42                                | tetris in your terminal| other games available on request, ping mc36 @ irc |
 | <https://clicker.burble.dn42/>                    | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
-| [monkic.mk16.de](https://monkic.mk16.de/) | Monkic (Game in German) |
+| [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/) | Monkic (Game in German) |
 
 ## Voice chat
 
