@@ -88,6 +88,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | Hostname / IP                                     | Remarks                                                        |
 |:------------------------------------------------- |:-------------------------------------------------------------- |
 | <https://live.jerry.dn42/>                        | Live audio stream powered by mpd                               |
+| <http://radio.vr18.dn42/>                         | Online radio by vr18                                           |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
 | <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
 | <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
@@ -190,6 +191,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 | <https://burble.dn42/>                              | burble.dn42 website |
 | <http://www.marlinc.dn42/>                          | Marlinc website     |
+| <http://vr18.dn42/>                                 | vr18.dn42 website   |
 | <https://mk16de.bandura.dn42/> | Marek's site |
 | <http://lpnet0.dn42/>                              | LAUNCHPAD-NETWORK official website |
 
@@ -217,7 +219,8 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://lsrp.nop.dn42>                              | a link state igp main site                                       |
 | <http://hwp0rn.nop.dn42>                            | girls with switches and routers, a hwpr0n.se mirror              |
 | <http://ix.nop.dn42>                                | mcast-ix main site                                               |
-| <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |                         |
+| <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |
+| <http://speed.vr18.dn42/>                           | vr18 speedtest (100/20mb internet)                               |                         |
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 
 ## Usenet Servers / News
