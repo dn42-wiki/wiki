@@ -220,7 +220,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://hwp0rn.nop.dn42>                            | girls with switches and routers, a hwpr0n.se mirror              |
 | <http://ix.nop.dn42>                                | mcast-ix main site                                               |
 | <http://mpls.dn42/>                                 | a brief description of MPLS technology                           |
-| <http://speed.vr18.dn42/>                           | vr18 speedtest (100/20mb internet)                               |                         |
+| <http://speed.vr18.dn42/>                           | vr18 speedtest (100/20 mbit internet)                               |                         |
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 
 ## Usenet Servers / News
