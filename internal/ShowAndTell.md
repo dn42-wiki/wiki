@@ -1,6 +1,6 @@
 # dn42 Show and Tell
 
-Let us know the most creative, best, strangest, complex, wierd or just plain fun setups that you've created with dn42. 
+Let us know the most creative, best, strangest, complex, wierd or just plain fun setups that you've created with dn42.
 
 Document your mad setups in the categories below, with links to a full write up, photos and screenshots welcome.
 
@@ -37,7 +37,7 @@ Document your mad setups in the categories below, with links to a full write up,
    - Microprocessors (ESP32, Arduino, Pico etc) or FPGAs
    - Connect your phone, watch, tv, clock, washing machine etc
 
-*... your stuff goes here*  
+*... your stuff goes here*
 
 ***
 
@@ -52,16 +52,20 @@ Document your mad setups in the categories below, with links to a full write up,
 
    ![Screenshot of Win98 showing "Connection Established"](/internal/images/win98dun.png)
 
+ - jlu5: a Windows Server running BGP and receiving dn42 routes! ([Full writeup here](https://jlu5.com/blog/bgp-dn42-windows-server))
+
+   ![GoBGP and route table output on Windows](/internal/images/gobgp-windows.png)
+
 ## Things that use dn42
  - Fun stuff that you've done with dn42
 
 *Examples*:
  - Fun with hardware
-   - home automation or IoT over dn42 
+   - home automation or IoT over dn42
  - Fun with networking
    - Unique or obscure network and routing protocols
 
-*... your stuff goes here*  
+*... your stuff goes here*
 
 ***
 
