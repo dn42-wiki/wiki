@@ -56,6 +56,14 @@ Windows only, no virus scan report available, but our DLL source is provided wit
 Preview: <http://img.dn42/images/GEOTRACE42.jpg><br>
 Link: <http://map.dn42/BestTrace42.zip>
 
+### IX Services
+
+|Name     |Wiki Page                          |AS Number |Related Link(s)                           |
+|:--------|:----------------------------------|:---------|:-----------------------------------------|
+|IXP-frnte|[IXP-frnte](/services/IXP-frnte.md)|4242421081|N/A                                       |
+|IX2      |[IX2](/services/IX2.md)            |4242421951|N/A                                       |
+|SERNET-IX|[SERNET-IX](/services/SERNET-IX.md)|4242422245|[SERNET-IX](https://blog.sherpherd.top/ix)|
+
 ### ASN Authentication Solution
 
 Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
