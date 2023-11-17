@@ -232,6 +232,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://speed.vr18.dn42/>                           | vr18 speedtest (100/20 mbit internet)                            |
 | <http://it.vr18.dn42/>                              | handy tools for developers                                       |
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
+| <https://ntfy.weil-isso.dn42>                       | NTFY (Push Notify via REST-API)                                   |
 
 ## Usenet Servers / News
 
