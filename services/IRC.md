@@ -1,7 +1,7 @@
 # IRC
 > TLDR: irc.hackint.dn42, #dn42
 
-We have an IRC Chatroom on the [hackint-Network](http://www.hackint.org). It is reachable from within DN42, ChaosVPN and the public internet. A connection is only possible via TLS on port 6697.
+We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is reachable from within DN42, ChaosVPN and the public internet. A connection is only possible via TLS on port 6697.
 
 | Network | Hostname                                 |  SSL        | IPv4                       | IPv6         |
 |:--------|:------------------------------------------|:------ |:-------------------------- |:------------ |
