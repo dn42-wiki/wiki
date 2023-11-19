@@ -179,6 +179,6 @@ exit
 
 ### Configuration tipps 
 
-- Use [peer groups](https://docs.frrouting.org/en/latest/bgp.html#peer-groups) (_Strongly reccomended to limit the work neede to add new peers or change general configuration for may peers._)
+- Use [peer groups](https://docs.frrouting.org/en/latest/bgp.html#peer-groups) (_Strongly recommended to limit the work neede to add new peers or change general configuration for may peers._)
 - `tab` and `?` are your best friends in the VTY shell
 - Use `find REGEX` in the VTY shell to find certain commands
