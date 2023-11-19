@@ -1,6 +1,6 @@
 # Quagga
 
-Quagga is probably one of the oldest software router around.  It still works, of course, even though it has an unattractive configuration syntax (unfortunately inspired by  [Cisco's IOS](https://dn42.net/howto/IPsecWithPublicKeys/CiscoIOSExample)) and has some small issues with IPv6.  But since it's so old, you will find a lot of configuration examples around.
+Quagga is probably one of the oldest software router around.  It still works, of course, even though it has an unattractive configuration syntax (unfortunately inspired by  [Cisco's IOS](/howto/IPsecWithPublicKeys/CiscoIOSExample)) and has some small issues with IPv6.  But since it's so old, you will find a lot of configuration examples around.
 
 ## Source address selection
 
