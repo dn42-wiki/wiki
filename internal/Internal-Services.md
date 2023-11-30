@@ -100,6 +100,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | <http://radio.vr18.dn42/>                         | Online radio by vr18                                           |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
 | <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
+| <http://radio.vrpnet.org:8000/radio.ogg>          | Online radio by Pi3rrot on VRPNET                             |
 | <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
 | <https://sdr.pebkac.dn42/>                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
 
