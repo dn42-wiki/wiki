@@ -103,6 +103,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | <https://radio.vrpnet.dn42>                        | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap    |
 | <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
 | <https://sdr.pebkac.dn42/>                          | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital |
+| <http://kz.dn42:8888/6MusicProxy/index.m3u8>        | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)
 
 ## File Sharing
 
