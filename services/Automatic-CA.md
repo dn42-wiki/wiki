@@ -1,7 +1,7 @@
 DN42 ACME CA
 ==================
 
-Certificates can be automatically generated with the [ACME-CA](http://acme.dn42) using [acme.sh](https://github.com/acmesh-official/acme.sh) or [lego](https://github.com/go-acme/lego). More information can be found on [acme.dn42](http://acme.dn42/)
+Certificates can be automatically generated with the [ACME-CA](https://burble.dn42/services/acme/) using [acme.sh](https://github.com/acmesh-official/acme.sh) or [lego](https://github.com/go-acme/lego) or [Caddy](https://caddyserver.com/). More information can be found on [https://burble.dn42/services/acme/](https://burble.dn42/services/acme/)
 
 DN42 Self-Serve CA
 ==================
