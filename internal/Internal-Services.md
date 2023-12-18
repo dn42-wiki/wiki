@@ -10,7 +10,10 @@ There is a search engine at [search.dn42](https://search.dn42) that can also be 
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
 
-n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+
+> ***Currently Down as of 12/18/23 <br>
+> n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
 ## Network-related
 
