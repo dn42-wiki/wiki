@@ -25,6 +25,7 @@ Please sort by AS number.
 | 4242421146 | ext: <https://lg.amcforum.wiki> |
 | 4242421197 | dn42: <http://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> |
+| 4242421588 | dn42: <http://lg.tech9computers.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242421722 | ext: <https://lg42.tchekda.fr> <br> dn42: <http://lg42.tchekda.dn42> |
 | 4242421780 | ext: <https://lg.sfsarfe.com> <br> dn42: <http://lg.sfsarfe.dn42> |
 | 4242421816 | ext: <https://lg.dn42.potat0.cc> <br> dn42: <http://lg.potat0.dn42> |
@@ -81,7 +82,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421224 | dn42: <http://lg.bit.dn42> |
 | 4242421231 | dn42: <http://lg.caesia.dn42> <br> ext: <https://lg.caesia.net> |
 | 4242421331<br>4242421332<br>207268 | ext: <https://lg.strexp.net> <br> dn42: <http://lg.nia.dn42> |
-| 4242421588 | dn42: <http://lg.tech9computers.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242421876 | dn42: <https://lg.potato.dn42> <br> ext: <https://lg.dn42.ac.cn> |
 | 4242421926 | dn42: <https://lg.zhaofeng.dn42> <br> ext: <https://lg.naive.network> |
 | 4242422016 | ext: <https://dn42.sidereal.ca> <br> dn42: <https://lg.sidereal.dn42> |
