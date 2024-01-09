@@ -45,7 +45,6 @@ There are a few different scripts for generating zone files. They have been writ
 | Fritz       | ?? | 64712 | ?? (??) | Advertised over bgp |
 | prauscher   | DE | 64720 | prauscher.root.dn42 (172.22.120.1) | advertised in BGP |
 | hax404      | DE | 76114 | chero.hax404.dn42 (172.23.136.65) | advertised in BGP|
-| psclrnnrt   | DE | 4242420205 | nsc421.root6.dn42 (172.23.65.5) |
 | florianb    | AT | 4242423955 | resolver.flo.dn42 (172.20.2.65) | advertisted in BGP |
 
 # IPv6 DNS
