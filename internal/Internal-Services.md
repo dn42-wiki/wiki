@@ -81,6 +81,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | irc.dn42                      |  Yes          | Internal IRC                                      |
 | irc.ty3r0x.dn42               |  Yes          | BonoboNET (ty3r0x.bnet)                           |
 | irc.catgirls.dn42             |  Yes          | Karx IRC, clearnet karx.xyz/6697, dn42 v6 only    |
+| irc.replirc.dn42              |  Yes          | ReplIRC (started in 2022 on Replit (but no longer uses Replit), uses Solanum for servers), self-signed certificates |
 
 ### Clients
 
