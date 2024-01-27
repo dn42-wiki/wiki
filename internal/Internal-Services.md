@@ -56,7 +56,6 @@ Windows only, no virus scan report available, but our DLL source is provided wit
 
 **Since the original software is not open source, so use it at your own risk.**
 
-Preview: <http://img.dn42/images/GEOTRACE42.jpg><br>
 Link: <http://map.dn42/BestTrace42.zip>
 
 ### IX Services
@@ -103,6 +102,7 @@ To use the service, please message Kioubit on IRC to have your domain activated 
 | <https://live.jerry.dn42/>                        | Live audio stream powered by mpd                               |
 | <http://radio.vr18.dn42/>                         | Online radio by vr18                                           |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
+| <https://tv.iedon.dn42/>                          | Japanese TV(Ground, BS and CS) Channels Streaming(Web Player) must use HTTPS      |
 | <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
 | <https://radio.vrpnet.dn42>                        | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap    |
 | <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
