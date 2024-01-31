@@ -22,6 +22,8 @@ Check that its really disabled:
 sysctl -a | grep rp_filter
 ```
 
+**Note** The max value from `conf/{all,interface}/rp_filter` is used when doing source validation on the `{interface}`. In case you don't want to disable `rp_filter` for the entire system, the correct setup is to set both `net.ipv4.conf.all.rp_filter=0` and `net.ipv4.conf.{interface}.rp_filter=0`, where `{interface}` is your vpn interface.
+
 Also the following options must be set.
 ```sh
 $ sysctl -w net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1
