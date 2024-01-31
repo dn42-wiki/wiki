@@ -181,7 +181,8 @@ Test out your skills with online challenges
 | Start here                                        | Remarks                            |
 |:------------------------------------------------- |:---------------------------------- |
 | <https://burble.dn42/services/ping/>              | burble.dn42 ping challenge         |
-| <http://kioubit.dn42/challenge/>                  | Kioubit.dn42 challenge             |
+| <http://kioubit.dn42/kb/>                         | Kioubit.dn42 challenge (2024)      |
+| <http://kioubit.dn42/challenge/>                  | Kioubit.dn42 challenge (2023)      |
 
 ## Shell
 
