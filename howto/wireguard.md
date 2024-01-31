@@ -142,6 +142,8 @@ Name=<ifname>
 DHCP=no
 IPv6AcceptRA=false
 IPForward=yes
+IPv4ReversePathFilter=no  # required if sysctl item `net.ipv4.conf.default.rp_filter` is not 0
+
 
 # for networkd >= 244 KeepConfiguration stops networkd from
 # removing routes on this interface when restarting
