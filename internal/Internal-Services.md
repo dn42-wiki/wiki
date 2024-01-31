@@ -21,7 +21,7 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 * Realtime network map: [map.dn42](http://map.dn42/) (DN42) or [map42.0x7f.cc](https://map42.0x7f.cc), [map.kuu.moe](https://map.kuu.moe) (IANA) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
 * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
 * Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
-* DN42 IP address lookup tool: [dn42.g-load.eu/lookup](https://dn42.g-load.eu/lookup/)
+* Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 * Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
 * New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
 * whatsmyip:
@@ -66,10 +66,9 @@ Link: <http://map.dn42/BestTrace42.zip>
 |IX2      |[IX2](/services/IX2.md)            |4242421951|N/A                                       |
 |SERNET-IX|[SERNET-IX](/services/SERNET-IX.md)|4242422245|[SERNET-IX](https://blog.sherpherd.top/ix)|
 
-### ASN Authentication Solution
+### ASN Authentication solution
 
-Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
-To use the service, please message Kioubit on IRC to have your domain activated and receive the required documentation.
+Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network. [Documentation](https://dn42.g-load.eu/about/authentication-services/)
 
 ## IRC
 
