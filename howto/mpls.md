@@ -1,5 +1,3 @@
-Tutorial: [Run your MPLS network with BIRD](/howto/Run your MPLS network with BIRD)
-
 mpls label switching is faster because it's a divide and conquer search in an ordered list, compared to routing, which is a longest prefix match, which is a search in a netmask deep tree
 
 and doing just label switching, especially with multiple labels, have consequences like
@@ -25,6 +23,8 @@ to do inter-as-mpls-vpn on top of it, you can enable rr-to-rr, asbr-to-asbr or r
 
 
 more info at <http://mpls.dn42/> or at <http://mp.ls/>
+
+[How to run MPLS with bird2](/howto/mpls-bird2)
 
 participating networks:
 
