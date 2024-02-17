@@ -199,6 +199,9 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | mc.nia.dn42 (172.20.168.137, fd01:1926:817:7::)   | Minecraft              | Latest Stable, Optimized for CN , Map available on mc-map.nia.dn42 |
 | hulk.mhm.dn42 (172.23.67.1)                       | Tetrinet               |                            |
 | ns1.deltaman.dn42 (172.22.134.131, fd1b:7f7d:dd55:4600:219:ff:fe00:fafe) | OpenTTD | 1.10.3, Hosted in NL   |
+| mc.nico.dn42 | Minecraft | 1.16.5, [Forge Modded](https://bbs.dn42/d/17-modded-116-minecraft-server), IPv4 & IPv6, Central US Server |
+| mc.northrend.dn42 (172.20.222.240)		    | Minecraft		     | latest, IPv4 only   |
+| redtrap.northrend.dn42 (172.20.222.252)	    | Minecraft		     | RedTrap DN42 Bridge, 1.8.8 - 1.19, IPv4 only   |
 
 ## DN42 FreePhone
 Somebody was providing a FreePhone [here](/services/FreePhone)
