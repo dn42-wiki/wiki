@@ -154,6 +154,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | stk2.jerry.dn42:2759, stk2.jerry.neo:2759         | SuperTuxKart           | latest, IPv4 & IPv6 |
 | factorio.catgirls.dn42 (IPv6 only)                | factorio               | Still in testing, expect downtime |
+| nodecore.pivipi.dn42                              | Minetest               | IPv6 only |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 | telnet tetris.dn42                                | tetris in your terminal| other games available on request, ping mc36 @ irc |
 | <https://clicker.burble.dn42/>                    | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
