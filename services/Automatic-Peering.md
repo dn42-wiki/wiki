@@ -7,6 +7,7 @@ It is recommended to use the [DN42 Pingfinder](https://dn42.us/peers/) to find t
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS64719      | [lutoma](https://dn42.lutoma.org) | <https://dn42.lutoma.org> |
+AS4242420207 | [RoutedBits](https://dn42.routedbits.com) | <https://peering.routedbits.com> |
 AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
 AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
