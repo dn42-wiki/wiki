@@ -10,6 +10,7 @@ We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is
 
 
 ### via public internet
+****
 | Hostname                                          | Location                   |
 |:------------------------------------------------- |:-------------------------- |
 | [irc.hackint.org](ircs://irc.hackint.org:6697)                                   | Global                     |
