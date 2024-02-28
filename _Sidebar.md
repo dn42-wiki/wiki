@@ -2,7 +2,7 @@
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
-  * [BGP communities](/howto/Bird-communities)
+  * [BGP communities](/howto/BGP-communities)
   * [FAQ](/FAQ)
 
 * How-To
@@ -15,7 +15,7 @@
   * [IPv6 Multicast (PIM-SM)](/howto/IPv6-Multicast)
   * [SSM Multicast](/howto/multicast)
   * [MPLS](/howto/mpls)
-  * [Bird](/howto/Bird) / [Bird2](/howto/Bird2)
+  * [Bird2](/howto/Bird2)
   * [Quagga](/howto/Quagga)
   * [FRRouting](/howto/frr)
   * [OpenBGPD](/howto/OpenBGPD)
@@ -45,6 +45,9 @@
   * [APIs](/internal/APIs)
   * [Show and Tell](/internal/ShowAndTell)    
   * [Historical services](/internal/Historical-Services)
+
+* Historical
+  * [Bird 1](/historical/Bird) / 
 
 * External Tools
   * [Paste Board](https://paste.dn42.us)

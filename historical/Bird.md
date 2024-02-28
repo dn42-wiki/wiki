@@ -244,7 +244,7 @@ protocol bgp <PEER_NAME> from dnpeers {
 # Bird communities
 
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
-More information can be found [here](/howto/Bird-communities). 
+More information can be found [here](/howto/BGP-communities). 
 
 # Route Origin Authorization
 
