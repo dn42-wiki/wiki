@@ -15,7 +15,7 @@ grep -r ^policy data/inet{,6}num/
 
 The [filter.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter.txt) and [filter6.txt](https://git.dn42.dev/dn42/registry/src/master/data/filter6.txt) files within the registry detail the network wide constraints on what address ranges are in use together with the global limits on what can be announced. 
 
-`inetnum` and `inet6num` objects within the registry are used to describe the allocation of address space to users. `route` and `route6` objects in the registry are used to validate routing announcements through [ROA](/howto/Bird#route-origin-authorization). 
+`inetnum` and `inet6num` objects within the registry are used to describe the allocation of address space to users. `route` and `route6` objects in the registry are used to validate routing announcements through [ROA](/howto/Bird2#route-origin-authorization). 
 
 In addition to the native DN42 address ranges, the registry also contains allocations for the address space used by affiliate networks. These are updated by a regular [sync script](https://git.dn42.dev/dn42/registry-sync). 
 

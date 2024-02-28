@@ -1,4 +1,4 @@
-This guide is similar to the normal [Bird](/howto/Bird) guide in that it provides you with help setting up the BIRD routing daemon, with the difference that this page is dedicated to versions 2.x.
+This guide is similar to the normal [Bird](/historical/Bird) guide in that it provides you with help setting up the BIRD routing daemon, with the difference that this page is dedicated to versions 2.x.
 
 # Arch Linux
 
@@ -174,11 +174,42 @@ template bgp dnpeers {
 include "/etc/bird/peers/*";
 ```
 
+# Setting up peers
+
+Please note: This section assumes that you've already got a tunnel to your peering partner setup.
+
+First, make sure the /etc/bird/peers directory exists:
+
+```sh
+# mkdir -p /etc/bird/peers
+```
+
+Then for each peer, create a configuration file similar to this one:
+
+`/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
+
+```conf
+protocol bgp <NEIGHBOR_NAME> from dnpeers {
+        neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
+}
+
+protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
+        neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
+}
+```
+
+Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` syntax if a link local address is used (Which is recommended)
+
+# BGP communities
+
+Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
+More information can be found [here](/howto/BGP-communities). 
+
 # Route Origin Authorization
 
-The example config above relies on ROA configuration files in `/etc/bird/roa_dn42{,_v6}.conf`. These should be automatically downloaded and updated every so often to prevent BGP highjacking, [see the bird1 page](/howto/Bird#route-origin-authorization) for more details and links to the ROA files. Note: edit the links to replace roa_bird1 to say roa_bird2 if using the cron jobs listed on that page. 
+Route Origin Authorizations should be used in BIRD to authenticate prefix announcements. These check the originating AS and validate that they are allowed to advertise a prefix. 
 
-# RPKI / RTR for ROA
+## RPKI / RTR for ROA
 
 To use an RTR server for ROA information, replace this config in your bird2 configuration file:
 
@@ -221,41 +252,6 @@ template bgp dnpeers {
   };
 }
 ```
-
-# Setting up peers
-
-Please note: This section assumes that you've already got a tunnel to your peering partner setup.
-
-First, make sure the /etc/bird/peers directory exists:
-
-```sh
-# mkdir -p /etc/bird/peers
-```
-
-Then for each peer, create a configuration file similar to this one:
-
-`/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
-
-```conf
-protocol bgp <NEIGHBOR_NAME> from dnpeers {
-        neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
-}
-
-protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
-        neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
-}
-```
-
-Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` syntax if a link local address is used (Which is recommended)
-
-# BGP communities
-
-Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
-More information can be found [here](/howto/BGP-communities). 
-
-# Route Origin Authorization
-
-Route Origin Authorizations should be used in BIRD to authenticate prefix announcements. These check the originating AS and validate that they are allowed to advertise a prefix. 
 
 ## ROA Tables
 
@@ -411,13 +407,3 @@ if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
    reject;
 }
 ```
-
-Also, define your ROA table with:
-
-```conf
-roa table dn42_roa {
-    include "/var/lib/bird/bird_roa_dn42.conf";
-};
-```
-
-**NOTE**: Make sure you setup ROA checks for both IPv4 and IPv6.

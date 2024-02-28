@@ -60,7 +60,7 @@ ping fe80::<your_peers_suffix>%<interface_name>
 
 (For older iputils, use `ping6`.)
 
-Afterwards configure your [BGP session](/howto/Bird) as usual
+Afterwards configure your [BGP session](/howto/Bird2) as usual
 
 ## Debugging
 

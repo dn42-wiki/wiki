@@ -303,7 +303,7 @@ source:             DN42
 
 # Get some peers
 
-In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/Bird-communities).
+In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all its peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/BGP-communities).
 
 You can use the peerfinder to help you find potential peers close to you: <https://dn42.us/peers>
 
@@ -319,7 +319,7 @@ There is some documentation in this wiki, like [gre-plus-ipsec](/howto/GRE-plus-
 
 You need a routing daemon to speak BGP with your peers. People usually run Bird or FRR, but you may use anything (OpenBGPD, XORP, somebody even used an old [hardware router](BGP-on-Extreme-Summit1i) ).  See the relevant [FAQ entry](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use).
 
-You can find [configuration examples for Bird here](/howto/Bird).
+You can find [configuration examples for Bird here](/howto/Bird2).
 
 ## Configuration Examples
 
@@ -331,7 +331,7 @@ You can find [configuration examples for Bird here](/howto/Bird).
     * [Tinc](/howto/tinc)
     * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 * BGP:
-    * [Bird](/howto/Bird)
+    * [Bird](/howto/Bird2)
     * [Quagga](/howto/Quagga)
 * Router specific:
     * [dn42 on OpenWRT](/howto/OpenWRT)
