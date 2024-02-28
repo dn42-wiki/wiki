@@ -47,7 +47,7 @@
   * [Historical services](/internal/Historical-Services)
 
 * Historical
-  * [Bird 1](/historical/Bird) / 
+  * [Bird 1](/historical/Bird)
 
 * External Tools
   * [Paste Board](https://paste.dn42.us)
