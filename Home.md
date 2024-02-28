@@ -80,4 +80,4 @@ This wiki is the main reference about dn42.  It is available in read-only mode f
 
 ### DN42 Logo
 
-An svg of the DN42 Logo is available [here](./dn42.svg).
+An svg of the DN42 Logo is available [here](/dn42.svg).
