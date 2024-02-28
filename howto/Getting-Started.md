@@ -332,7 +332,7 @@ You can find [configuration examples for Bird here](/howto/Bird2).
     * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 * BGP:
     * [Bird](/howto/Bird2)
-    * [Quagga](/howto/Quagga)
+    * [Quagga](/historical/Quagga)
 * Router specific:
     * [dn42 on OpenWRT](/howto/OpenWRT)
     * [EdgeOS Configuration](/howto/EdgeOS-Config-Example)

@@ -16,7 +16,6 @@
   * [SSM Multicast](/howto/multicast)
   * [MPLS](/howto/mpls)
   * [Bird2](/howto/Bird2)
-  * [Quagga](/howto/Quagga)
   * [FRRouting](/howto/frr)
   * [OpenBGPD](/howto/OpenBGPD)
   * [Mikrotik RouterOS](/howto/mikrotik)
@@ -48,6 +47,7 @@
 
 * Historical
   * [Bird 1](/historical/Bird)
+  * [Quagga](/historical/Quagga)
 
 * External Tools
   * [Paste Board](https://paste.dn42.us)
