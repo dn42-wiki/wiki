@@ -9,11 +9,10 @@ In dn42 almost all connections are virtual. One builds on the Internet and creat
 
 Current participants
 --------------------
+
 | Name | AS  | Route server | IRC |
 | --- | --- | --- | --- |
-| Bandura's network | 4242422923 | 4242421081 | mark22k\|m |
-| highdef network | 4242421080 | 4242421081 | jlu5 |
-| burble |  4242422601  | 4242421081 | burble |
+| Bandura's network | 4242422923 | 4242421081 | mark22k |
 
 History and origin
 ------------------
@@ -112,9 +111,6 @@ Once you can see if the BGP session is esablished. In Bird you can do this with 
 Furthermore, you can display different routes (in case of bird with `birdc show route for [ip address]`) or perform a traceroute.  
 One can also try to ping the IP of some at the IXP. From the latency you can also see if everything is working:  
 
-*   Burble's pingable
-    *   `172.20.129.5`
-    *   `fd42:4242:2601:ac05::1`
 *   Bandura's pingable:
     *   `172.22.149.224`
     *   `fd04:234e:fc31::`
