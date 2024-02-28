@@ -4,7 +4,7 @@ You want to join dn42, but you don't know where to start. This guide gives gener
 
 - you have at least one router running 24/7. Any Linux or BSD box can be turned into a router. If your home router runs OpenWRT, you might consider using it for dn42.
 - your router is able to establish network tunnels over the Internet (Wireguard, GRE, OpenVPN, IPSec, Tinc...). Beware, your network operator might filter this kind of traffic, e.g. in schools or universities.
-- you are generally knowledgeable with networking and routing (i.e. you've heard about BGP, IGP, forwarding, and you're willing to configure a BGP router such as Quagga or Bird)
+- you are generally knowledgeable with networking and routing (i.e. you've heard about BGP, IGP, forwarding, and you're willing to configure a BGP router such as FRR or Bird)
 
 # Formalities
 
@@ -332,7 +332,7 @@ You can find [configuration examples for Bird here](/howto/Bird2).
     * [IPsec with public key authentication](/howto/IPsec-with-PublicKeys)
 * BGP:
     * [Bird](/howto/Bird2)
-    * [Quagga](/historical/Quagga)
+    * [FRR](/howto/frr)
 * Router specific:
     * [dn42 on OpenWRT](/howto/OpenWRT)
     * [EdgeOS Configuration](/howto/EdgeOS-Config-Example)
