@@ -20,6 +20,7 @@ AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | <https://dn42.lare.cc/autopee
 AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
 AS4242423847 | [TheQ Network](https://dn42.0011.de) | <https://dn42.0011.de> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | <https://dn42.g-load.eu> |
+AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 
 
 TODO: add <https://theresa.network/peer.html>

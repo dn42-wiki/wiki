@@ -2,7 +2,7 @@
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
-  * [BGP communities](/howto/BGP-communities)
+  * [BGP communities](/howto/Bird-communities)
   * [FAQ](/FAQ)
 
 * How-To
@@ -15,7 +15,8 @@
   * [IPv6 Multicast (PIM-SM)](/howto/IPv6-Multicast)
   * [SSM Multicast](/howto/multicast)
   * [MPLS](/howto/mpls)
-  * [Bird2](/howto/Bird2)
+  * [Bird](/howto/Bird) / [Bird2](/howto/Bird2)
+  * [Quagga](/howto/Quagga)
   * [FRRouting](/howto/frr)
   * [OpenBGPD](/howto/OpenBGPD)
   * [Mikrotik RouterOS](/howto/mikrotik)
@@ -29,7 +30,7 @@
   * [IRC](/services/IRC)
   * [Whois registry](/services/Whois)
   * [DNS](/services/DNS)
-  * [IX Collection](/services/IX-Collection)
+  * [IX](/services/IX2)
   * [Public DNS](/services/Clearnet-Domains)
   * [Looking Glasses](/services/Looking-Glasses)
   * [Automatic Peering](/services/Automatic-Peering)
@@ -44,10 +45,6 @@
   * [APIs](/internal/APIs)
   * [Show and Tell](/internal/ShowAndTell)    
   * [Historical services](/internal/Historical-Services)
-
-* Historical
-  * [Bird 1](/historical/Bird)
-  * [Quagga](/historical/Quagga)
 
 * External Tools
   * [Paste Board](https://paste.dn42.us)
