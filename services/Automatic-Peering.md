@@ -1,10 +1,10 @@
 # Automatic Peering
 
+It is recommended to use the [DN42 Pingfinder](https://dn42.us/peers/) to find the network with the lowest latency to peer with.
+
 ## Fully self-service
 
 This list includes only systems that offer instant peering (fully self-service, unattended).
-
-It is recommended to use the [DN42 Pingfinder](https://dn42.us/peers/) to find the network with the lowest latency to peer with.
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
