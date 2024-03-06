@@ -241,6 +241,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | [dn42](https://draw.bandura.dn42/),[NeoNetwork](http://draw.bandura.neo/), [CRXN](http://draw.bandura.crxn/) | Excalidraw instance |
 | <https://ntfy.weil-isso.dn42>                       | NTFY (Push Notify via REST-API)                                   |
 | kms.weil-isso.dn42 (Port 1688)                      | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
+| <https://dpnetwork.dn42/ip>                         | Yet Another what is my ip                                        |
 
 ## Usenet Servers / News
 
