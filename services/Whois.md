@@ -73,12 +73,21 @@ $ dig +short AS4242420000.asn.dn42 TXT
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 
+An alternative version to query the registry is it `ip.catgirls.dn42` (Source code <https://git.catgirls.systems/famfo/ipinfo>).
+
+Example:
+```
+$ dig +short TXT as4242421411.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.23.196.32/27 | fd42:deca:fbad::/48"
+```
+
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see <https://www.team-cymru.org/Services/ip-to-asn.html#dns>
 
 # Software
 
  * [lglass](/howto/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
  * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
+ * [who42rs](https://git.dn42.dev/C4TG1RL5/who42rs) a reimplementation of whois42d written in Rust
 
 # Whois daemons
 
@@ -92,7 +101,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | burble      | whois.burble.dn42         | 172.20.129.8 / fd42:4242:2601:ac43::1 |
 | p3bk4c      | whois.pebkac.dn42         | 172.21.83.27 / fd63:672f:38e7:27::1 |
 | scooter     | whois.scooter.dn42        | 172.23.109.170 / fd38:cfa3:7091:2::1 |
-| C4TG1RL5    | at-vie1.catgirls.dn42     | 172.23.196.33 / fd42:deca:fbad::1 |
+| C4TG1RL5    | de-fsn1.catgirls.dn42     | 172.23.196.33 / fd42:deca:fbad::1 |
 | Bandura     | whois.bandura.dn42        | 172.22.149.225 / fd04:234e:fc31::1 (may change in the future) |
 
 ## Down?
