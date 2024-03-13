@@ -73,12 +73,18 @@ $ dig +short AS4242420000.asn.dn42 TXT
 
 The Python code for generating the zone from the registry is available on the monotone repository.
 
-An alternative version to query the registry is it `ip.catgirls.dn42` (Source code <https://git.catgirls.systems/famfo/ipinfo>).
+An alternative version to query the registry is it `ip.catgirls.dn42` (IPv6 only) (Source code <https://git.catgirls.systems/famfo/ipinfo>). Note: if there is no `route`/`route6` object for the `inetnum`/`inet6num`, the ip address will not be found.
+
+This can be used together with `mtr` using the `--ipinfo_provider4` and `--ipinfo_provider6` flags (mtr has to be build from source for that, there hasn't been a release in a while).
 
 Example:
-```
+```sh
 $ dig +short TXT as4242421411.ip.catgirls.dn42
-"4242421411 | C4TG1RL5-MNT | 172.23.196.32/27 | fd42:deca:fbad::/48"
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
+$ dig +short TXT 32.196.23.172.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
+$ dig +short TXT 1.d.a.b.f.a.c.e.d.2.4.d.f.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
 ```
 
 The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see <https://www.team-cymru.org/Services/ip-to-asn.html#dns>
