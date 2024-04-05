@@ -88,6 +88,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421926 | dn42: <https://lg.zhaofeng.dn42> <br> ext: <https://lg.naive.network> |
 | 4242422016 | ext: <https://dn42.sidereal.ca> <br> dn42: <https://lg.sidereal.dn42> |
 | 4242422024 | ext: <http://lg.dn42.gcc.ac.cn> <br> Interactive (ping, traceroute, BGP-map) |
+| 4242422164 | ext: <https://lg.xiaoxi654.xyz> <br> dn42: <https://lg.xiaoxi654.dn42> |
 | 4242422189 | dn42: <http://lg.iedon.dn42> |
 | 4242422341 | ext: <https://lg.dn42.zotan.network> <br> dn42: <https://lg.zotan.dn42> |
 | 4242422342 | dn42: <http://lg.gbe.dn42> <br> Semi-interactive (no traceroute, no ping) |
