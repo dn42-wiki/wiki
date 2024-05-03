@@ -16,7 +16,7 @@
 ## RouterOS limitations
 
  * IPSec only supports IKEv1
- * OpenVPN only works in tcp mode in RoS v6.x, RoS v 7.x do support it.
+ * OpenVPN only works in tcp mode
  * OpenVPN does not support LZO compression
  * You can't use /31 subnet for Point-to-Point (PtP) links
 
@@ -80,11 +80,15 @@ If you configured everything correctly, you should be able to ping
 ## BGP
 
 ### Filters
+Both BGP and routing filters were redone from the ground up on RoS 7.x
+The official migration guide can be found [here](https://help.mikrotik.com/docs/display/ROS/Routing)
+
 It's a good idea to setup filters for BGP instances, both IN (accept advertises) and OUT (send advertises)  
 In this example, we will be filtering IN: 192.168.0.0/16 and 169.254.0.0/16  
 OUT: 192.168.0.0/16 and 169.254.0.0/16, you really don't want to advertise this networks.  
 This filter will not only catch /8 or /16 networks, but smaller networks inside this subnets as well.  
 
+#### RoS 6.x
 ```
 /routing filter
 add action=discard address-family=ip chain=dn42-in prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
@@ -93,17 +97,33 @@ add action=discard address-family=ip chain=dn42-out prefix=192.168.0.0/16 prefix
 add action=discard address-family=ip chain=dn42-out prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
 ```
 
-Now, if you want only DN42 connection, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
+If you want only DN42 connection, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
 
 ```
 /routing filter
 add action=discard address-family=ip chain=dn42-in prefix=10.0.0.0/8 prefix-length=8-32 protocol=bgp
 ```
 
+#### RoS 7.x
+```
+/routing filter rule
+add chain=dn42-in rule="if (dst in 192.168.0.0/16 && dst-len > 16) { reject }"
+add chain=dn42-in rule="if (dst in 169.254.0.0/1 && dst-len > 16) { reject }"
+add chain=dn42-out rule="if (dst in 192.168.0.0/16 && dst-len > 16) { reject }"
+add chain=dn42-out rule="if (dst in 169.254.0.0/1 && dst-len > 16) { reject }"
+```
+
+If you want only DN42 connection, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
+
+```
+/routing filter
+add chain=dn42-in rule="if (dst in 10.0.0.0 && dst-len > 8) { reject }"
+
+```
+
 ### BGP
 Now, for actual BGP configuration.
 
-```
 /routing bgp instance
 set default disabled=yes
 add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in \
