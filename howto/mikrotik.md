@@ -124,15 +124,15 @@ add chain=dn42-in rule="if (dst in 10.0.0.0 && dst-len > 8) { reject }"
 ### BGP
 Now, for actual BGP configuration.
 
+#### RoS v6
+```
 /routing bgp instance
 set default disabled=yes
-add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in \
-router-id=1.1.1.1
+add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in router-id=1.1.1.1
 ```
 Let's add some peers. Right now we have just one, but we still need two connections - to IPv4 and IPv6  
 
 IPv4:
-
 ```
 /routing bgp peer
 add comment="DN42: somepeer IPv4" in-filter=dn42-in instance=bgp-dn42-somename multihop=yes \
@@ -150,7 +150,7 @@ remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=d
 
 Also, as a note, Mikrotik doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
 
-### BGP Advertisements
+#### BGP Advertisements
 You want to advertise your allocated network (most likely), it's very simple:  
 
 ```
@@ -158,6 +158,49 @@ You want to advertise your allocated network (most likely), it's very simple:
 add network=YOUR_ALLOCATED_SUBNET synchronize=no
 ```
 You can repeat that with as much IPv4 and IPv6 networks which you own.
+
+#### RoS 7.x
+
+First difference from v 6.x: There is no "network" menu. We advertise our networks now by adding them to the firewall address-list and referencing in the BGP configuration.
+
+Adding a network list:
+```
+IPv4
+/ip firewall address-list
+add address=YOUR_ALLOCATED_SUBNET list=DN42_allocated_v4
+
+IPv6
+/ipv6 firewall address-list
+add address=YOUR_ALLOCATED_SUBNET list=DN42_allocated_v6
+```
+
+Let's create a template for DN42. It isn't strictly necessary, but makes our life easier.
+```
+/routing bgp template
+add address=ipv4 as=YOUR_AS_NUMBER name=DN42_template_v4 router-id=1.1.1.1
+add address=ipv6 as=YOUR_AS_NUMBER name=DN42_template_v6 router-id=1.1.1.1
+```
+
+Now is time to add one peer:
+
+Another difference from RoS v6.x is that v7.x can use link-local adresses (validated with RoS 7.14.3). The trick is to add "%INTERFACE" after the address, where "INTERFACE" is the name of the interface the link-local is allocated to - or the interface used to get to that remote link-local. So, if You want to listen on fe::1 on the "myPeer" interface, the address would be "fe::1%myPeer". You still can't set your link-local: the system will create one, based on the interface MAC address.
+
+```
+IPv4 peer
+add address-families=ipv4 disabled=no input.filter=dn42-in \
+local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_ON_YOU .role=ebgp \
+multihop=yes name=PEER_NAME output.filter-chain=dn42-out \
+.network=DN42_allocated_v4 remote.address=YOUR_PEER_REMOTE_ADDRESS \
+.as=PEER_AS_NUMBER routing-table=main templates=DN42_template_v4
+
+IPv6 peer
+add address-families=ipv6 disabled=no input.filter=dn42-in \
+local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_ON_YOU .role=ebgp \
+multihop=yes name=PEER_NAME output.filter-chain=dn42-out \
+.network=DN42_allocated_v6 remote.address=YOUR_PEER_REMOTE_ADDRESS \
+.as=PEER_AS_NUMBER routing-table=main templates=DN42_template_v6
+```
+
 
 ## Split DNS
 Separate dns requests for dn42 tld from your default dns traffic with L7 filter in Mikrotik.
