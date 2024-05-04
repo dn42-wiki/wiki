@@ -6,6 +6,10 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 There is a search engine at [search.dn42](https://search.dn42) that can also be used to discover services and content. It attempts to index all sites on DN42.
 
+## Matrix Server
+
+There is a matrix server at [buzzster.dn42](https://buzzster.dn42) which can be used from the Element application for Android and iOS and soon from the web.
+
 ## Certificate Authority
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
