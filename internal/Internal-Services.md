@@ -6,10 +6,6 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 There is a search engine at [search.dn42](https://search.dn42) that can also be used to discover services and content. It attempts to index all sites on DN42.
 
-## Matrix Server
-
-There is a matrix server at [buzzster.dn42](https://buzzster.dn42) which can be used from the Element application for Android and iOS and soon from the web.
-
 ## Certificate Authority
 
 xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
@@ -138,6 +134,8 @@ provided by TheQ at <https://dn42.0011.de/vpnusers>
 See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 ### Telegram
+
+A DN42 private Telegram app and server is available at [buzzster.dn42](https://buzzster.dn42), the app requires a new registration (Official Telegram account isn't valid), only support IPv4 at the moment.
 
 A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
 
