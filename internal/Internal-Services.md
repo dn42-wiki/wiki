@@ -152,6 +152,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | yuan.nia.dn42 (172.20.168.244)                    | Genshi Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet  |
 | mc.jerry.dn42 & jerry.dn42                        | Minecraft              | latest, IPv4 & IPv6 |
 | mc.razu.neo (formerly mc.razuritta.dn42)                             | Minecraft | latest(1.20.4 atm), IPv4+IPv6 |
+| fd11:ef8b:72ac::                                  | Minecraft              | 1.8                 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
 | stk2.jerry.dn42:2759, stk2.jerry.neo:2759         | SuperTuxKart           | latest, IPv4 & IPv6 |
