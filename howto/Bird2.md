@@ -197,10 +197,13 @@ protocol bgp <NEIGHBOR_NAME> from dnpeers {
 
 protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
         neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
+        // Or:
+        // neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
+        // interface <NEIGHBOR_INTERFACE>;****
 }
 ```
 
-Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` syntax if a link local address is used (Which is recommended)
+Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` or the `interface <if>;` syntax if a link local address is used (Which is recommended)
 
 # BGP communities
 
