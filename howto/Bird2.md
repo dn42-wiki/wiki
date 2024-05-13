@@ -197,9 +197,9 @@ protocol bgp <NEIGHBOR_NAME> from dnpeers {
 
 protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
         neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
-        // Or:
-        // neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
-        // interface <NEIGHBOR_INTERFACE>;****
+        # Or:
+        # neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
+        # interface <NEIGHBOR_INTERFACE>;****
 }
 ```
 
