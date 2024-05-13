@@ -350,25 +350,25 @@ fi
 
 ### Use RPKI ROA in bird2
 
-* Download  gortr
+* Download stayrtr
 
-<https://github.com/cloudflare/gortr/releases>
+<https://github.com/bgp/stayrtr>
 
-* Run gortr.
+* Run stayrtr.
 
 ```sh
-./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
+./stayrtr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
 ```
 
 
 * Run with docker
 
 ```sh
-docker pull cloudflare/gortr
+docker pull rpki/stayrtr
 ```
 
 ```sh
-docker run --name dn42rpki -p 8282:8282 --restart=always -d cloudflare/gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
+docker run --name dn42rpki -p 8282:8282 --restart=always -d rpki/stayrtr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
 ```
 
 * Add this to your bird configure file,other ROA protocol must removed.
