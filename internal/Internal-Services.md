@@ -6,7 +6,7 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 There is a search engine at [search.dn42](https://search.dn42) that can also be used to discover services and content. It attempts to index all sites on DN42.
 
-A searx-ng instance is available at [search.androw.dn42](https://search.dn42) to search the clearnet.
+A searx-ng instance is available at [search.androw.dn42](https://search.androw.dn42) to search the clearnet.
 
 ## Certificate Authority
 
