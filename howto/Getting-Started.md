@@ -44,7 +44,7 @@ Do browse through the registry and look at the [pull request queue](https://git.
 
 ---
 
-This example assumes that your name is `<FOO>`, part of an organisation called `<FOO-ORG>` (for instance, your hackerspace). *Organisation objects are not required if your are registering as an individual*. Obviously, these should be replaced by the appropriate values in all examples below.
+This example assumes that your name is `<FOO>`, part of an organisation called `<ORG-FOO>` (for instance, your hackerspace). *Organisation objects are not required if your are registering as an individual*. Obviously, these should be replaced by the appropriate values in all examples below.
 
 We will create several types of objects: 
  - **maintainer** objects, which are authenticated so that only you can edit your own objects
@@ -137,7 +137,7 @@ This applies to AS numbers, network prefixes, routes, DNS records...
 
 ### Register an AS number
 
-To register an AS number, create an `aut-num` object in `data/aut-num/`.  
+To register an AS number, create an `as-name` object in `data/aut-num/`.  
 `as-name` should be a name for your AS.
 
 Your AS number can be chosen arbitrarily in the dn42 ASN space, see the [as-block objects](https://git.dn42.dev/dn42/registry/src/master/data/as-block) in the registry. 
