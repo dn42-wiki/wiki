@@ -345,6 +345,7 @@ stub-zone:
 	name: "dn42"
 	stub-addr: fd42:4242:2601:ac53::1
 	stub-addr: 172.20.129.1
+
 stub-zone:
 	name: "20.172.in-addr.arpa"
 	stub-addr: fd42:4242:2601:ac53::1
@@ -362,16 +363,6 @@ stub-zone:
 
 stub-zone:
 	name: "23.172.in-addr.arpa"
-	stub-addr: fd42:4242:2601:ac53::1
-	stub-addr: 172.20.129.1
-
-stub-zone: 
-    name: "23.172.in-addr.arpa"
-	stub-addr: fd42:4242:2601:ac53::1
-	stub-addr: 172.20.129.1
-
-stub-zone: 
-      name: "10.in-addr.arpa"
 	stub-addr: fd42:4242:2601:ac53::1
 	stub-addr: 172.20.129.1
 
