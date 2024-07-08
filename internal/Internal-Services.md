@@ -103,7 +103,6 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://live.jerry.dn42/>                        | Live audio stream powered by mpd                               |
 | <http://radio.vr18.dn42/>                         | Online radio by vr18                                           |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist>   | TV Channels Streaming                                          |
-| <https://tv.iedon.dn42/>                          | Japanese TV(Ground, BS and CS) Channels Streaming(Web Player) must use HTTPS      |
 | <http://icy.jones.dn42>                           | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)          |
 | <https://radio.vrpnet.dn42>                        | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap    |
 | <http://webdj.nop.dn42/>                            | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/ |
