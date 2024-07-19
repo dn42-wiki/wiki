@@ -1,4 +1,5 @@
 # List of Usenet servers
+
 | **Person** | **Status** | **Address**      | **Posting** | **Newsgroups**   | **Binaries** |
 |----|----|----|----|----|----|
 | welterde     | _down_       | <http://news.welterde.dn42> | _yes_       | Big 8, de.\*, alt.\* | _no_         |
@@ -6,6 +7,7 @@
 | blacksheep   | _down_       | <http://news.blacksheep.dn42> | _ask_     | Big 8, de.\*, alt.\*, uk.\*, etc. | _no_   |
 
 # List of Usenet WebFrontends
+
 | **Person** | **Status** | **Address**        | **Posting** | **Newsgroups**   | **Binaries** |
 |----|----|----|----|----|----|
 | cronix       | _down_       | <http://news.crystalnet.dn42> | _yes_       | as requested       | _no_         |
