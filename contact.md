@@ -21,7 +21,7 @@ See [IRC](/services/IRC) too.
 
 * [english only, maintained by SUNNET-MNT](https://t.me/dn42dn42)
 * [bilingual, Chinese&English, maintained by BILL-MNT](https://t.me/Dn42Chat)
-* [spanish, maintained by BUZZ-MNT](t.me/dn42es)
+* [spanish, maintained by BUZZ-MNT](https://t.me/dn42es)
 
 ## Web
 
