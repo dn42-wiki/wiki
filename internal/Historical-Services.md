@@ -188,7 +188,6 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | http://teams.dn42[.us]/dn42                       | Mattermost (Slack clone) instance: get notifications for wiki/CA changes here  |
 | <http://nowhere.ws/dn42>                            | Some random stuff concerning dn42, packages for Debian, e.g. Quagga        |
 | <https://paste.weiti.dn42>                          | AES-encrypted pastebin-like (privatebin) |
-| <https://bbs.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw.|
 | <http://jack.pyropeter.eu/dn42/routecount/>         | Statistics about the number of v4/v6 routes seen by AS76115 (Since Aug. 2014)  |
 | [Clearnet](https://flapping.p2p-node.de/dashboard/), [dn42](https://flapping.bandura.dn42/dashboard), [NeoNetwork](https://flapping.bandura.neo/dashboard/) | FlapAlertedPro by Kioubit hosted by mark22k |
 
