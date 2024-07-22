@@ -109,6 +109,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | scooter     | whois.scooter.dn42        | 172.23.109.170 / fd38:cfa3:7091:2::1 |
 | C4TG1RL5    | whois.catgirls.dn42     | 172.23.196.33 / fd42:deca:fbad::1 |
 | Bandura     | whois.bandura.dn42        | 172.22.149.225 / fd04:234e:fc31::1 (may change in the future) |
+| SUNNET     | whois.sun.dn42        | 172.21.100.253 / fdc8:dc88:ee11:253::1 |
 
 ## Down?
 
