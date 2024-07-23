@@ -44,6 +44,7 @@ Please sort by AS number.
 | 4242422904 | ext: <https://lg.doxz.net> |
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
+| 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423315 | ext: <http://lg.unknownts.tk> <br> dn42: <http://unknownts.dn42> |
 | 4242423411 | ext: <https://lg.dn42.goldlineit.org> <br> dn42: <http://lg.goldlineit.dn42> |
 | 4242423868 | ext: <http://lg-dn42.chimon.org> |
