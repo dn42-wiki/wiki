@@ -5,14 +5,14 @@ The [portable version](https://openbgpd.org/ftp.html) should run with little to 
 Only IPv6 is used for the sake of simplicity.
 Neighbors use ULA addresses (/127 transfer net) assigned from one of the peer's allocation.
 
-The goal is to have a small, yet complete setup for all peers with ROA validation and other safety measurements in place.
+The goal is to have a small, yet complete setup for all peers with ROA validation and other safety measures in place.
 
 # Configuration
 [`/etc/bgpd.conf`](https://man.openbsd.org/bgpd.conf.5) contains all information and may include further (automatically generated) files, as is done in this guide.
 
 As per the manual, configuration is divided into logical sections;  [`/etc/examples/bgpd.conf`](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/etc/examples/bgpd.conf?rev=HEAD&content-type=text/plain&only_with_tag=MAIN) is a complete and commented example which this guide is roughly based on.
 
-By default, [bgpd(8)](http://man.openbsd.org/bgpd.8) listens on all local addresses (on the current default [`routing domain`](http://man.openbsd.org/rdomain.4)), but this guide explicitly listens on the configured transfer ULA only for each peer to better illustrate of this setup.
+By default, [bgpd(8)](http://man.openbsd.org/bgpd.8) listens on all local addresses (on the current default [`routing domain`](http://man.openbsd.org/rdomain.4)), but this guide explicitly listens on the configured transfer ULA only for each peer to better illustrate this setup.
 
 ## local host
 Information such as ASN, router ID and allocated networks are required:
@@ -57,7 +57,7 @@ neighbor  $A_remote {
 
 ## filter rules
 **bgpd** blocks all BGP __UPDATE__ messages by default.
-The filter rules are evaluated in sequential order, form first to last.
+The filter rules are evaluated in sequential order, from first to last.
 The last matching allow or deny rule decides what action is taken.
 
 Start off with basic protection and sanity rules:
@@ -101,7 +101,7 @@ match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 
 # ROA
 
-An roa-set can be generated from the registry directly or you can use the following pre-build tables.
+An roa-set can be generated from the registry directly or you can use the following pre-built tables.
 
 One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
 
