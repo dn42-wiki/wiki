@@ -205,6 +205,10 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
 
 Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` or the `interface <if>;` syntax if a link local address is used (Which is recommended)
 
+## Note on multiprotocol BGP and extended next hops
+This configuration example shows the required configuration without using multiprotocol BGP and extended next hops.
+These two options are helpful if one desires to optimize their peering by reducing the session count per peer to 1 (in the case of multiprotocol BGP) and remove the need to have IPv4 tunnel IP addresses (in the case of Extended next hops over IPv6)
+
 # BGP communities
 
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
