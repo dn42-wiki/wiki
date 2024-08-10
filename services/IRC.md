@@ -10,12 +10,12 @@ We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is
 
 
 ### via public internet
-****
-| Hostname                                          | Location                   |
-|:------------------------------------------------- |:-------------------------- |
-| [irc.hackint.org](ircs://irc.hackint.org:6697)                                   | Global                     |
-| [irc.eu.hackint.org](ircs://irc.eu.hackint.org:6697)                               | European        |
-| [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)                                | Germany       |
-| [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)                                | Netherlands       |
+
+| Hostname                                              | Location      |
+|:----------------------------------------------------- |:--------------|
+| [irc.hackint.org](ircs://irc.hackint.org:6697)        | Global        |
+| [irc.eu.hackint.org](ircs://irc.eu.hackint.org:6697)  | European      |
+| [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)  | Germany       |
+| [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)  | Netherlands   |
 
 
