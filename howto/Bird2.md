@@ -7,7 +7,7 @@ The `extra/bird` package in the arch repositories will usually have a relatively
 ## Bird2 Version <2.0.8 / Debian
 
 Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended nexthops for IPv4 destinations (<https://bird.network.cz/pipermail/bird-users/2020-April/014412.html>).
-Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when an used RPKI source changes.
+Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when a used RPKI source changes.
 
 Debian 11 Bullseye delivers Bird 2.0.7. But you can use the Debian Bullseye backport-repository which provides version 2.0.8 (see <https://backports.debian.org/Instructions/> for adding backports repository and install packages from the repository).
 
@@ -178,7 +178,7 @@ include "/etc/bird/peers/*";
 
 # Setting up peers
 
-Please note: This section assumes that you've already got a tunnel to your peering partner setup.
+Please note: This section assumes that you've already got a tunnel to your peering partner set up.
 
 First, make sure the /etc/bird/peers directory exists:
 
@@ -378,7 +378,7 @@ docker pull rpki/stayrtr
 docker run --name dn42rpki -p 8282:8282 --restart=always -d rpki/stayrtr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json
 ```
 
-* Add this to your bird configure file,other ROA protocol must removed.
+* Add this to your bird configure file (and remove other conflicting ROA setup, if present):
 
 ```conf
 protocol rpki rpki_dn42{
