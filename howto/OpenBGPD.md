@@ -1,135 +1,220 @@
 This guide describes a simple configuration for [OpenBGPD](https://openbgpd.org) running on [OpenBSD](https://openbsd.org).
 The [portable version](https://openbgpd.org/ftp.html) should run with little to no configuration changes on other operating systems as well.
 
-# Setup
-Only IPv6 is used for the sake of simplicity.
-Neighbors use ULA addresses (/127 transfer net) assigned from one of the peer's allocation.
+Other than the
+[`bgpd.conf(5)`](https://man.openbsd.org/bgpd.conf.5) and
+[`bgpd(8)`](http://man.openbsd.org/bgpd.8) man pages and the
+OpenBSD
+[`/etc/examples/bgpd.conf`](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/etc/examples/bgpd.conf?rev=HEAD&content-type=text/plain&only_with_tag=MAIN),
+you might also find useful reference or ideas in the
+[Bird2](/howto/Bird2) page (even if you don't use Bird), as
+it likely presents the most widespread dn42 router setup.
 
-The goal is to have a small, yet complete setup for all peers with ROA validation and other safety measures in place.
+# Example configuration
+When copying from the below configuration, be sure to at
+least replace the various `<PLACEHOLDER>`s with your own
+numbers.
 
-# Configuration
-[`/etc/bgpd.conf`](https://man.openbsd.org/bgpd.conf.5) contains all information and may include further (automatically generated) files, as is done in this guide.
+Concrete configuration examples can also be found elsewhere,
+e.g.:
 
-As per the manual, configuration is divided into logical sections;  [`/etc/examples/bgpd.conf`](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/etc/examples/bgpd.conf?rev=HEAD&content-type=text/plain&only_with_tag=MAIN) is a complete and commented example which this guide is roughly based on.
+[https://smrk.net/text/openbsd-dn42-setup.txt](https://smrk.net/text/openbsd-dn42-setup.txt)
 
-By default, [bgpd(8)](http://man.openbsd.org/bgpd.8) listens on all local addresses (on the current default [`routing domain`](http://man.openbsd.org/rdomain.4)), but this guide explicitly listens on the configured transfer ULA only for each peer to better illustrate this setup.
+[https://kaizo.org/2024/01/03/openbsd-bgpd/](https://kaizo.org/2024/01/03/openbsd-bgpd/)
 
-## local host
-Information such as ASN, router ID and allocated networks are required:
+Given OpenBGPD's limited support for multiprotocol sessions
+(no extended next hop (RFC8950)) and
+[some](https://marc.info/?l=openbgpd-users&m=159983144408845&w=2)
+[issues](https://marc.info/?l=openbgpd-users&m=165605427017298&w=2)
+with IPv6 link-local nexthops, we configure separate IPv4
+and IPv6 sessions for each peer, and for IPv6 we adjust
+nexthop to a "global" address (i.e., one from our dn42 IPv6
+allocation) assigned to each peering (Wireguard) interface
+(each interface gets its own).
+
+To avoid burning a dn42 IPv4 address for each peering, we'll
+put the router's dn42 IPv4 address on the loopback interface
+and peer using an RFC1918 subnet (192.168.42/24) NATed to
+the loopback address (the NAT is only used in case of
+actively opening an IPv4 BGP session, it does not affect
+routing or incoming connections).
+
+## `/etc/hostname.lo0`
+
 ```conf
-# macros
-ASN="4242421234"
+alias <YOUR-ROUTER-DN42-IPv4>
+```
 
-# global configuration
+## `/etc/hostname.wg1234`
+(one example; similar for each peer)
+
+```conf
+inet 192.168.42.1/32
+inet6 fe80::1 64 # this is the address your peer will want to know
+# (and connect to); the following address is only really needed
+# to provide a non-link-local IPv6 address for the nexthop setting;
+# you can pick it "arbitrarily" from your dn42 IPv6 allocation
+inet6 <YOUR-DN42-IPv6-OF-PEER1-INTERFACE> 64
+group my_dn
+wgport 21234 wgkey <PRIVKEY-BASE64>
+wgpeer <PEER1-PUBKEY-BASE64> \
+  wgdescr "dn42 peer1" \
+  wgaip fe80::/64 wgaip fd00::/8 wgaip 10.0.0.0/8 wgaip 172.20.0.0/14 \
+  wgendpoint <PEER1-HOSTNAME-OR-IP> 24321
+up
+# add a static IPv4 route to the peer
+!route -nq add <PEER1-IPv4> 192.168.42.1
+```
+
+## `/etc/pf.conf`
+(only the dn42-related snippet)
+
+```conf
+pass in quick proto {icmp icmp6} max-pkt-rate 30/3
+dn42_self = <YOUR-ROUTER-DN42-IPv4>
+table <dn42etc> const {172.20/14 172.31/16 10/8 fd00::/8 fe80::/64}
+table <dn42peers> const {<PEER1-IPv4> fe80::/64}
+pass in quick on egress proto udp to port 21234
+pass in quick on my_dn proto tcp from <dn42peers> \
+  to {$dn42_self (my_dn)} port bgp
+# block everything (except for ICMP above) destined to the
+# router itself; only dn42 transit and BGP sessions are allowed
+block in log quick on my_dn to {$dn42_self (my_dn)}
+pass out on my_dn from 192.168.42/24 nat-to $dn42_self
+pass on my_dn from <dn42etc> to <dn42etc>
+```
+
+## `/etc/bgpd.conf`
+```conf
+ASN = "<YOUR-AS-NUMBER>"
+
 AS $ASN
-router-id 1.2.3.4
+router-id <YOUR-ROUTER-DN42-IPv4>
 
-prefix-set mynetworks {
-        fd00:12:34::/48
+# list of networks that may be originated by our ASN
+prefix-set mydn42 {
+	<YOUR-DN42-IPv4-PREFIX>
+	<YOUR-DN42-IPv6-PREFIX>
 }
-```
 
-These can be used in subsequent filter rules.
-The local peer's announcements is then defined as follows:
-```conf
-# Generate routes for the networks our ASN will originate.
-# The communities (read 'tags') are later used to match on what
-# is announced to EBGP neighbors
-network prefix-set mynetworks set large-community $ASN:1:1
-```
-
-## neighbors
-For each neighbor its ASN and transfer ULA is required.
-An optional description is provided such that [bgpctl(8)](http://man.openbsd.org/bgpctl.8) for example can be used with mnemonic names instead of AS numbers:
-```conf
-# peer A, transport over IPSec/GRE
-$A_local="fd00:12:34:A::1"
-$A_remote="fd00:12:34:A::2"
-$A_ASN="4242425678"
-
-listen on $A_local
-
-neighbor  $A_remote {
-    remote-as $A_ASN
-    descr "A"
+# https://dn42.eu/howto/Bird2#example-configuration
+prefix-set dn42etc {
+	172.20.0.0/14 prefixlen 21 - 29	# dn42
+	172.20.0.0/24 prefixlen 28 - 32	# dn42 Anycast
+	172.21.0.0/24 prefixlen 28 - 32	# dn42 Anycast
+	172.22.0.0/24 prefixlen 28 - 32	# dn42 Anycast
+	172.23.0.0/24 prefixlen 28 - 32	# dn42 Anycast
+	172.31.0.0/16 or-longer		# ChaosVPN
+	10.100.0.0/14 or-longer		# ChaosVPN
+	10.127.0.0/16 prefixlen 16 - 32	# neonetwork
+	10.0.0.0/8    prefixlen 15 - 24	# Freifunk.net
+	fd00::/8      prefixlen 44 - 64	# dn42
 }
-```
 
-## filter rules
-**bgpd** blocks all BGP __UPDATE__ messages by default.
-The filter rules are evaluated in sequential order, from first to last.
-The last matching allow or deny rule decides what action is taken.
+# https://dn42.burble.com/services/public/#roa-data
+# https://dn42.burble.com/roa/dn42_roa_obgpd_46.conf
+# see the crontab snippet and an update script further below
+include "/var/db/openbgpd/dn42_roa_obgpd_46.conf"
 
-Start off with basic protection and sanity rules:
-```conf
-# deny more-specifics of our own originated prefixes
-deny quick from ebgp prefix-set mynetworks or-longer
+network prefix-set mydn42 set {
+	# https://dn42.dev/howto/BGP-communities
+	# e.g., for Germany this could read
+	# community 64511:41
+	# community 64511:1276
+	community 64511:<READ-THE-LINK-ABOVE>
+	community 64511:<READ-THE-LINK-ABOVE>
+	large-community $ASN:1:1
+}
 
-# filter out too long paths, establish more peerings instead
-deny quick from any max-as-len 8
-```
+listen on <YOUR-ROUTER-DN42-IPv4>
+listen on <PEER1-IPv6-LOCAL> # e.g. fe80::1%wg1234
 
-`quick` rules are considered the last matching rule, and evaluation of subsequent rules is skipped.
+group dn42peers {
+	# RFC7454 sec. 8
+	# (currently no peer sends more than 800 prefixes for
+	# a single address family; increase this if using
+	# multi-protocol BGP (or when the network grows)!)
+	max-prefix 1000 restart 60
+	neighbor <PEER1-IPv4> {
+		descr peer1_4
+		remote-as <PEER1-ASN>
+	}
+	neighbor <PEER1-IPv6-REMOTE> { # e.g. fe80::2%wg1234
+		descr peer1_6
+		remote-as <PEER1-ASN>
+		set nexthop <YOUR-DN42-IPv6-OF-PEER1-INTERFACE>
+	}
+}
 
-Allow own announcements:
-```conf
-# Outbound EBGP: only allow self originated networks to ebgp peers
-# Don't leak any routes from upstream or peering sessions. This is done
-# by checking for routes that are tagged with the large-community $ASN:1:1
-allow to ebgp prefix-set mynetworks large-community $ASN:1:1
-```
+# deny EBGP UPDATEs to our own originated prefixes
+deny quick from ebgp prefix-set mydn42 or-longer
+# filter out overlong paths
+deny quick from any max-as-len 10
 
-Allow all remaining UPDATES based on **O**rigin **V**alidation **S**tates:
-```conf
-# enforce ROA
-allow from ebgp ovs valid
-```
+allow from group dn42peers prefix-set dn42etc ovs valid
+allow to group dn42peers prefix-set dn42etc
 
-Note how the `ovs` filter requires the `roa-set {...}` to be defined;  see the `ROA` section below.
-
-### path attributes
-Besides `allow` and `deny` statements, filter rules can modify UPDATE messages, e.g.
-```conf
-# Scrub normal and large communities relevant to our ASN from EBGP neighbors
-# https://tools.ietf.org/html/rfc7454#section-11
+# scrub communities relevant to our ASN from EBGP neighbors
+# (RFC7454 sec. 11)
+# match from ebgp set { community delete $ASN:* }
 match from ebgp set { large-community delete $ASN:*:* }
 
-# Honor requests to gracefully shutdown BGP sessions
-# https://tools.ietf.org/html/rfc8326
+# honor requests to gracefully shutdown BGP sessions (RFC8326)
 match from any community GRACEFUL_SHUTDOWN set { localpref 0 }
 ```
 
-# ROA
+## ROA
 
-An roa-set can be generated from the registry directly or you can use the following pre-built tables.
+The `roa-set` for route origin validation (`ovs valid` in
+the config above) can be generated from the dn42 registry;
+here we use
+[data](https://dn42.burble.com/services/public/#roa-data)
+conveniently provided by BURBLE-MNT.
 
-One single `roa-set` may be defined, against which **bgpd** will validate the origin of each prefix;  this allows filter rules to use the `ovs` keyword as demonstrated above.
+If using the update script below, don't forget to create the
+`/var/db/openbgpd/` directory first.
 
-ROA files generated by [dn42regsrv](https://git.dn42.dev/burble/dn42regsrv) are available from burble.dn42:
+### `/root/openbgpd-roa-update.sh`
+```sh
+#!/bin/sh
 
-|URL|&nbsp;IPv4/IPv6&nbsp;|
-|---|---|
-| <https://dn42.burble.com/roa/dn42_roa_obgpd_46.conf> &nbsp; | &nbsp;Both&nbsp; |
-| <https://dn42.burble.com/roa/dn42_roa_obgpd_4.conf> &nbsp; | &nbsp;IPv4 Only&nbsp; |
-| <https://dn42.burble.com/roa/dn42_roa_obgpd_6.conf> &nbsp; | &nbsp;IPv6 Only&nbsp; |
-
-`/etc/dn42.roa-set` is the generated set:
-```conf
-roa-set {
-    fd00:12:34::/48 source-as 4242421234
-    fd00:ab:cd::/44 maxlen 64 source-as 4242427890
-    ...
+die() {
+  >&2 printf '%s: %s\n' "${0##*/}" "$*"
+  exit 1
 }
+
+# Unfortunately, burble regenerates the ROA files (hourly?)
+# even when nothing changed, so If-Modified-Since doesn't
+# help (similar story for .meta).
+
+metafile=/var/db/openbgpd/registry.meta
+err=$(ftp -o "$metafile" \
+  https://explorer.burble.com/api/registry/.meta 2>&1 >/dev/null) ||
+  die "/api/registry/.meta download failed: $err"
+
+if ! cmp -s "$metafile" "$metafile".old >/dev/null 2>&1; then
+  mv "$metafile" "$metafile".old
+  roafile=/var/db/openbgpd/dn42_roa_obgpd_46.conf
+  if err=$(ftp -To "$roafile".new \
+    https://dn42.burble.com/roa/dn42_roa_obgpd_46.conf \
+    2>&1 >/dev/null); then
+    mv "$roafile".new "$roafile"
+    bgpctl reload
+  else
+    die "ROA download failed: $err"
+  fi
+else
+  logger -cisp user.info "${0##*/}: registry unchanged, not reloading"
+fi
 ```
 
-Include it in `/etc/bgpd.conf`:
+### `/var/cron/tabs/root`
 ```conf
-# defines roat-set, see _rpki-client crontab
-include "/etc/dn42.roa-set"
+~       *       *       *       *       -ns /root/openbgpd-roa-update.sh
 ```
 
 # Looking glass
 This is mostly OpenBSD specific since [bgplg(8)](http://man.openbsd.org/bgplg.8) and [httpd(8)](http://man.openbsd.org/httpd.8) ship as part of the operating system.
-The **bgplg** manual contains the few steps and example [httpd.conf(5)](http://man.openbsd.org/httpd.conf.5) required to enable the looking glass.
+The **bgplg** manual contains the steps and example [httpd.conf(5)](http://man.openbsd.org/httpd.conf.5) required to enable the looking glass.
 
 See <https://t4-2.high5.nl/bgplg> for a running instance operating within DN42.
