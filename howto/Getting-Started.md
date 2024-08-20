@@ -333,6 +333,7 @@ You can find [configuration examples for Bird here](/howto/Bird2).
 * BGP:
     * [Bird](/howto/Bird2)
     * [FRR](/howto/frr)
+    * [OpenBGPD](/howto/OpenBGPD)
 * Router specific:
     * [dn42 on OpenWRT](/howto/OpenWRT)
     * [EdgeOS Configuration](/howto/EdgeOS-Config-Example)
