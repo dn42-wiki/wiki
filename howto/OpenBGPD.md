@@ -217,4 +217,5 @@ fi
 This is mostly OpenBSD specific since [bgplg(8)](http://man.openbsd.org/bgplg.8) and [httpd(8)](http://man.openbsd.org/httpd.8) ship as part of the operating system.
 The **bgplg** manual contains the steps and example [httpd.conf(5)](http://man.openbsd.org/httpd.conf.5) required to enable the looking glass.
 
-See <https://t4-2.high5.nl/bgplg> for a running instance operating within DN42.
+See <https://lg-dn42.vinishor.xyz/bgplg> (IPv6) for a
+running instance operating within DN42.
