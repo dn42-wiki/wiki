@@ -42,7 +42,7 @@ routing or incoming connections).
 ## `/etc/hostname.lo0`
 
 ```conf
-alias <YOUR-ROUTER-DN42-IPv4>
+inet alias <YOUR-ROUTER-DN42-IPv4>
 ```
 
 ## `/etc/hostname.wg1234`
