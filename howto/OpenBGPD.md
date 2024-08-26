@@ -81,7 +81,8 @@ pass in quick on my_dn proto tcp from <dn42peers> \
 # router itself; only dn42 transit and BGP sessions are allowed
 block in log quick on my_dn to {$dn42_self (my_dn)}
 pass out on my_dn from 192.168.42/24 nat-to $dn42_self
-pass on my_dn from <dn42etc> to <dn42etc>
+# 'no state' as we might not see both directions of transit traffic
+pass on my_dn from <dn42etc> to <dn42etc> no state
 ```
 
 ## `/etc/bgpd.conf`
