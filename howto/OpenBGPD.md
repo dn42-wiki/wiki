@@ -32,17 +32,23 @@ nexthop to a "global" address (i.e., one from our dn42 IPv6
 allocation) assigned to each peering (Wireguard) interface
 (each interface gets its own).
 
-To avoid burning a dn42 IPv4 address for each peering, we'll
-put the router's dn42 IPv4 address on the loopback interface
-and peer using an RFC1918 subnet (192.168.42/24) NATed to
-the loopback address (the NAT is only used in case of
-actively opening an IPv4 BGP session, it does not affect
-routing or incoming connections).
+To avoid burning a dn42 IPv4 address for each peering, we
+put the router's dn42 IPv4 address on a loopback interface
+and have `bgpd` bind to that address (`local-address` in
+`bgpd.conf`) when opening IPv4 BGP sessions; each peering
+interface gets an IPv4 address from an RFC1918 subnet
+(192.168.42/24), and a static route to the corresponding
+peer via that address.
 
-## `/etc/hostname.lo0`
+## `/etc/hostname.lo42`
 
 ```conf
-inet alias <YOUR-ROUTER-DN42-IPv4>
+inet <YOUR-ROUTER-DN42-IPv4>
+inet6 <YOUR-ROUTER-DN42-IPv6>
+# add a fallback route for our prefixes to discard traffic to
+# targets without a more specific route
+!route -qn add -blackhole <YOUR-DN42-IPv4-PREFIX> 127.0.0.1
+!route -qn add -blackhole <YOUR-DN42-IPv6-PREFIX> ::1
 ```
 
 ## `/etc/hostname.wg1234`
@@ -75,12 +81,12 @@ dn42_self = <YOUR-ROUTER-DN42-IPv4>
 table <dn42etc> const {172.20/14 172.31/16 10/8 fd00::/8 fe80::/64}
 table <dn42peers> const {<PEER1-IPv4> fe80::/64}
 pass in quick on egress proto udp to port 21234
+pass out quick on my_dn proto tcp to <dn42peers> port bgp !received-on any
 pass in quick on my_dn proto tcp from <dn42peers> \
   to {$dn42_self (my_dn)} port bgp
 # block everything (except for ICMP above) destined to the
 # router itself; only dn42 transit and BGP sessions are allowed
 block in log quick on my_dn to {$dn42_self (my_dn)}
-pass out on my_dn from 192.168.42/24 nat-to $dn42_self
 # 'no state' as we might not see both directions of transit traffic
 pass on my_dn from <dn42etc> to <dn42etc> no state
 ```
@@ -88,9 +94,10 @@ pass on my_dn from <dn42etc> to <dn42etc> no state
 ## `/etc/bgpd.conf`
 ```conf
 ASN = "<YOUR-AS-NUMBER>"
+ID = "<YOUR-ROUTER-DN42-IPv4>"
 
 AS $ASN
-router-id <YOUR-ROUTER-DN42-IPv4>
+router-id $ID
 
 # list of networks that may be originated by our ASN
 prefix-set mydn42 {
@@ -127,7 +134,7 @@ network prefix-set mydn42 set {
 	large-community $ASN:1:1
 }
 
-listen on <YOUR-ROUTER-DN42-IPv4>
+listen on $ID
 listen on <PEER1-IPv6-LOCAL> # e.g. fe80::1%wg1234
 
 group dn42peers {
@@ -139,6 +146,7 @@ group dn42peers {
 	neighbor <PEER1-IPv4> {
 		descr peer1_4
 		remote-as <PEER1-ASN>
+		local-address $ID
 	}
 	neighbor <PEER1-IPv6-REMOTE> { # e.g. fe80::2%wg1234
 		descr peer1_6
