@@ -74,3 +74,7 @@ Note, I (@bri / AS4242422825) have only tested this with Docker version 23.0.0, 
 ### Can I update the wiki?
 
 Yes, the wiki can be edited when browsing to [wiki.dn42](https://wiki.dn42).
+
+After you have registered and set up SSH key authentication,
+you can also clone and push to the
+[git repository](https://git.dn42.dev/wiki/wiki) directly.
