@@ -198,7 +198,7 @@ Use the following to sign the latest `<commit hash>` (that you found using `git 
 echo "<commit hash>" | ssh-keygen -Y sign -f <private key file> -n dn42
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 
@@ -248,7 +248,7 @@ openssl pkeyutl \
    -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 
@@ -294,7 +294,7 @@ openssl pkeyutl -sign \
     -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
 
 #### Verifying the signature
 

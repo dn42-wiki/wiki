@@ -1,6 +1,6 @@
 DN42 uses network addresses in the [rfc1918](https://tools.ietf.org/html/rfc1918) and [ULA](https://tools.ietf.org/html/rfc4193) ranges. These are described in detail within the sections below. 
 
-The [DN42 registry](https://git.dn42.dev/dn42/registry) is the authoritative source of information on address space assignment. Within the registry, the DN42 address space is divided in to blocks based on _policies_ that define how the addresses may be used. Policies are defined in `inetnum` and `inet6num` objects and can be:
+The [DN42 registry](https://git.dn42.dev/dn42/registry) is the authoritative source of information on address space assignment. Within the registry, the DN42 address space is divided into blocks based on _policies_ that define how the addresses may be used. Policies are defined in `inetnum` and `inet6num` objects and can be:
 
  - **open** - users may request prefixes in this range, subject to any constraints that are described in the `remark` attributes
  - **closed** - these ranges cannot be assigned

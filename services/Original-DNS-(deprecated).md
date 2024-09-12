@@ -5,7 +5,7 @@ This information is now **deprecated**. Please check [New DNS](/services/New-DNS
 
 *(tl;dr)* We have a TLD for dn42, which is `.dn42`. The anycast resolver for `.dn42` runs on `172.20.0.53` and `fd42:d42:d42:54::1`.
 
-**DNS is build from [whois database](/services/Whois). So please edit your DNS-records there.**
+**DNS is built from the [whois database](/services/Whois). Please edit your DNS records there.**
 
 ## Using the DNS service
 

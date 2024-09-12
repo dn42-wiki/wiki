@@ -5,14 +5,14 @@ Let us know the most creative, best, strangest, complex, wierd or just plain fun
 Document your mad setups in the categories below, with links to a full write up, photos and screenshots welcome.
 
 
-## Things peered in to dn42
- - Fun devices peered in to dn42,
+## Things peered into dn42
+ - Fun devices peered into dn42,
  - Or fun ways to connect them
- - The thing must be running BGP and connected in to dn42 as a full dynamic peer
+ - The thing must be running BGP and connected into dn42 as a full dynamic peer
 
 *Examples*:
  - Fun with virtualisation
-   - peer in to dn42 from your browser
+   - peer into dn42 from your browser
    - Emulate some old bgp capable hardware
  - Fun with hardware
    - obsolete routers you still have in your garage/loft/basement
@@ -42,7 +42,7 @@ Document your mad setups in the categories below, with links to a full write up,
 ***
 
 * Retro dn42 access service by Burble
- - burble.dn42 provides a [dn42 dialup service](https://dn42.burble.com/retro/) using real modems over VOIP, together with a [modem emulator](https://dn42.burble.com/retro/fake/) to ease attaching retro computers or virtual machines in to dn42
+ - burble.dn42 provides a [dn42 dialup service](https://dn42.burble.com/retro/) using real modems over VOIP, together with a [modem emulator](https://dn42.burble.com/retro/fake/) to ease attaching retro computers or virtual machines into dn42
 
  - 04dco: At a maximum theoretical speed of a whopping 28.8 Kbps, web browsing and IRC chatting were done. My site still loads faster than everyone else's :)
 

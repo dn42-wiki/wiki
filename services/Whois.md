@@ -75,7 +75,7 @@ The Python code for generating the zone from the registry is available on the mo
 
 An alternative version to query the registry is it `ip.catgirls.dn42` (IPv6 only) (Source code <https://git.catgirls.systems/famfo/ipinfo>). Note: if there is no `route`/`route6` object for the `inetnum`/`inet6num`, the ip address will not be found.
 
-This can be used together with `mtr` using the `--ipinfo_provider4` and `--ipinfo_provider6` flags (mtr has to be build from source for that, there hasn't been a release in a while).
+This can be used together with `mtr` using the `--ipinfo_provider4` and `--ipinfo_provider6` flags (mtr has to be built from source for that, there hasn't been a release in a while).
 
 Example:
 ```sh
@@ -97,7 +97,7 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 
 # Whois daemons
 
-We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1. Please consider joining these anycast-adresses when you setup your server. Updates every 1 hour would be nice for a start.
+We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1. Please consider joining these anycast adresses when you set up your server. Updates every 1 hour would be nice for a start.
 
 | **person**  | **dns**                   | **ip**          |
 |-------------|---------------------------|-----------------|
