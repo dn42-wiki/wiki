@@ -108,13 +108,13 @@ prefix-set mydn42 {
 # https://dn42.eu/howto/Bird2#example-configuration
 prefix-set dn42etc {
 	172.20.0.0/14 prefixlen 21 - 29	# dn42
-	172.20.0.0/24 prefixlen 28 - 32	# dn42 Anycast
-	172.21.0.0/24 prefixlen 28 - 32	# dn42 Anycast
-	172.22.0.0/24 prefixlen 28 - 32	# dn42 Anycast
-	172.23.0.0/24 prefixlen 28 - 32	# dn42 Anycast
+	172.20.0.0/24 prefixlen >= 28	# dn42 Anycast
+	172.21.0.0/24 prefixlen >= 28	# dn42 Anycast
+	172.22.0.0/24 prefixlen >= 28	# dn42 Anycast
+	172.23.0.0/24 prefixlen >= 28	# dn42 Anycast
 	172.31.0.0/16 or-longer		# ChaosVPN
 	10.100.0.0/14 or-longer		# ChaosVPN
-	10.127.0.0/16 prefixlen 16 - 32	# neonetwork
+	10.127.0.0/16 or-longer		# neonetwork
 	10.0.0.0/8    prefixlen 15 - 24	# Freifunk.net
 	fd00::/8      prefixlen 44 - 64	# dn42
 }

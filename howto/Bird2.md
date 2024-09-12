@@ -70,7 +70,7 @@ function is_valid_network() {
     172.23.0.0/24{28,32}, # dn42 Anycast
     172.31.0.0/16+,       # ChaosVPN
     10.100.0.0/14+,       # ChaosVPN
-    10.127.0.0/16{16,32}, # neonetwork
+    10.127.0.0/16+,       # neonetwork
     10.0.0.0/8{15,24}     # Freifunk.net
   ];
 }
