@@ -68,6 +68,27 @@ protocol bgp ROUTE_COLLECTOR
 }
 ```
 
+Example OpenBGPD config snippet (assumes config similar to
+the [OpenBGPD setup guide](/howto/OpenBGPD); note the GRC
+neighbor should be defined separately (outside the
+`dn42peers` group)):
+
+```conf
+neighbor fd42:4242:2601:ac12::1 {
+	local-address <YOUR-ROUTER-DN42-IPv6>
+	descr dn42grc
+	remote-as 4242422602
+	multihop 255
+	announce IPv4 unicast
+	announce IPv6 unicast
+	announce add-path send all
+}
+
+# [...]
+
+allow to {group dn42peers fd42:4242:2601:ac12::1} prefix-set dn42etc
+```
+
 Example VyOS 1.4 "Sagitta" config
 ```
 # The route collector should never export routes, so let's make a route-map to reject them if it does.
