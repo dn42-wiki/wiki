@@ -65,7 +65,7 @@ Link: <http://map.dn42/BestTrace42.zip>
 |Name     |Wiki Page                          |AS Number |Related Link(s)                           |
 |:--------|:----------------------------------|:---------|:-----------------------------------------|
 |IXP-frnte|[IXP-frnte](/services/IXP-frnte.md)|4242421081|N/A                                       |
-|IX2      |[IX2](/services/IX2.md)            |4242421951|N/A                                       |
+|mcast-ix |[mcast-ix](/services/mcast-ix)  |4242421951|N/A                                       |
 |SERNET-IX|[SERNET-IX](/services/SERNET-IX.md)|4242422245|[SERNET-IX](https://blog.sherpherd.top/ix)|
 
 ### ASN Authentication solution
