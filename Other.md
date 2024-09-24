@@ -16,6 +16,7 @@
 
 - **I2P** (Invisible Internet Project) is another overlay network that features a darknet whose sites are called "Eepsites".
 - **Freenet** is a popular darknet (friend-to-friend) by default; since version 0.7 it can run as a "opennet" (connecting to untrusted users).
+- **yggdrasil** is a new experimental compact routing scheme. It is designed to be a future-proof and decentralised alternative to the structured routing protocols commonly used today on the Internet, as well as an enabling technology for future large-scale mesh networks.
 - **RetroShare** can be run as a darknet (friend-to-friend) by default to perform anonymous file transfers if DHT and Discovery features are disabled.
 - **GNUnet** is a darknet if the "F2F (network) topology" option is enabled.
 - **Syndie** is software used to publish distributed forums over the anonymous networks of I2P, Tor and Freenet.
