@@ -78,7 +78,7 @@ up
 ```conf
 pass in quick proto {icmp icmp6} max-pkt-rate 30/3
 dn42_self = <YOUR-ROUTER-DN42-IPv4>
-table <dn42etc> const {172.20/14 172.31/16 10/8 fd00::/8 fe80::/64}
+table <dn42etc> const {172.20/14 172.31/16 10/8 fd00::/8}
 table <dn42peers> const {<PEER1-IPv4> fe80::/64}
 pass in quick on egress proto udp to port 21234
 pass out quick on my_dn proto tcp to <dn42peers> port bgp !received-on any
