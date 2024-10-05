@@ -212,6 +212,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://mk16de.bandura.dn42/> | Marek's site |
 | <http://lpnet0.dn42/>                              | LAUNCHPAD-NETWORK official website |
 | <http://blog.sherpherd.dn42/> | Hawkins' Homepage |
+| <https://20plays.dn42/> | 20plays' website |
 
 ## Pastebins
 
