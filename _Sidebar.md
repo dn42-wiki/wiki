@@ -37,6 +37,7 @@
   * [Distributed Wiki](/services/Distributed-Wiki)
   * [Certificate Authority](/services/Certificate-Authority)
   * [Route Collector](/services/Route-Collector)
+  * [Registry](/services/Registry)
 
 * Internal
   * [Internal services](/internal/Internal-Services)
