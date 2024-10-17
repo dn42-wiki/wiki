@@ -6,6 +6,8 @@ A maintainer is classified as "inactive" if the following conditions have been f
 1. All of the ASNs the maintainer has been directly or indirectly associated with (in any way and by following all references, whether through mnt-by, admin-c, tech-c, etc or through an ORG) have not been observed originating a prefix in the global routing table at any point within the last three years. (Determined by analyzing the daily MRT RIB dumps provided by the DN42 Global Route collector)
 2. The maintainer has not edited any of the ASNs they are associated with in the registry within the last three years. (Determined by analyzing the git commit history)
 
+Maintainers that are not affiliated with an ASN (whether directly or indirectly or through other maintainers) are also considered inactive regarless of whether they fulfill the above conditions.
+
 ## Process
 
 Using **registry_wizard v0.3.10**:
