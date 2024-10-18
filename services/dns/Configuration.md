@@ -262,6 +262,34 @@ system {
 ## MS DNS
 Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa", "10.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.
 
+## systemd-resolved
+
+If you are using systemd-networkd and systemd-resolved in a version later then v240 you can set up split DNS by adding the dn42 anycast servers to a interface:
+
+```
+[Match]
+Name=dummy0
+
+[Network]
+ # don't try to resolve normal internet domains with theses resolvers
+DNSDefaultRoute=false
+# configure dn42 anycast servers
+DNS=fd42:d42:d42:54::1
+DNS=172.23.0.53
+DNS=fd42:d42:d42:53::1
+DNS=172.20.0.53
+
+# configure all relevant dn42 domains as route-only domains
+Domains=~dn42
+Domains=~20.172.in-addr.arpa
+Domains=~21.172.in-addr.arpa
+Domains=~22.172.in-addr.arpa
+Domains=~23.172.in-addr.arpa
+Domains=~10.in-addr.arpa
+Domains=~d.f.ip6.arpa
+```
+
+
 # Resolver setup
 
 Configuration of common resolver softwares to do full recursion DNS queries for `.dn42` (and reverse DNS) IPv4 and IPv6 anycast services.
