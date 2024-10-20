@@ -71,3 +71,15 @@ Document your mad setups in the categories below, with links to a full write up,
 
 * Hardware Random Number Generator by Kioubit
  - A raspberry pi was connected to a random number source and random bytes offered via dn42. The raspberry pi is running a custom server to take requests via a simple HTTPS API and interface with the device.
+
+
+## Achievements
+Add what you did in/for dn42, yet:
+
+| Who     | #peerings | Bandwidth | DNS | Fileserver | Network service | Website   |
+|:------- |:--------- |:--------- |:--- |:---------- |:--------------- |:--------- |
+| allo    | 7 | 1 GBit/s          | auth. only | no  | no              | yes |
+| stv0g   | 8 | 1 GBit/s          | no  | no         | no              | [yes](https://dev.0l.dn42)  |
+| fsteinel| 2 | 2 MBit/s          | auth. only | no  | no              | [yes](http://www.flonet.dn42) |
+| haksrpd | 32| 3 gbps maximum approx. | auth. only | no | MPLS L3VPN, EVPN, DN42 Service Hosting, etc. | temporary unavailiable |
+
