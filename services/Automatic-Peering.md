@@ -30,8 +30,6 @@ AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
 AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
 AS4242423847 | [TheQ Network](https://dn42.0011.de) | <https://dn42.0011.de> |
 
-TODO: add <https://theresa.network/peer.html>
-
 ## Semi-automatic peering
 
 This list contains all automatic services that are not fully automatic, but still require confirmation from the operator or similar.
