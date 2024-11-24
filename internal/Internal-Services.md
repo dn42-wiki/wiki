@@ -34,7 +34,7 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
         * /raw: return your IP address as plain text
         * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 * Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
-* BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: https://flaps.pebkac.dn42
+* BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
 ### GeoIP Services
 
