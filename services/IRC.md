@@ -18,4 +18,7 @@ We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is
 | [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)  | Germany       |
 | [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)  | Netherlands   |
 
+### other dn42 IRC channels
+
+Libera: #dn42
 
