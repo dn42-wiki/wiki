@@ -16,9 +16,13 @@ We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is
 | [irc.hackint.org](ircs://irc.hackint.org:6697)        | Global        |
 | [irc.eu.hackint.org](ircs://irc.eu.hackint.org:6697)  | European      |
 | [irc.de.hackint.org](ircs://irc.de.hackint.org:6697)  | Germany       |
-| [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)  | Netherlands   |
+| [irc.nl.hackint.org](ircs://irc.nl.hackint.org:6697)  | Netherlands (currently offline)   |
 
-### other dn42 IRC channels
+### other IRC channels
 
 Libera: #dn42
+
+### other IRC networks
+
+replirc: irc.replirc.dn42 (also accessible via Tor, public internet, Yggdrasil)
 
