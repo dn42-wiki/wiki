@@ -20,7 +20,7 @@ We have an IRC Chatroom on the [hackint-Network](https://www.hackint.org). It is
 
 ### other IRC channels
 
-Libera: #dn42
+#dn42 on irc.libera.chat
 
 ### other IRC networks
 
