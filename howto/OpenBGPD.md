@@ -204,7 +204,7 @@ err=$(ftp -o "$metafile" \
 if ! cmp -s "$metafile" "$metafile".old >/dev/null 2>&1; then
   mv "$metafile" "$metafile".old
   roafile=/var/db/openbgpd/dn42_roa_obgpd_46.conf
-  if err=$(ftp -To "$roafile".new \
+  if err=$(ftp -o "$roafile".new \
     https://dn42.burble.com/roa/dn42_roa_obgpd_46.conf \
     2>&1 >/dev/null); then
     mv "$roafile".new "$roafile"
