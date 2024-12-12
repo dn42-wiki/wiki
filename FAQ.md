@@ -58,7 +58,7 @@ Prior to using ASNs in the new private ASN range 4200000000-4294967294 ([RFC6996
 
 By default, Docker overlaps with the entire DN42 range and then some. (172.16.0.0/12 == 172.16.0.0 - 172.31.255.255)
 
-In order to prevent this, you need to supply a different subnet range to the Docker daemon. This can be done by creating or updating `/etc/docker/daemon.json` with something along the following (this will use 192.168.128.0/18 == 192.168.128.0 - 192.168.128.0 - 192.168.191.255)
+In order to prevent this, you need to supply a different subnet range to the Docker daemon. This can be done by creating or updating `/etc/docker/daemon.json` with something along the following (this will use 192.168.128.0/18 == 192.168.128.0 - 192.168.191.255)
 ```json
 {
   "default-address-pools" : [

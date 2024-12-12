@@ -99,7 +99,7 @@ $ ip -6 route add ff7e:230:fdd5:69d5:c530::/96 dev eth0 table local
 $ ping6 -t 16 ff7e:230:fdd5:69d5:c530::123
 ```
 
-The "-t 16", a hop-limit of 16, is important here as **by default all multicast traffic is usually send with a hop-limit of just 1**.
+The "-t 16", a hop-limit of 16, is important here as **by default all multicast traffic is usually sent with a hop-limit of just 1**.
 
 ---
 

@@ -1,10 +1,10 @@
 # NixOS
 
-NixOS is a declarative Linux distribution based on the Nix package Manager. In this post I'll explain how I setup dn42 in this environment. I currently only peer with wireguard and use bird2. NixOS uses configuration files to manage the system state and has a builtin container module.
+NixOS is a declarative Linux distribution based on the Nix package Manager. In this post I'll explain how I set up dn42 in this environment. I currently only peer with wireguard and use bird2. NixOS uses configuration files to manage the system state and has a builtin container module.
 
 ## container disclaimer
 
-I had a spare IPv4 Address so I decided to use a container without a NAT and keep my host "clean" from dn42 Wireguard Interfaces and IP routes. However it's pain full to debug since nixos-rebuild restarts the container on every minor change. So every time you change a firewall rule or debug a DNS setting nixos-rebuild restarts the container before the change takes effect and since BGP is BGP, it can be really frustrating. 
+I had a spare IPv4 Address so I decided to use a container without a NAT and keep my host "clean" from dn42 Wireguard Interfaces and IP routes. However it's painful to debug since nixos-rebuild restarts the container on every minor change. So every time you change a firewall rule or debug a DNS setting nixos-rebuild restarts the container before the change takes effect and since BGP is BGP, it can be really frustrating.
 
 You may also want to have a look at this [Issue](https://github.com/NixOS/nixpkgs/issues/43652) and [Pull Request](https://github.com/NixOS/nixpkgs/pull/80169)
 
@@ -26,7 +26,7 @@ containers.dn42 = {
     config = { config, pkgs, ... }: {
         imports = [
             ./peers # Folder with a config for every Peer
-            ./dns.nix # Bind with the litschi.dn42 zone deligated
+            ./dns.nix # Bind with the litschi.dn42 zone delegated
             ./bird.nix # Bird config for BGP Routing
             ./networking.nix # Static Network configuration (with firewall)
             ./nginx.nix # nginx config for litschi.dn42
@@ -65,7 +65,7 @@ containers.dn42 = {
 
 ### Network Setup 
 
-As mentioned above, I got a spare public IPv4 Address, but by adding it as ```localAddress```, the container Part is configured static enough. But to forward traffic between Intferfaces ```/proc/sys/net/``` should configured
+As mentioned above, I got a spare public IPv4 Address, but by adding it as ```localAddress```, the container Part is configured static enough. But to forward traffic between Interfaces the following ```/proc/sys/net/``` parameters should be configured:
 
 ```nix
 boot.kernel.sysctl = {
@@ -73,7 +73,7 @@ boot.kernel.sysctl = {
     "net.ipv6.conf.all.forwarding" = 1;
 };
 ```
-This allows our firewall to configure forwarding between peers and other tunnels. What is allowed to be forwarded can be configured in the firewall. Ferm has only few NixOS Options, but is pretty basic. Its configured with the ```services.ferm.config``` options, that contains just a string. Within this string there's standard plain ferm config. Example config is attached below. 
+This allows our firewall to configure forwarding between peers and other tunnels. What is allowed to be forwarded can be configured in the firewall. Ferm has only few NixOS Options, but is pretty basic. It's configured with the ```services.ferm.config``` option, that contains just a string. Within this string there's standard plain ferm config. Example config is attached below.
 If the dn42 address is not bound at any other Interface, you need to add it to the lo Interface to use it as source IP when routing via peers with dedicated transfer net. 
 ```nix
 networking.interfaces.lo = {
@@ -126,8 +126,8 @@ services.ferm = {
                 interface intern-+ outerface dn42-+ ACCEPT;
                 # but dn42 -> intern only with execptions
                 interface dn42-+ outerface intern-+ {
-                    proto (ipv6-icmp icmp) ACCEPT; # Allow SSH Access from dn42 to devices behind intern-+ Interfaces
-                    proto tcp dport (ssh) ACCEPT;
+                    proto (ipv6-icmp icmp) ACCEPT;
+                    proto tcp dport (ssh) ACCEPT; # Allow SSH Access from dn42 to devices behind intern-+ Interfaces
                     mod state state (ESTABLISHED) ACCEPT;
                 }
             }
@@ -138,7 +138,7 @@ services.ferm = {
 
 ### Peering with wireguard
 
-Explained above, every peer gets a dedicated wireguard Interface and so a dedicated file. In the container config folder theres a peer subfolder and within a folder for dn42- (extern) Peers and intern- configs e.g. my Home Router or mobile devices. 
+As explained above, every peer gets a dedicated wireguard Interface and so a dedicated file. In the container config folder there's a peer subfolder and within a folder for dn42- (extern) Peers and intern- configs e.g. my Home Router or mobile devices.
 
 A sample wireguard config may look like this:
 ```nix
@@ -215,7 +215,7 @@ in
 
 ### Bird Looking Glass
 
-There is now (thanks to [Tchekda](https://github.com/NixOS/nixpkgs/pull/153481)) a direct way to setup a looking glass for bird on Nixos. [Documentation](https://github.com/NixOS/nixpkgs/blob/3aab5ebd436023ca8343a84804d51cd227dd01dd/nixos/modules/services/networking/bird-lg.nix) and sample : 
+There is now (thanks to [Tchekda](https://github.com/NixOS/nixpkgs/pull/153481)) a direct way to set up a looking glass for bird on Nixos. [Documentation](https://github.com/NixOS/nixpkgs/blob/3aab5ebd436023ca8343a84804d51cd227dd01dd/nixos/modules/services/networking/bird-lg.nix) and sample:
 
 ```nix
 bird-lg = {
@@ -234,9 +234,8 @@ bird-lg = {
 
 ### Services
 
-I also run services like a nameserver for .litschi.dn42 zones and a nginx webserver within this container. Since Host path for ```/var/www/dn42``` and ```/var/dns/dn42``` are booth binded into the container, zone config and e.g. website and be edited directly from Host without need the rebuild the hole container. 
+I also run services like a nameserver for .litschi.dn42 zones and a nginx webserver within this container. Since Host paths for ```/var/www/dn42``` and ```/var/dns/dn42``` are both bound into the container, zone config and e.g. website can be edited directly from Host without rebuilding the whole container.
 
 ### Sample configuration
 
-You can find a sample Wireguard + Bird configuration made by Tchekda ready for dn42 on [this](https://github.com/Tchekda/nixos-configuration/tree/master/llitt/dn42) repository
-
+You can find a sample Wireguard + Bird configuration made by Tchekda ready for dn42 in [this](https://github.com/Tchekda/nixos-configuration/tree/master/llitt/dn42) repository.
