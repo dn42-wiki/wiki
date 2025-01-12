@@ -251,7 +251,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://ntfy.weil-isso.dn42>                       | NTFY (Push Notify via REST-API)                                   |
 | kms.weil-isso.dn42 (Port 1688)                      | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
 | <https://dpnetwork.dn42/ip>                         | Yet Another what is my ip                                        |
-| anycast.zookeeper.immibis.dn42                      | Apache Zookeeper cluster (requires a client certificate for access - on request) |
+| anycast.zookeeper.immibis.dn42 (port 2181)          | Apache Zookeeper cluster (requires a client certificate for access - on request) |
 
 ## Usenet Servers / News
 
