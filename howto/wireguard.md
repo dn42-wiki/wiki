@@ -4,7 +4,7 @@ To quote the [homepage](https://www.wireguard.io/):
 
 # Example configuration for dn42
 
-Wireguard is a Layer3 VPN. In theory it allows multiple peers to be served with one interface/port, but it does internal routing based on the peer's public key. This means you will need one interface per peering on dn42
+Wireguard is a Layer3 VPN. In theory it allows multiple peers to be served with one interface/port, but it does internal routing based on the peer's public key. This means **you will need one interface per peering** on dn42
 to allow your BGP daemon instead to do routing. This approach is comparable to [OpenVPN p2p tunnels](/howto/openvpn).
 
 First generate on each peer public and private keys.
@@ -32,6 +32,8 @@ Endpoint = <end_point_hostname_or_ip:port>
 # instead just like for openvpn-based peerings
 AllowedIPs = 0.0.0.0/0,::/0
 ```
+
+**Make sure that your AllowedIPs include the full dn42 ranges (`172.20.0.0/14`, `fd00::/8`) and not just your peer's next hop IPs!** AllowedIPs functions as a data plane restriction on which target IPs can go over each WireGuard tunnel. If this is misconfigured, you may see errors such as: `ping: sendmsg: Destination address required`.
 
 ## Configure tunnel:
 
