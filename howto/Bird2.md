@@ -337,11 +337,11 @@ roa6FILE="/etc/bird/roa/roa_dn42_v6.conf"
 cp "${roa4FILE}" "${roa4FILE}.old"
 cp "${roa6FILE}" "${roa6FILE}.old"
 
-if curl -f -o "${roa4FILE}.new" "${roa4URL};" ;then
+if curl -f -o "${roa4FILE}.new" "${roa4URL}" ;then
     mv "${roa4FILE}.new" "${roa4FILE}"
 fi
 
-if curl -f -o "${roa6FILE}.new" "${roa6URL};" ;then
+if curl -f -o "${roa6FILE}.new" "${roa6URL}" ;then
     mv "${roa6FILE}.new" "${roa6FILE}"
 fi
 
