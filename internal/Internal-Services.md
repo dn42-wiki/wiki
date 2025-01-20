@@ -154,8 +154,8 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | yuan.nia.dn42 (172.20.168.244)                    | Genshi Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet  |
 | 172.20.229.250                                    | Minecraft              | Vanilla Server - latest(1.21.4)   |
 | mc.jerry.dn42 & jerry.dn42                        | Minecraft              | latest, IPv4 & IPv6 |
-| mc.razu.neo (formerly mc.razuritta.dn42)                             | Minecraft | latest(1.20.4 atm), IPv4+IPv6 |
-| mc.licen777.dn42 (172.23.197.197 & fde8:2e18:e127::300)              | Minecraft              | 1.16.5-1.21.3, (/gm 1, Cracked) |
+| mc.razu.neo (formerly mc.razuritta.dn42)          | Minecraft              | latest(1.20.4 atm), IPv4+IPv6 |
+| mc.licen777.dn42 (172.23.197.197 & fde8:2e18:e127::300) | Minecraft          | 1.16.5-1.21.3, (/gm 1, Cracked) |
 | fd11:ef8b:72ac::                                  | Minecraft              | 1.8                 |
 | ttd.jerry.dn42                                    | OpenTTD                | latest, IPv4 & IPv6 |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759           | SuperTuxKart           | latest, IPv4 only   |
@@ -164,8 +164,9 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | nodecore.pivipi.dn42                              | Minetest               | IPv6 only |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various | Log in to the shell servers for more |
 | telnet tetris.dn42                                | tetris in your terminal| other games available on request, ping mc36 @ irc |
-| <https://clicker.burble.dn42/>                    | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
+| [https://clicker.burble.dn42/](https://clicker.burble.dn42/) | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
 | [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/) | Monkic (Game in German) |
+| yobanirot.dn42:7591                               | Minecraft              | One more "tech" minecraft server, mods [here](https://yobanirot.dn42/mods.zip) |
 
 ## Voice chat
 
