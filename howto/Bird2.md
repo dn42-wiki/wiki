@@ -205,6 +205,27 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
 
 Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` or the `interface <if>;` syntax if a link local address is used (Which is recommended)
 
+# Getting routes installed to the kernal automatically
+
+If you do not do this, your bird logs *will* be full of `Netlink: Invalid argument` errors and you will not be able to access the DN42 network.
+
+You will need to create a loopback dummy interface with your DN42 router IP, for both IPv4 and IPv6
+
+Create the dummy interface with these commands:
+
+```
+ip link add dn42-dummy type dummy
+ip link set dev dn42-dummy up
+```
+
+Then, give it your router IP addresses:
+
+```
+ip addr add dev dn42-dummy <router ip>/<subnet>
+```
+
+Do this for both IPv4 and IPv6.
+
 ## Note on multiprotocol BGP and extended next hops
 This configuration example shows the required configuration without using multiprotocol BGP and extended next hops.
 These two options are helpful if one desires to optimize their peering by reducing the session count per peer to 1 (in the case of multiprotocol BGP) and remove the need to have IPv4 tunnel IP addresses (in the case of Extended next hops over IPv6)
