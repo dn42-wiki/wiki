@@ -18,8 +18,7 @@ Hosted by:
 * ne-vlezay80
 
 ## mirrors.nia.dn42
-**<http://mirrors.nia.dn42/>**
-**<http://[fd01:1926:817:1000::ac14:a8c5]/>**
+**<http://mirrors.nia.dn42/>** (IPv6 Only)
 
 ## mirror.z.dn42
 
