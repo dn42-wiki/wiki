@@ -300,7 +300,7 @@ You can use any *.delegation-servers.dn42 (where * is a letter) as an authoritat
 dig dn42. NS @172.20.0.53
 ```
 
-Current list of delegation servers (as of 03/04/2022):
+Current list of delegation servers (as of 2025-02-09):
 
 | Name | IPv4 | IPv6 |
 |---|---|---|
