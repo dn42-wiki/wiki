@@ -307,9 +307,10 @@ Current list of delegation servers (as of 03/04/2022):
 | b.delegation-servers.dn42 | 172.20.129.1 | fd42:4242:2601:ac53::1 |
 | j.delegation-servers.dn42 | 172.20.1.254 | fd42:5d71:219:0:216:3eff:fe1e:22d6 |
 | k.delegation-servers.dn42 | 172.20.14.34 | fdcf:8538:9ad5:1111::2 |
+| l.delegation-servers.dn42 | 172.22.108.54 | fd86:bad:11b7:53::1 |
 
 All the examples here list 172.20.129.1/fd42:4242:2601:ac53::1, but users are encouraged to configure
-multiple services from *.delegation-servers.dn42 for redundancy. 
+multiple services from *.delegation-servers.dn42 for redundancy.
 
 ## Dnssec
 All delegation servers have DNSSEC support and all record are signed, for more information about DNSSEC visit [New-DNS#dnssec](/services/New-DNS#dnssec).
