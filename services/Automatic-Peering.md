@@ -10,6 +10,7 @@ ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
+AS4242421771 | [duststars](https://exploro.one/dn42) | <https://exploro.one/dn42/autopeer> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
 AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
 AS4242422189 | [IEDON-NET](https://iedon.net) | <https://iedon.net> |
@@ -18,7 +19,6 @@ AS4242422717 | [JK-Network](https://net.whojk.com) | <https://net.whojk.com> |
 AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | <https://dn42.lare.cc/autopeer> |
 AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | <https://dn42.g-load.eu> |
-AS4242421771 | [duststars](https://exploro.one/dn42) | <https://exploro.one/dn42/autopeer> |
 
 Sort by AS number
 
