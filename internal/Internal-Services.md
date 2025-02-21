@@ -20,7 +20,7 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 ## Network-related
 
 * See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
-* Realtime network map: [map.dn42](http://map.dn42/) (DN42) or [map42.0x7f.cc](https://map42.0x7f.cc), [map.kuu.moe](https://map.kuu.moe) (IANA) _(Note: This is a direct copy of nixnodes map with some fixes and new functions since original map is no longer get maintained. This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
+* Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (IANA) _(This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
 * Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
 * Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 * Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
@@ -35,30 +35,6 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
         * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 * Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 * BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
-
-### GeoIP Services
-
-[map.dn42](http://map.dn42/) provides a simple GeoIP service. This service uses rDNS records and country field in aut-num objects as a reference, currently designed for fun :P
-
-#### API
-
-Results are in JSON format.
-
-```
-http://ipip.map.dn42/whois?ip=[DN42_IP]&lang=en
-http://ipip.map.dn42/whois?asn=AS[DN42_ASN]
-```
-
-#### Client
-
-There is a client software using above apis to provide GeoIP-based traceroute.
-It is a modified IPIP.NET Best Trace software with DN42 support injection.
-
-Windows only, no virus scan report available, but our DLL source is provided with the modified client. It's highly recommended to run this tool in a sandbox.
-
-**Since the original software is not open source, so use it at your own risk.**
-
-Link: <http://map.dn42/BestTrace42.zip>
 
 ### IX Services
 
