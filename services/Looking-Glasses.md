@@ -32,6 +32,7 @@ Please sort by AS number.
 | 4242421955 | dn42: <http://lg.nop.dn42> <br> dn42: telnet test.nop.dn42 <br> ext: <http://embed.ftelnet.ca/?Hostname=websock.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br> ext: <http://sandbox.freertr.org>  |
 | 4242422092 | ext: <https://lg.dn42.pebkac.gr> <br> dn42: <http://lg.pebkac.dn42> <br> IPv4 and IPv6 |
 | 4242422164 | ext: <https://lg.xiaoxi654.xyz> <br> dn42: <https://lg.xiaoxi654.dn42> |
+| 4242422189 | ext: <https://lg.iedon.net> <br> dn42: <https://lg.iedon.dn42> |
 | 4242422206 | ext: <https://lg.dn42.est-it.de> <br> dn42: <https://lg.techanit.dn42> <br> IPv4 and IPv6 |
 | 4242422237 | ext: <https://lg.dn42.munsternet.eu> <br> dn42: <http://lg.munsternet.dn42> <br> IPv6 only |
 | 4242422439 | ext: <https://lg.dn42.saru.moe> <br> dn42: <https://lg.saru.dn42> |
@@ -90,7 +91,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421926 | dn42: <https://lg.zhaofeng.dn42> <br> ext: <https://lg.naive.network> |
 | 4242422016 | ext: <https://dn42.sidereal.ca> <br> dn42: <https://lg.sidereal.dn42> |
 | 4242422024 | ext: <http://lg.dn42.gcc.ac.cn> <br> Interactive (ping, traceroute, BGP-map) |
-| 4242422189 | dn42: <http://lg.iedon.dn42> |
 | 4242422341 | ext: <https://lg.dn42.zotan.network> <br> dn42: <https://lg.zotan.dn42> |
 | 4242422342 | dn42: <http://lg.gbe.dn42> <br> Semi-interactive (no traceroute, no ping) |
 | 4242422428 | ext: <https://lg.0l.de> <br> IPv4 and IPv6 |
