@@ -20,7 +20,8 @@ Please sort by AS number.
 | 4242420927 | ext: <https://lg.dn42.liki.link> |
 | 4242421022 | ext: <https://lg.bsdrocker.com> |
 | 4242421050 | ext: <https://lg.dn42.napshome.net> <br> dn42: <http://lg.napshome.dn42> |
-| 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
+# | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
+| 4242421084 | ext: https://dn42-lg.darmstadt.freifunk.net/ |
 | 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
 | 4242421146 | ext: <https://lg.amcforum.wiki> |
 | 4242421197 | dn42: <http://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
