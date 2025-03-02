@@ -300,11 +300,12 @@ You can use any *.delegation-servers.dn42 (where * is a letter) as an authoritat
 dig dn42. NS @172.20.0.53
 ```
 
-Current list of delegation servers (as of 2025-02-09):
+Current list of delegation servers (as of 2025-03-02):
 
 | Name | IPv4 | IPv6 |
 |---|---|---|
 | b.delegation-servers.dn42 | 172.20.129.1 | fd42:4242:2601:ac53::1 |
+| i.delegation-servers.dn42 | 172.23.91.1 | fd42:4242:2189::1 |
 | j.delegation-servers.dn42 | 172.20.1.254 | fd42:5d71:219:0:216:3eff:fe1e:22d6 |
 | k.delegation-servers.dn42 | 172.20.14.34 | fdcf:8538:9ad5:1111::2 |
 | l.delegation-servers.dn42 | 172.22.108.54 | fd86:bad:11b7:53::1 |
