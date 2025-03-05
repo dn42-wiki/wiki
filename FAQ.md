@@ -24,11 +24,13 @@ issues. There may still be references back to monotone in some of the documentat
 
 [https://git.dn42.dev/dn42/registry](https://git.dn42.dev/dn42/registry)
 
+
 ### Can I use Windows to clone and update the registry ?
 
 No. The registry includes IPv6 resources but NTFS does not support having a `:` in filenames.
 
 A simple workaround is to use a non-Windows VM to do your changes, or use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) when working with the registry. 
+
 
 ### Can I reuse my public AS number/IPv4/IPv6?
 
@@ -54,6 +56,7 @@ We used to assign ASN in the 64600-64855 range, where you would get ASN 64600+X 
 
 Prior to using ASNs in the new private ASN range 4200000000-4294967294 ([RFC6996](http://tools.ietf.org/html/rfc6996)) Some ASNs were allocated from the [ASN reserved block](http://www.iana.org/assignments/as-numbers/as-numbers.xhtml) in the 76100-76199 range. 
 
+
 ### Why can't my Docker containers connect to other DN42 hosts?
 
 By default, Docker overlaps with the entire DN42 range and then some. (172.16.0.0/12 == 172.16.0.0 - 172.31.255.255)
@@ -70,6 +73,13 @@ In order to prevent this, you need to supply a different subnet range to the Doc
 }
 ```
 Note, I (@bri / AS4242422825) have only tested this with Docker version 23.0.0, build e92dd87. But it should work with any current version. I don't know how Swarm etc. networking works, this might need additional tweaking for other versions. (Referenced from <https://straz.to/2021-09-08-docker-address-pools/> and <https://docs.docker.com/network/bridge/> — I used this to get my `thelounge` container to connect to hackint.dn42.)
+
+Another possible solution is to instead create a config-only docker network covering the DN42 range:
+```sh
+docker network create dn42 --subnet 172.20.0.0/14 --config-only
+```
+This way Docker won't allocate addresses from this range for its [default networks](https://github.com/docker/docs/issues/8663#issuecomment-956438889).
+
 
 ### Can I update the wiki?
 
