@@ -38,6 +38,7 @@ This list contains all automatic services that are not fully automatic, but stil
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS4242420207 | [RoutedBits](https://dn42.routedbits.com) | <https://peering.routedbits.com> |
+AS4242420893 | [Maiyun-dn42](https://maiyun.me/dn42.html) | <https://github.com/myzhang1029/dn42-config-pub> |
 AS4242421732 | [BaragoonNetworks](https://as215887.net/dn42) | <https://github.com/baragoon/dn42-as4242421732> |
 
 Sort by AS number
