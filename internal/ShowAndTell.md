@@ -56,6 +56,10 @@ Document your mad setups in the categories below, with links to a full write up,
 
    ![GoBGP and route table output on Windows](/internal/images/gobgp-windows.png)
 
+- mdr: An 8-bit Sinclair ZX Spectrum with Spectranet card fitted connecting to my TNFS server over DN42. Emulator in a web browser also available at [https://speccy.mdr.dn42](https://speccy.mdr.dn42) - sort of like an old-school BBS system with games, message wall, user accounts etc. 
+
+  ![ZX Spectrum connecting to DN24 service](https://share.markround.com/speccy1.jpg)
+
 ## Things that use dn42
  - Fun stuff that you've done with dn42
 
