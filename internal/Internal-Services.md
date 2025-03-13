@@ -20,8 +20,8 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 ## Network-related
 
 * See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
-* Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (IANA) _(This map is currently using MRT dump from GRC as source. We will pull new dumps from GRC every 15 minutes.)_
-* Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (IANA). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
+* Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally 10-15 minutes.)_
+* Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (via clearnet). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
 * Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 * Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 * Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
@@ -35,6 +35,18 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
         * /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 * Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 * BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
+
+### Map.dn42 API Services
+
+Data refreshes whenever the collector provides a new MRT file, generally 10-15 minutes.
+
+| API               | URL                                                                                                         | Description                                                                                   |
+|-------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| `/map`            | [https://map.dn42/map](https://map.dn42/map) <br> [https://api.iedon.com/dn42/map](https://api.iedon.com/dn42/map) | Raw binary map data                                                                           |
+| `/map?type=json`  | [https://map.dn42/map?type=json](https://map.dn42/map?type=json) <br> [https://api.iedon.com/dn42/map?type=json](https://api.iedon.com/dn42/map?type=json) | Raw map data, in JSON                                                                         |
+| `/asn/{asn}`      | [https://map.dn42/asn/4242422189](https://map.dn42/asn/4242422189) <br> [https://api.iedon.com/dn42/asn/4242422189](https://api.iedon.com/dn42/asn/4242422189) | Real-time node information from the map, including WHOIS data, in JSON                       |
+| `/ranking`        | [https://map.dn42/ranking](https://map.dn42/ranking) <br> [https://api.iedon.com/dn42/ranking](https://api.iedon.com/dn42/ranking) | DN42 Global Ranking, based on the map.dn42 index                                             |
+| `/myip/[raw|api]` | [https://map.dn42/myip/](https://map.dn42/myip/) <br> [https://map.dn42/myip/api](https://map.dn42/myip/api) <br> [https://map.dn42/myip/raw](https://map.dn42/myip/raw) | What's My IP instance by map.dn42, including `netname` and `country` information if available |
 
 ### IX Services
 
