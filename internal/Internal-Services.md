@@ -154,7 +154,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | telnet tetris.dn42                                | tetris in your terminal| other games available on request, ping mc36 @ irc |
 | [https://clicker.burble.dn42/](https://clicker.burble.dn42/) | Clicker/Idle           | Waste your time away with a dn42 themed browser based idle game |
 | [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/) | Monkic (Game in German) |
-| n1.yobanirot.dn42:7591                               | Minecraft              | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip) (can die at any time) |
+| yobanirot.dn42:7591                               | Minecraft              | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip) (currently down, sowwy) |
 
 ## Voice chat
 
