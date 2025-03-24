@@ -63,6 +63,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420812 | dn42: <https://lg.jan.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242420827 | ext: <https://lg.llyn.lorkep.trade> <br> dn42: <https://lg.lorkep.dn42> <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
+| 4242420893 | dn42: <http://lg.maiyun.dn42> |
 | 4242420927 | ext: <https://lg.dn42.liki.link> |
 | 4242420977 | ext: <https://lg.moerail.ml> <br> dn42: <http://lg.moerail.dn42> |
 | 4242421022 | ext: <https://lg.bsdrocker.com> |
