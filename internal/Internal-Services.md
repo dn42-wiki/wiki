@@ -125,7 +125,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 ### Telegram
 
-A DN42 private Telegram app and server is available at [buzzster.dn42](https://buzzster.dn42), the app requires a new registration (Official Telegram account isn't valid), only support IPv4 at the moment.
+A DN42 private Telegram app and server is available at [buzzgram.dn42](https://buzzgram.dn42), the app requires a new registration (Official Telegram account isn't valid), only support IPv6 at the moment.
 
 A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d).
 
