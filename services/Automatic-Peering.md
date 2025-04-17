@@ -10,6 +10,7 @@ ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS4242420207 | [RoutedBits](https://dn42.routedbits.io) | <https://dn42.routedbits.io> |
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
+AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hcartiaux.github.io/dn42/> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
 AS4242421771 | [duststars](https://exploro.one/dn42) | <https://exploro.one/dn42/autopeer> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
