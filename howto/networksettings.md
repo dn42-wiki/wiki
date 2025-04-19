@@ -43,4 +43,32 @@ but responses are fowarded via your network. This will prevent conntrack from as
 and your firewall will drop it if it is configured to drop packets with invalid state.
 
 
+## Avoiding Issues with Peer Addressing
+
+When configuring BGP peers in dn42, be cautious about using DN42 IP addresses as peer addresses, particularly in the following scenario:
+- You are NOT using extended next hop
+- You ARE using the same IP for other services
+
+### The Problem
+If your peering link goes down (while the interface remains configured), your peer may have a static route for your service IP via the non-functional tunnel interface. This can make your services inaccessible, even if you have other working peers, because:
+- The static route typically has higher priority than BGP routes
+- Wireguard interfaces don't automatically go down when peers are unreachable
+- Traffic might be routed through peers with broken static routes
+
+This is especially likely to occur if your peers are major transit providers within DN42.
+
+### Solutions
+To avoid this issue, use one of these approaches:
+1. Use extended next hop in BGP configuration
+2. Use non-DN42 addresses for BGP peering
+3. Use different IPs for services than for peering
+4. De-couple services from specific nodes
+
+### Other Non-Trivial Pitfalls
+- **MTU issues with anycast services**: Using higher than minimum MTU for anycasted services can cause issues because path MTU discovery doesn't work properly with anycast. Since different anycast points of presence (POPs) may be reached during discovery attempts, the path MTU detection can fail, leading to packet fragmentation or drops.
+
+- **accept_local sysctl settings**: When running anycast services on routers, ensure the accept_local sysctl is enabled. Without this setting, a router might drop transit traffic from other origins that has the anycasted IP as the source address, breaking connectivity through your network for those services.
+
+- **Inadequate source IP filtering**: Services with public internet access require careful source IP filtering. For example, a DNS server in DN42 might receive requests with spoofed source IPs from inside DN42 that appear to come from public internet addresses. Without proper filtering, your server could respond to these spoofed requests, potentially participating in reflection attacks or exposing internal services to the public internet.
+
 Happy Routing!
