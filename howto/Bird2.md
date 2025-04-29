@@ -205,7 +205,7 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
 
 Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` or the `interface <if>;` syntax if a link local address is used (Which is recommended)
 
-# Getting routes installed to the kernal automatically
+# Getting routes installed to the kernel automatically
 
 If you do not do this, your bird logs *will* be full of `Netlink: Invalid argument` errors and you will not be able to access the DN42 network.
 
