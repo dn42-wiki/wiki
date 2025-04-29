@@ -44,7 +44,7 @@ The [Getting started](/howto/Getting-Started) page helps you to get your first n
  * [dn42-category in hackerspaces.org wiki](https://wiki.hackerspaces.org/Category:DN42)
  * [pentaradio24 – german podcast](https://www.c3d2.de/news/pentaradio24-20150428.html)
  * [dn42 in your browser](http://sandbox.freertr.org/)
- * [dn42 in your terminal](http://portable.nop.hu/)
+ * [dn42 in your terminal](http://portable.freertr.org/)
 
 ## Participant Groups
 
