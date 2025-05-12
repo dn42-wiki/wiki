@@ -148,7 +148,7 @@ instance=bgp-dn42-somename multihop=yes name=dn42-somepeer-ipv6 out-filter=dn42-
 remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=default
 ```
 
-Also, as a note, Mikrotik doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
+Also, as a note, Mikrotik RoS 6.x doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
 
 #### BGP Advertisements
 You want to advertise your allocated network (most likely), it's very simple:  
@@ -161,7 +161,7 @@ You can repeat that with as much IPv4 and IPv6 networks which you own.
 
 #### RoS 7.x
 
-First difference from v 6.x: There is no "network" menu. We advertise our networks now by adding them to the firewall address-list and referencing in the BGP configuration.
+First difference from v 6.x: There is no "network" menu. We advertise our networks now by adding them to the firewall address-list and referencing in the BGP configuration. Also, we can only advertise networks that are part of our static routes. Of course, we can still propagate routes received from others peers.
 
 Adding a network list:
 ```
@@ -174,16 +174,25 @@ IPv6
 add address=YOUR_ALLOCATED_SUBNET list=DN42_allocated_v6
 ```
 
+Adding a static route to your full allocated network:
+```
+/ipv6 route
+add blackhole disabled=no distance=1 dst-address=YOUR_ALLOCATED_SUBNET
+```
+
 Let's create a template for DN42. It isn't strictly necessary, but makes our life easier.
 ```
 /routing bgp template
-add address=ipv4 as=YOUR_AS_NUMBER name=DN42_template_v4 router-id=1.1.1.1
-add address=ipv6 as=YOUR_AS_NUMBER name=DN42_template_v6 router-id=1.1.1.1
+add afi=ipv4 as=YOUR_AS_NUMBER name=DN42_template_v4 output.network=DN42_allocated_v4 router-id=1.1.1.1
+add afi=ipv6 as=YOUR_AS_NUMBER name=DN42_template_v6 output.network=DN42_allocated_v6 router-id=1.1.1.1
 ```
 
 Now is time to add one peer:
 
-Another difference from RoS v6.x is that v7.x can use link-local adresses (validated with RoS 7.14.3). The trick is to add "%INTERFACE" after the address, where "INTERFACE" is the name of the interface the link-local is allocated to - or the interface used to get to that remote link-local. So, if You want to listen on fe::1 on the "myPeer" interface, the address would be "fe::1%myPeer". You still can't set your link-local: the system will create one, based on the interface MAC address.
+Another difference from RoS v6.x is that v7.x can use link-local adresses (validated with RoS 7.14.3, 7.18.1, 7.18.2 and 7.19rc2). The trick is to add "%INTERFACE" after the address, where "INTERFACE" is the name of the interface the link-local is allocated to - or the interface used to get to that remote link-local. So, if You want to listen on fe80::1 on the "myPeer" interface, the address would be "fe80::1%myPeer".
+
+RoS 7.17 and newer can set the link local address.
+
 
 ```
 IPv4 peer
