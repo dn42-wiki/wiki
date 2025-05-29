@@ -38,10 +38,12 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 
 ### Speedtest
 
-| Operator | Location  | Max Speed | Link                                                       |
-| :------- | :-------- | :-------- | ---------------------------------------------------------- |
-| Burble   | Anycast   | Unknown   | [speedtest.burble.dn42](https://speedtest.burble.dn42/)    |
-| Kioubit  | Nuremberg | 400 Mbps  | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/) |
+| Operator   | Location  | Max Speed   | Link                                                         |
+| :--------- | :-------- | :---------- | ------------------------------------------------------------ |
+| Burble     | Anycast   | Unknown     | [speedtest.burble.dn42](https://speedtest.burble.dn42/)      |
+| Kioubit    | Nuremberg | 400 Mbps    | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/)   |
+| Routedbits | Multiple  | Unknown     | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes) |
+| vr18       | Unknwon   | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 
 ### Map.dn42 API Services
 
