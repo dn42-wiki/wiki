@@ -36,6 +36,14 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 - BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
+### Speedtest
+
+| Operator | Location  | Max Speed | Link                           |
+| :------- | :-------- | :-------- | ------------------------------ |
+| Burble   | Anycast   | Unknown   | https://speedtest.burble.dn42/ |
+| Kioubit  | Nuremberg | 400 Mbps  | http://kioubit.dn42/speedtest/ |
+
+
 ### Map.dn42 API Services
 
 Data refreshes whenever the collector provides a new MRT file, generally 10-15 minutes.
