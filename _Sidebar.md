@@ -54,6 +54,7 @@
   * [Paste Board](https://paste.dn42.us)
   * [HedgeDoc](https://hedgedoc.dn42.eu)
   * [Git Repositories](https://git.dn42.dev)
+  * [Registry](https://git.dn42.dev/dn42/registry)
 
 --------------
 
