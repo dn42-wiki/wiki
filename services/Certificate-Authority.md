@@ -3,7 +3,7 @@
 internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains.
 If you would like to have a certificate signed by this CA there is [an automated process to do so](/services/Automatic-CA). The CA is maintained by xuu@dn42.us.
 
-If you are required to specify a license to clarify redistribution, then it [can be considered](https://groups.io/g/dn42/topic/the_license_of_dn42_root_ca/113536491) as [CC0](https://creativecommons.org/public-domain/cc0/).
+If you are required to specify a license to clarify redistribution, then it [can be considered](https://groups.io/g/dn42/message/844) as [CC0](https://creativecommons.org/public-domain/cc0/).
 
 The CA certificate ([dn42](https://ca.dn42/crt/root-ca.crt), [iana](https://ca.dn42.us/crt/root-ca.crt)):
 
