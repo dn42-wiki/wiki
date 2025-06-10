@@ -1,7 +1,7 @@
 # GRE+IPsec
 
 ## Why GRE?
-* [GRE](https://en.wikipedia.org/wiki/GRE) provides universal encapsulation on top of IP.
+* [GRE](https://en.wikipedia.org/wiki/Generic_routing_encapsulation) provides universal encapsulation on top of IP.
 * It has a smaller header than UDP.
 * GRE tunnels are processed in-kernel on *nix systems.
 * It's supported by hardware routers.
