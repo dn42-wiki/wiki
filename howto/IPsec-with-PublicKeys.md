@@ -29,11 +29,11 @@ Keep in mind that certificates are just public keys wrapped with some extra meta
 
 ## Ok fine, how do I public key?
 ### Conversion tool
-Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them. Here is a script for that purpose:
-
-<https://raw.githubusercontent.com/zeroae/pubkey-converter/master/pubkey-converter.pl>
+Different implementations use different formats to represent public keys, and it's necessary to be able to convert between them.
+A script for that purpose can be found in this git repository: [https://github.com/zeroae/pubkey-converter](github.com/zeroae/pubkey-converter) (it can also be [downloaded directly here](https://raw.githubusercontent.com/zeroae/pubkey-converter/master/pubkey-converter.pl)).
 
 ### How-To examples
+
 | Implementation           | Key format      |
 | :----------------------- | --------------: |
 | [strongSwan >= 5.0.0][f] | PEM             |
