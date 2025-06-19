@@ -31,6 +31,7 @@ Please sort by AS number.
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
 | 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
+| 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
 
 
 ## Down
