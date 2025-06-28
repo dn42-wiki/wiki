@@ -11,8 +11,8 @@ DN42’s RPKI RTR service endpoints are hosted by multiple operators. By configu
 
 | Server             | Port | **IPv4/IPv6** |
 | ------------------ | ---- | ------------- |
-| rpki.dn42.milu.moe | 8082 | both          |
 | rpki.akae.re       | 8082 | both          |
+| rpki.dn42.milu.moe | 8082 | both          |
 
 To configure the service, connect your BGP software’s RPKI client to one or more of these RTR servers.
 
