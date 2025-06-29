@@ -55,11 +55,7 @@ services:
   stayrtr:
     image: rpki/stayrtr:latest
     ports:
-      - "8082:8082"
+      - "8082:8282"
     command: >
-      -bind :8082
       -cache https://dn42.burble.com/roa/dn42_roa_46.json
-    stdin_open: true
-    tty: true
 ```
-
