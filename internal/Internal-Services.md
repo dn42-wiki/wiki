@@ -231,7 +231,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | <https://urandom.catgirls.dn42/>                          | Message board                                                                       |
 | -------------------------------------------------         | ------------------------------------------------------------------------------      |
-| <https://bbs.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw. |
+| <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw. Previously under bbs.dn42. |
 
 ## Misc
 
