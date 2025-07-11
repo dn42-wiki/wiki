@@ -24,7 +24,7 @@ Please sort by AS number.
 | 4242421955 | dn42: <http://lg.nop.dn42> <br> dn42: telnet test.nop.dn42 <br> ext: <http://embed.ftelnet.ca/?Hostname=websock.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br> ext: <http://sandbox.freertr.org>  |
 | 4242422092 | ext: <https://lg.dn42.pebkac.gr> <br> dn42: <http://lg.pebkac.dn42> <br> IPv4 and IPv6 |
 | 4242422189 | ext: <https://lg.iedon.net> <br> dn42: <https://lg.iedon.dn42> |
-| 4242422308 | dn42: <https://lg.mirsal.dn42> |
+| 4242422308 | ext: <https://lg.dn42.mirsal.fr> <br> dn42: <https://lg.mirsal.dn42> |
 | 4242422439 | ext: <https://lg.dn42.saru.moe> <br> dn42: <https://lg.saru.dn42> |
 | 4242422558 | ext: <https://lg.dn42.derix.dev> <br> dn42: <https://lg.derix.dn42> |
 | 4242422575 | dn42: <https://lg.androw.dn42> <br> ext: <https://lg.androw.eu> |
