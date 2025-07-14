@@ -30,7 +30,7 @@ If your hackerspace is actually using dn42 to provide some services, please let 
 
 ## Join or Contact us
 
-dn42 is operated by a group of volunteers. There is no central authority which controls or impersonates the network. Take a look at the [contact](/contact) page to see how to collaborate or contact us.
+dn42 is operated by a group of volunteers. There is no central authority which controls or represents the network. Take a look at the [contact](/contact) page to see how to collaborate or contact us.
 
 The [Getting started](/howto/Getting-Started) page helps you to get your first node inside the network.
 
