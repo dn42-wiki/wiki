@@ -217,6 +217,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://blog.sherpherd.dn42/>  | Hawkins' Homepage                                 |
 | <https://20plays.dn42/>        | 20plays' website                                  |
 | <https://mdr.dn42/>            | Mark Dastmalchi-Round's website (clearnet mirror) |
+| <https://yobanirot.dn42>       | NAAIN's website                                   |
 
 ## Pastebins
 
