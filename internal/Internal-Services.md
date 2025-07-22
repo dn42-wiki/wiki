@@ -165,6 +165,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/)                                                                 | Monkic (Game in German)    |
 | yobanirot.dn42:7591                                                                                                                             | Minecraft and Minetest     | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip). Minetest on same port |
 | yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
+|[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
 
 ## Voice chat
 
