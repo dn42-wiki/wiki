@@ -81,9 +81,39 @@ unit = "dn42-json"
 
 For more information cosult the official documentation: <https://rtrtr.docs.nlnetlabs.nl/en/stable/>
 
+### Kioubit's DN42 Registry Wizard
+
+[DN42 Registry Wizard](https://github.com/Kioubit/dn42_registry_wizard) is a comprehensive tool for DN42 registry interactions. **Unlike other solutions, it can parse the registry and host an RTR server all-in-one** without requiring separate components.
+
+#### All-in-One RTR Server
+
+```sh
+# Clone the DN42 registry
+git clone https://git.dn42.dev/dn42/registry.git
+
+# Start RTR server directly from registry
+./registry_wizard <path to registry> rtr 
+
+# Setup a cronjob to continously update the registry and notify registry_wizard
+git fetch --all
+git reset --hard origin/master
+kill -SIGUSR1 "$(pidof 'registry_wizard')"
+```
+
+```
+Usage: registry_wizard <registry_root> rtr [OPTIONS]
+
+Options:
+  -p, --port <port>        Port to listen on [default: 9323]
+      --refresh <refresh>  RTR refresh timing [default: 3600]
+      --expire <expire>    RTR expire timing [default: 7200]
+      --retry <retry>      RTR retry timing [default: 600]
+  -h, --help               Print help
+```
+
 ### Other tools / generators
 - bauen1's dn42-roagen: <https://gitlab.com/bauen1/dn42-roagen>
-- Kioubit's registry wizard: <https://git.dn42.dev/Kioubit/RegistryWizard>
+- Kioubit's registry wizard: <https://github.com/Kioubit/dn42_registry_wizard>
 - chuangzhu's pure bash script: <https://paste.sr.ht/~chuang/e98d2fe791de68a6cf5aade7877cd0dbc1cdb84e>
 
 ### This is all to complicated, is there an easy all-in-one package for RTR?
