@@ -10,12 +10,11 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 ## Certificate Authority
 
-xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
+* xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
 
-Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+* Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
-> \*\*\*Currently Down as of 12/18/23 <br>
-> n0emis maintains an [ACME server](https://acme.dn42) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+* Kioubit maintains a certificate authority (https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
 
 ## Network-related
 
@@ -34,7 +33,7 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
     - /raw: return your IP address as plain text
     - /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
-- BGP flap detector (FlapAlertedPro by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
+- BGP flap detector (FlapAlerted by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
 ### Speedtest
 
@@ -43,7 +42,7 @@ Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with acco
 | Burble     | Anycast            | Unknown     | [speedtest.burble.dn42](https://speedtest.burble.dn42/)      |
 | Kioubit    | Nuremberg, Germany | 400 Mbps    | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/)   |
 | Routedbits | Multiple           | Unknown     | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes) |
-| vr18       | Unknwon            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
+| vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 
 ### Map.dn42 API Services
 
