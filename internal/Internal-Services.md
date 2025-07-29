@@ -14,7 +14,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 * Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
-* Kioubit maintains a certificate authority (https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
+* Kioubit maintains a [certificate authority](https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
 
 ## Network-related
 
