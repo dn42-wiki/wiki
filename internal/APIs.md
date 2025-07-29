@@ -3,7 +3,7 @@ This page can be useful if you are trying to automate something or if you are tr
 
 ### ASN Authentication Solution
 Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network.
-To use the service, please message Kioubit on IRC to have your domain activated and receive the required documentation.
+[Documentation](https://dn42.g-load.eu/about/authentication-services/)
 
 ## Registry REST API
 
