@@ -10,7 +10,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 ## Certificate Authority
 
-* xuu is maintaining an [certificate authority](/services/Certificate-Authority) for internal services.
+* xuu is maintaining a [certificate authority](/services/Certificate-Authority) for internal services.
 
 * Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
@@ -19,8 +19,8 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 ## Network-related
 
 - See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
-- Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally 10-15 minutes.)_
-- Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (via clearnet). Main functions including _network information_, _network map (from map.dn42, require WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
+- Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
+- Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (via clearnet). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
 - Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
@@ -46,7 +46,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 ### Map.dn42 API Services
 
-Data refreshes whenever the collector provides a new MRT file, generally 10-15 minutes.
+Data refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.
 
 | API              | URL                                                                                                                                                            | Description                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ Data refreshes whenever the collector provides a new MRT file, generally 10-15 m
 | mcast-ix  | [mcast-ix](/services/mcast-ix)   | 4242421951 | N/A                                        |
 | SERNET-IX | [SERNET-IX](/services/SERNET-IX) | 4242422245 | [SERNET-IX](https://blog.sherpherd.top/ix) |
 
-### ASN Authentication solution
+### ASN Authentication Solution
 
 Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network. [Documentation](https://dn42.g-load.eu/about/authentication-services/)
 
@@ -99,7 +99,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://live.jerry.dn42/>                      | Live audio stream powered by mpd                                                       |
 | <http://radio.vr18.dn42/>                       | Online radio by vr18                                                                   |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist> | TV Channels Streaming                                                                  |
-| <http://icy.jones.dn42>                         | Home grown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!) |
+| <http://icy.jones.dn42>                         | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!) |
 | <https://radio.vrpnet.dn42>                     | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap                            |
 | <http://webdj.nop.dn42/>                        | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/                  |
 | <https://sdr.pebkac.dn42/>                      | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)   |
@@ -147,7 +147,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 
 | Hostname / IP                                                                                                                                   | Game                       | Remarks                                                                                              |
 | :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------------------------------------------------------------- |
-| yuan.nia.dn42 (172.20.168.244)                                                                                                                  | Genshi Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet                        |
+| yuan.nia.dn42 (172.20.168.244)                                                                                                                  | Genshin Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet                        |
 | 172.20.229.250                                                                                                                                  | Minecraft                  | Vanilla Server - latest(1.21.4)                                                                      |
 | mc.jerry.dn42 & jerry.dn42                                                                                                                      | Minecraft                  | latest, IPv4 & IPv6                                                                                  |
 | mc.razu.neo (formerly mc.razuritta.dn42)                                                                                                        | Minecraft                  | latest(1.20.4 atm), IPv4+IPv6                                                                        |
@@ -160,7 +160,7 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 | nodecore.pivipi.dn42                                                                                                                            | Minetest                   | IPv6 only                                                                                            |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various                    | Log in to the shell servers for more                                                                 |
 | telnet tetris.dn42                                                                                                                              | tetris in your terminal    | other games available on request, ping mc36 @ irc                                                    |
-| [https://clicker.burble.dn42/](https://clicker.burble.dn42/)                                                                                    | Clicker/Idle               | Waste your time away with a dn42 themed browser based idle game                                      |
+| [https://clicker.burble.dn42/](https://clicker.burble.dn42/)                                                                                    | Clicker/Idle               | Waste your time away with a dn42-themed browser-based idle game                                      |
 | [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/)                                                                 | Monkic (Game in German)    |
 | yobanirot.dn42:7591                                                                                                                             | Minecraft and Minetest     | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip). Minetest on same port |
 | yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
@@ -182,11 +182,11 @@ A MTProxy server is available at [mtp.jerry.dn42:8044](https://t.me/proxy?server
 
 Test out your skills with online challenges
 
-| Start here                           | Remarks                       |
-| :----------------------------------- | :---------------------------- |
-| <https://burble.dn42/services/ping/> | burble.dn42 ping challenge    |
-| <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge (2024) |
-| <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge (2023) |
+| Start here                           | Remarks                     |
+| :----------------------------------- | :-------------------------- |
+| <https://burble.dn42/services/ping/> | burble.dn42 ping challenge  |
+| <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge 1    |
+| <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge 2    |
 
 ## Shell
 
@@ -232,7 +232,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | <https://urandom.catgirls.dn42/>                          | Message board                                                                       |
 | -------------------------------------------------         | ------------------------------------------------------------------------------      |
-| <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topics. Maintained by nicholascw. Previously under bbs.dn42. |
+| <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topic. Maintained by nicholascw. Previously under bbs.dn42. |
 
 ## Misc
 
@@ -262,8 +262,3 @@ There is a list of E-Mail providers [here](/services/E-Mail-Providers)
 # Other networks
 
 **[List of other Overlay Networks](/Other)**
-
-## Public Internet
-
-- <https://mirror.frubar.net> 100MBit
-- <https://frucman.frubar.net>
