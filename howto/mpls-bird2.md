@@ -1,4 +1,4 @@
-Original Article: [https://blog.sherpherd.top/2024/02/11/RunYourMPLSNetworkWithBIRD_en.html](https://blog.sherpherd.top/2024/02/11/RunYourMPLSNetworkWithBIRD_en.html)
+Original Article: [https://blog.sherpherd.net/2024/02/11/RunYourMPLSNetworkWithBIRD_en.html](https://blog.sherpherd.net/2024/02/11/RunYourMPLSNetworkWithBIRD_en.html)
 
 # Intro
 Now, most tutorials about running MPLS on Linux are based on FRR. Because in a long time, FRR and its predecessor Quagga are the only choices who provide industry standard MPLS  related protocol (LDP, BGP-LU, BGP IPv4/IPv6 MPLS L3VPN, etc.) implementation, by the time, most of other routing software don't even have availiable MPLS support.
