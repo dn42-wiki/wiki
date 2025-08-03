@@ -41,18 +41,18 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
 
   + **wiki-sync.sh**:
 
-   ```sh
-#!/bin/bash
-
-WIKI_PATH=<repo path>
-GIT=/usr/bin/git
-
-cd "${WIKI_PATH}"
-${GIT} push
-${GIT} pull
-
-exit 0
-   ```
+    ```sh
+    #!/bin/bash
+    
+    WIKI_PATH=<repo path>
+    GIT=/usr/bin/git
+    
+    cd "${WIKI_PATH}"
+    ${GIT} push
+    ${GIT} pull
+    
+    exit 0
+    ```
 
   + **Cron entry**:
 
@@ -66,15 +66,15 @@ exit 0
  - Start two gollum instances, read-only and read/write on `127.0.0.1`:
 
    Read/write (SSL only):
-    ```
-RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
-    ```
+   ```
+   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
+   ```
    Read-only:
-    ```
-RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
-    ```
+   ```
+   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
+   ```
 
-    Set `<path>` to the location where wiki Git repo was cloned. 
+   Set `<path>` to the location where wiki Git repo was cloned. 
 
 ## Nginx reverse proxy
 
@@ -110,13 +110,13 @@ A custom header `X-SiteID` identifies the site you're connecting to:
   - Extract base64 encoded SPKI fingerprint from private key `wiki.key`:
 
     ```sh
-openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
+    openssl rsa -in wiki.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
     ```
 
   - Configure Nginx to send the fingerprint in header (SSL block):
 
     ```conf
-add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=5184000; includeSubDomains';
+    add_header Public-Key-Pins  pin-sha256="<primary>"; pin-sha256="<backup>"; max-age=5184000; includeSubDomains';
     ```
 
    + `<primary>` - the fingerprint extracted from `wiki.key`
