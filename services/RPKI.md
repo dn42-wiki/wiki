@@ -9,10 +9,11 @@ It is recommended to run your own RPKI validator, as this provides you with the 
 
 DN42’s RPKI RTR service endpoints are hosted by multiple operators. By configuring multiple RTR servers in your BGP daemon, you gain additional resiliency and improved validation coverage.
 
-| Server             | Port | **IPv4/IPv6** |
-| ------------------ | ---- | ------------- |
-| rpki.akae.re       | 8082 | both          |
-| rpki.dn42.milu.moe | 8082 | both          |
+| Server                   | Port | **IPv4/IPv6** |
+| ------------------------ | ---- | ------------- |
+| rpki.akae.re             | 8082 | both          |
+| rpki.dn42.launchpadx.top | 8082 | IPv4          |
+| rpki.dn42.milu.moe       | 8082 | both          |
 
 To configure the service, connect your BGP software’s RPKI client to one or more of these RTR servers.
 
