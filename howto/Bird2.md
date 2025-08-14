@@ -53,15 +53,15 @@ protocol device {
  *  Utility functions
  */
 
-function is_self_net() {
+function is_self_net() -> bool {
   return net ~ OWNNETSET;
 }
 
-function is_self_net_v6() {
+function is_self_net_v6() -> bool {
   return net ~ OWNNETSETv6;
 }
 
-function is_valid_network() {
+function is_valid_network() -> bool {
   return net ~ [
     172.20.0.0/14{21,29}, # dn42
     172.20.0.0/24{28,32}, # dn42 Anycast
@@ -88,7 +88,7 @@ protocol static {
     include "/etc/bird/roa_dn42_v6.conf";
 };
 
-function is_valid_network_v6() {
+function is_valid_network_v6() -> bool {
   return net ~ [
     fd00::/8{44,64} # ULA address space as per RFC 4193
   ];
@@ -204,6 +204,7 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
 }
 ```
 And for the case of MP-BGP over IPV6 with ENH
+This work without a configured IPV4 in the link interface
 ```conf
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
     enable extended messages on;
@@ -434,6 +435,7 @@ To do a basic configuration you need to add 1 line to your bird.conf and enable 
 template. 
 It is currently recommended that you only enable it for each peer that supports it and has it enabled.
 Add this above the template for dnpeers.
+It acts as a detection mechanism that is very fast and can detect for example if your tunnel link is down.
 ```conf
 protocol bfd {};
 ```
