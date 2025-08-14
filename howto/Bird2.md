@@ -186,10 +186,11 @@ First, make sure the /etc/bird/peers directory exists:
 # mkdir -p /etc/bird/peers
 ```
 
-Then for each peer, create a configuration file similar to this one:
+Each peer can use different methods to peer. Most usually this is either two seperate sessions,
+one for ipv4 and one for ipv6, or  Multi protocol BGP with Extended Next Hop, as detailed below. 
 
-`/etc/bird/peers/<NEIGHBOR_NAME>.conf`:
-
+`/etc/bird/peers/<NEIGHBOR>.conf`:
+For the case with seperate BGP sessions
 ```conf
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
         neighbor <NEIGHBOR_IP> as <NEIGHBOR_ASN>;
@@ -201,6 +202,19 @@ protocol bgp <NEIGHBOR_NAME>_v6 from dnpeers {
         # neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
         # interface <NEIGHBOR_INTERFACE>;****
 }
+```
+And for the case of MP-BGP over IPV6 with ENH
+```conf
+protocol bgp <NEIGHBOR_NAME> from dnpeers {
+    enable extended messages on;
+    neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
+        # Or:
+        # neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
+        # interface <NEIGHBOR_INTERFACE>;****
+     ipv4 {
+        extended next hop on;
+    };
+};
 ```
 
 Due to the special link local addresses of IPv6, an interface has to be specified using the `%<if>` or the `interface <if>;` syntax if a link local address is used (Which is recommended)
@@ -413,3 +427,30 @@ protocol rpki rpki_dn42{
   expire keep 172800;
 }
 ```
+### Use BFD in bird2
+BFD is an additional protocol with extremely low overhead to detect failures in the switching plane between peers,
+it is used widely by cleanet peerings and some networks already have enabled it globally.
+To do a basic configuration you need to add 1 line to your bird.conf and enable it per peer or globally by defining it in the
+template. 
+It is currently recommended that you only enable it for each peer that supports it and has it enabled.
+Add this above the template for dnpeers.
+```conf
+protocol bfd {};
+```
+And below is an example for a MP-BGP over IPV6 with ENH peering 
+`/etc/bird/peers/<NEIGHBOR>.conf`
+Note bfd graceful; only activates when both sides have bfd configured and does not cause issues in peerings without BFD
+```conf
+protocol bgp <NEIGHBOR_NAME> from dnpeers {
+    enable extended messages on;
+    bfd graceful;
+    neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
+        # Or:
+        # neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
+        # interface <NEIGHBOR_INTERFACE>;****
+     ipv4 {
+        extended next hop on;
+    };
+};
+```
+Additional documentation about the BFD protocol is available at [the BIRD2 documentation](https://bird.network.cz/?get_doc&v=20&f=bird-6.html#ss6.3) .
