@@ -429,15 +429,14 @@ protocol rpki rpki_dn42{
 }
 ```
 ### Use BFD in bird2
-Warning: Enabling BFD may cause slow BGP flapping, use it with caution.
-
 BFD is an additional protocol with extremely low overhead to detect failures in the switching plane between peers,
-it is used widely by cleanet peerings and some networks already have enabled it globally.
+it is used widely by cleanet peerings and some networks in DN42 already have enabled it globally.
 To do a basic configuration you need to add 1 line to your bird.conf and enable it per peer or globally by defining it in the
 template. 
 It is currently recommended that you only enable it for each peer that supports it and has it enabled.
-Add this above the template for dnpeers.
 It acts as a detection mechanism that is very fast and can detect for example if your tunnel link is down.
+
+Add this above the template for dnpeers.
 ```conf
 protocol bfd {};
 ```
@@ -457,4 +456,11 @@ protocol bgp <NEIGHBOR_NAME> from dnpeers {
     };
 };
 ```
+
+**Warning:** with high frequency connectivity issues and/or/with ping over ~150ms and/or/with significant packet loss
+it can cause significant issues with route flapping since BFD uses UDP packets to reduce overhead.
+It should not be used in extremely long distance peers with the default settings and use of it on 
+lossy networks like but not only, Satellite, Wireless Mesh Networks should be avoided.
+Regardless, use of BFD in high quality fiber based networks with low ping is optimal.
+
 Additional documentation about the BFD protocol is available at [the BIRD2 documentation](https://bird.network.cz/?get_doc&v=20&f=bird-6.html#ss6.3) .
