@@ -120,8 +120,9 @@ You need to add following lines to your config(s):
 just above `update_flags` in `dn42_export_filter` function
 - Unlike the other community values, **the DN42_REGION community should only be set on routes originating from your network!** (This is what the `source = RTS_STATIC` check does).
   - Otherwise, if you export routes across multiple regions within your network, you may be sending incorrect origin information to other peers.
-
-
+This is not applicable  for the below example configurations
+that have it included, since networks usually use the region to do 
+routing policies like cold_potato.
 ## Example configuration for BIRD2
 ```conf
 function update_latency(int link_latency) -> int {
