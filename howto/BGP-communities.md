@@ -1,12 +1,17 @@
-Bird is a commonly used BGP daemon. This page provides configuration and help for using BGP communities with Bird for dn42.
+Bird2 is a commonly used BGP daemon. This page provides configuration and help for using BGP communities with Bird2 for dn42.
 
 Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. Please note that everyone should be using community 64511.
 
-The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration, in /etc/bird/peers4 if you followed the Bird guide.
+The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration
+in /etc/bird/peers/*
 
 The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
-Below, you will see an example config for peers4 based on the original filter implementation by Jplitza.
+Below, you will see an example config for peers based on the original filter implementation by Jplitza.
+Additionally the below configuration applied BGP MED on exports using the communities
+as an example for what they can be used for. 
+This is based on mk16's lab implemenation at [https://mk16.de/blog/lab-en/](https://mk16.de/blog/lab-en/)
+
 
 To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
 
@@ -117,17 +122,8 @@ just above `update_flags` in `dn42_export_filter` function
   - Otherwise, if you export routes across multiple regions within your network, you may be sending incorrect origin information to other peers.
 
 
-## Example configurations
+## Example configuration for BIRD2
 ```conf
-# /etc/bird/peers4/tombii.conf
-protocol bgp tombii from dnpeers {
-  neighbor 172.23.102.x as 4242420321;
-  import where dn42_import_filter(3,24,33);
-  export where dn42_export_filter(3,24,33);
-};
-```
-```conf
-#/etc/bird/community_filters.conf
 function update_latency(int link_latency) {
   bgp_community.add((64511, link_latency));
        if (64511, 9) ~ bgp_community then { bgp_community.delete([(64511, 1..8)]); return 9; }
@@ -140,6 +136,7 @@ function update_latency(int link_latency) {
   else if (64511, 2) ~ bgp_community then { bgp_community.delete([(64511, 1..1)]); return 2; }
   else return 1;
 }
+
 
 function update_bandwidth(int link_bandwidth) {
   bgp_community.add((64511, link_bandwidth));
@@ -161,7 +158,13 @@ function update_crypto(int link_crypto) {
   else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
   else return 34;
 }
-
+#Remove the following function if you do not want to advertize your region in the BGP community.
+function update_geo_flags() {
+    if is_self_net() || is_self_net_v6() then {
+        bgp_community.add((64511, DN_REGION_GEO));
+	    bgp_community.add((64511, DN_REGION_COUNTRY));
+    }
+}
 function update_flags(int link_latency; int link_bandwidth; int link_crypto)
 int dn42_latency;
 int dn42_bandwidth;
@@ -175,35 +178,87 @@ int dn42_crypto;
   return true;
 }
 
-# Combines filter from local4.conf/local6.conf and filter4.conf/filter6.conf,
-# which means, these must included before this file
+#Uses ROA, which means it should be imported before these functions
 
 function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypto) {
+  # IPv4 routes with ROA
   if is_valid_network() && !is_self_net() then {
+    if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
+      # Reject when unknown or invalid according to ROA
+      print "[dn42] IPv4 ROA check failed for ", net, " ASN ", bgp_path.last;
+      reject;
+    }
+
     update_flags(link_latency, link_bandwidth, link_crypto);
+
+    if (bgp_path.len = 1) then
+      bgp_local_pref = bgp_local_pref + 500;
+
+    accept;
+  }
+
+  # IPv6 routes with ROA
+  if is_valid_network_v6() && !is_self_net_v6() then {
+    if (roa_check(dn42_roa_v6, net, bgp_path.last) != ROA_VALID) then {
+      # Reject when unknown or invalid according to ROA
+      print "[dn42] IPv6 ROA check failed for ", net, " ASN ", bgp_path.last;
+      reject;
+    }
+
+    update_flags(link_latency, link_bandwidth, link_crypto);
+
+    if (bgp_path.len = 1) then
+      bgp_local_pref = bgp_local_pref + 500;
+
+    accept;
+  }
+
+  # Re
+  reject;
+}
+function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto) {
+  if is_valid_network() || is_valid_network_v6() then {
+    update_flags(link_latency, link_bandwidth, link_crypto);
+    update_geo_flags();
+    bgp_med = 0;
+    bgp_med = bgp_med + ( ( 4 - ( link_crypto - 30 ) ) * 600 );
+    bgp_med = bgp_med + ( ( 9 - ( link_bandwidth - 20 ) ) * 100);
+    bgp_med = bgp_med + ( ( link_latency - 1) * 300);
+
     accept;
   }
   reject;
 }
 
-function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto) {
-  if is_valid_network() then {
-    update_flags(link_latency, link_bandwidth, link_crypto);
-    accept;
-  }
-  reject;
-}
 ```
-Please remember to include /etc/bird/community_filters.conf in your bird.conf/birdc6.conf
+And in your /etc/bird/peers/example.conf peer where  your  parameters as as such
+11 ms, 1000 mbit/s, pfs tunnel example with MP-BGP with ENH
+```conf
+protocol bgp example from dnpeers {
+    neighbor neighbor <neighborip><%interface if Link Local is used> as <AUT_NUM>;
+    ipv4 {
+        extended next hop on;
+		import where dn42_import_filter(3,25,34);
+		export where dn42_export_filter(3,25,34);
+    };
+
+    ipv6 {
+		import where dn42_import_filter(3,25,34);
+		export where dn42_export_filter(3,25,34);
+    };
+```
+Please remember to include /etc/bird/community_filters.conf and to define your GEO regions in your bird.conf 
 ```conf
 # local configuration
 ######################
-include "bird/local4.conf";
+# In the variable header or anywhere before the include for the community filters add
+define DN_REGION_GEO = xx;
+define DN_REGION_COUNTRY = xxxx;
+#If you wish to add the BGP Geographical Communities.
 
-# filter helpers
-#################
-
-include "/etc/bird/filter4.conf";
+#before you import your peers add  the community filters eg
+#include "/etc/bird/community_filters.conf";
+#include "/etc/bird/peers/*";
 include "/etc/bird/community_filters.conf";
 ```
 
