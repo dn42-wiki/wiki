@@ -124,7 +124,7 @@ just above `update_flags` in `dn42_export_filter` function
 
 ## Example configuration for BIRD2
 ```conf
-function update_latency(int link_latency) {
+function update_latency(int link_latency) -> int {
   bgp_community.add((64511, link_latency));
        if (64511, 9) ~ bgp_community then { bgp_community.delete([(64511, 1..8)]); return 9; }
   else if (64511, 8) ~ bgp_community then { bgp_community.delete([(64511, 1..7)]); return 8; }
@@ -138,7 +138,7 @@ function update_latency(int link_latency) {
 }
 
 
-function update_bandwidth(int link_bandwidth) {
+function update_bandwidth(int link_bandwidth) -> int {
   bgp_community.add((64511, link_bandwidth));
        if (64511, 21) ~ bgp_community then { bgp_community.delete([(64511, 22..29)]); return 21; }
   else if (64511, 22) ~ bgp_community then { bgp_community.delete([(64511, 23..29)]); return 22; }
@@ -151,7 +151,7 @@ function update_bandwidth(int link_bandwidth) {
   else return 29;
 }
 
-function update_crypto(int link_crypto) {
+function update_crypto(int link_crypto) -> int {
   bgp_community.add((64511, link_crypto));
        if (64511, 31) ~ bgp_community then { bgp_community.delete([(64511, 32..34)]); return 31; }
   else if (64511, 32) ~ bgp_community then { bgp_community.delete([(64511, 33..34)]); return 32; }
@@ -159,13 +159,13 @@ function update_crypto(int link_crypto) {
   else return 34;
 }
 #Remove the following function if you do not want to advertize your region in the BGP community.
-function update_geo_flags() {
+function update_geo_flags() -> bool {
     if is_self_net() || is_self_net_v6() then {
         bgp_community.add((64511, DN_REGION_GEO));
 	    bgp_community.add((64511, DN_REGION_COUNTRY));
     }
 }
-function update_flags(int link_latency; int link_bandwidth; int link_crypto)
+function update_flags(int link_latency; int link_bandwidth; int link_crypto) -> bool
 int dn42_latency;
 int dn42_bandwidth;
 int dn42_crypto;
