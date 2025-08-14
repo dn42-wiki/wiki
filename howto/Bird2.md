@@ -429,6 +429,8 @@ protocol rpki rpki_dn42{
 }
 ```
 ### Use BFD in bird2
+Warning: Enabling BFD may cause slow BGP flapping, use it with caution.
+
 BFD is an additional protocol with extremely low overhead to detect failures in the switching plane between peers,
 it is used widely by cleanet peerings and some networks already have enabled it globally.
 To do a basic configuration you need to add 1 line to your bird.conf and enable it per peer or globally by defining it in the
