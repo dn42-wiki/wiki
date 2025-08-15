@@ -1,5 +1,7 @@
 # Internal services
 
+f
+
 You are asked to show some creativity in terms of network usage and content. ;)
 
 ## Search engine
@@ -43,6 +45,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 | Kioubit    | Nuremberg, Germany | 400 Mbps    | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/)   |
 | Routedbits | Multiple           | Unknown     | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes) |
 | vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
+| NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42:3000/](http://speedtest.not.dn42:3000/)  |
 
 ### Map.dn42 API Services
 
