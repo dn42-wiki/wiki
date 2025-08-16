@@ -1,7 +1,5 @@
 # Internal services
 
-f
-
 You are asked to show some creativity in terms of network usage and content. ;)
 
 ## Search engine
