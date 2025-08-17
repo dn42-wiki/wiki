@@ -12,6 +12,7 @@ Please sort by AS number.
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
 | 4242420150 | ext: <https://dn42.darkpoint.xyz/lg> <br> dn42: <https://darkpoint.dn42/lg> |
+| 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420893 | dn42: <http://lg.maiyun.dn42> |
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
@@ -67,7 +68,6 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420321 | dn42: <http://lg.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242420341 | dn42: <https://lg.hachiman.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242420458 | ext: <https://lg.huajinet.org> |
-| 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420812 | dn42: <https://lg.jan.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242420827 | ext: <https://lg.llyn.lorkep.trade> <br> dn42: <https://lg.lorkep.dn42> <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
 | 4242420927 | ext: <https://lg.dn42.liki.link> |
