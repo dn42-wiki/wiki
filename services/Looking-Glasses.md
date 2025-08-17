@@ -11,6 +11,7 @@ Please sort by AS number.
 | 1955 | ext: <br>$ telnet lg.hbone.hu <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> ext2: <http://embed.ftelnet.ca/?Hostname=hbonelg.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br>this node have full v4/v6 unicast/multicast and some more fun tables from <https://www.hbone.hu> like inner ospfv2/v3, ldp and mpls-segment-routing states/trees, or the <https://map.geant.org/> mdvpn routes and the looback0/32+label connectivity for them see the login banner for more things to look here |
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
+| 4242420020 | dn42: <http://lg.not.dn42/> DN42 only dual-stack|
 | 4242420150 | ext: <https://dn42.darkpoint.xyz/lg> <br> dn42: <https://darkpoint.dn42/lg> |
 | 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420831 | ext: <https://lg.dn42.tms.im> |
@@ -38,7 +39,7 @@ Please sort by AS number.
 | 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423702 | ext: <https://dn42-lg.launchpadx.top> <br> dn42: <https://lg.lpnet0.dn42> |
 | 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
-| 4242420020 | dn42:http://lg.not.dn42/ DN42 only dual-stack|
+
 
 ## Down
 
