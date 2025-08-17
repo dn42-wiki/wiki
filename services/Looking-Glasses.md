@@ -38,7 +38,7 @@ Please sort by AS number.
 | 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423702 | ext: <https://dn42-lg.launchpadx.top> <br> dn42: <https://lg.lpnet0.dn42> |
 | 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
-
+| 4242420020 | dn42:http://lg.not.dn42/ DN42 only dual-stack|
 
 ## Down
 
