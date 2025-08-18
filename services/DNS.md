@@ -60,6 +60,10 @@ to the anycast service. Example configurations for different recursor implementa
 Authoritative DNS for DN42 is provided by the *.delegation-servers.dn42 servers, see the DNS architecture here 
 [New DNS](/services/New-DNS) Delegations servers have full support for DNSSEC. Example configuration unbound implementations are included in the [dns/Configuration](/services/dns/Configuration#resolver-setup) page.
 
+## Additional client configuration
+
+- **Firefox**: Set `browser.fixup.domainsuffixwhitelist.dn42` to `true` in `about:config` to prevent Firefox from confusing dn42 domains with search queries.
+
 ## Further Information
 
 * [dns/Configuration](/services/dns/Configuration) - Forwarder/Resolver configuration examples
