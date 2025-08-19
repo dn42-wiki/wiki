@@ -32,6 +32,12 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
   - API endpoints:
     - /raw: return your IP address as plain text
     - /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
+  - with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip): [myip.launchpadx.dn42](https://myip.launchpadx.dn42)
+    - API endpoints:
+      - IPv4: v4.myip.launchpadx.dn42
+      - IPv6: v6.myip.launchpadx.dn42
+      - Dual-stack: api.myip.launchpadx.dn42
+    - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 - BGP flap detector (FlapAlerted by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
