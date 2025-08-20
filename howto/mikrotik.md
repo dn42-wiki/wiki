@@ -227,4 +227,14 @@ Since version 6.47 have added functionality that can redirect DNS queries accord
 ```
 /ip dns static
 add comment=DN42 forward-to=172.23.0.53 regexp=".*\\.dn42" type=FWD
+
+## Specifying BGP Community
+
+```
+/routing/filter/community-list
+add list=dn42 communities=64511:41
+add list=dn42 communities=64511:5
+
+/routing/filter/rule/
+add chain=dn42-out rule="append bgp-communities dn42"
 ```
