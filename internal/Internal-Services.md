@@ -38,7 +38,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
       - IPv6: v6.myip.launchpadx.dn42
       - Dual-stack: api.myip.launchpadx.dn42
     - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
-  [myip.buzzster.dn42](https://myip.buzzster.dn42)
+  - [myip.buzzster.dn42](https://myip.buzzster.dn42)
     - API endpoint:
       - IPv4 and IPv6: myip.buzzster.dn42/api/ip
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
