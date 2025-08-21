@@ -32,12 +32,18 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
   - API endpoints:
     - /raw: return your IP address as plain text
     - /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
-  - with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip): [myip.launchpadx.dn42](https://myip.launchpadx.dn42)
-    - API endpoints:
-      - IPv4: v4.myip.launchpadx.dn42
-      - IPv6: v6.myip.launchpadx.dn42
-      - Dual-stack: api.myip.launchpadx.dn42
-    - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
+  - with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip) and autonomous system info provided by [DN42-GeoASN](https://github.com/rdp-studio/dn42-geoasn): [myip.launchpadx.dn42](https://myip.launchpadx.dn42)
+    - Geolocation API
+      - API endpoints:
+        - IPv4: v4.myip.launchpadx.dn42
+        - IPv6: v6.myip.launchpadx.dn42
+        - Dual-stack: api.myip.launchpadx.dn42
+      - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
+    - ASN API
+      - API endpoints:
+        - IPv4: asn4.myip.launchpadx.dn42
+        - IPv6: asn6.myip.launchpadx.dn42
+        - Dual-stack: asn.myip.launchpadx.dn42
   - [myip.buzzster.dn42](https://myip.buzzster.dn42)
     - API endpoint:
       - IPv4 and IPv6: myip.buzzster.dn42/api/ip
