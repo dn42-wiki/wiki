@@ -270,6 +270,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://ntfy.weil-isso.dn42>              | NTFY (Push Notify via REST-API)                                                                  |
 | kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
 | anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                 |
+| <https://coin.m724.dn42>                   | Cryptocurrency        |
 
 ## Usenet Servers / News
 
