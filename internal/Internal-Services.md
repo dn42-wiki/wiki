@@ -107,6 +107,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | Hostname / IP              | Remarks                                            |
 | :------------------------- | :------------------------------------------------- |
 | <http://j.munsternet.dn42> | Jellyfin instance with movies and TV shows (test). |
+| <https://e621ng.dn42>      | Just e621ng instance, contains bunch of nsfw       |
 
 ## Radio and Video Streaming
 
