@@ -139,10 +139,7 @@ listen on <PEER1-IPv6-LOCAL> # e.g. fe80::1%wg1234
 
 group dn42peers {
 	# RFC7454 sec. 8
-	# (currently no peer sends more than 800 prefixes for
-	# a single address family; increase this if using
-	# multi-protocol BGP (or when the network grows)!)
-	max-prefix 1000 restart 60
+	max-prefix 2000 restart 60
 	neighbor <PEER1-IPv4> {
 		descr peer1_4
 		remote-as <PEER1-ASN>
