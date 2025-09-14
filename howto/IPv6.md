@@ -50,13 +50,13 @@ Just set it up like you would usually. Any IPv4 connection going through the pro
 In order to maintain backward compatibility, a number of methods have been used to be able to reach IPv4 space from IPv6. NAT-PT was deprecated, so this mostly leaves us with NAT64.
 NAT64 simply consists in embedding IPv4 addresses after an IPv6 prefix, and mapping the whole prefix to the whole of IPv4 space. Thanksfully, that's easily doable because we have 128-bit wide addresses in IPv6. As the name implies, we however have to perform Dynamic-NAT on the IPv4 side to squeeze all the incoming v6 space in v4 addresses (though it should be possible to run 1-1 mappings, but in that case, why not get a v4 address and NAT to it to begin with?)
 
-Currently, NAT64 support in DN42 is non-existant, though there are ongoing experimentations with it. Technically, it is possible to announce a global anycast prefix for NAT64, allowing seamless IPv4 connectivity from any properly configured IPv6 host, or any using the DNS64 (which can also be setup on the anycast servers).
+Currently, NAT64 support in DN42 is non-existent, though there are ongoing experimentations with it. Technically, it is possible to announce a global anycast prefix for NAT64, allowing seamless IPv4 connectivity from any properly configured IPv6 host, or any using the DNS64 (which can also be set up on the anycast servers).
 
-DNS64 itself simply allow to synthetizes AAAA records from the received usual A records. Because DNS runs at the transport level and does not care for Layer 3 triffles, this is a service that you can run on your Nameserver even without being Dual-Stack capable. (TODO: DNS64 Howto with BIND9)
+DNS64 itself simply allows to synthesize AAAA records from the received usual A records. Because DNS runs at the transport level and does not care for Layer 3 trifles, this is a service that you can run on your nameserver even without being dual-stack capable. (TODO: DNS64 Howto with BIND9)
 As such, any address that can only resolve to IPv4 will now also resolve to an address corresponding to it through the NAT64 prefix.
 
 ## Routing to Internet and DN42
-So now that you've got IPv6 setup for DN42, you'd like to start using it on the Internet aswell. Or maybe you already do. But how to use your services on both public Internet and DN42 ?
+So now that you've got IPv6 setup for DN42, you'd like to start using it on the Internet as well. Or maybe you already do. But how to use your services on both public Internet and DN42 ?
 
 ### With NPT
 A first approach is to use NPT: Network Prefix Translation. Yes, this sounds a lot like NAT, but fear not: it does not have most of its problems as it is fully stateless. Initially, the purpose of NPT was to allow multi-homing without an ASN: how can you be reachable through several prefixes allocated by different ISPs ? The IPv6-way of doing it would be to assign multiple addresses from the multiple prefixes to all your nodes, but isn't that just too complicated ?

@@ -7,8 +7,8 @@
 * It's supported by hardware routers.
 
 ## Why IPsec?
-* GRE provides no encryption and authentication of it's own.
-* IPsec in implemented in-kernel on FreeBSD and Linux with multithreaded encryption resulting in a lower latency than userspace VPN daemons using tun/tap interfaces.
+* GRE provides no encryption or authentication of its own.
+* IPsec is implemented in-kernel on FreeBSD and Linux with multithreaded encryption resulting in a lower latency than userspace VPN daemons using tun/tap interfaces.
 
 ## Problems with GRE
 * GRE is defined directly on top of IP.

@@ -7,17 +7,17 @@ Here be dragons. This section should cover the basics:
 
 # Key generation and distribution
 ## Using pre-generated keys
-OpenBSD generates keys suitables for IPSec usage during the installation. The public key can be found in `/etc/isakmpd/local.pub`
+OpenBSD generates keys suitable for IPSec usage during installation. The public key can be found in `/etc/isakmpd/local.pub`.
 
 ## Generating your own keys
 If you don't want to use a pre-generated key, refer to [isakmpd(8)](http://man.openbsd.org/isakmpd.8#X.509_AUTHENTICATION).
 
 ## Distributing keys
-Send your public key to your peer, preferrably digitally signed. A signature can be created with `gpg -sb -a local.pub` and checked with `gpg --verify local.pub.asc`. Since the key is not private, it can be transmitted in the open and on a public forum, such as a Pastebin service.
+Send your public key to your peer, preferably digitally signed. A signature can be created with `gpg -sb -a local.pub` and checked with `gpg --verify local.pub.asc`. Since the key is not private, it can be transmitted in the open and on a public forum, such as a Pastebin service.
 
-Once your peer sent you their public key, it under `/etc/isakmpd/pubkeys/fqdn`, `/etc/isakmpd/pubkeys/ipv4` or `/etc/isakmpd/ipv6`, depending on the ID type the peer is using. The key file should be named after the peers ID. For example, if your peer is `1.3.3.7`, you place their public key under `/etc/isakmpd/pubkeys/ipv4/1.3.3.7`.
+Once your peer sent you their public key, put it under `/etc/isakmpd/pubkeys/fqdn`, `/etc/isakmpd/pubkeys/ipv4` or `/etc/isakmpd/pubkeys/ipv6`, depending on the ID type the peer is using. The key file should be named after the peer ID. For example, if your peer is `1.3.3.7`, you place their public key under `/etc/isakmpd/pubkeys/ipv4/1.3.3.7`.
 
-If your peers public key is not in PEM format, you can use [pubkey-converter](https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl) to convert between key formats.
+If your peer's public key is not in PEM format, you can use [pubkey-converter](https://dn42.us/git/user/ryan/pubkey-converter.git/plain/pubkey-converter.pl) to convert between key formats.
 
 # IPSec Setup
 Change the value of the `isakmpd_flags` variable in [`/etc/rc.conf.local`](http://man.openbsd.org/rc.conf.local.8) to `"-K"`, or add the `"-K"` flag if you already have flags in there.

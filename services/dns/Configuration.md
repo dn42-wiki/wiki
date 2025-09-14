@@ -314,9 +314,13 @@ All the examples here list 172.20.129.1/fd42:4242:2601:ac53::1, but users are en
 multiple services from *.delegation-servers.dn42 for redundancy.
 
 ## Dnssec
-All delegation servers have DNSSEC support and all record are signed, for more information about DNSSEC visit [New-DNS#dnssec](/services/New-DNS#dnssec).
+All delegation servers have DNSSEC support and all records are signed.
+For more information about DNSSEC visit [New-DNS#dnssec](/services/New-DNS#dnssec).
 
-Following is a list of links to the DS record for TLD and reverse zone, to configure the key file, extract the value of ds-rdata and format it as follows, you must add all ds-rdata to the key file for dnssec to work. P.S. each ds-rdata or DS record should contain 4 numbers.
+Below is a list of links to the DS record for TLD and reverse zone.
+To configure the key file, extract the value of ds-rdata and format it as follows.
+You must add all ds-rdata to the key file for DNSSEC to work.
+NB: each ds-rdata or DS record should contain 4 numbers.
 
 This is an example for dn42. and (fake) ds-rdata of 1 2 3 456
 ```conf
@@ -400,6 +404,4 @@ stub-zone:
 	name: "d.f.ip6.arpa"
 	stub-addr: fd42:4242:2601:ac53::1
 	stub-addr: 172.20.129.1
-
 ```
-
