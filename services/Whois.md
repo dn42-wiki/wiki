@@ -144,9 +144,8 @@ $ cat /etc/whois.conf
 # dn42 ipv4 address space
 ^172\.2[0-3]\.[0-9]{1,3}\.[0-9]{1,3}(/(1[56789]|2[0-9]|3[012]))?$ whois.dn42
 
-# dn42 ula ipv6 address space
-^fd**:****:****:****:****:****:****:**** whois.dn42
-
+# dn42 ipv6 address space
+^fd[a-f0-9]{2}(:[a-f0-9]{,4}){,7}$ whois.dn42
 ```
 
 You can then use whois without specifying the server. Works at least with Marco d'Itri's whois client.
