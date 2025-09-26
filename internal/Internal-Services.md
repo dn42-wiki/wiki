@@ -104,10 +104,11 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 
 ## Images, E-Books, Videos and other Media
 
-| Hostname / IP              | Remarks                                            |
-| :------------------------- | :------------------------------------------------- |
-| <http://j.munsternet.dn42> | Jellyfin instance with movies and TV shows (test). |
-| <https://e621ng.dn42>      | Just e621ng, contains bunch of nsfw                |
+| Hostname / IP                 | Remarks                                                      |
+| :---------------------------- | :----------------------------------------------------------- |
+| <http://j.munsternet.dn42>    | Jellyfin instance with movies and TV shows (test).           |
+| <https://e621ng.dn42>         | Just e621ng, contains bunch of nsfw                          |
+| <https://live.yobanirot.dn42> | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!      |
 
 ## Radio and Video Streaming
 
