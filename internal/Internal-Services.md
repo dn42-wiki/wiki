@@ -112,7 +112,6 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | :---------------------------- | :----------------------------------------------------------- |
 | <http://j.munsternet.dn42>    | Jellyfin instance with movies and TV shows (test).           |
 | <https://e621ng.dn42>         | Just e621ng, contains bunch of nsfw                          |
-| <https://live.yobanirot.dn42> | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!      |
 
 ## Radio and Video Streaming
 
@@ -121,12 +120,13 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://live.jerry.dn42/>                      | Live audio stream powered by mpd                                                       |
 | <http://radio.vr18.dn42/>                       | Online radio by vr18                                                                   |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist> | TV Channels Streaming                                                                  |
-| <http://icy.jones.dn42>                         | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!) |
+| <http://icy.jones.dn42>                         | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)  |
 | <https://radio.vrpnet.dn42>                     | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap                            |
 | <http://webdj.nop.dn42/>                        | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/                  |
 | <https://sdr.pebkac.dn42/>                      | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)   |
 | <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
+| <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
 
 ## File Sharing
 
