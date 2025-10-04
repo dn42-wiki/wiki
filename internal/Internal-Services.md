@@ -47,6 +47,10 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
   - [myip.buzzster.dn42](http://myip.buzzster.dn42)
     - API endpoint:
       - IPv4 and IPv6: myip.buzzster.dn42/api/ip
+  - [whatismyip.dn42](http://whatismyip.dn42)
+    - API endpoint:
+      - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
+      - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 - BGP flap detector (FlapAlerted by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
