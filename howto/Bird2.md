@@ -331,6 +331,13 @@ You can add cron entries to periodically update the tables:
 */15 * * * * curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf && birdc configure > /dev/null
 ```
 
+Note that this is for the user crontab (`crontab -e`). For global crontabs (`/etc/crontab`, `/etc/cron.d/`, ...), you need to add an user:
+
+```conf
+*/15 * * * * bird curl -sfSLR {-o,-z}/etc/bird/roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird2_4.conf && birdc configure > /dev/null
+*/15 * * * * bird curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf && birdc configure > /dev/null
+```
+
 Or use a systemd timer: (check the commands before copy-pasting)
 
 ```conf
