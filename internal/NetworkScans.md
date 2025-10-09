@@ -16,4 +16,5 @@ Unfortunately, there is currently no standard way to signal that a network shoul
 Another option would be to signal opt-outs via the wiki:
 
 | Maintainer | Network | Opt-out? |
+| --- | --- | --- |
 | `EXAMPLE-MNT` | 172.0.0.1/24 | Yes |
