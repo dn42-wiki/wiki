@@ -12,3 +12,8 @@ There are no technically enforceable rules for port scanning (i.e., rules that a
 ## Opt out
 
 Unfortunately, there is currently no standard way to signal that a network should not be scanned. Several proposals have been discussed in the past - communication via BGP, via the registry, or via the mailing list.
+
+Another option would be to signal opt-outs via the wiki:
+
+| Maintainer | Network | Opt-out? |
+| `EXAMPLE-MNT` | 172.0.0.1/24 | Yes |
