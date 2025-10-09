@@ -305,7 +305,7 @@ source:             DN42
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all their peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/BGP-communities).
 
-You can use the peerfinder to help you find potential peers close to you: <https://dn42.us/peers>
+You can use the [Public node directory](https://peerfinder.dn42.dev/) to help you find potential peers close to you.
 
 You can then contact them on IRC or by email. In case you're really at loss, you can also ask for peers on the mailing list.
 
