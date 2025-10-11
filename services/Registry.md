@@ -10,7 +10,7 @@ Maintainers that are not affiliated with an ASN (whether directly or indirectly 
 
 ## Process
 
-Using **registry_wizard (written for v0.4.11)**:
+Using **registry_wizard (written for v0.4.12)**:
 
 1. Download the MRT files from the Global Route Collector (GRC):
 `wget -r -np -nH --cut-dirs=1 -A "*.mrt.bz2" --reject "*:*" http://collector.dn42/`
@@ -21,7 +21,7 @@ Using **registry_wizard (written for v0.4.11)**:
 4. Generate the removal commands to remove inactive objects based on the previous list:
 `./registry_wizard /path/to/registry remove aut-num --list_file /path/to/inactive_list.txt --enable_subgraph_check`
 
-ASNs can be excluded from removal by removing them from the list produced in step 3).
+ASNs can be excluded from removal by removing them from the list produced in step 3.
 
 Manual review of a few resources (primarily those affiliated with "DN42-MNT") will be required as they cannot be removed in an automated way (for example, resources associated with an inactive maintainer that used to host the DN42 anycast DNS will be affiliated with DN42-MNT and will require manual removal).
 To identify the exact conflicts leading to the manual review requirement the following command can be used:
