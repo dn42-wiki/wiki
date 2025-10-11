@@ -19,9 +19,9 @@ Using **registry_wizard (written for v0.4.11)**:
 3. Based on the list of active ASNs and through referencing the registry git commit log, generate a list of inactive ASNs:
 `./registry_wizard /path/to/registry mrt_activity active_asn_to_inactive --list_file /path/to/active_list.txt --cutoff-time <value> > inactive_list.txt`
 4. Generate the removal commands to remove inactive objects based on the previous list:
-`./registry_wizard /path/to/registry remove aut-num --list_file /path/to/list.txt --enable_subgraph_check`
+`./registry_wizard /path/to/registry remove aut-num --list_file /path/to/inactive_list.txt --enable_subgraph_check`
 
-ASNs can be excluded from removal by removing them from the list produced in the second step.
+ASNs can be excluded from removal by removing them from the list produced in step 3).
 
 Manual review of a few resources (primarily those affiliated with "DN42-MNT") will be required as they cannot be removed in an automated way (for example, resources associated with an inactive maintainer that used to host the DN42 anycast DNS will be affiliated with DN42-MNT and will require manual removal).
 To identify the exact conflicts leading to the manual review requirement the following command can be used:
