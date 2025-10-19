@@ -12,7 +12,7 @@ Please sort by AS number.
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
 | 4242420020 | dn42: <http://lg.not.dn42/> DN42 only dual-stack|
-| 4242420150 | ext: <https://dn42.darkpoint.xyz/lg> <br> dn42: <https://darkpoint.dn42/lg> |
+| 4242420150 | iad: <https://iad.darkpoint.xyz/> <br> fra: <https://fra.darkpoint.xyz/> |
 | 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420893 | dn42: <http://lg.maiyun.dn42> |
