@@ -166,7 +166,7 @@ source:             DN42
 
 #### IPv6
 
-To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. A single /48 allocation is typical and will likely provide more than enough room for all devices you will ever connect. 
+To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. A single /48 allocation is typical and will likely provide more than enough room for all devices you will ever connect. The smallest announceable prefix length is /64.
 
 dn42 is interconnected with other networks, like icvpn, which also use the same ULA range so a registration in the dn42 registry can't prevent IPv6 conflicts. A fully random prefix (see [RFC4193](https://tools.ietf.org/html/rfc4193)) is recommended; finding a conflict and needing to renumber your network is no fun. 
 
@@ -216,7 +216,7 @@ Check the registry (data/inetnum) to make sure no-one else has allocated the sam
 
 The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**. 
 
-dn42 typically uses point-to-point addressing in VPN tunnels making transit network unnecessary, a single IP address per host should be sufficient. If you are going to have 2-3 servers, a /28 is plenty; same will go for most home-networks. dn42 is not the public internet, but our IPv4-space is valuable too! 
+dn42 typically uses point-to-point addressing in VPN tunnels making transit network unnecessary, a single IP address per host should be sufficient. If you are going to have 2-3 servers, a /28 is plenty; same will go for most home-networks. You cannot, however, allocate prefixes smaller than /29. dn42 is not the public internet, but our IPv4-space is valuable too!
 
 If you need a /24 or larger, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
 
