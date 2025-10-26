@@ -242,6 +242,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://20plays.dn42/>        | 20plays' website                                  |
 | <https://mdr.dn42/>            | Mark Dastmalchi-Round's website (clearnet mirror) |
 | <https://yobanirot.dn42>       | NAAIN's website                                   |
+| <https://darkpoint.dn42>       | AS4242420150 Darkpoint website                    |
 
 ## Pastebins
 
