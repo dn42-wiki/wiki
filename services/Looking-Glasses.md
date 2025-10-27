@@ -18,6 +18,7 @@ Please sort by AS number.
 | 4242420893 | dn42: <http://lg.maiyun.dn42> |
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
 | 4242421084 | ext: <https://dn42-lg.darmstadt.freifunk.net> |
+| 4242421105 | dn42: <http://lg.finarfin.dn42:8179/> |
 | 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
 | 4242421197 | dn42: <http://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> |
