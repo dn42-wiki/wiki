@@ -11,7 +11,8 @@ When the route to return a packet uses a different interface than it arrived fro
 Some attackers will set a wrong return address on their packets. This security measure was created to address when this happens. Core internet routing can however be asymmetric. This means that packets can take different routes on the return path.
 That is why `rp_filter` needs to be disabled.
 
-**Note** using sysctl is not persistent. Depending on your linux distribution put it into `/etc/sysctl.conf` or `/etc/sysctl.d`
+**Note** using sysctl is not persistent. Depending on your linux distribution put it into `/etc/sysctl.conf` or `/etc/sysctl.d`  
+*(see also the note below if you are running Debian Trixie or your OS is using systemd-sysctl)*
 
 ```sh
 sysctl -w net.ipv4.conf.all.rp_filter=0 net.ipv4.conf.default.rp_filter=0
@@ -33,6 +34,18 @@ Check that ALL your vpn interfaces allow ip forwarding for ipv6/ipv4.
 ```sh
 $ sysctl -a | grep forwarding
 ```
+
+**systemd-sysctl**
+
+systemd-sysctl parses files in **lexical ordering** regardless of which directory they are in.  
+See the [sysctl.d documentation](https://www.freedesktop.org/software/systemd/man/latest/sysctl.d.html#Configuration%20Directories%20and%20Precedence) for more details on this; the documentation also notes:
+
+ *It is recommended to use the range 10-40 for configuration files in /usr/ and the range 60-90 for configuration files in /etc/ and /run/, to make sure that local and transient configuration files will always take priority over configuration files shipped by the OS vendor.*
+
+Debian Trixie ships with a `/usr/lib/sysctl.d/50-default.conf` file which sets rp_filter to 2.
+
+The net result is you must ensure that the filenames you create in /etc/sysctl.d for overrides are lexically after '50-default.conf' or your settings will not have any effect.
+
 
 ## Note on firewalls, conntrack and asymmetric routing
 
