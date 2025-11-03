@@ -12,6 +12,7 @@ Proxy to multiple repositories:
 * <http://mirror.ano-org.dn42/ubsec>: security.ubuntu.com/ubuntu
 * <http://mirror.ano-org.dn42/proxmox>: download.proxmox.com/debian
 * <http://mirror.ano-org.dn42/grafana>: packages.grafana.com/oss/deb
+* <http://mirror.ano-org.dn42/rpi>: archive.raspberrypi.org/debian
 
 Other repos can be added on request, contact glueckself@hackint on IRC or send a mail to <noc@ano-org.sml.name>
 
