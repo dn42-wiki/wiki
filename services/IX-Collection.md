@@ -1,5 +1,3 @@
----
-
 |Name|Wiki Page|Related Link(s)|
 |:---|:---|:---|
 |IXP-frnte|[IXP-frnte](/services/IXP-frnte)|N/A|
