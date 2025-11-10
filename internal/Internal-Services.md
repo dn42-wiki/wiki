@@ -276,6 +276,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
 | anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                 |
 | <https://coin.m724.dn42>                   | Cryptocurrency        |
+| <https://mempool.dn42>                     | Bitcoin explorer
 | <http://whatismyip.dn42/>                     | dn42 IPv4 and IPv6 whatismyip service                                                                       |
 
 ## Usenet Servers / News
