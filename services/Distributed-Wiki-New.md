@@ -108,6 +108,15 @@ The repository includes `nginx-vhost.conf` with a more complete example (HTTP ->
 
 To keep HPKP/HSTS behaviour consistent with the legacy setup, reuse the same headers. Coordinate DNS and certification with the dn42 Automatic CA workflow when exposing official mirrors.
 
+Set real IP if you proxy `/api` endpoints.
+
+```conf
+set_real_ip_from 10.0.0.0/8;
+set_real_ip_from 172.20.0.0/14;
+set_real_ip_from fd00::/8;
+set_real_ip_from unix:;
+```
+
 ## Docker & Compose
 
 The repository ships with a multi-stage `Dockerfile` and `docker-compose.yml`.
