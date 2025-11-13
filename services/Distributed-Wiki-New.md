@@ -9,7 +9,7 @@ Thanks to [wiki-ng](https://git.dn42.dev/wiki/wiki-ng), based on their work, [dn
 `dn42-wiki-go` provides a statically rendered, Git-backed documentation site for dn42. The binary can run in two modes:
 
 - **Live mode** (the default) serves HTTP directly, watches the upstream Git repository, and rebuilds pages on change.
-- **Static build mod (`live=false or run with --build`)e** produces pre-rendered HTML into `dist/` once, suitable for delivery by any web server.
+- **Static build mode (`live=false or run with --build`)** produces pre-rendered HTML into `dist/` once, suitable for delivery by any web server.
 
 Nginx or another TLS proxy is still recommended for public access, but the application ships with native HTTPS and webhook support.
 
