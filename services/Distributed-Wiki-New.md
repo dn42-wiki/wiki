@@ -10,6 +10,7 @@ These instances are part of the anycast network for [wiki.dn42](https://wiki.dn4
 | iedon.dn42 119 (SG-SIN) | [https://wiki-119.iedon.dn42/](https://wiki-119.iedon.dn42/) | 4242422189 |
 | iedon.dn42 120 (HK-HKG) | [https://wiki-120.iedon.dn42/](https://wiki-120.iedon.dn42/) | 4242422189 |
 | iedon.dn42 121 (CN-CZX) | [https://wiki-121.iedon.dn42/](https://wiki-121.iedon.dn42/) | 4242422189 |
+| iedon.dn42 122 (UK-LON) | [https://wiki-122.iedon.dn42/](https://wiki-122.iedon.dn42/) | 4242422189 |
 
 ## Deploying dn42-wiki-go
 
