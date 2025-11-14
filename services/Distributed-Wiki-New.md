@@ -12,6 +12,7 @@ These instances are part of the anycast network for [wiki.dn42](https://wiki.dn4
 | iedon.dn42 121 (CN-CZX) | [https://wiki-121.iedon.dn42/](https://wiki-121.iedon.dn42/) | 4242422189 |
 | iedon.dn42 122 (UK-LON) | [https://wiki-122.iedon.dn42/](https://wiki-122.iedon.dn42/) | 4242422189 |
 | iedon.dn42 124 (US-NYC) | [https://wiki-124.iedon.dn42/](https://wiki-124.iedon.dn42/) | 4242422189 |
+| iedon.dn42 125 (DE-FRA) | [https://wiki-125.iedon.dn42/](https://wiki-125.iedon.dn42/) | 4242422189 |
 
 ## Deploying dn42-wiki-go
 
