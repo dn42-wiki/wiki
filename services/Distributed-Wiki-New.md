@@ -1,19 +1,139 @@
-## Anycast Wiki Mirrors
+## Introduction
 
-These instances are part of the anycast network for [wiki.dn42](https://wiki.dn42/) and run the new wiki software, `dn42-wiki-go`, which replaces the legacy `Gollum`.
+[dn42-wiki-go](https://github.com/iedon/dn42-wiki-go) is a lightweight, Git-backed wiki engine designed for DN42. It is based on [wiki-ng](https://git.dn42.dev/wiki/wiki-ng), aims to replace the old Gollum-based DN42 distributed wiki.
 
-| Node / Region           | URL                                         | ASN         |
-| ----------------------- | ------------------------------------------- | ----------- |
-| iedon.dn42 114 (US-LAX) | [https://wiki-114.iedon.dn42/](https://wiki-114.iedon.dn42/) | 4242422189 |
-| iedon.dn42 116 (JP-TYO) | [https://wiki-116.iedon.dn42/](https://wiki-116.iedon.dn42/) | 4242422189 |
-| iedon.dn42 117 (US-SJC) | [https://wiki-117.iedon.dn42/](https://wiki-117.iedon.dn42/) | 4242422189 |
-| iedon.dn42 119 (SG-SIN) | [https://wiki-119.iedon.dn42/](https://wiki-119.iedon.dn42/) | 4242422189 |
-| iedon.dn42 120 (HK-HKG) | [https://wiki-120.iedon.dn42/](https://wiki-120.iedon.dn42/) | 4242422189 |
-| iedon.dn42 121 (CN-CZX) | [https://wiki-121.iedon.dn42/](https://wiki-121.iedon.dn42/) | 4242422189 |
-| iedon.dn42 122 (UK-LON) | [https://wiki-122.iedon.dn42/](https://wiki-122.iedon.dn42/) | 4242422189 |
-| iedon.dn42 124 (US-NYC) | [https://wiki-124.iedon.dn42/](https://wiki-124.iedon.dn42/) | 4242422189 |
-| iedon.dn42 125 (DE-FRA) | [https://wiki-125.iedon.dn42/](https://wiki-125.iedon.dn42/) | 4242422189 |
+It can serve pages live through its built-in Go HTTP server or generate a fully static HTML export for external hosting. All content is stored in a Git repository, making it easy to replicate across nodes or run in disconnected environments.
 
-## Deploying dn42-wiki-go
+## Operating Modes
 
-Instructions comming soon.
+You can run `dn42-wiki-go` in three different ways:
+
+1. **Run static build once then exit (`--build` or `live=false`)**  
+   The App renders all Markdown files into HTML under outputDir and exits.  
+   Best for setups where your own cron job handles Git sync and file publishing.
+
+2. **Live mode without reverse proxy (`live=true`)**  
+   The built-in HTTP server directly serves pages, assets, and APIs.  
+   Suitable for simple deployments.
+
+3. **Live mode behind a reverse proxy**  
+   The reverse proxy (nginx, Caddy, HAProxy, etc.) serves the generated files, and only API endpoints are forwarded to the App.  
+   See `config.example.json` for example configs and `nginx-vhost.conf` for a reverse-proxy reference.
+
+   **Recommended for production and anycast nodes**.
+
+## Features
+
+- Live mode with automatic Markdown rendering and scheduled Git pull/push.
+- Static mode for fully pre-built HTML exports.
+- Optional in-browser editor with commit metadata (author, message prefix, remote IP).
+- Webhook endpoints for remote pull/push triggers and optional polling integration(see `dn42notifyd`).
+- Themeable templates and bundled UI assets.
+- Designed for distributed, multi-node and anycast environments.
+
+## Quick Start
+
+Pre-built binaries are available in the [GitHub releases](https://github.com/iedon/dn42-wiki-go/releases).
+
+Please do not forget to clone the repository to copy `config.example.json` and the `template` folder. They should be put together in the same production directory.
+
+### Manual Build
+
+1. Install Go 1.24+ and ensure the git executable is available in PATH.
+2. Copy the example config:
+   cp config.example.json config.json
+   Then edit the settings you need.
+3. Build for your platform (example: Linux amd64):
+   ```bash
+   export GOOS=linux
+   export GOARCH=amd64
+   ./build.sh
+   ```
+
+## Webhook Endpoints
+
+When `webhook.enabled` = true, the server exposes:
+
+- GET | POST /api/webhook/pull  
+  Runs git pull and rebuilds the cached HTML.
+
+- GET | POST /api/webhook/push  
+  Pushes local commits to the remote.
+
+If `webhook.secret` is set, requests must include an Authorization header that matches the secret.  
+
+### Polling Integration
+
+When `webhook.polling.enabled` = true, the server registers with a remote notify service and triggers `/api/webhook/pull` whenever a refresh completes.
+
+This is compatible with `dn42notifyd` and similar tools.
+
+## Configuration Reference
+
+All settings are provided through a JSON file. Below is a concise reference of all options.
+
+### Runtime
+
+- `live` *(bool, default `false`)*:  
+  true -> run HTTP server and render on demand.  
+  false -> render once to outputDir and exit.
+
+- `editable` *(bool, default `false`)*:  
+  Enables in-browser editing and write operations.
+
+- `listen` *(string, default `":8080"`)*:  
+  TCP address (host:port) or UNIX socket (unix:/path).
+
+  Advanced: See example systemd files `dn42-wiki-go.socket` and `dn42-wiki-go.service` in the repository.
+
+- `baseUrl` *(string, optional)*:  
+  URL prefix when hosting under a subdirectory.
+
+- `siteName` *(string, default `"DN42 Wiki Go"`)*:  
+  Display name of the wiki.
+
+### Git
+- `git.binPath` *(string, default `git`)*: Path to the Git executable.
+- `git.remote` *(string, default empty)*: Remote URL. Leave empty for standalone/local repositories.
+- `git.localDirectory` *(string, default `./repo`)*: Directory where the wiki repository is cloned or initialised.
+- `git.pullIntervalSec` *(int, default `300`)*: Seconds between background `git pull` operations in live mode. Disabled if no remote is set.
+- `git.author` *(string, default `"Anonymous <anonymous@localhost>"`)*: Author string used for commits generated by the application, unless a custom author is provided per request.
+- `git.commitMessagePrefix` *(string, default empty)*: Optional prefix prepended verbatim to commit messages supplied by users.
+- `git.commitMessageAppendRemoteAddr` *(string, default empty)*: Optional suffix appended when a request carries a remote address. If the value contains `%s` it is treated as a `fmt` format string; otherwise it is concatenated.
+
+### Webhook
+- `webhook.enabled` *(bool, default `false`)*: Expose webhook endpoints on the main HTTP server.
+- `webhook.secret` *(string, default empty)*: Shared secret expected in the `Authorization` header. Ignored when empty.
+- `webhook.polling.enabled` *(bool, default `false`)*: Keep a registration active with the remote notification service and trigger periodic pulls.
+- `webhook.polling.endpoint` *(string, default empty)*: URL of the notification service (eg. Usage with [dn42notifyd](https://git.dn42.dev/dn42/dn42notifyd): `https://git.dn42/dn42notify/poll`).
+- `webhook.polling.callbackUrl` *(string, default empty)*: Public URL for `/api/webhook/pull`. Required when `webhook.polling.enabled` is `true`.
+- `webhook.polling.pollingIntervalSec` *(int, default `3600`)*: Seconds between refresh attempts. Must be positive when polling is enabled.
+- `webhook.polling.skipRemoteCert` *(bool, default `false`)*: Insecure: Skip TLS verification.
+
+### Paths and templating
+- `outputDir` *(string, default `./dist`)*: Destination directory for static builds or asset exports.
+- `templateDir` *(string, default `./template`)*: Location of layout templates and static assets bundled into the server/UI.
+- `homeDoc` *(string, default `Home.md`)*: Repository document to treat as the home page. Normalised to a `.md` path relative to the repo root.
+- `privatePagesPrefix` *(array of strings, default empty)*: Request to routes started with these prefixes will be blocked.
+
+### Layout and footer
+- `ignoreHeader` *(bool, default `false`)*: Skip loading `_Header.md` when `true`. Leave `false` to include the fragment when present.
+- `ignoreFooter` *(bool, default `false`)*: Skip `_Footer.md` when `true`; otherwise render it if available.
+- `serverFooter` *(string, default empty)*: Markdown snippet rendered into the global footer at runtime.
+
+### TLS
+- `enableTLS` *(bool, default `false`)*: Serve HTTPS using the provided certificate and key.
+- `tlsCert` *(string)*: Path to the TLS certificate. Required only when `enableTLS` is true.
+- `tlsKey` *(string)*: Path to the TLS private key. Required when `enableTLS` is true.
+
+### Logging and client IP handling
+- `logLevel` *(string, default `info`)*: Minimum log level (`debug`, `info`, `warn`, or `error`).
+- `trustedProxies` *(array of strings, default empty)*: CIDR blocks or literal IPs that are trusted to populate `X-Forwarded-For`.
+- `trustedRemoteAddrLevel` *(int, default `1`)*: Number of additional trusted hops to peel off when deriving the end-user IP from the forwarded chain. Values less than `1` are coerced to `1` during load.
+
+## Notes
+
+- live = true requires write access to the Git repo for local commits.
+- With no remote configured, `dn42-wiki-go` initializes a local-only repository.
+- Template changes require restarting the server or rebuilding static output.
+
