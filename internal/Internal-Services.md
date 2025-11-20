@@ -63,6 +63,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 | Routedbits | Multiple           | Unknown     | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes) |
 | vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 | NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
+| Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
 
 ### Map.dn42 API Services
 
