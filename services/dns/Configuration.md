@@ -289,6 +289,33 @@ Domains=~10.in-addr.arpa
 Domains=~d.f.ip6.arpa
 ```
 
+## smartDNS
+
+```
+# Use -exclude-default-group to exclude dn42 DNS for non-dn42 domains
+server fd42:d42:d42:53::1 -exclude-default-group -group dn42
+server fd42:d42:d42:54::1 -exclude-default-group -group dn42
+server 172.23.0.53 -exclude-default-group -group dn42
+server 172.20.0.53 -exclude-default-group -group dn42
+
+# dn42
+nameserver /dn42/dn42
+nameserver /20.172.in-addr.arpa/dn42
+nameserver /21.172.in-addr.arpa/dn42
+nameserver /22.172.in-addr.arpa/dn42
+nameserver /23.172.in-addr.arpa/dn42
+nameserver /10.in-addr.arpa/dn42
+nameserver /d.f.ip6.arpa/dn42
+
+# neonetwork
+nameserver /neo/dn42
+
+# chaosvpn
+nameserver /hack/dn42
+
+# crxn
+nameserver /crxn/dn42
+```
 
 # Resolver setup
 
