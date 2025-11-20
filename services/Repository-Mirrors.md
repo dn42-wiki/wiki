@@ -30,8 +30,11 @@ Hosted by:
 Hosted by:
 * ne-vlezay80
 
-## mirrors.nia.dn42
-**<http://mirrors.nia.dn42/>** (IPv6 Only)
+## mirrors.nia.dn42 (IPv6 Only)
+
+[eweOS](https://os.ewe.moe/download):
+* <http://mirrors.nia.dn42/eweos/>: Official Mirror in DN42
+* <http://mirrors.nia.dn42/eweos-images/>: Official Mirror in DN42
 
 ## mirror.z.dn42
 
