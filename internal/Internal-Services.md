@@ -201,6 +201,7 @@ A DN42 private Telegram app and server is available at [buzzgram.dn42](https://b
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 - buzzster.dn42 runs an asterisk based VOIP service with shorts numbers, inbound and outbound calls and live radio. Request your short number on [KevvoGeek Telegram](https://t.me/KevvoGeek) for make and receive internal and external calls.
+- gensokyo.dn42 runs an asterisk based VOIP service with fax modems, CallerID playback and PSTN to DN42 proxy gateway (+1 424 242 9915). 
 
 ## Challenges
 
