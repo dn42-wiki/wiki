@@ -20,7 +20,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 - See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
 - Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
-- Network Information Service: [info.nia.dn42](http://info.nia.dn42) (DN42) or [bgp42.strexp.net](https://bgp42.strexp.net) (via clearnet). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
+- Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.
 - Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
@@ -174,7 +174,6 @@ A DN42 private Telegram app and server is available at [buzzgram.dn42](https://b
 
 | Hostname / IP                                                                                                                                   | Game                       | Remarks                                                                                              |
 | :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------------------------------------------------------------- |
-| yuan.nia.dn42 (172.20.168.244)                                                                                                                  | Genshin Impact (Unofficial) | Latest development branch, Scripts included, Optimized for CN, Not stable yet                        |
 | 172.20.210.193                                                                                                                                  | Minecraft                  | Vanilla Server - latest(1.21.4)                                                                      |
 | mc.jerry.dn42 & jerry.dn42                                                                                                                      | Minecraft                  | latest, IPv4 & IPv6                                                                                  |
 | mc.razu.neo (formerly mc.razuritta.dn42)                                                                                                        | Minecraft                  | latest(1.20.4 atm), IPv4+IPv6                                                                        |
@@ -278,6 +277,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://coin.m724.dn42>                   | Cryptocurrency        |
 | <https://mempool.dn42>                     | Bitcoin explorer
 | <http://whatismyip.dn42/>                     | dn42 IPv4 and IPv6 whatismyip service                                                                       |
+| <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
 
 ## Usenet Servers / News
 
