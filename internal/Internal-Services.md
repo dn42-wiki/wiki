@@ -24,6 +24,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 - Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
+- Another Cloudflare-like cdn-cgi/trace: [buzzster.dn42/cdn-cgi/trace](https://buzzster.dn42/cdn-cgi/trace)
 - New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
 - whatsmyip:
   - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
