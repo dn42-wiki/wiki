@@ -27,7 +27,8 @@ Current participants:
 ## Current streams
 
 Public multicast to unicast relay with vlc4 and above:
-  * `vlc rtp://172.23.199.110@232.2.3.2:1234/`
+* `vlc rtp://172.23.199.110@232.2.3.2:1234/`
+* `vlc rtp://[fd40:cc1e:c0de::fffe]@[ff07::232:2:3:2]:1234/`
 * `vlc --amt-relay amt-relay.rtr2.c4e.hbone.hu amt://10.2.255.1@232.2.3.2:1234/`
 * `vlc --amt-relay amt-relay.geant.org amt://10.2.255.1@232.2.3.2:1234/`
 the last one needs vlc4 off their nighty, the amt relay usually defuncs as geant rents the p4 testbed....
