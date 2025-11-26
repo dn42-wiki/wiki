@@ -1,10 +1,9 @@
 If you have an E-Mail service and would like to test it's functionality, send an email to [zane_reick@dmail.dn42](mailto:zane_reik@dmail.dn42). You will get a response usually within a few hours.
 
-** bMail by Buzzster.**
+**bMail by Buzzster.**
 * bMail <https://mail.bmail.dn42>
   * Free, easy and unlimited internal email system.
-  * Register at
-  <https://accounts.buzzster.dn42/register>
+  * Register at <https://accounts.buzzster.dn42/register>
 
 **Free E-Mail Addresses for DN42 Users.**
 * DN42 Mail, <https://dmail.dn42>
