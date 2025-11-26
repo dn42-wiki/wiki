@@ -1,8 +1,8 @@
 # IPv6 Multicast
 
-The following guide illustrates how to set up an IPv6 multicast router using [PIM-SM](https://en.wikipedia.org/wiki/Protocol_Independent_Multicast#Sparse_mode) (Protocol Independent Multicast in Sparse Mode) with your own personal multicast prefix.
+The following guide illustrates how to set up an IPv6 multicast router using [PIM-SM](https://en.wikipedia.org/wiki/Protocol_Independent_Multicast#Sparse_mode) (Protocol Independent Multicast in Sparse Mode) with your own personal multicast prefix, using pim6sd.
 
-[RFC8815](https://datatracker.ietf.org/doc/html/rfc8815) deprecated PIM-SM, please take a look at [the new multicast page about PIM-SSM](/howto/multicast).
+Some people on dn42 also experimented with using FRR's PIM-SM implementation for **SSM** (source specific multicast) here: [multicast page about PIM-SSM](/howto/multicast). PIM-SSM is recommended by [RFC8815](https://datatracker.ietf.org/doc/html/rfc8815) for interdomain multicast, RFC8815 also deprecated interdomain PIM-ASM (any source multicast) (though PIM-ASM using [Embedded-RP](https://www.rfc-editor.org/rfc/rfc3956) for IPv6 multicast could maybe be a viable option on dn42?).
 
 ## Quickstart
 
