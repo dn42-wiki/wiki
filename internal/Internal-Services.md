@@ -120,7 +120,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | Hostname / IP                                   | Remarks                                                                                |
 | :---------------------------------------------- | :------------------------------------------------------------------------------------- |
 | <https://tube.buzzster.dn42/>                      | A youtube like platform on DN42
-
+                    |
 | <https://live.jerry.dn42/>                      | Live audio stream powered by mpd                                                       |
 | <http://radio.vr18.dn42/>                       | Online radio by vr18                                                                   |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist> | TV Channels Streaming                                                                  |
