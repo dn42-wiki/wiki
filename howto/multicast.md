@@ -1,6 +1,6 @@
 ## Multicast
 
-RFC 8815 deprecated PIM-SM so PIM-SSM is the way to go!
+[RFC 8815](https://datatracker.ietf.org/doc/html/rfc8815) deprecated interdomain PIM-ASM (any-source multicast) so PIM-SSM (source-specific multicast) is the way to go!
 
 ### Setup
 
