@@ -4,6 +4,8 @@ The following guide illustrates how to set up an IPv6 multicast router using [PI
 
 Some people on dn42 also experimented with using FRR's PIM-SM implementation for **SSM** (source specific multicast) here: [multicast page about PIM-SSM](/howto/multicast). PIM-SSM is recommended by [RFC8815](https://datatracker.ietf.org/doc/html/rfc8815) for interdomain multicast, RFC8815 also deprecated interdomain PIM-ASM (any source multicast) (though PIM-ASM using [Embedded-RP](https://www.rfc-editor.org/rfc/rfc3956) for IPv6 multicast could maybe be a viable option on dn42?).
 
+Join #dn42-multicast on HackInt for multicast specific discussions.
+
 ## Quickstart
 
 * Install pim6sd from here: <https://github.com/troglobit/pim6sd/>
