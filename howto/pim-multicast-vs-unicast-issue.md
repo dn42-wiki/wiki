@@ -4,7 +4,7 @@
 
 With pim6sd you might have stumbled over the following message in your logs: `For src [...], iif is [...], next hop router is [...]: NOT A PIM ROUTER`. And your multicast routing somehow does not work even though according to your pim6stat output it looks like the correct multicast router was detected via PIM. Or it might have worked in the past and suddenly stopped working.
 
-This means that somehow the neighboring router which pim6sd has chosen is another router not capable of multicast routing via PIM. But how can that be, why did pim6sd chose that neighbor in the first place then?
+This means that somehow the neighboring router which pim6sd (but might happen to another PIM implementation, too?) has chosen is another router not capable of multicast routing via PIM. But how can that be, why did pim6sd choose that neighbor in the first place then?
 
 ## Background
 
@@ -18,17 +18,23 @@ PIM stands for **Protocol Independent** Multicast. Which confusingly does not me
 
 ### Example 1
 
+![Example 1: 3 routers, link with missing PIM](/internal/images/pim-multicast-vs-unicast-issue-example1.png)
+
 Nodes R1, R2, R3 are all peering via BGP on dedicated interface to each other. And have established unicast routes to each other through BGP. For PIM-SM all three routers are running a PIM daemon, but somehow PIM was not configured properly on the dedicated interfaces between R1 and R3 (acc. interfaces not added to the PIM daemon, incorrect filter rules, missing kernel multicast flag on these interfaces, ...).
 
-PIM-SM between R1 and R3 will be broken, even though in theory between R1 and R3 via R2 could work.
+PIM-SM between R1 and R3 will be broken, even though in theory multicast between R1 and R3 via R2 could work.
 
 ### Example 2
+
+![Example 2: 5 routers, 1 router with no PIM](/internal/images/pim-multicast-vs-unicast-issue-example2.png)
 
 Same as example 1 but here multicast routing between R1 and R4 will be broken, as the selected unicast route between R1 and R4 is via R5, but R5 is not running any daemon capable of PIM-SM at all.
 
 Here it is apparent that not only misconfiguration can lead to this unicast vs. multicast routes issue. But also potentially any router in the network which is only capable of a unicast routing protocol while not yet being capable of PIM.
 
-## Example 3
+### Example 3
+
+![Example 3: Multiple multicast routers on subnet, but no PIM on downstream interface](/internal/images/pim-multicast-vs-unicast-issue-example3.png)
 
 In this example R1 and R2 are routers for the same AS. Furthermore they serve several other client devices downstream. Therefore both R1 and R2 announce the same IPv6 /64 subnet for these client devices via BGP. However R1 and R2 have disabled PIM on their downstream interface, they only use MLD downstream while PIM is only used to their upstream routers R3 and R4.
 
