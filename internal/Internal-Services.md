@@ -92,7 +92,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 
 ### DNS Monitor
 
-https://dns-monitor.gensokyo.dn42 (Web: IPv6 Only, Data: IPv4/IPv6)
+[dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
 
 ## IRC
 
