@@ -155,6 +155,20 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | <http://sources.nop.dn42> | freeRouter source tree     |
 | <http://rtros.nop.dn42/>  | freeRouter distribution    |
 
+### BitTorrent
+
+#### Tracker
+
+| Hostname / IP                           | Remarks                                         |
+| :---------------------------------------|------------------------------------------------ |
+| http://tracker.leziblog.dn42/announce   | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
+| https://tracker.leziblog.dn42/announce  | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
+| udp://tracker.leziblog.dn42:11451       | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
+
+#### DHT Bootstrap
+
+- dht.leziblog.dn42:6881
+
 ## VPN
 
 DN42 Network Access over Automatic Wireguard VPN Service (IPv6 only, fd00::/8)
