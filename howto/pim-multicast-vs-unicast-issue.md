@@ -44,13 +44,13 @@ But because R2 does not talk PIM on the downstream interface it will not forward
 
 ## Mitigations
 
-### BGP multicast channels
+### 1) BGP multicast channels
 
 BGP allows using the dedicated BGP channels "IPv4 multicast" and "IPv6 multicast". This does *not* mean that with these channels BGP would distribute multicast routes. But it allows establishing an alternative unicast topology that is supposed to be dedicated for multicast protocols like PIM. And more notably distinct to the BGP topology used for unicast payload packets.
 
 This should especially make it easier to avoid the second example. However it does not help in the situation where for instance bird is used for BGP and pim6sd for PIM and the latter crashed at some point in the future. Then even though bird is using the "ipv{4,6} multicast" channel it will not be aware that PIM ceased to work.
 
-### (Only?) unicast host routes for multicast routers (IPv4: /32, IPv6: /128)
+### 2) (Only?) unicast host routes for multicast routers (IPv4: /32, IPv6: /128)
 
 On PIM capable routers announce /32 and /128 unicast host routes (in the dedicated BGP IPv4/IPv6 multicast channels?), the unicast address(es) of this specific multicast router. This would especially avoid the issue in example 3, as a /128 for R1 received on R3 via R4 would be more specific and prefered over a /64 received on R3 from R2. Also only announcing and accepting host routes on the BGP IPv4/v6 multicast channels might be sufficient and safer?
 
@@ -58,7 +58,7 @@ ToDo: Verify that for PIM-SM to work properly that unicast routes only to multic
 
 Typically there shouldn't be that many multicast routers for a subnet? So announcing only host routers shouldn't increase overhead that much on a BGP IPv4/v6 multicast channel? But might be a bit "unconventional" to announce such small subnets / host routes via BGP?
 
-### Watchdog?
+### 3) Watchdog?
 
 Write some watchdog script/daemon which enables/disables/filters BGP exports(/imports?) if it detects that a/no PIM session was established to that neighbor?
 
@@ -70,6 +70,6 @@ Question: Would there be a chicken & egg situation, or at least (a) small timefr
 4) If PIM to a neighbor times out, retract/filter multi-hop unicast routes via BGP from this neighbor
 
 
-### ROA?
+### 4) ROA?
 
 Use a dedicated ROA filter database for multicast, (manually? automaticaly?) delete entries of misbehaving nodes?
