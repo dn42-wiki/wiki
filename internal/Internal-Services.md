@@ -278,10 +278,9 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 
 ## Forums / Message boards
 
-| Hostname / IP                                             | Remarks                                                                             |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| <https://urandom.catgirls.dn42/>                          | Message board                                                                       |
-| -------------------------------------------------         | ------------------------------------------------------------------------------      |
+| Hostname / IP                                                        | Remarks                                                                             |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| <https://urandom.catgirls.dn42/>                                     | Message board                                                                       |
 | <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topic. Maintained by nicholascw. Previously under bbs.dn42. |
 
 ## Misc
@@ -300,11 +299,11 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://ntfy.weil-isso.dn42>              | NTFY (Push Notify via REST-API)                                                                  |
 | kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
 | anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                 |
-| <https://coin.m724.dn42>                   | Cryptocurrency        |
-| <https://mempool.dn42>                     | Bitcoin explorer
-| <http://whatismyip.dn42/>                     | dn42 IPv4 and IPv6 whatismyip service                                                                       |
+| <https://coin.m724.dn42>                   | Cryptocurrency                                                                                   |
+| <https://mempool.dn42>                     | Bitcoin explorer                                                                                 |
+| <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                            |
 | <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
-
+| yobanirot.dn42                             | lil XMPP server on that domain:D, e621n.dn42 and nenaebalovo.dn42 avaiable too                   |
 ## Usenet Servers / News
 
 There are some News Servers available [here](/services/News)
