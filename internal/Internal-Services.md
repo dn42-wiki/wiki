@@ -90,6 +90,10 @@ Data refreshes whenever the collector provides a new MRT file, generally every 1
 
 Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network. [Documentation](https://dn42.g-load.eu/about/authentication-services/)
 
+### DNS Monitor
+
+https://dns-monitor.gensokyo.dn42 (Web: IPv6 Only, Data: IPv4/IPv6)
+
 ## IRC
 
 | Hostname / IP         | SSL | Remarks                                                                                                             |
