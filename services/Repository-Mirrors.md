@@ -45,9 +45,10 @@ Not hosting repositories itself, it collects other mirrors
 
 ## mirrors.leziblog.dn42
 
-Hosted by [LeZi](mailto:lezi@leziblog.dn42)
-
-Synchronize with the upstream every day at 00:00 UTC.
+Notes:
+- Local repository, hosted by [LeZi](mailto:lezi@leziblog.dn42)
+- Synchronize with the upstream every day at 00:00 UTC.
+- Supports HTTPS
 
 Ubuntu:
 - <http://mirrors.leziblog.dn42/ubuntu/>: Official Mirror in DN42
