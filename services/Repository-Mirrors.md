@@ -49,6 +49,7 @@ Notes:
 - Local repository, hosted by [LeZi](mailto:lezi@leziblog.dn42)
 - Synchronize with the upstream every day at 00:00 UTC.
 - Supports `https`, `rsync`
+  - https: `https://mirrors.leziblog.dn42`
   - rsync: `rsync://rsync.mirrors.leziblog.dn42`
 
 Ubuntu:
