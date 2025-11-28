@@ -43,4 +43,15 @@ Not hosting repositories itself, it collects other mirrors
 * Dynamic page: **<http://mirror.z.dn42/>**
 * Static page: **<http://mirror.z.dn42/_/>**
 
+## mirrors.leziblog.dn42
 
+Hosted by [LeZi](mailto:lezi@leziblog.dn42)
+
+Synchronize with the upstream every day at 00:00 UTC.
+
+Ubuntu:
+- <http://mirrors.leziblog.dn42/ubuntu/>: Official Mirror in DN42
+- <http://mirrors.leziblog.dn42/ubuntu-ports/>: Official Mirror in DN42
+
+OpenWrt:
+- <http://mirrors.leziblog.dn42/openwrt/>: Official Mirror in DN42
