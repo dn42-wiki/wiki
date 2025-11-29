@@ -53,8 +53,8 @@ Notes:
   - rsync: `rsync://rsync.mirrors.leziblog.dn42`
 
 Ubuntu:
-- <http://mirrors.leziblog.dn42/ubuntu/>: Official Mirror in DN42
-- <http://mirrors.leziblog.dn42/ubuntu-ports/>: Official Mirror in DN42
+- <http://mirrors.leziblog.dn42/ubuntu/>: archive.ubuntu.com/ubuntu
+- <http://mirrors.leziblog.dn42/ubuntu-ports/>: ports.ubuntu.com
 
 OpenWrt:
-- <http://mirrors.leziblog.dn42/openwrt/>: Official Mirror in DN42
+- <http://mirrors.leziblog.dn42/openwrt/>: downloads.openwrt.org
