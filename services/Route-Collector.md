@@ -14,8 +14,8 @@ The collector uses the dynamic peering capability in Bird2 to allow anyone to pe
 |:--|:--|
 | ASN | AS4242422602 |
 | Hostname | collector.dn42 |
-| IPv4 Address | 172.20.129.4 |
-| IPv6 Address | fd42:4242:2601:ac12::1 |
+| IPv4 Address | 172.20.0.179 |
+| IPv6 Address | fd42:d42:d42:179::1 |
 
 ### BGP Configuration
 
@@ -29,7 +29,7 @@ Example bird2 config:
 protocol bgp ROUTE_COLLECTOR
 {
   local as ***YOUR_ASN***;
-  neighbor fd42:4242:2601:ac12::1 as 4242422602;
+  neighbor fd42:d42:d42:179::1 as 4242422602;
 
   # enable multihop as the collector is not locally connected
   multihop;
@@ -74,7 +74,7 @@ neighbor should be defined separately (outside the
 `dn42peers` group)):
 
 ```conf
-neighbor fd42:4242:2601:ac12::1 {
+neighbor fd42:d42:d42:179::1 {
 	local-address <YOUR-ROUTER-DN42-IPv6>
 	descr dn42grc
 	remote-as 4242422602
@@ -86,18 +86,18 @@ neighbor fd42:4242:2601:ac12::1 {
 
 # [...]
 
-allow to {group dn42peers fd42:4242:2601:ac12::1} prefix-set dn42etc
+allow to {group dn42peers fd42:d42:d42:179::1} prefix-set dn42etc
 ```
 
 Example VyOS 1.4 "Sagitta" config
 ```
 # The route collector should never export routes, so let's make a route-map to reject them if it does.
 set policy route-map Deny-All rule 1 action deny
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv4-unicast route-map import 'Deny-All'
-set protocols bgp neighbor fd42:4242:2601:ac12::1 address-family ipv6-unicast route-map import 'Deny-All'
-set protocols bgp neighbor fd42:4242:2601:ac12::1 description 'https://lg.collector.dn42'
-set protocols bgp neighbor fd42:4242:2601:ac12::1 ebgp-multihop '10'
-set protocols bgp neighbor fd42:4242:2601:ac12::1 remote-as '4242422602'
+set protocols bgp neighbor fd42:d42:d42:179::1 address-family ipv4-unicast route-map import 'Deny-All'
+set protocols bgp neighbor fd42:d42:d42:179::1 address-family ipv6-unicast route-map import 'Deny-All'
+set protocols bgp neighbor fd42:d42:d42:179::1 description 'https://lg.collector.dn42'
+set protocols bgp neighbor fd42:d42:d42:179::1 ebgp-multihop '10'
+set protocols bgp neighbor fd42:d42:d42:179::1 remote-as '4242422602'
 
 ```
 
@@ -128,6 +128,8 @@ The collector runs [bird_exporter](https://github.com/czerwonk/bird_exporter) an
  - <http://collector.dn42:9324/metrics>
 
 ### SSH Interface
+
+**Update**: The SSH interface is currently not available, but will be enabled in the future.
 
 The collector bird instance can be queried directly using a birdc shell.
 
