@@ -1,6 +1,6 @@
-# SSL Certificate Authority
+# Buzzster Trust Services
 
-acme.buzzster.dn42 is signed by an internally maintained CA that is only allowed to sign *.buzzster.dn42 domains.
+buzzster.dn42 is signed by an internally maintained CA that is only allowed to sign *.buzzster.dn42 domains.
 
 If you are required to specify a license to clarify redistribution, then it [can be considered](https://groups.io/g/dn42/message/844) as [CC0](https://creativecommons.org/public-domain/cc0/).
 
