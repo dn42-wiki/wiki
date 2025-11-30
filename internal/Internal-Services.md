@@ -11,6 +11,7 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 ## Certificate Authority
 
 * xuu is maintaining a [certificate authority](/services/Certificate-Authority) for internal services.
+* Buzzster is maintaining  [Buzzster Trust Services](/Buzzster-Trust-Services) for your services.
 
 * Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 
