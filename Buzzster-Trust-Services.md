@@ -2,7 +2,7 @@
 
 buzzster.dn42 is signed by an internally maintained CA that is only allowed to sign *.buzzster.dn42 domains.
 
-The CA certificate ([dn42](https://buzzster.dn42/ca/buzzster-ca.pem):
+The CA certificate ([dn42](https://buzzster.dn42/ca/buzzster-ca.pem)):
 
 ```
 Certificate:
