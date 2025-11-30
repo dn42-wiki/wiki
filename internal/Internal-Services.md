@@ -50,9 +50,6 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
         - IPv4: asn4.myip.launchpadx.dn42
         - IPv6: asn6.myip.launchpadx.dn42
         - Dual-stack: asn.myip.launchpadx.dn42
-  - [myip.buzzster.dn42](http://myip.buzzster.dn42)
-    - API endpoint:
-      - IPv4 and IPv6: myip.buzzster.dn42/api/ip
   - [whatismyip.dn42](http://whatismyip.dn42)
     - API endpoint:
       - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
@@ -182,8 +179,6 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 ### Telegram
 
-A DN42 private Telegram app and server is available at [buzzgram.dn42](https://buzzgram.dn42), the app requires a new registration (Official Telegram account isn't valid), only support IPv6 at the moment.
-
 #### MTProxy
 
 | IP | Secret | Provider |
@@ -227,7 +222,6 @@ A DN42 private Telegram app and server is available at [buzzgram.dn42](https://b
 
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
-- buzzster.dn42 runs an asterisk based VOIP service with shorts numbers, inbound and outbound calls and live radio. Request your short number on [KevvoGeek Telegram](https://t.me/KevvoGeek) for make and receive internal and external calls.
 - gensokyo.dn42 runs an asterisk based VOIP service with fax modems, CallerID playback and PSTN to DN42 proxy gateway (+1 424 242 9915). 
 
 ## Challenges
