@@ -10,12 +10,13 @@ A searx-ng instance is available at [search.androw.dn42](https://search.androw.d
 
 ## Certificate Authority
 
+Signed by the main DN42 CA (established 2016):
 * xuu is maintaining a [certificate authority](/services/Certificate-Authority) for internal services.
-* Buzzster is maintaining  [Buzzster Trust Services](/Buzzster-Trust-Services) for your services.
-
 * Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
-
 * Kioubit maintains a [certificate authority](https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
+
+Self-signed:
+* Buzzster is maintaining  [Buzzster Trust Services](/Buzzster-Trust-Services) for your services.
 
 ## Network-related
 
