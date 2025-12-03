@@ -348,7 +348,6 @@ See [BIRD configuration examples](/howto/Bird2).
 - [OpenWRT](/howto/OpenWRT)
 - [EdgeOS configuration](/howto/EdgeOS-Config-Example)
 - [EdgeOS GRE/IPsec](/howto/EdgeOS-GRE-IPsec-Example)
-- [Extreme Networks Summit 1i](/howto/BGP-on-Extreme-Summit1i)
 
 ## Configure DNS
 
