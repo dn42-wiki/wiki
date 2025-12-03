@@ -320,7 +320,7 @@ See [GRE + IPsec](/howto/GRE-plus-IPsec) and other documentation in this wiki.
 
 ## Run a routing daemon
 
-You need a BGP daemon to exchange routes with peers. Common choices are BIRD and FRR, but you can use anything—OpenBGPD, XORP, or even [hardware routers](/howto/BGP-on-Extreme-Summit1i). See the [FAQ](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use) for guidance.
+You need a BGP daemon to exchange routes with peers. Common choices are BIRD and FRR, but you can use anything: OpenBGPD, XORP, ExaBGP. See the [FAQ](/FAQ#frequently-asked-questions_what-bgp-daemon-should-i-use) for guidance.
 
 See [BIRD configuration examples](/howto/Bird2).
 
