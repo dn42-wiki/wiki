@@ -436,7 +436,7 @@ protocol rpki rpki_dn42{
 }
 ```
 ### Use BFD in bird2
-BFD is an additional protocol with extremely low overhead to detect failures in the switching plane between peers,
+BFD is an additional protocol to detect failures in the switching plane between peers,
 it is used widely by cleanet peerings and some networks in DN42 already have enabled it globally.
 To do a basic configuration you need to add 1 line to your bird.conf and enable it per peer or globally by defining it in the
 template. 
@@ -454,6 +454,9 @@ Note bfd graceful; only activates when both sides have bfd configured and does n
 protocol bgp <NEIGHBOR_NAME> from dnpeers {
     enable extended messages on;
     bfd graceful;
+    bfd {
+        interval 10s;
+    };
     neighbor <NEIGHBOR_IPv6>%<NEIGHBOR_INTERFACE> as <NEIGHBOR_ASN>;
         # Or:
         # neighbor <NEIGHBOR_IPv6> as <NEIGHBOR_ASN>;
