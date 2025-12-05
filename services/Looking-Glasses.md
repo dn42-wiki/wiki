@@ -16,6 +16,7 @@ Please sort by AS number.
 | 4242420585 | ext: <https://dn42.atolm.net/lg> <br> dn42: <http://atolm.dn42/lg> |
 | 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420893 | dn42: <http://lg.maiyun.dn42> |
+| 4242421023 | ext: <https://network.owo.li/>  <br> dn42 (coming soon): <https://network.iris.dn42/>|
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
 | 4242421084 | ext: <https://dn42-lg.darmstadt.freifunk.net> |
 | 4242421105 | dn42: <http://lg.finarfin.dn42:8179/> |
