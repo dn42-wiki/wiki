@@ -60,6 +60,14 @@ For example:
         name = IEDON.DN42 Wiki Mirror(116)
 ```
 
+To create the isolated, low-privileged user `dn42-wiki-go`, you may run:
+```bash
+# This user cannot log in or get a shell.
+# This user has /opt/dn42-wiki-go as working directory.
+# No default home folder created automatically.
+sudo useradd -r -s /usr/sbin/nologin -d /opt/dn42-wiki-go -M dn42-wiki-go
+```
+
 Both systemd socket enabler and UNIX domain socket are supported, check example configuration files: `dn42-wiki-go.socket` and `dn42-wiki-go.service`.
 
 If you would like to use with Docker: `Dockerfile` and `docker-compose.yml` are also provided, bind proper directories and map `config.json` for the App to use, then you are all set.
