@@ -11,6 +11,7 @@ ASN           | Network  | Autopeer URL |
 AS4242420207 | [RoutedBits](https://dn42.routedbits.io) | <https://dn42.routedbits.io> |
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hcartiaux.github.io/dn42/> |
+AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://peer-dn42.nedifinita.com/> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
 AS4242422189 | [IEDON-NET](https://iedon.net) | <https://iedon.net> |
