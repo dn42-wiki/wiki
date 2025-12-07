@@ -56,7 +56,6 @@ Self-signed:
       - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
       - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
-- BGP flap detector (FlapAlerted by Kioubit) hosted by AS4242422092: [flaps.pebkac.dn42](https://flaps.pebkac.dn42)
 
 ### Speedtest
 
@@ -68,6 +67,14 @@ Self-signed:
 | vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 | NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
 | Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
+
+### FlapAlerted instances
+
+| URL | Operator | Note |
+| --- | --- | --- |
+| [flaps.pebkac.dn42](https://flaps.pebkac.dn42) | AS4242422092 | |
+| [https://dn42.g-load.eu/flapAlerted/](https://dn42.g-load.eu/flapAlerted/) | AS4242423914 | Limited HTTP API |
+| [https://bandura.dn42/flapalertedpro/](https://bandura.dn42/flapalertedpro/), [https://bandura-comm.mk16.de/flapalertedpro/](https://bandura-comm.mk16.de/flapalertedpro/) | AS4242422923 | |
 
 ### Map.dn42 API Services
 
