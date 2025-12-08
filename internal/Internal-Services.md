@@ -79,6 +79,7 @@ Self-signed:
 | [https://fa.badaimweeb.dn42/](https://fa.badaimweeb.dn42/), [https://dn42-fa.badaimweeb.me/](https://dn42-fa.badaimweeb.me/) | AS4242423797 | |
 | [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 | |
 | [https://flapalerted.lantian.pub/](https://flapalerted.lantian.pub/) | AS4242422547 | |
+| [https://flaps.iedon.net/](https://flaps.iedon.net/) | AS4242422189 | |
 
 ### Map.dn42 API Services
 
