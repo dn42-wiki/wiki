@@ -77,6 +77,7 @@ Self-signed:
 | [https://bandura.dn42/flapalertedpro/](https://bandura.dn42/flapalertedpro/), [https://bandura-comm.mk16.de/flapalertedpro/](https://bandura-comm.mk16.de/flapalertedpro/) | AS4242422923 | |
 | [https://flappyroutes.be0ba.dn42/](https://flappyroutes.be0ba.dn42/), [https://flappyroutes.dn42.tcp80.org/](https://flappyroutes.dn42.tcp80.org/) | AS4242420224 | |
 | [https://fa.badaimweeb.dn42/](https://fa.badaimweeb.dn42/), [https://dn42-fa.badaimweeb.me/](https://dn42-fa.badaimweeb.me/) | AS4242423797 | |
+| [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 | |
 
 ### Map.dn42 API Services
 
