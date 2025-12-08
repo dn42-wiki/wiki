@@ -58,3 +58,11 @@ Ubuntu:
 
 OpenWrt:
 - <http://mirrors.leziblog.dn42/openwrt/>: downloads.openwrt.org
+
+Ubuntu-image:
+- 20.04.6
+  - [magnet:?xt=urn:btih:83df9f532bed288518d884fe63363e8f5b2286e2](magnet:?xt=urn:btih:83df9f532bed288518d884fe63363e8f5b2286e2&dn=ubuntu-20.04.6-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
+- 22.04.5
+  - [magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d](magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d&dn=ubuntu-22.04.5-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
+- 24.04.3
+  - [magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9](magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9&dn=ubuntu-24.04.3-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
