@@ -15,6 +15,7 @@ DN42’s RPKI RTR service endpoints are hosted by multiple operators. By configu
 | rpki.dn42.launchpadx.top | 8082 | both          |
 | rpki.dn42.milu.moe       | 8082 | both          |
 | rpki.dn42.6700.cc        | 8282 | both          |
+| rpki.nia.dn42            | 8082 | both          |
 
 #### FlapAlerted RPKI RTR Servers
 
@@ -23,6 +24,8 @@ These services will publish a ROA pointing to AS0 when a prefix flapping. This c
 | Server                   | Port | **IPv4/IPv6** | FlapAlerted Instance | Provider |
 | ------------------------ | ---- | ------------- | -------------------- | -------- |
 | rpki.dn42.launchpadx.top | 8084 | both          | [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 |
+| rpki.nia.dn42            | 8084 | both          | [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 |
+| rpki.nia.dn42            | 8083 | both          | Multiple Sources (2-Votes Policy) (see [flap-data.nia.dn42](https://flap-data.nia.dn42/)) | AS4242421331 |
 
 To configure the service, connect your BGP software’s RPKI client to one or more of these RTR servers.
 
