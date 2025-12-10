@@ -80,6 +80,7 @@ Self-signed:
 | [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 | |
 | [https://flapalerted.lantian.pub/](https://flapalerted.lantian.pub/) | AS4242422547 | |
 | [https://flaps.iedon.net/](https://flaps.iedon.net/) | AS4242422189 | |
+| [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/) | AS4242423374 | |
 
 ### Map.dn42 API Services
 
@@ -150,6 +151,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
 | <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
+| <https://radio.baka.dn42>                       | Online Radio by Bingxin                                                                |
 
 ## File Sharing
 
@@ -278,6 +280,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://mdr.dn42/>            | Mark Dastmalchi-Round's website (clearnet mirror) |
 | <https://yobanirot.dn42>       | NAAIN's website                                   |
 | <https://darkpoint.dn42>       | AS4242420150 Darkpoint website                    |
+| <https://baka.dn42>            | Baka.Pub DN42 website (clearnet mirror)           |
 
 ## Pastebins
 
