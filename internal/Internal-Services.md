@@ -82,6 +82,7 @@ Self-signed:
 | [https://flaps.iedon.net/](https://flaps.iedon.net/) | AS4242422189 | |
 | [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/) | AS4242423374 | |
 | [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 | |
+| [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/) | AS4242421331 | aggregated data of most instances |
 
 ### Map.dn42 API Services
 
