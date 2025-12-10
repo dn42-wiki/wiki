@@ -42,6 +42,7 @@ Please sort by AS number.
 | 4242423377 | ext: <https://lg-dn42.leziblog.com> |
 | 4242423702 | ext: <https://dn42-lg.launchpadx.top> <br> dn42: <https://lg.lpnet0.dn42> |
 | 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
+| 4242421331 | dn42: <https://lg.nia.dn42> |
 
 
 ## Down
