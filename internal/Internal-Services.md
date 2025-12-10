@@ -81,6 +81,7 @@ Self-signed:
 | [https://flapalerted.lantian.pub/](https://flapalerted.lantian.pub/) | AS4242422547 | |
 | [https://flaps.iedon.net/](https://flaps.iedon.net/) | AS4242422189 | |
 | [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/) | AS4242423374 | |
+| [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 | |
 
 ### Map.dn42 API Services
 
