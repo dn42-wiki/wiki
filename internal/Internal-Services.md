@@ -319,6 +319,9 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                            |
 | <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
 | yobanirot.dn42                             | lil XMPP server on that domain:D, e621n.dn42 and nenaebalovo.dn42 avaiable too                   |
+| <https://yobanirot.dn42/dark_test.php>     | Test ur site for dark theme                                                                      |
+| <https://yobanirot.dn42/ie8_test.php>      | Test ur site for Internet Explorer 8 compatibility                                               |
+
 ## Usenet Servers / News
 
 There are some News Servers available [here](/services/News)
