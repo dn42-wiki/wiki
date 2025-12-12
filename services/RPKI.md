@@ -26,6 +26,8 @@ These services will publish a ROA pointing to AS0 when a prefix flapping. This c
 | rpki.dn42.launchpadx.top | 8084 | both          | [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 |
 | rpki.nia.dn42            | 8084 | both          | [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 |
 | rpki.nia.dn42            | 8083 | both          | Multiple Sources (2-Votes Policy) (see [flap-data.nia.dn42](https://flap-data.nia.dn42/)) | AS4242421331 |
+| rpki.dn426700.cc         | 8280 | both          | Flap data source: https://flap42-data.strexp.net | AS4242423088 |
+
 
 To configure the service, connect your BGP software’s RPKI client to one or more of these RTR servers.
 
