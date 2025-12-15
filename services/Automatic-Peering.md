@@ -21,7 +21,6 @@ AS4242422244 | [ICEZ-DN42](https://sgp.dn42.icez.net/) | <https://sgp.dn42.icez.
 AS4242422717 | [JK-Network](https://net.whojk.com) | <https://net.whojk.com> |
 AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | <https://dn42.lare.cc/autopeer> |
 AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
-AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
 AS4242423374 | [Bingxin Network](https://dn42.baka.pub/en/peering-request/bingxin-network) | <https://dn42.baka.pub/en/peering-request/bingxin-network> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | <https://dn42.g-load.eu> |
 
