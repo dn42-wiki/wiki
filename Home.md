@@ -69,7 +69,7 @@ Ready to join? The [Getting Started](/howto/Getting-Started) guide will help you
 - [Breizh-Entropy](http://wiki.breizh-entropy.org/wiki/DN42)
 - [Fédération FDN](https://www.ffdn.org)
 - [Le LOOP](https://leloop.org/)
-- [Hackerspace Bielefeld](https://hackerspace-bielefeld.de)
+- [ACME Labs](https://acmelabs.space)
 - [fixmix Technologies Ltd](https://dn42.fixmix.tech/)
 - [Strategic Explorations Ltd](https://strexp.net)
 - [perchnet](/perchnet) (VPS donated by [Evolution Host](https://evolution-host.com))
