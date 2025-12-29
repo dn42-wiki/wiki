@@ -1,6 +1,6 @@
 # dn42 Show and Tell
 
-Let us know the most creative, best, strangest, complex, wierd or just plain fun setups that you've created with dn42.
+Let us know the most creative, best, strangest, complex, weird or just plain fun setups that you've created with dn42.
 
 Document your mad setups in the categories below, with links to a full write up, photos and screenshots welcome.
 
