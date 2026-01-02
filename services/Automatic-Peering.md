@@ -19,6 +19,7 @@ AS4242422225 | [MARAUN](https://peering.maraun.de) | <https://peering.maraun.de>
 AS4242422227 | [PUDUNET](https://pudunet.net) | <https://pudunet.net> |
 AS4242422244 | [ICEZ-DN42](https://sgp.dn42.icez.net/) | <https://sgp.dn42.icez.net/> |
 AS4242422717 | [JK-Network](https://net.whojk.com) | <https://net.whojk.com> |
+AS4242422884 | [Datenfass](https://datenfass.com/autopeering.html) | <https://datenfass.com/autopeering.html> |
 AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | <https://dn42.lare.cc/autopeer> |
 AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
 AS4242423374 | [Bingxin Network](https://dn42.baka.pub/en/peering-request/bingxin-network) | <https://dn42.baka.pub/en/peering-request/bingxin-network> |
