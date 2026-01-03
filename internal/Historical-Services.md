@@ -13,7 +13,6 @@ You can inspect the services status [on this page](https://services.dn42)
   * DN42 Toplevel domain DNS monitoring: [gatuno.dn42/dns](http://gatuno.dn42/dns)
   * Free DNS Hosting. You can host any toplevel or subdomain from dn42: [gatuno.dn42/managed](http://gatuno.dn42/managed/)
   * Nixnodes original Map of the network: [map.nixnodes.net](http://map.nixnodes.net)
-  * IP base network map: [map.jh0project.dn42](https://jh0project.dn42/map) (DN42) or [dn42.jh0project.com](https://dn42.jh0project.com/map) (IANA) _(uses ping and traceroute the whole DN42's ipv4 addresss block.)_
   * BGP lookup tool: [bgp.charlie.dn42](https://bgp.charlie.dn42/) (DN42)
   * Observed routes over time (from the perspective of the C4TG1RL5 network): <https://catgirls.dn42/routes/>
 
