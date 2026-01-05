@@ -36,6 +36,7 @@ Please sort by AS number.
 | 4242422558 | ext: <https://lg.dn42.derix.dev> <br> dn42: <https://lg.derix.dn42> |
 | 4242422575 | dn42: <https://lg.androw.dn42> <br> ext: <https://lg.androw.eu> |
 | 4242422601 | dn42: <http://lg.burble.dn42> <br> ext: <https://lg.burble.com> |
+| 4242422712 | dn42: <https://lg.nuku.dn42> |
 | 4242422717 | ext: <https://lg.whojk.com> |
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
