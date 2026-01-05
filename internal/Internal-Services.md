@@ -85,6 +85,7 @@ Self-signed:
 | [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/) | AS4242423374 | |
 | [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 | |
 | [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/) | AS4242421331 | aggregated data of most instances |
+| <https://flaps.cowgl.xyz>, <https://flaps.cowgl.dn42>| AS4242423999 | |
 
 ### Map.dn42 API Services
 
@@ -156,6 +157,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
 | <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
 | <https://radio.baka.dn42>                       | Online Radio by Bingxin                                                                |
+| <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
 
 ## File Sharing
 
