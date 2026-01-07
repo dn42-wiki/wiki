@@ -176,6 +176,16 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | <http://rtros.nop.dn42/>  | freeRouter distribution    |
 | <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
 
+### Rsync
+
+**FIXME**: Please add info about (approximate) bandwidth of the servers.
+
+Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
+
+| Hostname / IP             | Remarks                    |
+| :------------------------ | -------------------------- |
+| rsync://nas.gensokyo.dn42/tlmc | Touhou Lossless Music Collection (TLMC) |
+
 ### BitTorrent
 
 #### Tracker
