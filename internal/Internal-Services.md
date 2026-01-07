@@ -325,6 +325,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | yobanirot.dn42                             | lil XMPP server on that domain:D, e621n.dn42 and nenaebalovo.dn42 avaiable too                   |
 | <https://yobanirot.dn42/dark_test.php>     | Test ur site for dark theme                                                                      |
 | <https://yobanirot.dn42/ie8_test.php>      | Test ur site for Internet Explorer 8 compatibility                                               |
+| <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                        |
 
 ## Usenet Servers / News
 
