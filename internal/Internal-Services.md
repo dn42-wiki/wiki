@@ -174,6 +174,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | <http://freertr.dn42/>    | freeRouter main site       |
 | <http://sources.nop.dn42> | freeRouter source tree     |
 | <http://rtros.nop.dn42/>  | freeRouter distribution    |
+| <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
 
 ### BitTorrent
 
