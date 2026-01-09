@@ -55,6 +55,11 @@ wieistmeineip.dn42 also provides a telnet service that returns the address you c
   * You can also use <http://whatismyip.dn42> from inside dn42 to get your IPv4 and IPv6 address. It also returns information about your latency, netblock details, and route information.
   * An alternative is available at <https://ip.naive.network>, which displays your clearnet and dn42 IP addresses.
 
+### VPN
+
+DN42 Network Access over Automatic Wireguard VPN Service (IPv6 only, fd00::/8)
+provided by TheQ at <https://dn42.0011.de/vpnusers>
+
 ## Search engines
 
 | Hostname / IP                                     | Remarks                                                  |
