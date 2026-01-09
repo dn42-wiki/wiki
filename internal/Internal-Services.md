@@ -206,7 +206,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 ## VPN
 
 DN42 Network Access over Automatic Wireguard VPN Service (IPv6 only, fd00::/8)
-provided by TheQ at <https://dn42.0011.de/vpnusers>
+provided by AS4242422712 at <https://vpn-service.dn42.nuku.de/>
 
 ## Proxies
 
