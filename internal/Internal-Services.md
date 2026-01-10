@@ -33,7 +33,7 @@ Self-signed:
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
 - Another Cloudflare-like cdn-cgi/trace: [buzzster.dn42/cdn-cgi/trace](https://buzzster.dn42/cdn-cgi/trace)
-- Web-based Ping & Traceroute: [ping.dn42](http://ping.dn42)
+- Web-based Ping & Traceroute: [ping.dn42](https://ping.dn42)
 - New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
 - whatsmyip:
   - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
