@@ -1,3 +1,5 @@
+[dn42-wiki-go](/services/Distributed-Wiki-New) is a lightweight, Git-backed wiki engine designed for DN42. It is based on [wiki-ng](https://git.dn42.dev/wiki/wiki-ng), aims to replace the old Gollum-based DN42 distributed wiki.
+
 # this page is outdated and need update
 
 The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the wiki. Sites are powered by [gollum](https://github.com/gollum/gollum) which has no native SSL support, so Nginx acts as a reverse proxy and handles the encryption.
@@ -355,7 +357,3 @@ esac
 
 exit 0
 ```
-
-
-
-
