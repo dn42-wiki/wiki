@@ -4,6 +4,7 @@
   * [Address Space](/howto/Address-Space)
   * [BGP communities](/howto/BGP-communities)
   * [FAQ](/FAQ)
+  * [Links](/Links)
 
 * How-To
   * [Wireguard](/howto/wireguard)
