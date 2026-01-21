@@ -44,6 +44,7 @@ This list contains all automatic services that are not fully automatic, but stil
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS4242420893 | [Maiyun-dn42](https://maiyun.me/dn42.html) | <https://github.com/myzhang1029/dn42-config-pub> |
+AS4242421117 | [Yuyuko Network](https://blog.yuyuko.com/post/7) | <https://form.jotform.com/yuyuko302/dn42-peer-request-form> |
 AS4242421732 | [BaragoonNetworks](https://as215887.net/dn42) | <https://peering.as215887.net> |
 
 Sort by AS number
