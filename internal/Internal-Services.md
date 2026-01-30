@@ -88,7 +88,7 @@ Self-signed:
 | [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 | |
 | [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/) | AS4242421331 | aggregated data of most instances |
 | <https://flaps.cowgl.xyz>, <https://flaps.cowgl.dn42>| AS4242423999 | |
-| [flapalarted.nedifinita.com](https://flapalarted.nedifinita.com) | AS4242420454 | |
+| [flapalerted.nedifinita.com](https://flapalerted.nedifinita.com) | AS4242420454 | |
 
 ### Map.dn42 API Services
 
