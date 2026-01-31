@@ -127,7 +127,7 @@ server=/d.f.ip6.arpa/fd42:d42:d42:54::1
 in `dnsmasq.conf`.
 
 ## PowerDNS recursor
-Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS).
+Old-style config for /etc/powerdns/recursor.conf (Debian and CentOS):
 
 ```conf
 dont-query=127.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
@@ -138,6 +138,33 @@ forward-zones-recurse+=22.172.in-addr.arpa=172.20.0.53
 forward-zones-recurse+=23.172.in-addr.arpa=172.20.0.53
 forward-zones-recurse+=10.in-addr.arpa=172.20.0.53
 forward-zones-recurse+=d.f.ip6.arpa=172.20.0.53
+```
+
+New-style (YAML) config:
+
+```yaml
+recursor:
+    config_dir: /etc/powerdns   # as per default config
+    forward_zones_recurse:
+      - zone: dn42
+        forwarders:
+          # try primary delegation servers first, then anycast recursors, then other recursors
+          # remove or reorder the servers as desired; just using the anycast recursors should work too
+          - 'fd42:4242:2601:ac53::1'              # b.delegation-servers.dn42
+          - 'fd00:913e:130::400'                  # d.delegation-servers.dn42
+          - 'fd42:4242:2189::1'                   # i.delegation-servers.dn42
+          - 'fd42:5d71:219:0:216:3eff:fe1e:22d6'  # j.delegation-servers.dn42
+          - 'fdcf:8538:9ad5:1111::2'              # k.delegation-servers.dn42
+          - 'fd86:bad:11b7:53::1'                 # l.delegation-servers.dn42
+          - 'fd42:d42:d42:53::1'                  # a0.recursive-servers.dn42
+          - 'fd42:d42:d42:54::1'                  # a3.recursive-servers.dn42
+          - 'fd00:913e:130::1000'                 # d.recursive-servers.dn42
+          - 'fd86:bad:11b7:53::2'                 # l.recursive-servers.dn42
+          - 'fdcf:8538:9ad5:1111::1'              # k.recursive-servers.dn42
+          - 'fdbc:f9dc:67ad:2547::53'             # t.recursive-servers.dn42
+          - 'fd42:4242:2189::53'                  # i.recursive-servers.dn42
+          - 'fd42:5d71:219:0:216:3eff:fee8:c215'  # j.recursive-servers.dn42
+          - 'fd42:4242:2601:ac53::53'             # b.recursive-servers.dn42
 ```
 
 ## MaraDNS
