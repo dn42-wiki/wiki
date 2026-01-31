@@ -40,7 +40,7 @@ Please sort by AS number.
 | 4242422717 | ext: <https://lg.whojk.com> |
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
-| 4242423090 | dn42: <https://lg.filmroellchen.dn42> IPv6-only |
+| 4242423090 | dn42: <http://lg.filmroellchen.dn42> <br> IPv6-only |
 | 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423374 | ext: <https://lg-dn42.baka.pub> |
 | 4242423377 | ext: <https://lg-dn42.leziblog.com> |
