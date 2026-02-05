@@ -222,6 +222,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | :- | :----- | :------- |
 | [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d) | `ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d` | JERRY-MNT |
 | [172.20.54.58:8101](https://t.me/proxy?server=172.20.54.58&port=8101&secret=de5ba4a48126705a60add5e1cacbbd4b) | `de5ba4a48126705a60add5e1cacbbd4b` | LAUNCHPAD-MNT |
+| [mtproxy.nia.dn42:18888](https://t.me/proxy?server=mtproxy.nia.dn42&port=18888&secret=ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576) | `ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576` | NIA-MNT |
 
 ## NTP
 
