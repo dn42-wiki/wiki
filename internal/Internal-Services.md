@@ -26,9 +26,10 @@ Self-signed:
 - Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
 - ~~Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.~~ (deprecated but still partially functional)
   - The service has now been split into several sub-sites, further functional migrations are currently underway:
-  - Registry Viewer: [registry42.strexp.net (IANA)](https://registry42.strexp.net) (requires WebGL)
+  - Registry Viewer (IP Blocks): [registry42.strexp.net (IANA)](https://registry42.strexp.net) (requires WebGL)
   - Map Viewer: [map42.strexp.net (IANA)](https://map42.strexp.net) (requires WebGL)
   - ISP Viewer: [isp42.strexp.net (IANA)](https://isp42.strexp.net)
+  - Registry Timeline: [timeline42.strexp.net (IANA)](https://timeline42.strexp.net)
 - Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
