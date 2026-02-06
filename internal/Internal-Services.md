@@ -163,6 +163,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://radio.baka.dn42>                       | Online Radio by Bingxin                                                                |
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
+| <https://sess.dn42/radio.ogg>                   | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
 
 ## File Sharing
 
@@ -238,6 +239,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | mc.jerry.dn42 & jerry.dn42                                                                                                                      | Minecraft                  | latest, IPv4 & IPv6                                                                                  |
 | mc.razu.neo (formerly mc.razuritta.dn42)                                                                                                        | Minecraft                  | latest(1.20.4 atm), IPv4+IPv6                                                                        |
 | mc.licen777.dn42 (172.23.197.197 & fde8:2e18:e127::300)                                                                                         | Minecraft                  | 1.16.5-1.21.5, (/gm 1, Cracked)                                                                      |
+| sess.dn42                                                                                                                                       | Minecraft                  | Vanilla, latest (1.21.11), IPv4 & IPv6                                                               |
 | ttd.jerry.dn42                                                                                                                                  | OpenTTD                    | latest, IPv4 & IPv6                                                                                  |
 | stk.jerry.dn42:2759, stk.jerry.neo:2759                                                                                                         | SuperTuxKart               | latest, IPv4 only                                                                                    |
 | stk2.jerry.dn42:2759, stk2.jerry.neo:2759                                                                                                       | SuperTuxKart               | latest, IPv4 & IPv6                                                                                  |
@@ -304,6 +306,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://yobanirot.dn42>       | NAAIN's website                                   |
 | <https://darkpoint.dn42>       | AS4242420150 Darkpoint website                    |
 | <https://baka.dn42>            | Baka.Pub DN42 website (clearnet mirror)           |
+| <https://blog.sess.dn42>       | Session's Blogsite (clearnet mirror)              |
 
 ## Pastebins
 
