@@ -163,7 +163,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://radio.baka.dn42>                       | Online Radio by Bingxin                                                                |
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
-| <https://sess.dn42/radio.ogg>                   | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
+| <https://sess.dn42/status.xsl>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
 
 ## File Sharing
 
