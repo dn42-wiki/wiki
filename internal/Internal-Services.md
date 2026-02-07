@@ -181,6 +181,8 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | <http://sources.nop.dn42> | freeRouter source tree     |
 | <http://rtros.nop.dn42/>  | freeRouter distribution    |
 | <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
+| <fdc1:acc:cc8::6>         | SFTP Linux ISOs mirrored from distrowatch.com & FOSS Torrents.  Connect on the commandline with <sftp -P 2222 dn42@[fdc1:acc:cc8::6] (P/W dn42)|
+
 
 ### Rsync
 
