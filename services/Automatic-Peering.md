@@ -14,7 +14,7 @@ AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hca
 AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://peer-dn42.nedifinita.com/> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
-AS4242422189 | [IEDON-NET](https://iedon.net) | <https://iedon.net> |
+AS4242422189 | [iEdon Networks](https://iedon.net) | Clearnet → <https://iedon.net/> <br> DN42 → <https://iedon.dn42/> |
 AS4242422225 | [MARAUN](https://peering.maraun.de) | <https://peering.maraun.de> |
 AS4242422227 | [PUDUNET](https://pudunet.net) | <https://pudunet.net> |
 AS4242422244 | [ICEZ-DN42](https://sgp.dn42.icez.net/) | <https://sgp.dn42.icez.net/> |
