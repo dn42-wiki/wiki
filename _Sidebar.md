@@ -25,6 +25,7 @@
   * [Universal Network Requirements](/howto/networksettings)
   * [VyOS](/howto/vyos1.4.x)
   * [NixOS](/howto/nixos)
+  * [GeoFeed](/howto/GeoFeed)
 
 * Services
   * [IRC](/services/IRC)
