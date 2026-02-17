@@ -10,6 +10,8 @@ Bingxin has deployed a SearXNG instance at [baaka.dn42](https://baaka.dn42), wit
 
 A searx-ng instance is available at [search.androw.dn42](https://search.androw.dn42) to search the clearnet.
 
+[Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
+
 ## Certificate Authority
 
 Signed by the main DN42 CA (established 2016):
