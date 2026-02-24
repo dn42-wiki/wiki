@@ -121,6 +121,10 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 
 [dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
 
+### BGP Community Anomalies Report
+
+[Anomalies.dn42](https://anomalies.dn42) is a debugging tool that analyzes BGP routing data to identify ASes that may be inadvertently adding or removing geographic communities (region/country) from foreign prefixes.
+
 ## IRC
 
 | Hostname / IP         | SSL | Remarks                                                                                                             |
