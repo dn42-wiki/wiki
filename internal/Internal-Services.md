@@ -260,6 +260,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
 |[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
 |172.23.77.38:27031|Quake Live Server|IPv4 only, connect with console using IP Address and Port #|
+
 ## Voice chat
 
 | Hostname / IP              | Remarks                    |
