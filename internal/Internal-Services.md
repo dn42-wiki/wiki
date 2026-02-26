@@ -74,6 +74,7 @@ Self-signed:
 | vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 | NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
 | Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
+| Bingxin    | Hong Kong          | 5Gbps       | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
 
 ### FlapAlerted instances
 
@@ -166,7 +167,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
 | <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
-| <https://radio.baka.dn42>                       | Online Radio by Bingxin                                                                |
+| <https://radio.baka.dn42>                       | Enjoy Hachimi Music! Online Radio by Bingxin                                           |
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
 | <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
