@@ -93,6 +93,7 @@ Self-signed:
 | [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/) | AS4242421331 | aggregated data of most instances |
 | <https://flaps.cowgl.tech>, <https://flaps.cowgl.dn42>| AS4242423999 | |
 | [flapalerted.nedifinita.com](https://flapalerted.nedifinita.com) | AS4242420454 | |
+| [flap-dn42.ruinet.work](flap-dn42.ruinet.work) | AS211575 | |
 
 ### Map.dn42 API Services
 
@@ -261,7 +262,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
 |[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
 |172.23.77.38:27031|Quake Live Server|IPv4 only, connect with console using IP Address and Port #|
-
+|gc.rui.dn42:8443|Genshin Impact Private Server OSREL4.6|Contact ruifeng@ruinet.work or Telegram @justruiqwq for resources.|
 ## Voice chat
 
 | Hostname / IP              | Remarks                    |
