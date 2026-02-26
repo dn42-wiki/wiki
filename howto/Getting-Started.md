@@ -354,10 +354,6 @@ See [internal](/internal/Internal-Services) for internal services.
 - [EdgeOS configuration](/howto/EdgeOS-Config-Example)
 - [EdgeOS GRE/IPsec](/howto/EdgeOS-GRE-IPsec-Example)
 
-## Configure DNS
-
-See [DNS services](/services/DNS).
-
 ## Use and provide services
 
 See [internal services](/internal/Internal-Services) for available services.
