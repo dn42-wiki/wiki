@@ -26,7 +26,7 @@ While filling out the objects in the DN42 registry make sure to refer to the [sc
 
 When submitting your pull request, you must squash multiple changes to a single commit, again there are instructions in the [README](https://git.dn42.dev/dn42/registry/src/branch/master/README.md) for how to do this.
 
-Remember to add authentication to your `mntner` object, and [sign your commit](/howto/Registry-Authentication)
+Remember to add authentication to your `mntner` object, and you **must** [sign your commit](/howto/Registry-Authentication)
 
 The registry includes a number of scripts to help check your request:
 
@@ -40,7 +40,7 @@ The registry maintainers run the checking scripts against each request, so pleas
 
 Do browse through the registry and look at the [pull request queue](https://git.dn42.dev/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
-*You should not use the gitea web interface to edit files, doing so would create a large number of commits and prevents running of the registry scripts*
+*You should not use the gitea web interface to edit files, doing so creates a large number of commits and prevents running of the registry scripts*
 
 ---
 
@@ -191,6 +191,7 @@ mnt-by:             FOO-MNT
 status:             ASSIGNED
 source:             DN42
 ```
+The `country` attribute is optional but, when included, should be an [ISO two letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 
 #### IPv4 (Legacy)
 
