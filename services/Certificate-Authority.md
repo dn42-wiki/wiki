@@ -169,6 +169,17 @@ $ echo "extra/dn42.crt" >> /etc/ca-certificates.conf
 $ update-ca-certificates
 ```
 
+### AlmaLinux/RockyLinux/Probably anything RHEL
+
+```bash
+$ /etc/pki/ca-trust/source/anchors/dn42.crt <<EOF
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+EOF
+$ update-ca-trust
+```
+
 ## PKI Store
 
 All issued keys and crl information are posted at: <https://ca.dn42/>
