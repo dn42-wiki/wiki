@@ -60,6 +60,9 @@ Document your mad setups in the categories below, with links to a full write up,
 
   ![ZX Spectrum connecting to DN24 service](https://share.markround.com/speccy1.jpg)
 
+- haksrpd: Greeting to dn42 from Kim! Access dn42 with latest Chromium on Red Star OS 3.0.
+![Access dn42 with latest Chromium on Red Star OS 3.0](https://blog.sherpherd.net/img/greeting%20from%20red%20os%203.0.png)
+
 ## Things that use dn42
  - Fun stuff that you've done with dn42
 
