@@ -101,7 +101,7 @@ Data refreshes whenever the collector provides a new MRT file, generally every 1
 
 | API                | URL | Description |
 | ------------------ | --- | ----------- |
-| `/map`             | [https://map.dn42/map](https://map.dn42/map) <br> [https://api.iedon.com/dn42/map](https://api.iedon.com/dn42/map)                                                       | Raw binary map data   |
+| `/map`             | [https://map.dn42/map](https://map.dn42/map) <br> [https://api.iedon.com/dn42/map](https://api.iedon.com/dn42/map)                                                       | Raw binary map data, [See binary format](https://iedon.net/post/4)   |
 | `/map?type=json`   | [https://map.dn42/map?type=json](https://map.dn42/map?type=json) <br> [https://api.iedon.com/dn42/map?type=json](https://api.iedon.com/dn42/map?type=json)               | Raw map data, in JSON |
 | `/asn/{asn}`       | [https://map.dn42/asn/4242422189](https://map.dn42/asn/4242422189) <br> [https://api.iedon.com/dn42/asn/4242422189](https://api.iedon.com/dn42/asn/4242422189)           | Real-time node information from the map, including WHOIS data, in JSON |
 | `/ranking`         | [https://map.dn42/ranking](https://map.dn42/ranking) <br> [https://api.iedon.com/dn42/ranking](https://api.iedon.com/dn42/ranking)                                       | DN42 Global Ranking, based on the map.dn42 index |
