@@ -48,7 +48,7 @@ Please sort by AS number.
 | 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
 | 4242421331 | dn42: <https://lg.nia.dn42> |
 | 4242423310 | ext: <https://lg.tmpfs.dev/> |
-
+| 4242423322 | ext: <https://lg-dn42.vconet.top/> |
 
 ## Down
 
