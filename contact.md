@@ -23,6 +23,11 @@ See [IRC](/services/IRC) too.
 * [bilingual, Chinese&English, maintained by BILL-MNT](https://t.me/Dn42Chat)
 * [spanish, maintained by BUZZ-MNT](https://t.me/dn42es)
 
+## Matrix
+
+* [sync with hackint IRC](https://matrix.to/#/#dn42:hackint.org)
+* [bilingual, Chinese&English, maintained by SESS-MNT](https://matrix.to/#/#dn424242:matrix.org)
+
 ## Web
 
 There are currently multiple decentralized mirrors and domains for the DN42 wiki available:
