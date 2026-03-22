@@ -95,6 +95,7 @@ Self-signed:
 | [flapalerted.nedifinita.com](https://flapalerted.nedifinita.com) | AS4242420454 | |
 | <https://flap.sess.dn42/> <https://flap42.xhustudio.eu.org/> | AS4242422466 | Limited HTTP API |
 | [flap-dn42.ruinet.work](flap-dn42.ruinet.work) | AS211575 | |
+| <https://flaps.mashiro.dn42/> | AS4242420214 | |
 
 ### Map.dn42 API Services
 
@@ -174,6 +175,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
 | <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
 | <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
+| <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast |
 
 ## File Sharing
 
