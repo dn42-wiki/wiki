@@ -1,5 +1,10 @@
 If you have an E-Mail service and would like to test it's functionality, send an email to [zane_reick@dmail.dn42](mailto:zane_reik@dmail.dn42). You will get a response usually within a few hours.
 
+**X Mail by Bingxin.**
+* X Mail <https://mail.x.dn42>
+  * Free, easy to sign up, and unlimited internal email system.
+  * Use the /email command on Telegram @baka_lg_bot to register an account.
+
 **bMail by Buzzster.**
 * bMail <https://mail.bmail.dn42>
   * Free, easy and unlimited internal email system.
