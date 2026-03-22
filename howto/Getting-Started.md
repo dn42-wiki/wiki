@@ -176,7 +176,7 @@ A few websites can generate random ULA prefixes for you:
 * [SimpleDNS](https://simpledns.com/private-ipv6)
 * [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
 
-or a small script is available: [ulagen.py](https://git.dn42.dev/netravnen/dn42-repo-utils/src/master/ulagen.py)
+or a small script is available: [ulagen.py](https://git.dn42.dev/registry/repo-utils/src/branch/master/ulagen.py)
 
 example: data/inet6num/fd35:4992:6a6d::_48
 ```conf
