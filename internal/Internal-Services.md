@@ -173,6 +173,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
 | <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
+| <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
 
 ## File Sharing
 
