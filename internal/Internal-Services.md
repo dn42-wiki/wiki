@@ -111,11 +111,7 @@ Data refreshes whenever the collector provides a new MRT file, generally every 1
 
 ### IX Services
 
-| Name      | Wiki Page                        | AS Number  | Related Link(s)                            |
-| :-------- | :------------------------------- | :--------- | :----------------------------------------- |
-| IXP-frnte | [IXP-frnte](/services/IXP-frnte) | 4242421081 | N/A                                        |
-| mcast-ix  | [mcast-ix](/services/mcast-ix)   | 4242421951 | N/A                                        |
-| SERNET-IX | [SERNET-IX](/services/SERNET-IX) | 4242422245 | [SERNET-IX](https://blog.sherpherd.top/ix) |
+See [IX Collection](/services/IX-Collection/)
 
 ### ASN Authentication Solution
 
