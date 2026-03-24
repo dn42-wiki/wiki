@@ -274,7 +274,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 - e164.dn42 provides subdomains for each ASs in DN42
   - numbering pattern: 424-0-(last 4 digits of DN42 ASN)
-  - management: https://e164.dn42 (login via Kioubit Auth)
+  - management: [https://e164.dn42](https://e164.dn42) (login via Kioubit Auth)
 
 ## VOIP/SIP Endpoints
 
