@@ -75,6 +75,7 @@ Self-signed:
 | NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
 | Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
 | Bingxin    | Hong Kong          | 5Gbps       | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
+| VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
 
 ### FlapAlerted instances
 
@@ -172,7 +173,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
 | <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
 | <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast |
-
+| <http://radio.vc.dn42> | Online Radio by VConet, using mpd & Icecast.
 ## File Sharing
 
 ### FTP / HTTP
