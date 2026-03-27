@@ -155,8 +155,7 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 
 | Hostname / IP                                   | Remarks                                                                                |
 | :---------------------------------------------- | :------------------------------------------------------------------------------------- |
-| <https://tube.buzzster.dn42/>                      | A youtube like platform on DN42
-                    |
+| <https://tube.buzzster.dn42/>                   | A youtube like platform on DN42                                                        |
 | <https://live.jerry.dn42/>                      | Live audio stream powered by mpd                                                       |
 | <http://radio.vr18.dn42/>                       | Online radio by vr18                                                                   |
 | <https://dn42:dn42@tv.munsternet.dn42/playlist> | TV Channels Streaming                                                                  |
@@ -168,12 +167,13 @@ Authenticate your users by having them verify their ASN ownership with KIOUBIT-M
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
 | <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
 | <https://radio.baka.dn42>                       | Enjoy Hachimi Music! Online Radio by Bingxin                                           |
-| <https://radio.cowgl.dn42>                      | Online Radio by CowGL                |
+| <https://radio.cowgl.dn42>                      | Online Radio by CowGL                                                                  |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
 | <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
 | <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
-| <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast |
-| <http://radio.vc.dn42> | Online Radio by VConet, using mpd & Icecast.
+| <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast   |
+| <http://radio.vc.dn42>                          | Online Radio by VConet, using mpd & Icecast.                                           |
+
 ## File Sharing
 
 ### FTP / HTTP
@@ -265,6 +265,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 |[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
 |172.23.77.38:27031|Quake Live Server|IPv4 only, connect with console using IP Address and Port #|
 |gc.rui.dn42:8443|Genshin Impact Private Server OSREL4.6|Contact ruifeng@ruinet.work or Telegram @justruiqwq for resources.|
+
 ## Voice chat
 
 | Hostname / IP              | Remarks                    |
