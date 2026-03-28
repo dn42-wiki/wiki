@@ -366,6 +366,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://yobanirot.dn42/dark_test.php>     | Test ur site for dark theme                                                                      |
 | <https://yobanirot.dn42/ie8_test.php>      | Test ur site for Internet Explorer 8 compatibility                                               |
 | <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                        |
+| mx.dn42                                    | Matrix IM Server maintained by COMPLEXE, ask @COMPL_EXE on Telegram / E-Mail self@origincode.me / @i:origincode.me on Matrix for registration requests |
 
 ## Usenet Servers / News
 
