@@ -1,6 +1,6 @@
-# Repository Mirrors
+# Repository Mirrors / Proxies
 
-There are some mirrors available in DN42. All mirrors are subdomains of "mirror.dn42". DNS Round-Robin is set up for Load Balancing.
+There are some repository mirrors/proxies available in DN42 and can be used for hosts, that do not have clearnet access.
 
 ## mirror.ano-org.dn42
 
@@ -66,4 +66,3 @@ Ubuntu-image:
   - [magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d](magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d&dn=ubuntu-22.04.5-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
 - 24.04.3
   - [magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9](magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9&dn=ubuntu-24.04.3-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
-
