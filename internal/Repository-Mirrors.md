@@ -1,6 +1,6 @@
-# Repository Mirrors / Proxies
+# Repository Mirrors
 
-There are some repository mirrors/proxies available in DN42 and can be used for hosts, that do not have clearnet access.
+There are some mirrors available in DN42. All mirrors are subdomains of "mirror.dn42". DNS Round-Robin is set up for Load Balancing.
 
 ## mirror.ano-org.dn42
 
@@ -66,3 +66,13 @@ Ubuntu-image:
   - [magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d](magnet:?xt=urn:btih:8df707795d20b9d8021241d56c6f8282929c8b8d&dn=ubuntu-22.04.5-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
 - 24.04.3
   - [magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9](magnet:?xt=urn:btih:5fd2dd3688fdb31fe554b15ed65228f3db29a9f9&dn=ubuntu-24.04.3-live-server-amd64&tr=udp%3A%2F%2Ftracker.leziblog.dn42%3A11451&tr=https%3A%2F%2Ftracker.leziblog.dn42%2Fannounce&tr=http%3A%2F%2Ftracker.leziblog.dn42%2Fannounce)
+
+
+# Container Repository Proxy
+
+Allows access to IPv6 capable container repositories (e.g. quay.io, AWS ECR, Dockerhub, ...). Just add `oci.ano-org.dn42/` in front of the the image name, e.g. `podman pull quay.io/akvorado/akvorado` becomes `podman pull oci.ano-org.dn42/quay.io/akvorado/akvorado`
+
+Notes:
+* Docker automatically uses `docker.io`, so if you're doing e.g. `docker pull homeassistant/home-assistant`, you need to include docker.io: `docker pull oci.ano-org.dn42/docker.io/homeassistant/home-assistant`
+* GHCR is not IPv6 capable and can't be used! Annoy either the project maintainer to upload it somewhere else; or mail to noc@ano-org.sml.name or write glueckself@hackint in IRC to fix their NAT.
+* AWS ECR's `public.ecr.aws` (not IPv6 capable) must be replaced with `ecr-public.aws.com` (IPv6 capable)
