@@ -4,6 +4,7 @@ If you have an E-Mail service and would like to test it's functionality, send an
 * X Mail <https://mail.x.dn42>
   * Free, easy to sign up, and unlimited internal email system.
   * Use the /email command on Telegram @baka_lg_bot to register an account.
+  * Or, Register at <https://mail.x.dn42/email/>
   * Having issues with registration? Send an email to [bingxin@x.dn42](mailto:bingxin@x.dn42) or [bingxin@baka.pub](mailto:bingxin@baka.pub) for assistance.
 
 **bMail by Buzzster.**
