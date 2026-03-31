@@ -116,7 +116,12 @@ See [IX Collection](/services/IX-Collection/)
 
 ### ASN Authentication Solution
 
-Authenticate your users by having them verify their ASN ownership with KIOUBIT-MNT using their registry-provided methods in an automated way. An example of this is the automatic peering system for the Kioubit Network. [Documentation](https://dn42.g-load.eu/about/authentication-services/)
+Authenticate your users by having them verify their ASN ownership with following services using their registry-provided methods in an automated way. Some examples of this are the automatic peering system for the [Kioubit Network](https://dn42.g-load.eu) and [iEdon-Net](https://iedon.net).
+
+| Service                | Type | Description |
+| ------------------ | --- | ----------- |
+| Kioubit Authentication Services (4242423914) | Custom | [Document](https://dn42.g-load.eu/about/authentication-services/)   |
+| Auth42 (4242422189)   | OAuth2.0/OpenID Connect | [Website](https://auth.iedon.net) , [OIDC Auto Discovery URL](https://auth.iedon.net/.well-known/openid-configuration) |
 
 ### DNS Monitor
 
