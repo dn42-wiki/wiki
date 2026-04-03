@@ -60,7 +60,7 @@ fd42:1234::/48,FR,,,,
 1. **Host your GeoFeed file**  
     The file must be accessible via HTTP or HTTPS (IPv4 and/or IPv6), either on DN42 or on clearnet.  
 2. **Reference in the Registry**  
-    Add a `remarks: GeoFeed <url>` attribute in your `inet(6)num` object to point to your hosted GeoFeed.  
+    Add a `remarks: Geofeed <url>` attribute in your `inet(6)num` object to point to your hosted GeoFeed.  
     Example DN42 WHOIS snippet:
     ```rpsl
     inetnum: 0.0.0.0/0
