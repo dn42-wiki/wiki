@@ -28,7 +28,7 @@ https://ripe82.ripe.net/presentations/84-RIPE82_geofeed.pdf
 ```csv
 # prefix,country_code,region_code,city,postal
 172.20.0.0/24,FR,FR-ARA,LYON,69123
-fd42:1234::/48,FR,,,,
+fd42:1234::/48,FR,,,
 ...
 ```
 
@@ -64,7 +64,7 @@ fd42:1234::/48,FR,,,,
     Example DN42 WHOIS snippet:
     ```rpsl
     inetnum: 0.0.0.0/0
-    remarks: GeoFeed http://example.dn42/geofeed.csv
+    remarks: Geofeed http://example.dn42/geofeed.csv
     ```
 
 ## Best Practices
