@@ -246,6 +246,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | Hostname / IP  | Remarks                                                                                                                                    |
 | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
 | \*.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
+| ntp.cow.dn42   | Operated by AS4242423999, anycast from all nodes |
 
 ## Gaming
 
