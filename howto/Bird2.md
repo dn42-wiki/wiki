@@ -140,7 +140,7 @@ protocol static {
 
 template bgp dnpeers {
     local as OWNAS;
-    path metric 1;
+    path metric on;
 
     ipv4 {
         import filter {
