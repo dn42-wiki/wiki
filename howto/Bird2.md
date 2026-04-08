@@ -6,7 +6,7 @@ The `extra/bird` package in the arch repositories will usually have a relatively
 
 ## Bird2 Version <2.0.8 / Debian
 
-Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended nexthops for IPv4 destinations (<https://bird.network.cz/pipermail/bird-users/2020-April/014412.html>).
+Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended next hop for IPv4 destinations (<https://bird.network.cz/pipermail/bird-users/2020-April/014412.html>).
 Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when a used RPKI source changes.
 
 Debian 11 Bullseye delivers Bird 2.0.7. But you can use the Debian Bullseye backport-repository which provides version 2.0.8 (see <https://backports.debian.org/Instructions/> for adding backports repository and install packages from the repository).
@@ -437,7 +437,7 @@ protocol rpki rpki_dn42{
 ```
 ### Use BFD in bird2
 BFD is an additional protocol to detect failures in the switching plane between peers,
-it is used widely by cleanet peerings and some networks in DN42 already have enabled it globally.
+it is used widely by clearnet peerings and some networks in DN42 already have enabled it globally.
 To do a basic configuration you need to add 1 line to your bird.conf and enable it per peer or globally by defining it in the
 template. 
 It is currently recommended that you only enable it for each peer that supports it and has it enabled.
