@@ -63,7 +63,7 @@ Self-signed:
       - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
 - Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 - 3D IP-based network graph (revived yay), created by traceroute all hosts, updated per day [dn42.jh0project.dn42/map](https://dn42.jh0project.dn42/map) (DN42), [dn42.jh0project.com/map](https://dn42.jh0project.com/map) (clearnet)
-- DN42 Explorer: [explorer.nedifinita.com](https://explorer.nedifinita.com). BGP routing, topology, and registry explorer. Provides an IPv4 interactive map, ASN connectivity, prefix status, and rankings.
+- DN42 Explorer: [explorer.nedifinita.com](https://explorer.nedifinita.com). BGP routing, topology, and registry explorer. Provides an IPv4 interactive map, AS connectivity, prefix status, and rankings.
 ### Speedtest
 
 | Operator   | Location           | Max Speed   | Link                                                         |
