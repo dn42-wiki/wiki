@@ -348,6 +348,12 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://urandom.catgirls.dn42/>                                     | Message board                                                                       |
 | <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topic. Maintained by nicholascw. Previously under bbs.dn42. |
 
+## Fediverse instances
+
+| Hostname                        | Remarks                                                      |
+| ------------------------------- | ------------------------------------------------------------ |
+| <https://social.gensokyo.dn42>  | GoToSocial, Register available via gitlab.dn42 or oauth.dn42 |
+
 ## Misc
 
 | Hostname / IP                              | Remarks                                                                                          |
