@@ -27,7 +27,7 @@ sysctl -a | grep rp_filter
 
 Also the following options must be set.
 ```sh
-$ sysctl -w net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1
+$ sysctl -w net.ipv4.ip_forward=1 net.ipv4.conf.all.forwarding=1 net.ipv6.conf.all.forwarding=1
 ```
 
 Check that ALL your vpn interfaces allow ip forwarding for ipv6/ipv4.
