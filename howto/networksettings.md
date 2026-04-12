@@ -77,8 +77,44 @@ To avoid this issue, use one of these approaches:
 3. Use different IPs for services than for peering
 4. De-couple services from specific nodes
 
-### Other Non-Trivial Pitfalls
-- **MTU issues with anycast services**: Using higher than minimum MTU for anycasted services can cause issues because path MTU discovery doesn't work properly with anycast. Since different anycast points of presence (POPs) may be reached during discovery attempts, the path MTU detection can fail, leading to packet fragmentation or drops.
+## MTU, Anycast and TCP MSS Clamping
+
+In DN42, you are almost always running over tunnels (WireGuard, GRE, etc.). Different routers and tunnels may use different MTU. Combined with Anycast, this creates a specific failure mode for Path MTU Discovery (PMTUD).
+
+### The Anycast PMTUD Blackhole
+
+When a router sends an ICMPv6 "Packet Too Big" (PTB) message to an Anycast address, the network may route that ICMP packet to a different Anycast instance than the one that sent the original data. As a result, the actual sender never learns to reduce its packet size, leading to "hanging" connections that pass the TCP handshake but fail when transferring data.
+
+### The Solution: MSS Clamping
+
+To ensure stability, you must clamp the TCP Maximum Segment Size (MSS) on all nodes. This forces the TCP handshake to negotiate a segment size that fits within your smallest link MTU, bypassing the need for PMTUD.
+
+It is highly recommended to set this on both `FORWARD` and `OUTPUT` chains of all routers.
+
+Using nftables (recommended):
+```
+chain forward {
+    type filter hook forward priority filter; policy accept;
+    tcp flags syn tcp option maxseg size set rt mtu
+}
+chain output {
+    type filter hook output priority filter; policy accept;
+    tcp flags syn tcp option maxseg size set rt mtu
+}
+```
+
+Using ip(6)tables:
+```
+# For IPv4
+iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+iptables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+
+# For IPv6
+ip6tables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+ip6tables -t mangle -A OUTPUT -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
+```
+
+## Other Non-Trivial Pitfalls
 
 - **accept_local sysctl settings**: When running anycast services on routers, ensure the accept_local sysctl is enabled. Without this setting, a router might drop transit traffic from other origins that has the anycasted IP as the source address, breaking connectivity through your network for those services.
 
