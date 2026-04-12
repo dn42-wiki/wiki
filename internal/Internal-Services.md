@@ -204,9 +204,13 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 
 Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
 
-| Hostname / IP             | Remarks                    |
-| :------------------------ | -------------------------- |
-| rsync://nas.gensokyo.dn42/tlmc | Touhou Lossless Music Collection (TLMC) |
+| Hostname / IP             | Bandwidth  | Remarks                   |
+| :------------------------ | ---------- |-------------------------- |
+| rsync://nas.gensokyo.dn42/tlmc | Not specified | Touhou Lossless Music Collection (TLMC) |
+| rsync://rsync.mirrors.leziblog.dn42/majnet | 50Mbps | maimai chart resources on MajdataNET | 
+| rsync://rsync.mirrors.leziblog.dn42/ubuntu | 50Mbps | Ubuntu mirror repository | 
+| rsync://rsync.mirrors.leziblog.dn42/ubuntu-ports | 50Mbps | Ubuntu Ports mirror repository | 
+| rsync://rsync.mirrors.leziblog.dn42/openwrt | 50Mbps | OpenWrt mirror repository | 
 
 ### BitTorrent
 
