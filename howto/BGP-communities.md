@@ -1,21 +1,28 @@
-Bird2 is a commonly used BGP daemon. This page provides configuration and help for using BGP communities with Bird2 for dn42.
+Communities are tags that are applied to BGP prefixes. Communities can be used to make routing decisions and prioritize traffic based on various features. In DN42 we are using communities to prioritize based on latency, bandwidth and encryption.
 
-Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. Please note that everyone should be using community 64511.
+A BGP Community is a 32-bit field that consists of two 16-bit halves. The first half is generally the 16-bit AS Number of the entity applying the tag, and the second half is an opaque 16-bit numeric value that has a specific meaning to the applying entity.
+
+Please note that everyone in DN42 should be using communities with AS number 64511.
+
+## Bird2
+
+Bird2 is a commonly used BGP daemon. This page provides configuration and help for using BGP communities with Bird2 for dn42.
 
 The community is applied to the route when it is imported and exported, therefore you need to change your bird configuration
 in /etc/bird/peers/*
 
 The filter helpers can be stored in a separate file, for example /etc/bird/community_filters.conf.
 
-Below, you will see an example config for peers based on the original filter implementation by Jplitza.
-Additionally the below configuration applied BGP MED on exports using the communities
-as an example for what they can be used for. 
+Below you will see an example config for peers based on the original filter implementation by Jplitza. The example configuration also applies BGP MED on exported routes, to demonstrate how communities can implement an administrative routing policy.
+
 This is based on mk16's lab implemenation at [https://mk16.de/blog/lab-en/](https://mk16.de/blog/lab-en/)
 
 
-To properly assign the right community to your peer, please reference the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
+## BGP communities in use in dn42
 
-## BGP community criteria
+To properly assign the right community to your peer, please refer to the table below. If you are running your own network and peering internally, please also apply the communities inside your network.
+
+### Peering link characteristics
 ```conf
 (64511, 1) :: latency \in (0, 2.7ms]
 (64511, 2) :: latency \in (2.7ms, 7.3ms]
@@ -114,6 +121,9 @@ The range `1000-1999` is assigned to the country property. Here we use [ISO-3166
 etc. Please follow the ISO-3166-1 Numeric standard
 <https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv>.
 
+
+## Example configuration for BIRD2
+
 You need to add following lines to your config(s):
 - `define DN42_REGION = $VALUE_FROM_ABOVE` to your node's config (where OWNAS and OWNIP are set)
 - `if source = RTS_STATIC then bgp_community.add((64511, DN42_REGION));`
@@ -123,7 +133,7 @@ just above `update_flags` in `dn42_export_filter` function
 This is not applicable  for the below example configurations
 that have it included, since networks usually use the region to do 
 routing policies like cold_potato.
-## Example configuration for BIRD2
+
 ```conf
 function update_latency(int link_latency) -> int {
   bgp_community.add((64511, link_latency));
@@ -230,10 +240,9 @@ function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypt
   }
   reject;
 }
-
 ```
-And in your /etc/bird/peers/example.conf peer where  your  parameters as as such
-11 ms, 1000 mbit/s, pfs tunnel example with MP-BGP with ENH
+
+And in your /etc/bird/peers/example.conf peer config, where your peering connection are for example: 11 ms latency, 1000 Mbps bandwidth, pfs tunnel, using MP-BGP with ENH:
 ```conf
 protocol bgp example from dnpeers {
     neighbor neighbor <neighborip><%interface if Link Local is used> as <AUT_NUM>;
@@ -248,19 +257,19 @@ protocol bgp example from dnpeers {
 		export where dn42_export_filter(3,25,34);
     };
 ```
-Please remember to include /etc/bird/community_filters.conf and to define your GEO regions in your bird.conf 
+
+Remember to include /etc/bird/community_filters.conf and to define your GEO regions in your bird.conf 
 ```conf
 # local configuration
 ######################
-# In the variable header or anywhere before the include for the community filters add
+# If you wish to add the BGP Geographical Communities make sure you define these values appropriately.
+# This should go in the variable header, or anywhere before you include the community filters.
 define DN_REGION_GEO = xx;
 define DN_REGION_COUNTRY = xxxx;
-#If you wish to add the BGP Geographical Communities.
 
-#before you import your peers add  the community filters eg
-#include "/etc/bird/community_filters.conf";
-#include "/etc/bird/peers/*";
+# Make sure to include community filters before your peers, eg:
 include "/etc/bird/community_filters.conf";
+include "/etc/bird/peers/*";
 ```
 
 
