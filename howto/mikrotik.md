@@ -79,10 +79,10 @@ If you configured everything correctly you should be able to ping the remote end
 
 ### Filters
 
-Both BGP and routing filters were redone from the ground up on RoS 7.x
-The official migration guide can be found [here](https://help.mikrotik.com/docs/display/ROS/Routing)
+Both BGP and routing filters were redone from the ground up for RouterOS v7. If you're updating an existing v6 installation, the official migration guide can be found [here](https://help.mikrotik.com/docs/display/ROS/Routing)
 
-It's a good idea to setup filters for BGP instances, both IN (accept advertisements) and OUT (send advertisements)
+It's a good idea to setup filters for BGP instances, both IN (advertisements you accept) and OUT (advertisements you send).
+
 In this example, we will be filtering:
 
 * IN: 192.168.0.0/16 and 169.254.0.0/16, because we don't want other people's routes interfering with out network
@@ -90,25 +90,9 @@ In this example, we will be filtering:
 
 This filter will not only catch /8 or /16 networks, but smaller networks inside this subnets as well.
 
-#### RoS 6.x
-
-```
-/routing filter
-add action=discard address-family=ip chain=dn42-in prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
-add action=discard address-family=ip chain=dn42-in prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
-add action=discard address-family=ip chain=dn42-out prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
-add action=discard address-family=ip chain=dn42-out prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
-```
-
-If you want only DN42 connectivity, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
-```
-/routing filter
-add action=discard address-family=ip chain=dn42-in prefix=10.0.0.0/8 prefix-length=8-32 protocol=bgp
-```
-
 #### RoS 7.x
 
-RoS 7 now defaults to default-reject, meaning if you reach the end of the chain without matching any rules, the route will be rejected.
+RoS 7 filters have a default-reject behaviour, meaning if you reach the end of the chain without matching any rules, the route will be rejected.
 
 As such, you need to either explicitly accept all the prefixes that you want to keep, or place a final accept at the end of the chain, after rejecting undesired prefixes.
 
@@ -130,75 +114,77 @@ If you want only DN42 connectivity, you can also filter IN 10.0.0.0/8 (ChaosVPN 
 add chain=dn42-in rule="if (dst in 10.0.0.0 && dst-len > 8) { reject }"
 ```
 
+#### RoS 6.x
+
+RouterOS v6 does not have a default-reject behaviour. It will apply the rules in the chain, then accept anything that didn't match a rule.
+
+```
+/routing filter
+add action=discard address-family=ip chain=dn42-in prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
+add action=discard address-family=ip chain=dn42-in prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
+add action=discard address-family=ip chain=dn42-out prefix=192.168.0.0/16 prefix-length=16-32 protocol=bgp
+add action=discard address-family=ip chain=dn42-out prefix=169.254.0.0/16 prefix-length=16-32 protocol=bgp
+```
+
+If you want only DN42 connectivity, you can filter IN 10.0.0.0/8 (ChaosVPN / freifunk networks):
+```
+/routing filter
+add action=discard address-family=ip chain=dn42-in prefix=10.0.0.0/8 prefix-length=8-32 protocol=bgp
+```
+
+
 ### BGP
 Now, for actual BGP configuration.
 
-#### RoS v6
-```
-/routing bgp instance
-set default disabled=yes
-add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in router-id=1.1.1.1
-```
-Let's add some peers. Right now we have just one, but we still need two connections - to IPv4 and IPv6
-
-IPv4:
-```
-/routing bgp peer
-add comment="DN42: somepeer IPv4" in-filter=dn42-in instance=bgp-dn42-somename multihop=yes \
-name=dn42-somepeer-ipv4 out-filter=dn42-out remote-address=192.168.200.129 remote-as=PEER_AS \
-route-reflect=yes ttl=default
-```
-IPv6 (if needed):
-
-```
-/routing bgp peer
-add address-families=ipv6 comment="DN42: somepeer IPv6" in-filter=dn42-in \
-instance=bgp-dn42-somename multihop=yes name=dn42-somepeer-ipv6 out-filter=dn42-out \
-remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=default
-```
-
-Also, as a note, Mikrotik RoS 6.x doesn't deal well with BGP running over link-local addresses (the address starting with fe80). You need to use a fd42:: address in your BGP session, otherwise, BGP will not install any received route.
-
-#### BGP Advertisements
-You want to advertise your allocated network (most likely), it's very simple:
-
-```
-/routing bgp network
-add network=YOUR_ALLOCATED_SUBNET synchronize=no
-```
-You can repeat that with as much IPv4 and IPv6 networks which you own.
-
 #### RoS 7.x
 
-First difference from v6.x: There is no "network" menu. We advertise our networks now by adding them to the firewall address-list and referencing in the BGP configuration. Also, we can only advertise networks that are part of our static routes. Of course, we can still propagate routes received from others peers.
+We'll start by defining the subnets that we host and want to advertise. RouterOS v7 uses the firewall's Address Lists to define a list of networks, then our BGP config refers to those lists when making advertisements.
 
-Adding a network list:
+Create an address list containing your DN42 subnet allocation, one for IPv4 and one for IPv6:
 ```
 IPv4
 /ip firewall address-list
-add address=YOUR_ALLOCATED_SUBNET list=DN42_allocated_v4
+add address=YOUR_ALLOCATED_SUBNET/MASK list=DN42_allocated_v4
 
 IPv6
 /ipv6 firewall address-list
-add address=YOUR_ALLOCATED_SUBNET list=DN42_allocated_v6
+add address=YOUR_ALLOCATED_SUBNET/MASK list=DN42_allocated_v6
 ```
 
-Adding a static route to your full allocated network:
+RouterOS will only advertise networks that it has a route to, this helps prevent you from accidentally advertising subnets that aren't usable (eg. due to a typo). If your subnet is already attached to an interface then this isn't a problem, but it's common practice to add a dummy route to the routing table anyway, to ensure that your subnet will always be advertised.
+
+Add a blackhole route to your DN42 subnet allocation:
 ```
+IPv4
+/ip route
+add blackhole distance=1 dst-address=YOUR_ALLOCATED_SUBNET/MASK
+
+IPv6
 /ipv6 route
-add blackhole disabled=no distance=1 dst-address=YOUR_ALLOCATED_SUBNET
+add blackhole distance=1 dst-address=YOUR_ALLOCATED_SUBNET/MASK
 ```
 
-Let's create a template for DN42. It isn't strictly necessary, but it makes our life easier when adding more peers in future.
+This behaviour is explained here: https://forum.mikrotik.com/t/rosv7-bgp-blackhole/177053/4
+
+In recent releases (around v7.21) this can be done from the BGP connection settings instead. If you enable the `output.network-blackhole` setting, RouterOS will create suitable blackhole routes for the subnets in your Address List, so you don't have to add them yourself.
+
+
+Let's create a connection template for DN42. It isn't strictly necessary, but it makes our life easier when adding more peers in future.
 ```
 /routing bgp template
 add afi=ipv4 as=YOUR_AS_NUMBER name=DN42_template_v4 output.network=DN42_allocated_v4 router-id=1.1.1.1
 add afi=ipv6 as=YOUR_AS_NUMBER name=DN42_template_v6 output.network=DN42_allocated_v6 router-id=1.1.1.1
 ```
 
-Now is time to add one peer:
 
-Another difference from RoS v6.x is that v7.x can use link-local adresses (validated with RoS 7.14.3, 7.18.1, 7.18.2 and 7.19rc2). The trick is to add "%INTERFACE" after the address, where "INTERFACE" is the name of the interface the link-local is allocated to - or the interface used to get to that remote link-local. So, if You want to listen on fe80::1 on the "myPeer" interface, the address would be "fe80::1%myPeer".
+Create an instance, you can think of this as the BGP daemon that's running.
+```
+/routing bgp instance
+add as=<YOUR_AS> name=bgp-dn42-somename router-id=1.1.1.1
+```
+
+
+Now it's time to add a peer. In RouterOS v7 you can use link-local addresses instead of regular routable addresses, which helps simplify config and reduces the number of IP addresses used for routing (validated with RoS 7.14.3, 7.18.1, 7.18.2 and 7.19rc2). The trick is to add `%INTERFACE` after the address, where "INTERFACE" is the name of the interface the link-local address is assigned to, or the interface used to reach your peer's link-local address. So, if You want to listen on fe80::1 on the "myPeer" interface, the address would be "fe80::1%myPeer".
 
 RoS 7.17 and newer can set the link local address.
 
@@ -207,7 +193,7 @@ RoS 7.17 and newer can set the link local address.
 IPv4 peer
 /routing bgp connection
 add address-families=ipv4 disabled=no input.filter=dn42-in \
-local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_ON_YOU .role=ebgp \
+local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_TO_YOU .role=ebgp \
 multihop=yes name=PEER_NAME output.filter-chain=dn42-out \
 .network=DN42_allocated_v4 remote.address=YOUR_PEER_REMOTE_ADDRESS \
 .as=PEER_AS_NUMBER routing-table=main templates=DN42_template_v4
@@ -215,11 +201,53 @@ multihop=yes name=PEER_NAME output.filter-chain=dn42-out \
 IPv6 peer
 /routing bgp connection
 add address-families=ipv6 disabled=no input.filter=dn42-in \
-local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_ON_YOU .role=ebgp \
+local.address=ADDRESS_YOUR_PEER_USE_TO_CONNECT_TO_YOU .role=ebgp \
 multihop=yes name=PEER_NAME output.filter-chain=dn42-out \
 .network=DN42_allocated_v6 remote.address=YOUR_PEER_REMOTE_ADDRESS \
 .as=PEER_AS_NUMBER routing-table=main templates=DN42_template_v6
 ```
+
+
+#### RoS 6.x
+
+The older RouterOS 6.x is fairly similar, but the biggest difference is that instead of using Address Lists for your advertised subnets, you specify them directly in the BGP settings, in the Network menu. We'll deal with that later.
+
+Create an instance, you can think of this as the BGP daemon that's running.
+```
+/routing bgp instance
+set default disabled=yes
+add as=YOUR_AS client-to-client-reflection=no name=bgp-dn42-somename out-filter=dn42-in router-id=1.1.1.1
+```
+
+Let's add some peers. Right now we have just one, but we still need two connections - for IPv4 and IPv6
+
+IPv4:
+```
+/routing bgp peer
+add comment="DN42: somepeer IPv4" in-filter=dn42-in instance=bgp-dn42-somename multihop=yes \
+name=dn42-somepeer-ipv4 out-filter=dn42-out remote-address=192.168.200.129 remote-as=PEER_AS \
+route-reflect=yes ttl=default
+```
+
+IPv6 (if desired):
+```
+/routing bgp peer
+add address-families=ipv6 comment="DN42: somepeer IPv6" in-filter=dn42-in \
+instance=bgp-dn42-somename multihop=yes name=dn42-somepeer-ipv6 out-filter=dn42-out \
+remote-address=fd42:c644:5222:3222::40 remote-as=PEER_AS route-reflect=yes ttl=default
+```
+
+NB: Mikrotik RoS 6.x doesn't deal well with BGP running over link-local addresses (addresses that start with with fe80). You need to use an fd42:: address in your BGP session, otherwise BGP will not install any received routes.
+
+Finally we can advertise our routes. You're presumably advertising your allocated DN42 subnet, it's very simple:
+
+```
+/routing bgp network
+add network=YOUR_ALLOCATED_SUBNET synchronize=no
+```
+
+You can repeat this for all the IPv4 and IPv6 networks that you host.
+
 
 
 ## Split DNS
