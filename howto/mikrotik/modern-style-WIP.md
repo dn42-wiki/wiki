@@ -1,0 +1,1 @@
+This page is a scratchpad for a fully modernised (2026) config running on the latest version of RouterOS (7.22.1). It will use wireguard, BGP with Multihop and Extended Nexthop, and link-local addressing for address space efficiency.
