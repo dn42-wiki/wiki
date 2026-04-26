@@ -33,7 +33,7 @@
   * [IRC](/services/IRC)
   * [Whois registry](/services/Whois)
   * [DNS](/services/dns/Overview)
-  * [RPKI](/services/RPKI)
+  * [ROA + RPKI](/services/RPKI)
   * [IX Collection](/services/exchanges/IX-Collection)
   * [Public DNS](/services/Clearnet-Domains)
   * [Looking Glasses](/services/Looking-Glasses)
