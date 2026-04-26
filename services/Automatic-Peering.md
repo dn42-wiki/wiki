@@ -1,6 +1,6 @@
 # Automatic Peering
 
-It is recommended to use the [Public node directory](https://peerfinder.dn42.dev/) or the [DN42 Pingfinder](https://dn42.us/peers/) to find the network with the lowest latency to peer with.
+It is recommended to use the [Public node directory](https://peerfinder.dn42.dev/) to find the network with the lowest latency to peer with.
 
 ## Fully self-service
 
@@ -27,19 +27,9 @@ AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | Clearnet → <https:/
 
 Sort by AS number
 
-### Historical services
-
-ASN           | Network  | Autopeer URL |
-:------------:|:--------:|--------------|
-AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
-AS64719      | [lutoma](https://dn42.lutoma.org) | <https://dn42.lutoma.org> |
-AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
-AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
-AS4242423847 | [TheQ Network](https://dn42.0011.de) | <https://dn42.0011.de> |
-
 ## Semi-automatic peering
 
-This list contains all automatic services that are not fully automatic, but still require confirmation from the operator or similar.
+This list contains all services that are not fully automatic and require some action from the operator or similar.
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
@@ -48,3 +38,16 @@ AS4242421117 | [Yuyuko Network](https://dn42.yuyuko.com) | <https://dn42.yuyuko.
 AS4242421732 | [BaragoonNetworks](https://as215887.net/dn42) | <https://peering.as215887.net> |
 
 Sort by AS number
+
+
+## Historical services
+
+This list contains defunct services.
+
+ASN           | Network  | Autopeer URL |
+:------------:|:--------:|--------------|
+AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
+AS64719      | [lutoma](https://dn42.lutoma.org) | <https://dn42.lutoma.org> |
+AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
+AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
+AS4242423847 | [TheQ Network](https://dn42.0011.de) | <https://dn42.0011.de> |
