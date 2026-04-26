@@ -221,7 +221,7 @@ dn42 typically uses point-to-point addressing in VPN tunnels making transit netw
 
 If you need a /24 or larger, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
 
-**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/DNS) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
+**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
 example: data/inetnum/172.20.150.0_27
 ```conf
@@ -343,7 +343,7 @@ You can find [configuration examples for Bird here](/howto/Bird2).
 
 # Configure DNS
 
-See [Services DNS](/services/DNS).
+See [Services DNS](/services/dns/Overview).
 
 # Use and provide services
 
