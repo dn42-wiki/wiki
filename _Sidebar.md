@@ -3,7 +3,7 @@
   * [Registry Authentication](/howto/Registry-Authentication)
   * [Address Space](/howto/Address-Space)
   * [BGP communities](/howto/BGP-communities)
-  * [Interconnections](/internal/Interconnections)
+  * [Interconnections](/Interconnections)
   * [Policies](/Policies)
   * [FAQ](/FAQ)
   * [Links](/Links)
