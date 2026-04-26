@@ -46,16 +46,10 @@
 * Internal
   * [Internal services](/internal/Internal-Services)
   * [APIs](/internal/APIs)
-  * [Show and Tell](/internal/ShowAndTell)    
-  * [Historical services](/internal/Historical-Services)
-
-* Historical
-  * [Bird 1](/historical/Bird)
-  * [Quagga](/historical/Quagga)
+  * [Show and Tell](/internal/ShowAndTell)
 
 * External Tools
   * [Paste Board](https://paste.dn42.us)
-  * [HedgeDoc](https://hedgedoc.dn42.eu)
   * [Git Repositories](https://git.dn42.dev)
   * [Registry](https://git.dn42.dev/dn42/registry)
 

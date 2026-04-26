@@ -1,6 +1,7 @@
 # Internal services
 
-You are asked to show some creativity in terms of network usage and content ([ideas](/internal/Ideas)).
+You are asked to show some creativity in terms of network usage and content.
+View a list of [service ideas](/internal/Ideas) and [historical services](/internal/Historical-Services).
 
 ## Search engines & Discovery
 
