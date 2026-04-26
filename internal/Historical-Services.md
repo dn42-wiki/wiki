@@ -1,11 +1,9 @@
 # Historical Services
 
-**The services below were available on DN42 in the past.**
+**The services below were available on dn42 in the past.**
 
-**This section exists to serve as an inspiration for people wanting to provide a service to the DN42 community.**
+**This section exists to serve as an inspiration for people wanting to provide a service to the dn42 community.**
 ***
-
-You can inspect the services status [on this page](https://services.dn42)
 
 ## Network-related
   * [net.smrsh.dn42/routes/d3js.html](http://net.smrsh.dn42/routes/d3js.html) aka 172.23.174.1 (dn42) or [dn42.smrsh.net/routes/d3js.html](http://dn42.smrsh.net/routes/d3js.html) (Internet)
@@ -68,6 +66,8 @@ provided by TheQ at <https://dn42.0011.de/vpnusers>
 | _Configuring Yacy Network settings:_              |[YaCy Network Configuration](http://yacy.dn42/yacy.network.dn42.unit) |
 | <http://mhm.dn42/search>                            | Hosted by toBee                                          |
 | <search.marlinc.dn42>                               | Hosted by marlinc                                        |
+
+There is a search engine at [buzzster.dn42](http://buzzster.dn42) that can also be used to discover services and content. If you don't see your website, index it in the console.
 
 ## Radio and Video Streaming
 
@@ -206,11 +206,24 @@ Some [Advanced Direct Connect](https://en.wikipedia.org/wiki/Advanced_Direct_Con
 | mc.northrend.dn42 (172.20.222.240)		    | Minecraft		     | latest, IPv4 only   |
 | redtrap.northrend.dn42 (172.20.222.252)	    | Minecraft		     | RedTrap DN42 Bridge, 1.8.8 - 1.19, IPv4 only   |
 
-## DN42 FreePhone
-Somebody was providing a FreePhone [here](/services/FreePhone)
+## Usenet Servers / News
 
-## Email Providers
-There is a page for email Providers [here](/services/E-Mail-Providers)
+# List of Usenet servers
+
+| **Person** | **Status** | **Address**      | **Posting** | **Newsgroups**   | **Binaries** |
+|----|----|----|----|----|----|
+| welterde     | _down_       | <http://news.welterde.dn42> | _yes_       | Big 8, de.\*, alt.\* | _no_         |
+| UFO          | _up_       | <http://core.ucis.dn42>     | _yes_       | anonet, dn42 | _no_         |
+| blacksheep   | _down_       | <http://news.blacksheep.dn42> | _ask_     | Big 8, de.\*, alt.\*, uk.\*, etc. | _no_   |
+
+# List of Usenet WebFrontends
+
+| **Person** | **Status** | **Address**        | **Posting** | **Newsgroups**   | **Binaries** |
+|----|----|----|----|----|----|
+| cronix       | _down_       | <http://news.crystalnet.dn42> | _yes_       | as requested       | _no_         |
+| UFO          | _down_       | [UCIS.ano news](http://cgiproxy.ucis.dn42/nph-proxy.cgi/00/http/www.ucis.ano/news/) | _no_       | anonet, dn42       | _limited_         |
+| SeekingFor   | _down_       | [AnoNet News](http://cgiproxy.ucis.dn42/nph-proxy.cgi/00/http/news.sfor.ano/) | _yes_       | anonet, dn42       | _no_         |
+
 
 # Other Networks
 
