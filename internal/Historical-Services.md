@@ -98,7 +98,7 @@ There is a search engine at [buzzster.dn42](http://buzzster.dn42) that can also 
 | <http://seafile.dn42>                                         |       |             | Opensource Dropbox, yay!                       |
 
 ### Tahoe LAFS
-Some people runs [Tahoe LAFS](/services/Tahoe-LAFS) nodes to provide a secure decentralized crypted file storage but in dn42.
+Some people ran introducer nodes to provide a secure decentralized encrypted file storage but in dn42.
 
 ### ipfs
 bootstrap peers

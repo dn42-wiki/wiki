@@ -1,7 +1,6 @@
 # Internal services
 
-You are asked to show some creativity in terms of network usage and content. ;)
-
+You are asked to show some creativity in terms of network usage and content ([ideas](/internal/Ideas)). ;)
 
 ## Search engines & Discovery
 
@@ -14,10 +13,7 @@ You are asked to show some creativity in terms of network usage and content. ;)
 
 ## Certificate Authority
 
-Signed by the main DN42 CA (established 2016):
-* xuu is maintaining a [certificate authority](/services/Certificate-Authority) for internal services.
-* Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
-* Kioubit maintains a [certificate authority](https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
+See this [page](/services/ca/Certificate-Authority) for the main certificate authority.
 
 ## Network-related
 
@@ -92,10 +88,6 @@ See [Looking Glasses](/services/Looking-Glasses).
 | <https://flaps.mashiro.dn42/> | AS4242420214 | |
 
 
-### IX Services
-
-See [IX Collection](/services/IX-Collection/).
-
 ### ASN Authentication Solution
 
 Authenticate your users by having them verify their ASN ownership with following services using their registry-provided methods in an automated way. Some examples of this are the automatic peering system for the [Kioubit Network](https://dn42.g-load.eu) and [iEdon-Net](https://iedon.net).
@@ -108,10 +100,12 @@ Authenticate your users by having them verify their ASN ownership with following
 
 ## IRC
 
+See the [primary IRC page](/services/IRC).
+
+Other servers:
+
 | Hostname / IP         | SSL | Remarks                                                                                                             |
 | :-------------------- | :-- | :------------------------------------------------------------------------------------------------------------------ |
-| irc.hackint.dn42      | Yes | DN42                                                                                                                |
-| irc.hackint.hack/dn42 | Yes | ChaosVPN                                                                                                            |
 | irc.dn42              | Yes | Internal IRC                                                                                                        |
 | irc.ty3r0x.dn42       | Yes | BonoboNET (ty3r0x.bnet)                                                                                             |
 | irc.catgirls.dn42     | Yes | Karx IRC, clearnet karx.xyz/6697, dn42 v6 only                                                                      |
@@ -157,7 +151,7 @@ Authenticate your users by having them verify their ASN ownership with following
 ## File Sharing
 
 ### Repository Mirrors
-See [Repository Mirrors](/services/Repository-Mirrors).
+See [Repository Mirrors](/internal/Repository-Mirrors).
 
 ### FTP / HTTP
 
@@ -194,6 +188,10 @@ See [Repository Mirrors](/services/Repository-Mirrors).
 #### DHT Bootstrap
 
 - dht.leziblog.dn42:6881
+
+## Tor network
+
+See [Tor](/internal/Tor).
 
 ## VPN
 
@@ -273,6 +271,11 @@ Test out your skills with online challenges
 | <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge 1    |
 | <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge 2    |
 
+
+## Virtual machines
+
+Virtual machine providers are listed [here](/internal/Virtual-Machines).
+
 ## Shell
 
 Providers of shell access:
@@ -329,7 +332,8 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 
 ## E-Mail
 
-There is a list of E-Mail providers [here](/services/E-Mail-Providers)
+There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
+
 
 ## Misc
 

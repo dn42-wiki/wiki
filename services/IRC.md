@@ -30,7 +30,3 @@ It is reachable from within DN42, ChaosVPN and the public internet. A connection
 
 It is reachable from the public internet at the address [irc.libera.chat](ircs://irc.libera.chat:6697). The channel is #dn42
 
-# replirc
-
-replirc does not have a channel about dn42 but it is connected to dn42 at the address [irc.replirc.dn42](ircs://irc.replirc.dn42:6697). It is also accessible via Tor, Yggdrasil or the internet.
-

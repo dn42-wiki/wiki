@@ -1,4 +1,4 @@
-[Tor](https://torproject.org/) ([dn42 mirror](http://tor.e-utp.dn42/)) is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.
+[Tor](https://torproject.org/) is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.
 
 # Tor Bridges
 

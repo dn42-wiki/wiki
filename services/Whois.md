@@ -59,45 +59,11 @@ The service is provided by [dn42regsrv](https://git.burble.com/burble.dn42/dn42r
 
 See the page on [Registry Authentication](/howto/Registry-Authentication)
 
-# DNS interface
-
-There is also a DNS-based interface to query AS information from the registry. The DNS zone is `asn.dn42`. 
-Mirrors are hosted at `asn.grmml.dn42` and `asn.lorkep.dn42`.
-
-Example:
-
-```sh
-$ dig +short AS4242420000.asn.dn42 TXT
-"4242420000 | DN42 | dn42 |  | PYROPETER-AS PyroPeters AS"
-```
-
-The Python code for generating the zone from the registry is available on the monotone repository.
-
-An alternative version to query the registry is it `ip.catgirls.dn42` (IPv6 only) (Source code <https://git.catgirls.systems/famfo/ipinfo>). Note: if there is no `route`/`route6` object for the `inetnum`/`inet6num`, the ip address will not be found.
-
-This can be used together with `mtr` using the `--ipinfo_provider4` and `--ipinfo_provider6` flags (mtr has to be built from source for that, there hasn't been a release in a while).
-
-Example:
-```sh
-$ dig +short TXT as4242421411.ip.catgirls.dn42
-"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
-$ dig +short TXT 32.196.23.172.ip.catgirls.dn42
-"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
-$ dig +short TXT 1.d.a.b.f.a.c.e.d.2.4.d.f.ip.catgirls.dn42
-"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
-```
-
-The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see <https://www.team-cymru.org/Services/ip-to-asn.html#dns>
-
-# Software
-
- * [lglass](/howto/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
- * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
- * [who42rs](https://git.dn42.dev/C4TG1RL5/who42rs) a reimplementation of whois42d written in Rust
-
 # Whois daemons
 
-We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1. Please consider joining these anycast adresses when you set up your server. Updates every 1 hour would be nice for a start.
+**We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0.43 respective fd42:d42:d42:43::1.**
+
+Please consider joining these anycast adresses when you set up your server. Updates every 1 hour would be nice for a start.
 
 | **person**  | **dns**                   | **ip**          |
 |-------------|---------------------------|-----------------|
@@ -111,7 +77,7 @@ We have anycast IPv4 and IPv6, both reachable under whois.dn42. IPs are 172.22.0
 | Bandura     | whois.bandura.dn42        | 172.22.149.225 / fd04:234e:fc31::1 (may change in the future) |
 | SUNNET     | whois.sun.dn42        | 172.21.100.134 / fdc8:dc88:ee11:128::134 |
 
-## Down?
+## Down
 
 | **person**  | **dns**                   | **ip**          |
 |------------|---------------------------|-----------------|
@@ -158,6 +124,29 @@ sudo gem install netaddr
 cd whoisd/ruby
 sudo ruby whoisd.rb nobody
 ```
-## Whois restful API
-Note: this service is in beta testing, use at your own risk.
-<https://whois.rest.dn42/>
+
+# DNS interface
+
+There is also a DNS-based interface to query AS information from the registry.
+It is `ip.catgirls.dn42` (IPv6 only) (Source code <https://git.catgirls.systems/famfo/ipinfo>). Note: if there is no `route`/`route6` object for the `inetnum`/`inet6num`, the ip address will not be found.
+
+This can be used together with `mtr` using the `--ipinfo_provider4` and `--ipinfo_provider6` flags (mtr has to be built from source for that, there hasn't been a release in a while).
+
+Example:
+```sh
+$ dig +short TXT as4242421411.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
+$ dig +short TXT 32.196.23.172.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
+$ dig +short TXT 1.d.a.b.f.a.c.e.d.2.4.d.f.ip.catgirls.dn42
+"4242421411 | C4TG1RL5-MNT | 172.20.0.81/32 | 172.23.196.32/27 | 172.20.0.80/32 | fd42:d42:d42:2080::/64 | fd42:deca:fbad::/48 | fd42:d42:d42:81::/64"
+```
+
+The idea comes from the guys at cymru.com, who provide this service for the Internet (e.g. `AS1.asn.cymru.com`), see <https://www.team-cymru.org/Services/ip-to-asn.html#dns>
+
+# Software
+
+ * [lglass](/howto/lglass) is a python implementation for working with the registry. It features a whois server, tools to manipulate the data (DNS zone generation, etc).
+ * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
+ * [who42rs](https://git.dn42.dev/C4TG1RL5/who42rs) a reimplementation of whois42d written in Rust
+

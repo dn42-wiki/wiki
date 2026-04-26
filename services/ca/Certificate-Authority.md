@@ -1,7 +1,6 @@
 # SSL Certificate Authority
 
-internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains.
-If you would like to have a certificate signed by this CA there is [an automated process to do so](/services/Automatic-CA). The CA is maintained by xuu@dn42.us.
+internal.dn42 is signed by an internally maintained CA that is only allowed to sign *.dn42 domains. The CA is maintained by xuu@dn42.us.
 
 If you are required to specify a license to clarify redistribution, then it [can be considered](https://groups.io/g/dn42/message/844) as [CC0](https://creativecommons.org/public-domain/cc0/).
 
@@ -99,6 +98,11 @@ C0IKqQ==
 -----END CERTIFICATE-----
 ```
 
+
+## Obtaining certificates
+* ca.dn42 [client process](/services/ca/Automatic-CA). 
+* Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
+* Kioubit maintains a [certificate authority](https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
 
 ## Testing constraints
 
