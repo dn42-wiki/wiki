@@ -1,5 +1,5 @@
 # Whois registry
-**aka** _The registry_ contains:
+The registry contains:
 
   * AS numbers assignations
   * Subnet assignations
@@ -13,11 +13,7 @@ dn42 uses some names and numbers, which are declared in the registry.  Whenever 
 
 ## Address space
 
-dn42 uses **172.20.0.0/14** for IPv4.
-
-For IPv6, we use ULA (that is, **fd00::/8**).
-
-See also the howto page covering the [DN42 address space](/howto/Address-Space).
+See the page covering the [dn42 address space](/Address-Space).
 
 ## AS numbers
 
@@ -32,9 +28,9 @@ Note that currently, most AS are using one of the legacy ASN range (and will pro
 
 ## DNS zones
 
-dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net.  For details, see [DNS](/services/dns/Overview).
+dn42 uses the `dn42.` TLD, which is not present in the root DNS zone of the ICANN-net. For details, see [DNS](/services/dns/Overview).
 
-Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A tentative list is available at [External DNS](/services/dns/External-DNS).
+Note that other TLDs should also be usable from dn42, most notably from Freifunk and ChaosVPN. A list is available at [External DNS](/services/dns/External-DNS).
 
 ## Authentication
 

@@ -41,7 +41,7 @@ There are other IPv4 ranges in use within DN42 related to the affiliate networks
 
 The diagram below shows the allocation policies for the DN42 address space. 
 
-![Policy Map Image](/howto/images/PolicyMap.png)
+![Policy Map Image](/images/PolicyMap.png)
 
 Specific policy restrictions:
 

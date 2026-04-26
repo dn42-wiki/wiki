@@ -1,7 +1,7 @@
 * [Home](/Home)
   * [Getting Started](/howto/Getting-Started)
   * [Registry Authentication](/howto/Registry-Authentication)
-  * [Address Space](/howto/Address-Space)
+  * [Address Space](/Address-Space)
   * [BGP communities](/howto/BGP-communities)
   * [Interconnections](/Interconnections)
   * [Policies](/Policies)
