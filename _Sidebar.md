@@ -32,7 +32,7 @@
 * Services
   * [IRC](/services/IRC)
   * [Whois registry](/services/Whois)
-  * [DNS](/services/DNS/Overview)
+  * [DNS](/services/dns/Overview)
   * [RPKI](/services/RPKI)
   * [IX Collection](/services/exchanges/IX-Collection)
   * [Public DNS](/services/Clearnet-Domains)
