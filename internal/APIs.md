@@ -2,29 +2,28 @@
 This page can be useful if you are trying to automate something or if you are trying to retrieve data programmatically.
 
 ## What is my IP
-- whatsmyip:
+- myip.dn42:
   - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
   - ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
   - ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
-  - Api endpoints:
+  - API endpoints:
     - /raw: return your IP address as plain text
     - /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
-  - with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip) and autonomous system info provided by [DN42-GeoASN](https://github.com/rdp-studio/dn42-geoasn): [myip.launchpadx.dn42](https://myip.launchpadx.dn42)
+- [myip.launchpadx.dn42](https://myip.launchpadx.dn42) with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip) and autonomous system info provided by [DN42-GeoASN](https://github.com/rdp-studio/dn42-geoasn)
+  - API endpoints:
     - Geolocation API
-      - API endpoints:
-        - IPv4: v4.myip.launchpadx.dn42
-        - IPv6: v6.myip.launchpadx.dn42
-        - Dual-stack: api.myip.launchpadx.dn42
+      - IPv4: v4.myip.launchpadx.dn42
+      - IPv6: v6.myip.launchpadx.dn42
+      - Dual-stack: api.myip.launchpadx.dn42
       - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
     - ASN API
-      - API endpoints:
-        - IPv4: asn4.myip.launchpadx.dn42
-        - IPv6: asn6.myip.launchpadx.dn42
-        - Dual-stack: asn.myip.launchpadx.dn42
-  - [whatismyip.dn42](http://whatismyip.dn42)
-    - API endpoint:
-      - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
-      - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
+      - IPv4: asn4.myip.launchpadx.dn42
+      - IPv6: asn6.myip.launchpadx.dn42
+      - Dual-stack: asn.myip.launchpadx.dn42
+- [whatismyip.dn42](http://whatismyip.dn42)
+  - API endpoints:
+    - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
+    - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
 
 
 ## Other network-related
