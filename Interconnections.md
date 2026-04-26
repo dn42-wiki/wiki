@@ -1,4 +1,6 @@
-**This page lists the external Overlay Networks DN42 is connected to**
+# Interconnections
+
+This page lists the external networks dn42 is connected to
 
 | Network                                                | IPv4 address space | IPv6 address space | TLDs | Remarks |
 |:-------------------------------------------------------|:-------------------|:-------------------|:-----|:--------|

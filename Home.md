@@ -4,7 +4,7 @@ dn42 is a large, dynamic [VPN](https://en.wikipedia.org/wiki/Virtual_private_net
 
 Network addresses are assigned in the `172.20.0.0/14` range with private AS numbers (see [registry](/services/Whois)), as well as IPv6 addresses from the ULA range (`fd00::/8`) - see [FAQ](/FAQ#frequently-asked-questions_what-about-ipv6-in-dn42).
 
-A variety of [services](/internal/Internal-Services) are available on the network, only accessible from within dn42. dn42 is also interconnected with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) and various [Freifunk](https://en.wikipedia.org/wiki/Freifunk) networks.
+A variety of [services](/internal/Internal-Services) are available on the network, only accessible from within dn42. dn42 is also [interconnected](/Interconnections) with other networks, such as [ChaosVPN](http://wiki.hamburg.ccc.de/ChaosVPN) and various [Freifunk](https://en.wikipedia.org/wiki/Freifunk) networks.
 
 Still have questions? Check out our [FAQs](/FAQ).
 
