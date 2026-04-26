@@ -2,15 +2,15 @@
 
 You are asked to show some creativity in terms of network usage and content. ;)
 
-## Search engine
 
-There is a search engine at [buzzster.dn42](http://buzzster.dn42) that can also be used to discover services and content. If you don't see your website, index it in the console.
+## Search engines & Discovery
 
-Bingxin has deployed a SearXNG instance at [baaka.dn42](https://baaka.dn42), with the metadata source being [yacy.baka.dn42](https://yacy.baka.dn42), to search for web pages and media in the DN42 network.
+| Hostname / IP                    | ICANN | Internal | Remarks                     |
+|:---------------------------------|:------|:---------|:--------------------------- |
+| [baaka.dn42](https://baaka.dn42) |  | X | SearXNG instance with the metadata source being [yacy.baka.dn42](https://yacy.baka.dn42)|
+| [search.androw.dn42](https://search.androw.dn42) | X |  | SearXNG instance |
 
-A searx-ng instance is available at [search.androw.dn42](https://search.androw.dn42) to search the clearnet.
-
-[Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
+* [Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
 
 ## Certificate Authority
 
@@ -19,51 +19,44 @@ Signed by the main DN42 CA (established 2016):
 * Burble maintains an [ACME server](https://burble.dn42/services/acme/) (with accompanying CA), compatible with any LetsEncrypt client like Certbot, Dehydrated or Caddy.
 * Kioubit maintains a [certificate authority](https://dn42.g-load.eu/about/certificate-authority/) with certificates obtainable via a simple script or completely [using only the browser](https://dn42.g-load.eu/about/certificate-authority/oneclick/).
 
-Self-signed:
-* Buzzster is maintaining  [Buzzster Trust Services](/Buzzster-Trust-Services) for your services.
-
 ## Network-related
 
-- See [Looking Glasses](/services/Looking-Glasses) for more network diagnostic tools
-- Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
+### General
+
 - ~~Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.~~ (deprecated but still partially functional)
   - The service has now been split into several sub-sites, further functional migrations are currently underway:
   - Registry Viewer (IP Blocks): [registry42.strexp.net (IANA)](https://registry42.strexp.net) (requires WebGL)
   - Map Viewer: [map42.strexp.net (IANA)](https://map42.strexp.net) (requires WebGL)
   - ISP Viewer: [isp42.strexp.net (IANA)](https://isp42.strexp.net)
   - Registry Timeline: [timeline42.strexp.net (IANA)](https://timeline42.strexp.net)
-- Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
-- Cloudflare-like cdn-cgi/trace: [map.jerry.dn42/cdn-cgi/trace](https://map.jerry.dn42/cdn-cgi/trace)
-- Another Cloudflare-like cdn-cgi/trace: [buzzster.dn42/cdn-cgi/trace](https://buzzster.dn42/cdn-cgi/trace)
 - Web-based Ping & Traceroute: [ping.dn42](https://ping.dn42), or [ping2.sh](https://ping2.sh) (via clearnet)
-- New DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
-- whatsmyip:
+
+### Looking glasses
+See [Looking Glasses](/services/Looking-Glasses).
+
+### What is my IP
+- myip.dn42 anycasted service:
   - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
   - ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
   - ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
-  - API endpoints:
-    - /raw: return your IP address as plain text
-    - /api: JSON with your IP plus the details of the server you reached (location, ASN, etc.)
-  - with geolocation provided by [DN42-Geoip](https://github.com/Xe-iu/dn42-geoip) and autonomous system info provided by [DN42-GeoASN](https://github.com/rdp-studio/dn42-geoasn): [myip.launchpadx.dn42](https://myip.launchpadx.dn42)
-    - Geolocation API
-      - API endpoints:
-        - IPv4: v4.myip.launchpadx.dn42
-        - IPv6: v6.myip.launchpadx.dn42
-        - Dual-stack: api.myip.launchpadx.dn42
-      - [API documentation](https://github.com/Xe-iu/dn42-geoip/blob/main/api/README.md)
-    - ASN API
-      - API endpoints:
-        - IPv4: asn4.myip.launchpadx.dn42
-        - IPv6: asn6.myip.launchpadx.dn42
-        - Dual-stack: asn.myip.launchpadx.dn42
-  - [whatismyip.dn42](http://whatismyip.dn42)
-    - API endpoint:
-      - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
-      - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
-- Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
+- [whatismyip.dn42](http://whatismyip.dn42)
+
+### Interactive Maps
+- Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
+- Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - 3D IP-based network graph (revived yay), created by traceroute all hosts, updated per day [dn42.jh0project.dn42/map](https://dn42.jh0project.dn42/map) (DN42), [dn42.jh0project.com/map](https://dn42.jh0project.com/map) (clearnet)
+
+### BGP Analysis and explorers
+- [Anomalies.dn42](https://anomalies.dn42) is a debugging tool that analyzes BGP routing data to identify ASes that may be inadvertently adding or removing geographic communities (region/country) from foreign prefixes.
+- Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
 - DN42 Explorer: [explorer.nedifinita.com](https://explorer.nedifinita.com). BGP routing, topology, and registry explorer. Provides an IPv4 interactive map, AS connectivity, prefix status, and rankings.
+
+### Health & Status
+- DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
+- DNS monitor [dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
+
+
 ### Speedtest
 
 | Operator   | Location           | Max Speed   | Link                                                         |
@@ -98,21 +91,10 @@ Self-signed:
 | [flap-dn42.ruinet.work](flap-dn42.ruinet.work) | AS211575 | |
 | <https://flaps.mashiro.dn42/> | AS4242420214 | |
 
-### Map.dn42 API Services
-
-Data refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.
-
-| API                | URL | Description |
-| ------------------ | --- | ----------- |
-| `/map`             | [https://map.dn42/map](https://map.dn42/map) <br> [https://api.iedon.com/dn42/map](https://api.iedon.com/dn42/map)                                                       | Raw binary map data, [See binary format](https://iedon.net/post/4)   |
-| `/map?type=json`   | [https://map.dn42/map?type=json](https://map.dn42/map?type=json) <br> [https://api.iedon.com/dn42/map?type=json](https://api.iedon.com/dn42/map?type=json)               | Raw map data, in JSON |
-| `/asn/{asn}`       | [https://map.dn42/asn/4242422189](https://map.dn42/asn/4242422189) <br> [https://api.iedon.com/dn42/asn/4242422189](https://api.iedon.com/dn42/asn/4242422189)           | Real-time node information from the map, including WHOIS data, in JSON |
-| `/ranking`         | [https://map.dn42/ranking](https://map.dn42/ranking) <br> [https://api.iedon.com/dn42/ranking](https://api.iedon.com/dn42/ranking)                                       | DN42 Global Ranking, based on the map.dn42 index |
-| `/myip/[raw｜api]` | [https://map.dn42/myip/](https://map.dn42/myip/) <br> [https://map.dn42/myip/api](https://map.dn42/myip/api) <br> [https://map.dn42/myip/raw](https://map.dn42/myip/raw) | What's My IP instance by map.dn42, including `netname` and `country` information if available |
 
 ### IX Services
 
-See [IX Collection](/services/IX-Collection/)
+See [IX Collection](/services/IX-Collection/).
 
 ### ASN Authentication Solution
 
@@ -123,13 +105,6 @@ Authenticate your users by having them verify their ASN ownership with following
 | Kioubit Authentication Services (4242423914) | Custom, OAuth2.0/OpenID Connect | No        | [Link](https://dn42.g-load.eu/about/authentication-services/) |
 | OAuth.dn42 (4242422189)                      | OAuth2.0/OpenID Connect         | No        | [Link](https://iedon.net/post/27)                             |
 
-### DNS Monitor
-
-[dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
-
-### BGP Community Anomalies Report
-
-[Anomalies.dn42](https://anomalies.dn42) is a debugging tool that analyzes BGP routing data to identify ASes that may be inadvertently adding or removing geographic communities (region/country) from foreign prefixes.
 
 ## IRC
 
@@ -181,11 +156,10 @@ Authenticate your users by having them verify their ASN ownership with following
 
 ## File Sharing
 
+### Repository Mirrors
+See [Repository Mirrors](/services/Repository-Mirrors).
+
 ### FTP / HTTP
-
-**FIXME**: Please add info about (approximate) bandwidth of the servers.
-
-Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
 
 | Hostname / IP             | Remarks                    |
 | :------------------------ | -------------------------- |
@@ -197,12 +171,7 @@ Repository Mirrors are listed on another page: [Repository Mirrors](/services/Re
 | <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
 | <fdc1:acc:cc8::6> Port: 2222| SFTP, Linux ISOs mirrored from distrowatch.com & FOSS Torrents.  Also has eXo games collection from retro-exo.com.  Connect on the commandline with <sftp -P 2222 dn42@[fdc1:acc:cc8::6]> (p/w dn42)|
 
-
 ### Rsync
-
-**FIXME**: Please add info about (approximate) bandwidth of the servers.
-
-Repository Mirrors are listed on another page: [Repository Mirrors](/services/Repository-Mirrors)
 
 | Hostname / IP             | Bandwidth  | Remarks                   |
 | :------------------------ | ---------- |-------------------------- |
@@ -282,18 +251,17 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | :------------------------- | :------------------------- |
 | mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club) |
 
-## Telephone Number Mapping (ENUM)
-
-- e164.dn42 provides subdomains for each ASs in DN42
-  - numbering pattern: 424-0-(last 4 digits of DN42 ASN)
-  - management: [https://e164.dn42](https://e164.dn42) (login via Kioubit Auth)
-
-## VOIP/SIP Endpoints
+## VOIP/SIP
 
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 - gensokyo.dn42 runs an asterisk based VOIP service with fax modems, CallerID playback and PSTN to DN42 proxy gateway (+1 424 242 9915). ENUM supported via e164.dn42.
   - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo <424008039910>
+
+### Telephone Number Mapping (ENUM)
+- e164.dn42 provides subdomains for each ASs in DN42
+  - numbering pattern: 424-0-(last 4 digits of DN42 ASN)
+  - management: [https://e164.dn42](https://e164.dn42) (login via Kioubit Auth)
 
 ## Challenges
 
@@ -358,6 +326,11 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | ------------------------------- | ------------------------------------------------------------ |
 | <https://social.gensokyo.dn42>  | GoToSocial, Register available via gitlab.dn42 or oauth.dn42 |
 
+
+## E-Mail
+
+There is a list of E-Mail providers [here](/services/E-Mail-Providers)
+
 ## Misc
 
 | Hostname / IP                              | Remarks                                                                                          |
@@ -385,14 +358,3 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://mx.dn42>                          | Matrix IM Server maintained by COMPLEXE, ask @COMPL_EXE on Telegram / E-Mail self@origincode.me / @i:origincode.me on clearnet Matrix for registration requests, unofficial chat room #dn42:mx.dn42 |
 | <https://mtf.dn42/>                        | MtF Wiki      |
 
-## Usenet Servers / News
-
-There are some News Servers available [here](/services/News)
-
-## E-Mail
-
-There is a list of E-Mail providers [here](/services/E-Mail-Providers)
-
-# Other networks
-
-**[List of other Overlay Networks](/Other)**
