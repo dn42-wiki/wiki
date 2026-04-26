@@ -20,7 +20,7 @@ multiple services from *.recursive-servers.dn42 for redundancy.
 
 ## Note on ICVPN Zones
 
-DN42 is [interconnected](/internal/Interconnections) with the Inter City VPN or in short "ICVPN". The registry of the ICVPN includes all the DNS information such as the Top level domains (TLDs) used inside ICVPN and the reverse DNS for the IP ranges of the ICVPN. Additionally, it includes the TLDs of some other networks that are interconnected with dn42 and share some of the IP space of ICVPN. The ICVPN [repository](https://github.com/freifunk/icvpn-scripts#dns-mkdns) includes a handy script to automatically generate all the required zones.
+DN42 is [interconnected](/Interconnections) with the Inter City VPN or in short "ICVPN". The registry of the ICVPN includes all the DNS information such as the Top level domains (TLDs) used inside ICVPN and the reverse DNS for the IP ranges of the ICVPN. Additionally, it includes the TLDs of some other networks that are interconnected with dn42 and share some of the IP space of ICVPN. The ICVPN [repository](https://github.com/freifunk/icvpn-scripts#dns-mkdns) includes a handy script to automatically generate all the required zones.
 
 ## BIND
 
@@ -370,7 +370,7 @@ multiple services from *.delegation-servers.dn42 for redundancy.
 
 ## Dnssec
 All delegation servers have DNSSEC support and all records are signed.
-For more information about DNSSEC visit [New-DNS#dnssec](/services/New-DNS#dnssec).
+For more information about DNSSEC visit the [dns architecture#dnssec](/services/dns/Architecture#dnssec) page.
 
 Below is a list of links to the DS record for TLD and reverse zone.
 To configure the key file, extract the value of ds-rdata and format it as follows.

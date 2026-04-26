@@ -1,9 +1,12 @@
-[dn42-wiki-go](/services/Distributed-Wiki-New) is a lightweight, Git-backed wiki engine designed for DN42. It is based on [wiki-ng](https://git.dn42.dev/wiki/wiki-ng), aims to replace the old Gollum-based DN42 distributed wiki.
+# Distributed Wiki
 
-# this page is outdated and need update
+This wiki is mirrored by multiple operators across both the public internet and on dn42.
+Current operators providing the wiki service can be found on the page footer.
 
-The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the wiki. Sites are powered by [gollum](https://github.com/gollum/gollum) which has no native SSL support, so Nginx acts as a reverse proxy and handles the encryption.
-The local webserver is monitored with a simple [shell script](/services/Distributed-Wiki#exabgp_watchdog-script) working [in conjunction](Distributed-Wiki#exabgp) with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.
+## Hosting the wiki
+
+For hosting the wiki one will need to decide whether they desire to host a public internet mirror, join the wiki.dn42 anycast or both.
+The idea is to deploy mirrors across dn42 using [anycast](https://en.wikipedia.org/wiki/Anycast) addressing (BGP), thus providing redundancy, load-balancing and improved access times to the wiki.
 
 ## Prerequisites
 
@@ -13,13 +16,21 @@ The local webserver is monitored with a simple [shell script](/services/Distribu
 
     In contrast with the general spirit in dn42, this service should NOT be deployed by unskilled members for the purpose of learning and exploring - since it is the primary source of information related to the project, it should not be used as a playground. 
 
-  - Software:
-    + [Git](https://en.wikipedia.org/wiki/Git_(software))
+  - Wiki Software (choose one):
+    + [dn42-wiki-go](https://github.com/iedon/dn42-wiki-go)  (Recommended)
+    + [wiki-ng](https://git.dn42.dev/wiki/wiki-ng)
     + [gollum](https://github.com/gollum/gollum)
+
+  - Other Software:
+    + [Git](https://en.wikipedia.org/wiki/Git_(software))
     + [Nginx](https://en.wikipedia.org/wiki/Nginx)
     + [ExaBGP](https://github.com/Exa-Networks/exabgp)
 
     It's recommended to use a debian distro on the host machine, where most of the above software can be installed using package manager(s) with ease. On some distros (RHEL based for example) it might not be an easy task.
+
+
+The local webserver is to be monitored with a simple [shell script](/services/Distributed-Wiki#watchdog-script) working [in conjunction](/services/Distributed-Wiki/#exabgp) with [ExaBGP](https://github.com/Exa-Networks/exabgp), announcing/withdrawing the assigned route if the service is up/down.
+Nginx acts as a reverse proxy and handles the encryption.
 
 ## Network
 
@@ -29,8 +40,8 @@ The local webserver is monitored with a simple [shell script](/services/Distribu
 
 ## Data replication
 
-Site files are stored in a local [DVCS](https://en.wikipedia.org/wiki/Distributed_revision_control) repository (Git) on each node and replicated through a central server hosted by [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42). 
-Since gollum is built on top of Git, it is not overly complicated to keep the local site in sync with others, each site only triggers periodic pulls/pushes from/to the Git server. 
+Site files are stored in a local [DVCS](https://en.wikipedia.org/wiki/Distributed_revision_control) repository (Git) on each node and replicated through a central server.
+Since the wiki is hosted on top of Git, it is not overly complicated to keep the local site in sync with others, each site only triggers periodic pulls/pushes from/to the Git server. 
 
 ### Setup the repo
 
@@ -38,7 +49,6 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
 
     `git clone git@git.dn42.dev:wiki/wiki.git <path>`
 
- - Contact [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) and ask for write access to the repo
  - Setup cron for periodic pull/push jobs for the repo (simple example):
 
   + **wiki-sync.sh**:
@@ -60,43 +70,13 @@ Since gollum is built on top of Git, it is not overly complicated to keep the lo
 
    `*/10 * * * * <path>/wiki-sync.sh &> /dev/null`
 
-   Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes.
-
-## gollum
-
- - Install [gollum](https://github.com/gollum/gollum)
- - Start two gollum instances, read-only and read/write on `127.0.0.1`:
-
-   Read/write (SSL only):
-   ```
-   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
-   ```
-   Read-only:
-   ```
-   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
-   ```
-
-   Set `<path>` to the location where wiki Git repo was cloned. 
+   Running in 10 minute intervals is reasonable, if you choose to change this, please keep it in the range from 5 to 15 minutes. Also consider using dn42notifyd to get a callbacks instead.
 
 ## Nginx reverse proxy
 
 ### SSL
 
- - Setup your maintainer object according to [Automatic CA](/services/Automatic-CA)
- - Generate a [CSR](/services/Certificate-Authority) and send DNS Key Pin to [xuu@sour.is](mailto:xuu@sour.is): 
- - \<AS> is the as number with the prefix `as` like `as64737-ca.wiki.dn42`
-
-```sh
-./ca.dn42 tls-gen \
-   <AS>-<CC>(-<UID>).wiki.dn42 \
-   EXAMPLE-MNT \
-   mail@example.com \
-   DNS:<AS>-<CC>(-<ID>).wiki.dn42,DNS:wiki.dn42,DNS:www.wiki.dn42,DNS:internal.dn42,DNS:www.internal.dn42
-```
-
-   Wait for a reply and then sign the certificate:
-
-   `./ca.dn42 tls-sign wiki.dn42 MIC92-MNT`
+ - Generate an SSL certificate using the main Certificate authority using a method that supports anycasted IP addresses.
 
 #### Header
 
@@ -132,10 +112,6 @@ The proxy should accept the following domain names:
 
   - internal.dn42
   - wiki.dn42
-
-Nginx should listen on a unicast address as well, so your site can be reached exclusively. Assign an IP address for the occasion and send it to [XUU-DN42](https://io.nixnodes.net?t=person&l=XUU-DN42) including your AS `<aut-num>` and the country code `<CC>` where your site is located. A forward DNS record will be created, pointing to the unicast IP address:
-
-  - `<aut-num>`-`<CC>``(-<UID>)`.wiki.dn42 
 
 #### Config example
 
@@ -357,3 +333,195 @@ esac
 
 exit 0
 ```
+
+## Setting up the wiki software
+See the documentation below for both gollum and dn42-wiki-go.
+
+
+## gollum
+
+ - Install [gollum](https://github.com/gollum/gollum)
+ - Start two gollum instances, read-only and read/write on `127.0.0.1`:
+
+   Read/write (SSL only):
+   ```
+   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4568 <path>
+   ```
+   Read-only:
+   ```
+   RACK_ENV=production gollum --css --host 127.0.0.1  --port 4567 --no-edit <path>
+   ```
+
+   Set `<path>` to the location where wiki Git repo was cloned. 
+
+
+## dn42-wiki-go
+
+### Introduction
+
+[dn42-wiki-go](https://github.com/iedon/dn42-wiki-go) is a lightweight, Git-backed wiki engine designed for DN42. It is based on [wiki-ng](https://git.dn42.dev/wiki/wiki-ng), aims to replace the old Gollum-based DN42 distributed wiki.
+
+It can serve pages live through its built-in Go HTTP server or generate a fully static HTML export for external hosting. All content is stored in a Git repository, making it easy to replicate across nodes or run in disconnected environments.
+
+### Live Version
+- [https://wiki.dn42/](https://wiki.dn42/) (DN42 Access)
+- [https://dn42.jp/](https://dn42.jp/) (Clearnet)
+
+![Screenshot of iEdon DN42 Wiki Go](/services/images/iedon-dn42-wiki-go.png)
+
+### Operating Modes
+
+You can run `dn42-wiki-go` in three different ways:
+
+1. **Run static build once then exit (`--build` or `live=false`)**  
+   The App renders all Markdown files into HTML under outputDir and exits.  
+   Best for setups where your own cron job handles Git sync and file publishing.
+
+2. **Live mode without reverse proxy (`live=true`)**  
+   The built-in HTTP server directly serves pages, assets, and APIs.  
+   Suitable for simple deployments.
+
+3. **Live mode behind a reverse proxy**  
+   The reverse proxy (nginx, Caddy, HAProxy, etc.) serves the generated files, and only API endpoints are forwarded to the App.  
+   See `config.example.json` for example configs and `nginx-vhost.conf` for a reverse-proxy reference.
+
+   **Recommended for production and anycast nodes**.
+
+### Features
+
+- Live mode with automatic Markdown rendering and scheduled Git pull/push.
+- Static mode for fully pre-built HTML exports.
+- Optional in-browser editor with commit metadata (author, message prefix, remote IP).
+- Webhook endpoints for remote pull/push triggers and optional polling integration(see `dn42notifyd`).
+- Themeable templates and bundled UI assets.
+- Designed for distributed, multi-node and anycast environments.
+
+### Quick Start
+
+Pre-built binaries are available in the [GitHub releases](https://github.com/iedon/dn42-wiki-go/releases).
+
+Please do not forget to clone the repository to copy `config.example.json`(to `config.json`) and the `template` folder. They should be put together in the same production directory.
+
+#### Manual Build
+
+1. Install Go 1.24+ and ensure the git executable is available in PATH.
+2. Copy the example config:
+   cp config.example.json config.json
+   Then edit the settings you need.
+3. Build for your platform (example: Linux amd64):
+   ```bash
+   export GOOS=linux
+   export GOARCH=amd64
+   ./build.sh
+   ```
+
+Determine which user is used to run `dn42-wiki-go`, then create `~/.gitconfig` for this user, which will be used by `git`.
+
+For example:
+
+```ini
+[user]
+        email = noreply@dn42.jp    
+        name = IEDON.DN42 Wiki Mirror(116)
+```
+
+To create the isolated, low-privileged user `dn42-wiki-go`, you may run:
+```bash
+# This user cannot log in or get a shell.
+# This user has /opt/dn42-wiki-go as working directory.
+# No default home folder created automatically.
+sudo useradd -r -s /usr/sbin/nologin -d /opt/dn42-wiki-go -M dn42-wiki-go
+```
+
+Both systemd socket enabler and UNIX domain socket are supported, check example configuration files: `dn42-wiki-go.socket` and `dn42-wiki-go.service`.
+
+If you would like to use with Docker: `Dockerfile` and `docker-compose.yml` are also provided, bind proper directories and map `config.json` for the App to use, then you are all set.
+
+### Webhook Endpoints
+
+When `webhook.enabled` = true, the server exposes:
+
+- GET | POST /api/webhook/pull  
+  Runs git pull and rebuilds the cached HTML.
+
+- GET | POST /api/webhook/push  
+  Pushes local commits to the remote.
+
+If `webhook.secret` is set, requests must include an Authorization header that matches the secret.
+If `webhook.secret` is empty, a random secret will be generated on startup to secure the endpoint (used for polling).  
+
+#### Polling Integration
+
+When `webhook.polling.enabled` = true, the server registers with a remote notify service and triggers `/api/webhook/pull` whenever a refresh completes.
+
+This is compatible with `dn42notifyd` and similar tools.
+
+### Configuration Reference
+
+All settings are provided through a JSON file. Below is a concise reference of all options.
+
+#### Runtime
+
+- `live` *(bool, default `false`)*:  
+  true -> run HTTP server and render on demand.  
+  false -> render once to outputDir and exit.
+
+- `editable` *(bool, default `false`)*:  
+  Enables in-browser editing and write operations.
+
+- `listen` *(string, default `":8080"`)*:  
+  TCP address (host:port) or UNIX socket (unix:/path).
+
+  Advanced: See example systemd files `dn42-wiki-go.socket` and `dn42-wiki-go.service` in the repository.
+
+- `baseUrl` *(string, optional)*:  
+  URL prefix when hosting under a subdirectory.
+
+- `siteName` *(string, default `"DN42 Wiki Go"`)*:  
+  Display name of the wiki.
+
+#### Git
+- `git.binPath` *(string, default `git`)*: Path to the Git executable.
+- `git.remote` *(string, default empty)*: Remote URL. Leave empty for standalone/local repositories.
+- `git.localDirectory` *(string, default `./repo`)*: Directory where the wiki repository is cloned or initialised.
+- `git.pullIntervalSec` *(int, default `3600`)*: Seconds between background `git pull` operations in live mode. Disabled if no remote is set.
+- `git.author` *(string, default `"Anonymous <anonymous@localhost>"`)*: Author string used for commits generated by the application.
+- `git.commitMessagePrefix` *(string, default empty)*: Optional prefix prepended verbatim to commit messages supplied by users.
+- `git.commitMessageAppendRemoteAddr` *(string, default empty)*: Optional suffix appended when a request carries a remote address. If the value contains `%s` it is treated as a `fmt` format string; otherwise it is concatenated.
+
+#### Webhook
+- `webhook.enabled` *(bool, default `false`)*: Expose webhook endpoints on the main HTTP server.
+- `webhook.secret` *(string, default empty)*: Shared secret expected in the `Authorization` header. If empty, a random secret is generated on startup.
+- `webhook.polling.enabled` *(bool, default `false`)*: Keep a registration active with the remote notification service and trigger periodic pulls.
+- `webhook.polling.endpoint` *(string, default empty)*: URL of the notification service (eg. Usage with [dn42notifyd](https://git.dn42.dev/dn42/dn42notifyd): `https://git.dn42/dn42notify/poll`).
+- `webhook.polling.callbackUrl` *(string, default empty)*: Public URL for `/api/webhook/pull`. Required when `webhook.polling.enabled` is `true`.
+- `webhook.polling.pollingIntervalSec` *(int, default `3600`)*: Seconds between refresh attempts. Must be positive when polling is enabled.
+- `webhook.polling.skipRemoteCert` *(bool, default `false`)*: Insecure: Skip TLS verification.
+
+#### Paths and templating
+- `outputDir` *(string, default `./dist`)*: Destination directory for static builds or asset exports.
+- `templateDir` *(string, default `./template`)*: Location of layout templates and static assets bundled into the server/UI.
+- `homeDoc` *(string, default `Home.md`)*: Repository document to treat as the home page. Normalised to a `.md` path relative to the repo root.
+- `privatePagesPrefix` *(array of strings, default empty)*: Request to routes started with these prefixes will be blocked.
+
+#### Layout and footer
+- `ignoreHeader` *(bool, default `false`)*: Skip loading `_Header.md` when `true`. Leave `false` to include the fragment when present.
+- `ignoreFooter` *(bool, default `false`)*: Skip `_Footer.md` when `true`; otherwise render it if available.
+- `serverFooter` *(string, default empty)*: Markdown snippet rendered into the global footer at runtime.
+
+#### TLS
+- `enableTLS` *(bool, default `false`)*: Serve HTTPS using the provided certificate and key.
+- `tlsCert` *(string)*: Path to the TLS certificate. Required only when `enableTLS` is true.
+- `tlsKey` *(string)*: Path to the TLS private key. Required when `enableTLS` is true.
+
+#### Logging and client IP handling
+- `logLevel` *(string, default `info`)*: Minimum log level (`debug`, `info`, `warn`, or `error`).
+- `trustedProxies` *(array of strings, default empty)*: CIDR blocks or literal IPs that are trusted to populate `X-Forwarded-For`.
+- `trustedRemoteAddrLevel` *(int, default `1`)*: Number of additional trusted hops to peel off when deriving the end-user IP from the forwarded chain. Values less than `1` are coerced to `1` during load.
+
+### Notes
+
+- live = true requires write access to the Git repo for local commits.
+- With no remote configured, `dn42-wiki-go` initializes a local-only repository.
+- Template changes require restarting the server or rebuilding static output.
+

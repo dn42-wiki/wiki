@@ -1,4 +1,6 @@
-After frequent issues with the [Old Hierarchical DNS](/services/Old-Hierarchical-DNS) system in early 2018, work has started to build a new and more reliable DNS system. The main goals are:
+# Current DNS Architecture
+
+After frequent issues with the [Old Hierarchical DNS](/services/dns/historical/Old-Hierarchical-DNS) system in early 2018, work has started to build a new and more reliable DNS system. The main goals are:
 * Reliability and Consistency to avoid debugging very obscure issues that are also hard to reproduce.
 * Low maintenance burden on operators.
 * Proper DNSSEC support for everything.
@@ -47,6 +49,6 @@ The set of valid KSKs can be found in the registry.
 
 # See also
 
-* [DNS Quick Start](/services/DNS)
-* [Old Hierarchical DNS](/services/Old-Hierarchical-DNS)
-* [Original DNS (deprecated)](/services/Original-DNS-(deprecated))
+* [DNS Quick Start](/services/dns/Overview)
+* [Old Hierarchical DNS](/services/dns/historical/Old-Hierarchical-DNS) - deprecated
+* [Original DNS (deprecated)](/services/dns/historical/Original-DNS-(deprecated)) - deprecated

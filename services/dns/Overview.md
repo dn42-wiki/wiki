@@ -48,17 +48,17 @@ search dn42
 
 There are multiple top level domains (TLDs) associated with DN42, its affiliated networks and for reverse DNS that must
 be configured in order to run your own resolver. The registry is the authoritative source of active TLDs, but see also
-this page [dns/External-DNS](/services/dns/External-DNS) in the wiki.
+the [External-DNS](/services/dns/External-DNS) page in the wiki.
 
 ### Split horizon DNS
 
 In this configuration, you run your own, caching resolver but forward DN42 related queries (with recursion bit set) 
-to the anycast service. Example configurations for different recursor implementations are included in the [dns/Configuration](/services/dns/Configuration) page.
+to the anycast service. Example configurations for different recursor implementations are included in the [Configuration](/services/dns/Configuration) page.
 
 ### Full recursion 
 
 Authoritative DNS for DN42 is provided by the *.delegation-servers.dn42 servers, see the DNS architecture here 
-[New DNS](/services/dns/New-DNS) Delegations servers have full support for DNSSEC. Example configuration unbound implementations are included in the [dns/Configuration](/services/dns/Configuration#resolver-setup) page.
+Delegations servers have full support for DNSSEC. Example configuration unbound implementations are included in the [Configuration](/services/dns/Configuration#resolver-setup) page.
 
 ## Additional client configuration
 
@@ -66,8 +66,7 @@ Authoritative DNS for DN42 is provided by the *.delegation-servers.dn42 servers,
 
 ## Further Information
 
-* [dns/Configuration](/services/dns/Configuration) - Forwarder/Resolver configuration examples
-* [New DNS](/services/dns/New-DNS) - current architecture
-* [dns/External-DNS](/services/dns/External-DNS) - external DNS zones from interconnected networks
-* [Old Hierarchical DNS](/services/dns/Old-Hierarchical-DNS) - deprecated
-* [Original DNS (deprecated)](/services/dns/Original-DNS-(deprecated)) - deprecated
+* [Configuration](/services/dns/Configuration) - Forwarder/Resolver configuration examples
+* [Architecture](/services/dns/Architecture) - Current DNS system architecture
+* [External-DNS](/services/dns/External-DNS) - External DNS zones from interconnected networks
+

@@ -141,7 +141,7 @@ Route filters
 
 Filters are necessary to prevent other people from hijacking our routing table. A malicious peer could send routes that override your default route to public internet services like Google, government services, your online banking, etc.
 
-These rules are reasonably tight, you can tighten or relax them as desired. [Interconnected networks'](/internal/Interconnections) IPv4 ranges are included as well, if you don't want then you can ignore that rule.
+These rules are reasonably tight, you can tighten or relax them as desired. [Interconnected networks'](/Interconnections) IPv4 ranges are included as well, if you don't want then you can ignore that rule.
 ```
 /routing filter rule
 add chain=dn42-in comment="reject prefixes clashing with home network" disabled=no rule="if (dst in 192.168.0.0/16 && dst-len >= 16) { reject }"

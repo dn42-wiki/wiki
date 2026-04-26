@@ -1,5 +1,5 @@
 # Original DNS (deprecated)
-This information is now **deprecated**. Please check [New DNS](/services/New-DNS) for the current architecture.
+This information is now **deprecated**.
 
 ***
 

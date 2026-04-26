@@ -1,6 +1,6 @@
 # Internal services
 
-You are asked to show some creativity in terms of network usage and content ([ideas](/internal/Ideas)). ;)
+You are asked to show some creativity in terms of network usage and content ([ideas](/internal/Ideas)).
 
 ## Search engines & Discovery
 
