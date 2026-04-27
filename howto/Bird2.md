@@ -454,3 +454,10 @@ lossy networks like but not only, Satellite, Wireless Mesh Networks should be av
 Regardless, use of BFD in high quality fiber based networks with low ping is optimal.
 
 Additional documentation about the BFD protocol is available at [the BIRD2 documentation](https://bird.network.cz/?get_doc&v=20&f=bird-6.html#ss6.3) .
+
+### Route refresh against ghost routes
+Execution of the command `reload all` will trigger bird to perform a full routing table re-synchronization with all its peers via the route refresh functionality.
+Periodical execution is an effective way to resolve routing table inconsistencies and "ghost routes" (stuck routes), which have been observed within the DN42 network. The command is to be run a maximum of 1 time per day to reduce the bandwidth cost.
+
+### Route flapping
+Misconfigurations or link quality issues can cause route flapping (excessive BGP update messages) and must thus be avoided. A monitoring plan is to be implemented by all users of the dn42 network to detect such events. Special software is available for more detailed monitoring of bgp flap events.
