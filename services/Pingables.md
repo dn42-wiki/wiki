@@ -8,5 +8,6 @@ The following is a list of pingable addresses that can be used for testing. If y
 | pingable.burble.dn42 | 172.20.129.5 | fd42:4242:2601:ac05::1 |
 | dns.highdef.dn42 | 172.22.108.53 | fd86:bad:11b7:53::2 |
 | anycast.bandura.dn42 | 172.22.149.224 | fd04:234e:fc31:: |
+| anycast.nodes.nia.dn42 | - | fd00:1926:817:: |
 
 Although these addresses are for testing and having fun, please do not overload them with too many ping requests (very many per second).
