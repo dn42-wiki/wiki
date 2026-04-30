@@ -25,6 +25,7 @@ AS4242423035 | [LARE-DN42](https://dn42.lare.cc) | <https://dn42.lare.cc/autopee
 AS4242423088 | [SUNNET](https://dn42.6700.cc) | <https://peer.dn42.6700.cc> |
 AS4242423374 | [Bingxin Network](https://dn42.baka.pub/en/peering-request/bingxin-network) | <https://dn42.baka.pub/en/peering-request/bingxin-network> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | Clearnet → <https://dn42.g-load.eu> |
+AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
 
 Sort by AS number
 
@@ -47,7 +48,6 @@ This list contains defunct services.
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
-AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
 AS64719      | [lutoma](https://dn42.lutoma.org) | <https://dn42.lutoma.org> |
 AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
 AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
