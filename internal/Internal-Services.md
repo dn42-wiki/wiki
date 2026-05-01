@@ -124,6 +124,7 @@ Other servers:
 | Hostname / IP                 | Remarks                                                      |
 | :---------------------------- | :----------------------------------------------------------- |
 | <http://j.munsternet.dn42>    | Jellyfin instance with movies and TV shows (test).           |
+| <http://miyuzaki.dn42>        | Jellyfin instance containing Korean Variety Shows            |
 | <https://e621ng.dn42>         | Just e621ng, contains bunch of nsfw                          |
 
 ## Radio and Video Streaming
