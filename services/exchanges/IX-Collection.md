@@ -14,4 +14,4 @@ Currently available exchanges:
 |mcast-ix|[mcast-ix](/services/exchanges/mcast-ix)|
 |SERNET-IX|[https://blog.sherpherd.net/ix.html](https://blog.sherpherd.net/ix.html)|
 |SerinaIX|<https://ix.dn42.serinanya.cn/>|
-|Nedifinita IX|https://ix.nedifinita.com/|
+|Nedifinita IX|<https://ix.nedifinita.com/>|
