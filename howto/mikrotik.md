@@ -1,5 +1,6 @@
 # How to connect to dn42 using Mikrotik RouterOS
 
+NB: this is a somewhat outdated page, it uses a VPN stack that's a bit less elegant and not as well supported nowadays. I'm sure it'll still work, but if you're interested in using a modern supported method and current RouterOS version (as of mid-2026), there's [a subpage you can check out](/howto/mikrotik/modern-style). It's a work in progress, but it works perfectly well!
 
 ## Legend
 
