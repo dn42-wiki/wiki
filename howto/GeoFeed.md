@@ -22,7 +22,7 @@ A GeoFeed is especially useful in distributed networks like DN42, where many nod
 A concrete operational example of GeoFeed publication and integration within the RIPE Database was presented at RIPE 82 (see presentation below):  
 https://ripe82.ripe.net/presentations/84-RIPE82_geofeed.pdf
 
-## GeoFeed file formats
+## GeoFeed file format
 
 **CSV Example**:
 ```csv
@@ -32,39 +32,16 @@ fd42:1234::/48,FR,,,
 ...
 ```
 
-**JSON Example**:  
-```json
-[
-    {
-        "prefix": "172.20.0.0/24",
-        "country_code": "FR",
-        "region_code": "FR-ARA",
-        "city": "LYON",
-        "postal": 69123
-    },
-    {
-        "prefix": "fd42:1234::/48",
-        "country_code": "",
-        "region_code": "",
-        "city": "",
-        "postal": 0
-    },
-    ...
-]
-```
-
-> GeoFeed files can also be TXT or other simple text formats, but CSV/JSON is recommended for ease of parsing in scripts and automation tools.
-
 ## How to publish a GeoFeed on DN42 ?
 
 1. **Host your GeoFeed file**  
     The file must be accessible via HTTP or HTTPS (IPv4 and/or IPv6), either on DN42 or on clearnet.  
 2. **Reference in the Registry**  
-    Add a `remarks: Geofeed <url>` attribute in your `inet(6)num` object to point to your hosted GeoFeed.  
+    Add a `geofeed: <url>` attribute in your `inet(6)num` object to point to your hosted GeoFeed.
     Example DN42 WHOIS snippet:
     ```rpsl
     inetnum: 0.0.0.0/0
-    remarks: Geofeed http://example.dn42/geofeed.csv
+    geofeed: http://example.dn42/geofeed.csv
     ```
 
 ## Best Practices
