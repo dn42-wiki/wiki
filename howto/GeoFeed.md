@@ -1,52 +1,46 @@
-A *GeoFeed* is a standardized mechanism for publishing geographic location information about IP address prefixes. It helps network operators associate IP address blocks with real-world locations, enabling better visualization, monitoring, and geolocation accuracy.
+# GeoFeed
 
-A GeoFeed is especially useful in distributed networks like DN42, where many nodes exist in different physical locations. It can assist in mapping latency, debugging routing, and documenting physical network topology.
+A **GeoFeed** is a standardized mechanism for publishing geographic location information about IP address prefixes, helping associate IP blocks with real-world locations for better geolocation accuracy, latency mapping, and network topology documentation.
 
-## Standards & Protocol References
+## Standards
 
-**[RFC 8805](https://www.rfc-editor.org/rfc/rfc8805) - _Format for Self-Published IP Geolocation Feeds_**  
-- Defines the **format** for GeoFeed files (CSV);
-- Geographic mappings associate prefixes with location attributes.
-- A GeoFeed file consists of comma-separated values in UTF-8 format.
+| RFC | Description |
+|-----|-------------|
+| [RFC 8805](https://www.rfc-editor.org/rfc/rfc8805) | Defines the CSV-based GeoFeed file format |
+| [RFC 9632](https://www.rfc-editor.org/rfc/rfc9632) | Specifies referencing GeoFeeds from RPSL objects via `geofeed:` attribute |
+| [RFC 9877](https://www.rfc-editor.org/rfc/rfc9877) | RDAP extension for automated GeoFeed discovery |
 
-**[RFC 9632](https://www.rfc-editor.org/rfc/rfc9632) - _Finding and Using GeoFeed Data_**  
-- Specifies how to reference GeoFeed files from routing databases such as RPSL objects (`inetnum`, `inet6num`);
-- Defines how to augment existing routing registry objects with attributes pointing to GeoFeed URLs (e.g., using a `geofeed:` attribute);
-- Replaces earlier RFC 9092, improving schema and specification details.
+## File Format
 
-**[RFC 9877](https://www.rfc-editor.org/rfc/rfc9877) - _RDAP GeoFeed Extension_**  
-- Defines an extension to RDAP (Registration Data Access Protocol) that allows RDAP servers to disclose GeoFeed URLs for IP address resources;
-- Useful for automated discovery of GeoFeed data through registry queries.
+A UTF-8 CSV file with the following fields:
 
-### Operational Example (RIPE 82)
-A concrete operational example of GeoFeed publication and integration within the RIPE Database was presented at RIPE 82 (see presentation below):  
-https://ripe82.ripe.net/presentations/84-RIPE82_geofeed.pdf
-
-## GeoFeed file format
-
-**CSV Example**:
 ```csv
 # prefix,country_code,region_code,city,postal
-172.20.0.0/24,FR,FR-ARA,LYON,69123
+172.20.0.0/24,FR,FR-ARA,Lyon,69123
 fd42:1234::/48,FR,,,
-...
 ```
 
-## How to publish a GeoFeed on DN42 ?
+Fields follow [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) conventions. Unused fields may be left empty.
 
-1. **Host your GeoFeed file**  
-    The file must be accessible via HTTP or HTTPS (IPv4 and/or IPv6), either on DN42 or on clearnet.  
-2. **Reference in the Registry**  
-    Add a `geofeed: <url>` attribute in your `inet(6)num` object to point to your hosted GeoFeed.
-    Example DN42 WHOIS snippet:
-    ```rpsl
-    inetnum: 0.0.0.0/0
-    geofeed: http://example.dn42/geofeed.csv
-    ```
+## Publishing on DN42
+
+1. **Host the file** — Serve your GeoFeed over HTTP/HTTPS. **Hosting within DN42 is strongly recommended** so that the file remains accessible to all DN42 participants regardless of public internet connectivity, and to keep DN42 infrastructure self-contained.
+2. **Reference in the registry** — Add a `geofeed:` attribute to your `inetnum` or `inet6num` object:
+
+```rpsl
+inetnum:    172.20.0.0/24
+geofeed:    http://example.dn42/geofeed.csv
+```
+
+> ⚠️ Hosting your GeoFeed on the public internet means it may be unreachable to peers who access DN42 exclusively through the internal network. Always prefer a DN42-reachable URL.
 
 ## Best Practices
-- **Version control**: Store your GeoFeed in Git to track changes and manage updates.
-- **Accuracy**: Keep node locations precise enough for mapping, but avoid exposing sensitive private addresses or exact locations.
-- **Accessibility**: Ensure your GeoFeed URL is always reachable; update registry references if the file moves.
-- **Integration**: Combine GeoFeed with monitoring dashboards, RIPE Atlas probes (clearnet), or Looking Glass tools to visualize node availability over time.
-- **Naming Conventions**: Maintain consistent node names and clear comments for easier automation and identification.
+
+- Ensure the URL remains reachable and update the registry if it changes
+- Maintain consistent node names and clear comments for easier automation and identification
+- Keep locations accurate
+- Store your GeoFeed in version control (e.g., Git) for easier management
+
+## Further Reading
+
+- [RIPE 82 GeoFeed presentation](https://ripe82.ripe.net/presentations/84-RIPE82_geofeed.pdf)
