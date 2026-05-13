@@ -1,11 +1,9 @@
 # IRC
-> TLDR: irc.hackint.dn42, #dn42
+> TL;DR irc.hackint.dn42, #dn42
 
 The main and largest IRC chatroom for dn42 is #dn42 on the [hackint](https://www.hackint.org) network.
 
 Other channels are ##dn42 on Hackint, and #dn42 on Libera.
-
-There are also other IRC networks which can be accessed within dn42.
 
 # Hackint
 
