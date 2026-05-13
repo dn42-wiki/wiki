@@ -24,8 +24,8 @@ Fields follow [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) conventions. Un
 
 ## Publishing on DN42
 
-1. **Host the file** — Serve your GeoFeed over HTTP/HTTPS. **Hosting within DN42 is strongly recommended** so that the file remains accessible to all DN42 participants regardless of public internet connectivity, and to keep DN42 infrastructure self-contained.
-2. **Reference in the registry** — Add a `geofeed:` attribute to your `inetnum` or `inet6num` object:
+1. **Host the file** - Serve your GeoFeed over HTTP/HTTPS. **Hosting within DN42 is strongly recommended** so that the file remains accessible to all DN42 participants regardless of public internet connectivity, and to keep DN42 infrastructure self-contained.
+2. **Reference in the registry** - Add a `geofeed:` attribute to your `inetnum` and `inet6num` objects:
 
 ```rpsl
 inetnum:    172.20.0.0/24
