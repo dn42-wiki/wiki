@@ -27,7 +27,7 @@ It provides the router with validity information regarding prefix origination:
 On dn42 we generate ROA information from the dn42 registry.  
 
 Generators:
-- Burble's dn42regsrv: < https://git.burble.com/burble.dn42/dn42regsrv>
+- Burble's dn42regsrv: <https://git.burble.com/burble.dn42/dn42regsrv>
 - bauen1's dn42-roagen: <https://gitlab.com/bauen1/dn42-roagen>
 - Kioubit's registry wizard: <https://github.com/Kioubit/dn42_registry_wizard>
 - chuangzhu's pure bash script: <https://paste.sr.ht/~chuang/e98d2fe791de68a6cf5aade7877cd0dbc1cdb84e>
