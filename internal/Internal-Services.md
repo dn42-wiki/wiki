@@ -64,7 +64,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
 | NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
 | Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
-| Bingxin    | Hong Kong          | 5Gbps       | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
+| Bingxin    | Global             | 200Mbps - 5Gbps | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
 | VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
 
 ### FlapAlerted instances
