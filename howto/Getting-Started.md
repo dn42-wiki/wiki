@@ -219,7 +219,7 @@ The current guideline is to allocate a /27 or smaller by default, keeping space 
 
 dn42 typically uses point-to-point addressing in VPN tunnels making transit network unnecessary, a single IP address per host should be sufficient. If you are going to have 2-3 servers, a /28 is plenty; same will go for most home-networks. You cannot, however, allocate prefixes smaller than /29. dn42 is not the public internet, but our IPv4-space is valuable too!
 
-If you need a /24 or larger, or if the registry maintainers randomly decide anyway, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
+If you need a /24 or larger, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
 
 **Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
 
