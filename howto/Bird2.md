@@ -318,6 +318,14 @@ Note that this is for the user crontab (`crontab -e`). For global crontabs (`/et
 */15 * * * * bird curl -sfSLR {-o,-z}/etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf && birdc configure > /dev/null
 ```
 
+Note that on some systems (like Ubuntu) cron runs with `/bin/sh` as the shell, which does not support the brace expansion syntax above. To fix this you can add `SHELL=/bin/bash` above your cron entries.  
+You can also expand the commands manually as shown below (the caveat on user vs global crontab still applies).
+
+```conf
+*/15 * * * * curl -sfSLR -o /etc/bird/roa_dn42.conf -z /etc/bird/roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird2_4.conf && birdc configure > /dev/null
+*/15 * * * * curl -sfSLR -o /etc/bird/roa_dn42_v6.conf -z /etc/bird/roa_dn42_v6.conf https://dn42.burble.com/roa/dn42_roa_bird2_6.conf && birdc configure > /dev/null
+```
+
 Or use a systemd timer: (check the commands before copy-pasting)
 
 ```conf
