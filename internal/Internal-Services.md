@@ -182,11 +182,12 @@ See [Repository Mirrors](/internal/Repository-Mirrors).
 
 #### Tracker
 
-| Hostname / IP                           | Remarks                                         |
-| :---------------------------------------|------------------------------------------------ |
-| http://tracker.leziblog.dn42/announce   | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
-| https://tracker.leziblog.dn42/announce  | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
-| udp://tracker.leziblog.dn42:11451       | Maintained by [LeZi](mailto:lezi@leziblog.dn42) |
+| Hostname / IP                             | Remarks                                                                     |
+| :-----------------------------------------|-----------------------------------------------------------------------------|
+| <http://tracker.leziblog.dn42/announce>   | Maintained by [LeZi](mailto:lezi@leziblog.dn42)                             |
+| <https://tracker.leziblog.dn42/announce>  | Maintained by [LeZi](mailto:lezi@leziblog.dn42)                             |
+| udp://tracker.leziblog.dn42:11451         | Maintained by [LeZi](mailto:lezi@leziblog.dn42)                             |
+| <http://tracker.pmman.dn42/announce>      | Listening on both IANA and DN42,maintained by [pmman](mailto:me@pmman.tech) |
 
 #### DHT Bootstrap
 
