@@ -22,10 +22,10 @@ See this [page](/services/ca/Certificate-Authority) for the main certificate aut
 
 - ~~Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.~~ (deprecated but still partially functional)
   - The service has now been split into several sub-sites, further functional migrations are currently underway:
-  - Registry Viewer (IP Blocks): [registry42.strexp.net (IANA)](https://registry42.strexp.net) (requires WebGL)
-  - Map Viewer: [map42.strexp.net (IANA)](https://map42.strexp.net) (requires WebGL)
-  - ISP Viewer: [isp42.strexp.net (IANA)](https://isp42.strexp.net)
-  - Registry Timeline: [timeline42.strexp.net (IANA)](https://timeline42.strexp.net)
+  - Registry Viewer (IP Blocks): [registry42.strexp.net (via IANA)](https://registry42.strexp.net) (requires WebGL)
+  - Map Viewer: [map42.strexp.net (via IANA)](https://map42.strexp.net) (requires WebGL, requires GPU)
+  - ISP Viewer: [isp42.strexp.net (via IANA)](https://isp42.strexp.net)
+  - Registry Timeline: [timeline42.strexp.net (via IANA)](https://timeline42.strexp.net)
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 - Web-based Ping & Traceroute: [ping.dn42](https://ping.dn42), or [ping2.sh](https://ping2.sh) (via clearnet)
 
@@ -51,7 +51,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 
 ### Health & Status
 - DNS System monitoring: [grafana.burble.com/d/E4iCaHoWk/dn42-dns-status](https://grafana.burble.com/d/E4iCaHoWk/dn42-dns-status?orgId=1&refresh=1m)
-- DNS monitor [dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
+- DNS monitor for all DN42 domains [dns-monitor.gensokyo.dn42](https://dns-monitor.gensokyo.dn42) (Web: IPv6 Only, Data: IPv4/IPv6)
 
 
 ### Speedtest
@@ -248,6 +248,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 |[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
 |172.23.77.38:27031|Quake Live Server|IPv4 only, connect with console using IP Address and Port #|
 |gc.rui.dn42:8443|Genshin Impact Private Server OSREL4.6|Contact ruifeng@ruinet.work or Telegram @justruiqwq for resources.|
+| mc.gensokyo.dn42 | Minecraft | IPv6 Only |
 
 ## Voice chat
 
@@ -266,6 +267,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 - e164.dn42 provides subdomains for each ASs in DN42
   - numbering pattern: 424-0-(last 4 digits of DN42 ASN)
   - management: [https://e164.dn42](https://e164.dn42) (login via Kioubit Auth)
+- There is a [PR ongoing](https://git.dn42.dev/dn42/registry/pulls/6522) to support e164 schema on dn42 registry.
 
 ## Challenges
 
