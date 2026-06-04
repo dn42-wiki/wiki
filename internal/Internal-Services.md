@@ -88,6 +88,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | [flap-dn42.ruinet.work](flap-dn42.ruinet.work) | AS211575 | |
 | <https://flaps.mashiro.dn42/> | AS4242420214 | |
 | <https://flap.defelo.dn42/>, <https://flap-dn42.defelo.de/> | AS4242422357 | |
+| <https://flaps.s6v.dn42>, <https://flaps.dn42.s6v.net/> | AS4242423432 | |
 
 
 ### ASN Authentication Solution
