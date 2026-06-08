@@ -15,3 +15,4 @@ Currently available exchanges:
 |SERNET-IX|[https://blog.sherpherd.net/ix.html](https://blog.sherpherd.net/ix.html)|
 |SerinaIX|<https://ix.dn42.serinanya.cn/>|
 |Nedifinita IX|<https://ix.nedifinita.com/>|
+|Yukisino IX|<https://yukisino.dn42/>|
