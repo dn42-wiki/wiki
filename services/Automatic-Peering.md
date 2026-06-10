@@ -15,7 +15,7 @@ AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://pee
 AS4242421023 | [Iris Network](https://network.owo.li/) |  Clearnet → <https://autopeer.owo.li/> <br> DN42 → <https://autopeer.iris.dn42/>|
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
-AS4242422016 | [sidereal](https://dn42.sidereal.ca) |  Clearnet → <https://dn42.sidereal.ca> <br> DN42 → <https://sidereal.dn42/>|
+AS4242422016 | [sidereal](https://dn42.sidereal.ca) |  Clearnet → <https://dn42.sidereal.ca> <br> DN42 → <https://sidereal.dn42>|
 AS4242422189 | [iEdon Networks](https://iedon.net) | Clearnet → <https://iedon.net/> <br> DN42 → <https://iedon.dn42/> |
 AS4242422225 | [MARAUN](https://peering.maraun.de) | <https://peering.maraun.de> |
 AS4242422227 | [PUDUNET](https://pudunet.net) | <https://pudunet.net> |
