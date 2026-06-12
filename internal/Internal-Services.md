@@ -128,6 +128,7 @@ Other servers:
 | <http://j.munsternet.dn42>    | Jellyfin instance with movies and TV shows (test).           |
 | <http://miyuzaki.dn42>        | Jellyfin instance containing Korean Variety Shows            |
 | <https://e621ng.dn42>         | Just e621ng, contains bunch of nsfw                          |
+| <https://wiki.gensokyo.dn42>  | Mirrors of some wikimedia sites and other wikis              |
 
 ## Radio and Video Streaming
 
