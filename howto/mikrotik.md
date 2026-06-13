@@ -101,10 +101,10 @@ In this example, we will use the second method.
 ```
 /routing filter rule
 add chain=dn42-in rule="if (dst in 192.168.0.0/16 && dst-len > 16) { reject }"
-add chain=dn42-in rule="if (dst in 169.254.0.0/1 && dst-len > 16) { reject }"
+add chain=dn42-in rule="if (dst in 169.254.0.0/16 && dst-len > 16) { reject }"
 add chain=dn42-in rule="accept"
 add chain=dn42-out rule="if (dst in 192.168.0.0/16 && dst-len > 16) { reject }"
-add chain=dn42-out rule="if (dst in 169.254.0.0/1 && dst-len > 16) { reject }"
+add chain=dn42-out rule="if (dst in 169.254.0.0/16 && dst-len > 16) { reject }"
 add chain=dn42-out rule="accept"
 ```
 
