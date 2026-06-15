@@ -66,6 +66,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
 | Bingxin    | Global             | 200Mbps - 5Gbps | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
 | VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
+| CowGL      | Taichung, Taiwan   | 100/350 Mbps | `iperf3 -c txg.cow.dn42 -p 8964` <br> home network, please do not abuse :( |
 
 ### FlapAlerted instances
 
@@ -223,7 +224,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | Hostname / IP  | Remarks                                                                                                                                    |
 | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
 | \*.burble.dn42 | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
-| ntp.cow.dn42   | Operated by AS4242423999, anycast from all nodes |
+| ntp.cow.dn42   | Operated by AS4242423999, anycast on all nodes |
 | pool.ntp.dn42 | Project NTP Pool 42 Anycast. See also [ntp.dn42](https://ntp.dn42/) |
 
 ## Gaming
