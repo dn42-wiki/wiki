@@ -76,6 +76,7 @@ DN42’s RPKI RTR service endpoints are hosted by multiple operators. By configu
 | rpki.dn42.6700.cc        | 8282 | both          |
 | rpki.nia.dn42            | 8082 | both          |
 | rpki.routedbits.dn42     | 8082 | both          |
+| rpki.dn42.yuyuko.com / rpki.yuyuko.dn42 | 4282 | both |
 
 #### FlapAlerted RPKI RTR Servers
 
