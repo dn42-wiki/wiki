@@ -37,7 +37,7 @@ This list contains all services that are not fully automatic and require some ac
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
-AS4242420893 | [Maiyun-dn42](https://maiyun.me/dn42.html) | <https://github.com/myzhang1029/dn42-config-pub> |
+AS4242420893 | [Maiyun-dn42](https://maiyun.me/dn42.html) | DN42 → <https://git.dn42/MAIYUN-DN42/dn42-config-pub> <br> GitHub → <https://github.com/myzhang1029/dn42-config-pub> |
 AS4242421117 | [Yuyuko Network](https://dn42.yuyuko.com) | <https://dn42.yuyuko.com> |
 AS4242421732 | [BaragoonNetworks](https://as215887.net/dn42) | <https://peering.as215887.net> |
 
