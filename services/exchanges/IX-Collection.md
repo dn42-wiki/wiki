@@ -16,3 +16,4 @@ Currently available exchanges:
 |SerinaIX|<https://ix.dn42.serinanya.cn/>|
 |Nedifinita IX|<https://ix.nedifinita.com/>|
 |Yukisino IX|<https://yukisino.dn42/> <https://yukisino.sess.moe/>|
+|Yuyuko-IX|<https://ix-dn42.yuyuko.com/>|
