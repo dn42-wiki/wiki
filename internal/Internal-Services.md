@@ -12,6 +12,16 @@ View a list of [service ideas](/internal/Ideas) and [historical services](/inter
 
 * [Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
 
+## Source Code Hosting
+
+### gitlab.dn42
+
+Maintained by [LeZi](mailto:lezi@leziblog.dn42) 
+
+- Registration is open, dn42 TLD email address is required for registration
+- Implement rolling backups
+- Runner is available that is connected exclusively to dn42
+
 ## Certificate Authority
 
 See this [page](/services/ca/Certificate-Authority) for the main certificate authority.
