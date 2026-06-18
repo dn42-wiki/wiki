@@ -12,16 +12,6 @@ View a list of [service ideas](/internal/Ideas) and [historical services](/inter
 
 * [Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
 
-## Source Code Hosting
-
-### gitlab.dn42
-
-Maintained by [LeZi](mailto:lezi@leziblog.dn42) 
-
-- Registration is open, dn42 TLD email address is required for registration
-- Implement rolling backups
-- Runner is available that is connected exclusively to dn42
-
 ## Certificate Authority
 
 See this [page](/services/ca/Certificate-Authority) for the main certificate authority.
@@ -205,6 +195,12 @@ See [Repository Mirrors](/internal/Repository-Mirrors).
 #### DHT Bootstrap
 
 - dht.leziblog.dn42:6881
+
+## Source Code Hosting
+
+| Hostname / IP | Maintainer | Remarks |
+| :--- | :--- | :--- |
+| gitlab.dn42 | [LeZi](mailto:lezi@leziblog.dn42) | Open registration (dn42 TLD email required), rolling backups, internal dn42 runner available. |
 
 ## Tor network
 
