@@ -1,4 +1,7 @@
 # VyOS 1.4.x sagitta
+
+> Running on v1.5.x ? Use the doc with [v1.5.x commands](./vyos1.5.x.md)
+
 VyOS is an open source software router.  It is feature rich and supports multiple deployment options such as physical hardware (Old PC's) or a VPC/VM.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.
 
 It can be downloaded here <https://www.vyos.io/rolling-release/>.  
