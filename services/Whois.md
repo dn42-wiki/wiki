@@ -147,4 +147,5 @@ The idea comes from the guys at cymru.com, who provide this service for the Inte
 
  * [whois42d](https://git.dn42.dev/registry/whois42d) written in golang, lightweight/fast, whois server with support for all registry objects, type filtering and systemd socket activation.
  * [who42rs](https://git.dn42.dev/C4TG1RL5/who42rs) a reimplementation of whois42d written in Rust
+ * [whois42d-ng](https://github.com/moraxyc/whois42d-ng) another implementation of whois42d written in Rust
 
