@@ -302,6 +302,30 @@ nserver:            ns2.foo.dn42
 source:             DN42
 ```
 
+### Telephony Prefix
+
+(Optional) To register a telephony prefix, create a `telephony` object in the data/telephony directory. telephony attribute must be in full E.164 format (include the '+' symbol). nserver attribute must be lowercase.
+
+example: data/telephony/+04240000
+
+```
+telephony:          +04240000
+admin-c:            FOO-DN42
+tech-c:             FOO-DN42
+mnt-by:             FOO-MNT
+nserver:            ns1.foo.dn42
+nserver:            ns2.foo.dn42
+source:             DN42
+```
+
+Telephony numbers will be queried with ENUM-like domain in `tel.dn42`, like `*.0.0.0.0.4.2.4.0.tel.dn42.`
+
+To prevent spoofing via DNS hijacking, it's recommended to add DNSSEC delegations using `ds-rdata` attributes to your telephony mapping domain:
+
+```
+ds-rdata:           61857 13 2 bd35e3efe3325d2029fb652e01604a48b677cc2f44226eeabee54b456c67680c
+```
+
 # Get some peers
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all their peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/BGP-communities).
