@@ -62,6 +62,7 @@ Please consider joining these anycast adresses when you set up your server. Upda
 | Bandura     | whois.bandura.dn42        | 172.22.149.225 / fd04:234e:fc31::1 (may change in the future) |
 | SUNNET     | whois.sun.dn42        | 172.21.100.134 / fdc8:dc88:ee11:128::134 |
 | Yuyuko-Network | whois.yuyuko.dn42:4243 | 172.21.86.1 / fd42:4242:1117::ac15:5601 |
+| moraxyc | whois.moraxyc.dn42 | 172.21.86.222 / fdea:a10b:3d3a::1 |
 
 **Down**
 
