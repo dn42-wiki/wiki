@@ -233,6 +233,12 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | ntp.cow.dn42   | Operated by AS4242423999, anycast on all nodes |
 | pool.ntp.dn42 | Project NTP Pool 42 Anycast. See also [ntp.dn42](https://ntp.dn42/) |
 
+## NNTP (Usenet Style Newsgroups)
+
+| Hostname / IP   | Remarks                                                                                                                                    |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| nntp.shiva.dn42 | Good old fashioned newsgroups, Usenet style. September never ends! HTTP site with server rules and config at http://nntp.shiva.dn42        |
+
 ## Gaming
 
 | Hostname / IP                                                                                                                                   | Game                       | Remarks                                                                                              |
