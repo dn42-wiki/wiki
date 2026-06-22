@@ -67,6 +67,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | Bingxin    | Global             | 200Mbps - 5Gbps | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
 | VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
 | CowGL      | Taichung, Taiwan   | 100/350 Mbps | `iperf3 -c txg.cow.dn42 -p 8964` <br> home network, please do not abuse :( |
+| ANDREW-MNT | New Orleans, USA | 5Gbps | `iperf3 -c iperf.andrew.dn42 -p 5201` or [speed.andrew.dn42](http://speed.andrew.dn42) | 
 
 ### FlapAlerted instances
 
