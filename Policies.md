@@ -1,5 +1,13 @@
 # Policies
 
+## Bridging from the Internet
+
+dn42 is a separate network from Internet and users are actively discouraged from creating publicly accessible services that allow direct access to the dn42 IP space from the Internet; this includes public NAT and VPN services.
+
+dn42 is primarily for learning about network technologies. Providing zero effort access to the network runs counter to that core purpose and prevents users gaining experience of learning how to create and configure their own network.
+
+Preventing direct access also helps keep AI scrapers and other abuses that are common on the Internet, away from the network. 
+
 ## Network / Port scans
 
 A network scan involves examining hosts in a network. The general aim is to find information such as open ports, software versions, and vulnerabilities. Depending on how the scan is performed, many packets are sent to the individual hosts at short intervals.
