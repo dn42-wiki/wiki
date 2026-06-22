@@ -135,6 +135,9 @@ From now on, you should use:
 
 This applies to AS numbers, network prefixes, routes, DNS records...
 
+Please also read the [Policies](/Policies) for guidance on acceptable resource requests.
+
+
 ### Register an AS number
 
 To register an AS number, create an `as-name` object in `data/aut-num/`.
@@ -166,7 +169,11 @@ source:             DN42
 
 #### IPv6
 
-To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. A single /48 allocation is typical and will likely provide more than enough room for all devices you will ever connect. The smallest announceable prefix length is /64.
+Even if you do not currently support IPv6, networks in dn42 are encouraged to be IPv6 first and many services are available only using IPv6. 
+
+To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. 
+
+A single /48 allocation is typical, it will provide more than enough room for a global network and there are no compelling reasons for choosing a different size. The smallest announceable prefix length is /64 but registering IP blocks smaller than /48 can often be limiting and restrict what you can do.
 
 dn42 is interconnected with other networks, like icvpn, which also use the same ULA range so a registration in the dn42 registry can't prevent IPv6 conflicts. A fully random prefix (see [RFC4193](https://tools.ietf.org/html/rfc4193)) is recommended; finding a conflict and needing to renumber your network is no fun.
 
@@ -206,22 +213,20 @@ If there are no free subnets of the size you want, you may split a larger block 
 
 Check the registry (data/inetnum) to make sure no-one else has allocated the same prefix. There are some IP ranges that are not open for assignments or are reserved for specific uses, so you should also check that the parent block has an 'open' policy. A quick and simple way to see the block policies is to run `grep "^policy" data/inetnum/*`.
 
-| Size | Comment                  |
-|-----:|:-------------------------|
-| /29  | starter pack             |
-| /28  | usually enough           |
-| **/27**  | **default allocation**       |
-| /26  | usually enough           |
-| /25  | still a lot of IPs!      |
-| /24  | are you an organization? |
+| Size | IP addresses | Comment                  |
+|-----:|:-------------|:-------------------------|
+| /29  | 8            | tiny allocation         |
+| /28  | 16           | may be suitable for small networks |
+| **/27**  | 32 | **default allocation**       |
+| /26  | 64 | more than enough for the largest networks |
 
-The current guideline is to allocate a /27 or smaller by default, keeping space for up to a /26 if possible. Don't allocate more than a /25 worth of addresses and please **think before you allocate**.
+Please **think before you allocate**; the current guideline is to allocate a /27 by default.  
 
-dn42 typically uses point-to-point addressing in VPN tunnels making transit network unnecessary, a single IP address per host should be sufficient. If you are going to have 2-3 servers, a /28 is plenty; same will go for most home-networks. You cannot, however, allocate prefixes smaller than /29. dn42 is not the public internet, but our IPv4-space is valuable too!
+New users will not be allocated an IP block larger than /26. 
 
-If you need a /24 or larger, please ask in the IRC chan or on the mailing list and expect to provide justification. You should also ensure the range you've requested is in a suitable block.
+dn42 typically uses point-to-point addressing in VPN tunnels making transit networks unnecessary, a single IP address per host or public service will be sufficient and you should consider IPv6 first or NAT for devices that do not directly offer dn42 services. dn42 is not the public internet, but our IPv4-space is valuable too!
 
-**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). Don't go for a /24 _just to have RDNS_.
+**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). 
 
 example: data/inetnum/172.20.150.0_27
 ```conf

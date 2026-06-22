@@ -1,12 +1,91 @@
 # Policies
 
+## Resource Allocations
+
+dn42 global resources are limited so, by necessity, all requests for resources above the typical allocations must be treated as exceptions. If users genuinely need additional resources they can be provided, but the registry maintainers can only do this by challenging every request to ensure it is justified. It's not fair to throw away resources now and then require much stricter limits in the future because we ran out of space.
+
+Users applying for additional resources should consider their requests against the following criteria:
+
+ - Does your allocation provide **additional value** to the rest of the dn42 community?
+
+Allocations for personal use are harder to justify, why should you get global, community resources if that doesn't provide any value back to the community?
+
+ - Why is your use case **exceptional**?
+
+Requests for additional resources cannot be the norm, so they must be exceptional.\
+What makes your use special over everybody else in the network?\
+Why should you get additional resources when other people will not be able to have them?
+
+ - Is your request based on **demonstrable need**?
+
+Additional resources should only be requested where there is clear evidence that existing resources are being fully utilised and are insufficient for the current requirement. Resources will not be granted based on anticipated future demand or the possibility that they may be needed later.
+
+If you are developing a new service that requires additional resources, you should first deploy and operate the service so that the requirement can be demonstrated and justified.
+
+### New Users
+
+Typical and maximum allocations for new users
+
+| | ASN | IPv6 Allocation | IPv4 Allocation |
+|:--|:--|:--|:--|
+| Typical | 1 | /48 | /27 |
+| Maximum | 1 | /48 | /26 |
+
+The typical allocation provides enough resources for most new users; it is suitable for doing all the fun things in dn42 and growing your network.
+
+For IPv4, new users should be aware that allocations smaller than a /27 can become restrictive. Even if your network is currently small, a /27 usually provides a better starting point and gives you room to expand later without requiring a second resource request or fragmenting the IP space.
+
+For IPv6, there is generally no advantage to request anything other than a /48. Even if your network doesn't support IPv6 yet, some parts of dn42 are IPv6-only, and IPv6 is the preferred protocol for many services. Allocations smaller than a /48 can be very restrictive, while a /48 provides enough address space for even very large networks.
+
+When registering for the first time, new users will not be allocated more than the maximum amounts shown above.
+
+These limits are based on the principle of demonstrable need. Additional resources are provided when there is clear evidence that existing resources are being fully used and are no longer sufficient.
+
+For this reason, please do not register and immediately request more resources. Requests for additional allocations will normally only be considered after you can demonstrate that your current allocations are actively in use and no longer meet your requirements.
+
+### ASN Allocations
+
+ASNs are administrative, not geographical boundaries; additional ASNs are not required for additional nodes or to provide geographic services.
+
+Additional ASNs 'for testing' are also unlikely to be provided.
+
+Alternative approaches include:
+
+- Setting up local lab environment using private ASNs in the 42xxxxxxxx range, outside the dn42 424242xxxx range. There's no problem peering locally with your dn42 router as an external peer to testing policies and what it looks like, or even having your own local mini dn42 with multiple peers and transits.
+
+- You can already view how the rest of the network sees your ASN via looking glasses; it's also instructive to see how other user's policies impact your announcements. Learning what to look for or diagnose problems using a looking glass is a valuable skill in its own right.
+
+- Talk to your peers! dn42 is a community and most users will be happy to help.
+
+### IPv4 Allocations
+
+A typical IPv4 allocation is /27. This provides you with 32 x /32 IPv4 addresses which is often more than enough for most networks. You should typically only require 1 IPv4 address for each peering node or service on dn42.
+
+The smallest routable IPv4 prefix size in dn42 is /29.
+
+Total IPv4 allocations greater than /26 will be challenged and you will be expected to provide robust justification.
+
+Allocations >= /25 are rare and >= /24 require mailing list consensus; these will require extraordinary justification and are almost never granted apart from the most exceptional (and usually temporary) circumstances.
+
+If you have a requirement for a large number of IP addresses you should consider using IPv6 first.
+
+You should also consider using NAT for anything not directly providing dn42 services (for example, where you want to access dn42 from a homelab or laptop, but are not providing services to the rest of the dn42 community).
+
+### IPv6 Allocations
+
+The smallest routable IPv6 prefix size in dn42 is /64.
+
+There are very few reasons for not allocating the standard /48 address block; it provides a huge address space sufficient to run a global network whilst smaller block sizes can often be limiting.
+
+A typical IPv6 address plan will use /56 subnets per site, with the typical /48 providing for 256 x /56 sites and 256 x /64 networks per site.
+
 ## Bridging from the Internet
 
-dn42 is a separate network from Internet and users are actively discouraged from creating publicly accessible services that allow direct access to the dn42 IP space from the Internet; this includes public NAT and VPN services.
+dn42 is a separate network from the public Internet. While dual-homed services can be beneficial (for example, looking glasses), users should not provide services that grant direct access to the dn42 address space from the Internet. This includes, public NAT gateways, VPN services, proxies, or other mechanisms that allow non-dn42 users to reach dn42 resources.
 
 dn42 is primarily for learning about network technologies. Providing zero effort access to the network runs counter to that core purpose and prevents users gaining experience of learning how to create and configure their own network.
 
-Preventing direct access also helps keep AI scrapers and other abuses that are common on the Internet, away from the network. 
+Preventing direct access from the public Internet also helps protect the network from abuse, including AI scrapers, large-scale crawlers, and other unwanted traffic that is commonplace on the Internet. This reduces unnecessary load on network participants and contributes to a safer and more stable environment.
 
 ## Network / Port scans
 
