@@ -30,17 +30,17 @@ Another option would be to signal opt-outs via the wiki:
 | `EXAMPLE-MNT` | 172.0.0.1/24 | Yes |
 
 
-## Registry cleanup process
-This process is used to remove inactive objects based on MRT data and the git commit history.
-The process is to be executed on a regular basis (yearly).
+## Registry cleanup
 
 A maintainer is classified as "inactive" if the following conditions have been fulfilled:
 1. All of the ASNs the maintainer has been directly or indirectly associated with (in any way and by following all references, whether through mnt-by, admin-c, tech-c, etc. or through an ORG) have not been observed originating any prefix in the global routing table at any point within the last three years. (Determined by analyzing the daily MRT RIB dumps provided by the DN42 Global Route collector.)
-2. The maintainer has not edited any of the ASNs they are associated with in the registry within the last three years. (Determined by analyzing the git commit history.)
+2. The maintainer has not edited any of the ASN objects they are associated with in the registry within the last three years. (Determined by analyzing the git commit history.)
 
 Maintainers that are not affiliated with an ASN (whether directly or indirectly or through other maintainers) are also considered inactive regardless of whether they fulfill the above conditions.
+A maintainer may also ask to opt out from a cleanup operation.
 
 ### Process
+The process is to be executed on a regular basis (yearly).
 
 Using **registry_wizard (written for v0.4.12)**:
 
