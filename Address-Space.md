@@ -54,4 +54,22 @@ Specific policy restrictions:
 | 172.23.16.0/21 | Closed to new allocations |
 | 172.21.0.0/18<br/>172.21.128.0/17<br/>172.22.192.0/18 | Reserved for future use |
 
+# Telephony Numbering Space
 
+dn42 uses `+042` for telephony country code.
+
+The standard format is `+042-[N]-[XXXX]-ext`.
+
+> To maintain compatibility with SIP/PBX software and E.164 standards, the maximum total number length MUST NOT exceed 15 digits. Consequently, the extension part (ext) can only be between 0 and 7 digits long.
+
+| Prefix | Usage |
+|--------|-------|
+| +042-{0,1} | Reserved (for system or future administrative use) |
+| +042-2 | Open for customized prefix |
+| +042-4 | Open for AS424242XXXX MNT |
+| +042-{3,5-9} | Reserved |
+
+## Telephony Policies
+
+- An MNT SHOULD apply for only one telephony prefix unless there is sufficient justification provided.
+- E.164 numbers assigned by the ITU (traditional PSTN numbers) SHOULD NOT be entered into the registry at this time.
