@@ -277,13 +277,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 - gensokyo.dn42 runs an asterisk based VOIP service with fax modems, CallerID playback and PSTN to DN42 proxy gateway (+1 424 242 9915). ENUM supported via e164.dn42.
-  - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo <424008039910>
-
-### Telephone Number Mapping (ENUM)
-- e164.dn42 provides subdomains for each ASs in DN42
-  - numbering pattern: 424-0-(last 4 digits of DN42 ASN)
-  - management: [https://e164.dn42](https://e164.dn42) (login via Kioubit Auth)
-- There is a [PR ongoing](https://git.dn42.dev/dn42/registry/pulls/6522) to support e164 schema on dn42 registry.
+  - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo ({src ip}) <+042408039910>
 
 ## Challenges
 
