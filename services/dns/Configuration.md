@@ -155,11 +155,11 @@ recursor:
           - 'fd42:4242:2189::1'                   # i.delegation-servers.dn42
           - 'fd42:5d71:219:0:216:3eff:fe1e:22d6'  # j.delegation-servers.dn42
           - 'fdcf:8538:9ad5:1111::2'              # k.delegation-servers.dn42
-          - 'fd86:bad:11b7:53::1'                 # l.delegation-servers.dn42
+          - 'fd86:bad:11b7:53::1'                 # h.delegation-servers.dn42
           - 'fd42:d42:d42:53::1'                  # a0.recursive-servers.dn42
           - 'fd42:d42:d42:54::1'                  # a3.recursive-servers.dn42
           - 'fd00:913e:130::1000'                 # d.recursive-servers.dn42
-          - 'fd86:bad:11b7:53::2'                 # l.recursive-servers.dn42
+          - 'fd86:bad:11b7:53::2'                 # h.recursive-servers.dn42
           - 'fdcf:8538:9ad5:1111::1'              # k.recursive-servers.dn42
           - 'fdbc:f9dc:67ad:2547::53'             # t.recursive-servers.dn42
           - 'fd42:4242:2189::53'                  # i.recursive-servers.dn42
@@ -363,7 +363,7 @@ Current list of delegation servers (as of 2025-11-18):
 | i.delegation-servers.dn42 | 172.23.91.1 | fd42:4242:2189::1 |
 | j.delegation-servers.dn42 | 172.20.1.254 | fd42:5d71:219:0:216:3eff:fe1e:22d6 |
 | k.delegation-servers.dn42 | 172.20.14.34 | fdcf:8538:9ad5:1111::2 |
-| l.delegation-servers.dn42 | 172.22.108.54 | fd86:bad:11b7:53::1 |
+| h.delegation-servers.dn42 | 172.22.108.54 | fd86:bad:11b7:53::1 |
 
 All the examples here list 172.20.129.1/fd42:4242:2601:ac53::1, but users are encouraged to configure
 multiple services from *.delegation-servers.dn42 for redundancy.
