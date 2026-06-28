@@ -28,6 +28,7 @@
   * [VyOS](/howto/vyos1.4.x)
   * [NixOS](/howto/nixos)
   * [GeoFeed](/howto/GeoFeed)
+  * [Telephony42 (Asterisk)](/howto/telephony42-Asterisk)
 
 * Services
   * [IRC](/services/IRC)
