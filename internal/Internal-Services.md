@@ -238,7 +238,7 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 | Hostname / IP   | Remarks                                                                                                                                    |
 | :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| nntp.shiva.dn42 | Good old fashioned newsgroups, Usenet style. September never ends! HTTP site with server rules and config at http://nntp.shiva.dn42        |
+| nntp.shiva.dn42 | Good old fashioned newsgroups, Usenet style. September never ends! HTTP site with server rules and config at <http://nntp.shiva.dn42>        |
 
 ## Gaming
 
