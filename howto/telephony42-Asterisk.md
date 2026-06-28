@@ -183,7 +183,7 @@ exten => _+042X.,1,Goto(ext-routing,${EXTEN},1)
 exten => _X!,1,Goto(ext-routing,+042${EXTEN},1)
 
 
-Calls originating from external networks via ENUM.
+; Calls originating from external networks via ENUM.
 [context-enum]
 
 ; starts with 00 -> replace with + and route out
