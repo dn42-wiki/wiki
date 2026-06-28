@@ -16,7 +16,7 @@ Two independent anycast services are also provided:
 | a3.recursive-servers.dn42 | 172.23.0.53 | fd42:d42:d42:53::1 |
 
 All the examples here list 172.20.0.53/fd42:d42:d42:54::1, but users are encouraged to configure
-multiple services from *.recursive-servers.dn42 for redundancy. 
+multiple services from *.recursive-servers.dn42 for redundancy.
 
 ## Note on ICVPN Zones
 
@@ -91,7 +91,7 @@ options {
 
 ## dnsmasq
 
-If you are running dnsmasq under openwrt, you just have to add 
+If you are running dnsmasq under openwrt, you just have to add
 
 ```conf
 config dnsmasq
@@ -108,7 +108,7 @@ config dnsmasq
 
 ```
 
-to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42` 
+to `/etc/config/dhcp` and run `/etc/init.d/dnsmasq restart`. After that you are able to resolve `.dn42`
 with the anycast DNS-Server, while your normal requests go to your standard DNS-resolver.
 
 Attention: If you go with the default config you'll have to disable "boguspriv" in the first dnsmasq config section.
@@ -182,7 +182,7 @@ root_servers["10.in-addr.arpa."] = "dn42_root"
 
 ## Unbound
 
-Make sure to disable `auto-trust-anchor-file` and manually configure `trust-anchor-file` to 
+Make sure to disable `auto-trust-anchor-file` and manually configure `trust-anchor-file` to
 point to a file with DNSKEY records for dn42.
 
 ```conf
@@ -194,32 +194,32 @@ server:
       local-zone: "10.in-addr.arpa." nodefault
       local-zone: "d.f.ip6.arpa." nodefault
 
-forward-zone: 
+forward-zone:
       name: "dn42"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
-forward-zone: 
+forward-zone:
       name: "20.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
-forward-zone: 
+forward-zone:
       name: "21.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
-forward-zone: 
+forward-zone:
       name: "22.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
-forward-zone: 
+forward-zone:
       name: "23.172.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
 
-forward-zone: 
+forward-zone:
       name: "10.in-addr.arpa"
       forward-addr: fd42:d42:d42:54::1
       forward-addr: 172.20.0.53
