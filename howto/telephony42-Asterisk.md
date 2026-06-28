@@ -66,7 +66,7 @@ This file defines how Asterisk listens to the network, sets up templates for dev
 ```ini
 [global]
 type=global
-# verified peers first
+; verified peers first
 endpoint_identifier_order=auth_username,username,ip
 
 ; ==========================================
