@@ -1,12 +1,12 @@
-# Getting Started with telephony42 (Asterisk)
+# Getting Started with telephony (Asterisk)
 
-This guide will help you quickly deploy a working Asterisk PBX. By the end of this tutorial, you will be able to make and receive calls in telephony42.
+This guide will help you quickly deploy a working Asterisk PBX. By the end of this tutorial, you will be able to make and receive calls in telephony.
 
 ## Prerequisites
 
 Before configuring Asterisk, ensure you have:
 
-1. An allocated telephony42 (`+042`) number prefix registered in the registry (e.g., `+04240000`).
+1. An allocated telephony (`+042`) number prefix registered in the registry (e.g., `+04240000`).
 2. DNS NAPTR records correctly configured on your zone in `tel.dn42`.
 
 Example of wildcard NAPTR record to route any calls to your PBX at `pbx.yourdomain.dn42` with SIP port `5060`:
