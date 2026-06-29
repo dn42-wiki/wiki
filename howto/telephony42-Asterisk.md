@@ -94,7 +94,7 @@ local_net=fd00::/8
 [phone-template](!)
 type=endpoint
 context=context-local          ; Incoming calls from this phone go here
-allow=!all,opus,g722,alaw,ulaw ; Prioritize Opus and G.722 HD audio
+allow=!all,ulaw,alaw           ; Use standard audio formats
 rtp_symmetric=yes
 force_rport=yes
 rewrite_contact=yes
@@ -130,7 +130,7 @@ remove_existing=yes
 [peer-enum-inbound]
 type=endpoint
 context=context-enum   ; Send unknown incoming calls to ENUM context
-allow=!all,opus,g722,alaw,ulaw
+allow=!all,ulaw,alaw           ; Use standard audio formats
 rtp_symmetric=yes
 force_rport=yes
 rewrite_contact=yes
@@ -151,7 +151,7 @@ match=fd00::/8
 
 [peer-enum-outbound]
 type=endpoint
-allow=!all,opus,g722,alaw,ulaw
+allow=!all,ulaw,alaw           ; Use standard audio formats
 send_pai=yes
 ```
 
