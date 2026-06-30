@@ -63,6 +63,9 @@ Document your mad setups in the categories below, with links to a full write up,
 - haksrpd: Greeting to dn42 from Kim! Access dn42 with latest Chromium on Red Star OS 3.0.
 ![Access dn42 with latest Chromium on Red Star OS 3.0](https://blog.sherpherd.net/img/greeting%20from%20red%20os%203.0.png)
 
+- calvin: DN42 from your wrist! A working DN42 node with bgp on a android watch
+Running a BGP enabled dn42 node on **almost any** linux device via my [userspace router written in golang](https://github.com/lin-calvin/gouter)
+Try to access the http server on my watch via [172.22.138.40:8080](http://172.22.138.40:8080) (not 7x24 online)
 ## Things that use dn42
  - Fun stuff that you've done with dn42
 
