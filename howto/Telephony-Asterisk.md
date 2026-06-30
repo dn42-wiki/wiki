@@ -1,6 +1,6 @@
 # Getting Started with telephony (Asterisk)
 
-This guide will help you quickly deploy a working Asterisk PBX. By the end of this tutorial, you will be able to make and receive calls in telephony.
+This guide will help you quickly deploy a working Asterisk PBX. By the end of this tutorial, you will be able to make and receive calls within dn42.
 
 ## Prerequisites
 
@@ -235,6 +235,6 @@ You can now connect a softphone (like MicroSIP, Zoiper, or Linphone) or a hardwa
 * Username: `<EXT_NAME>`
 * Password: `<SECRET_PASS>`
 
-Once connected, ask a friend in telephony42 to call your `<FULL_NUMBER>`.
+Once connected, ask a friend to call your `<FULL_NUMBER>`.
 
 *Tip: Install and use `sngrep -c` in your PBX's terminal to visually monitor SIP traffic if calls fail.*
