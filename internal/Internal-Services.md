@@ -371,6 +371,7 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <http://it.vr18.dn42/>                     | handy tools for developers                                                                       |
 | <https://ntfy.weil-isso.dn42>              | NTFY (Push Notify via REST-API)                                                                  |
 | kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
+| ad-01.bakabaka9.dn42                       | Key Management Server (with Offical Windows Srv KMS Host Server) Only can Active Office 2016 all version (TEST Purposes only) |
 | anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                 |
 | <https://coin.dn42>                        | Cryptocurrency                                                                                   |
 | <https://mempool.dn42>                     | Bitcoin explorer                                                                                 |
