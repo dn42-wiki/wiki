@@ -45,7 +45,7 @@ services:
     restart: unless-stopped
 ```
 
-# Example configuration
+## Example configuration
 
 Asterisk relies on many configuration files. This guide will focus only on two main config files:
 - `pjsip.conf`: Network, Endpoints, and Authentication
@@ -59,7 +59,7 @@ When copying the configurations below, replace the following variables (remove t
 * `<FULL_NUMBER>`: The full `+042` number for your extension (e.g., `+042400000001`)
 * `<SECRET_PASS>`: A strong password
 
-## PJSIP (`pjsip.conf`)
+### PJSIP (`pjsip.conf`)
 
 This file defines how Asterisk listens to the network, sets up templates for devices, creates your local extension, and prepares an anonymous endpoint to catch incoming ENUM calls.
 
@@ -155,7 +155,7 @@ allow=!all,ulaw,alaw           ; Use standard audio formats
 send_pai=yes
 ```
 
-## Dialplan (`extensions.conf`)
+### Dialplan (`extensions.conf`)
 
 The file tells Asterisk how to route numbers. It is divided into serveral contexts.
 
@@ -226,7 +226,7 @@ Apply your configuration by entering the Asterisk CLI:
 asterisk -rx 'core reload'
 ```
 
-# Setting up your extension
+## Setting up your extension
 
 You can now connect a softphone (like MicroSIP, Zoiper, or Linphone) or a hardware IP Phone/ATA using the following details:
 
@@ -238,3 +238,4 @@ You can now connect a softphone (like MicroSIP, Zoiper, or Linphone) or a hardwa
 Once connected, ask a friend to call your `<FULL_NUMBER>`.
 
 *Tip: Install and use `sngrep -c` in your PBX's terminal to visually monitor SIP traffic if calls fail.*
+
