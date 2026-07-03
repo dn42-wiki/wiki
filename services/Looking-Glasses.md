@@ -11,7 +11,7 @@ Please sort by AS number.
 | 1955 | ext: <br>$ telnet lg.hbone.hu <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> > show ipv6 bgp 65535 vpnuni rd 65535:42 <br> ext2: <http://embed.ftelnet.ca/?Hostname=hbonelg.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br>this node have full v4/v6 unicast/multicast and some more fun tables from <https://www.hbone.hu> like inner ospfv2/v3, ldp and mpls-segment-routing states/trees, or the <https://map.geant.org/> mdvpn routes and the looback0/32+label connectivity for them see the login banner for more things to look here |
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
-| 4242420020 | dn42: <http://lg.not.dn42/> DN42 only dual-stack|
+| 4242420020 | dn42: <http://lg.not.dn42/> dual-stack <br> ext:<https://lg.iputils.de> dual-stack|
 | 4242420150 | dn42 (multiple): <https://darkpoint.dn42> <br> ext (multiple): <https://dn42.darkpoint.xyz> |
 | 4242420214 | dn42: <https://lg.mashiro.dn42> <br> ext: <https://lg.origincode.me> |
 | 4242420454 | dn42: <http://edu.dn42/> <br> ext: <https://dn42.nedifinita.com/> |
