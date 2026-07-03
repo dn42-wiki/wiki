@@ -68,6 +68,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
 | CowGL      | Taichung, Taiwan   | 100/350 Mbps | `iperf3 -c txg.cow.dn42 -p 8964` <br> home network, please do not abuse :( |
 | ANDREW-MNT | New Orleans, USA | 5Gbps | `iperf3 -c iperf.andrew.dn42 -p 5201` or [speed.andrew.dn42](http://speed.andrew.dn42) | 
+| Gabriel GGR | Curitiba, Brazil | 250/500 Mbps | [speed.gabrielggr.dn42](http://speed.gabrielggr.dn42) | 
 
 ### FlapAlerted instances
 
