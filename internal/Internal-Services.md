@@ -330,6 +330,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://baka.dn42>            | Baka.Pub DN42 website (clearnet mirror)           |
 | <https://blog.sess.dn42>       | Session's Blogsite (clearnet mirror)              |
 | <https://franta.dn42>          | Franta's website (clearnet mirror)                |
+| <https://busrzi.dn42> | Simple visitor counter service|
 
 ## Pastebins
 
