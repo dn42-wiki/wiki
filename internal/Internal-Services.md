@@ -277,9 +277,13 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
-- gensokyo.dn42 runs an asterisk based VOIP service with fax modems, CallerID playback and PSTN to DN42 proxy gateway (+1 424 242 9915). ENUM supported via e164.dn42.
+- gensokyo.dn42 runs asterisk based VOIP services.
   - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo ({src ip}) <+042408039910>
+  - PSTN to DN42 proxy gateway (+1 424 242 9915), default caller ID: Gensokyo Tele42 Proxy for {src num} <+042408038100>
+  - Web fax sender: [fax.gensokyo.dn42/tx/](https://fax.gensokyo.dn42/tx/)
+  - Web fax receiver: [fax.gensokyo.dn42/rx/](https://fax.gensokyo.dn42/rx/)
 - [yp.dn42](https://yp.dn42): YellowPage for telephony42. Editable if login with oauth.dn42 or iEdon Auth42.
+  - PDF telephone directory book at [yp.dn42/books/](https://yp.dn42/books/)
 - [gabrielggr.dn42](http://gabrielggr.dn42) runs an echo test on +04222222.
 
 ## Challenges
