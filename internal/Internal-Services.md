@@ -334,7 +334,8 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://baka.dn42>            | Baka.Pub DN42 website (clearnet mirror)           |
 | <https://sess.dn42>            | SessNetwork dn42 website                          |
 | <https://franta.dn42>          | Franta's website (clearnet mirror)                |
-| <https://busrzi.dn42> | Simple visitor counter service|
+| <https://busrzi.dn42>          | Simple visitor counter service                    |
+| <https://fennec.dn42>          | FennecNet/Kit's dn42 website                      |
 
 ## Pastebins
 
