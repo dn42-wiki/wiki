@@ -53,7 +53,7 @@ Add the Wireguard peer
 
 ```
 /interface wireguard peers
-add name=DN42-KIOUBIT interface=<THE_INTERFACE_YOU_CREATED_EARLIER> endpoint-address=<THEIR_PUBLIC_ADDRESS> endpoint-port=<THEIR_WIREGUARD_PORT> public-key="<THEIR_WIREGUARD_PUBLIC_KEY>" allowed-address=fd00::/8,fe80::/10,172.20.0.0/14
+add name=DN42-KIOUBIT interface=DN42-KIOUBIT endpoint-address=<THEIR_PUBLIC_ADDRESS> endpoint-port=<THEIR_WIREGUARD_PORT> public-key="<THEIR_WIREGUARD_PUBLIC_KEY>" allowed-address=fd00::/8,fe80::/10,172.20.0.0/14
 ```
 
 At this point the tunnel should come up on its own, assuming the other end is already configured. However, it's not useful yet without an IP address attached to it.
@@ -167,10 +167,25 @@ add chain=dn42-out comment="advertise DN42 and interconnected v6 prefixes" disab
 Connection template
 ----
 
-WIP
-
 Create a template with the common BGP settings used for DN42:
 ```
 /routing bgp template
-set DN42-thighhighs afi=ip,ipv6 as=424242<YOUR_ASN> input.filter=dn42-in multihop=yes name=DN42-thighhighs output.filter-chain=dn42-out .redistribute=connected,bgp routing-table=main
+add afi=ip,ipv6 as=424242<YOUR_ASN> input.filter=dn42-in multihop=yes name=DN42-thighhighs output.filter-chain=dn42-out .redistribute=connected,bgp routing-table=main
+```
+
+Create an address list containing your DN42 subnet allocation:
+
+```
+/ipv6 firewall address-list
+add address=YOUR_ALLOCATED_SUBNET/MASK list=DN42_allocated_v6
+```
+
+Add a peer connection
+----
+
+For each tunnel, you need to add a BGP connection to the respective peer's BGP server, and bind it to the respective link-local addresses:
+
+```
+add afi=ipv6 as=424242<YOUR_ASN> disabled=no input.filter=dn42-in instance=DN42 local.address=fe80::2762%DN42-KIOUBIT .role=ebgp multihop=yes name=iedon output.filter-chain=\
+    dn42-out .network=DN42_allocated_v6 .redistribute=connected,static,bgp remote.address=<THEIR_IPV6_PEER_ADDRESS>%DN42-KIOUBIT/128 .as=424242<THEIR_ASN> templates=DN42-thighhighs
 ```
