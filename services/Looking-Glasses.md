@@ -12,6 +12,7 @@ Please sort by AS number.
 | 64719 | ext: <https://lg.dn42.lutoma.org> <br> dn42: <https://lg.lutoma.dn42> |
 | 64737 | ext: <https://lg.dn42.us> |
 | 4242420020 | dn42: <http://lg.not.dn42/> dual-stack <br> ext:<https://lg.iputils.de> dual-stack|
+| 4242420132 | dn42: <https://lg.fennec.dn42> |
 | 4242420150 | dn42 (multiple): <https://darkpoint.dn42> <br> ext (multiple): <https://dn42.darkpoint.xyz> |
 | 4242420214 | dn42: <https://lg.mashiro.dn42> <br> ext: <https://lg.origincode.me> |
 | 4242420454 | dn42: <http://edu.dn42/> <br> ext: <https://dn42.nedifinita.com/> |
