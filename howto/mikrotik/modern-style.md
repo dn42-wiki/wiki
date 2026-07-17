@@ -186,6 +186,7 @@ Add a peer connection
 For each tunnel, you need to add a BGP connection to the respective peer's BGP server, and bind it to the respective link-local addresses:
 
 ```
+/interface wireguard peers
 add afi=ipv6 as=424242<YOUR_ASN> disabled=no input.filter=dn42-in instance=DN42 local.address=fe80::2762%DN42-KIOUBIT .role=ebgp multihop=yes name=iedon output.filter-chain=\
     dn42-out .network=DN42_allocated_v6 .redistribute=connected,static,bgp remote.address=<THEIR_IPV6_PEER_ADDRESS>%DN42-KIOUBIT/128 .as=424242<THEIR_ASN> templates=DN42-thighhighs
 ```
