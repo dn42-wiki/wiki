@@ -69,6 +69,8 @@ Kioubit is using fe80::ade0 on the remote end of the tunnel. We also chose a lin
 add address=fe80::2762/128 interface=DN42-KIOUBIT advertise=no
 ```
 
+**⚠ Note: as of 7.23.2, there seems to be a bug when reusing the same link-local address on multiple tunnels. TCP seems to work fine, but RouterOS will route all responses to ICMP pings through the first tunnel which has that link-local address assigned!**
+
 If you're using an IPv4 address, you can attach it to the loopback interface. This allows the address to be reused for multiple peering connections, without being "owned" by any of the wireguard interfaces.
 ```
 /ip/address
