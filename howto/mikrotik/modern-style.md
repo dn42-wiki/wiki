@@ -190,3 +190,18 @@ For each tunnel, you need to add a BGP connection to the respective peer's BGP s
 add afi=ipv6 as=424242<YOUR_ASN> disabled=no input.filter=dn42-in instance=DN42 local.address=fe80::2762%DN42-KIOUBIT .role=ebgp multihop=yes name=iedon output.filter-chain=\
     dn42-out .network=DN42_allocated_v6 .redistribute=connected,static,bgp remote.address=<THEIR_IPV6_PEER_ADDRESS>%DN42-KIOUBIT/128 .as=424242<THEIR_ASN> templates=DN42-thighhighs
 ```
+
+Preferred Source Address
+----
+
+By default, the router's own outgoing traffic will use the respective tunnel's address, which is link-local and so won't get routed. You can give your router an address from your allocation by assigning it to an existing interface or by creating an empty bridge. Then you need to modify the `accept` filter in the `dn42-in` in order to set it as the preferred address for all routes:
+
+```
+/interface/bridge
+add name=dn42-dummy
+/ipv6/address
+add address=<YOUR_ALLOCATED_SUBNET>::1/64 advertise=no interface=dn42-dummy
+/routing/filter/rule
+add chain=dn42-in comment="set source address and accept" rule=\
+    "if (dst in fd00::/8) { set pref-src <YOUR_ALLOCATED_SUBNET>::1; accept }"
+```
