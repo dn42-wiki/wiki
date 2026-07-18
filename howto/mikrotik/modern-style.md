@@ -4,7 +4,7 @@ This page is a scratchpad for a fully modernised (2026) config running on the la
 Wireguard tunnel setup
 ====
 
-Wireguard seems to be the most popular option for peering now, so we'll use that. The first step is to setup a Wireguard interface. You can use a single interface for all connections if you want, but I prefer to make one for each peer, as it can make problems easier to debug.
+Wireguard seems to be the most popular option for peering now, so we'll use that. The first step is to setup a Wireguard interface for a tunnel. You need to setup a dedicated Wireguard interface for each peer because the Wireguard daemon uses the (static, equal for all peers) `allowed-address` list and not the OS routing table to decide which peer to send packets to.
 
 For the sake of this example we'll pretend we're peering with Kioubit, one of the most-connected and easiest to connect-with systems on DN42.
 
