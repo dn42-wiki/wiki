@@ -36,6 +36,6 @@ the last one needs vlc4 off their nighty, the amt relay usually defuncs as geant
 
 Controllable at <http://webdj.nop.dn42/>
 
-* `mcjoin -j -i dnet [fd00:8e13:ce5d::9bee],[ff3e::8000:42]:4321` mping-sender
+* `mcjoin -j -i [INTERFACE] [fd00:8e13:ce5d::9bee],[ff3e::8000:42]:4321` mping-sender
 
 Feel free to ask for a peering and set it up!
