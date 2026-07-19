@@ -23,6 +23,7 @@ Current participants:
   * C4TG1RL5-MNT
   * KIOUBIT-MNT
   * PREVARINITE-MNT
+  * MARK22K-MNT
 
 ## Current streams
 
@@ -34,5 +35,7 @@ Public multicast to unicast relay with vlc4 and above:
 the last one needs vlc4 off their nighty, the amt relay usually defuncs as geant rents the p4 testbed....
 
 Controllable at <http://webdj.nop.dn42/>
+
+* `mcjoin -j -i dnet [fd00:8e13:ce5d::9bee],[ff3e::8000:42]:4321` mping-sender
 
 Feel free to ask for a peering and set it up!
