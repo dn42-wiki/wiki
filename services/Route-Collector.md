@@ -16,10 +16,10 @@ The GRC has a super node and several regional nodes(RRC).
 
 Once you peer with an RRC, you no longer need to peer with the super node, as the RRC will report the collected routes to the super node.
 
-|Name|Type|Operator|ASN|Hostname|IPv4|IPv6|Remarks|
+|Name|Type|Operator|Node ASN|Hostname|IPv4|IPv6|Remarks|
 |:--|:--|:--|:--|:--|:--|:--|:--|
-|GRC|Center (Super node)|GRMML-MNT|4242422602|collector.dn42|172.20.0.179|fd42:d42:d42:179::1|-|
-|RRC Asia|Regional (Asia)|IEDON-MNT|4242422189|grc-hk.iedon.dn42|172.23.91.191|fd42:4242:2189:191::1|[https://grc-hk.iedon.net](https://grc-hk.iedon.net)|
+|GRC|Super node|GRMML-MNT|4242422602|collector.dn42|172.20.0.179|fd42:d42:d42:179::1|-|
+|RRC Asia|Regional|IEDON-MNT|4242422189|grc-hk.iedon.dn42|172.23.91.191|fd42:4242:2189:191::1|[https://grc-hk.iedon.net](https://grc-hk.iedon.net)|
 
 ### BGP Configuration
 
