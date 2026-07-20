@@ -4,18 +4,22 @@ The Global Route Collector (GRC) provides a real time view of routing and peerin
 
 Technically the GRC is a [bird](https://bird.network.cz/) instance that anyone can peer with, it imports all routes whilst exporting none and provides a number of interfaces for querying the route data.
 
+The DN42 route collector service has now been designed with an architecture comprising a super-node and multiple regional nodes(RRC).
+
 Data from the GRC is used to generate some of the DN42 Maps (see the [Internal Services](/internal/Internal-Services) page).
 
 ## Peering with the collector
 
 The collector uses the dynamic peering capability in Bird2 to allow anyone to peer with it without any new server side configuration being required. The collector relies on users peering with it across the network so the more peers the better and the more comprehensive the collector data will be.
 
-||Details|
-|:--|:--|
-| ASN | AS4242422602 |
-| Hostname | collector.dn42 |
-| IPv4 Address | 172.20.0.179 |
-| IPv6 Address | fd42:d42:d42:179::1 |
+The GRC has a super node and several regional nodes(RRC).
+
+Once you peer with an RRC, you no longer need to peer with the super node, as the RRC will report the collected routes to the super node.
+
+|Name|Type|Operator|ASN|Hostname|IPv4|IPv6|Remarks|
+|:--|:--|:--|:--|:--|:--|:--|:--|
+|GRC|Center (Super node)|GRMML-MNT|4242422602|collector.dn42|172.20.0.179|fd42:d42:d42:179::1|-|
+|RRC Asia|Regional (Asia)|IEDON-MNT|4242422189|grc-hk.iedon.dn42|172.23.91.191|fd42:4242:2189:191::1|[https://grc-hk.iedon.net](https://grc-hk.iedon.net)|
 
 ### BGP Configuration
 
@@ -30,6 +34,7 @@ protocol bgp ROUTE_COLLECTOR
 {
   local as ***YOUR_ASN***;
   neighbor fd42:d42:d42:179::1 as 4242422602;
+  # Or, `neighbor fd42:4242:2189:191::1 as 4242422189;` if you would like to use the regional service, "RRC Asia" for example.
 
   # enable multihop as the collector is not locally connected
   multihop;
