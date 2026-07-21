@@ -92,6 +92,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | <https://flaps.mashiro.dn42/> | AS4242420214 | |
 | <https://flap.defelo.dn42/>, <https://flap-dn42.defelo.de/> | AS4242422357 | |
 | <https://flaps.s6v.dn42>, <https://flaps.dn42.s6v.net/> | AS4242423432 | |
+| <https://flap.fennec.dn42/> | AS4242420132 | |
 
 
 ### ASN Authentication Solution
@@ -356,6 +357,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | Hostname                        | Remarks                                                      |
 | ------------------------------- | ------------------------------------------------------------ |
 | <https://social.gensokyo.dn42>  | GoToSocial, Register available via gitlab.dn42 or oauth.dn42 |
+| <https://social.fennec.dn42> | Mastodon Glitch-Soc, login/register via Kioubit auth |
 
 
 ## E-Mail
