@@ -63,6 +63,7 @@ Please consider joining these anycast adresses when you set up your server. Upda
 | SUNNET     | whois.sun.dn42        | 172.21.100.134 / fdc8:dc88:ee11:128::134 |
 | Yuyuko-Network | whois.yuyuko.dn42:4243 | 172.21.86.1 / fd42:4242:1117::ac15:5601 |
 | moraxyc | whois.moraxyc.dn42 | 172.21.86.222 / fdea:a10b:3d3a::1 |
+| Bingxin | whois.baka.dn42 | 172.20.154.225 / fddf:3681:e80:225::1 |
 
 **Down**
 
