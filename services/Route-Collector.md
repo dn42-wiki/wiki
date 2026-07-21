@@ -16,14 +16,14 @@ The GRC has a super node and several regional nodes(RRC).
 
 Once you peer with an RRC, you no longer need to peer with the super node, as the RRC will report the collected routes to the super node.
 
-|Name|Type|Operator|Node ASN|Hostname|IPv4|IPv6|Remarks|
+|Name|Type|Operator|Node ASN|Hostname|IPv4|IPv6|Peering Policy|
 |:--|:--|:--|:--|:--|:--|:--|:--|
-|GRC|Super node|GRMML-MNT|4242422602|collector.dn42|172.20.0.179|fd42:d42:d42:179::1|-|
-|RRC Asia|Regional|IEDON-MNT|4242422189|grc-hk.iedon.dn42|172.23.91.191|fd42:4242:2189:191::1|[https://grc-hk.iedon.net](https://grc-hk.iedon.net)|
+|[GRC](https://lg.collector.dn42/)|Super|GRMML-MNT|4242422602|collector.dn42|172.20.0.179|fd42:d42:d42:179::1|multihop|
+|[RRC Asia](https://grc-hk.iedon.net)|Regional|IEDON-MNT|4242422189|grc-hk.iedon.dn42|172.23.91.191|fd42:4242:2189:191::1|Prefer [direct peering here](https://iedon.net/nodes) rather than multihop|
 
 ### BGP Configuration
 
- - Unlike normal DN42 peerings, you must enable multihop to peer with the collector
+ - Unlike normal DN42 peerings, you may have to enable multihop to peer with the GRC(Some nodes prefer direct peering rather than multihop, please check peering policy)
  - The collector supports Multiprotocol BGP, so you don't need to configure separate IPv4 and IPv6 sessions
  - Please enable the Add Paths BGP extension to export all available routes
 
