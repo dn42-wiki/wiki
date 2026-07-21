@@ -8,6 +8,7 @@ This list includes only systems that offer instant peering (fully self-service, 
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
+AS4242422213 | [AFNOOI](https://doot.uk.to) | <https://peer.115411.xyz> |
 AS4242420207 | [RoutedBits](https://dn42.routedbits.io) | <https://dn42.routedbits.io> |
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hcartiaux.github.io/dn42/> |
