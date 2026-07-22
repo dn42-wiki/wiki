@@ -54,7 +54,7 @@ The net result is you must ensure that the filenames you create in /etc/sysctl.d
 Do not configure iptables/nftables to drop packets with invalid conntrack state in forward chain.
 
 In some cases your router will not see traffic from both sides e.g. requests are sent via different path not including your networks
-but responses are fowarded via your network. This will prevent conntrack from assigning any meaningful state information to these packets
+but responses are forwarded via your network. This will prevent conntrack from assigning any meaningful state information to these packets
 and your firewall will drop it if it is configured to drop packets with invalid state.
 
 
