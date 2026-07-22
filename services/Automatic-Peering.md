@@ -16,6 +16,7 @@ AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://pee
 AS4242421023 | [Iris Network](https://network.owo.li/) |  Clearnet → <https://autopeer.owo.li/> <br> DN42 → <https://autopeer.iris.dn42/>|
 AS4242421117 | [Yuyuko Network](https://dn42.yuyuko.com) | <https://dn42.yuyuko.com> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
+AS4242421810 | [Sabrina's testnet](https://dn42.sabrinaishere.party) | <https://dn42.sabrinaishere.party/peer> |
 AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.cc> |
 AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
 AS4242422016 | [sidereal](https://dn42.sidereal.ca) |  Clearnet → <https://dn42.sidereal.ca> <br> DN42 → <https://sidereal.dn42>|
