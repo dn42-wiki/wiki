@@ -134,8 +134,6 @@ The collector runs [bird_exporter](https://github.com/czerwonk/bird_exporter) an
 
 ### SSH Interface
 
-**Update**: The SSH interface is currently not available, but will be enabled in the future.
-
 The collector bird instance can be queried directly using a birdc shell.
 
  - ssh shell@collector.dn42
@@ -153,15 +151,13 @@ for querying the route collector
 Be nice, access is logged and
 abuse will not be tolerated
 ------------------------------------
-BIRD burble-2.0.8-210322-1-ge6133456 ready.
+BIRD 2.19.1 ready.
 Access restricted
 bird> show route count
-bird>       297441 of 297441 routes for 502 networks in table master4
-286007 of 286007 routes for 427 networks in table master6
-1437 of 1437 routes for 1437 networks in table dn42_roa4
-1231 of 1231 routes for 1231 networks in table dn42_roa6
-Total: 586116 of 586116 routes for 3597 networks in 4 tables
-bird> 
+3634623 of 3634623 routes for 1358 networks in table master4
+3758721 of 3758721 routes for 1300 networks in table master6
+Total: 7393344 of 7393344 routes for 2658 networks in 2 tables
+bird>
 
 ```
 
