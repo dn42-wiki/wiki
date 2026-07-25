@@ -117,7 +117,7 @@ The collector runs a looking glass based on [bird-lg-go](https://github.com/xddx
 
 ### MRT Dumps
 
-[MRT Dumps](https://tools.ietf.org/html/rfc6396) are produced by the collector every 10 minutes. Bird produces MRT dumps corresponding to tables, so two separate dumps are created, one for IPv4 (master4) and one for IPv6 (master6). The 10 minutes dumps are available for one week before being reduced down to one a day. 
+[MRT Dumps](https://tools.ietf.org/html/rfc6396) are produced by the collector every 10 minutes. Bird produces MRT dumps corresponding to tables, so four separate dumps are created, one for IPv4 Unicast (master4), one for IPv6 Unicast (master6), one for IPv4 Multicast (multicast4) and one for IPv6 Multicast (multicast6). The 10 minutes dumps are available for one week before being reduced down to one a day. 
 
  - <https://mrt.collector.dn42>
 
@@ -125,6 +125,8 @@ The latest dumps can always be found at the following URLs:
 
  - <https://mrt.collector.dn42/master4_latest.mrt.bz2>
  - <https://mrt.collector.dn42/master6_latest.mrt.bz2>
+ - <https://mrt.collector.dn42/multicast4_latest.mrt.bz2>
+ - <https://mrt.collector.dn42/multicast6_latest.mrt.bz2>
 
 ### Prometheus Metrics
 
