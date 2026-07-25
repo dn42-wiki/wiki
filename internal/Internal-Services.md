@@ -93,6 +93,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | <https://flap.defelo.dn42/>, <https://flap-dn42.defelo.de/> | AS4242422357 | |
 | <https://flaps.s6v.dn42>, <https://flaps.dn42.s6v.net/> | AS4242423432 | |
 | <https://flap.fennec.dn42/> | AS4242420132 | |
+| <https://flap.maiyun.dn42/> | AS4242420893 | |
 
 
 ### ASN Authentication Solution
