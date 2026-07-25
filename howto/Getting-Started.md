@@ -307,6 +307,22 @@ nserver:            ns2.foo.dn42
 source:             DN42
 ```
 
+Before you push your commit to the registry, you can verify your configuration and the working of your authoritative server:
+
+```
+$ ./validate-my-dns.py FOO-MNT
+NOTE:  foo.dn42 doesn't have any ds-rdata specified
+NOTE:  d.6.a.6.2.9.9.4.5.3.d.f.ip6.arpa doesn't have any ds-rdata specified
+
+Summary:
+
+domain name                       | success | dnssec fail | wrong NS | wrong SOA | NXDOMAIN | REFUSED | SERVFAIL | timeout
+----------------------------------|---------|-------------|----------|-----------|----------|---------| -------- | -------
+ foo.dn42                         |       1 |           0 |        0 |         0 |        0 |       0 |        0 |       0
+ d.6.a.6.2.9.9.4.5.3.d.f.ip6.arpa |       1 |           0 |        0 |         0 |        0 |       0 |        0 |       0
+
+```
+
 ### Telephony Prefix
 
 (Optional) To register a telephony prefix, create a `telephony` object in the data/telephony directory. telephony attribute must be in full E.164 format (include the '+' symbol). nserver attribute must be lowercase.
