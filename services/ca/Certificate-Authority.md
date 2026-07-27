@@ -121,6 +121,9 @@ which will show among other things:
 
 - cacert have a comprehensive FAQ on how to import your own root certificates in [browsers](http://wiki.cacert.org/FAQ/BrowserClients) and [other software](http://wiki.cacert.org/FAQ/ImportRootCert)
 
+### Programming Languages
+- Rust: crate [`dn42-root-ca`](https://crates.io/crates/dn42-root-ca/) (works like `webpki-roots`)
+
 ### Archlinux
 
 Install `ca-certificates-dn42` from [AUR](https://aur.archlinux.org/packages/ca-certificates-dn42/)
