@@ -12,6 +12,7 @@ AS4242420207 | [RoutedBits](https://dn42.routedbits.io) | <https://dn42.routedbi
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hcartiaux.github.io/dn42/> |
 AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://peer-dn42.nedifinita.com/> |
+AS4242420842 | [HEADSCARF175](https://headscarf175.net/) | <https://peer.headscarf175.net/> |
 AS4242421023 | [Iris Network](https://network.owo.li/) |  Clearnet → <https://autopeer.owo.li/> <br> DN42 → <https://autopeer.iris.dn42/>|
 AS4242421117 | [Yuyuko Network](https://dn42.yuyuko.com) | <https://dn42.yuyuko.com> |
 AS4242421588 | [TECH9 CORE NETWORK](https://www.chrismoos.com/dn42-peering) | <https://www.chrismoos.com/dn42-peering> |
