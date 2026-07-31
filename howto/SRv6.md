@@ -2,7 +2,7 @@
 layout: post_dn42
 title: "SRv6 for Default Routing Table"
 ---
-In previous [post](howto/DN42-Over-SRv6-L3VPN), I have wrote how did I deploy DN42 over SRv3 L3VPN on my infrastructure, but haven't mention a more popular scenario: SRv6 for traffic looking up default routing table, not everyone want to mess with VRF (it's a trouble for service deployment and eBGP peering either). 
+In previous [post](/howto/DN42-Over-SRv6-L3VPN), I have wrote how did I deploy DN42 over SRv3 L3VPN on my infrastructure, but haven't mention a more popular scenario: SRv6 for traffic looking up default routing table, not everyone want to mess with VRF (it's a trouble for service deployment and eBGP peering either). 
 
 This article is about how to configure SRv6 for default routing table, with help of Containerlab for demostration.
 
@@ -51,7 +51,7 @@ net.vrf.strict_mode resets 0 everytime a new VRF adds, to prevent network operat
 # 4 BGP SRv6 for Default Routing Table
 No VRF configuration involved in FRR, all happens in default scope.
 
-Skip the deamons, SRv6 Locator and IS-IS configuration as they already shown in previous [post](howto/DN42-Over-SRv6-L3VPN).
+Skip the deamons, SRv6 Locator and IS-IS configuration as they already shown in previous [post](/howto/DN42-Over-SRv6-L3VPN).
 
 Send SRv6 encapsulation information in Unicast families, and use "sid export" instead "sid vpn export".
 
@@ -426,7 +426,7 @@ rtt min/avg/max/mdev = 0.117/0.151/0.180/0.025 ms
 ```
 
 # 7 Known Limits
-This section is copied from my previous [post](howto/DN42-Over-SRv6-L3VPN).
+This section is copied from my previous [post](/howto/DN42-Over-SRv6-L3VPN).
 
 ## 7.1 NAT
 When destination route has SRv6 encapsulation, the traffic won't trigger SNAT rule in netfilter, instead, it encapsulates into SRv6 traffic directly then send out.
