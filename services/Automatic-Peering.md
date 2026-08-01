@@ -1,6 +1,6 @@
 # Automatic Peering
 
-It is recommended to use the [Public node directory](https://peerfinder.dn42.dev/) to find the network with the lowest latency to peer with.
+It is recommended to use the [Peer Finder](https://peerfinder.dn42.dev/) to find the network with the lowest latency to peer with.
 
 ## Fully self-service
 
