@@ -273,9 +273,10 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 ## Voice chat
 
-| Hostname / IP              | Remarks                    |
-| :------------------------- | :------------------------- |
-| mumble://ty3r0x.dn42:64738 | Ty3r0X's Lair (men's club) |
+| Hostname / IP                  | Remarks                                           |
+| :----------------------------- | :------------------------------------------------ |
+| mumble://ty3r0x.dn42:64738     | Ty3r0X's Lair (men's club)                        |
+| mumble://yzynetwork.dn42:64738 | Mainly Chinese-speaking, but everyone is welcome. |
 
 ## VOIP/SIP
 
