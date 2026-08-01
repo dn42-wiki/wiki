@@ -84,6 +84,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420827 | ext: <https://lg.llyn.lorkep.trade> <br> dn42: <https://lg.lorkep.dn42> <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
 | 4242420927 | ext: <https://lg.dn42.liki.link> |
 | 4242420977 | ext: <https://lg.moerail.ml> <br> dn42: <http://lg.moerail.dn42> |
+| 4242421005 | dn42: <https://lg.yzynetwork.dn42> |
 | 4242421022 | ext: <https://lg.bsdrocker.com> |
 | 4242421050 | ext: <https://lg.dn42.napshome.net> <br> dn42: <http://lg.napshome.dn42> |
 | 4242421055 | dn42: <http://lg.tmwawpl.dn42> |
