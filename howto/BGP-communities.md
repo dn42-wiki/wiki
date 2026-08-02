@@ -47,6 +47,21 @@ bw = min(up,down) for asymmetric connections
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
 (64511, 34) :: encrypted with safe vpn solution with PFS (Perfect Forward Secrecy)
+(64511, 35): encrypted with safe vpn solution with PFS (Perfect Forward Secrecy) and post-quantum resistance but without post-quantum forward secrecy (e.g. WireGuard with PSK)
+(64511, 36): encrypted with safe vpn solution with PFS (Perfect Forward 
+Secrecy) and post-quantum forward secrecy (e.g. WireGuard with Rosenpass)
+
+(64511, 81) :: Physical connection (e.g. Ethernet cable, direct wireless link)
+(64511, 82) :: Connection over Internet Exchange Points (Manually or via router server) (e.g. Ethernet cable on a big switch)
+(64511, 83) :: Connection over Tunnel (e. g. WireGuard, fastd, GRE)
+(64511, 84) :: Connection over meshed Virtual Internet Exchange Points (Manually or via router server) (e.g. Tailscale, Tinc, n2n)
+(64511, 85) :: Connection over centralized Virtual Internet Exchange Points (Manually or via router server) (e.g. WireGuard to a single Server with a virtual switch)
+(64511, 89) :: Unknown type / Other type
+
+(6511, 91) :: almost 0% packet lost
+(6511, 92) :: up to 1% packet lost
+(6511, 93) :: up to 5% packet lost
+(6511, 94) :: over 5% packet lost (impossible link?)
 
 Propagation:
 - - for latency pick max(received_route.latency, link_latency)
@@ -71,6 +86,11 @@ $ ruby bgp-community.rb -6 dn42-2.higgsboson.tk 1000 pfs
   import where dn42_import_filter(3,25,34);
   export where dn42_export_filter(3,25,34);
 ```
+
+Peerings with packet loss exceeding 5% have proven to be unstable.
+Such peering connections should be avoided whenever possible.
+
+If an automated method is used to update the latency communities, care must be taken to ensure that the communities are not updated too frequently, in order to avoid flapping (a large number of attribute changes). For example, a script could always calculate the average latency over the last 12 hours and then set the new value accordingly.
 
 ### Route Origin
 There are two type of route origin: `region` and `country`
@@ -164,28 +184,56 @@ function update_bandwidth(int link_bandwidth) -> int {
 
 function update_crypto(int link_crypto) -> int {
   bgp_community.add((64511, link_crypto));
-       if (64511, 31) ~ bgp_community then { bgp_community.delete([(64511, 32..34)]); return 31; }
-  else if (64511, 32) ~ bgp_community then { bgp_community.delete([(64511, 33..34)]); return 32; }
-  else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..34)]); return 33; }
-  else return 34;
+       if (64511, 31) ~ bgp_community then { bgp_community.delete([(64511, 32..36)]); return 31; }
+  else if (64511, 32) ~ bgp_community then { bgp_community.delete([(64511, 33..36)]); return 32; }
+  else if (64511, 33) ~ bgp_community then { bgp_community.delete([(64511, 34..36)]); return 33; }
+  else if (64511, 34) ~ bgp_community then { bgp_community.delete([(64511, 35..36)]); return 34; }
+  else if (64511, 35) ~ bgp_community then { bgp_community.delete([(64511, 36..36)]); return 35; }
+  else return 36;
 }
-#Remove the following function if you do not want to advertize your region in the BGP community.
+
+function update_topology(int link_topology) -> int {
+  bgp_community.add((64511, update_topology));
+       if (64511, 89) ~ bgp_community then { bgp_community.delete([(64511, 81..88)]); return 89; }
+  else if (64511, 85) ~ bgp_community then { bgp_community.delete([(64511, 81..84)]); return 85; }
+  else if (64511, 84) ~ bgp_community then { bgp_community.delete([(64511, 81..83)]); return 84; }
+  else if (64511, 83) ~ bgp_community then { bgp_community.delete([(64511, 81..82)]); return 83; }
+  else if (64511, 82) ~ bgp_community then { bgp_community.delete([(64511, 81..81)]); return 82; }
+  else return 81;
+}
+
+function update_packetloss(int link_packetloss) -> int {
+  bgp_community.add((64511, link_packetloss));
+       if (64511, 94) ~ bgp_community then { bgp_community.delete([(64511, 91..93)]); return 94; }
+  else if (64511, 93) ~ bgp_community then { bgp_community.delete([(64511, 91..92)]); return 93; }
+  else if (64511, 92) ~ bgp_community then { bgp_community.delete([(64511, 91..91)]); return 92; }
+  else return 91;
+}
+
+# Remove the following function if you do not want to advertize your region in the BGP community.
 function update_geo_flags() -> bool {
   if (is_self_net() || is_self_net_v6()) && source = RTS_STATIC then {
     bgp_community.add((64511, DN_REGION_GEO));
     bgp_community.add((64511, DN_REGION_COUNTRY));
   }
 }
-function update_flags(int link_latency; int link_bandwidth; int link_crypto) -> bool
+
+function update_flags(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) -> bool
 int dn42_latency;
 int dn42_bandwidth;
 int dn42_crypto;
+int dn42_topology;
+int dn42_packetloss;
 {
   dn42_latency = update_latency(link_latency);
   dn42_bandwidth = update_bandwidth(link_bandwidth) - 20;
   dn42_crypto = update_crypto(link_crypto) - 30;
+  dn42_topology = update_topology(link_topology) - 80;
+  dn42_packetloss = update_packetloss(link_packetloss) - 90;
+
   # replace 4 with your calculated bandwidth value
   if dn42_bandwidth > 4 then dn42_bandwidth = 4;
+
   return true;
 }
 
