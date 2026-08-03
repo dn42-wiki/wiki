@@ -148,6 +148,7 @@ Other servers:
 | <http://icy.jones.dn42>                         | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)  |
 | <https://radio.vrpnet.dn42>                     | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap                            |
 | <http://webdj.nop.dn42/>                        | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/                  |
+| <http://sdr1.maiyun.dn42:8073/>                 | KiwiSDR HF SDR Receiver (aka clearnet <https://kiwisdr.ucsd.edu/>)                     |
 | <https://sdr.pebkac.dn42/>                      | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)   |
 | <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
 | <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
