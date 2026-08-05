@@ -66,7 +66,6 @@ Even if an interface is only intended to handle IGMP/MLD, PIM must be enabled on
 
 Current participants:
   * NOP-MNT
-  * GRAWITY-MNT
   * MIRSAL-MNT
   * C4TG1RL5-MNT
   * KIOUBIT-MNT
