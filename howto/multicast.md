@@ -62,6 +62,36 @@ The number of maximum groups is optional and can be set freely. For security rea
 IGMP and MLD messages must follow a specific format. `require-router-alert` filters out invalid messages.
 Even if an interface is only intended to handle IGMP/MLD, PIM must be enabled on it. If you still do not want to use PIM, a firewall rule is recommended.
 
+### nftables configuration
+
+Allow PIM:
+```
+iifname "[INTERFACE NAME]" ip6 saddr [SOURCE ADDRESS] ip6 daddr ff02::d meta protocol ip6 meta l4proto pim counter accept;
+```
+```
+iifname "[INTERFACE NAME]" ip saddr [SOURCE ADDRESS] ip daddr 224.0.0.13 meta protocol ip meta l4proto pim counter accept;
+```
+
+Allow MLDv2:
+```
+set icmp6_mld {
+    type icmpv6_type . icmpv6_code;
+    flags interval;
+    elements = {
+        mld-listener-query . 0,
+        mld2-listener-report . 0
+    };
+}
+```
+```
+iifname [CLIENT INTERFACE NAME] icmpv6 type . icmpv6 code @icmp6_mld ip6 hoplimit 1 exthdr hbh exists ip6 saddr fe80::/10 counter accept;
+```
+
+Allow IGMPv3:
+```
+iifname [CLIENT INTERFACE NAME] ip protocol igmp igmp type { membership-query, membership-report-v3 } ip ttl 1 counter accept;
+```
+
 ### Participants
 
 Current participants:
