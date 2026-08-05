@@ -11,6 +11,8 @@ For it to work, you'll need to do the following:
 
 You're done! You should receive the multicast routes from peers advertising them.
 
+## Configuration
+
 ### frr configuration
 
 Enable PIM:
@@ -92,7 +94,7 @@ Allow IGMPv3:
 iifname [CLIENT INTERFACE NAME] ip protocol igmp igmp type { membership-query, membership-report-v3 } ip ttl 1 counter accept;
 ```
 
-### Participants
+## Participants
 
 Current participants:
   * NOP-MNT
@@ -139,4 +141,5 @@ There are two implementations:
 * The [original implementation](https://github.com/troglobit/mping/) by troglobit, which supports both sending and receiving.
 * A [reimplementation](https://codeberg.org/mark22k/mping-sender), which supports only sending.
 
+Streams:
 * `mcjoin -j -i [INTERFACE] [fd00:8e13:ce5d::9bee],[ff3e::8000:42]:4321` mping-sender
