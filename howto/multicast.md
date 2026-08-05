@@ -11,8 +11,56 @@ For it to work, you'll need to do the following:
 
 You're done! You should receive the multicast routes from peers advertising them.
 
-[FRR configuration](https://git.lemonsh.moe/C4TG1RL5/dn42/src/branch/master/lab.rtr.famfo.catgirls.dn42/frr) used by C4TG1RL5.
-_Please make sure you understand how to configure and use frr before you use anything from this configuration!_
+### frr configuration
+
+Enable PIM:
+```
+router pim
+ no autorp discovery
+exit
+router pim6
+exit
+```
+For IPv4, you can also add the `send-v6-secondary` directive, which allows you to omit an IPv4 address (as with "extended next hop") on the interface. (Does this work? I haven't tried it yet.)
+
+Import kernel multicast table into frr:
+```
+ip import-table [TABLE NUMBER] mrib
+ipv6 import-table [TABLE NUMBER] mrib
+```
+This method is suitable when frr is used only as a multicast routing daemon and another daemon, such as bird, is used for BGP. In this case, bird can export the unicast routes intended for multicast to a special kernel routing table, and frr can import them. If frr also handles BGP, it can store the corresponding unicast routes directly in mrib.
+
+Enable PIM on a interface:
+```
+interface [INTERFACE NAME]
+ ip pim
+ ip pim use-source [SOURCE IPv4 ADDRESS]
+ ipv6 pim
+ ipv6 pim use-source [SOURCE IPv6 ADDRESS]
+exit
+```
+Specifying a source address is optional, but can be used if frr would otherwise select the wrong address.
+
+Enable multicast for a client:
+```
+interface client21
+ ip igmp
+ ip igmp max-groups 32
+ ip igmp require-router-alert
+ ip igmp version 3
+ ip pim
+ ip pim passive
+ ipv6 mld
+ ipv6 mld max-groups 32
+ ipv6 mld require-router-alert
+ ipv6 mld version 2
+ ipv6 pim
+ ipv6 pim passive
+exit
+```
+The number of maximum groups is optional and can be set freely. For security reasons, this number should not be set unreasonably high. Specifying an explicit IGMP or MLD version is also optional.
+IGMP and MLD messages must follow a specific format. `require-router-alert` filters out invalid messages.
+Even if an interface is only intended to handle IGMP/MLD, PIM must be enabled on it. If you still do not want to use PIM, a firewall rule is recommended.
 
 ### Participants
 
