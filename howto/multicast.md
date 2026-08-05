@@ -5,9 +5,9 @@
 ### Setup
 
 For it to work, you'll need to do the following:
-  * Ask your peering to enable ipv4/ipv6 multicast AFI on your peering
+  * Ask your peering to enable IPv4/IPv6 multicast AFI on your peering
   * Set up IPv4/IPv6 PIM for the (s,g) joins to pass through
-  * Be prepared to setup IGMP v3 and MLD v2 from your listeners
+  * Be prepared to setup IGMPv3 and MLDv2 from your listeners
 
 You're done! You should receive the multicast routes from peers advertising them.
 
@@ -25,17 +25,41 @@ Current participants:
   * PREVARINITE-MNT
   * MARK22K-MNT
 
+Feel free to ask for a peering and set it up!
+
 ## Current streams
 
-Public multicast to unicast relay with vlc4 and above:
-* `vlc rtp://172.23.199.110@232.2.3.2:1234/`
-* `vlc rtp://[fd40:cc1e:c0de::fffe]@[ff3e::8232:232]:1234/`
-* `vlc --amt-relay amt-relay.rtr2.c4e.hbone.hu amt://10.2.255.1@232.2.3.2:1234/`
-* `vlc --amt-relay amt-relay.geant.org amt://10.2.255.1@232.2.3.2:1234/`
-the last one needs vlc4 off their nighty, the amt relay usually defuncs as geant rents the p4 testbed....
+### NOP music stream
 
-Controllable at <http://webdj.nop.dn42/>
+cs broadcasts a 96 kHz, 24-bit music stream. An SDP file is required to receive it:
+```
+v=0
+o=Node 0 0 IN IP4 172.23.199.110
+s=None
+c=IN IP4 232.2.3.2
+t=0 0
+m=audio 1234 RTP/AVP 96
+a=rtpmap:96 L24/96000/2
+a=source-filter: incl IN IP4 232.2.3.2 172.23.199.110
+```
+```
+v=0
+o=Node 0 0 IN IP6 fd40:cc1e:c0de::fffe
+s=None
+c=IN IP6 ff3e::8232:232
+t=0 0
+m=audio 1234 RTP/AVP 96
+a=rtpmap:96 L24/96000/2
+a=source-filter: incl IN IP6 ff3e::8232:232 fd40:cc1e:c0de::fffe
+```
+
+The stream can then be streamed with `ffplay -protocol_whitelist file,fd,udp,rtp -fflags +genpts /path/to/sdp_file`.
+
+### mping
+
+mping is a program that sends a ping message to a multicast group every second (and responds to incoming pings, if any).
+There are two implementations:
+* The [original implementation](https://github.com/troglobit/mping/) by troglobit, which supports both sending and receiving.
+* A [reimplementation](https://codeberg.org/mark22k/mping-sender), which supports only sending.
 
 * `mcjoin -j -i [INTERFACE] [fd00:8e13:ce5d::9bee],[ff3e::8000:42]:4321` mping-sender
-
-Feel free to ask for a peering and set it up!
