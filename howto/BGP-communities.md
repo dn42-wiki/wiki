@@ -171,10 +171,10 @@ function update_crypto(int link_crypto) -> int {
 }
 #Remove the following function if you do not want to advertize your region in the BGP community.
 function update_geo_flags() -> bool {
-    if is_self_net() || is_self_net_v6() then {
-        bgp_community.add((64511, DN_REGION_GEO));
-	    bgp_community.add((64511, DN_REGION_COUNTRY));
-    }
+  if (is_self_net() || is_self_net_v6()) && source = RTS_STATIC then {
+    bgp_community.add((64511, DN_REGION_GEO));
+    bgp_community.add((64511, DN_REGION_COUNTRY));
+  }
 }
 function update_flags(int link_latency; int link_bandwidth; int link_crypto) -> bool
 int dn42_latency;
