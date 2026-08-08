@@ -113,22 +113,28 @@ Feel free to ask for a peering and set it up!
 cs broadcasts a 96 kHz, 24-bit music stream. An SDP file is required to receive it:
 ```
 v=0
-o=Node 0 0 IN IP4 172.23.199.110
-s=None
+o=- 0 0 IN IP4 172.23.199.110
+s=-
+i=NOP 96 kHz 24-bit music stream
+e=dn42@nop.hu
 c=IN IP4 232.2.3.2
-t=0 0
 m=audio 1234 RTP/AVP 96
 a=rtpmap:96 L24/96000/2
+a=recvonly
+a=type:broadcast
 a=source-filter: incl IN IP4 232.2.3.2 172.23.199.110
 ```
 ```
 v=0
-o=Node 0 0 IN IP6 fd40:cc1e:c0de::fffe
-s=None
+o=- 0 0 IN IP6 fd40:cc1e:c0de::fffe
+s=-
+i=NOP 96 kHz 24-bit music stream
+e=dn42@nop.hu
 c=IN IP6 ff3e::8232:232
-t=0 0
 m=audio 1234 RTP/AVP 96
 a=rtpmap:96 L24/96000/2
+a=recvonly
+a=type:broadcast
 a=source-filter: incl IN IP6 ff3e::8232:232 fd40:cc1e:c0de::fffe
 ```
 
