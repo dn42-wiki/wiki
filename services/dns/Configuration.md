@@ -291,7 +291,28 @@ Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "
 
 ## systemd-resolved
 
-If you are using systemd-networkd and systemd-resolved in a version later then v240 you can set up split DNS by adding the dn42 anycast servers to a interface:
+If you are using a systemd-resolved version later than v258, you can set up a [DNS Server Delegation](https://www.freedesktop.org/software/systemd/man/latest/systemd.dns-delegate.html), to delegate dn42 domain resolution to the anycast servers:
+
+```
+# /etc/systemd/dns-delegate.d/dn42.dns-delegate
+[Delegate]
+# configure dn42 anycast servers
+DNS=fd42:d42:d42:54::1
+DNS=172.23.0.53
+DNS=fd42:d42:d42:53::1
+DNS=172.20.0.53
+
+# configure all relevant dn42 domains as route-only domains
+Domains=~dn42
+Domains=~20.172.in-addr.arpa
+Domains=~21.172.in-addr.arpa
+Domains=~22.172.in-addr.arpa
+Domains=~23.172.in-addr.arpa
+Domains=~10.in-addr.arpa
+Domains=~d.f.ip6.arpa
+```
+
+If you are using a systemd-networkd and systemd-resolved version later than v240, you can set up split DNS by adding the dn42 anycast servers to an interface:
 
 ```
 [Match]
