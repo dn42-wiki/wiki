@@ -47,8 +47,8 @@ bw = min(up,down) for asymmetric connections
 (64511, 32) :: encrypted with unsafe vpn solution
 (64511, 33) :: encrypted with safe vpn solution (but no PFS - the usual OpenVPN p2p configuration falls in this category)
 (64511, 34) :: encrypted with safe vpn solution with PFS (Perfect Forward Secrecy)
-(64511, 35): encrypted with safe vpn solution with PFS (Perfect Forward Secrecy) and post-quantum resistance but without post-quantum forward secrecy (e.g. WireGuard with PSK)
-(64511, 36): encrypted with safe vpn solution with PFS (Perfect Forward 
+(64511, 35) :: encrypted with safe vpn solution with PFS (Perfect Forward Secrecy) and post-quantum resistance but without post-quantum forward secrecy (e.g. WireGuard with PSK)
+(64511, 36) :: encrypted with safe vpn solution with PFS (Perfect Forward 
 Secrecy) and post-quantum forward secrecy (e.g. WireGuard with Rosenpass)
 
 (64511, 81) :: Physical connection (e.g. Ethernet cable, direct wireless link)
