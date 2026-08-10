@@ -105,6 +105,7 @@ Authenticate your users by having them verify their ASN ownership with following
 |----------------------------------------------|---------------------------------|-----------|---------------------------------------------------------------|
 | Kioubit Authentication Services (4242423914) | Custom, OAuth2.0/OpenID Connect | No        | [Link](https://dn42.g-load.eu/about/authentication-services/) |
 | OAuth.dn42 (4242422189)                      | OAuth2.0/OpenID Connect         | No        | [Link](https://iedon.net/post/27)                             |
+| HExpNetwork WebAuth (4242420298)             | OAuth2.0/OpenID Connect         | No        | [Link](https://auth42.hexpnet.work/doc.html)                  |
 
 
 ## IRC
