@@ -290,19 +290,19 @@ function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypt
 }
 ```
 
-And in your /etc/bird/peers/example.conf peer config, where your peering connection are for example: 11 ms latency, 1000 Mbps bandwidth, pfs tunnel, using MP-BGP with ENH:
+And in your /etc/bird/peers/example.conf peer config, where your peering connection are for example: 11 ms latency, 1000 Mbps bandwidth, pfs tunnel, using MP-BGP with ENH, no packet loss:
 ```conf
 protocol bgp example from dnpeers {
     neighbor neighbor <neighborip><%interface if Link Local is used> as <AUT_NUM>;
     ipv4 {
         extended next hop on;
-		import where dn42_import_filter(3,25,34);
-		export where dn42_export_filter(3,25,34);
+		import where dn42_import_filter(3,25,34,83,91);
+		export where dn42_export_filter(3,25,34,83,91);
     };
 
     ipv6 {
-		import where dn42_import_filter(3,25,34);
-		export where dn42_export_filter(3,25,34);
+		import where dn42_import_filter(3,25,34,83,91);
+		export where dn42_export_filter(3,25,34,83,91);
     };
 ```
 
