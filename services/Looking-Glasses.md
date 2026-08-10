@@ -15,6 +15,7 @@ Please sort by AS number.
 | 4242420132 | dn42: <https://lg.fennec.dn42> |
 | 4242420150 | dn42 (multiple): <https://darkpoint.dn42> <br> ext (multiple): <https://dn42.darkpoint.xyz> |
 | 4242420214 | dn42: <https://lg.mashiro.dn42> <br> ext: <https://lg.origincode.me> |
+| 4242420298 | ext: <https://dn42.hexpnet.work/lg.html>
 | 4242420454 | dn42: <http://edu.dn42/> <br> ext: <https://dn42.nedifinita.com/> |
 | 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420893 | dn42: <https://lg.maiyun.dn42> |
