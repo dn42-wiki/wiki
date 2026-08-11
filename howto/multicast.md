@@ -140,7 +140,7 @@ a=source-filter: incl IN IP6 ff3e::8232:232 fd40:cc1e:c0de::fffe
 
 The stream can then be streamed with `ffplay -protocol_whitelist file,fd,udp,rtp -fflags +genpts /path/to/sdp_file` or mplayer or vlc.
 
-the actual rfc8866-sdp could be extracted from rfc2974-sap... when its not aes67 (rtp+sap+sdp) then it may be https://github.com/duncanthrax/scream
+the actual [RFC 8866](https://datatracker.ietf.org/doc/html/rfc8866)-sdp could be extracted from [RFC 2974](https://datatracker.ietf.org/doc/html/rfc2974)-sap... when its not aes67 (rtp+sap+sdp) then it may be [scream](https://github.com/duncanthrax/scream)
 
 ### mping
 
