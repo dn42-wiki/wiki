@@ -85,6 +85,7 @@ This wiki is the main reference for dn42. It is available in read-only mode from
 - [dn42.cc](https://dn42.cc)
 - [dn42.de](https://dn42.de) (IPv6 only)
 - [dn42.jp](https://dn42.jp)
+- [dn42.net](https://dn42.net)
 
 Editing is available from within dn42 at <https://wiki.dn42> ([HTTPS certificate](/services/ca/Certificate-Authority) required).
 
