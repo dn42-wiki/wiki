@@ -37,6 +37,7 @@ Please sort by AS number.
 | 4242422308 | ext: <https://lg.dn42.mirsal.fr> <br> dn42: <https://lg.mirsal.dn42> |
 | 4242422357 | ext: <https://lg-dn42.defelo.de> <br> dn42: <https://lg.defelo.dn42> |
 | 4242422439 | ext: <https://lg.dn42.saru.moe> <br> dn42: <https://lg.saru.dn42> |
+| 4242422466 | dn42: <https://sess.dn42/lgindex.html> |
 | 4242422558 | ext: <https://lg.dn42.derix.dev> <br> dn42: <https://lg.derix.dn42> |
 | 4242422575 | dn42: <https://lg.androw.dn42> <br> ext: <https://lg.androw.eu> |
 | 4242422601 | dn42: <http://lg.burble.dn42> <br> ext: <https://lg.burble.com> |
