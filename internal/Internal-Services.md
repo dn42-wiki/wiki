@@ -70,6 +70,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | ANDREW-MNT | New Orleans + Tallulah (LA), USA; London, UK (anycast) | 5Gbps (NOLA) / 2Gbps (LON) / 1Gbps (TLH) | `iperf3 -c iperf.andrew.dn42 -p 5201` or [speed.andrew.dn42](https://speed.andrew.dn42) — nearest site answers; per-node: `{nola,london,tallulah}.iperf.andrew.dn42` | 
 | Gabriel GGR | Curitiba, Brazil | 250/500 Mbps | [speed.gabrielggr.dn42](http://speed.gabrielggr.dn42) |
 | NETBOT      | Italy            | 800 Mbps     | `iperf3 -c speed.netbot.dn42`                         |
+| SessX6cf    | APAC               | 1-10 Gbps   | <https://speedtest.sess.dn42/> |
 
 ### FlapAlerted instances
 
