@@ -138,6 +138,8 @@ a=type:broadcast
 a=source-filter: incl IN IP6 ff3e::8232:232 fd40:cc1e:c0de::fffe
 ```
 
+also there is low bandwidth sap/sdp announcements of the format (sometimes 96k-24b, sometimes 48k-16b, ect) to 172.23.199.110,232.2.3.1:9875 that needs altering in terms of addresses embedded within, however vlc can pick it up
+
 The stream can then be streamed with `ffplay -protocol_whitelist file,fd,udp,rtp -fflags +genpts /path/to/sdp_file` or mplayer or vlc.
 
 the actual [RFC 8866](https://datatracker.ietf.org/doc/html/rfc8866)-sdp could be extracted from [RFC 2974](https://datatracker.ietf.org/doc/html/rfc2974)-sap... when its not aes67 (rtp+sap+sdp) then it may be [scream](https://github.com/duncanthrax/scream)
