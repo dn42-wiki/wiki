@@ -110,16 +110,16 @@ Feel free to ask for a peering and set it up!
 
 ### NOP music stream
 
-cs broadcasts a 96 kHz, 24-bit music stream. An SDP file is required to receive it:
+cs broadcasts a 48 kHz, 16-bit music stream. An SDP file is required to receive it:
 ```
 v=0
 o=- 0 0 IN IP4 172.23.199.110
 s=-
-i=NOP 96 kHz 24-bit music stream
+i=NOP 48 kHz 16-bit music stream
 e=dn42@nop.hu
 c=IN IP4 232.2.3.2
 m=audio 1234 RTP/AVP 96
-a=rtpmap:96 L24/96000/2
+a=rtpmap:96 L16/48000/2
 a=recvonly
 a=type:broadcast
 a=source-filter: incl IN IP4 232.2.3.2 172.23.199.110
@@ -128,17 +128,17 @@ a=source-filter: incl IN IP4 232.2.3.2 172.23.199.110
 v=0
 o=- 0 0 IN IP6 fd40:cc1e:c0de::fffe
 s=-
-i=NOP 96 kHz 24-bit music stream
+i=NOP 48 kHz 16-bit music stream
 e=dn42@nop.hu
 c=IN IP6 ff3e::8232:232
 m=audio 1234 RTP/AVP 96
-a=rtpmap:96 L24/96000/2
+a=rtpmap:96 L16/48000/2
 a=recvonly
 a=type:broadcast
 a=source-filter: incl IN IP6 ff3e::8232:232 fd40:cc1e:c0de::fffe
 ```
 
-also there is low bandwidth sap/sdp announcements of the format (sometimes 96k-24b, sometimes 48k-16b, ect) to 172.23.199.110,232.2.3.1:9875 that needs altering in terms of addresses embedded within, however vlc can pick it up
+also there is low bandwidth sap/sdp announcements of the format (sometimes 96k-24b, sometimes 48k-16b or 192k-32b ect) to 172.23.199.110,232.2.3.1:9875 that needs altering in terms of addresses embedded within, however vlc can pick it up
 
 The stream can then be streamed with `ffplay -protocol_whitelist file,fd,udp,rtp -fflags +genpts /path/to/sdp_file` or mplayer or vlc.
 
