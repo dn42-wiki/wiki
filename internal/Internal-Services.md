@@ -27,7 +27,6 @@ See this [page](/services/ca/Certificate-Authority) for the main certificate aut
   - ISP Viewer: [isp42.strexp.net (via IANA)](https://isp42.strexp.net)
   - Registry Timeline: [timeline42.strexp.net (via IANA)](https://timeline42.strexp.net)
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
-- Web-based Ping & Traceroute: [ping.dn42](https://ping.dn42), or [ping2.sh](https://ping2.sh) (via clearnet)
 
 ### Looking glasses
 See [Looking Glasses](/services/Looking-Glasses).
@@ -305,6 +304,7 @@ Test out your skills with online challenges
 | <https://burble.dn42/services/ping/> | burble.dn42 ping challenge  |
 | <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge 1    |
 | <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge 2    |
+| <https://exam.edu.dn42/?topic=dn42>  | Online test center, quizzes for testing your network skills! Run by NEXUS-MNT |
 
 
 ## Virtual machines
