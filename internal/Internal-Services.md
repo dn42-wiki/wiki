@@ -347,6 +347,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://busrzi.dn42>          | Simple visitor counter service                    |
 | <https://fennec.dn42>          | FennecNet/Kit's dn42 website                      |
 | <https://yzynetwork.dn42>      | YZYNetwork.dn42 website                           |
+| <https://nexus.dn42>           | qiuxin's personal blog                            |
 
 ## Pastebins
 
