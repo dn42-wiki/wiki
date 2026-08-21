@@ -27,3 +27,4 @@
 # Echo test services
  * If you have an E-Mail service and would like to test it's functionality, send an email to [zane_reick@dmail.dn42](mailto:zane_reik@dmail.dn42). You will get a response usually within a few hours.
  * [Deliverance](https://deliverance.dn42/) provides automated deliverability analysis. It checks your DNS records, inspects email headers and runs your email through spam detection suites. This provides an overall deliverability score for your email service.
+ * <echo@maiyun.dn42> automatically replies emails with the incoming full source. It is based on [this](https://github.com/myzhang1029/codes/blob/main/shell/postfix-echo) but is restricted to dn42 addresses.
