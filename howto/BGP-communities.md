@@ -193,7 +193,7 @@ function update_crypto(int link_crypto) -> int {
 }
 
 function update_topology(int link_topology) -> int {
-  bgp_community.add((64511, update_topology));
+  bgp_community.add((64511, link_topology));
        if (64511, 89) ~ bgp_community then { bgp_community.delete([(64511, 81..88)]); return 89; }
   else if (64511, 85) ~ bgp_community then { bgp_community.delete([(64511, 81..84)]); return 85; }
   else if (64511, 84) ~ bgp_community then { bgp_community.delete([(64511, 81..83)]); return 84; }
@@ -237,9 +237,23 @@ int dn42_packetloss;
   return true;
 }
 
+
+function dn42_import_filter_internal(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) {
+  if is_valid_network() then {
+    update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
+    accept;   # no +500 bonus — local_pref already set by the originating peer
+  }
+  if is_valid_network_v6() then {
+    update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
+    accept;
+  }
+  reject;
+}
+
+
 #Uses ROA, which means it should be imported before these functions
 
-function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypto) {
+function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) {
   # IPv4 routes with ROA
   if is_valid_network() && !is_self_net() then {
     if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
@@ -248,7 +262,7 @@ function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypt
       reject;
     }
 
-    update_flags(link_latency, link_bandwidth, link_crypto);
+    update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
 
     if (bgp_path.len = 1) then
       bgp_local_pref = bgp_local_pref + 500;
@@ -264,7 +278,7 @@ function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypt
       reject;
     }
 
-    update_flags(link_latency, link_bandwidth, link_crypto);
+    update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
 
     if (bgp_path.len = 1) then
       bgp_local_pref = bgp_local_pref + 500;
@@ -275,9 +289,10 @@ function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypt
   # Re
   reject;
 }
-function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto) {
+function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) {
   if is_valid_network() || is_valid_network_v6() then {
-    update_flags(link_latency, link_bandwidth, link_crypto);
+    if source = RTS_STATIC then bgp_community.add((64511, DN_REGION_GEO));
+    update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
     update_geo_flags();
     bgp_med = 0;
     bgp_med = bgp_med + ( ( 4 - ( link_crypto - 30 ) ) * 600 );
