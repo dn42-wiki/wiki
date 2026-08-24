@@ -241,7 +241,7 @@ int dn42_packetloss;
 function dn42_import_filter_internal(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) {
   if is_valid_network() then {
     update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
-    accept;   # no +500 bonus — local_pref already set by the originating peer
+    accept; 
   }
   if is_valid_network_v6() then {
     update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
@@ -291,8 +291,9 @@ function dn42_import_filter(int link_latency; int link_bandwidth; int link_crypt
 }
 function dn42_export_filter(int link_latency; int link_bandwidth; int link_crypto; int link_topology; int link_packetloss) {
   if is_valid_network() || is_valid_network_v6() then {
-    if source = RTS_STATIC then bgp_community.add((64511, DN_REGION_GEO));
+    # if source = RTS_STATIC then bgp_community.add((64511, DN_REGION_GEO)); # uncomment if you want to advertise your region
     update_flags(link_latency, link_bandwidth, link_crypto, link_topology, link_packetloss);
+    # Remove the following if you don't want to advertise geo communities
     update_geo_flags();
     bgp_med = 0;
     bgp_med = bgp_med + ( ( 4 - ( link_crypto - 30 ) ) * 600 );
