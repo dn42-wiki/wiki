@@ -265,8 +265,9 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 | stk2.jerry.dn42:2759, stk2.jerry.neo:2759                                                                                                       | SuperTuxKart               | latest, IPv4 & IPv6                                                                                  |
 | factorio.catgirls.dn42 (IPv6 only)                                                                                                              | factorio                   | Still in testing, expect downtime                                                                    |
 | The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various                    | Log in to the shell servers for more                                                                 |
-| telnet tetris.dn42                                                                                                                              | tetris in your terminal    | other games available on request, ping mc36 @ irc                                                    |
 | [https://clicker.burble.dn42/](https://clicker.burble.dn42/)                                                                                    | Clicker/Idle               | Waste your time away with a dn42-themed browser-based idle game                                      |
+| [https://dn42dle.burble.dn42/](https://dn42dle.burble.dn42/)                                                                                    | Word Game                  | A familiar word game played over DNS, see the website for details instructions                       |
+| telnet tetris.dn42                                                                                                                              | tetris in your terminal    | other games available on request, ping mc36 @ irc                                                    |
 | [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/)                                                                 | Monkic (Game in German)    |
 | yobanirot.dn42:7591                                                                                                                             | Minecraft and Minetest     | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip) |
 | yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
@@ -319,7 +320,7 @@ Providers of shell access:
 | :-------- | :-------------------------------------------------------------------------------------- | :------------- | :----------------- | :-------- |
 | mc36      | `telnet test.nop.dn42`                                                                  | dn42 only      | looking glass      | -         |
 | JerryXiao | `ssh lg@lg.jerry.dn42`                                                                  | dn42 and icvpn | looking glass      | -         |
-| burble    | `ssh <mntner>@shell.fr-rbx1.burble.dn42` <br/> `ssh <mntner>@shell.ca-bhs2.burble.dn42` | dn42           | Full shell account | See below |
+| burble    | `ssh <mntner>@shell.fr-rbx1.burble.dn42` <br/> `ssh <mntner>@shell.ca-bhs1.burble.dn42` | dn42           | Full shell account | See below |
 
 ### burble.dn42 shell access
 
