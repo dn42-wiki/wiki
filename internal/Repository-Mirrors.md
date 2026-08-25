@@ -16,6 +16,13 @@ Proxy to multiple repositories:
 
 Other repos can be added on request, contact glueckself@hackint on IRC or send a mail to <noc@ano-org.sml.name>
 
+## Alpine
+
+[https://mirror.krypt.dn42/alpine/v3.24/](https://mirror.krypt.dn42/alpine/v3.24/) (AMD64, AARCH64 only & main/community repos)
+
+Hosted by:
+* KRYPT-MNT
+
 ## Ubuntu 
 **<http://mirror.dn42/ubuntu>**
 
