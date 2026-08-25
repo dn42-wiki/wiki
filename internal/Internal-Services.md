@@ -408,4 +408,5 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://osm.nia.dn42/>                    | OpenStreetMap Viewer (update period: 1 month) (IPv6 Only) |
 | <http://nat64.dn42/>                        | Public NAT64+DNS64 Service by Unixeno (IPv6 -> IPv4)                                            |
 | <https://time.dn42/>                       | a clock, basically time.is but in dn42 |
+| <https://chat.dn42>                        | WebRTC-based chat and direct point-to-point file transferring |
 
