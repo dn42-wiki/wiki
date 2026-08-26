@@ -399,9 +399,9 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                            |
 | <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
 | <https://pgp.ens18.dn42>               | Hockeypuck OpenPGP Server (pgp.asia)                                                             |
-| yobanirot.dn42                             | lil XMPP server on that domain:D, e621n.dn42 and nenaebalovo.dn42 avaiable too                   |
-| <https://yobanirot.dn42/dark_test.php>     | Test ur site for dark theme                                                                      |
-| <https://yobanirot.dn42/ie8_test.php>      | Test ur site for Internet Explorer 8 compatibility                                               |
+| <https://yobanirot.dn42/dark_test.php>     | Test your site for dark theme                                                                      |
+| <https://yobanirot.dn42/ie8_test.php>      | Test your site for Internet Explorer 8 compatibility                                               |
+| <https://scam.dn42/>                       | Scummy bank                                                                                      |
 | <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                        |
 | <https://mx.dn42>                          | Matrix IM Server maintained by COMPLEXE, ask @COMPL_EXE on Telegram / E-Mail self@origincode.me / @i:origincode.me on clearnet Matrix for registration requests, unofficial chat room #dn42:mx.dn42 |
 | <https://mtf.dn42/>                        | MtF Wiki      |
