@@ -153,8 +153,7 @@ Other servers:
 | <http://sdr1.maiyun.dn42:8073/>                 | KiwiSDR HF SDR Receiver (aka clearnet <https://kiwisdr.ucsd.edu/>)                     |
 | <https://sdr.pebkac.dn42/>                      | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)   |
 | <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
-| <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |
-| <https://live.yobanirot.dn42>                   | RTMP(s)\RTSP\HLS server, can handle FullHD h264 stream!                                |
+| <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |                               |
 | <https://radio.baka.dn42>                       | 24/7 Non-Stop Radio! Online Radio by Bingxin                                           |
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                                                                  |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
@@ -340,7 +339,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <http://blog.sherpherd.dn42/>  | Hawkins' Homepage                                 |
 | <https://20plays.dn42/>        | 20plays' website                                  |
 | <https://mdr.dn42/>            | Mark Dastmalchi-Round's website (clearnet mirror) |
-| <https://yobanirot.dn42>       | NAAIN's website                                   |
+| <https://tupo-nain.dn42>       | NAAIN's website                                   |
 | <https://darkpoint.dn42>       | AS4242420150 Darkpoint website                    |
 | <https://baka.dn42>            | Baka.Pub DN42 website (clearnet mirror)           |
 | <https://sess.dn42>            | SessNetwork dn42 website                          |
@@ -398,9 +397,7 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://mempool.dn42>                     | Bitcoin explorer                                                                                 |
 | <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                            |
 | <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
-| <https://pgp.ens18.dn42>               | Hockeypuck OpenPGP Server (pgp.asia)                                                             |
-| <https://yobanirot.dn42/dark_test.php>     | Test your site for dark theme                                                                      |
-| <https://yobanirot.dn42/ie8_test.php>      | Test your site for Internet Explorer 8 compatibility                                               |
+| <https://pgp.ens18.dn42>               | Hockeypuck OpenPGP Server (pgp.asia)                                                             |                                            |
 | <https://scam.dn42/>                       | Scummy bank                                                                                      |
 | <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                        |
 | <https://mx.dn42>                          | Matrix IM Server maintained by COMPLEXE, ask @COMPL_EXE on Telegram / E-Mail self@origincode.me / @i:origincode.me on clearnet Matrix for registration requests, unofficial chat room #dn42:mx.dn42 |
