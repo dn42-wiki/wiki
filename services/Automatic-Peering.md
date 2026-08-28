@@ -4,7 +4,7 @@ It is recommended to use the [Peer Finder](https://peerfinder.dn42.dev/) to find
 
 ## Fully self-service
 
-This list includes only systems that offer instant peering (fully self-service, unattended).
+This list includes only systems that offer instant peering (fully self-service, unattended, no manual approval).
 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
@@ -44,15 +44,3 @@ AS4242420893 | [Maiyun-dn42](https://maiyun.me/dn42.html) (click for docs) | DN4
 AS4242421732 | [BaragoonNetworks](https://as215887.net/dn42) | <https://peering.as215887.net> |
 
 Sort by AS number
-
-
-## Historical services
-
-This list contains defunct services.
-
-ASN           | Network  | Autopeer URL |
-:------------:|:--------:|--------------|
-AS64719      | [lutoma](https://dn42.lutoma.org) | <https://dn42.lutoma.org> |
-AS4242420603 | [MolMoe Network](https://dn42.mol.moe) | <https://dn42.mol.moe> |
-AS4242420927 | [Liki4](https://dn42.liki.link) | <https://dn42.liki.link> |
-AS4242423847 | [TheQ Network](https://dn42.0011.de) | <https://dn42.0011.de> |
