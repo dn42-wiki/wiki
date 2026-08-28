@@ -22,7 +22,6 @@ AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.
 AS4242422016 | [sidereal](https://dn42.sidereal.ca) |  Clearnet → <https://dn42.sidereal.ca> <br> DN42 → <https://sidereal.dn42>|
 AS4242422189 | [iEdon Networks](https://iedon.net) | Clearnet → <https://iedon.net/> <br> DN42 → <https://iedon.dn42/> |
 AS4242422213 | [AFNOOI](https://doot.uk.to) | <https://peer.115411.xyz> |
-AS4242422225 | [MARAUN](https://peering.maraun.de) | <https://peering.maraun.de> |
 AS4242422227 | [PUDUNET](https://pudunet.net) | <https://pudunet.net> |
 AS4242422244 | [ICEZ-DN42](https://sgp.dn42.icez.net/) | <https://sgp.dn42.icez.net/> |
 AS4242422717 | [JK-Network](https://net.whojk.com) | <https://net.whojk.com> |
