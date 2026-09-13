@@ -409,4 +409,4 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://time.dn42/>                       | a clock, basically time.is but in dn42 |
 | <https://totp.sess.dn42/>                  | TOTP Token Generator in browser |
 | <https://chat.dn42>                        | WebRTC-based chat and direct point-to-point file transferring |
-
+| <https://nenaebalovo.dn42>                 | Even in DN42 we have casino! integrated with scam.dn42(scummy bank)                               |
