@@ -157,7 +157,7 @@ Other servers:
 | <https://radio.baka.dn42>                       | 24/7 Non-Stop Radio! Online Radio by Bingxin                                           |
 | <https://radio.cowgl.dn42>                      | Online Radio by CowGL                                                                  |
 | <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
-| <https://sess.dn42/radio.html>                  | Online Radio By [SessX6cf](mailto:sess@sess.dn42)                                      |
+| <https://sess.dn42/radio.html>                  | SESS.DN42 Freedom Music Radio. Online Radio by [SessX6cf](mailto:sess@sess.dn42) |
 | <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
 | <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast   |
 | <http://radio.vc.dn42>                          | Online Radio by VConet, using mpd & Icecast.                                           |
@@ -177,6 +177,7 @@ See [Repository Mirrors](/internal/Repository-Mirrors).
 | <http://sources.nop.dn42> | freeRouter source tree     |
 | <http://rtros.nop.dn42/>  | freeRouter distribution    |
 | <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
+| <https://radio.sess.dn42/files/> | Music files of [radio.sess.dn42](https://radio.sess.dn42) |
 | <fdc1:acc:cc8::6> Port: 2222| SFTP, Linux ISOs mirrored from distrowatch.com & FOSS Torrents.  Also has eXo games collection from retro-exo.com.  Connect on the commandline with <sftp -P 2222 dn42@[fdc1:acc:cc8::6]> (p/w dn42)|
 
 ### Rsync
