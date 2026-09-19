@@ -70,6 +70,8 @@ See [Looking Glasses](/services/Looking-Glasses).
 | Gabriel GGR | Curitiba, Brazil | 250/500 Mbps | [speed.gabrielggr.dn42](http://speed.gabrielggr.dn42) |
 | NETBOT      | Italy            | 800 Mbps     | `iperf3 -c speed.netbot.dn42`                         |
 | SessX6cf    | APAC               | 1-10 Gbps   | <https://speedtest.sess.dn42/> |
+| CODECATCH-MNT (AS4242420972) | Not specified | 3.5 Gbps | `iperf3 -c 172.23.29.2 -p 5201` <br> IPv6: `iperf3 -6 -c fd97:33ef:121a:1::2 -p 5201` |
+
 
 ### FlapAlerted instances
 
