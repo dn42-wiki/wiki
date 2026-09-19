@@ -14,7 +14,19 @@ Proxy to multiple repositories:
 * <http://mirror.ano-org.dn42/grafana>: packages.grafana.com/oss/deb
 * <http://mirror.ano-org.dn42/rpi>: archive.raspberrypi.org/debian
 
-Other repos can be added on request, contact glueckself@hackint on IRC or send a mail to <noc@ano-org.sml.name>
+## mirror.grmml.dn42
+
+Mirrors multiple repositories
+
+* <https://mirror.grmml.dn42/archlinux/>
+* <https://mirror.grmml.dn42/debian/>
+* <https://mirror.grmml.dn42/debian-cd/>
+* <https://mirror.grmml.dn42/debian-security/>
+* <https://mirror.grmml.dn42/proxmox/pve/> (`no-subscription` only)
+* <https://mirror.grmml.dn42/proxmox/pdm/> (`pdm-no-subscription` and `pdm-test` only)
+* <https://mirror.grmml.dn42/proxmox/pve/> (`pbs-no-subscription` only)
+* <https://mirror.grmml.dn42/ubuntu/>
+* <https://mirror.grmml.dn42/ubuntu-releases/>
 
 ## Alpine
 
