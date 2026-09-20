@@ -58,10 +58,10 @@ Secrecy) and post-quantum forward secrecy (e.g. WireGuard with Rosenpass)
 (64511, 85) :: Connection over centralized Virtual Internet Exchange Points (Manually or via router server) (e.g. WireGuard to a single Server with a virtual switch)
 (64511, 89) :: Unknown type / Other type
 
-(6511, 91) :: almost 0% packet lost
-(6511, 92) :: up to 1% packet lost
-(6511, 93) :: up to 5% packet lost
-(6511, 94) :: over 5% packet lost (impossible link?)
+(64511, 91) :: almost 0% packet lost
+(64511, 92) :: up to 1% packet lost
+(64511, 93) :: up to 5% packet lost
+(64511, 94) :: over 5% packet lost (impossible link?)
 
 Propagation:
 - - for latency pick max(received_route.latency, link_latency)
