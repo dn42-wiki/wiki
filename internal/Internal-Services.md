@@ -413,3 +413,4 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://totp.sess.dn42/>                  | TOTP Token Generator in browser |
 | <https://chat.dn42>                        | WebRTC-based chat and direct point-to-point file transferring |
 | <https://nenaebalovo.dn42>                 | Even in DN42 we have casino! integrated with scam.dn42(scummy bank)                               |
+| syncplay.gensokyo.dn42:8999                | SyncPlay Server (TLS On) |
