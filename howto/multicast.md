@@ -100,9 +100,9 @@ Current participants:
   * NOP-MNT
   * MIRSAL-MNT
   * C4TG1RL5-MNT
-  * KIOUBIT-MNT
   * PREVARINITE-MNT
   * MARK22K-MNT
+  * ~~KIOUBIT-MNT~~ (Multicast is unavailable for the time being)
 
 Feel free to ask for a peering and set it up!
 
