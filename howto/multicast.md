@@ -103,6 +103,7 @@ Current participants:
   * PREVARINITE-MNT
   * MARK22K-MNT
   * ~~KIOUBIT-MNT~~ (Multicast is unavailable for the time being)
+  * LUKK-MNT
 
 Feel free to ask for a peering and set it up!
 
