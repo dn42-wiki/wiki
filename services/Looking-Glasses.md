@@ -17,18 +17,16 @@ Please sort by AS number.
 | 4242420214 | dn42: <https://lg.mashiro.dn42> <br> ext: <https://lg.origincode.me> |
 | 4242420298 | ext: <https://dn42.hexpnet.work/lg.html>
 | 4242420454 | dn42: <http://edu.dn42/> <br> ext: <https://dn42.nedifinita.com/> |
-| 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420893 | dn42: <https://lg.maiyun.dn42> |
 | 4242421005 | dn42: <https://lg.yzynetwork.dn42> |
 | 4242421023 | ext: <https://network.owo.li/>  <br> dn42: <https://network.iris.dn42/>|
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
 | 4242421084 | ext: <https://dn42-lg.darmstadt.freifunk.net> |
 | 4242421105 | dn42: <http://lg.finarfin.dn42:8179/> |
-| 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
 | 4242421197 | dn42: <http://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
 | 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> |
 | 4242421525 | ext: <https://lg.alemal.se> <br> dn42: <https://lg.alemal.dn42> |
-| 4242421722 | ext: <https://lg42.tchekda.fr> <br> dn42: <http://lg42.tchekda.dn42> |
+| 4242421722 | ext: <https://lg42.tchekda.fr> |
 | 4242421755 | ext: <https://lg.sidingsmedia.com> <br> Interactive ping, traceroute, BGP routes, communities, AS path, RPKI state. IPv4 & IPv6 support. |
 | 4242421955 | dn42: <http://lg.nop.dn42> <br> dn42: telnet test.nop.dn42 <br> ext: <http://embed.ftelnet.ca/?Hostname=websock.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br> ext: <http://sandbox.freertr.org>  |
 | 4242422016 | ext: <https://lg.dn42.sidereal.ca> <br> dn42: <https://lg.sidereal.dn42> |
@@ -46,7 +44,6 @@ Please sort by AS number.
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
 | 4242423090 | dn42: <http://lg.filmroellchen.dn42> <br> IPv6-only |
-| 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423374 | ext: <https://lg-dn42.baka.pub> |
 | 4242423377 | ext: <https://lg-dn42.leziblog.com> |
 | 4242423702 | ext: <https://dn42-lg.launchpadx.top> <br> dn42: <https://lg.lpnet0.dn42> |
@@ -84,6 +81,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242420341 | dn42: <https://lg.hachiman.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242420458 | ext: <https://lg.huajinet.org> |
 | 4242420812 | dn42: <https://lg.jan.dn42> <br> Interactive (traceroute, BGP-map) |
+| 4242420831 | ext: <https://lg.dn42.tms.im> |
 | 4242420827 | ext: <https://lg.llyn.lorkep.trade> <br> dn42: <https://lg.lorkep.dn42> <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
 | 4242420927 | ext: <https://lg.dn42.liki.link> |
 | 4242420977 | ext: <https://lg.moerail.ml> <br> dn42: <http://lg.moerail.dn42> |
@@ -92,12 +90,14 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242421055 | dn42: <http://lg.tmwawpl.dn42> |
 | 4242421092 | dn42: <http://lg.erg.dn42> <br> Interactive (traceroute, BGP-map) |
 | 4242421099 | ext: <https://lg.owensresearch.org> <br> dn42: <https://lg.owensresearch.dn42> <br> BGP Route, BGP Community, BGP AS Path, Ping, and Traceroute |
+| 4242421123 | ext: <https://dn42.ccp.ovh> <br> dn42: <http://n.dn42> |
 | 4242421146 | ext: <https://lg.amcforum.wiki> |
 | 4242421166 | dn42: <http://lg.alcatrash.dn42> |
 | 4242421224 | dn42: <http://lg.bit.dn42> |
 | 4242421231 | dn42: <http://lg.caesia.dn42> <br> ext: <https://lg.caesia.net> |
 | 4242421331<br>4242421332<br>207268 | ext: <https://lg.strexp.net> <br> dn42: <http://lg.nia.dn42> |
 | 4242421588 | dn42: <http://lg.tech9computers.dn42> <br> Interactive (traceroute, BGP-map) |
+| 4242421722 | dn42: <http://lg42.tchekda.dn42> |
 | 4242421780 | ext: <https://lg.sfsarfe.com> <br> dn42: <http://lg.sfsarfe.dn42> |
 | 4242421816 | ext: <https://lg.dn42.potat0.cc> <br> dn42: <http://lg.potat0.dn42> |
 | 4242421869 | ext: <https://lg.usman.network> <br> dn42: <http://lg.usman.dn42>  |
@@ -118,6 +118,7 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242422700 | dn42: <http://lg.gotroot.dn42> <br> ext: <http://dn42.gotroot.ca> |
 | 4242422904 | ext: <https://lg.doxz.net> |
 | 4242423078 | ext: <https://lg.hexanet.dev> <br> dn42: <http://lg.hex.dn42> <br> Interactive (traceroute, BGP-map) <br> IPv6 only |
+| 4242423152 | ext: <https://lg.tatk.network> <br> dn42: <http://lg.tatk.dn42> |
 | 4242423315 | ext: <http://lg.unknownts.tk> <br> dn42: <http://unknownts.dn42> |
 | 4242423411 | ext: <https://lg.dn42.goldlineit.org> <br> dn42: <http://lg.goldlineit.dn42> |
 | 4242423735 | ext: <https://lg.dn42.cperrin.xyz> <br> dn42: <http://lg.cperrin.dn42> |
@@ -128,4 +129,3 @@ These looking glasses were added to the table at some point, but now seem to be 
 | 4242423955 | dn42: <http://lg.flo.dn42> |
 | 4242423973 | dn42: <http://lg.technopoint.dn42> <br> (traceroute, BGP-map) IPv4 only. |
 | 4242423993 | ext: <https://lg.2f30.org> <br> IPv4 only. |
-
