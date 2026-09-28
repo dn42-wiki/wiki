@@ -31,6 +31,7 @@ AS4242423310 | [ACh Sulfate](https://peer42.tmpfs.dev/) | <https://peer42.tmpfs.
 AS4242423374 | [Bingxin Network](https://dn42.baka.pub/en/peering-request/bingxin-network) | <https://dn42.baka.pub/en/peering-request/bingxin-network> |
 AS4242423432 | [S6V](https://dn42.s6v.net) | <https://dn42.s6v.net> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | Clearnet → <https://dn42.g-load.eu> |
+AS4242421895 | [Lives Network](https://dn42.orol.top) | Clearnet → <https://dn42.orol.top> |
 
 Sort by AS number
 
