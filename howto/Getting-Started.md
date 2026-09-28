@@ -28,6 +28,8 @@ When submitting your pull request, you must squash multiple changes to a single 
 
 Remember to add authentication to your `mntner` object, and you **must** [sign your commit](/howto/Registry-Authentication)
 
+*Tip: Remember to keep a backup of your authorisation keys*
+
 The registry includes a number of scripts to help check your request:
 
  - `fmt-my-stuff <FOO>-MNT`: automatically fixes minor formatting errors
@@ -40,7 +42,7 @@ The registry maintainers run the checking scripts against each request, so pleas
 
 Do browse through the registry and look at the [pull request queue](https://git.dn42.dev/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
-*You should not use the gitea web interface to edit files, doing so creates a large number of commits and prevents running of the registry scripts*
+*You cannot use the gitea web interface to edit files, doing so creates a large number of commits and prevents running of the registry scripts*
 
 ---
 
@@ -66,6 +68,8 @@ Common authentication methods are:
   - PGP Key: `auth: pgp-fingerprint <pgp-fingerprint>`
   - SSH Key: `auth: ssh-{rsa,ed25519} <key>`
 
+Losing your auth keys is a significant source of registry noise and wasted effort. We recommend configuring at least two authentication methods (a primary key and a backup key) in your mntner object. Always keep secure, separate backups of both private keys.
+
 Example: data/mntner/FOO-MNT
 ```conf
 mntner:             FOO-MNT
@@ -73,6 +77,7 @@ admin-c:            FOO-DN42
 tech-c:             FOO-DN42
 mnt-by:             FOO-MNT
 auth:               pgp-fingerprint 0123456789ABCDEF0123456789ABCDEF01234567
+auth:               ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGd7P9yG3xK6uBv3m8V1p8Z0K2yJ4uL7wP9qR3sT5uV1 user@example.com
 source:             DN42
 ```
 
@@ -89,7 +94,9 @@ Create a  `person` object in `data/person/` for **yourself** (not your organisat
 
 **Data Privacy**
 
-Contact attributes are optional but DN42 is a dynamic network and being able to contact users is really important if there are changes or problems. However, please also be aware that the DN42 registry is a public resource and you must assume that any details provided will be made public and cannot be fully removed. If this is a concern for you, please do not provide bogus contact details; simply provide anonymous details that are specific for use within DN42 or leave them out entirely.
+Contact attributes are optional but dn42 is a dynamic network and being able to contact users is really important if there are changes or problems. Reviewers won't accept new registrations without any contact details and an e-mail address is also the only way to recover your mntner if you lose access to your auth keys.
+
+However, please also be aware that the dn42 registry is a public resource and you must assume that any details provided will become part of the git history, will be made public and cannot be subsequently removed. If this is a concern for you, please do not provide bogus contact details, simply provide anonymous details that are specific for use within dn42.
 
 
 Example: data/person/FOO-DN42
@@ -169,9 +176,9 @@ source:             DN42
 
 #### IPv6
 
-Even if you do not currently support IPv6, networks in dn42 are encouraged to be IPv6 first and many services are available only using IPv6. 
+Even if you do not currently support IPv6, networks in dn42 are encouraged to be IPv6 first and many services are available only using IPv6.
 
-To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range. 
+To register an IPv6 prefix, you create an `inet6num` object. dn42 uses the fd00::/8 ([ULA](https://tools.ietf.org/html/rfc4193)) range.
 
 A single /48 allocation is typical, it will provide more than enough room for a global network and there are no compelling reasons for choosing a different size. The smallest announceable prefix length is /64 but registering IP blocks smaller than /48 can often be limiting and restrict what you can do.
 
@@ -220,13 +227,13 @@ Check the registry (data/inetnum) to make sure no-one else has allocated the sam
 | **/27**  | 32 | **default allocation**       |
 | /26  | 64 | more than enough for the largest networks |
 
-Please **think before you allocate**; the current guideline is to allocate a /27 by default.  
+Please **think before you allocate**; the current guideline is to allocate a /27 by default.
 
-New users will not be allocated an IP block larger than /26. 
+New users will not be allocated an IP block larger than /26.
 
 dn42 typically uses point-to-point addressing in VPN tunnels making transit networks unnecessary, a single IP address per host or public service will be sufficient and you should consider IPv6 first or NAT for devices that do not directly offer dn42 services. dn42 is not the public internet, but our IPv4-space is valuable too!
 
-**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt). 
+**Note:** Reverse DNS works with _any_ prefix length, as long as your [recursive nameserver](/services/dns/Overview) supports [RFC 2317](https://www.ietf.org/rfc/rfc2317.txt).
 
 example: data/inetnum/172.20.150.0_27
 ```conf

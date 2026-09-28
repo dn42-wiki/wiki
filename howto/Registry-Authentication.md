@@ -2,16 +2,25 @@
 
 `auth` attributes within registry `mntner` objects define a public key that is used to verify the identity of the maintainer and prove that changes to registry objects are authorised.
 
-When a pull request is submitted to the registry, the submitter signs the git commit hash with their private key. The registry maintainers will then check the signature against the registered public key to authorise the change. 
+When a pull request is submitted to the registry, the submitter signs the git commit hash with their private key. The registry maintainers will then check the signature against the registered public key to authorise the change.
 
 The signature and verification process varies depending on the type of public key within the `auth` attribute.
+
+You can have multiple `auth` methods, a valid signature from any key is sufficient for authorisation.
+
+## Keep your keys safe
+
+MNTNERs losing their keys is a significant source of registry noise, increasing the number of commits and wasting administrator effort.
+
+- **Keep a safe backup of your keys**
+- Adding a second key can allow you to recover your MNTNER if you lose the first key.
 
 ## Preferred signing methods
 
 *Tip: Add your GPG or SSH key to your account in gitea, doing so enables gitea to automatically check your signature when you sign the commit*
 
 ### When using a GPG/PGP Key
-1. **Sign the commit using git** - this is the best option as the signature is recorded directly in the git log 
+1. **Sign the commit using git** - this is the best option as the signature is recorded directly in the git log
 2. Sign using `gpg --clearsign` and provide the signature in the PR comments - only do this if you absolutely cannot sign the commit in git
 
 ### When using an SSH key
@@ -19,7 +28,68 @@ The signature and verification process varies depending on the type of public ke
 2. Use the `sign-my-commit` script in the registry - the script adds your signature in a format that allows for automated checking
 3. Manually provide a signature in the PR comments using one of the methods detailed below - only do this if you can't sign using git or with the included script
 
-The sections below provide detailed instructions for each of the auth methods.
+There are detailed instructions below for how to sign using each of the available auth methods.
+
+---
+
+## Key Rotation
+
+The registry automation supports key rotation. Always keep secure backups of your private keys to prevent the need for account recovery.
+
+### Scenario A: You still have access to your existing keys
+
+Use this procedure if you still hold at least one private key currently listed in your `mntner` object.
+
+1. Update your `mntner` object with your new public key(s).
+2. Sign the commit using one of your **existing** private keys.
+3. Push your branch and open a Pull Request (PR).
+4. The CI *pipeline* will detect the key rotation and ask for a signature from one of the **new** keys.
+5. Sign the commit hash with your **new** private key (see signature commands below).
+6. Post a comment on the PR containing the signature:
+
+```text
+### DN42 Signature
+
+<paste signature here>
+```
+
+7. In the Gitea UI, request a re-review from the *pipeline* user. This triggers the CI check again.
+8. The *pipeline* validates the signature and automatically approves the PR.
+
+#### How to sign the commit hash
+
+Replace `{commit_hash}` with the full 40-character commit SHA.
+
+Using a GPG key:
+
+``` sh
+echo -n "{commit hash}" | gpg --armor --detach-sign
+```
+
+Using an SSH key:
+
+``` sh
+echo -n "{commit hash}" | ssh-keygen -Y sign -n dn42 -f ~/.ssh/your_existing_key
+```
+
+### Scenario B: You lost all existing keys (mntner recovery)
+
+If you lose access to all existing keys, you can recover your `mntner` object using the verified email address from your `person` object.
+
+**Note: Key recovery is a fallback mechanism** You should look to review and improve your key backup process after completing this procedure.
+
+1) Ensure the email address listed in your `person` object is added to your Gitea account and is verified.
+2) Update your `mntner` object with your new public key(s).
+3) Sign the commit using one of the **new** keys.
+4) Push your branch and open a PR.
+5) Post a comment on the PR with the exact text:
+
+``` text
+### DN42 Recovery
+```
+
+6) In the Gitea UI, request a re-review from the *pipeline* user to re-run the check.
+7) The *pipeline* will authorise the change if your verified Gitea email address matches an email in your `person` object.
 
 ---
 
@@ -40,14 +110,16 @@ In this case the full commit hash is `6e2e9ac540e2e4e3c3a135ad90c8575bb8fa1784`
 
 ## Authentication using a GPG/PGP Key
 
-To verify your key, the registry maintainers need to be able to find your full public key.  
-There are three options for doing this. but you only need to do **one** of these:  
+To verify your key, the registry maintainers need to be able to find your full public key.
 
- 1. **Add your public key to your account in gitea** - this is the best option as gitea will automatically check your signature
- 2. Upload your key to a public key server 
- 3. Create a `key-cert` object in the registry containing your public key
+There are two options for doing this. but you only need to do **one** of these:
 
-### `auth` attribute format, when your public key is in gitea or a public keyserver
+ 1. **Add your public key to your account in gitea** - this is the best option as you can see in gitea when your commit is signed and the key can be used automatically by the registry tooling check your signature.
+ 2. Create a `key-cert` object in the registry containing your public key
+
+### `auth` attribute format, when your public key is in gitea
+
+- Ensure that your public key has been uploaded to your account in gitea.
 
 - Use the following `auth` attribute in your `mntner` object:
 ```conf
@@ -55,19 +127,20 @@ auth:               pgp-fingerprint <fingerprint>
 ```
 Where `<fingerprint>` is your **full 40-digit** key fingerprint, without spaces.
 
-- Ensure that your public key has been uploaded to your account in gitea or a public keyserver, e.g. [SKS](https://sks-keyservers.net/), [OpenPGP](https://keys.openpgp.org/), [keybase](https://keybase.io/).
+
 
 ### `auth` attribute format when creating a `key-cert` object
 
 *Tip: look at the existing key-cert objects for examples of how to add your public key*
+
+
+- Create a `key-cert` object for your public key, using `PGPKEY-<fprint>` for the filename.
 
 - In this case the `auth` attribute must refer to the new key-cert object so use the following in your `mntner` object:
 ```conf
 auth:               PGPKEY-<short fingerprint>
 ```
 Where `<short fingerprint>` is the last **8** digits from your key fingerprint.
-
-- Create a `key-cert` object for your public key, using `PGPKEY-<fprint>` for the filename.
 
 ### How to sign your commit
 
@@ -84,20 +157,22 @@ If you had already pushed your change to gitea, you must also do a force push (`
 ### Verifying the signature
 
 - Use `git log --show-signature` to show recent commits and signatures
-- If you have uploaded your key to gitea, you can also check in the gitea UI that your commit is signed and has been verified successfully 
+- You can also check in the gitea UI that your commit is signed and has been verified successfully
 
 ---
 
 ## Authentication using an SSH key
 
-Older versions of git and ssh don't support generic ssh signing so there are multiple ways of providing ssh signatures based on the versions you have and the type of key you are using. The newer signature methods are preferred as they allow automatic verification of your signature.
+Older versions of git and ssh don't support generic ssh signing so there are multiple ways of providing ssh signatures based on the versions you have and the type of key you are using.
+
+Please try and sign using one of the newer methods as they can be automatically verified by the registry tooling, which saves a lot of reviewer time.
 
 In preference order:
 
 1. **Sign using git**
 2. Sign using the included `sign-my-commit` script
 
-If you cannot get the above to work you may also: 
+If you cannot get the above to work you may also:
 
 3. Manually sign using the generic ssh-keygen method
 4. Manual sign using specific methods for rsa or ecdsa
@@ -157,11 +232,11 @@ If you had already pushed your change to gitea, you must also do a force push (`
 
 Verifying an ssh signature is slightly more complicated than with gpg keys, please see the guides linked above.
 
-The easiest way to verify your signature is to ensure your SSH key is uploaded then push your changes to gitea. Gitea will automatically verify your signature for you and show if it was successful in the UI. 
+The easiest way to verify your signature is to ensure your SSH key is uploaded then push your changes to gitea. Gitea will automatically verify your signature for you and show if it was successful in the UI.
 
 ### Sign using the `sign-my-commit` script
 
-The registry includes a script that uses ssh-keygen signatures to sign your changes in a format that allows for automatic verification. It requires ssh-keygen >= v8. 
+The registry includes a script that uses ssh-keygen signatures to sign your changes in a format that allows for automatic verification. It requires ssh-keygen >= v8.
 
 *Tip: use `./sign-my-commit --help` to see all options*
 
@@ -198,11 +273,11 @@ Use the following to sign the latest `<commit hash>` (that you found using `git 
 echo "<commit hash>" | ssh-keygen -Y sign -f <private key file> -n dn42
 ```
 
-Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion.
 
 #### Verifying the signature
 
-The following procedure will verify the signature (using the `<commit hash>`, your `<pubkey>` and the `<signature>` generated in the previous step. 
+The following procedure will verify the signature (using the `<commit hash>`, your `<pubkey>` and the `<signature>` generated in the previous step.
 
 Create a temporary file containing the signature
 ```sh
@@ -234,7 +309,7 @@ Please try and upgrade your ssh-keygen version and use the generic ssh-keygen me
 ```conf
 auth:               ssh-rsa <pubkey>
 ```
-Where `<pubkey>` is the ssh public key copied from your id_rsa.pub file. 
+Where `<pubkey>` is the ssh public key copied from your id_rsa.pub file.
 
 #### Signing your commits
 
@@ -248,11 +323,11 @@ openssl pkeyutl \
    -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion.
 
 #### Verifying the signature
 
-The following script will verify the signature (using the `<commit hash>`, your rsa `<pubkey>` and the `<signature>` generated in the previous step. 
+The following script will verify the signature (using the `<commit hash>`, your rsa `<pubkey>` and the `<signature>` generated in the previous step.
 ```sh
 openssl pkeyutl \
    -verify \
@@ -272,16 +347,16 @@ openssl pkeyutl \
 ```conf
 auth:               ecdsa-sha2-nistp256 <pubkey>
 ```
-Where `<pubkey>` is the ssh public key copied from your id_ecdsa.pub file. 
+Where `<pubkey>` is the ssh public key copied from your id_ecdsa.pub file.
 
 #### Signing your commits
 
 If you cannot use the generic SSH process described above then ecdsa signatures can also be created using openssl.
 
-**DO NOT do this on your original ssh key.**  
+**DO NOT do this on your original ssh key.**
 Make a copy and use the copy as the ssh-keygen command below will overwrite the key file given.
 
-Convert your private ssh key to a file that openssl can read:  
+Convert your private ssh key to a file that openssl can read:
 **DO THIS ON A COPY OF YOUR SSH KEY**
 ```sh
 ssh-keygen -p -m pem -f <private key file copy>
@@ -294,11 +369,11 @@ openssl pkeyutl -sign \
     -in <(echo "<commit hash>") | base64
 ```
 
-Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. 
+Post the signature into the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion.
 
 #### Verifying the signature
 
-The following script will verify the signature (using the `<commit hash>`, your ecdsa `<pubkey>` and the `<signature>` generated in the previous step. 
+The following script will verify the signature (using the `<commit hash>`, your ecdsa `<pubkey>` and the `<signature>` generated in the previous step.
 ```sh
 openssl pkeyutl \
    -verify \
@@ -309,5 +384,5 @@ openssl pkeyutl \
                -m PKCS8 \
                -f <(echo "ecdsa-sha2-nistp256 <pubkey>")\
             ) \
-   -sigfile <(echo "<signature>" | base64 -d)  
+   -sigfile <(echo "<signature>" | base64 -d)
 ```
