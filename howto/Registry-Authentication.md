@@ -69,7 +69,7 @@ echo -n "{commit hash}" | gpg --armor --detach-sign
 Using an SSH key:
 
 ``` sh
-echo -n "{commit hash}" | ssh-keygen -Y sign -n dn42 -f ~/.ssh/your_existing_key
+echo -n "{commit hash}" | ssh-keygen -Y sign -n dn42 -f ~/.ssh/your_new_key
 ```
 
 ### Scenario B: You lost all existing keys (mntner recovery)
