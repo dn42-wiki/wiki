@@ -18,6 +18,7 @@ Please sort by AS number.
 | 4242420298 | ext: <https://dn42.hexpnet.work/lg.html>
 | 4242420454 | dn42: <http://edu.dn42/> <br> ext: <https://dn42.nedifinita.com/> |
 | 4242420893 | dn42: <https://lg.maiyun.dn42> |
+| 4242420993 | dn42: <https://lg.luax.dn42> <br> ext: <https://lg.dn42.luax.xyz> |
 | 4242421005 | dn42: <https://lg.yzynetwork.dn42> |
 | 4242421023 | ext: <https://network.owo.li/>  <br> dn42: <https://network.iris.dn42/>|
 | 4242421080 | ext: <https://lg.highdef.network> <br> dn42: <http://lg.highdef.dn42> |
