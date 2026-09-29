@@ -30,19 +30,45 @@ Remember to add authentication to your `mntner` object, and you **must** [sign y
 
 *Tip: Remember to keep a backup of your authorisation keys*
 
-The registry includes a number of scripts to help check your request:
+The registry includes scripts to help you with squashing and signing:
 
- - `fmt-my-stuff <FOO>-MNT`: automatically fixes minor formatting errors
- - `check-my-stuff <FOO>-MNT`: validates your objects against the registry schema
- - `check-pol origin/master <FOO>-MNT`: checks for policy violations
  - `squash-my-commits`: automatically update and squash your local commits
  - `sign-my-commit`: sign your commit using a pgp key or standard SSH signing
 
-The registry maintainers run the checking scripts against each request, so please run these yourself first to check for simple errors.
-
 Do browse through the registry and look at the [pull request queue](https://git.dn42.dev/dn42/registry/pulls) to see examples, understand how the process works and see the types of questions asked by the registry maintainers.
 
-*You cannot use the gitea web interface to edit files, doing so creates a large number of commits and prevents running of the registry scripts*
+*You cannot use the gitea web interface to edit files, doing so creates a large number of commits and prevents you from checking your submission*
+
+### Validating your changes before submitting
+  
+Before pushing your branch or opening a pull request, always format
+and validate your objects locally to catch schema errors or missing
+references early. 
+
+
+The `registry` repository provides helper scripts for immediate validation:
+    
+```sh
+./fmt-my-stuff <YOUR-MNT>            # Auto-format indentation
+./check-my-stuff <YOUR-MNT>          # Validate schema and references
+./check-pol origin/master <YOUR-MNT> # Check DN42 policy compliance
+```
+
+To run the exact CI/CD test suite executed by the pipeline automation bot on
+https://git.dn42.dev, you can run the [pipeline-docker](https://git.dn42.dev/dn42/pipeline-docker)
+container locally using Podman or Docker. Simply clone the repository
+and run the check.sh wrapper against your local registry:
+
+```sh
+git clone https://git.dn42.dev/dn42/pipeline-docker.git
+./pipeline-docker/check.sh /path/to/registry
+```
+
+The tool runs in safe local mode (read-only), verifying your commit
+signatures, route objects, and policy rules so you can fix any issues
+before submitting your pull request.
+
+All these scripts get run automatically on your PR, so please run these yourself first to check for simple errors.
 
 ---
 
