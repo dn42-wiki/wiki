@@ -55,12 +55,12 @@ The `registry` repository provides helper scripts for immediate validation:
 ```
 
 To run the exact CI/CD test suite executed by the pipeline automation bot on
-https://git.dn42.dev, you can run the [pipeline-docker](https://git.dn42.dev/dn42/pipeline-docker)
+https://git.dn42.dev, you can run the [pipeline-docker](https://git.dn42.dev/registry/pipeline-docker)
 container locally using Podman or Docker. Simply clone the repository
 and run the check.sh wrapper against your local registry:
 
 ```sh
-git clone https://git.dn42.dev/dn42/pipeline-docker.git
+git clone https://git.dn42.dev/registry/pipeline-docker.git
 ./pipeline-docker/check.sh /path/to/registry
 ```
 
