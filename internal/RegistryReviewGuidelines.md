@@ -36,7 +36,8 @@ git pull origin pull/<pr_number>/head
 ```
 
 Verify signatures
-- You can get public keys from gitea using https://git.dn42.dev/)<username>.gpg
+- You can get public gpg keys from gitea using https://git.dn42.dev/username.gpg
+- You can get public ssh keys from gitea using https://git.dn42.dev/username.keys
 
 Run The Standard Registry Scripts:
 
