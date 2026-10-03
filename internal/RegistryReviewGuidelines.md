@@ -86,6 +86,27 @@ If you get stuck or are unsure, ask for a secondary review. In exceptional circu
 
 Mistakes happen, every single other reviewer has broken something at some point.
 
+## Checklists
+
+The checklist feature in gitea allows reviewers to embed interactive, trackable to-do lists by including markdown check boxes in the pull request body. 
+
+Checklists are integrated in to the pipeline automation:
+ - Pipeline will automatically add some standard tasks for new mntners
+ - Pipeline will fail if there are outstanding checklist items
+
+Reviewers may add their own tasks that will be monitored by pipeline by including HTML comment markers:
+
+```text
+<!-- pipeline-tasklist-start -->
+---
+Please complete the following tasks:
+
+- [ ] I have read the allocation policies: https://dn42.dev/Policies
+<!-- pipeline-tasklist-end -->
+```
+
+Tasks can be added without the markers, but pipeline won't see them and won't complain if they aren't completed.
+
 ## Deletions
 
 When reviewing deletions, give the submitter more leeway. If someone is leaving they may not be interested in strictly adhering to the review policies but we still do want to clear out dead allocations. Submitters may not feel that they can edit objects that are not owned by them (e.g. references from other user's AS-SETs)
