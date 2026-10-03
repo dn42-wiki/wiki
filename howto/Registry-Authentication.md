@@ -78,18 +78,18 @@ If you lose access to all existing keys, you can recover your `mntner` object us
 
 **Note: Key recovery is a fallback mechanism** You should look to review and improve your key backup process after completing this procedure.
 
-1) Ensure the email address listed in your `person` object is added to your Gitea account and is verified.
-2) Update your `mntner` object with your new public key(s).
-3) Sign the commit using one of the **new** keys.
-4) Push your branch and open a PR.
-5) Post a comment on the PR with the exact text:
+1. Ensure the email address listed in your `person` object is added to your Gitea account and is verified.
+2. Update your `mntner` object with your new public key(s).
+3. Sign the commit using one of the **new** keys.
+4. Push your branch and open a PR.
+5. Post a comment on the PR with the exact text:
 
 ``` text
 ### DN42 Recovery
 ```
 
-6) In the Gitea UI, request a re-review from the *pipeline* user to re-run the check.
-7) The *pipeline* will authorise the change if your verified Gitea email address matches an email in your `person` object.
+6. In the Gitea UI, request a re-review from the *pipeline* user to re-run the check.
+7. The *pipeline* will authorise the change if your verified Gitea email address matches an email in your `person` object.
 
 ---
 
