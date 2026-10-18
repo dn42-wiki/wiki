@@ -98,6 +98,7 @@ See [Looking Glasses](/services/Looking-Glasses).
 | <https://flap.fennec.dn42/> | AS4242420132 | |
 | <https://flap.maiyun.dn42/> | AS4242420893 | |
 | <https://flap.headscarf175.net/> | AS4242420842 | |
+| <https://flapalerted.tes286.top/> | AS4242420078 | |
 
 
 ### ASN Authentication Solution
