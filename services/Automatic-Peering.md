@@ -9,7 +9,7 @@ This list includes only systems that offer instant peering (fully self-service, 
 ASN           | Network  | Autopeer URL |
 :------------:|:--------:|--------------|
 AS4242420028 | [NATLAN](https://natlan.io) | <https://peering.natlan.io> |
-AS4242420207 | [RoutedBits](https://dn42.routedbits.io) | <https://dn42.routedbits.io> |
+AS4242420207 | [RoutedBits](https://dn42.routedbits.com) | <https://dn42.routedbits.com> |
 AS4242420253 | [moe233](https://blog.moe233.net/dn42/) | <https://blog.moe233.net/dn42/> |
 AS4242420263 | [FLIPFLAP-DN42](https://hcartiaux.github.io/dn42/) | <https://hcartiaux.github.io/dn42/> |
 AS4242420454 | [Nedifinita Network](https://dn42.nedifinita.com/) | <https://peer-dn42.nedifinita.com/> |
