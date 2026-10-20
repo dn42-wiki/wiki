@@ -33,7 +33,7 @@ AS4242423374 | [Bingxin Network](https://dn42.baka.pub/en/peering-request/bingxi
 AS4242423432 | [S6V](https://dn42.s6v.net) | <https://dn42.s6v.net> |
 AS4242423914 | [Kioubit Network](https://dn42.g-load.eu) | Clearnet → <https://dn42.g-load.eu> |
 AS4242421895 | [Lives Network](https://dn42.orol.top) | Clearnet → <https://dn42.orol.top> <br> DN42 → <https://peer.lives.dn42/>|
-AS4242421144 | [ZZNET](https://dn1144.zz.ac) | <https://peer.lives.dn42>|
+AS4242421144 | [ZZNET](https://dn1144.zz.ac) | <https://dn1144.zz.ac>|
 
 
 Sort by AS number
