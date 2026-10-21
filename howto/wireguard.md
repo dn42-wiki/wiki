@@ -179,3 +179,11 @@ You can add cron entries to periodically  "re-resolve" the DNS:
 ```sh
 * * * * * /path-to-the-script/reresolve-dns.sh
 ```
+
+## Windows client note
+
+The official WireGuard for Windows client may reject configurations where multiple tunnels have overlapping `AllowedIPs` ranges. If you need such a setup, an unofficial fork that removes this restriction is available at <https://github.com/TES286-org/wireguard-windows>.
+
+This is **not** official WireGuard or DN42 software and has not been independently audited. Use it at your own risk and review the code before deployment.
+
+For DN42, ensure the client does not install routes automatically; route selection should be managed by BGP or an external routing program. Do not use overlapping `AllowedIPs` unless you understand the data-plane and routing implications.
