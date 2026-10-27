@@ -165,6 +165,7 @@ Other servers:
 | <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast   |
 | <http://radio.vc.dn42>                          | Online Radio by VConet, using mpd & Icecast.                                           |
 | <http://radio.gatuno.dn42:8000/hyrule>               | Mirror radio of radiohyrule.com                                                        |
+| <http://rickroll.dn42>                           | Play rick roll video | IPv6 only |
 
 ## File Sharing
 
