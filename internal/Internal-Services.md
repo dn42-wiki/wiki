@@ -20,6 +20,8 @@ See this [page](/services/ca/Certificate-Authority) for the main certificate aut
 
 ### General
 
+- PGP keyserver: <https://keys.nlgld.dn42>. For more information, see [PGP keyserver](/services/PGP keyserver.md)
+
 - ~~Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.~~ (deprecated but still partially functional)
   - The service has now been split into several sub-sites, further functional migrations are currently underway:
   - Registry Viewer (IP Blocks): [registry42.strexp.net (via IANA)](https://registry42.strexp.net) (requires WebGL)
