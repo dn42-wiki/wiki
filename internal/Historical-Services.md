@@ -79,7 +79,6 @@ There is a search engine at [buzzster.dn42](http://buzzster.dn42) that can also 
 | <http://radio.hex.dn42/>                            | Ambient musics                                                  |
 | <https://yp.unknownts.dn42/>                        | A YellowPages for internet radio stations inside dn42          |
 | <http://deep.radio.unknownts.dn42/>                 | Internet radio playing random music                            |
-| <http://rickroll.dn42>                              | Play Rickroll Video                                            |
 
 ## Images, E-Books, Videos and other Media
 
