@@ -5,10 +5,10 @@ View a list of [service ideas](/internal/Ideas) and [historical services](/inter
 
 ## Search engines & Discovery
 
-| Hostname / IP                    | ICANN | Internal | Remarks                     |
-|:---------------------------------|:------|:---------|:--------------------------- |
-| [baaka.dn42](https://baaka.dn42) |  | X | SearXNG instance with the metadata source being [yacy.baka.dn42](https://yacy.baka.dn42)|
-| [search.androw.dn42](https://search.androw.dn42) | X |  | SearXNG instance |
+| Hostname / IP                                    | ICANN | Internal | Remarks                                                                                  |
+|:-------------------------------------------------|:------|:---------|:-----------------------------------------------------------------------------------------|
+| [baaka.dn42](https://baaka.dn42)                 |       | X        | SearXNG instance with the metadata source being [yacy.baka.dn42](https://yacy.baka.dn42) |
+| [search.androw.dn42](https://search.androw.dn42) | X     |          | SearXNG instance                                                                         |
 
 * [Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
 
@@ -19,15 +19,12 @@ See this [page](/services/ca/Certificate-Authority) for the main certificate aut
 ## Network-related
 
 ### General
-
-- PGP keyserver: <https://keys.nlgld.dn42>. For more information, see [PGP keyserver](/services/PGP keyserver.md)
-
 - ~~Network Information Service: [bgp42.strexp.net](https://bgp42.strexp.net) (via IANA). Main functions include _network information_, _network map (from map.dn42, requires WebGL)_, _network ranking (based on centrality)_, _ROA alerting_ and _path finder_.~~ (deprecated but still partially functional)
-  - The service has now been split into several sub-sites, further functional migrations are currently underway:
-  - Registry Viewer (IP Blocks): [registry42.strexp.net (via IANA)](https://registry42.strexp.net) (requires WebGL)
-  - Map Viewer: [map42.strexp.net (via IANA)](https://map42.strexp.net) (requires WebGL, requires GPU)
-  - ISP Viewer: [isp42.strexp.net (via IANA)](https://isp42.strexp.net)
-  - Registry Timeline: [timeline42.strexp.net (via IANA)](https://timeline42.strexp.net)
+    - The service has now been split into several sub-sites, further functional migrations are currently underway:
+    - Registry Viewer (IP Blocks): [registry42.strexp.net (via IANA)](https://registry42.strexp.net) (requires WebGL)
+    - Map Viewer: [map42.strexp.net (via IANA)](https://map42.strexp.net) (requires WebGL, requires GPU)
+    - ISP Viewer: [isp42.strexp.net (via IANA)](https://isp42.strexp.net)
+    - Registry Timeline: [timeline42.strexp.net (via IANA)](https://timeline42.strexp.net)
 - Various DN42-related tools: [dn42.g-load.eu/toolbox/](https://dn42.g-load.eu/toolbox/)
 
 ### Looking glasses
@@ -35,9 +32,9 @@ See [Looking Glasses](/services/Looking-Glasses).
 
 ### What is my IP
 - myip.dn42 anycasted service:
-  - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
-  - ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
-  - ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
+    - ipv4+ipv6: [myip.dn42](http://myip.dn42/)
+    - ipv4 only: [v4.myip.dn42](http://v4.myip.dn42/) or [172.20.0.81](http://172.20.0.81)
+    - ipv6 only: [v6.myip.dn42](http://v6.myip.dn42/) or [fd42:d42:d42:81::1](http://[fd42:d42:d42:81::1]/)
 - [whatismyip.dn42](http://whatismyip.dn42)
 
 ### Interactive Maps
@@ -57,50 +54,50 @@ See [Looking Glasses](/services/Looking-Glasses).
 
 ### Speedtest
 
-| Operator   | Location           | Max Speed   | Link                                                         |
-| :--------- | :----------------- | :---------- | ------------------------------------------------------------ |
-| Burble     | Anycast            | Unknown     | [speedtest.burble.dn42](https://speedtest.burble.dn42/)      |
-| Kioubit    | Nuremberg, Germany | 400 Mbps    | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/)   |
-| Routedbits | Multiple           | Unknown     | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes) |
-| vr18       | Unknown            | 100/20 Mbps | [speed.vr18.dn42/](http://speed.vr18.dn42/)                  |
-| NOT-MNT    | Athens             | 500/1000Mbps| [speedtest.not.dn42/](https://speedtest.not.dn42/)  |
-| Gensokyo   | Wuhan, China       | U:50Mbps/D:1Gbps| [speed.gensokyo.dn42](https://speed.gensokyo.dn42)       |
-| Bingxin    | Global             | 200Mbps - 5Gbps | [speedtest.baka.dn42](https://speedtest.baka.dn42)           |
-| VCONET-MNT | Amsterdam, Netherlands | 10Gbps | [speed.vc.dn42](https://speed.vc.dn42) |
-| CowGL      | Taichung, Taiwan   | 100/350 Mbps | `iperf3 -c txg.cow.dn42 -p 8964` <br> home network, please do not abuse :( |
-| ANDREW-MNT | New Orleans + Tallulah (LA), USA; London, UK (anycast) | 5Gbps (NOLA) / 2Gbps (LON) / 1Gbps (TLH) | `iperf3 -c iperf.andrew.dn42 -p 5201` or [speed.andrew.dn42](https://speed.andrew.dn42) — nearest site answers; per-node: `{nola,london,tallulah}.iperf.andrew.dn42` | 
-| Gabriel GGR | Curitiba, Brazil | 250/500 Mbps | [speed.gabrielggr.dn42](http://speed.gabrielggr.dn42) |
-| NETBOT      | Italy            | 800 Mbps     | `iperf3 -c speed.netbot.dn42`                         |
-| SessX6cf    | APAC               | 1-10 Gbps   | <https://speedtest.sess.dn42/> |
-| CODECATCH-MNT (AS4242420972) | Not specified | 3.5 Gbps | `iperf3 -c 172.23.29.2 -p 5201` <br> IPv6: `iperf3 -6 -c fd97:33ef:121a:1::2 -p 5201` |
+| Operator                     | Location                                               | Max Speed                                | Link                                                                                                                                                                 |
+|:-----------------------------|:-------------------------------------------------------|:-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Burble                       | Anycast                                                | Unknown                                  | [speedtest.burble.dn42](https://speedtest.burble.dn42/)                                                                                                              |
+| Kioubit                      | Nuremberg, Germany                                     | 400 Mbps                                 | [kioubit.dn42/speedtest/](https://kioubit.dn42/speedtest/)                                                                                                           |
+| Routedbits                   | Multiple                                               | Unknown                                  | [dn42.routedbits.io/nodes](https://dn42.routedbits.io/nodes)                                                                                                         |
+| vr18                         | Unknown                                                | 100/20 Mbps                              | [speed.vr18.dn42/](http://speed.vr18.dn42/)                                                                                                                          |
+| NOT-MNT                      | Athens                                                 | 500/1000Mbps                             | [speedtest.not.dn42/](https://speedtest.not.dn42/)                                                                                                                   |
+| Gensokyo                     | Wuhan, China                                           | U:50Mbps/D:1Gbps                         | [speed.gensokyo.dn42](https://speed.gensokyo.dn42)                                                                                                                   |
+| Bingxin                      | Global                                                 | 200Mbps - 5Gbps                          | [speedtest.baka.dn42](https://speedtest.baka.dn42)                                                                                                                   |
+| VCONET-MNT                   | Amsterdam, Netherlands                                 | 10Gbps                                   | [speed.vc.dn42](https://speed.vc.dn42)                                                                                                                               |
+| CowGL                        | Taichung, Taiwan                                       | 100/350 Mbps                             | `iperf3 -c txg.cow.dn42 -p 8964` <br> home network, please do not abuse :(                                                                                           |
+| ANDREW-MNT                   | New Orleans + Tallulah (LA), USA; London, UK (anycast) | 5Gbps (NOLA) / 2Gbps (LON) / 1Gbps (TLH) | `iperf3 -c iperf.andrew.dn42 -p 5201` or [speed.andrew.dn42](https://speed.andrew.dn42) — nearest site answers; per-node: `{nola,london,tallulah}.iperf.andrew.dn42` | 
+| Gabriel GGR                  | Curitiba, Brazil                                       | 250/500 Mbps                             | [speed.gabrielggr.dn42](http://speed.gabrielggr.dn42)                                                                                                                |
+| NETBOT                       | Italy                                                  | 800 Mbps                                 | `iperf3 -c speed.netbot.dn42`                                                                                                                                        |
+| SessX6cf                     | APAC                                                   | 1-10 Gbps                                | <https://speedtest.sess.dn42/>                                                                                                                                       |
+| CODECATCH-MNT (AS4242420972) | Not specified                                          | 3.5 Gbps                                 | `iperf3 -c 172.23.29.2 -p 5201` <br> IPv6: `iperf3 -6 -c fd97:33ef:121a:1::2 -p 5201`                                                                                |
 
 
 ### FlapAlerted instances
 
-| URL | Operator | Note |
-| --- | --- | --- |
-| [flaps.pebkac.dn42](https://flaps.pebkac.dn42) | AS4242422092 | |
-| [https://dn42.g-load.eu/flapAlerted/](https://dn42.g-load.eu/flapAlerted/) | AS4242423914 | Limited HTTP API |
-| [https://bandura.dn42/flapalertedpro/](https://bandura.dn42/flapalertedpro/), [https://mk16.de/flapalertedpro/](https://mk16.de/flapalertedpro/) | AS4242422923 | |
-| [https://flappyroutes.be0ba.dn42/](https://flappyroutes.be0ba.dn42/), [https://flappyroutes.dn42.tcp80.org/](https://flappyroutes.dn42.tcp80.org/) | AS4242420224 | |
-| [https://fa.badaimweeb.dn42/](https://fa.badaimweeb.dn42/), [https://dn42-fa.badaimweeb.me/](https://dn42-fa.badaimweeb.me/) | AS4242423797 | |
-| [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/) | AS4242423702 | |
-| [https://flapalerted.lantian.pub/](https://flapalerted.lantian.pub/) | AS4242422547 | |
-| [https://flaps.iedon.net/](https://flaps.iedon.net/) | AS4242422189 | |
-| [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/) | AS4242423374 | |
-| [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/) | AS4242421331 | |
-| [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/) | AS4242421331 | aggregated data of most instances |
-| <https://flaps.cowgl.tech>, <https://flaps.cowgl.dn42>| AS4242423999 | |
-| [flapalerted.nedifinita.com](https://flapalerted.nedifinita.com) | AS4242420454 | |
-| <https://flap.sess.dn42/> <https://flap42.xhustudio.eu.org/> | AS4242422466 |  |
-| [flap-dn42.ruinet.work](flap-dn42.ruinet.work) | AS211575 | |
-| <https://flaps.mashiro.dn42/> | AS4242420214 | |
-| <https://flap.defelo.dn42/>, <https://flap-dn42.defelo.de/> | AS4242422357 | |
-| <https://flaps.s6v.dn42>, <https://flaps.dn42.s6v.net/> | AS4242423432 | |
-| <https://flap.fennec.dn42/> | AS4242420132 | |
-| <https://flap.maiyun.dn42/> | AS4242420893 | |
-| <https://flap.headscarf175.net/> | AS4242420842 | |
-| <https://flapalerted.tes286.top/> | AS4242420078 | |
+| URL                                                                                                                                                | Operator     | Note                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-----------------------------------|
+| [flaps.pebkac.dn42](https://flaps.pebkac.dn42)                                                                                                     | AS4242422092 |                                   |
+| [https://dn42.g-load.eu/flapAlerted/](https://dn42.g-load.eu/flapAlerted/)                                                                         | AS4242423914 | Limited HTTP API                  |
+| [https://bandura.dn42/flapalertedpro/](https://bandura.dn42/flapalertedpro/), [https://mk16.de/flapalertedpro/](https://mk16.de/flapalertedpro/)   | AS4242422923 |                                   |
+| [https://flappyroutes.be0ba.dn42/](https://flappyroutes.be0ba.dn42/), [https://flappyroutes.dn42.tcp80.org/](https://flappyroutes.dn42.tcp80.org/) | AS4242420224 |                                   |
+| [https://fa.badaimweeb.dn42/](https://fa.badaimweeb.dn42/), [https://dn42-fa.badaimweeb.me/](https://dn42-fa.badaimweeb.me/)                       | AS4242423797 |                                   |
+| [https://flaps.lpnet0.dn42/](https://flaps.lpnet0.dn42/), [https://dn42-flaps.launchpadx.top/](https://dn42-flaps.launchpadx.top/)                 | AS4242423702 |                                   |
+| [https://flapalerted.lantian.pub/](https://flapalerted.lantian.pub/)                                                                               | AS4242422547 |                                   |
+| [https://flaps.iedon.net/](https://flaps.iedon.net/)                                                                                               | AS4242422189 |                                   |
+| [https://flap-dn42.baka.pub/](https://flap-dn42.baka.pub/)                                                                                         | AS4242423374 |                                   |
+| [flap.nia.dn42](https://flap.nia.dn42/), [flap42.strexp.net](https://flap42.strexp.net/)                                                           | AS4242421331 |                                   |
+| [flap-data.nia.dn42](https://flap-data.nia.dn42/), [flap42-data.strexp.net](https://flap42-data.strexp.net/)                                       | AS4242421331 | aggregated data of most instances |
+| <https://flaps.cowgl.tech>, <https://flaps.cowgl.dn42>                                                                                             | AS4242423999 |                                   |
+| [flapalerted.nedifinita.com](https://flapalerted.nedifinita.com)                                                                                   | AS4242420454 |                                   |
+| <https://flap.sess.dn42/> <https://flap42.xhustudio.eu.org/>                                                                                       | AS4242422466 |                                   |
+| [flap-dn42.ruinet.work](https://flap-dn42.ruinet.work)                                                                                             | AS211575     |                                   |
+| <https://flaps.mashiro.dn42/>                                                                                                                      | AS4242420214 |                                   |
+| <https://flap.defelo.dn42/>, <https://flap-dn42.defelo.de/>                                                                                        | AS4242422357 |                                   |
+| <https://flaps.s6v.dn42>, <https://flaps.dn42.s6v.net/>                                                                                            | AS4242423432 |                                   |
+| <https://flap.fennec.dn42/>                                                                                                                        | AS4242420132 |                                   |
+| <https://flap.maiyun.dn42/>                                                                                                                        | AS4242420893 |                                   |
+| <https://flap.headscarf175.net/>                                                                                                                   | AS4242420842 |                                   |
+| <https://flapalerted.tes286.top/>                                                                                                                  | AS4242420078 |                                   |
 
 
 ### ASN Authentication Solution
@@ -146,28 +143,28 @@ Other servers:
 
 ## Radio and Video Streaming
 
-| Hostname / IP                                   | Remarks                                                                                |
-| :---------------------------------------------- | :------------------------------------------------------------------------------------- |
-| <https://tube.buzzster.dn42/>                   | A youtube like platform on DN42                                                        |
-| <https://live.jerry.dn42/>                      | Live audio stream powered by mpd                                                       |
-| <http://radio.vr18.dn42/>                       | Online radio by vr18                                                                   |
-| <https://dn42:dn42@tv.munsternet.dn42/playlist> | TV Channels Streaming                                                                  |
-| <http://icy.jones.dn42>                         | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!)  |
-| <https://radio.vrpnet.dn42>                     | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap                            |
-| <http://webdj.nop.dn42/>                        | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/                  |
-| <http://sdr1.maiyun.dn42/>                      | KiwiSDR HF SDR Receiver (aka clearnet <https://kiwisdr.kk6uc.org/>)                    |
-| <https://sdr.pebkac.dn42/>                      | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)   |
-| <https://adsb.androw.dn42/>                     | ADS-B Receiver located in Paris                                                        |
-| <http://kz.dn42:8888/6MusicProxy/index.m3u8>    | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                         |                               |
-| <https://radio.baka.dn42>                       | 24/7 Non-Stop Radio! Online Radio by Bingxin                                           |
-| <https://radio.cowgl.dn42>                      | Online Radio by CowGL                                                                  |
-| <https://radio.leziblog.dn42>                   | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                      |
-| <https://sess.dn42/radio.html>                  | SESS.DN42 Freedom Music Radio. Online Radio by [SessX6cf](mailto:sess@sess.dn42) |
-| <https://radio.hikari.dn42>                     | Online Radio by Hikari, using Icecast & Liquidsoap                                     |
-| <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast   |
-| <http://radio.vc.dn42>                          | Online Radio by VConet, using mpd & Icecast.                                           |
-| <http://radio.gatuno.dn42:8000/hyrule>               | Mirror radio of radiohyrule.com                                                        |
-| <http://rickroll.dn42>                           | Play rick roll video | IPv6 only |
+| Hostname / IP                                                         | Remarks                                                                               |
+|:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
+| <https://tube.buzzster.dn42/>                                         | A youtube like platform on DN42                                                       |
+| <https://live.jerry.dn42/>                                            | Live audio stream powered by mpd                                                      |
+| <http://radio.vr18.dn42/>                                             | Online radio by vr18                                                                  |
+| <https://dn42:dn42@tv.munsternet.dn42/playlist>                       | TV Channels Streaming                                                                 |
+| <http://icy.jones.dn42>                                               | Homegrown Icecast Radio covering a number of genres (HLS & Player coming soon [ish]!) |
+| <https://radio.vrpnet.dn42>                                           | Online radio by Pi3rrot on VRPNET, using Icecast&Liquidsoap                           |
+| <http://webdj.nop.dn42/>                                              | controller for Multicast stream: rtp://172.23.199.110@232.2.3.2:1234/                 |
+| <http://sdr1.maiyun.dn42/>                                            | KiwiSDR HF SDR Receiver (aka clearnet <https://kiwisdr.kk6uc.org/>)                   |
+| <https://sdr.pebkac.dn42/>                                            | OpenWebRX SDR Receiver, FM/VHF/UHF Analog & Digital (ask TOMKAP-DN42 for an account)  |
+| <https://adsb.androw.dn42/>                                           | ADS-B Receiver located in Paris                                                       |
+| <http://kz.dn42:8888/6MusicProxy/index.m3u8>                          | BBC Radio 6 Music Proxy service (320kbps AAC streams over HLS)                        |
+| <https://radio.baka.dn42>                                             | 24/7 Non-Stop Radio! Online Radio by Bingxin                                          |
+| <https://radio.cowgl.dn42>                                            | Online Radio by CowGL                                                                 |
+| <https://radio.leziblog.dn42>                                         | Online Radio by [LeZi](mailto:lezi@leziblog.dn42)                                     |
+| <https://sess.dn42/radio.html>                                        | SESS.DN42 Freedom Music Radio. Online Radio by [SessX6cf](mailto:sess@sess.dn42)      |
+| <https://radio.hikari.dn42>                                           | Online Radio by Hikari, using Icecast & Liquidsoap                                    |
+| <https://radio.mashiro.dn42>, Clearnet: <https://radio.origincode.me> | FrontieRadio Presented by COMPLEXE, powered by MPD and IceCast                        |
+| <http://radio.vc.dn42>                                                | Online Radio by VConet, using mpd & Icecast.                                          |
+| <http://radio.gatuno.dn42:8000/hyrule>                                | Mirror radio of radiohyrule.com                                                       |
+| <http://rickroll.dn42>                                                | Play rick roll video, IPv6 only                                                       |
 
 ## File Sharing
 
@@ -176,26 +173,26 @@ See [Repository Mirrors](/internal/Repository-Mirrors).
 
 ### FTP / HTTP
 
-| Hostname / IP             | Remarks                    |
-| :------------------------ | -------------------------- |
-| <http://files.nop.dn42>   | download only, max 1Mbit/s |
-| <http://rfc-editor.dn42>  | download only, max 1Mbit/s |
-| <http://freertr.dn42/>    | freeRouter main site       |
-| <http://sources.nop.dn42> | freeRouter source tree     |
-| <http://rtros.nop.dn42/>  | freeRouter distribution    |
-| <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC) |
-| <https://radio.sess.dn42/files/> | Music files of [radio.sess.dn42](https://radio.sess.dn42) |
-| <fdc1:acc:cc8::6> Port: 2222| SFTP, Linux ISOs mirrored from distrowatch.com & FOSS Torrents.  Also has eXo games collection from retro-exo.com.  Connect on the commandline with <sftp -P 2222 dn42@[fdc1:acc:cc8::6]> (p/w dn42)|
+| Hostname / IP                         | Remarks                                                                                                                                                                                              |
+|:--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <http://files.nop.dn42>               | download only, max 1Mbit/s                                                                                                                                                                           |
+| <http://rfc-editor.dn42>              | download only, max 1Mbit/s                                                                                                                                                                           |
+| <http://freertr.dn42/>                | freeRouter main site                                                                                                                                                                                 |
+| <http://sources.nop.dn42>             | freeRouter source tree                                                                                                                                                                               |
+| <http://rtros.nop.dn42/>              | freeRouter distribution                                                                                                                                                                              |
+| <https://file.tlmc.nas.gensokyo.dn42> | Touhou Lossless Music Collection (TLMC)                                                                                                                                                              |
+| <https://radio.sess.dn42/files/>      | Music files of [radio.sess.dn42](https://radio.sess.dn42)                                                                                                                                            |
+| <fdc1:acc:cc8::6> Port: 2222          | SFTP, Linux ISOs mirrored from distrowatch.com & FOSS Torrents.  Also has eXo games collection from retro-exo.com.  Connect on the commandline with <sftp -P 2222 dn42@[fdc1:acc:cc8::6]> (p/w dn42) |
 
 ### Rsync
 
-| Hostname / IP             | Bandwidth  | Remarks                   |
-| :------------------------ | ---------- |-------------------------- |
-| rsync://nas.gensokyo.dn42/tlmc | Not specified | Touhou Lossless Music Collection (TLMC) |
-| rsync://rsync.mirrors.leziblog.dn42/majnet | 50Mbps | maimai chart resources on MajdataNET | 
-| rsync://rsync.mirrors.leziblog.dn42/ubuntu | 50Mbps | Ubuntu mirror repository | 
-| rsync://rsync.mirrors.leziblog.dn42/ubuntu-ports | 50Mbps | Ubuntu Ports mirror repository | 
-| rsync://rsync.mirrors.leziblog.dn42/openwrt | 50Mbps | OpenWrt mirror repository | 
+| Hostname / IP                                    | Bandwidth     | Remarks                                 |
+|:-------------------------------------------------|---------------|-----------------------------------------|
+| rsync://nas.gensokyo.dn42/tlmc                   | Not specified | Touhou Lossless Music Collection (TLMC) |
+| rsync://rsync.mirrors.leziblog.dn42/majnet       | 50Mbps        | maimai chart resources on MajdataNET    | 
+| rsync://rsync.mirrors.leziblog.dn42/ubuntu       | 50Mbps        | Ubuntu mirror repository                | 
+| rsync://rsync.mirrors.leziblog.dn42/ubuntu-ports | 50Mbps        | Ubuntu Ports mirror repository          | 
+| rsync://rsync.mirrors.leziblog.dn42/openwrt      | 50Mbps        | OpenWrt mirror repository               | 
 
 ### BitTorrent
 
@@ -213,9 +210,9 @@ See [Repository Mirrors](/internal/Repository-Mirrors).
 
 ## Source Code Hosting
 
-| Hostname / IP | Maintainer | Remarks |
-| :--- | :--- | :--- |
-| gitlab.dn42 | [LeZi](mailto:lezi@leziblog.dn42) | Open registration (dn42 TLD email required), rolling backups, internal dn42 runner available. |
+| Hostname / IP | Maintainer                        | Remarks                                                                                       |
+|:--------------|:----------------------------------|:----------------------------------------------------------------------------------------------|
+| gitlab.dn42   | [LeZi](mailto:lezi@leziblog.dn42) | Open registration (dn42 TLD email required), rolling backups, internal dn42 runner available. |
 
 ## Tor network
 
@@ -234,57 +231,57 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 
 #### MTProxy
 
-| IP | Secret | Provider |
-| :- | :----- | :------- |
-| [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d) | `ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d` | JERRY-MNT |
-| [172.20.54.58:8101](https://t.me/proxy?server=172.20.54.58&port=8101&secret=de5ba4a48126705a60add5e1cacbbd4b) | `de5ba4a48126705a60add5e1cacbbd4b` | LAUNCHPAD-MNT |
-| [mtproxy.nia.dn42:18888](https://t.me/proxy?server=mtproxy.nia.dn42&port=18888&secret=ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576) | `ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576` | NIA-MNT |
+| IP                                                                                                                                                                  | Secret                                                                               | Provider      |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:--------------|
+| [mtp.jerry.dn42:8044](https://t.me/proxy?server=mtp.jerry.dn42&port=8044&secret=ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d) | `ee1419944c0a129dbba2beb2636fcf361a616e64726f69642e676f6f676c65736f757263652e636f6d` | JERRY-MNT     |
+| [172.20.54.58:8101](https://t.me/proxy?server=172.20.54.58&port=8101&secret=de5ba4a48126705a60add5e1cacbbd4b)                                                       | `de5ba4a48126705a60add5e1cacbbd4b`                                                   | LAUNCHPAD-MNT |
+| [mtproxy.nia.dn42:18888](https://t.me/proxy?server=mtproxy.nia.dn42&port=18888&secret=ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576)                           | `ee883e80a9be6c9eb3e4a08553ad7dd12d646e34322e646576`                                 | NIA-MNT       |
 
 ## NTP
 
-| Hostname / IP  | Stratum  | Remarks                                                                                                                                    |
-| :------------- | :-----: | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*.burble.dn42 |  | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
-| ntp.cow.dn42   | S2 | Operated by AS4242423999, anycast on all nodes |
-| ntp.grmml.dn42 | S2 | Operated by AS4242420123, EU Nodes, DNS RR |
-| pool.ntp.dn42  | S1/S2/S3/S4 | Project NTP Pool 42. See also [ntp.dn42](https://ntp.dn42/) |
+| Hostname / IP  |   Stratum   | Remarks                                                                                                                                    |
+|:---------------|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| \*.burble.dn42 |             | All burble.dn42 nodes provide NTP over clearnet and DN42. See also [burble.dn42 public services](https://dn42.burble.com/services/public/) |
+| ntp.cow.dn42   |     S2      | Operated by AS4242423999, anycast on all nodes                                                                                             |
+| ntp.grmml.dn42 |     S2      | Operated by AS4242420123, EU Nodes, DNS RR                                                                                                 |
+| pool.ntp.dn42  | S1/S2/S3/S4 | Project NTP Pool 42. See also [ntp.dn42](https://ntp.dn42/)                                                                                |
 
 ## NNTP (Usenet Style Newsgroups)
 
-| Hostname / IP   | Remarks                                                                                                                                    |
-| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| nntp.shiva.dn42 | Good old fashioned newsgroups, Usenet style. September never ends! HTTP site with server rules and config at <http://nntp.shiva.dn42>        |
+| Hostname / IP   | Remarks                                                                                                                               |
+|:----------------|:--------------------------------------------------------------------------------------------------------------------------------------|
+| nntp.shiva.dn42 | Good old fashioned newsgroups, Usenet style. September never ends! HTTP site with server rules and config at <http://nntp.shiva.dn42> |
 
 ## Gaming
 
-| Hostname / IP                                                                                                                                   | Game                       | Remarks                                                                                              |
-| :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- | :--------------------------------------------------------------------------------------------------- |
-| [nethack.chofstede.dn42](http://nethack.chofstede.dn42)                                                                                         | Nethack                    | New NetHack 5.0 via SSH [how to connect](http://nethack.chofstede.dn42/?p=connect)
-| [https://yggdrasil.dn42](https://yggdrasil.dn42)                                                                                                | Minecraft                  | [Authlib-Injector](https://github.com/yushijinhun/authlib-injector) compatible authencation service  |
-| 172.20.210.193                                                                                                                                  | Minecraft                  | Vanilla Server - latest(1.21.4)                                                                      |
-| mc.jerry.dn42 & jerry.dn42                                                                                                                      | Minecraft                  | latest, IPv4 & IPv6                                                                                  |
-| mc.razu.neo (formerly mc.razuritta.dn42)                                                                                                        | Minecraft                  | latest(1.21.11 atm), IPv4+IPv6                                                                        |
-| mc.licen777.dn42 (172.23.197.197 & fde8:2e18:e127::300)                                                                                         | Minecraft                  | 1.16.5-1.21.5, (/gm 1, Cracked)                                                                      |
-| sess.dn42                                                                                                                                       | Minecraft                  | Vanilla, 1.21.11, IPv4 & IPv6                                                               |
-| cowgl.dn42 | Minecraft | Minigames server, 1.7.2-latest, online mode, dn42 authorization on the way™ |
-| yzynetwork.dn42                                                                                                                                 | Minecraft | latest, online mode, survival |
-| mc.xiaoxi654.dn42                                                                                                                               | Minecraft | 26.2 Vanilla, as test environment,using [yggdrasil.dn42](https://yggdrasil.dn42) for authorization          |
-| ttd.jerry.dn42                                                                                                                                  | OpenTTD                    | latest, IPv4 & IPv6                                                                                  |
-| stk.jerry.dn42:2759, stk.jerry.neo:2759                                                                                                         | SuperTuxKart               | latest, IPv4 only                                                                                    |
-| stk2.jerry.dn42:2759, stk2.jerry.neo:2759                                                                                                       | SuperTuxKart               | latest, IPv4 & IPv6                                                                                  |
-| factorio.catgirls.dn42 (IPv6 only)                                                                                                              | factorio                   | Still in testing, expect downtime                                                                    |
-| The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various                    | Log in to the shell servers for more                                                                 |
-| [https://clicker.burble.dn42/](https://clicker.burble.dn42/)                                                                                    | Clicker/Idle               | Waste your time away with a dn42-themed browser-based idle game                                      |
-| [https://dn42dle.burble.dn42/](https://dn42dle.burble.dn42/)                                                                                    | Word Game                  | A familiar word game played over DNS, see the website for details instructions                       |
-| telnet tetris.dn42                                                                                                                              | tetris in your terminal    | other games available on request, ping mc36 @ irc                                                    |
-| [2048.dn42](https://2048.dn42) | 2048 | Join the numbers and get to the 2048 tile! |
-| [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/)                                                                 | Monkic (Game in German)    |
-| yobanirot.dn42:7591                                                                                                                             | Minecraft and Minetest     | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip) |
-| yobanirot.dn42:27015                                                                                                                            | CS 1.6                     |
-|[http://taiko.furry.dn42/](http://taiko.furry.dn42)|Taiko Web||
-|172.23.77.38:27031|Quake Live Server|IPv4 only, connect with console using IP Address and Port #|
-|gc.rui.dn42:8443|Genshin Impact Private Server OSREL4.6|Contact ruifeng@ruinet.work or Telegram @justruiqwq for resources.|
-| mc.gensokyo.dn42 | Minecraft | IPv6 Only |
+| Hostname / IP                                                                                                                                   | Game                                   | Remarks                                                                                             |
+|:------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------|:----------------------------------------------------------------------------------------------------|
+| [nethack.chofstede.dn42](http://nethack.chofstede.dn42)                                                                                         | Nethack                                | New NetHack 5.0 via SSH [how to connect](http://nethack.chofstede.dn42/?p=connect)                  |
+| [https://yggdrasil.dn42](https://yggdrasil.dn42)                                                                                                | Minecraft                              | [Authlib-Injector](https://github.com/yushijinhun/authlib-injector) compatible authencation service |
+| 172.20.210.193                                                                                                                                  | Minecraft                              | Vanilla Server - latest(1.21.4)                                                                     |
+| mc.jerry.dn42 & jerry.dn42                                                                                                                      | Minecraft                              | latest, IPv4 & IPv6                                                                                 |
+| mc.razu.neo (formerly mc.razuritta.dn42)                                                                                                        | Minecraft                              | latest(1.21.11 atm), IPv4+IPv6                                                                      |
+| mc.licen777.dn42 (172.23.197.197 & fde8:2e18:e127::300)                                                                                         | Minecraft                              | 1.16.5-1.21.5, (/gm 1, Cracked)                                                                     |
+| sess.dn42                                                                                                                                       | Minecraft                              | Vanilla, 1.21.11, IPv4 & IPv6                                                                       |
+| cowgl.dn42                                                                                                                                      | Minecraft                              | Minigames server, 1.7.2-latest, online mode, dn42 authorization on the way™                         |
+| yzynetwork.dn42                                                                                                                                 | Minecraft                              | latest, online mode, survival                                                                       |
+| mc.xiaoxi654.dn42                                                                                                                               | Minecraft                              | 26.2 Vanilla, as test environment,using [yggdrasil.dn42](https://yggdrasil.dn42) for authorization  |
+| ttd.jerry.dn42                                                                                                                                  | OpenTTD                                | latest, IPv4 & IPv6                                                                                 |
+| stk.jerry.dn42:2759, stk.jerry.neo:2759                                                                                                         | SuperTuxKart                           | latest, IPv4 only                                                                                   |
+| stk2.jerry.dn42:2759, stk2.jerry.neo:2759                                                                                                       | SuperTuxKart                           | latest, IPv4 & IPv6                                                                                 |
+| factorio.catgirls.dn42 (IPv6 only)                                                                                                              | factorio                               | Still in testing, expect downtime                                                                   |
+| The burble.dn42 shell servers include a number of classic text games, see [shell access](https://dn42.burble.com/services/shell/#classic-games) | Various                                | Log in to the shell servers for more                                                                |
+| [https://clicker.burble.dn42/](https://clicker.burble.dn42/)                                                                                    | Clicker/Idle                           | Waste your time away with a dn42-themed browser-based idle game                                     |
+| [https://dn42dle.burble.dn42/](https://dn42dle.burble.dn42/)                                                                                    | Word Game                              | A familiar word game played over DNS, see the website for details instructions                      |
+| telnet tetris.dn42                                                                                                                              | tetris in your terminal                | other games available on request, ping mc36 @ irc                                                   |
+| [2048.dn42](https://2048.dn42)                                                                                                                  | 2048                                   | Join the numbers and get to the 2048 tile!                                                          |
+| [monkic.mk16.de](https://monkic.mk16.de/), [dn42](https://monkic.bandura.dn42/)                                                                 | Monkic (Game in German)                |                                                                                                     |
+| yobanirot.dn42:7591                                                                                                                             | Minecraft and Minetest                 | One more "tech" minecraft server, mods [here](http://yobanirot.dn42/mods.zip)                       |
+| yobanirot.dn42:27015                                                                                                                            | CS 1.6                                 |                                                                                                     |
+| [http://taiko.furry.dn42/](http://taiko.furry.dn42)                                                                                             | Taiko Web                              |                                                                                                     |
+| 172.23.77.38:27031                                                                                                                              | Quake Live Server                      | IPv4 only, connect with console using IP Address and Port #                                         |
+| gc.rui.dn42:8443                                                                                                                                | Genshin Impact Private Server OSREL4.6 | Contact ruifeng@ruinet.work or Telegram @justruiqwq for resources.                                  |
+| mc.gensokyo.dn42                                                                                                                                | Minecraft                              | IPv6 Only                                                                                           |
 
 ## Voice chat
 
@@ -298,23 +295,23 @@ See <http://wiki.hamburg.ccc.de/ChaosVPN:Proxy>
 - burble.dn42 runs an [asterisk based VOIP service](https://dn42.burble.com/services/public/#voip) with various test extensions and real hardware modems for dialing in to dn42
 - jerry.dn42 also runs an [asterisk based VOIP service](https://blog.jerry.dn42/dn42#Services_pbx) with live radio (see live.jerry.dn42 above), whois service, conference room and software modems for dialing in to dn42
 - gensokyo.dn42 runs asterisk based VOIP services.
-  - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo ({src ip}) <+042408039910>
-  - PSTN to DN42 proxy gateway (+1 424 242 9915), default caller ID: Gensokyo Tele42 Proxy for {src num} <+042408038100>
-  - Web fax sender: [fax.gensokyo.dn42/tx/](https://fax.gensokyo.dn42/tx/)
-  - Web fax receiver: [fax.gensokyo.dn42/rx/](https://fax.gensokyo.dn42/rx/)
+    - WebRTC based soft-phone: [phone.gensokyo.dn42](https://phone.gensokyo.dn42), default caller ID: WebRTC Demo ({src ip}) <+042408039910>
+    - PSTN to DN42 proxy gateway (+1 424 242 9915), default caller ID: Gensokyo Tele42 Proxy for {src num} <+042408038100>
+    - Web fax sender: [fax.gensokyo.dn42/tx/](https://fax.gensokyo.dn42/tx/)
+    - Web fax receiver: [fax.gensokyo.dn42/rx/](https://fax.gensokyo.dn42/rx/)
 - [yp.dn42](https://yp.dn42): YellowPage for telephony42. Editable if login with oauth.dn42 or iEdon Auth42.
-  - PDF telephone directory book at [yp.dn42/books/](https://yp.dn42/books/)
+    - PDF telephone directory book at [yp.dn42/books/](https://yp.dn42/books/)
 - [gabrielggr.dn42](http://gabrielggr.dn42) runs an echo test on +04222222.
 
 ## Challenges
 
 Test out your skills with online challenges
 
-| Start here                           | Remarks                     |
-| :----------------------------------- | :-------------------------- |
-| <https://burble.dn42/services/ping/> | burble.dn42 ping challenge  |
-| <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge 1    |
-| <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge 2    |
+| Start here                           | Remarks                                                                       |
+|:-------------------------------------|:------------------------------------------------------------------------------|
+| <https://burble.dn42/services/ping/> | burble.dn42 ping challenge                                                    |
+| <http://kioubit.dn42/challenge/ch1/> | Kioubit.dn42 challenge 1                                                      |
+| <http://kioubit.dn42/challenge/ch2/> | Kioubit.dn42 challenge 2                                                      |
 | <https://exam.edu.dn42/?topic=dn42>  | Online test center, quizzes for testing your network skills! Run by NEXUS-MNT |
 
 
@@ -370,9 +367,9 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 
 ## Forums / Message boards
 
-| Hostname / IP                                                        | Remarks                                                                             |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| <https://urandom.catgirls.dn42/>                                     | Message board                                                                       |
+| Hostname / IP                                                        | Remarks                                                                                                       |
+|----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| <https://urandom.catgirls.dn42/>                                     | Message board                                                                                                 |
 | <https://bbs.nicholascw.dn42>, <https://dn42bbs.0b1.me> via Clearnet | A general BBS powered by Flarum for virtually any topic. Maintained by nicholascw. Previously under bbs.dn42. |
 
 ## Fediverse instances
@@ -380,45 +377,51 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | Hostname                        | Remarks                                                      |
 | ------------------------------- | ------------------------------------------------------------ |
 | <https://social.gensokyo.dn42>  | GoToSocial, Register available via gitlab.dn42 or oauth.dn42 |
-| <https://social.fennec.dn42> | Mastodon Glitch-Soc, login/register via Kioubit auth |
+| <https://social.fennec.dn42>    | Mastodon Glitch-Soc, login/register via Kioubit auth         |
 
 
 ## E-Mail
 
 There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 
-
-## Misc
+## PGP Keyservers
 
 | Hostname / IP                              | Remarks                                                                                          |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| <http://wiki.dn42>, <http://internal.dn42> | This wiki! Git Repo hosted on git.dn42                                                           |
-| <http://www.nop.dn42/>                     | Basic "whatismyip" service                                                                       |
-| <http://fun.nop.dn42/>                     | some funny images and videos                                                                     |
-| <http://pvrp.nop.dn42/>                    | a path vector igp main site                                                                      |
-| <http://lsrp.nop.dn42>                     | a link state igp main site                                                                       |
-| <http://hwp0rn.nop.dn42>                   | girls with switches and routers, a hwpr0n.se mirror                                              |
-| <http://ix.nop.dn42>                       | mcast-ix main site                                                                               |
-| <http://mpls.dn42/>                        | a brief description of MPLS technology                                                           |
-| <http://it.vr18.dn42/>                     | handy tools for developers                                                                       |
-| <https://ntfy.weil-isso.dn42>              | NTFY (Push Notify via REST-API)                                                                  |
-| kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only) |
-| ad-01.bakabaka9.dn42                       | Key Management Server (with Offical Windows Srv KMS Host Server) Only can Active Office 2016 all version (TEST Purposes only) |
-| anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                 |
-| <https://coin.dn42>                        | Cryptocurrency                                                                                   |
-| <https://mempool.dn42>                     | Bitcoin explorer                                                                                 |
-| <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                            |
 | <https://keyserver.nia.dn42>               | Hockeypuck OpenPGP Server                                                                        |
-| <https://pgp.ens18.dn42>               | Hockeypuck OpenPGP Server (pgp.asia)                                                             |                                            |
-| <https://scam.dn42/>                       | Scummy bank                                                                                      |
-| <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                        |
+| <https://pgp.ens18.dn42>                   | Hockeypuck OpenPGP Server (pgp.asia)                                                             |
+| <https://keys.nlgld.dn42>                  | Hockeypuck OpenPGP Server, e-mails associated with keys not validated, hosted by NLGLD-DN42      |
+
+
+## Misc
+
+| Hostname / IP                              | Remarks                                                                                                                                                                                             |
+|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <http://wiki.dn42>, <http://internal.dn42> | This wiki! Git Repo hosted on git.dn42                                                                                                                                                              |
+| <http://www.nop.dn42/>                     | Basic "whatismyip" service                                                                                                                                                                          |
+| <http://fun.nop.dn42/>                     | some funny images and videos                                                                                                                                                                        |
+| <http://pvrp.nop.dn42/>                    | a path vector igp main site                                                                                                                                                                         |
+| <http://lsrp.nop.dn42>                     | a link state igp main site                                                                                                                                                                          |
+| <http://hwp0rn.nop.dn42>                   | girls with switches and routers, a hwpr0n.se mirror                                                                                                                                                 |
+| <http://ix.nop.dn42>                       | mcast-ix main site                                                                                                                                                                                  |
+| <http://mpls.dn42/>                        | a brief description of MPLS technology                                                                                                                                                              |
+| <http://it.vr18.dn42/>                     | handy tools for developers                                                                                                                                                                          |
+| <https://ntfy.weil-isso.dn42>              | NTFY (Push Notify via REST-API)                                                                                                                                                                     |
+| kms.weil-isso.dn42 (Port 1688)             | Key Management Server (with Auto-Activation) for any Windows/Office (LAB AND TEST Purposes only)                                                                                                    |
+| ad-01.bakabaka9.dn42                       | Key Management Server (with Offical Windows Srv KMS Host Server) Only can Active Office 2016 all version (TEST Purposes only)                                                                       |
+| anycast.zookeeper.immibis.dn42 (port 2181) | Apache Zookeeper cluster (requires a client certificate for access - on request)                                                                                                                    |
+| <https://coin.dn42>                        | Cryptocurrency                                                                                                                                                                                      |
+| <https://mempool.dn42>                     | Bitcoin explorer                                                                                                                                                                                    |
+| <http://whatismyip.dn42/>                  | dn42 IPv4 and IPv6 whatismyip service                                                                                                                                                               |
+| <https://scam.dn42/>                       | Scummy bank                                                                                                                                                                                         |
+| <https://syncthing-discover.gensokyo.dn42> | Syncthing Discover Server                                                                                                                                                                           |
 | <https://mx.dn42>                          | Matrix IM Server maintained by COMPLEXE, ask @COMPL_EXE on Telegram / E-Mail self@origincode.me / @i:origincode.me on clearnet Matrix for registration requests, unofficial chat room #dn42:mx.dn42 |
-| <https://mtf.dn42/>                        | MtF Wiki      |
-| <https://osm.nia.dn42/>                    | OpenStreetMap Viewer (update period: 1 month) (IPv6 Only) |
-| <http://nat64.dn42/>                        | Public NAT64+DNS64 Service by Unixeno (IPv6 -> IPv4)                                            |
-| <https://time.dn42/>                       | a clock, basically time.is but in dn42 |
-| <https://totp.sess.dn42/>                  | TOTP Token Generator in browser |
-| <https://chat.dn42>                        | WebRTC-based chat and direct point-to-point file transferring |
-| <https://nenaebalovo.dn42>                 | Even in DN42 we have casino! integrated with scam.dn42(scummy bank)                               |
-| syncplay.gensokyo.dn42:8999                | SyncPlay Server (TLS On) |
-| 172.21.66.1:5900                           | PixelFlut server, 172.21.66.1:1234 to control
+| <https://mtf.dn42/>                        | MtF Wiki                                                                                                                                                                                            |
+| <https://osm.nia.dn42/>                    | OpenStreetMap Viewer (update period: 1 month) (IPv6 Only)                                                                                                                                           |
+| <http://nat64.dn42/>                       | Public NAT64+DNS64 Service by Unixeno (IPv6 -> IPv4)                                                                                                                                                |
+| <https://time.dn42/>                       | a clock, basically time.is but in dn42                                                                                                                                                              |
+| <https://totp.sess.dn42/>                  | TOTP Token Generator in browser                                                                                                                                                                     |
+| <https://chat.dn42>                        | WebRTC-based chat and direct point-to-point file transferring                                                                                                                                       |
+| <https://nenaebalovo.dn42>                 | Even in DN42 we have casino! integrated with scam.dn42(scummy bank)                                                                                                                                 |
+| syncplay.gensokyo.dn42:8999                | SyncPlay Server (TLS On)                                                                                                                                                                            |
+| 172.21.66.1:5900                           | PixelFlut server, 172.21.66.1:1234 to control                                                                                                                                                       |
