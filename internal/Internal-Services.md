@@ -359,6 +359,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://fennec.dn42>          | FennecNet/Kit's dn42 website                      |
 | <https://yzynetwork.dn42>      | YZYNetwork.dn42 website                           |
 | <https://nexus.dn42>           | qiuxin's personal blog                            |
+| <https://weil-isso.dn42>       | WEILISSO-MNT DN42 Website                         |
 
 ## Pastebins
 
