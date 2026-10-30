@@ -425,3 +425,7 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://nenaebalovo.dn42>                 | Even in DN42 we have casino! integrated with scam.dn42(scummy bank)                                                                                                                                 |
 | syncplay.gensokyo.dn42:8999                | SyncPlay Server (TLS On)                                                                                                                                                                            |
 | 172.21.66.1:5900                           | PixelFlut server, 172.21.66.1:1234 to control                                                                                                                                                       |
+| <https://fx.gensokyo.dn42>                 | Foreign eXchange 42 (FX42) |
+| <https://nia.gov.dn42>                     | National Immigration Agency of dn42 (fictional) - Home Page |
+| <https://epass.nia.gov.dn42>               | National Immigration Agency of dn42 (fictional) - e-Passport PKI |
+| <https://passcard.nia.gov.dn42>            | National Immigration Agency of dn42 (fictional) - Passport Card Generator |
