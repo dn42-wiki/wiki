@@ -27,6 +27,7 @@
   * [Static routes on Windows](/howto/Static-routes-on-Windows)
   * [VyOS](/howto/vyos1.4.x)
   * [NixOS](/howto/nixos)
+  * [Talos Linux](/howto/Talos-Linux)
   * [GeoFeed](/howto/GeoFeed)
   * [Telephony (Asterisk)](/howto/Telephony-Asterisk)
 
