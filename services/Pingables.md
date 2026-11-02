@@ -12,5 +12,6 @@ The following is a list of pingable addresses that can be used for testing. If y
 | anycast.baka.dn42 | 172.20.154.244 | fddf:3681:e80:e80::1 |
 | anycast.tes286.dn42 | 172.23.10.96 | fd00:286:11e:: |
 | anycast.bandura.dn42 | 172.22.149.224 | fd04:234e:fc31:: |
+| anycast.strykar.dn42 | 172.23.240.230 | fd1b:ab22:a0fe::a |
 
 Although these addresses are for testing and having fun, please do not overload them with too many ping requests (very many per second).
