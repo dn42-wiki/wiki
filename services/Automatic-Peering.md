@@ -23,6 +23,7 @@ AS4242421816 | [Potat0 Network](https://dn42.potat0.cc) | <https://dn42.potat0.c
 AS4242421817 | [KSKB Network](https://dn42.kskb.eu.org) | <https://dn42.kskb.eu.org> |
 AS4242421895 | [Lives Network](https://dn42.orol.top) | Clearnet → <https://dn42.orol.top> <br> DN42 → <https://peer.lives.dn42/>|
 AS4242422016 | [sidereal](https://dn42.sidereal.ca) |  Clearnet → <https://dn42.sidereal.ca> <br> DN42 → <https://sidereal.dn42>|
+AS4242422174 | [Avi's DN42 Network](https://dn42.4v1.in) | Clearnet → <https://dn42.4v1.in/peering/> <br> DN42 → <http://dn42.strykar.dn42/peering/> |
 AS4242422189 | [iEdon Networks](https://iedon.net) | Clearnet → <https://iedon.net/> <br> DN42 → <https://iedon.dn42/> |
 AS4242422213 | [AFNOOI](https://doot.uk.to) | <https://peer.115411.xyz> |
 AS4242422227 | [PUDUNET](https://pudunet.net) | <https://pudunet.net> |
