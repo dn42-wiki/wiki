@@ -124,7 +124,7 @@ The process is to be executed on a regular basis (yearly).
 Using **registry_wizard (written for v0.4.12)**:
 
 1. Download the MRT files from the Global Route Collector (GRC):
-`wget -r -np -nH --cut-dirs=1 -A "*.mrt.bz2" --reject "*:*" http://collector.dn42/`
+`wget --no-check-certificate -r -np -nH --cut-dirs=1 -A "*.mrt.bz2" --reject "*:*" http://mrt.collector.dn42/`
 2. Generate a list of active ASNs based on MRT data:
 `./registry_wizard /path/to/registry mrt_activity parse /path/to/mrt/files --cutoff-time <value> --list > active_list.txt`
 3. Based on the list of active ASNs and through referencing the registry git commit log, generate a list of inactive ASNs:
