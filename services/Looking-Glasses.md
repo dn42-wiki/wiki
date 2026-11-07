@@ -26,6 +26,7 @@ Please sort by AS number.
 | 4242421084 | ext: <https://dn42-lg.darmstadt.freifunk.net> |
 | 4242421105 | dn42: <http://lg.finarfin.dn42:8179/> |
 | 4242421197 | dn42: <http://lg.scoopta.dn42> <br> dn42: ssh rtr@rtr.scoopta.dn42 <br> restricted frr shell|
+| 4242421331 | dn42: <https://lg.nia.dn42> |
 | 4242421411 | ext: <https://lg.famfo.xyz> <br> dn42: <https://lg.catgirls.dn42> |
 | 4242421525 | ext: <https://lg.alemal.se> <br> dn42: <https://lg.alemal.dn42> |
 | 4242421722 | ext: <https://lg42.tchekda.fr> |
@@ -46,13 +47,13 @@ Please sort by AS number.
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
 | 4242423090 | dn42: <http://lg.filmroellchen.dn42> <br> IPv6-only |
+| 4242423310 | ext: <https://lg.tmpfs.dev/> |
+| 4242423322 | ext: <https://lg-dn42.vconet.top/> |
 | 4242423374 | ext: <https://lg-dn42.baka.pub> |
 | 4242423377 | ext: <https://lg-dn42.leziblog.com> |
 | 4242423702 | ext: <https://dn42-lg.launchpadx.top> <br> dn42: <https://lg.lpnet0.dn42> |
 | 4242423797 | ext: <https://dn42-lg.badaimweeb.me> <br> dn42: <https://lg.badaimweeb.dn42> |
-| 4242421331 | dn42: <https://lg.nia.dn42> |
-| 4242423310 | ext: <https://lg.tmpfs.dev/> |
-| 4242423322 | ext: <https://lg-dn42.vconet.top/> |
+| 4242423999 | ext: <https://lg.cowgl.tech> |
 
 ## Down
 
