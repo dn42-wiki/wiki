@@ -185,6 +185,7 @@ addAction(QNameSuffixRule("20.172.in-addr.arpa."), PoolAction("dn42"))
 addAction(QNameSuffixRule("21.172.in-addr.arpa."), PoolAction("dn42"))
 addAction(QNameSuffixRule("22.172.in-addr.arpa."), PoolAction("dn42"))
 addAction(QNameSuffixRule("23.172.in-addr.arpa."), PoolAction("dn42"))
+addAction(QNameSuffixRule("10.in-addr.arpa."), PoolAction("dn42"))
 ```
 
 ## MaraDNS
