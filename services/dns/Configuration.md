@@ -167,6 +167,26 @@ recursor:
           - 'fd42:4242:2601:ac53::53'             # b.recursive-servers.dn42
 ```
 
+## dnsdist
+
+Additional pool for `dnsdist.conf` (Lua format):
+
+```lua
+-- define pool with a0 and a3.recursive-servers.dn42
+newServer({address="[fd42:d42:d42:54::1]:53", checkInterval=30, healthCheckMode='lazy', pool='dn42'})
+newServer({address="[fd42:d42:d42:53::1]:53", checkInterval=30, healthCheckMode='lazy', pool='dn42'})
+newServer({address="172.20.0.53:53", checkInterval=30, healthCheckMode='lazy', pool='dn42'})
+newServer({address="172.23.0.53:53", checkInterval=30, healthCheckMode='lazy', pool='dn42'})
+
+-- query dn42 pool for *.dn42 and reverse zones
+addAction(QNameSuffixRule("dn42."), PoolAction("dn42"))
+addAction(QNameSuffixRule("d.f.ip6.arpa."), PoolAction("dn42"))
+addAction(QNameSuffixRule("20.172.in-addr.arpa."), PoolAction("dn42"))
+addAction(QNameSuffixRule("21.172.in-addr.arpa."), PoolAction("dn42"))
+addAction(QNameSuffixRule("22.172.in-addr.arpa."), PoolAction("dn42"))
+addAction(QNameSuffixRule("23.172.in-addr.arpa."), PoolAction("dn42"))
+```
+
 ## MaraDNS
 Put this in your mararc:
 
