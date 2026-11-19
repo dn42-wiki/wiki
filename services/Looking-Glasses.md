@@ -44,6 +44,7 @@ Please sort by AS number.
 | 4242422601 | dn42: <http://lg.burble.dn42> <br> ext: <https://lg.burble.com> |
 | 4242422712 | dn42: <https://lg.nuku.dn42> |
 | 4242422717 | ext: <https://lg.whojk.com> |
+| 4242422992 | dn42: <http://beanstalk.dn42/lg.html> |
 | 4242423035 | ext: <https://lg.lare.cc> <br> dn42: <https://lg.lare.dn42> |
 | 4242423088 | ext: <https://lg.dn42.6700.cc> <br> dn42: <http://lg.sun.dn42> |
 | 4242423090 | dn42: <http://lg.filmroellchen.dn42> <br> IPv6-only |
