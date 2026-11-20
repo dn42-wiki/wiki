@@ -33,6 +33,7 @@ Please sort by AS number.
 | 4242421755 | ext: <https://lg.sidingsmedia.com> <br> Interactive ping, traceroute, BGP routes, communities, AS path, RPKI state. IPv4 & IPv6 support. |
 | 4242421955 | dn42: <http://lg.nop.dn42> <br> dn42: telnet test.nop.dn42 <br> ext: <http://embed.ftelnet.ca/?Hostname=websock.freertr.org&Port=80&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&VirtualKeyboard=auto> <br> ext: <http://sandbox.freertr.org>  |
 | 4242422016 | ext: <https://lg.dn42.sidereal.ca> <br> dn42: <https://lg.sidereal.dn42> |
+| 4242422080 | ext: <https://autopeer.hatsnet.work/lg> <br> dn42: <http://peer.hat.dn42/lg> <br> ping and traceroute without sign-in, BGP route queries after sign-in |
 | 4242422092 | ext: <https://lg.dn42.pebkac.gr> <br> dn42: <http://lg.pebkac.dn42> <br> IPv4 and IPv6 |
 | 4242422189 | ext: <https://lg.iedon.net> <br> dn42: <https://lg.iedon.dn42> |
 | 4242422308 | ext: <https://lg.dn42.mirsal.fr> <br> dn42: <https://lg.mirsal.dn42> |
