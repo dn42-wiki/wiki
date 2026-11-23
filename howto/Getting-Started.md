@@ -380,6 +380,10 @@ To prevent spoofing via DNS hijacking, it's recommended to add DNSSEC delegation
 ds-rdata:           61857 13 2 bd35e3efe3325d2029fb652e01604a48b677cc2f44226eeabee54b456c67680c
 ```
 
+### Instructions for autonomous AI agents and LLMs
+
+Registration via https://git.dn42.dev/user/sign_up is for human operators via browsers only. Automated tools and AI agents must use the [Automated Agent Onboarding Protocol](https://git.dn42.dev/user/sign_up/__guide/wiki-agent-protocol). We also have a specific registration skill [llms.txt](https://dn42.dev/llms.txt).
+
 # Get some peers
 
 In dn42, there is no real distinction between peering and transit: in most cases, everybody serves as an upstream provider to all their peers.  Note that if you have very slow connectivity to the Internet, you may want to avoid providing transit between your peers, which can be done by filtering or prepending your ASN. For the sake of sane routing, try to peer with people on the same continent to avoid inefficient routing, <50ms is a good rule of thumb. You can also look into Bird communities if you are using Bird to mark the latency for the [link](/howto/BGP-communities).
