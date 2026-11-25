@@ -50,12 +50,12 @@ See [Looking Glasses](/services/Looking-Glasses).
 
 ### Interactive Maps
 - Realtime network map: [map.dn42](https://map.dn42/) (DN42) or [map.iedon.net](https://map.iedon.net) (via clearnet) _(This map currently uses MRT dumps from GRC as its source. It refreshes whenever the collector provides a new MRT file, generally every 10-15 minutes.)_
-- Yet Another network map: [map.jerry.dn42](https://map.jerry.dn42/) (DN42) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
+- Yet Another network map: ~~[map.jerry.dn42](https://map.jerry.dn42/) (DN42)~~ (broken) or [map.meson.cc](https://map.meson.cc) (via clearnet) _(uses MRT dump as source, updated every 15 minutes.)_
 - 3D IP-based network graph (revived yay), created by traceroute all hosts, updated per day [dn42.jh0project.dn42/map](https://dn42.jh0project.dn42/map) (DN42), [dn42.jh0project.com/map](https://dn42.jh0project.com/map) (clearnet)
 
 ### BGP Analysis and explorers
 - [Anomalies.dn42](https://anomalies.dn42) is a debugging tool that analyzes BGP routing data to identify ASes that may be inadvertently adding or removing geographic communities (region/country) from foreign prefixes.
-- Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC
+- ~~Route Graphs: [routegraphs.highdef.dn42](http://routegraphs.highdef.dn42) (DN42), [routegraphs.highdef.network](https://routegraphs.highdef.network) (clearnet) - graph reachability from ASes to specific prefixes, using data from the dn42 GRC~~ retired
 - DN42 Explorer: [explorer.nedifinita.com](https://explorer.nedifinita.com). BGP routing, topology, and registry explorer. Provides an IPv4 interactive map, AS connectivity, prefix status, and rankings.
 
 ### Health & Status
