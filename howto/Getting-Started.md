@@ -16,7 +16,7 @@ This is **important**, as it allows you to stay up-to-date on best practices, ne
 
 All network operators are expected to be joined to the mailing list.
 
-See [Contact](/contact#contact_mailing-list) to subscribe.
+See [Contact](/contact#contact_mailing-list) to information on how to subscribe.
 
 ## Fill in the registry
 
