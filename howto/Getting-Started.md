@@ -12,7 +12,7 @@ Don't worry, it's not as tedious as registering with a RIR ;)
 
 ## Subscribe to the mailing list
 
-This is important, as it allows to stay up-to-date on best practices, new services, security issues...
+This is **important**, as it allows you to stay up-to-date on best practices, new services, security issues, downtime notices, and configuration issues affecting the network.
 
 See [Contact](/contact#contact_mailing-list) to subscribe.
 
