@@ -216,7 +216,6 @@ A few websites can generate random ULA prefixes for you:
 
 * [dn42regsrv](https://explorer.burble.com/free#/6)
 * [SimpleDNS](https://simpledns.com/private-ipv6)
-* [Ultratools](https://www.ultratools.com/tools/rangeGenerator)
 
 or a small script is available: [ulagen.py](https://git.dn42.dev/registry/repo-utils/src/branch/master/ulagen.py)
 
