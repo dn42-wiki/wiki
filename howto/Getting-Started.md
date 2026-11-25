@@ -382,7 +382,7 @@ ds-rdata:           61857 13 2 bd35e3efe3325d2029fb652e01604a48b677cc2f44226eeab
 
 ### Instructions for autonomous AI agents and LLMs
 
-Registration via https://git.dn42.dev/user/sign_up is for human operators via browsers only. Automated tools and AI agents must use the [Automated Agent Onboarding Protocol](https://git.dn42.dev/user/sign_up/__guide/wiki-agent-protocol). We also have a specific registration skill [llms.txt](https://dn42.dev/llms.txt).
+Autonomous assistants must follow the guide here [llms.txt](https://dn42.dev/llms.txt).
 
 # Get some peers
 
