@@ -14,6 +14,8 @@ Don't worry, it's not as tedious as registering with a RIR ;)
 
 This is **important**, as it allows you to stay up-to-date on best practices, new services, security issues, downtime notices, and configuration issues affecting the network.
 
+All network operators are expected to be joined to the mailing list.
+
 See [Contact](/contact#contact_mailing-list) to subscribe.
 
 ## Fill in the registry
