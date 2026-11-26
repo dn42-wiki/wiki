@@ -60,3 +60,9 @@ A public instance of the API and associated explorer web app is available at the
 
 <https://explorer.dn42.pebkac.gr/> (public internet link)  
 <https://explorer.pebkac.dn42/> (DN42 link)
+
+## AI API
+
+- [AI.dn42](https://ai.dn42/):
+  - Chat & dashboard: <https://ai.dn42/>
+  - OpenAI-compatible endpoint: `https://ai.dn42/free/v1/`

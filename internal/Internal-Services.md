@@ -8,6 +8,7 @@ View a list of [service ideas](/internal/Ideas) and [historical services](/inter
 | Hostname / IP                                    | ICANN | Internal | Remarks                                                                                  |
 |:-------------------------------------------------|:------|:---------|:-----------------------------------------------------------------------------------------|
 | [baaka.dn42](https://baaka.dn42)                 |       | X        | SearXNG instance with the metadata source being [yacy.baka.dn42](https://yacy.baka.dn42) |
+| [search.dn42](https://search.dn42/)              |       | X        | Search engine for the DN42 registry, wiki, and internal sites                            |
 | [search.androw.dn42](https://search.androw.dn42) | X     |          | SearXNG instance                                                                         |
 
 * [Discover.DN42](https://discover.dn42) is a visual, bot-curated index of active websites within the DN42 network.
@@ -152,6 +153,8 @@ Other servers:
 | <https://emby.pmman.dn42>     | Emby instance containing Anime/Movies/TV shows with Chinese subtitles        |
 | <https://e621ng.dn42>         | Just e621ng, contains bunch of nsfw                                          |
 | <https://wiki.gensokyo.dn42>  | Mirrors of some wikimedia sites and other wikis                              |
+| <https://wikipedia.dn42/>     | Mirror of English Wikipedia                                                  |
+| <https://wiktionary.dn42/>    | Mirror of Wiktionary                                                         |
 
 ## Radio and Video Streaming
 
@@ -372,6 +375,7 @@ See also the [burble.dn42 website](https://dn42.burble.com/services/shell/) for 
 | <https://weil-isso.dn42>       | WEILISSO-MNT DN42 Website                         |
 | <http://beanstalk.dn42/>       | Beanstalk (AS4242422992) website                  |
 | <https://hat.dn42/>            | HatsNet (AS4242422080) website                    |
+| <https://blog.hat.dn42/>       | Hat's Land (personal blog)                        |
 
 ## Pastebins
 
@@ -444,3 +448,5 @@ There is a list of E-Mail providers [here](/internal/E-Mail-Providers)
 | <https://nia.gov.dn42>                     | National Immigration Agency of dn42 (fictional) - Home Page |
 | <https://epass.nia.gov.dn42>               | National Immigration Agency of dn42 (fictional) - e-Passport PKI |
 | <https://passcard.nia.gov.dn42>            | National Immigration Agency of dn42 (fictional) - Passport Card Generator |
+| <https://ai.dn42/>                         | AI chat and OpenAI-compatible API (`/free/v1/`) |
+| <https://bird-wiki.hat.dn42/>              | BIRD2 Chinese documentation |
