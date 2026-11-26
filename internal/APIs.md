@@ -24,7 +24,17 @@ This page can be useful if you are trying to automate something or if you are tr
   - API endpoints:
     - IPv4: [http://ipv4.whatismyip.dn42:8080/ipinfo](http://ipv4.whatismyip.dn42:8080/ipinfo)
     - IPv6: [http://ipv6.whatismyip.dn42:8080/ipinfo](http://ipv6.whatismyip.dn42:8080/ipinfo)
-
+- IP-API.DN42 by HatsNet (AS4242422080):
+    - Website:
+        - ipv4+ipv6: [ip-api.dn42](https://ip-api.dn42/)
+        - ipv4 only: [v4.ip-api.dn42](https://v4.ip-api.dn42/) or [172.23.31.125](https://172.23.31.125/)
+        - ipv6 only: [v6.ip-api.dn42](https://v6.ip-api.dn42/) or [fd9b:7680:aabb:ff::80](http://[fd9b:7680:aabb:ff::80]/)
+    - command line:
+        - ipv4+ipv6: `curl https://ip-api.dn42/` (recommended) or `curl ip-api.dn42` or `wget -qO- https://ip-api.dn42/` or `wget -qO- ip-api.dn42`
+        - ipv4 only: `curl https://v4.ip-api.dn42/` or `curl v4.ip-api.dn42` or `wget -qO- https://v4.ip-api.dn42/` or `wget -qO- v4.ip-api.dn42`
+        - ipv6 only: `curl https://v6.ip-api.dn42/` or `curl v6.ip-api.dn42` or `wget -qO- https://v6.ip-api.dn42/` or `wget -qO- v6.ip-api.dn42`
+    - API:
+        - read more: <https://ip-api.dn42/#api>
 
 ## Other network-related
 
