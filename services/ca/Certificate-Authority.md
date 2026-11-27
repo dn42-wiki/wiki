@@ -4,7 +4,7 @@ internal.dn42 is signed by an internally maintained CA that is only allowed to s
 
 If you are required to specify a license to clarify redistribution, then it [can be considered](https://groups.io/g/dn42/message/844) as [CC0](https://creativecommons.org/public-domain/cc0/).
 
-The CA certificate ([dn42](https://ca.dn42/crt/root-ca.crt), [iana](https://ca.dn42.us/crt/root-ca.crt)):
+The CA certificate ([dn42](https://wiki.dn42/rootca.crt), [iana](/rootca.crt)):
 
 ```
 Certificate:
